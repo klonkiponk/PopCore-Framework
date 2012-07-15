@@ -1,0 +1,35 @@
+#content {
+	width:960px;
+	margin:0 auto 15px auto;
+	background: rgba(255, 255, 255, 0.85);
+	@include rounded;
+	@include box-shadow(rgba(0,0,0,0.5) 1px 1px 5px);
+	padding:1px 15px 15px 15px;
+	border:$bordercolor;
+	position:relative;
+	@include box-sizing(border-box);
+}
+footer, .title {
+	width:960px;
+	margin:0 auto 15px auto;
+    @include box-shadow(rgba(0,0,0,0.5) 1px 1px 5px);
+   	@include rounded;
+    color:#333;
+    background: rgba(255, 255, 255, 0.85);
+	p {
+		padding-top: 5px;
+		padding-bottom: 5px;
+		padding-left:15px;
+	}
+}
+#wrapper{
+	margin-left: 208px;
+	width:900px;
+}
+.title {
+    width:930px;
+    padding:5px 15px;;
+}
+section {
+    position:relative;
+}

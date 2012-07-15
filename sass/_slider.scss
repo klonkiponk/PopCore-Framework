@@ -1,0 +1,52 @@
+#slider {
+	margin: 7px ;//auto;
+//	width: 800px;
+//	height: 400px;
+	position:relative;
+	overflow: hidden;
+	@include shadowBig;
+	background: rgba(255, 255, 255, 0.7);
+	transition:all 1s;
+}
+
+#slider [id^='image']:target img {
+	top: 0;
+	opacity: 1.0;
+	visibility: visible;
+}
+
+
+#slider [id^='image']:target a {
+	background: #fff;
+	border: 3px solid #333;
+	width: 10px;
+	height: 10px;
+	box-shadow: 0px 0px 10px rgba(255,255,255,1.0),inset 0px 0px 3px rgba(0,0,0,1.0);
+}
+
+#slider [id^='image']:target a.borderless {
+	border:none;
+}
+
+#slider [id^="image"] img {
+	position: absolute;
+//	top: 480px; creates Animation with a Slide from Bottom to Top
+	border: 0;
+	-moz-transition: all 1s ease-in;
+	-ms-transition: all 1s ease-in;
+	-webkit-transition: all 1s ease-in;
+	-o-transition: all 1s ease-in;
+	opacity:0;
+	visibility:hidden;
+}      
+
+.slider-nav {
+	background: #333;
+	width: 16px;
+	z-index: 9999;
+	height: 16px;
+	box-shadow: inset 0px 2px 10px rgba(0,0,0,1.0), 0px 0px 20px rgba(255,255,255,0.7);
+	border-radius: 32px;
+	position: absolute;
+	bottom: 15px;
+}

@@ -1,0 +1,40 @@
+@font-face{ 
+	font-family: 'SymbolFont';
+	src: url('websymbols-regular-webfont.eot');
+	src: url('websymbols-regular-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('websymbols-regular-webfont.woff') format('woff'),
+	     url('websymbols-regular-webfont.ttf') format('truetype'),
+	     url('websymbols-regular-webfont.svg#webfont') format('svg');
+}
+
+@font-face {
+    font-family: 'BaumansRegular';
+    src: url('baumans-regular-webfont.eot');
+    src: url('baumans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('baumans-regular-webfont.woff') format('woff'),
+         url('baumans-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'UbuntuLightRegular';
+    src: url('ubuntu-light-webfont.eot');
+    src: url('ubuntu-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('ubuntu-light-webfont.woff') format('woff'),
+         url('ubuntu-light-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'UbuntuMonoRegular';
+    src: url('ubuntumono-regular-webfont.eot');
+    src: url('ubuntumono-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('ubuntumono-regular-webfont.woff') format('woff'),
+         url('ubuntumono-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Arizonia);

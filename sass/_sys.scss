@@ -1,0 +1,50 @@
+.floatleft {
+	float:left;
+}
+.floatright {
+	float:right;
+}
+/**************************************************************\
+	NOTIFICATION POPUPS
+\**************************************************************/  
+
+.sys_debug_div {
+	padding: 0px;
+	position: fixed;
+	top: 30%;
+	left: 50%;
+	width: 450px;
+	margin-left: -225px;
+	z-index: 100;
+ 	label{
+		cursor: pointer;
+		height:31px;
+		width:35px;
+		float:right;
+		background:url('../images/close.png');
+		&:hover {
+			background:url('../images/close_hover.png');
+		}
+	}
+}
+.sys_debug_article {
+	color:#fff;
+	margin: 14px 15px 0px 0px;
+	padding: 10px;
+	@include rounded;
+	@include box-shadow(blue 0px 0px 5px);
+	border: 2px solid rgba(65, 105, 225, 1.0);
+	background: rgba(65,105,225, 0.8);
+	font-size:18px;
+}
+.sys_debug_div input {
+	display:none;
+}
+.sys_debug_div input:checked ~ article.sys_debug_article,
+.sys_debug_div input:checked ~ label {
+	display:none;
+}
+
+.sys {
+	display:none;
+}

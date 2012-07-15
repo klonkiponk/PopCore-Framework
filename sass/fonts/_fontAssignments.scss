@@ -1,0 +1,64 @@
+/************************************************\
+					|| FONTS ||
+\************************************************/
+
+
+$FontBase: 'UbuntuLightRegular';
+$FontMono: 'UbuntuMonoRegular';
+$FontSymbol: 'SymbolFont';
+
+
+body {
+	font-family: $FontBase, Verdana, Arial, Helvetica, sans-serif;
+}
+pre {
+	font-family: $FontMono, monotype;
+}
+
+
+/**************************************\
+GESHI - (CODE WITH SYNTAX HIGHLIGHTING)
+\**************************************/
+
+pre.php:after, pre.html5:after, pre.css:after {
+	font-family: $FontBase, Verdana, Arial, Helvetica, sans-serif;
+}
+
+/**************************************\
+CODEMIRROR - (CODE WITH SYNTAX HIGHLIGHTING)
+\**************************************/
+
+.CodeMirror {
+	font-family: $FontMono, sans-serif;	
+}
+.CodeMirror:after {
+	font-family: $FontBase, Verdana, Arial, Helvetica, sans-serif;
+}
+
+/**************************************\
+CONTENT
+\**************************************/
+
+	/**********************************\
+	HEADINGS
+	\**********************************/
+
+	h1 {
+		font-family: Arizonia;
+	}
+
+	/**********************************\
+	LINKS
+	\**********************************/
+
+	#content a:before {
+		font-family: $FontSymbol;
+	}
+	
+	/**********************************\
+	TIME TAG in each Article
+	\**********************************/	
+	
+	time:before {
+	    font-family: $FontSymbol;
+	}

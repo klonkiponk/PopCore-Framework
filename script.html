@@ -1,0 +1,1188 @@
+<!doctype html>
+<html>
+<head>
+	<title>ItSysAdminFwWebSK</title>
+	<meta charset='utf-8'>
+</head>
+<body><style type="text/css" media="print,screen"><!--html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+q, blockquote {
+  quotes: none; }
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+a img {
+  border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block; }
+
+/**************************************\
+			   FONTS
+\**************************************/
+@font-face {
+  font-family: 'SymbolFont';
+  src: url("./font/websymbols-regular-webfont.eot");
+  src: url("./font/websymbols-regular-webfont.eot?#iefix") format("embedded-opentype"), url("./font/websymbols-regular-webfont.woff") format("woff"), url("./font/websymbols-regular-webfont.ttf") format("truetype"), url("./font/websymbols-regular-webfont.svg#webfont") format("svg"); }
+
+@font-face {
+  font-family: 'BaumansRegular';
+  src: url("./font/baumans-regular-webfont.eot");
+  src: url("./font/baumans-regular-webfont.eot?#iefix") format("embedded-opentype"), url("./font/baumans-regular-webfont.woff") format("woff"), url("./font/baumans-regular-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'UbuntuLightRegular';
+  src: url("./font/ubuntu-light-webfont.eot");
+  src: url("./font/ubuntu-light-webfont.eot?#iefix") format("embedded-opentype"), url("./font/ubuntu-light-webfont.woff") format("woff"), url("./font/ubuntu-light-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'UbuntuMonoRegular';
+  src: url("./font/ubuntumono-regular-webfont.eot");
+  src: url("./font/ubuntumono-regular-webfont.eot?#iefix") format("embedded-opentype"), url("./font/ubuntumono-regular-webfont.woff") format("woff"), url("./font/ubuntumono-regular-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+/**************************************\
+			   COLORS
+\**************************************/
+/* PRIMARY COLORS*/
+/* COMPLIMENTARY COLORS*/
+/**************************************\
+			   BLOCKS
+\**************************************/
+/**************************************\
+			   FONTS
+\**************************************/
+/**************************************\
+			PAGE DEFINITIONS
+\**************************************/
+@page {
+  margin-bottom: 1cm;
+  margin-left: 1.5cm;
+  margin-right: 1.5cm;
+  margin-top: 1cm;
+  padding-top: 0.5cm;
+  size: A4;
+  font-size: 1em;
+  line-height: 1.2em;
+  font-family: UbuntuLightRegular;
+  @bottom-right {
+    content: "Seite " counter(page) " von " counter(pages);
+    border-top: 1px solid silver;
+    font-size: 80%;
+    color: gray;
+    margin-bottom: 15px; }
+
+  @top-center {
+    content: normal; }
+
+  @bottom-center {
+    content: "ITSysAdminFwWebSK";
+    border-top: 1px solid silver;
+    font-size: 80%;
+    margin-bottom: 15px;
+    color: gray; }
+
+  @bottom-left {
+    content: "HF Weidinger - L Siegerth";
+    border-top: 1px solid silver;
+    font-size: 80%;
+    color: gray;
+    margin-bottom: 15px; }
+
+  @top-right {
+    content: string(chapter) " :: " string(section);
+    color: gray;
+    border-bottom: 1px solid silver;
+    font-size: 90%;
+    padding-top: 10px; }
+
+  @top-left {
+    border-bottom: 1px solid silver;
+    padding-top: 10px;
+    font-size: 90%;
+    color: gray; } }
+
+/**************************************\
+			   ELEMENTS
+\**************************************/
+ol {
+  list-style: decimal;
+  margin-bottom: 10px;
+  margin-top: 10px; }
+
+ul {
+  list-style: square;
+  margin-bottom: 10px;
+  margin-top: 10px; }
+
+li {
+  margin-left: 25px; }
+
+a {
+  text-decoration: none;
+  color: #000; }
+
+caption {
+  display: block;
+  font-size: 80%;
+  margin-bottom: 3px;
+  text-align: center; }
+
+table td {
+  border: 1px solid #6b90d4; }
+table th {
+  border: 1px solid #4577d4;
+  background-color: #ffbc40; }
+
+/**************************************\
+			  TITLE PAGE
+\**************************************/
+@page :first {
+  @top-center {
+    content: normal; }
+
+  @bottom-right {
+    content: normal; }
+
+  @bottom-left {
+    content: normal; }
+
+  @top-left {
+    content: normal; }
+
+  @top-right {
+    content: normal; } }
+
+.titlepage {
+  page-break-after: always;
+  text-align: center; }
+
+/**************************************\
+			  	 BODY
+\**************************************/
+body {
+  text-align: justify;
+  font-family: UbuntuLightRegular;
+  font-size: 1em;
+  line-height: 1.2em; }
+
+/**************************************\
+			  	 TOC
+\**************************************/
+ul.toc, ul.toc ul {
+  list-style-type: none; }
+
+.toc ul {
+  margin: 0px; }
+
+.toc li.chapter a, .toc li.section a {
+  font-family: UbuntuLightRegular; }
+
+.toc ul ul {
+  margin-left: 27px; }
+
+.toc li a.PageRef::after {
+  content: " " leader(".  ") "" target-counter(attr(href, url), page); }
+
+.toc li.chapter {
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+  border-bottom: 1px solid gray;
+  padding-bottom: 4px; }
+
+.toc li.chapter a {
+  font-size: 120%; }
+
+.toc li.section {
+  margin-bottom: 0.5em;
+  margin-top: 0.5em; }
+
+.toc li.subSection {
+  margin-bottom: 0.4em;
+  margin-top: 0.4em; }
+
+.toc li.chapter a.PageRef::after {
+  content: " " leader(" ") "" target-counter(attr(href, url), page); }
+
+.toc li.chapter a::before {
+  content: target-counter(attr(href, url), chapter) " "; }
+
+.toc li.section a::before {
+  content: target-counter(attr(href, url), chapter) "." target-counter(attr(href, url), section) " "; }
+
+.toc li.subSection a::before {
+  content: target-counter(attr(href, url), chapter) "." target-counter(attr(href, url), section) "." target-counter(attr(href, url), subSection) " "; }
+
+/**************************************\
+			   COUNTERS
+\**************************************/
+body {
+  counter-reset: chapter;
+  counter-reset: section;
+  counter-reset: subSection;
+  counter-reset: paragraph;
+  counter-reset: caption; }
+
+.chapter {
+  counter-increment: chapter;
+  counter-reset: section;
+  counter-reset: subSection;
+  counter-reset: paragraph;
+  counter-reset: caption; }
+
+.section {
+  counter-increment: section;
+  counter-reset: subSection;
+  counter-reset: paragraph; }
+
+.subSection {
+  counter-increment: subSection;
+  counter-reset: paragraph; }
+
+.paragraph {
+  counter-increment: paragraph; }
+
+caption {
+  counter-increment: caption; }
+
+div.chapter {
+  page-break-before: always; }
+
+.chapter h1::before {
+  content: counter(chapter) " "; }
+
+.chapter h2::before {
+  content: counter(chapter) "." counter(section) " "; }
+
+.chapter h3::before {
+  content: counter(chapter) "." counter(section) "." counter(subSection) " "; }
+
+.chapter h4::before {
+  content: counter(chapter) "." counter(section) "." counter(subSection) "." counter(paragraph) " "; }
+
+caption:after {
+  content: " " counter(chapter) "." counter(caption); }
+
+/**************************************\
+			   HEADINGS
+\**************************************/
+h1 {
+  string-set: chapter content();
+  margin-top: 250px;
+  color: #ffa500;
+  font-size: 2em;
+  margin-bottom: 1.9em;
+  border-bottom: 1px solid gray;
+  line-height: 2em;
+  page-break-before: always; }
+
+h2 {
+  string-set: section content();
+  margin-top: 1.6em;
+  margin-bottom: 1.6em;
+  font-size: 1.7em;
+  color: #bf8d30; }
+
+h3 {
+  string-set: subSection content();
+  margin-top: 0.8em;
+  margin-bottom: 1.3em;
+  font-size: 1.3em;
+  color: #a66c00; }
+
+h4 {
+  string-set: paragrpah content();
+  font-size: 1.2em;
+  color: #ffbc40;
+  margin-top: 0.8em;
+  margin-bottom: 1.3em; }
+
+h1, h2, h3 {
+  font-family: UbuntuLightRegular; }
+
+/**************************************\
+			   IMAGES
+\**************************************/
+img {
+  border: 3px solid #1047aa;
+  -webkit-box-shadow: 1px 1px 5px #29477f;
+  -moz-box-shadow: 1px 1px 5px #29477f;
+  box-shadow: 1px 1px 5px #29477f;
+  width: 350px; }
+
+/**************************************\
+			   BOXES
+\**************************************/
+.homework {
+  background-color: #6b90d4;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid gray;
+  margin-top: 15px; }
+
+/**************************************\
+GESHI - (CODE WITH SYNTAX HIGHLIGHTING)
+\**************************************/
+.geshi pre {
+  font-family: UbuntuMonoRegular;
+  background-color: white;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 2px 2px 2px #cccccc, #cccccc 1px 1px 2px;
+  -moz-box-shadow: inset 2px 2px 2px #cccccc, #cccccc 1px 1px 2px;
+  box-shadow: inset 2px 2px 2px #cccccc, #cccccc 1px 1px 2px;
+  min-height: 55px;
+  padding: 5px 10px 5px 0px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  position: relative;
+  font-size: 13px; }
+  .geshi pre ol {
+    list-style: decimal;
+    margin-left: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px; }
+  .geshi pre li {
+    border-left: 1px solid silver;
+    padding-left: 5px;
+    margin-left: 0px; }
+  .geshi pre:after {
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 20px;
+    right: -50px;
+    width: 150px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+    content: "CODE";
+    background: orange;
+    text-align: left;
+    padding-left: 45px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+  .geshi pre.php {
+    color: #555; }
+    .geshi pre.php:after {
+      content: "PHP"; }
+    .geshi pre.php a {
+      color: #3c4c72;
+      color: blue; }
+    .geshi pre.php .de1 {
+      color: #555; }
+    .geshi pre.php .br0 {
+      color: black; }
+    .geshi pre.php .re0 {
+      color: #318495; }
+    .geshi pre.php .sy0, .geshi pre.php .sy1 {
+      color: blue; }
+    .geshi pre.php .st0 {
+      color: #036a07; }
+    .geshi pre.php .co1, .geshi pre.php .co2, .geshi pre.php .coMULTI {
+      color: #ff7f00; }
+    .geshi pre.php .kw1 {
+      color: blue; }
+    .geshi pre.php .kw2 {
+      color: blue; }
+    .geshi pre.php .st_h {
+      color: green; }
+  .geshi pre.html5:after {
+    content: "HTML5"; }
+  .geshi pre.html5 .imp {
+    font-weight: bold;
+    color: orange; }
+  .geshi pre.html5 .kw2 {
+    color: #4169e1;
+    font-weight: bold; }
+  .geshi pre.html5 .kw3 {
+    color: #4169e1;
+    font-style: italic; }
+  .geshi pre.html5 .es0 {
+    color: #4169e1;
+    font-weight: bold; }
+  .geshi pre.html5 .br0 {
+    color: #4169e1; }
+  .geshi pre.html5 .sy0 {
+    color: rgba(65, 105, 225, 0.7); }
+  .geshi pre.html5 .st0 {
+    color: green; }
+  .geshi pre.html5 .nu0 {
+    color: red; }
+  .geshi pre.html5 .sc-2 {
+    color: red; }
+  .geshi pre.html5 .sc-1 {
+    color: red;
+    font-style: italic; }
+  .geshi pre.html5 .sc0 {
+    color: red; }
+  .geshi pre.html5 .sc1 {
+    color: red; }
+  .geshi pre.html5 .sc2 {
+    color: rgba(65, 105, 225, 0.7); }
+  .geshi pre.html5 span.xtra {
+    display: block; }
+  .geshi pre.css {
+    color: black; }
+    .geshi pre.css:after {
+      content: "  CSS"; }
+    .geshi pre.css .imp {
+      font-weight: bold;
+      color: red; }
+    .geshi pre.css .kw1 {
+      color: rgba(65, 105, 225, 0.7);
+      font-weight: bold; }
+    .geshi pre.css .kw2 {
+      color: green; }
+    .geshi pre.css .co1 {
+      color: orange; }
+    .geshi pre.css .co2 {
+      color: fuchsia;
+      font-style: italic; }
+    .geshi pre.css .coMULTI {
+      color: #808080;
+      font-style: italic; }
+    .geshi pre.css .es0 {
+      color: fuchsia;
+      font-weight: bold; }
+    .geshi pre.css .es2 {
+      color: fuchsia;
+      font-weight: bold; }
+    .geshi pre.css .br0 {
+      color: black; }
+    .geshi pre.css .sy0 {
+      color: black; }
+    .geshi pre.css .st0 {
+      color: black; }
+    .geshi pre.css .nu0 {
+      color: #c5060b; }
+    .geshi pre.css .re0 {
+      color: black; }
+    .geshi pre.css .re1 {
+      color: black;
+      font-style: italic; }
+    .geshi pre.css .re2 {
+      color: black; }
+    .geshi pre.css .re3 {
+      color: blue; }
+    .geshi pre.css span.xtra {
+      display: block; }
+--></style>
+	
+	<div class='titlepage'>
+		<h1>Webdesign</h1>
+		F&uuml;UstgSBw<br>
+		First Edition
+		<p>HF Weidinger<br/>L Siegerth</p>
+	</div>
+	
+	<div class='toc' id='toc'><h1>Inhaltsverzeichnis</h1>
+			<ul class='toc'>
+<li class='chapter'><a href='#chapter-1' class='PageRef'>Grundlagen</a></li>
+	<ul>
+<li class='section'><a href='#section-502' class='PageRef'>Testseite</a></li>
+<ul>
+</ul><li class='section'><a href='#section-504' class='PageRef'>Testseite</a></li>
+<ul>
+</ul>	</ul>
+<li class='chapter'><a href='#chapter-2' class='PageRef'>HTML</a></li>
+	<ul>
+<li class='section'><a href='#section-3' class='PageRef'>HTM...Was?</a></li>
+<ul>
+</ul><li class='section'><a href='#section-4' class='PageRef'>Tags</a></li>
+<ul>
+</ul><li class='section'><a href='#section-5' class='PageRef'>Das Grundgeruest</a></li>
+<ul>
+<li class='subSection'><a href='#subSection-429' class='PageRef'>HEAD und BODY</a></li>
+<li class='subSection'><a href='#subSection-430' class='PageRef'>Absaetze</a></li>
+</ul><li class='section'><a href='#section-6' class='PageRef'>DOCTYPE</a></li>
+<ul>
+</ul><li class='section'><a href='#section-7' class='PageRef'>Sonderzeichen</a></li>
+<ul>
+</ul><li class='section'><a href='#section-8' class='PageRef'>Zeilenumbrueche</a></li>
+<ul>
+</ul>	</ul>
+<li class='chapter'><a href='#chapter-427' class='PageRef'>CSS</a></li>
+	<ul>
+<li class='section'><a href='#section-505' class='PageRef'>Embedding</a></li>
+<ul>
+</ul>	</ul>
+<li class='chapter'><a href='#chapter-500' class='PageRef'>WEBSERVER</a></li>
+	<ul>
+<li class='section'><a href='#section-436' class='PageRef'>HTTP und das Web</a></li>
+<ul>
+<li class='subSection'><a href='#subSection-438' class='PageRef'>Webserver und Protokolle</a></li>
+</ul><li class='section'><a href='#section-437' class='PageRef'>Apache</a></li>
+<ul>
+<li class='subSection'><a href='#subSection-439' class='PageRef'>Einfuehrung und Installation</a></li>
+<li class='subSection'><a href='#subSection-440' class='PageRef'>Konfiguration</a></li>
+<li class='subSection'><a href='#subSection-441' class='PageRef'>Sicherheit</a></li>
+<li class='subSection'><a href='#subSection-442' class='PageRef'>Indexes</a></li>
+<li class='subSection'><a href='#subSection-443' class='PageRef'>SSI</a></li>
+<li class='subSection'><a href='#subSection-503' class='PageRef'>CGI</a></li>
+</ul>	</ul>
+</ul>
+</div>
+<section class='chapter' id='chapter-1'><h1>Grundlagen</h1>
+		<article id='article-161'>
+			<h4>Woher kommt das Internet &ouml;&auml;&ouml;&ouml;&auml;&ouml;&auml;</h4>
+			<h4>Die ersten Anf&auml;nge - Das ARPANet</h4>
+Im amerikanischen Verteidigungsministerium wurde schon seit den 1960er Jahren dar&uuml;ber
+nachgedacht, wie man wichtige Daten, auch im Falle eines atomaren Angriffs, sch&uuml;tzen
+k&ouml;nnte. Die aus diesen &Uuml;berlegungen resultierende Grundidee war, die Daten redundant,
+auf mehreren Rechnern gleichzeitig zu halten. Um die Aktualit&auml;t der Daten gewÃƒÂ¤hrleisten
+zu k&ouml;nnen, mussten diese in der Lage sein, sich selbst&auml;ndig, auf direktem Wege, abzugleichen.
+Die Schlussfolgerung aus diesen Anforderungen war, dass man ein Netzwerk ben&ouml;tigte, dass diese Rechner verbinden konnte. Eine weitere wichtige Forderung war, dass
+die Daten auf mehreren unterschiedlichen Wegen, von einem <div class=\"homework\">Rechner</div> zum anderen gelangen
+konnten, damit auch im Falle eines Ausfalls einzelner Rechner, die &Uuml;bertragung noch
+m&ouml;glich war. Somit musste etwas bisher noch nicht da gewesenes geschaen werden.
+Das ARPANet stellt den Ursprung des heutigen Internets dar. Es wurde in den 1960er
+Jahren, w&auml;hrend des kalten Kriegs, zwischen den USA und der UdSSR, von den Amerikanern,
+entwickelt. Seinen Namen verdankt es der ARPA (Advanced Research Projects
+Agency), einer Gruppe von Wissenschaftlern, die 1962, unter der Leitung des Massachusetts
+Institute of Technology und des US-Verteidigungsministeriums, f&uuml;r die US-Luftwaffe,
+dieses Netzwerk entwickelten. Enscheidend f&uuml;r seine Entstehung waren die beiden Forscher
+Paul Baran und Donald Watts Davies. Sie steuerten wichtige Impulse zur Entwicklung
+bei.
+<h4>Wie ging es weiter?</h4>
+Bald sollte sich herausstellen, dass ein solches Netzwerk nicht nur f&uuml;r milit&auml;rischer Zwecke
+interessant war, sondern auch f&uuml;r die zivile Wissenschaft. Wissenschaftler in den USA
+hatten in den 1970er Jahren die M&ouml;glichkeit, Daten mit anderen Instituten, &uuml;ber das
+ARPANet, auszutauschen. Nicht die Tatsache, Daten redundant auf mehreren Rechnern
+halten zu k&ouml;nnen, sondern der Datenaustausch an sicht waren f&uuml;r sie interessant.
+Zu beginn der 1980er Jahre erkannte man, dass durch die nun deutlich gestiegene Rechnerzahl
+im ARPANet, und die vermischte zivile und milit&auml;rische Nutzung, eine Aufteilung
+des Netzwerks erforderlich wurde. Nur so war es den Milit&auml;rs m&ouml;glich Geheimnisse, und
+eigene Interessen zu wahren. F&uuml;r den milit&auml;rischen Datenaustausch wurde das \"MilNet\"
+geschaffen, das ARPANet wurde vollst&auml;ndig der zivilen Nutzung &uuml;berlassen.
+Durch diese Abkopplung stand einem weiteren Anwachsen des ARPANets nichts mehr
+im Wege. Und so b&uuml;rgerte sich nach und nach der Name \"Internet\" f&uuml;r dieses Netzwerk
+ein. Der Name ARPANet verschwand im laufe der 80er Jahre. Eng verkn&uuml;pft mit dem
+Siegeszug des Internets, war die Entstehung des Datenaustauschprotokolls, TCP/IP.
+
+<div class="information">Durch diese Abkopplung stand einem weiteren Anwachsen des <strong>ARPANets</strong> nichts mehr
+im Wege. Und so b&uuml;rgerte sich nach und nach der Name \"Internet\" f&uuml;r dieses Netzwerk
+ein. Der Name <strong>'ARPANet'</strong> verschwand im laufe der 80er Jahre. Eng verkn&uuml;pft mit dem
+Siegeszug des Internets, war die Entstehung des Datenaustauschprotokolls, TCP/IP.</div>
+		<article id='article-170'>
+			<h4>Weitere Informationen zur Entstehung des Internet</h4>
+			Informationen zu TCP/IP und Weiteres zur Entstehung des Internets, sind in der Tour 2
+des Einstiegskapitels von SELFHTML zusammengefasst.
+<div class="homework">Erarbeiten Sie sich die in Tour 2 bei SELFHTML aufbereiteten Informationen zum
+Thema Grundlagen des Internets und betrachten Sie sie als Hintergundwissen bzw. Basis
+der folgenden Kapitel.
+    <a href="#">[17, SELFHTML - Tour 2]</a></div><section class='section' id='section-502'><h2>Testseite</h2></section><section class='section' id='section-504'><h2>Testseite</h2></section></section><section class='chapter' id='chapter-2'><h1>HTML</h1><section class='section' id='section-3'><h2>HTM...Was?</h2></section><section class='section' id='section-4'><h2>Tags</h2>
+		<article id='article-195'>
+			<h4></h4>
+			<div class="blackbox" style="box-shadow:2px 2px 2px #333"></div>
+				<caption>Listing</caption>
+				<div class='geshi'><pre class="html5"><ol><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="kw2">div</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;blackbox&quot;</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;box-shadow:2px 2px 2px #333&quot;</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span></div></li></ol></pre></div>
+			</article>
+		</section><section class='section' id='section-5'><h2>Das Grundgeruest</h2><section class='subSection' id='subSection-429'><h3>HEAD und BODY</h3>
+		<article id='article-177'>
+			<h4>Kopf und K&ouml;rper - HEAD und BODY</h4>
+			Das Grundger&uuml;st einer HTML-Datei setzt sich aus drei Teilen zusammen:
+<ul>
+    <li>der <strong>Deklaration</strong> des Dokumenttyps,</li>
+    <li>dem Kopf der HTML-Datei (Header)</li>
+    <li>und dem K&ouml;rper der HTML-Datei, dem Body.</li>    
+</ul>
+<strong class="conclusion">Jeder dieser drei Teile wird in Form eines Tags angegeben bzw. von einem &ouml;ffnenden und
+einem schlie&szlig;enden Tag umgeben.</strong>
+				<caption>Listing</caption>
+				<div class='geshi'><pre class="html5"><ol><li class="li1"><div class="de1">Das Grundger<span class="sc1">&amp;uuml;</span>st einer HTML-Datei setzt sich aus drei Teilen zusammen:</div></li><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="kw2">ul</span>&gt;</span></div></li><li class="li1"><div class="de1">    <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>der <span class="sc2">&lt;<span class="kw2">strong</span>&gt;</span>Deklaration<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">strong</span>&gt;</span> des Dokumenttyps,<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span></div></li><li class="li1"><div class="de1">    <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>dem Kopf der HTML-Datei (Header)<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span></div></li><li class="li1"><div class="de1">    <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>und dem K<span class="sc1">&amp;ouml;</span>rper der HTML-Datei, dem Body.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>    </div></li><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">ul</span>&gt;</span></div></li><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="kw2">strong</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;conclusion&quot;</span>&gt;</span>Jeder dieser drei Teile wird in Form eines Tags angegeben bzw. von einem <span class="sc1">&amp;ouml;</span>ffnenden und</div></li><li class="li1"><div class="de1">einem schlie<span class="sc1">&amp;szlig;</span>enden Tag umgeben.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">strong</span>&gt;</span></div></li></ol></pre></div>
+			</article>
+		<section class='subSection' id='subSection-430'><h3>Absaetze</h3></section></section><section class='section' id='section-6'><h2>DOCTYPE</h2></section><section class='section' id='section-7'><h2>Sonderzeichen</h2></section><section class='section' id='section-8'><h2>Zeilenumbrueche</h2>
+		<article id='article-180'>
+			<h4></h4>
+			Grunds&auml;tzlich wird ein Text immer am Ende des Browserfensters bzw. am Ende des umgebenden
+Blocks (z. B. der Tabellenzelle) automatisch an einem Leerzeichen umgebrochen.
+Um einen Zeilenumbruch an einer bestimmten Stelle zu erzwingen, verwendet man das
+Tag BR
+				<caption>Listing</caption>
+				<div class='geshi'><pre class="html5"><ol><li class="li1"><div class="de1">Grunds<span class="sc1">&amp;auml;</span>tzlich wird ein Text immer am Ende des Browserfensters bzw. am Ende des umgebenden</div></li><li class="li1"><div class="de1">Blocks (z. B. der Tabellenzelle) automatisch an einem Leerzeichen umgebrochen.</div></li><li class="li1"><div class="de1">Um einen Zeilenumbruch an einer bestimmten Stelle zu erzwingen, verwendet man das</div></li><li class="li1"><div class="de1">Tag BR</div></li></ol></pre></div>
+			</article>
+		</section></section><section class='chapter' id='chapter-427'><h1>CSS</h1>
+		<article id='article-163'>
+			<h4>jeweils viele kleine Nachfrager</h4>
+			<table>
+	<thead>
+    	<tr>
+        	<th>Zahl der Anbieter</th>
+        	<th>vollkommener Markt</th>
+        	<th>unvollkommener Markt</th>
+        </tr>
+    </thead>
+    <tbody>
+    	<tr>
+        	<td>viele kleine</td>
+            <td>vollst&auml;ndige Konkurrenz</td>
+            <td>monopolistische Konkurrenz</td>
+        </tr>
+        <tr>
+            <td>wenige mittlere</td>
+            <td>homogenes Oligopol</td>
+            <td>heterogenes Oligopol</td>
+        </tr>
+        <tr>
+            <td>ein gro&szlig;er</td>
+            <td>Monopol</td>
+        	<td>monopolistische Preisdifferenzierung</td>
+        </tr>
+    </tbody>
+</table>
+		<article id='article-165'>
+			<h4>egalit&auml;rer Liberalismus vs. Naturrechtslibertarismus</h4>
+			<table>
+	<thead>
+        <tr>
+            <th></th>
+            <th>Liberalismus</th>
+            <th>Libertarismus</th>
+        </tr>
+    </thead>
+    <tbody>
+    	<tr>
+            <td>Privateigentum</td>
+            <td>pragmatisch (Maximin)</td>
+            <td>unverletzlich</td>
+        </tr>
+        <tr>
+            <td>&ouml;ffentliche Produktion</td>
+            <td>pragmatisch (Maximin)</td>
+            <td>abgelehnt</td>
+        </tr>
+        <tr>
+            <td>Steuern</td>
+            <td>probates politisches Mittel</td>
+            <td>staatlicher Diebstahl</td>
+        </tr>        
+    	<tr>
+            <td>Privateigentum</td>
+            <td>pragmatisch (Maximin)</td>
+            <td>unverletzlich</td>
+        </tr>
+        <tr>
+            <td>Umverteilung</td>
+            <td>Bef&uuml;hrwortung (Maximin)</td>
+            <td>Verteilungsgerechtigkeit irrelevant</td>
+        </tr>        
+        <tr>
+            <td>Soziale Sicherungssysteme</td>
+            <td>unterst&uuml;tzt</td>
+            <td>abgelehnt</td>
+    </tbody>
+</table><section class='section' id='section-505'><h2>Embedding</h2>
+		<article id='article-204'>
+			<h4>Article</h4>
+			<h4>Your title here...</h4>
+
+<div class="homework"><img src="img/1342350590781.JPG" alt="" /></div></section></section><section class='chapter' id='chapter-500'><h1>WEBSERVER</h1><section class='section' id='section-436'><h2>HTTP und das Web</h2><section class='subSection' id='subSection-438'><h3>Webserver und Protokolle</h3>
+		<article id='article-172'>
+			<h4>Was ist ein Webserver?</h4>
+			<p>
+Betrachtet man nur die physikalischen Komponenten des Internets, dann ist dieses Netzwerk eine gigantische Ansammlung von aktiven Komponenten (Switches, Router, usw.) und Computern, die verschiedenste Dienste in diesem Netzwerk zur Verf&uuml;gung stellen (Webserver). Was aber ist ein Webserver genau?
+</p>
+<div class="homework">
+  <ul>
+      <li>Was ist die Hauptaufgabe eines Webservers?</li>
+      <li>Nennen Sie drei Protokolle, die h&auml;ufig zur Kommunikation mit einem Webserver benutzt werden!</li>
+      <li>Auf welcher Schicht im ISO/OSI-Modell ist ein Webserver einzuordnen? Begr&uuml;nden Sie Ihre Antwort!</li>
+      <li>Wo, au&szlig;er im Internet, kann man Webserver finden? Nennen Sie mindestens drei M&ouml;glichkeiten!</li>        
+  </ul>
+</div>
+<div class="notes 70"></div>
+		<article id='article-173'>
+			<h4>Das Hyper Text Transfer Protocol</h4>
+			<p>
+Um Nachrichten, Webseiten oder Bin&auml;rdateien mit anderen Webservern oder Browsern austauschen zu k&ouml;nnen, ben&ouml;tigen Webserver Protokolle, wie z. B. das "Hyper Text Transfer Protocol", kurz HTTP.
+</p>
+<div class="homework">
+	<p>
+		Benutzen Sie Wikipedia, um die folgenden Fragen zu beantworten:
+    </p>
+<ul>
+    <li>Was ist ein Protokoll (Artikel "Kommunikationsprotokoll")?</li>
+    <li>Welche Hauptaufgabe hat das Prokoll HTTP (Artikel "HTTP")?</li>
+    <li>Zu welcher Protokollfamilie geh&ouml;rt HTTP?</li>
+    <li>Auf welchen Schichten des ISO/OSI-Modells ist HTTP beheimatet?</li>
+    <li>Wie werden die Kommunikationseinheiten in HTTP bezeichet?</li>
+    <li>Wie viele unterschiedliche Arten solcher Kommunikationseinheiten gibt es in HTTP? Nennen Sie auch deren Namen!</li>
+    <li>Was ist ein "HTTP-Header", und was ist ein "Message-Body"? Welche Intformationen enthalten HTTP-Header bzw. Message-Body?</li>
+    <li>Was bedeuten die Angaben "HTTP-Get" und "HTTP-Post"? Worin unterscheiden sich diese beiden Dinge?</li>
+    <li>Worin liegt der Unterschied zwischen den Versionen "HTTP 1.0" und "HTTP 1.1"</li>
+    </ul>    
+</div>
+<div class="notes 70"></div>
+		<article id='article-174'>
+			<h4>URL/URI und virtueller Dateipfad</h4>
+			<p>
+Ein URI ("Uniform Resource Indicator/Identifier") bezeichnet die vollst&auml;ndige Adresse, um beliebige Daten auf einem Server im Internet zu finden. Ein Beispiel f&uuml;r einen URI k&ouml;nnte sein:
+</p>
+
+<p>
+	<span class="url">http://www.fueustgsbw.de:80/intern/service/lehre\_und\_ausbildung/index.html</span>
+</p>
+
+<div class="homework">
+    <p>
+		Benutzen Sie zur Beantwortung der folgenden Fragen den deutschen Wikipedia-Artikel "URI"!</p>
+    <ul>
+		<li>Wie hei&szlig;en die Teile, in die sich der obige URI gliedert (Hinweis: Es sind f&uuml;nf Teile)?</li>
+		<li>Worin liegt der Unterschied zwischen einem URI und einem URL?</li>
+	</ul>
+</div></section></section><section class='section' id='section-437'><h2>Apache</h2><section class='subSection' id='subSection-439'><h3>Einfuehrung und Installation</h3>
+		<article id='article-178'>
+			<h4>Einf&uuml;hrung</h4>
+			<p>
+Der Apache-Server ist eines der erfolgreichsten freien Software-Projekte in der Geschichte. Man geht derzeit davon aus, dass 54 % aller Websites von einem Apache auf verschiedensten Plattformen ausgeliefert werden. Dabei ist der Apache im Betrieb sehr zuverl&auml;ssig, performant und durch seine modulare Architektur leicht erweiterbar.
+</p>
+<p>
+Durch eine gro&szlig;e Anzahl von Zusatzmodulen wird der Apache zur geeigneten Plattform f&uuml;r dynamische Inhalte, f&uuml;r sichere Transaktionen oder Workflow-Management. Die Flexibilit&auml;t im Aufbau und die Vielzahl der unterschiedlichen Erweiterungen bringen eine hohe Komplexit&auml;t bez&uuml;glich der Konfigurationsdateien mit sich, weshalb hier, in dieser Unterrichtsunterlage, nur ein Teil seiner Features und Module beleuchtet werden kann.
+</p>
+<p>
+Es gibt verschiedene Versionen des Apache. Am h&auml;ufigsten werden die Versionen 1.3, 2.0 sowie 2.2 genutzt, wobei zwischen den Versionen 1.3 und 2.0 ein gro&szlig;er Qualit&auml;tssprung stattfand. Bei einer Neuinstallation sollte darauf geachtet werden, immer die aktuellste Version, mit ihren aktuellsten Patches, zu nutzen, damit Sicherheitsl&uuml;ucken so schnell wie m&ouml;glich geschlossen werden. Die derzeit aktuellste Version des Apache ist 2.4.2.
+</p>
+<div class="homework">
+	<span class="h3">Recherchieren Sie im Internet, wo Sie...</span>
+	<ul>
+    	<li>die aktuelle Online-Dokumentation zum Apache HTTP-Server finden.</li>
+    	<li>das aktuelle Installationspakete f&uuml;r Windows (inklusive OpenSSL) finden.</li>
+	Speichern Sie sich diese Links als Bookmarks auf Ihrem PC!
+    </ul>
+</div>
+<div class="notes 20"></div>
+		<article id='article-187'>
+			<h4>Installation</h4>
+			<span class="h3">Die Echtheit des Installationspaketes &uuml;berpr&uuml;fen</span>
+<div class="homework">
+    Laden Sie die aktuellste Version (2.4.x) des Apache HTTP-Servers f&uuml;r Windows, und die dazugeh&ouml;rige SHA1-Datei herunter!
+    (<a href="http://www.anindya.com/apache-http-server-2-4-2-x86-and-x64-windows-installers/" target="_blank">Download here</a>)
+</div>
+<p>
+Mit Hilfe der SHA1-Checksumme einer Datei kann deren Echtheit verifziert werden. F&uuml;r das Installationspaket wird die Checksumme "64D78A9C90E005E8F4F55F4E1C3720E856BBC005" bereitgestellt. Um eine &Uuml;berpr&uuml;fung dieses Pakets durchf&uuml;hren zu k&ouml;nnen, wird zus&auml;tzlich noch eine Software ben&ouml;tigt, die SHA1-Checksummen generieren kann. Eine solche Software ist z. B. "digestIT2004".
+</p>
+<div class="homework">
+    <p>
+    Laden Sie die Software "digestIT2004" aus dem Internet herunter (<a href="http://www.colonywest.us/versions/download.php?release_id=3" target="_blank">Download here</a>), und installieren Sie sie (Complete Installation). F&uuml;hren Sie jetzt eine Verifikation des Apache-Installationspaketes, gem&auml;&szlig; der folgenden Anleitung durch!
+    </p>
+    <ol>
+        <li>Markieren und Kopieren Sie sich die SHA1-Checksumme (64D78A9C90E005E8F4F55F4E1C3720E856BBC005).</li>
+        <li>Klicken Sie mit der rechten Maustaste auf das Installationspaket. Es erscheint ein Kontextmen&uuml;.</li>
+		<li>Klicken Sie auf den Men&uuml;eintrag "digestIT 2004" mit der	linken Maustaste.</li>
+		<li>W&auml;hlen Sie den Men&uuml;punkt "Verify SHA1 Hash"!</li>
+    </ol>
+	<p>
+    Wenn alles ordnungsgem&auml;&szlig; verlaufen ist, sollte die Meldung "Digest matches. Verification succeeded." erscheinen, und die Verifikation ist erfolgreich abgeschlossen.
+    </p>
+</div>
+<div class="notes 20"></div>
+<span class="h3">Die Software installieren</span>
+<div class="homework">
+    <p>
+		Installieren Sie, nach den folgenden Vorgaben, den Apache HTTP-Server auf Ihrem Laptop!
+    </p>
+	<ul>
+        <li>Network Domain: apache.org</li>
+        <li>Server Name: localhost</li>
+        <li>Administrator's Email Address: Admin@localhost.apache.org</li>
+    	<li>Install for all users, on port 80, as a service -- Recommended.</li>
+		<li>Setup Type: Typical</li>
+		<li>Installationspfad: <span class="url">DATENPARTITION\apache\httpd\2.4.2</span></li>
+    </ul>
+    <p>
+    Ist die Installation erfolgreich verlaufen, erscheint am unteren rechten Bildschirmrand ein kleines Symbol, eine Feder mit einem gr&uuml;nem Pfeil.
+    </p>
+</div>
+<!-- \bilda{Das Symbol des Apache HTTP Servers}{apache_symbole}{0.5} -->
+<span class="h3">Die Steuerkonsole (Apache Service Monitor)</span>
+<p>
+    Mit einem Doppelklick k&ouml;nnen Sie den Apache Service Monitor &ouml;ffnen.
+</p>
+<div class="homework">
+    Welche M&ouml;glichkeiten/Funktionen bietet der Apache Service Monitor?
+</div>
+<div class="notes 30"></div>
+<span class="h3">Der Apache in der Windows Dienstekonsole</span>
+<p>
+    Wenn der Apache HTTP-Server als Dienst installiert wird, ist er selbstverst&auml;ndlich auch in der Windows Dienstekonsole zu finden.
+</p>
+<div class="homework">
+	Unter welchem Namen ist der HTTP-Server in der Windows Dienstekonsole zu finden?
+</div>
+<div class="notes 10"></div>
+<p>
+    Nach einem Doppelklick auf den HTTP-Server Dienst &ouml;ffnet sich dessen Eigenschaftenfenster.
+</p>
+<!--					\bilda{Die Eigen\-schaf\-ten des HTTP-Server Dien\-stes}{apache_properties_general}{0.5}-->
+<div class="information">
+    Achten Sie an dieser Stelle darauf, dass der Apache automatisch, beim Systemstart, mitgestartet wird.
+</div>
+<span class="h3">Das Installationsverzeichnis</span>
+<p>
+Nach der Installation des HTTP-Servers finden sich in dessen Installationsverzeichnis diverse Unterverzeichnisse. Diese sind:
+</p>
+<div class="homework">
+	<p>
+    	Welche Bedeutung haben die unten aufgef&uuml;hrten Unterverzeichnisse?
+    </p>
+    <table style="width:100%;line-height:3">
+    	<tr><td style="width:10%">bin</td><td> </td></tr>
+		<tr><td>cgi-bin</td><td></td></tr>
+		<tr><td>conf</td><td></td></tr>
+		<tr><td>error</td><td></td></tr>
+		<tr><td>logs</td><td></td></tr>
+		<tr><td>modules</td><td></td></tr>
+		<tr><td>htdocs</td><td></td></tr>
+	</table>
+</div><section class='subSection' id='subSection-440'><h3>Konfiguration</h3>
+		<article id='article-192'>
+			<h4>Der erste Blick in die Konfigurationsdatei</h4>
+			<p>
+Der Apache HTTP-Server wird nicht wie viele andere Windowsprogramme mittels der Windows Registry, sondern mit Hilfe einer eigenen Textdatei konfiguriert. &Uuml;blicher weise hei&szlig;t diese Datei <span class="url">httpd.conf</span>. Sie kann jedoch auch einen beliebigen anderen Namen tragen und durch zus&auml;tzliche Dateien erweitert werden. Zufinden ist diese Datei im Unterverzeichnis "conf" des Installationsverzeichnisses.
+</p>
+<div class="homework">
+    Fertigen Sie jetzt eine Sicherheitskopie der Datei <span class="url">httpd.conf</span> an!
+</div>
+<span class="h3">Direktiven</span>
+<p>
+Zur Konfiguration des Apache werden sogenannte "Direktiven" in die Datei <span class="url">httpd.conf</span> eingetragen. Eine solche Direktive ist wie folgt aufgebaut:
+</p>
+<table style="margin-left:auto;margin-right:auto">
+    <tr><th>Direktive</th><th>Argument</th></tr>
+    <tr><td>ServerRoot</td><td><span class="url">E:/apache/httpd/2.4.2</span></td></tr>
+</table>
+<div class="information">
+	F&uuml;r die Erstellung von Direktiven gelten die folgenden Regeln:
+	<ul>
+		<li>Nur eine Direktive pro Zeile</li>
+		<li>Die Direktiven sind nicht Casesensitiv,d. h. ServerRoot = serverroot.</li>
+		<li>Die Argumente der Direktiven sind Casesensitiv.</li>
+		<li>Einr&uuml;ckungen k&ouml;nnen verwendet werden, um die Lesbarkeit der Konfigurationsdatei zu verbessern.</li>
+		<li>Der Backslash (\) kann verwendet werden, um sehr lange Zeilen in mehrere Zeilen zu verteilen (Linebreak char).</li>
+		<li>Bei der Angabe von Datei- und Verzeichnispfaden wird immer der Slash (/) als Trennzeichenverwendet, nicht der Backslash (\).</li>
+    </ul>
+</div>
+<span class="h3">Kommentare</span>
+<div class="homework">
+Recherchieren Sie in der Onlinedokumentation des Apache HTTP-Server, wie Kommentare in die Konfigurationsdatei eingetragen werden, bzw. welche Regeln daf&uuml;r gelten!
+</div>
+<div class="notes 30"></div>
+		<article id='article-193'>
+			<h4>Erstellen einer ersten Konfiguration</h4>
+			<span class="h3">Noch startet der Server nicht</span>
+<p>
+Die Mindestkonfiguration eines Apache HTTP-Servers besteht aus der <span class="apache">Listen</span>-Direktive.
+</p>
+<div class="homework">
+	<ul>
+		<li>Finden Sie heraus, welche Bedeutung und welche Syntax die <span class="apache">Listen</span>-Direktive hat!</li>
+		<li>Legen Sie eine neue Konfigurationsdatei, unter dem Namen <span class="url">httpd.conf</span> an! Der HTTP-Server soll ausschlie&szlig;lich auf Port 80 lauschen!</li>
+		<li>Testen Sie, ob Ihr Apache HTTP-Server startet!</li>
+		<li>Welche Fehlermeldung erhalten Sie von Ihrem Browser, wenn Sie die URL <span class="url">http://localhost</span> eingeben?</li>
+	</ul>
+</div>
+<div class="notes 30"></div>
+<p>
+Aktuell ist der Apache noch nicht in der Lage, Webseiten auszuliefern. Dies liegt daran, dass der Server keinerlei Information dar&uuml;ber hat, in welchem Verzeichnis die Dateien liegen, mit denen er arbeiten soll. Die betreffende Information erh&auml;lt der HTTP-Server mit der <span class="apache">DocumentRoot</span>-Direktive. Sie nimmt eine Pfadangabe als Argument entgegen.
+</p>
+<div class="homework">
+	Standardm&auml;&szlig;ig ist das Unterverzeichnis <span class="url">htdocs</span> im Apache Installationsverzeichnis als <span class="apache">DocumentRoot</span> vorgesehen.
+</div>
+<div class="homework">
+	<ul>
+    	<li>F&uuml;gen Sie die <span class="apache">DocumentRoot</span>-Direktive in Ihre Konfigurationsdatei ein, und verweisen Sie mit ihr auf das <span class="url">htdocs</span>-Verzeichnis (z. B. <span class="url">E:/apache/httpd/2.4.2/htdocs</span>)!</li>
+		<li>Testen Sie erneut den Zugriff auf <span class="url">http://localhost</span> mit Hilfe Ihres Browsers! Welche Antwort erhalten Sie jetzt?</li>
+    	<li>Versuchen Sie jetzt, mit Hilfe des Internet Explorers, auf die Adresse <span class="url">http://localhost/index.html</span> zuzugreifen! Welche Antwort	erhalten Sie von Ihrem Browser?</li>
+		<li>Versuchen Sie erneut auf die Adresse <span class="url">http://localhost/index.html</span> zuzugreifen, dieses mal aber mit Hilfe des FireFox! Wie unterscheiden sich die Antworten des FireFox und des Internet Explorers von einander?</li>
+    </ul>
+</div>
+<div class="notes 50"></div>
+<span class="h3">Weitere wichtige Direktiven</span>
+<p>
+Mit den beiden Direktiven <span class="apache">Listen</span> und <span class="apache">DocumentRoot</span> hat der Apache HTTP-Server bereits alle Informationen, die er f&uuml;r einen rudiment&auml;ren Betrieb ben&ouml;tigt. F&uuml;r den produktiven Betrieb eines Apache HTTP-Servers gen&uuml;gen diese Angaben jedoch noch nicht. Es existieren weitere Direktiven, die zur Mindestkonfiguration dieses Webservers geh&ouml;ren. Die folgende Auflistung zeigt einige davon.
+</p>
+<div class="homework">
+	<p>
+		Recherchieren Sie die Bedeutung der Direktiven in der obigen Auflistung!
+    </p>
+    <table style="width:100%">
+        <tr><th style="width:25%">Direktive</th><th>Bedeutung</th></tr>
+		<tr><td style="line-height:3"><span class="apache">DefaultType</span></td><td></td></tr>
+		<tr><td style="line-height:3"><span class="apache">ErrorLog</span></td><td></td></tr>
+		<tr><td style="line-height:3"><span class="apache">LogLevel</span></td><td></td></tr>
+		<tr><td style="line-height:3"><span class="apache">ServerAdmin</span></td><td></td></tr>
+		<tr><td style="line-height:3"><span class="apache">ServerName</span></td><td></td></tr>
+		<tr><td style="line-height:3"><span class="apache">ServerRoot</span></td><td></td></tr>
+	</table>
+</div>
+<div class="notes 70"></div>
+		<article id='article-196'>
+			<h4>Einbinden von Modulen</h4>
+			<p>
+Wie bereits zu Anfang erw&auml;hnt, ist der Apache HTTP-Server ein modular aufgebautes Produkt. Im Unterverzeichniss <span class="url">modules</span> , des Installationsverzeichnisses, liegen mehrere Dateien, mit der Dateiendung <span class="url">.so</span>. Hierbei handelt es sich um sogenannte "Shared Objects", oder auch um "Dynamic Link Libraries", die in der Programmiersprache C erstellt wurden. Jede dieser Dateien stellt eine Vielzahl an Funktionen bereit, die der Apache nutzen kann, um seine eigenen F&auml;higkeiten zu erweitern.
+</p>
+<div class="homework">
+	<ul>
+    	<li>Recherchieren Sie in der Onlinedokumentation (Dynamic Shared Objects), wie das Laden von Modulen funktioniert (Syntax)!</li>
+		<li>Recherchieren Sie in der Dokumentation was die Direktive <span class="apache">DirectoryIndex index.html</span> bedeutet!</li>
+		<li>Welches Modul muss geladen werden, damit die <span class="apache">DirectoryIndex</span>-Direktive funktioniert?</li>
+		<li>Laden Sie das betreffende Modul, tragen Sie diese Direktive in Ihre Datei <span class="url">httpd.conf</span> ein und pr&uuml;fen Sie was passiert, wenn Sie die URL <span class="url">http://localhost</span>, nach einem Webserverneustart, aufrufen!</li>
+    </ul>
+</div>
+<div class="notes 100"></div>
+<span class="h3">Bedingtes laden von Modulen</span>
+<p>
+In manchen Umgebungen kann es notwendig sein, dass ein Apache-Modul nur dann geladen werden darf, wenn eine bestimmte Bedingung erf&uuml;llt ist. Um dies zu erreichen, muss der <span class="apache">IfModule</span>-Kontainer eingesetzt werden.
+</p>
+<div class="information">
+<p>
+    Ein Kontainer besteht aus einem &ouml;ffnenden Tag (z. B. <span class="apachecontainer">IfModule [Bedingung]</span> und einem schlie&szlig;enden Tag (<span class="apachecontainer">/IfModule</span>). Beide Tags umschlie&szlig;en Direktiven, die nur dann ausgef&uuml;hrt werden, wenn der beteffende Kontainer bei einer Anfrage angesprochen wird.
+    </p>
+</div>
+<p>
+Im konkreten Falle des <span class="apachecontainer">IfModule</span>-Kontainers hei&szlig;t das, dass die in einem solchen Kontainer eingeschlossenen Direktiven nur dann ausgef&uuml;hrt werden, wenn [Bedingung] zutrifft. Das Beispiel auf dieser Seite zeigt den <span class="apachecontainer">IfModule</span>-Kontainer, zusammen mit der <span class="apache">DirectoryIndex</span>-Direktive. Diese wird nur dann ausgef&uuml;hrt, wenn das Modul <span class="apache">dir_module</span> geladen wurde.
+</p>
+				<caption>Listing</caption>
+				<div class='geshi'><pre class="css"><ol><li class="li1"><div class="de1">&lt;p<span class="sy0">&gt;</span></div></li><li class="li1"><div class="de1">Wie bereits zu Anfang erw&amp;auml<span class="sy0">;</span>hnt<span class="sy0">,</span> ist der Apache HTTP-Server ein modular aufgebautes Produkt. Im Unterverzeichniss &lt;span class<span class="sy0">=</span><span class="st0">&quot;url&quot;</span><span class="sy0">&gt;</span>modules&lt;/span<span class="sy0">&gt;</span> <span class="sy0">,</span> des Installationsverzeichnisses<span class="sy0">,</span> liegen mehrere Dateien<span class="sy0">,</span> mit der Dateiendung &lt;span class<span class="sy0">=</span><span class="st0">&quot;url&quot;</span><span class="sy0">&gt;</span>.so&lt;/span<span class="sy0">&gt;</span>. Hierbei handelt es sich um sogenannte <span class="st0">&quot;Shared Objects&quot;</span><span class="sy0">,</span> oder auch um <span class="st0">&quot;Dynamic Link Libraries&quot;</span><span class="sy0">,</span> die in der Programmiersprache C erstellt wurden. Jede dieser Dateien stellt eine Vielzahl an Funktionen bereit<span class="sy0">,</span> die der Apache nutzen kann<span class="sy0">,</span> um seine eigenen F&amp;auml<span class="sy0">;</span>higkeiten zu erweitern.</div></li><li class="li1"><div class="de1">&lt;/p<span class="sy0">&gt;</span></div></li><li class="li1"><div class="de1">&lt;div class<span class="sy0">=</span><span class="st0">&quot;homework&quot;</span><span class="sy0">&gt;</span></div></li><li class="li1"><div class="de1">	&lt;ul<span class="sy0">&gt;</span></div></li><li class="li1"><div class="de1">    	&lt;li<span class="sy0">&gt;</span>Recherchieren Sie in der Onlinedokumentation <span class="br0">&#40;</span>Dynamic Shared Objects<span class="br0">&#41;</span><span class="sy0">,</span> wie das Laden von Modulen funktioniert <span class="br0">&#40;</span>Syntax<span class="br0">&#41;</span>!&lt;/li<span class="sy0">&gt;</span></div></li><li class="li1"><div class="de1">		&lt;li<span class="sy0">&gt;</span>Recherchieren Sie in der Dokumentation was die Direktive &lt;span class<span class="sy0">=</span><span class="st0">&quot;apache&quot;</span><span class="sy0">&gt;</span>DirectoryIndex index.html&lt;/span<span class="sy0">&gt;</span> bedeutet!&lt;/li<span class="sy0">&gt;</span></div></li><li class="li1"><div class="de1">		&lt;li<span class="sy0">&gt;</span>Welches Modul muss geladen werden<span class="sy0">,</span> damit die &lt;span class<span class="sy0">=</span><span class="st0">&quot;apache&quot;</span><span class="sy0">&gt;</span>DirectoryIndex&lt;/span<span class="sy0">&gt;</span>-Direktive funktioniert?&lt;/li<span class="sy0">&gt;</span></div></li><li class="li1"><div class="de1">		&lt;li<span class="sy0">&gt;</span>Laden Sie das betreffende Modul<span class="sy0">,</span> tragen Sie diese Direktive in Ihre Datei &lt;span class<span class="sy0">=</span><span class="st0">&quot;url&quot;</span><span class="sy0">&gt;</span>httpd.conf&lt;/span<span class="sy0">&gt;</span> ein und pr&amp;uuml<span class="sy0">;</span>fen Sie was passiert<span class="sy0">,</span> wenn Sie die URL &lt;span class<span class="sy0">=</span><span class="st0">&quot;url&quot;</span><span class="sy0">&gt;</span>http<span class="sy0">:</span>//localhost&lt;/span<span class="sy0">&gt;,</span> nach einem Webserverneustart<span class="sy0">,</span> aufrufen!&lt;/li<span class="sy0">&gt;</span></div></li><li class="li1"><div class="de1">    &lt;/ul<span class="sy0">&gt;</span></div></li><li class="li1"><div class="de1">&lt;/div<span class="sy0">&gt;</span></div></li><li class="li1"><div class="de1">&lt;div class<span class="sy0">=</span><span class="st0">&quot;notes 100&quot;</span><span class="sy0">&gt;</span>&lt;/div<span class="sy0">&gt;</span></div></li><li class="li1"><div class="de1">&lt;span class<span class="sy0">=</span><span class="st0">&quot;h3&quot;</span><span class="sy0">&gt;</span>Bedingtes laden von Modulen&lt;/span<span class="sy0">&gt;</span></div></li><li class="li1"><div class="de1">&lt;p<span class="sy0">&gt;</span></div></li><li class="li1"><div class="de1">In manchen Umgebungen kann es notwendig sein<span class="sy0">,</span> dass ein Apache-Modul nur dann geladen werden darf<span class="sy0">,</span> wenn eine bestimmte Bedingung erf&amp;uuml<span class="sy0">;</span>llt ist. Um dies zu erreichen<span class="sy0">,</span> muss der &lt;span class<span class="sy0">=</span><span class="st0">&quot;apache&quot;</span><span class="sy0">&gt;</span>IfModule&lt;/span<span class="sy0">&gt;</span>-Kontainer eingesetzt werden.</div></li><li class="li1"><div class="de1">&lt;/p<span class="sy0">&gt;</span></div></li><li class="li1"><div class="de1">&lt;div class<span class="sy0">=</span><span class="st0">&quot;information&quot;</span><span class="sy0">&gt;</span></div></li><li class="li1"><div class="de1">&lt;p<span class="sy0">&gt;</span></div></li><li class="li1"><div class="de1">    Ein Kontainer besteht aus einem &amp;ouml<span class="sy0">;</span>ffnenden Tag <span class="br0">&#40;</span>z. B. &lt;span class<span class="sy0">=</span><span class="st0">&quot;apachecontainer&quot;</span><span class="sy0">&gt;</span>IfModule <span class="br0">&#91;</span>Bedingung<span class="br0">&#93;</span>&lt;/span<span class="sy0">&gt;</span> und einem schlie&amp;szlig<span class="sy0">;</span>enden Tag <span class="br0">&#40;</span>&lt;span class<span class="sy0">=</span><span class="st0">&quot;apachecontainer&quot;</span><span class="sy0">&gt;</span>/IfModule&lt;/span<span class="sy0">&gt;</span><span class="br0">&#41;</span>. Beide Tags umschlie&amp;szlig<span class="sy0">;</span>en Direktiven<span class="sy0">,</span> die nur dann ausgef&amp;uuml<span class="sy0">;</span>hrt werden<span class="sy0">,</span> wenn der beteffende Kontainer bei einer Anfrage angesprochen wird.</div></li><li class="li1"><div class="de1">    &lt;/p<span class="sy0">&gt;</span></div></li><li class="li1"><div class="de1">&lt;/div<span class="sy0">&gt;</span></div></li><li class="li1"><div class="de1">&lt;p<span class="sy0">&gt;</span></div></li><li class="li1"><div class="de1">Im konkreten Falle des &lt;span class<span class="sy0">=</span><span class="st0">&quot;apachecontainer&quot;</span><span class="sy0">&gt;</span>IfModule&lt;/span<span class="sy0">&gt;</span>-Kontainers hei&amp;szlig<span class="sy0">;</span>t das<span class="sy0">,</span> dass die in einem solchen Kontainer eingeschlossenen Direktiven nur dann ausgef&amp;uuml<span class="sy0">;</span>hrt werden<span class="sy0">,</span> wenn <span class="br0">&#91;</span>Bedingung<span class="br0">&#93;</span> zutrifft. Das Beispiel auf dieser Seite zeigt den &lt;span class<span class="sy0">=</span><span class="st0">&quot;apachecontainer&quot;</span><span class="sy0">&gt;</span>IfModule&lt;/span<span class="sy0">&gt;</span>-Kontainer<span class="sy0">,</span> zusammen mit der &lt;span class<span class="sy0">=</span><span class="st0">&quot;apache&quot;</span><span class="sy0">&gt;</span>DirectoryIndex&lt;/span<span class="sy0">&gt;</span>-Direktive. Diese wird nur dann ausgef&amp;uuml<span class="sy0">;</span>hrt<span class="sy0">,</span> wenn das Modul &lt;span class<span class="sy0">=</span><span class="st0">&quot;apache&quot;</span><span class="sy0">&gt;</span>dir_module&lt;/span<span class="sy0">&gt;</span> geladen wurde.</div></li><li class="li1"><div class="de1">&lt;/p<span class="sy0">&gt;</span></div></li></ol></pre></div>
+			</article>
+		<section class='subSection' id='subSection-441'><h3>Sicherheit</h3>
+		<article id='article-197'>
+			<h4>Directory-Kontainer</h4>
+			<span class="apachecontainer">Directory</span>-Kontainer stellen einen zentralen Sicherheitsmechanismus innerhalb der Konfiguration des Apache HTTP-Servers dar. Mit ihrer Hilfe kann der Zugriff auf Verzeichnisse, die &uuml;ber den Webservers erfolgen, reguliert werden. Wie bereits beim <span class="apachecontainer">IfModule</span>-Kontainer besprochen, gelten auch hier die Anweisungen innerhalb des Kontainers nur f&uuml;r das angegebene Verzeichnis.
+<div class="homework">
+    <ul>
+		<li>Erl&auml;utern Sie die Bedeutung der Anweisungen im <span class="apachecontainer">Directory</span>-Kontainer aus dem unten angegebenen Beispiel.</li>
+        <li>Welches Modul muss geladen sein, damit die Direktive <span class="apache">Require</span> zur Verf&uuml;gung steht?
+		<li>Laden Sie SELFHTML aus dem Internet herunter, falls dies noch nicht geschehen ist, und entpacken Sie das ZIP-File in das Verzeichnis <span class="url">htdocs/selfhtml</span>.</li>
+		<li>Erstellen Sie in der Datei <span class="url">httpd.conf</span> einen <span class="apachecontainer">Directory</span>-Kontainer, der den Zugriff auf das Verzeichnis <span class="url">htdocs/selfhtml</span> von allen jedem Rechener aus und ohne jede weitere Bedingung erlaubt.</li>
+	</ul>
+</div>
+<div class="notes 70"></div>
+				<caption>Listing</caption>
+				<div class='geshi'><pre class="php"><ol><li class="li1"><div class="de1"><span class="sy0">&lt;</span>span <span class="kw2">class</span><span class="sy0">=</span><span class="st0">&quot;apachecontainer&quot;</span><span class="sy0">&gt;</span>Directory<span class="sy0">&lt;/</span>span<span class="sy0">&gt;-</span>Kontainer stellen einen zentralen Sicherheitsmechanismus innerhalb der Konfiguration des Apache HTTP<span class="sy0">-</span>Servers dar<span class="sy0">.</span> Mit ihrer Hilfe kann der Zugriff auf Verzeichnisse<span class="sy0">,</span> <span class="kw3">die</span> <span class="sy0">&amp;</span>uuml<span class="sy0">;</span>ber den Webservers erfolgen<span class="sy0">,</span> reguliert werden<span class="sy0">.</span> Wie bereits beim <span class="sy0">&lt;</span>span <span class="kw2">class</span><span class="sy0">=</span><span class="st0">&quot;apachecontainer&quot;</span><span class="sy0">&gt;</span>IfModule<span class="sy0">&lt;/</span>span<span class="sy0">&gt;-</span>Kontainer besprochen<span class="sy0">,</span> gelten auch hier <span class="kw3">die</span> Anweisungen innerhalb des Kontainers nur f<span class="sy0">&amp;</span>uuml<span class="sy0">;</span>r das angegebene Verzeichnis<span class="sy0">.</span></div></li><li class="li1"><div class="de1"><span class="sy0">&lt;</span>div <span class="kw2">class</span><span class="sy0">=</span><span class="st0">&quot;homework&quot;</span><span class="sy0">&gt;</span></div></li><li class="li1"><div class="de1">    <span class="sy0">&lt;</span>ul<span class="sy0">&gt;</span></div></li><li class="li1"><div class="de1">		<span class="sy0">&lt;</span>li<span class="sy0">&gt;</span>Erl<span class="sy0">&amp;</span>auml<span class="sy0">;</span>utern Sie <span class="kw3">die</span> Bedeutung der Anweisungen im <span class="sy0">&lt;</span>span <span class="kw2">class</span><span class="sy0">=</span><span class="st0">&quot;apachecontainer&quot;</span><span class="sy0">&gt;</span>Directory<span class="sy0">&lt;/</span>span<span class="sy0">&gt;-</span>Kontainer aus dem unten angegebenen Beispiel<span class="sy0">.&lt;/</span>li<span class="sy0">&gt;</span></div></li><li class="li1"><div class="de1">        <span class="sy0">&lt;</span>li<span class="sy0">&gt;</span>Welches Modul muss geladen sein<span class="sy0">,</span> damit <span class="kw3">die</span> Direktive <span class="sy0">&lt;</span>span <span class="kw2">class</span><span class="sy0">=</span><span class="st0">&quot;apache&quot;</span><span class="sy0">&gt;</span>Require<span class="sy0">&lt;/</span>span<span class="sy0">&gt;</span> zur Verf<span class="sy0">&amp;</span>uuml<span class="sy0">;</span>gung steht?</div></li><li class="li1"><div class="de1">		<span class="sy0">&lt;</span>li<span class="sy0">&gt;</span>Laden Sie SELFHTML aus dem Internet herunter<span class="sy0">,</span> falls dies noch nicht geschehen ist<span class="sy0">,</span> und entpacken Sie das ZIP<span class="sy0">-</span><span class="kw3">File</span> in das Verzeichnis <span class="sy0">&lt;</span>span <span class="kw2">class</span><span class="sy0">=</span><span class="st0">&quot;url&quot;</span><span class="sy0">&gt;</span>htdocs<span class="sy0">/</span>selfhtml<span class="sy0">&lt;/</span>span<span class="sy0">&gt;.&lt;/</span>li<span class="sy0">&gt;</span></div></li><li class="li1"><div class="de1">		<span class="sy0">&lt;</span>li<span class="sy0">&gt;</span>Erstellen Sie in der Datei <span class="sy0">&lt;</span>span <span class="kw2">class</span><span class="sy0">=</span><span class="st0">&quot;url&quot;</span><span class="sy0">&gt;</span>httpd<span class="sy0">.</span>conf<span class="sy0">&lt;/</span>span<span class="sy0">&gt;</span> einen <span class="sy0">&lt;</span>span <span class="kw2">class</span><span class="sy0">=</span><span class="st0">&quot;apachecontainer&quot;</span><span class="sy0">&gt;</span>Directory<span class="sy0">&lt;/</span>span<span class="sy0">&gt;-</span>Kontainer<span class="sy0">,</span> der den Zugriff auf das Verzeichnis <span class="sy0">&lt;</span>span <span class="kw2">class</span><span class="sy0">=</span><span class="st0">&quot;url&quot;</span><span class="sy0">&gt;</span>htdocs<span class="sy0">/</span>selfhtml<span class="sy0">&lt;/</span>span<span class="sy0">&gt;</span> von allen jedem Rechener aus und ohne jede weitere Bedingung erlaubt<span class="sy0">.&lt;/</span>li<span class="sy0">&gt;</span></div></li><li class="li1"><div class="de1">	<span class="sy0">&lt;/</span>ul<span class="sy0">&gt;</span></div></li><li class="li1"><div class="de1"><span class="sy0">&lt;/</span>div<span class="sy0">&gt;</span></div></li><li class="li1"><div class="de1"><span class="sy0">&lt;</span>div <span class="kw2">class</span><span class="sy0">=</span><span class="st0">&quot;notes 70&quot;</span><span class="sy0">&gt;&lt;/</span>div<span class="sy0">&gt;</span></div></li></ol></pre></div>
+			</article>
+		
+		<article id='article-199'>
+			<h4>Externe Konfiguration der Verzeichnissicherheit</h4>
+			<p>
+In machen Situationen kann es notwendig sein, dass die Konfiguration der Zugriffsrechte eines Verzeichnisses nicht durch den Administrator des Webservers, sondern durch eine andere Person erfolgen muss. In so einem Fall gibt es zwei Optionen:
+</p>
+    
+<ul>
+	<li>Der Serveradministrator gibt der betreffenden Person Zugriff auf die Hauptkonfiguration des Webservers (<span class="url">httpd.conf</span>).</li>
+	<li>Es werden <span class="url">.htaccess</span>-Dateien genutzt (man beachte den Punkt vor dem Namen).</li>
+</ul>
+<p>
+    Im Allgemeinen d&uuml;rfte die zweite Option, die Nutzung der <span class="url">.htaccess</span>-Dateien, die sinnvollere Alternative sein.
+	
+</p>
+<div class="information">
+Unter MS-Windows ist es nicht m&ouml;glich, dass ein Dateiname mit einem Punkt beginnt. Deshalb muss hier die <span class="apache">AccessFile</span>-Direktive in der Hauptkonfigurationsdatei genutzt werden, um den Namen der <span class="url">.htaccess</span>-Dateien zu &auml;ndern, z. B. in htaccess (ohne Punkt)!
+</div>
+<span class="h3">Benutzung von .htaccess-Dateien</span>
+<p>
+    <span class="url">.htaccess</span>-Dateien erm&ouml;glichen es, denn Zugriff auf die Verzeichnisstruktur des Webservers auf der Basis einzelner Verzeichnisse zu regeln. Dies geschieht, in dem <span class="url">.htaccess</span>-Dateien in die Verzeichnisse gelegt werden, f&uuml;r die Zugriffsbeschr&auml;nkungen eingerichtet werden m&uuml;ssen.
+</p>
+<div class="information">
+Die Direktiven einer <span class="url">.htaccess</span>-Datei gelten immer f&uuml;r das Verzeichnis, in dem sie sich befindet, und alle darunter liegenden Unterverzeichnisse.
+</div>
+<p>
+    <span class="url">.htaccess</span>-Dateien nutzen die gleiche Syntax, wie die Hauptkonfigurationsdatei <span class="url">httpd.conf</span>. So kann z. B. der <span class="apachecontainer">Directory</span>-Kontainer f&uuml;r das Verzeichnis <span class="url">htdocs/selfhtml</span> durch eine entsprechende <span class="url">.htaccess</span>-Datei ersetzt werden.
+<div class="information">
+    Innerhalb der <span class="url">.htaccess</span>-Datei entf&auml;llt die Angabe des <span class="apachecontainer">Directory</span>-Kontainers, da der gesamte Inhalt der Datei nur f&uuml;r ein Verzeichnis g&uuml;ltig ist.
+</div>
+<div class="homework">
+    Testen Sie, ob die auf dieser Seite gezeigte <span class="url">.htaccess</span>-Datei bereits Auswirkungen hat! Wenn nicht, was muss an der Hauptkonfigurationsdatei ge&auml;n
+   dert werden, um die <span class="url">.htaccess</span>-Datei wirksam werden zu lassen?
+</div>
+<div class="notes 70"></div>
+<span class="h3">Negative Effekte</span>
+<p>
+    Bei der Nutzung von <span class="url">.htaccess</span>-Dateien treten im Wesentlichen drei negative Effekte auf:
+</p>
+<ol>
+	<li>Sobald mit Hilfe der <span class="apache">AllowOverride</span>-Direktive die Nutzung von <span class="url">.htaccess</span>-Dateien erlaubt wird, sucht der Apache automatisch, in allen Unterverzeichnissen immer nach einer <span class="url">.htaccess</span>-Datei, auch dann, wenn gar keine vorhanden ist.</li>
+	<li>Eine <span class="url">.htaccess</span>-Datei wird bei jedem Verzeichnisszugriff erneut geladen, um etwaige &Auml;nderungen an der Verzeichniskonfiguration feststellen zu k&ouml;nnen.</li>
+	<li>Da die Direktiven aus den <span class="url">.htaccess</span>-Dateien immer kumulativ betrachtet werden, m&uuml;ssen alle <span class="url">.htaccess</span>-Dateien, auch die aus h&ouml;heren Ebenen gelesen werden, um die Direktiven addieren zu k&ouml;nnen, und somit die effektive Konfiguration bilden zu k&ouml;nnen.</li>
+</ol>
+<div class="information">
+Direktiven aus verschiedenen <span class="url">.htaccess</span>-Dateien werden immer in der Reihenfolge angewandt, in der sie vom Webserver vorgefunden werden. D. h. Direktiven aus <span class="url">.htaccess</span>-Dateien in den unteren Verzeichnissebenen k&ouml;nnen Direktiven aus <span class="url">.htaccess</span>-Dateien den h&ouml;heren Verzeichnissebenen &uuml;berschreiben.
+</div>
+<p>
+Ein Beispiel zum vorangegangenen Merksatz:
+</p>
+<p>
+    Es existieren die folgenden Verzeichnisse: <span class="url">htdocs/selfhtml</span> und <span class="url">htdocs/selfhtml/css</span>. Beide Verzeichnisse haben eine eigene <span class="url">.htaccess</span>-Datei. In der <span class="url">.htaccess</span>-Datei des Verzeichnisses <span class="url">htdocs/selfhtml</span> ist die Direktive <span class="apache">Require all granted</span> angegeben. Das bedeutet, dass ein Nutzer Zugriff auf beide Verzeichnisse hat, da die Direktiven aus <span class="url">.htaccess</span>-Dateien auch immer f&uuml;r alle Unterverzeichnisse gelten.
+</p>
+<p>
+    Im Verzeichniss <span class="url">htdocs/selfhtml/css</span> ist jedoch in der<span class="url"> .htaccess</span>-Datei die Direktive <span class="apache">Require all granted</span> gesetzt. Daraus folgt, dass der Zugriff auf das Verzeichnis <span class="url">htdocs/selfhtml/css</span> f&uuml;r alle Nutzer gesperrt ist, weil die <span class="apache">Require all granted</span>-Direktive als zweites gefunden wird, und somit G&uuml;ltigkeit hat. Nutzer k&ouml;nnen also nur auf das Verzeichnis <span class="url">htdocs/selfhtml</span> zugreifen.
+<div class="homework">
+    <ol>
+		<li>Wie verh&auml;t es sich zwischen einer .<span class="url">.htaccess</span>-Datei und der Hauptkonfigurationsdatei? Kann eine <span class="url">.htaccess</span>-Datei Direktiven aus der Hauptkonfigurationsdatei &uuml;berschreiben, und umgekehrt?</li>
+		<li>Was passiert, wenn ein Benutzer, in seinem Browser, die folgende URL aufruft: <span class="url">http://localhost/selfhtml/htaccess</span> oder <span class="url">http://localhost/selfhtml/.htaccess</span>?
+            <li>Wie kann verhindert werden, dass sich ein Nutzer den Inhalt einer <span class="url">.htaccess</span>-Datei anzeigen l&auml;sst (Hinweis: Schlagen Sie hierf&uuml;r die <span class="apache">FilesMatch</span>-Direktive nach!)
+    </ol>
+</div>
+				<caption>Listing</caption>
+				<div class='geshi'><pre class="html5"><ol><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="kw2">p</span>&gt;</span></div></li><li class="li1"><div class="de1">In machen Situationen kann es notwendig sein, dass die Konfiguration der Zugriffsrechte eines Verzeichnisses nicht durch den Administrator des Webservers, sondern durch eine andere Person erfolgen muss. In so einem Fall gibt es zwei Optionen:</div></li><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></div></li><li class="li1"><div class="de1">&nbsp;</div></li><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="kw2">ul</span>&gt;</span></div></li><li class="li1"><div class="de1">	<span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>Der Serveradministrator gibt der betreffenden Person Zugriff auf die Hauptkonfiguration des Webservers (<span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;url&quot;</span>&gt;</span>httpd.conf<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span>).<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span></div></li><li class="li1"><div class="de1">	<span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>Es werden <span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;url&quot;</span>&gt;</span>.htaccess<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span>-Dateien genutzt (man beachte den Punkt vor dem Namen).<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span></div></li><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">ul</span>&gt;</span></div></li><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="kw2">p</span>&gt;</span></div></li><li class="li1"><div class="de1">    Im Allgemeinen d<span class="sc1">&amp;uuml;</span>rfte die zweite Option, die Nutzung der <span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;url&quot;</span>&gt;</span>.htaccess<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span>-Dateien, die sinnvollere Alternative sein.</div></li><li class="li1"><div class="de1">&nbsp;</div></li><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></div></li><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="kw2">div</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;information&quot;</span>&gt;</span></div></li><li class="li1"><div class="de1">Unter MS-Windows ist es nicht m<span class="sc1">&amp;ouml;</span>glich, dass ein Dateiname mit einem Punkt beginnt. Deshalb muss hier die <span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;apache&quot;</span>&gt;</span>AccessFile<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span>-Direktive in der Hauptkonfigurationsdatei genutzt werden, um den Namen der <span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;url&quot;</span>&gt;</span>.htaccess<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span>-Dateien zu <span class="sc1">&amp;auml;</span>ndern, z. B. in htaccess (ohne Punkt)!</div></li><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span></div></li><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;h3&quot;</span>&gt;</span>Benutzung von .htaccess-Dateien<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span></div></li><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="kw2">p</span>&gt;</span></div></li><li class="li1"><div class="de1">    <span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;url&quot;</span>&gt;</span>.htaccess<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span>-Dateien erm<span class="sc1">&amp;ouml;</span>glichen es, denn Zugriff auf die Verzeichnisstruktur des Webservers auf der Basis einzelner Verzeichnisse zu regeln. Dies geschieht, in dem <span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;url&quot;</span>&gt;</span>.htaccess<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span>-Dateien in die Verzeichnisse gelegt werden, f<span class="sc1">&amp;uuml;</span>r die Zugriffsbeschr<span class="sc1">&amp;auml;</span>nkungen eingerichtet werden m<span class="sc1">&amp;uuml;</span>ssen.</div></li><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></div></li><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="kw2">div</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;information&quot;</span>&gt;</span></div></li><li class="li1"><div class="de1">Die Direktiven einer <span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;url&quot;</span>&gt;</span>.htaccess<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span>-Datei gelten immer f<span class="sc1">&amp;uuml;</span>r das Verzeichnis, in dem sie sich befindet, und alle darunter liegenden Unterverzeichnisse.</div></li><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span></div></li><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="kw2">p</span>&gt;</span></div></li><li class="li1"><div class="de1">    <span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;url&quot;</span>&gt;</span>.htaccess<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span>-Dateien nutzen die gleiche Syntax, wie die Hauptkonfigurationsdatei <span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;url&quot;</span>&gt;</span>httpd.conf<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span>. So kann z. B. der <span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;apachecontainer&quot;</span>&gt;</span>Directory<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span>-Kontainer f<span class="sc1">&amp;uuml;</span>r das Verzeichnis <span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;url&quot;</span>&gt;</span>htdocs/selfhtml<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span> durch eine entsprechende <span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;url&quot;</span>&gt;</span>.htaccess<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span>-Datei ersetzt werden.</div></li><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="kw2">div</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;information&quot;</span>&gt;</span></div></li><li class="li1"><div class="de1">    Innerhalb der <span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;url&quot;</span>&gt;</span>.htaccess<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span>-Datei entf<span class="sc1">&amp;auml;</span>llt die Angabe des <span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;apachecontainer&quot;</span>&gt;</span>Directory<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span>-Kontainers, da der gesamte Inhalt der Datei nur f<span class="sc1">&amp;uuml;</span>r ein Verzeichnis g<span class="sc1">&amp;uuml;</span>ltig ist.</div></li><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span></div></li><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="kw2">div</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;homework&quot;</span>&gt;</span></div></li><li class="li1"><div class="de1">    Testen Sie, ob die auf dieser Seite gezeigte <span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;url&quot;</span>&gt;</span>.htaccess<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span>-Datei bereits Auswirkungen hat! Wenn nicht, was muss an der Hauptkonfigurationsdatei ge<span class="sc1">&amp;auml;</span>n</div></li><li class="li1"><div class="de1">   dert werden, um die <span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;url&quot;</span>&gt;</span>.htaccess<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span>-Datei wirksam werden zu lassen?</div></li><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span></div></li><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="kw2">div</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;notes 70&quot;</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span></div></li><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;h3&quot;</span>&gt;</span>Negative Effekte<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span></div></li><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="kw2">p</span>&gt;</span></div></li><li class="li1"><div class="de1">    Bei der Nutzung von <span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;url&quot;</span>&gt;</span>.htaccess<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span>-Dateien treten im Wesentlichen drei negative Effekte auf:</div></li><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></div></li><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="kw2">ol</span>&gt;</span></div></li><li class="li1"><div class="de1">	<span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>Sobald mit Hilfe der <span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;apache&quot;</span>&gt;</span>AllowOverride<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span>-Direktive die Nutzung von <span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;url&quot;</span>&gt;</span>.htaccess<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span>-Dateien erlaubt wird, sucht der Apache automatisch, in allen Unterverzeichnissen immer nach einer <span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;url&quot;</span>&gt;</span>.htaccess<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span>-Datei, auch dann, wenn gar keine vorhanden ist.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span></div></li><li class="li1"><div class="de1">	<span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>Eine <span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;url&quot;</span>&gt;</span>.htaccess<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span>-Datei wird bei jedem Verzeichnisszugriff erneut geladen, um etwaige <span class="sc1">&amp;Auml;</span>nderungen an der Verzeichniskonfiguration feststellen zu k<span class="sc1">&amp;ouml;</span>nnen.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span></div></li><li class="li1"><div class="de1">	<span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>Da die Direktiven aus den <span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;url&quot;</span>&gt;</span>.htaccess<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span>-Dateien immer kumulativ betrachtet werden, m<span class="sc1">&amp;uuml;</span>ssen alle <span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;url&quot;</span>&gt;</span>.htaccess<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span>-Dateien, auch die aus h<span class="sc1">&amp;ouml;</span>heren Ebenen gelesen werden, um die Direktiven addieren zu k<span class="sc1">&amp;ouml;</span>nnen, und somit die effektive Konfiguration bilden zu k<span class="sc1">&amp;ouml;</span>nnen.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span></div></li><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">ol</span>&gt;</span></div></li><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="kw2">div</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;information&quot;</span>&gt;</span></div></li><li class="li1"><div class="de1">Direktiven aus verschiedenen <span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;url&quot;</span>&gt;</span>.htaccess<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span>-Dateien werden immer in der Reihenfolge angewandt, in der sie vom Webserver vorgefunden werden. D. h. Direktiven aus <span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;url&quot;</span>&gt;</span>.htaccess<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span>-Dateien in den unteren Verzeichnissebenen k<span class="sc1">&amp;ouml;</span>nnen Direktiven aus <span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;url&quot;</span>&gt;</span>.htaccess<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span>-Dateien den h<span class="sc1">&amp;ouml;</span>heren Verzeichnissebenen <span class="sc1">&amp;uuml;</span>berschreiben.</div></li><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span></div></li><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="kw2">p</span>&gt;</span></div></li><li class="li1"><div class="de1">Ein Beispiel zum vorangegangenen Merksatz:</div></li><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></div></li><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="kw2">p</span>&gt;</span></div></li><li class="li1"><div class="de1">    Es existieren die folgenden Verzeichnisse: <span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;url&quot;</span>&gt;</span>htdocs/selfhtml<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span> und <span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;url&quot;</span>&gt;</span>htdocs/selfhtml/css<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span>. Beide Verzeichnisse haben eine eigene <span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;url&quot;</span>&gt;</span>.htaccess<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span>-Datei. In der <span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;url&quot;</span>&gt;</span>.htaccess<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span>-Datei des Verzeichnisses <span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;url&quot;</span>&gt;</span>htdocs/selfhtml<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span> ist die Direktive <span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;apache&quot;</span>&gt;</span>Require all granted<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span> angegeben. Das bedeutet, dass ein Nutzer Zugriff auf beide Verzeichnisse hat, da die Direktiven aus <span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;url&quot;</span>&gt;</span>.htaccess<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span>-Dateien auch immer f<span class="sc1">&amp;uuml;</span>r alle Unterverzeichnisse gelten.</div></li><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></div></li><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="kw2">p</span>&gt;</span></div></li><li class="li1"><div class="de1">    Im Verzeichniss <span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;url&quot;</span>&gt;</span>htdocs/selfhtml/css<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span> ist jedoch in der<span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;url&quot;</span>&gt;</span> .htaccess<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span>-Datei die Direktive <span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;apache&quot;</span>&gt;</span>Require all granted<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span> gesetzt. Daraus folgt, dass der Zugriff auf das Verzeichnis <span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;url&quot;</span>&gt;</span>htdocs/selfhtml/css<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span> f<span class="sc1">&amp;uuml;</span>r alle Nutzer gesperrt ist, weil die <span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;apache&quot;</span>&gt;</span>Require all granted<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span>-Direktive als zweites gefunden wird, und somit G<span class="sc1">&amp;uuml;</span>ltigkeit hat. Nutzer k<span class="sc1">&amp;ouml;</span>nnen also nur auf das Verzeichnis <span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;url&quot;</span>&gt;</span>htdocs/selfhtml<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span> zugreifen.</div></li><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="kw2">div</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;homework&quot;</span>&gt;</span></div></li><li class="li1"><div class="de1">    <span class="sc2">&lt;<span class="kw2">ol</span>&gt;</span></div></li><li class="li1"><div class="de1">		<span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>Wie verh<span class="sc1">&amp;auml;</span>t es sich zwischen einer .<span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;url&quot;</span>&gt;</span>.htaccess<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span>-Datei und der Hauptkonfigurationsdatei? Kann eine <span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;url&quot;</span>&gt;</span>.htaccess<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span>-Datei Direktiven aus der Hauptkonfigurationsdatei <span class="sc1">&amp;uuml;</span>berschreiben, und umgekehrt?<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span></div></li><li class="li1"><div class="de1">		<span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>Was passiert, wenn ein Benutzer, in seinem Browser, die folgende URL aufruft: <span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;url&quot;</span>&gt;</span>http://localhost/selfhtml/htaccess<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span> oder <span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;url&quot;</span>&gt;</span>http://localhost/selfhtml/.htaccess<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span>?</div></li><li class="li1"><div class="de1">            <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>Wie kann verhindert werden, dass sich ein Nutzer den Inhalt einer <span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;url&quot;</span>&gt;</span>.htaccess<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span>-Datei anzeigen l<span class="sc1">&amp;auml;</span>sst (Hinweis: Schlagen Sie hierf<span class="sc1">&amp;uuml;</span>r die <span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;apache&quot;</span>&gt;</span>FilesMatch<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span>-Direktive nach!)</div></li><li class="li1"><div class="de1">    <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">ol</span>&gt;</span></div></li><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span></div></li></ol></pre></div>
+			</article>
+		<section class='subSection' id='subSection-442'><h3>Indexes</h3>
+		<article id='article-200'>
+			<h4>Ein einfacher Verzeichnisindex</h4>
+			<p>
+Webseiten darzustellen ist nur eine Aufgaben, von vielen, die ein Webserver zu bew&auml;ltigen hat. Eine andere, ist das bereitstellen von Dateien zum Download.
+</p>
+<div class="homework">
+	<ol>
+    	<li>Erstellen Sie den Ordner <span class="url">htdocs/download</span>.
+        <li>Verschieben Sie die SELFHTML-Zip-Datei in den Downloadordner.</li>
+		<li>Konfigurieren Sie den Downloadordner so, dass alle Nutzer darauf zugreifen k&ouml;nnen (Zugriffsrechte haben)!</li>
+		<li>Laden Sie das Module "mod_autoindex.so"! Welche Aufgabe hat dieses Modul?</li>
+		<li>Testen Sie den Zugriff auf die URL: <span class="url">http://localhost/download</span>!
+            <li>Falls der Zugriff noch nicht funktionieren sollte: Welche zus&auml;tzliche Direktive m&uuml;ssen Sie angeben, damit eine automatische <strong>Indizierung</strong> des Downloadordners funktioniert?</li>
+    </ol>
+</div>
+<div class="notes 70"></div>
+<div class="homework">
+    Benutzten Sie jetzt eine <span class="url">.htaccess</span>-Datei, um den Zugriff auf den Downloadornder zu erm&ouml;glichen! Welche &Auml;nderungen m&uuml;ssen dazu an der Hauptkonfigurationsdatei gemacht werden?
+</div>
+<div class="notes 70"></div>
+		<article id='article-201'>
+			<h4>Ein bisschen Farbe ins Spiel bringen</h4>
+			<p>
+Das Modul "mod_autoindex.so" bietet viele verschiedene M&ouml;glichkeiten, um einen einfachen, schmucklosen Verzeichnisindex ansprechender zu gestalten. Eine dieser M&ouml;glichkeiten ist beispielsweise das hinzuf&uuml;gen von Icons. Hierzu muss jedoch zu erst die Option <span class="apache">FancyIndexing</span> aktiviert werden.
+</p>
+<div class="homework">
+    Aktivieren Sie die Index-Options <span class="apache">FancyIndexing</span>! Was ver&auml;ndert sich dadurch sofort am Index?
+</div>
+<div class="notes 50"></div>
+				<caption>Listing</caption>
+				<div class='geshi'><pre class="apache"><ol><li class="li1"><div class="de1">&lt;p&gt;</div></li><li class="li1"><div class="de1">Das Modul <span class="st0">&quot;mod_autoindex.so&quot;</span> bietet viele verschiedene M&amp;ouml;glichkeiten, um einen einfachen, schmucklosen Verzeichnisindex ansprechender zu gestalten. Eine dieser M&amp;ouml;glichkeiten ist beispielsweise das hinzuf&amp;uuml;gen von Icons. Hierzu muss jedoch zu erst die Option &lt;span class=<span class="st0">&quot;apache&quot;</span>&gt;FancyIndexing&lt;/span&gt; aktiviert werden.</div></li><li class="li1"><div class="de1">&lt;/p&gt;</div></li><li class="li1"><div class="de1">&lt;div class=<span class="st0">&quot;homework&quot;</span>&gt;</div></li><li class="li1"><div class="de1">    Aktivieren Sie die Index-<span class="kw1">Options</span> &lt;span class=<span class="st0">&quot;apache&quot;</span>&gt;FancyIndexing&lt;/span&gt;! Was ver&amp;auml;ndert sich dadurch sofort am Index?</div></li><li class="li1"><div class="de1">&lt;/div&gt;</div></li><li class="li1"><div class="de1">&lt;div class=<span class="st0">&quot;notes 50&quot;</span>&gt;&lt;/div&gt;</div></li></ol></pre></div>
+			</article>
+		
+		<article id='article-202'>
+			<h4>Icons hinzuf&uuml;gen</h4>
+			<p>
+Der Apache HTTP-Server kennt zwei Wege, um Dateitypen mit Icons zu verbinden:
+</p>
+<ul>
+	<li>Durch Angabe des Dateityps</li>
+	<li>Durch Angabe eines MIME-Types</li>
+</ul>
+<p>
+Hierf&uuml;r existieren drei Direktiven:
+</p>
+<table style="width:100%">
+    <tr><th>Direktive</th><th>Bedeutung</th></tr>
+	<tr><td><span class="apache">AddIcon</span></td><td>Verbindet verschiedene Dateitypen mit einem Icon. <span class="apache">AddIcon</span> nimmt den Namen einer Icon-Datei und eine oder mehrere Dateieindungen entgegen.</td></tr>
+    <tr><td><span class="apache">AddIconByEncoding</span></td><td>Verkn&uuml;pft Dateien mit Hilfe des MIME-Types mit einem Icon. Hier wird der Name einer Icon-Datei und ein MIME-Type entgegen genommen.</td></tr>
+	<tr><td><span class="apache">AddIconByType</span></td><td>Verh&auml;lt sich genau so, wie <span class="apache">AddIconByEncoding</span></td></tr>
+</table>
+<div class="homework">
+Was ist ein <strong>MIME</strong>-Type?
+</div>
+<div class="notes 40"></div>
+<p>
+Da mit der HTTP-Server MIME-Typen verarbeiten kann, muss das Modul "mod_mime.so" geladen werden. Dieses Modul, wird zusammen mit einer Konfigurationsdatei f&uuml;r MIME-Typen geliefert. Um diese Datei zu laden, m&uuml;ssen die folgenden Direktiven in die Hauptkonfigurationsdatei aufgenommen werden:
+</p>
+<div class="homework">
+    Nehmen Sie die Direktiven aus \beispiel{TypesConfig} in Ihre Hauptkonfigurationsdatei auf, und benutzen Sie die Direktive <span class="apache">AddIconByType</span>, um das Icon "compressed.gif" f&uuml;r ZIP-Dateien festzulegen! Welchen MIME-Type ben&ouml;tigen Sie hierf&uuml;r?	Testen Sie Ihr Ergebnis!
+</div>
+<div class="notes 70"></div>
+				<caption>Listing</caption>
+				<div class='geshi'><pre class="apache"><ol><li class="li1"><div class="de1">&lt;p&gt;</div></li><li class="li1"><div class="de1">Der Apache HTTP-Server kennt zwei Wege, um Dateitypen mit Icons zu verbinden:</div></li><li class="li1"><div class="de1">&lt;/p&gt;</div></li><li class="li1"><div class="de1">&lt;ul&gt;</div></li><li class="li1"><div class="de1">	&lt;li&gt;Durch Angabe des Dateityps&lt;/li&gt;</div></li><li class="li1"><div class="de1">	&lt;li&gt;Durch Angabe eines MIME-Types&lt;/li&gt;</div></li><li class="li1"><div class="de1">&lt;/ul&gt;</div></li><li class="li1"><div class="de1">&lt;p&gt;</div></li><li class="li1"><div class="de1">Hierf&amp;uuml;r existieren drei Direktiven:</div></li><li class="li1"><div class="de1">&lt;/p&gt;</div></li><li class="li1"><div class="de1">&lt;table style=<span class="st0">&quot;width:100%&quot;</span>&gt;</div></li><li class="li1"><div class="de1">    &lt;tr&gt;&lt;th&gt;Direktive&lt;/th&gt;&lt;th&gt;Bedeutung&lt;/th&gt;&lt;/tr&gt;</div></li><li class="li1"><div class="de1">	&lt;tr&gt;&lt;td&gt;&lt;span class=<span class="st0">&quot;apache&quot;</span>&gt;AddIcon&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Verbindet verschiedene Dateitypen mit einem Icon. &lt;span class=<span class="st0">&quot;apache&quot;</span>&gt;AddIcon&lt;/span&gt; nimmt den Namen einer Icon-Datei und eine oder mehrere Dateieindungen entgegen.&lt;/td&gt;&lt;/tr&gt;</div></li><li class="li1"><div class="de1">    &lt;tr&gt;&lt;td&gt;&lt;span class=<span class="st0">&quot;apache&quot;</span>&gt;AddIconByEncoding&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Verkn&amp;uuml;pft Dateien mit Hilfe des MIME-Types mit einem Icon. Hier wird der Name einer Icon-Datei und ein MIME-Type entgegen genommen.&lt;/td&gt;&lt;/tr&gt;</div></li><li class="li1"><div class="de1">	&lt;tr&gt;&lt;td&gt;&lt;span class=<span class="st0">&quot;apache&quot;</span>&gt;AddIconByType&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Verh&amp;auml;lt sich genau so, wie &lt;span class=<span class="st0">&quot;apache&quot;</span>&gt;AddIconByEncoding&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;</div></li><li class="li1"><div class="de1">&lt;/table&gt;</div></li><li class="li1"><div class="de1">&lt;div class=<span class="st0">&quot;homework&quot;</span>&gt;</div></li><li class="li1"><div class="de1">Was ist ein &lt;strong&gt;MIME&lt;/strong&gt;-Type?</div></li><li class="li1"><div class="de1">&lt;/div&gt;</div></li><li class="li1"><div class="de1">&lt;div class=<span class="st0">&quot;notes 40&quot;</span>&gt;&lt;/div&gt;</div></li><li class="li1"><div class="de1">&lt;p&gt;</div></li><li class="li1"><div class="de1">Da mit der HTTP-Server MIME-Typen verarbeiten kann, muss das Modul <span class="st0">&quot;mod_mime.so&quot;</span> geladen werden. Dieses Modul, wird zusammen mit einer Konfigurationsdatei f&amp;uuml;r MIME-Typen geliefert. Um diese Datei zu laden, m&amp;uuml;ssen die folgenden Direktiven in die Hauptkonfigurationsdatei aufgenommen werden:</div></li><li class="li1"><div class="de1">&lt;/p&gt;</div></li><li class="li1"><div class="de1">&lt;div class=<span class="st0">&quot;homework&quot;</span>&gt;</div></li><li class="li1"><div class="de1">    Nehmen Sie die Direktiven aus \beispiel{<span class="kw1">TypesConfig</span>} in Ihre Hauptkonfigurationsdatei auf, und benutzen Sie die Direktive &lt;span class=<span class="st0">&quot;apache&quot;</span>&gt;AddIconByType&lt;/span&gt;, um das Icon <span class="st0">&quot;compressed.gif&quot;</span> f&amp;uuml;r ZIP-Dateien festzulegen! Welchen MIME-Type ben&amp;ouml;tigen Sie hierf&amp;uuml;r?	Testen Sie Ihr Ergebnis!</div></li><li class="li1"><div class="de1">&lt;/div&gt;</div></li><li class="li1"><div class="de1">&lt;div class=<span class="st0">&quot;notes 70&quot;</span>&gt;&lt;/div&gt;</div></li></ol></pre></div>
+			</article>
+		
+		<article id='article-203'>
+			<h4>Aliase / Virtuelle Verzeichnisse</h4>
+			<p>
+Das das Laden des Icons in der letzten &Uuml;bung fehlschlug lagt daran, dass die ben&ouml;tigte Ressource, das Icon, au&szlig;erhalb des DocumentRoot-Verzeichnisses liegt. Um Ressourcen au&szlig;erhalb des DocumentRoot erreichen zu k&ouml;nnen, muss mit Aliasnamen bzw. Virtuellen Verzeichnissen gearbeitet werden.
+<div class="information">
+Verzeichnisaliase erm&ouml;glichen es, Ressourcen au&szlig;erhalb des DocumentRoot-Verzeichnisses einzubinden. Zust&auml;ndig ist hierf&uuml;r das "alias_module" (<span class="url">mod_alias.so</span>).
+</div>
+<div class="homework">
+Laden Sie das Modul <span class="url">mod_alias.so</span>, und recherchieren Sie, welche Direktive f&uuml;r das Erstellen eines Verzeichnisaliases zust\"andig ist.
+</div>
+<div class="notes 50"></div>
+<div class="homework">
+Pr&uuml;fen Sie, ob im Verzeichnisindex jetzt ein Icon angezeigt wird! Falls	nicht, kontrollieren Sie Ihr Error-Log!
+</div>
+<div class="notes 50"></div>
+<p>
+Um den Zugriff auf die Icon-Ressource zu erm&ouml;glichen, muss dem Nutzer der Zugriff auf das <span class="url">icons</span>-Verzeichnis gew&auml;hrt werden. Dies geschieht wiederum mit einem <span class="apachecontainer">Directory</span>-Kontainer.
+<div class="homework">
+Worin unterscheiden sich die beiden folgenden <span class="apachecontainer">Directory</span>-Kontainer (Hinweis: Benutzen Sie Ihr Error-Log, um den Unterschied festzustellen)?
+</div>
+<div class="notes 50"></div>
+<div class="homework">
+Formatieren Sie den automatischen DirectoryIndex des Downloadordners nach den folgenden Angaben. Benutzen Sie die Onlinedokumentation zum "autoindex_module", um die ben&ouml;tigten Informationen zu recherchieren!
+    <ul>
+		<li>Als Icon f&uuml;r das &uuml;bergeordnete Verzeichnis soll <span class="url">dir.gif</span> verwendet werden!</li>
+		<li>F&uuml;r <span class="url">*.msi</span>-Dateien soll das Icon <span class="url">compressed.gif</span> genutzt werden.</li>
+		<li>Das Standardicon f&uuml;r alle unbekannten Dateitypen muss <span class="url">unknown.gif</span> sein.</li>
+		<li>Im Index sollen Verzeichnisse immer an erster Stelle aufgelistet werden, und dann erst die Dateien.</li>
+		<li>Die Icons m&uuml;ssen ein Teil der Links sein.</li>
+		<li>Dateinamen m&uuml;ssen in ihrer vollen L&auml;nge erhalten bleiben und d&uuml;rfen nicht abgeschnitten werden.</li>
+		<li>Die Spalte "Description" soll ausgeblendet werden.</li>
+		<li>Die Standardsortierung f&uuml;r den Verzeichnisindex ist eine aufsteigende Reihenfolge.</li>
+    </ul>
+</div>
+<div class="notes 70"></div>
+				<caption>Listing</caption>
+				<div class='geshi'><pre class="apache"><ol><li class="li1"><div class="de1">&lt;p&gt;</div></li><li class="li1"><div class="de1">Das das Laden des Icons in der letzten &amp;Uuml;bung fehlschlug lagt daran, dass die ben&amp;ouml;tigte Ressource, das Icon, au&amp;szlig;erhalb des DocumentRoot-Verzeichnisses liegt. Um Ressourcen au&amp;szlig;erhalb des <span class="kw1">DocumentRoot</span> erreichen zu k&amp;ouml;nnen, muss mit Aliasnamen bzw. Virtuellen Verzeichnissen gearbeitet werden.</div></li><li class="li1"><div class="de1">&lt;div class=<span class="st0">&quot;information&quot;</span>&gt;</div></li><li class="li1"><div class="de1">Verzeichnisaliase erm&amp;ouml;glichen es, Ressourcen au&amp;szlig;erhalb des DocumentRoot-Verzeichnisses einzubinden. Zust&amp;auml;ndig ist hierf&amp;uuml;r das <span class="st0">&quot;alias_module&quot;</span> (&lt;span class=<span class="st0">&quot;url&quot;</span>&gt;mod_alias.so&lt;/span&gt;).</div></li><li class="li1"><div class="de1">&lt;/div&gt;</div></li><li class="li1"><div class="de1">&lt;div class=<span class="st0">&quot;homework&quot;</span>&gt;</div></li><li class="li1"><div class="de1">Laden Sie das Modul &lt;span class=<span class="st0">&quot;url&quot;</span>&gt;mod_alias.so&lt;/span&gt;, und recherchieren Sie, welche Direktive f&amp;uuml;r das Erstellen eines Verzeichnisaliases zust\<span class="st0">&quot;andig ist.</span></div></li><li class="li1"><div class="de1"><span class="st0">&lt;/div&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">&lt;div class=&quot;</span>notes <span class="nu0">50</span><span class="st0">&quot;&gt;&lt;/div&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">&lt;div class=&quot;</span>homework<span class="st0">&quot;&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">Pr&amp;uuml;fen Sie, ob im Verzeichnisindex jetzt ein Icon angezeigt wird! Falls	nicht, kontrollieren Sie Ihr Error-Log!</span></div></li><li class="li1"><div class="de1"><span class="st0">&lt;/div&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">&lt;div class=&quot;</span>notes <span class="nu0">50</span><span class="st0">&quot;&gt;&lt;/div&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">&lt;p&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">Um den Zugriff auf die Icon-Ressource zu erm&amp;ouml;glichen, muss dem Nutzer der Zugriff auf das &lt;span class=&quot;</span>url<span class="st0">&quot;&gt;icons&lt;/span&gt;-Verzeichnis gew&amp;auml;hrt werden. Dies geschieht wiederum mit einem &lt;span class=&quot;</span>apachecontainer<span class="st0">&quot;&gt;Directory&lt;/span&gt;-Kontainer.</span></div></li><li class="li1"><div class="de1"><span class="st0">&lt;div class=&quot;</span>homework<span class="st0">&quot;&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">Worin unterscheiden sich die beiden folgenden &lt;span class=&quot;</span>apachecontainer<span class="st0">&quot;&gt;Directory&lt;/span&gt;-Kontainer (Hinweis: Benutzen Sie Ihr Error-Log, um den Unterschied festzustellen)?</span></div></li><li class="li1"><div class="de1"><span class="st0">&lt;/div&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">&lt;div class=&quot;</span>notes <span class="nu0">50</span><span class="st0">&quot;&gt;&lt;/div&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">&lt;div class=&quot;</span>homework<span class="st0">&quot;&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">Formatieren Sie den automatischen DirectoryIndex des Downloadordners nach den folgenden Angaben. Benutzen Sie die Onlinedokumentation zum &quot;</span>autoindex_module<span class="st0">&quot;, um die ben&amp;ouml;tigten Informationen zu recherchieren!</span></div></li><li class="li1"><div class="de1"><span class="st0">    &lt;ul&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">		&lt;li&gt;Als Icon f&amp;uuml;r das &amp;uuml;bergeordnete Verzeichnis soll &lt;span class=&quot;</span>url<span class="st0">&quot;&gt;dir.gif&lt;/span&gt; verwendet werden!&lt;/li&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">		&lt;li&gt;F&amp;uuml;r &lt;span class=&quot;</span>url<span class="st0">&quot;&gt;*.msi&lt;/span&gt;-Dateien soll das Icon &lt;span class=&quot;</span>url<span class="st0">&quot;&gt;compressed.gif&lt;/span&gt; genutzt werden.&lt;/li&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">		&lt;li&gt;Das Standardicon f&amp;uuml;r alle unbekannten Dateitypen muss &lt;span class=&quot;</span>url<span class="st0">&quot;&gt;unknown.gif&lt;/span&gt; sein.&lt;/li&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">		&lt;li&gt;Im Index sollen Verzeichnisse immer an erster Stelle aufgelistet werden, und dann erst die Dateien.&lt;/li&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">		&lt;li&gt;Die Icons m&amp;uuml;ssen ein Teil der Links sein.&lt;/li&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">		&lt;li&gt;Dateinamen m&amp;uuml;ssen in ihrer vollen L&amp;auml;nge erhalten bleiben und d&amp;uuml;rfen nicht abgeschnitten werden.&lt;/li&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">		&lt;li&gt;Die Spalte &quot;</span>Description<span class="st0">&quot; soll ausgeblendet werden.&lt;/li&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">		&lt;li&gt;Die Standardsortierung f&amp;uuml;r den Verzeichnisindex ist eine aufsteigende Reihenfolge.&lt;/li&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">    &lt;/ul&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">&lt;/div&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">&lt;div class=&quot;</span>notes <span class="nu0">70</span><span class="st0">&quot;&gt;&lt;/div&gt;</span></div></li></ol></pre></div>
+			</article>
+		<section class='subSection' id='subSection-443'><h3>SSI</h3><section class='subSection' id='subSection-503'><h3>CGI</h3></section></section></section></body></html>

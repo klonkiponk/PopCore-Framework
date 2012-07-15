@@ -1,0 +1,516 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+q, blockquote {
+  quotes: none; }
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+a img {
+  border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block; }
+
+/**************************************\
+			   FONTS
+\**************************************/
+@font-face {
+  font-family: 'SymbolFont';
+  src: url("./font/websymbols-regular-webfont.eot");
+  src: url("./font/websymbols-regular-webfont.eot?#iefix") format("embedded-opentype"), url("./font/websymbols-regular-webfont.woff") format("woff"), url("./font/websymbols-regular-webfont.ttf") format("truetype"), url("./font/websymbols-regular-webfont.svg#webfont") format("svg"); }
+
+@font-face {
+  font-family: 'BaumansRegular';
+  src: url("./font/baumans-regular-webfont.eot");
+  src: url("./font/baumans-regular-webfont.eot?#iefix") format("embedded-opentype"), url("./font/baumans-regular-webfont.woff") format("woff"), url("./font/baumans-regular-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'UbuntuLightRegular';
+  src: url("./font/ubuntu-light-webfont.eot");
+  src: url("./font/ubuntu-light-webfont.eot?#iefix") format("embedded-opentype"), url("./font/ubuntu-light-webfont.woff") format("woff"), url("./font/ubuntu-light-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'UbuntuMonoRegular';
+  src: url("./font/ubuntumono-regular-webfont.eot");
+  src: url("./font/ubuntumono-regular-webfont.eot?#iefix") format("embedded-opentype"), url("./font/ubuntumono-regular-webfont.woff") format("woff"), url("./font/ubuntumono-regular-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+/**************************************\
+			   COLORS
+\**************************************/
+/* PRIMARY COLORS*/
+/* COMPLIMENTARY COLORS*/
+/**************************************\
+			   BLOCKS
+\**************************************/
+/**************************************\
+			   FONTS
+\**************************************/
+/**************************************\
+			PAGE DEFINITIONS
+\**************************************/
+@page {
+  margin-bottom: 1cm;
+  margin-left: 1.5cm;
+  margin-right: 1.5cm;
+  margin-top: 1cm;
+  padding-top: 0.5cm;
+  size: A4;
+  font-size: 1em;
+  line-height: 1.2em;
+  font-family: UbuntuLightRegular;
+  @bottom-right {
+    content: "Seite " counter(page) " von " counter(pages);
+    border-top: 1px solid silver;
+    font-size: 80%;
+    color: gray;
+    margin-bottom: 15px; }
+
+  @top-center {
+    content: normal; }
+
+  @bottom-center {
+    content: "ITSysAdminFwWebSK";
+    border-top: 1px solid silver;
+    font-size: 80%;
+    margin-bottom: 15px;
+    color: gray; }
+
+  @bottom-left {
+    content: "HF Weidinger - L Siegerth";
+    border-top: 1px solid silver;
+    font-size: 80%;
+    color: gray;
+    margin-bottom: 15px; }
+
+  @top-right {
+    content: string(chapter) " :: " string(section);
+    color: gray;
+    border-bottom: 1px solid silver;
+    font-size: 90%;
+    padding-top: 10px; }
+
+  @top-left {
+    border-bottom: 1px solid silver;
+    padding-top: 10px;
+    font-size: 90%;
+    color: gray; } }
+
+/**************************************\
+			   ELEMENTS
+\**************************************/
+ol {
+  list-style: decimal;
+  margin-bottom: 10px;
+  margin-top: 10px; }
+
+ul {
+  list-style: square;
+  margin-bottom: 10px;
+  margin-top: 10px; }
+
+li {
+  margin-left: 25px; }
+
+a {
+  text-decoration: none;
+  color: #000; }
+
+caption {
+  display: block;
+  font-size: 80%;
+  margin-bottom: 3px;
+  text-align: center; }
+
+table td {
+  border: 1px solid #6b90d4; }
+table th {
+  border: 1px solid #4577d4;
+  background-color: #ffbc40; }
+
+/**************************************\
+			  TITLE PAGE
+\**************************************/
+@page :first {
+  @top-center {
+    content: normal; }
+
+  @bottom-right {
+    content: normal; }
+
+  @bottom-left {
+    content: normal; }
+
+  @top-left {
+    content: normal; }
+
+  @top-right {
+    content: normal; } }
+
+.titlepage {
+  page-break-after: always;
+  text-align: center; }
+
+/**************************************\
+			  	 BODY
+\**************************************/
+body {
+  text-align: justify;
+  font-family: UbuntuLightRegular;
+  font-size: 1em;
+  line-height: 1.2em; }
+
+/**************************************\
+			  	 TOC
+\**************************************/
+ul.toc, ul.toc ul {
+  list-style-type: none; }
+
+.toc ul {
+  margin: 0px; }
+
+.toc li.chapter a, .toc li.section a {
+  font-family: UbuntuLightRegular; }
+
+.toc ul ul {
+  margin-left: 27px; }
+
+.toc li a.PageRef::after {
+  content: " " leader(".  ") "" target-counter(attr(href, url), page); }
+
+.toc li.chapter {
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+  border-bottom: 1px solid gray;
+  padding-bottom: 4px; }
+
+.toc li.chapter a {
+  font-size: 120%; }
+
+.toc li.section {
+  margin-bottom: 0.5em;
+  margin-top: 0.5em; }
+
+.toc li.subSection {
+  margin-bottom: 0.4em;
+  margin-top: 0.4em; }
+
+.toc li.chapter a.PageRef::after {
+  content: " " leader(" ") "" target-counter(attr(href, url), page); }
+
+.toc li.chapter a::before {
+  content: target-counter(attr(href, url), chapter) " "; }
+
+.toc li.section a::before {
+  content: target-counter(attr(href, url), chapter) "." target-counter(attr(href, url), section) " "; }
+
+.toc li.subSection a::before {
+  content: target-counter(attr(href, url), chapter) "." target-counter(attr(href, url), section) "." target-counter(attr(href, url), subSection) " "; }
+
+/**************************************\
+			   COUNTERS
+\**************************************/
+body {
+  counter-reset: chapter;
+  counter-reset: section;
+  counter-reset: subSection;
+  counter-reset: paragraph;
+  counter-reset: caption; }
+
+.chapter {
+  counter-increment: chapter;
+  counter-reset: section;
+  counter-reset: subSection;
+  counter-reset: paragraph;
+  counter-reset: caption; }
+
+.section {
+  counter-increment: section;
+  counter-reset: subSection;
+  counter-reset: paragraph; }
+
+.subSection {
+  counter-increment: subSection;
+  counter-reset: paragraph; }
+
+.paragraph {
+  counter-increment: paragraph; }
+
+caption {
+  counter-increment: caption; }
+
+div.chapter {
+  page-break-before: always; }
+
+.chapter h1::before {
+  content: counter(chapter) " "; }
+
+.chapter h2::before {
+  content: counter(chapter) "." counter(section) " "; }
+
+.chapter h3::before {
+  content: counter(chapter) "." counter(section) "." counter(subSection) " "; }
+
+.chapter h4::before {
+  content: counter(chapter) "." counter(section) "." counter(subSection) "." counter(paragraph) " "; }
+
+caption:after {
+  content: " " counter(chapter) "." counter(caption); }
+
+/**************************************\
+			   HEADINGS
+\**************************************/
+h1 {
+  string-set: chapter content();
+  margin-top: 250px;
+  color: #ffa500;
+  font-size: 2em;
+  margin-bottom: 1.9em;
+  border-bottom: 1px solid gray;
+  line-height: 2em;
+  page-break-before: always; }
+
+h2 {
+  string-set: section content();
+  margin-top: 1.6em;
+  margin-bottom: 1.6em;
+  font-size: 1.7em;
+  color: #bf8d30; }
+
+h3 {
+  string-set: subSection content();
+  margin-top: 0.8em;
+  margin-bottom: 1.3em;
+  font-size: 1.3em;
+  color: #a66c00; }
+
+h4 {
+  string-set: paragrpah content();
+  font-size: 1.2em;
+  color: #ffbc40;
+  margin-top: 0.8em;
+  margin-bottom: 1.3em; }
+
+h1, h2, h3 {
+  font-family: UbuntuLightRegular; }
+
+/**************************************\
+			   IMAGES
+\**************************************/
+img {
+  border: 3px solid #1047aa;
+  -webkit-box-shadow: 1px 1px 5px #29477f;
+  -moz-box-shadow: 1px 1px 5px #29477f;
+  box-shadow: 1px 1px 5px #29477f;
+  width: 350px; }
+
+/**************************************\
+			   BOXES
+\**************************************/
+.homework {
+  background-color: #6b90d4;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid gray;
+  margin-top: 15px; }
+
+/**************************************\
+GESHI - (CODE WITH SYNTAX HIGHLIGHTING)
+\**************************************/
+.geshi pre {
+  font-family: UbuntuMonoRegular;
+  background-color: white;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 2px 2px 2px #cccccc, #cccccc 1px 1px 2px;
+  -moz-box-shadow: inset 2px 2px 2px #cccccc, #cccccc 1px 1px 2px;
+  box-shadow: inset 2px 2px 2px #cccccc, #cccccc 1px 1px 2px;
+  min-height: 55px;
+  padding: 5px 10px 5px 0px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  position: relative;
+  font-size: 13px; }
+  .geshi pre ol {
+    list-style: decimal;
+    margin-left: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px; }
+  .geshi pre li {
+    border-left: 1px solid silver;
+    padding-left: 5px;
+    margin-left: 0px; }
+  .geshi pre:after {
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 20px;
+    right: -50px;
+    width: 150px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+    content: "CODE";
+    background: orange;
+    text-align: left;
+    padding-left: 45px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+  .geshi pre.php {
+    color: #555; }
+    .geshi pre.php:after {
+      content: "PHP"; }
+    .geshi pre.php a {
+      color: #3c4c72;
+      color: blue; }
+    .geshi pre.php .de1 {
+      color: #555; }
+    .geshi pre.php .br0 {
+      color: black; }
+    .geshi pre.php .re0 {
+      color: #318495; }
+    .geshi pre.php .sy0, .geshi pre.php .sy1 {
+      color: blue; }
+    .geshi pre.php .st0 {
+      color: #036a07; }
+    .geshi pre.php .co1, .geshi pre.php .co2, .geshi pre.php .coMULTI {
+      color: #ff7f00; }
+    .geshi pre.php .kw1 {
+      color: blue; }
+    .geshi pre.php .kw2 {
+      color: blue; }
+    .geshi pre.php .st_h {
+      color: green; }
+  .geshi pre.html5:after {
+    content: "HTML5"; }
+  .geshi pre.html5 .imp {
+    font-weight: bold;
+    color: orange; }
+  .geshi pre.html5 .kw2 {
+    color: #4169e1;
+    font-weight: bold; }
+  .geshi pre.html5 .kw3 {
+    color: #4169e1;
+    font-style: italic; }
+  .geshi pre.html5 .es0 {
+    color: #4169e1;
+    font-weight: bold; }
+  .geshi pre.html5 .br0 {
+    color: #4169e1; }
+  .geshi pre.html5 .sy0 {
+    color: rgba(65, 105, 225, 0.7); }
+  .geshi pre.html5 .st0 {
+    color: green; }
+  .geshi pre.html5 .nu0 {
+    color: red; }
+  .geshi pre.html5 .sc-2 {
+    color: red; }
+  .geshi pre.html5 .sc-1 {
+    color: red;
+    font-style: italic; }
+  .geshi pre.html5 .sc0 {
+    color: red; }
+  .geshi pre.html5 .sc1 {
+    color: red; }
+  .geshi pre.html5 .sc2 {
+    color: rgba(65, 105, 225, 0.7); }
+  .geshi pre.html5 span.xtra {
+    display: block; }
+  .geshi pre.css {
+    color: black; }
+    .geshi pre.css:after {
+      content: "  CSS"; }
+    .geshi pre.css .imp {
+      font-weight: bold;
+      color: red; }
+    .geshi pre.css .kw1 {
+      color: rgba(65, 105, 225, 0.7);
+      font-weight: bold; }
+    .geshi pre.css .kw2 {
+      color: green; }
+    .geshi pre.css .co1 {
+      color: orange; }
+    .geshi pre.css .co2 {
+      color: fuchsia;
+      font-style: italic; }
+    .geshi pre.css .coMULTI {
+      color: #808080;
+      font-style: italic; }
+    .geshi pre.css .es0 {
+      color: fuchsia;
+      font-weight: bold; }
+    .geshi pre.css .es2 {
+      color: fuchsia;
+      font-weight: bold; }
+    .geshi pre.css .br0 {
+      color: black; }
+    .geshi pre.css .sy0 {
+      color: black; }
+    .geshi pre.css .st0 {
+      color: black; }
+    .geshi pre.css .nu0 {
+      color: #c5060b; }
+    .geshi pre.css .re0 {
+      color: black; }
+    .geshi pre.css .re1 {
+      color: black;
+      font-style: italic; }
+    .geshi pre.css .re2 {
+      color: black; }
+    .geshi pre.css .re3 {
+      color: blue; }
+    .geshi pre.css span.xtra {
+      display: block; }

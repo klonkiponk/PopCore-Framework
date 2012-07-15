@@ -1,0 +1,173 @@
+/***************************************************************\
+					NOTIFICATION POPUPS
+\***************************************************************/  
+
+.notification_wrapper {
+	opacity:0; //ONLY USE IT WHEN ANIMATIONS ACTIVE
+	padding: 0px;
+	position: fixed;
+	top: 30%;
+	left: 50%;
+	width: 450px;
+	margin-left: -225px;
+	z-index:9998;
+	label {
+	    cursor: pointer;
+	    z-index:9999;
+	    position:absolute;
+	    right:-5px;
+	    top:-15px;
+	    width:32px;
+	    float:right;
+	    color:white;
+	    padding:5px 5px;
+        @include grayGradient;
+		@include insetShadow;
+		@include shadowMenu;
+		@include transitionMenu;
+		@include border-radius(4px);
+		@include text-shadow(#333 1px 1px 0px);        
+	    font-size:1.3em;
+	    text-align:center;
+	    overflow:hidden;
+	    &:hover {
+            @include grayGradientHover;
+           	@include shadowMenuDark;
+        }
+	}
+}
+.notification_content {
+	color:white;
+	margin: 0px;
+	padding: 10px;
+	@include rounded;
+	overflow:hidden;
+}
+.green {
+	border: 2px solid rgba(34, 139, 34, 0.7);
+	background: rgba(34, 139, 34, 0.8);
+			box-shadow: 0px 0px 20px green;
+	-webkit-box-shadow: 0px 0px 20px green;
+}
+.orange {
+	border: 2px solid rgba(255, 140, 0, 0.9);
+	background: rgba(255, 215, 0, 0.9);
+			box-shadow: 0px 0px 20px orange;
+	-webkit-box-shadow: 0px 0px 20px orange;
+}
+.red {
+   	border: 2px solid rgba(255, 0, 0, 0.9);
+	background: rgba(255, 0, 0, 0.7);
+			box-shadow: 0px 0px 20px red;
+	-webkit-box-shadow: 0px 0px 20px red; 
+}
+.notification_content p{
+	font-size:1.1em;
+	@include text-shadow(#000 1px 1px 0px);
+	font-weight:bold;
+	margin:0px;
+	margin-bottom:10px;
+}
+.notification_wrapper input {
+	display:none;
+}
+.notification_wrapper input:checked ~ article.notification_content,
+.notification_wrapper input:checked ~ label {
+	display:none;
+}
+
+
+/***************************************************************\
+					ANIMATION FOR THE POPUPS
+\***************************************************************/
+
+.notificationProgress {
+	width: 0;
+	height: 4px;
+	background: rgba(255,255,255,0.3);
+	position: absolute;
+	bottom: 5px;
+	left: 2%;
+	border-radius: 3px;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,0.05), 
+		0 -1px 0 rgba(255,255,255,0.6);
+	border:1px solid #fff;
+}
+
+.notification_wrapper {
+	-webkit-animation: fadeOut 6s linear forwards;
+	-moz-animation: fadeOut 6s linear forwards;
+	-o-animation: fadeOut 6s linear forwards;
+	-ms-animation: fadeOut 6s linear forwards;
+	animation: fadeOut 6s linear forwards;
+
+	-webkit-animation-delay: 0.3s;
+	-moz-animation-delay: 0.3s;
+	-o-animation-delay: 0.3s;
+	-ms-animation-delay: 0.3s;
+	animation-delay: 0.3s;
+}
+
+.notificationProgress {
+	-webkit-animation: runProgress 5.2s linear forwards 0.5s;
+	-moz-animation: runProgress 5.2s linear forwards 0.5s;
+	-o-animation: runProgress 5.2s linear forwards 0.5s;
+	-ms-animation: runProgress 5.2s linear forwards 0.5s;
+	animation: runProgress 5.2s linear forwards 0.5s;
+}
+
+@-webkit-keyframes fadeOut {
+	0% { opacity: 0; }
+	10% { opacity: 1; }
+	90% { opacity: 1; -webkit-transform: translateY(0px);}
+	99% { opacity: 0; -webkit-transform: translateY(-30px);}
+	100% { opacity: 0; }
+}
+@-moz-keyframes fadeOut {
+	0% { opacity: 0; }
+	10% { opacity: 1; }
+	90% { opacity: 1; -moz-transform: translateY(0px);}
+	99% { opacity: 0; -moz-transform: translateY(-30px);}
+	100% { opacity: 0; }
+}
+@-o-keyframes fadeOut {
+	0% { opacity: 0; }
+	10% { opacity: 1; }
+	90% { opacity: 1; -o-transform: translateY(0px);}
+	99% { opacity: 0; -o-transform: translateY(-30px);}
+	100% { opacity: 0; }
+}
+@-ms-keyframes fadeOut {
+	0% { opacity: 0; }
+	10% { opacity: 1; }
+	90% { opacity: 1; -ms-transform: translateY(0px);}
+	99% { opacity: 0; -ms-transform: translateY(-30px);}
+	100% { opacity: 0; }
+}
+@keyframes fadeOut {
+	0% { opacity: 0; }
+	10% { opacity: 1; }
+	90% { opacity: 1; transform: translateY(0px);}
+	99% { opacity: 0; transform: translateY(-30px);}
+	100% { opacity: 0; }
+}
+@-webkit-keyframes runProgress {
+	0%{ width: 0%; background: rgba(255,255,255,0.3); }
+	100%{ width: 96%; background: rgba(255,255,255,1); }
+}
+@-moz-keyframes runProgress {
+	0%{ width: 0%; background: rgba(255,255,255,0.3); }
+	100%{ width: 96%; background: rgba(255,255,255,1); }
+}
+@-o-keyframes runProgress {
+	0%{ width: 0%; background: rgba(255,255,255,0.3); }
+	100%{ width: 96%; background: rgba(255,255,255,1); }
+}
+@-ms-keyframes runProgress {
+	0%{ width: 0%; background: rgba(255,255,255,0.3); }
+	100%{ width: 96%; background: rgba(255,255,255,1); }
+}
+@keyframes runProgress {
+	0%{ width: 0%; background: rgba(255,255,255,0.3); }
+	100%{ width: 96%; background: rgba(255,255,255,1); }
+}                 

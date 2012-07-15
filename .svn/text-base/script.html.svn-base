@@ -1,0 +1,932 @@
+<!doctype html>
+<html>
+<head>
+	<title>ItSysAdminFwWebSK</title>
+	<meta charset='utf-8'>
+    <link rel='stylesheet' type='text/css' href='./font/stylesheet.css' />
+</head>
+<body><style type="text/css" media="print,screen"><!--@import url(http://fonts.googleapis.com/css?family=Pontano+Sans);
+/* line 17, ../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* line 20, ../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+body {
+  line-height: 1; }
+
+/* line 22, ../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none; }
+
+/* line 24, ../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 26, ../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+/* line 28, ../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none; }
+  /* line 101, ../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+/* line 30, ../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none; }
+
+/* line 114, ../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block; }
+
+/**************************************\
+			   COLORS
+\**************************************/
+/* PRIMARY COLORS*/
+/* COMPLIMENTARY COLORS*/
+/**************************************\
+			   FONTS
+\**************************************/
+/**************************************\
+			PAGE DEFINITIONS
+\**************************************/
+@page {
+  margin-bottom: 1cm;
+  margin-left: 1.5cm;
+  margin-right: 1.5cm;
+  margin-top: 1cm;
+  padding-top: 0.5cm;
+  size: A4;
+  font-size: 1em;
+  line-height: 1.2em;
+  font-family: OpenSansRegular;
+  @bottom-right {
+    content: "Seite " counter(page) " von " counter(pages);
+    border-top: 1px solid silver;
+    font-size: 80%;
+    color: gray;
+    margin-bottom: 15px; }
+
+  @top-center {
+    content: normal; }
+
+  @bottom-center {
+    content: "ITSysAdminFwWebSK";
+    border-top: 1px solid silver;
+    font-size: 80%;
+    margin-bottom: 15px;
+    color: gray; }
+
+  @bottom-left {
+    content: "HF Weidinger - L Siegerth";
+    border-top: 1px solid silver;
+    font-size: 80%;
+    color: gray;
+    margin-bottom: 15px; }
+
+  @top-right {
+    content: string(chapter) " :: " string(section);
+    color: gray;
+    border-bottom: 1px solid silver;
+    font-size: 90%;
+    padding-top: 10px; }
+
+  @top-left {
+    border-bottom: 1px solid silver;
+    padding-top: 10px;
+    font-size: 90%;
+    color: gray; } }
+
+/**************************************\
+			   ELEMENTS
+\**************************************/
+/* line 95, ../sass/print.scss */
+ol {
+  list-style: decimal;
+  margin-bottom: 10px;
+  margin-top: 10px; }
+
+/* line 100, ../sass/print.scss */
+ul {
+  list-style: square;
+  margin-bottom: 10px;
+  margin-top: 10px; }
+
+/* line 105, ../sass/print.scss */
+li {
+  margin-left: 25px; }
+
+/* line 109, ../sass/print.scss */
+a {
+  text-decoration: none;
+  color: #000; }
+
+/* line 113, ../sass/print.scss */
+caption {
+  display: block;
+  font-size: 80%;
+  margin-bottom: 3px;
+  text-align: center; }
+
+/* line 123, ../sass/print.scss */
+table td {
+  border: 1px solid #6b90d4; }
+/* line 126, ../sass/print.scss */
+table th {
+  border: 1px solid #4577d4;
+  background-color: #ffbc40; }
+
+/**************************************\
+			  TITLE PAGE
+\**************************************/
+@page :first {
+  @top-center {
+    content: normal; }
+
+  @bottom-right {
+    content: normal; }
+
+  @bottom-left {
+    content: normal; }
+
+  @top-left {
+    content: normal; }
+
+  @top-right {
+    content: normal; } }
+
+/* line 154, ../sass/print.scss */
+.titlepage {
+  page-break-after: always;
+  text-align: center; }
+
+/**************************************\
+			  	 BODY
+\**************************************/
+/* line 163, ../sass/print.scss */
+body {
+  text-align: justify;
+  font-family: UbuntuRegular;
+  font-size: 1em;
+  line-height: 1.2em; }
+
+/**************************************\
+			  	 TOC
+\**************************************/
+/* line 174, ../sass/print.scss */
+ul.toc, ul.toc ul {
+  list-style-type: none; }
+
+/* line 178, ../sass/print.scss */
+.toc ul {
+  margin: 0px; }
+
+/* line 181, ../sass/print.scss */
+.toc li.chapter a, .toc li.section a {
+  font-family: UbuntuRegular; }
+
+/* line 185, ../sass/print.scss */
+.toc ul ul {
+  margin-left: 27px; }
+
+/* line 189, ../sass/print.scss */
+.toc li a.PageRef::after {
+  content: " " leader(".  ") "" target-counter(attr(href, url), page); }
+
+/* line 193, ../sass/print.scss */
+.toc li.chapter {
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+  border-bottom: 1px solid gray;
+  padding-bottom: 4px; }
+
+/* line 199, ../sass/print.scss */
+.toc li.chapter a {
+  font-size: 120%; }
+
+/* line 204, ../sass/print.scss */
+.toc li.section {
+  margin-bottom: 0.5em;
+  margin-top: 0.5em; }
+
+/* line 209, ../sass/print.scss */
+.toc li.article {
+  margin-bottom: 0.4em;
+  margin-top: 0.4em; }
+
+/* line 215, ../sass/print.scss */
+.toc li.chapter a.PageRef::after {
+  content: " " leader(" ") "" target-counter(attr(href, url), page); }
+
+/* line 219, ../sass/print.scss */
+.toc li.chapter a::before {
+  content: target-counter(attr(href, url), chapter) " "; }
+
+/* line 223, ../sass/print.scss */
+.toc li.section a::before {
+  content: target-counter(attr(href, url), chapter) "." target-counter(attr(href, url), section) " "; }
+
+/* line 226, ../sass/print.scss */
+.toc li.article a::before {
+  content: target-counter(attr(href, url), chapter) "." target-counter(attr(href, url), section) "." target-counter(attr(href, url), article) " "; }
+
+/**************************************\
+			   COUNTERS
+\**************************************/
+/* line 234, ../sass/print.scss */
+body {
+  counter-reset: chapter;
+  counter-reset: section;
+  counter-reset: article;
+  counter-reset: caption; }
+
+/* line 240, ../sass/print.scss */
+article {
+  counter-increment: article; }
+
+/* line 244, ../sass/print.scss */
+section {
+  counter-increment: section;
+  counter-reset: article; }
+
+/* line 249, ../sass/print.scss */
+.chapter {
+  counter-increment: chapter;
+  counter-reset: section;
+  counter-reset: caption; }
+
+/* line 255, ../sass/print.scss */
+caption {
+  counter-increment: caption; }
+
+/* line 259, ../sass/print.scss */
+div.chapter {
+  page-break-before: always; }
+
+/* line 263, ../sass/print.scss */
+.chapter h1::before {
+  content: counter(chapter) " "; }
+
+/* line 267, ../sass/print.scss */
+.chapter h2::before {
+  content: counter(chapter) "." counter(section) " "; }
+
+/* line 271, ../sass/print.scss */
+.chapter h3::before {
+  content: counter(chapter) "." counter(section) "." counter(article) " "; }
+
+/* line 275, ../sass/print.scss */
+caption:after {
+  content: " " counter(chapter) "." counter(caption); }
+
+/**************************************\
+			   HEADINGS
+\**************************************/
+/* line 283, ../sass/print.scss */
+h1 {
+  string-set: chapter content();
+  margin-top: 250px;
+  color: #ffa500;
+  font-size: 2em;
+  margin-bottom: 1.9em;
+  border-bottom: 1px solid gray;
+  line-height: 2em;
+  page-break-before: always; }
+
+/* line 293, ../sass/print.scss */
+h2 {
+  string-set: section content();
+  margin-top: 1.6em;
+  margin-bottom: 1.6em;
+  font-size: 1.7em;
+  color: #bf8d30; }
+
+/* line 300, ../sass/print.scss */
+h3 {
+  string-set: subSection content();
+  margin-top: 0.8em;
+  margin-bottom: 1.3em;
+  font-size: 1.3em;
+  color: #a66c00; }
+
+/* line 308, ../sass/print.scss */
+h1, h2, h3 {
+  font-family: UbuntuRegular; }
+
+/**************************************\
+			   IMAGES
+\**************************************/
+/* line 316, ../sass/print.scss */
+img {
+  border: 3px solid #1047aa;
+  -webkit-box-shadow: 1px 1px 5px #29477f;
+  -moz-box-shadow: 1px 1px 5px #29477f;
+  box-shadow: 1px 1px 5px #29477f;
+  width: 350px; }
+
+/**************************************\
+GESHI - (CODE WITH SYNTAX HIGHLIGHTING)
+\**************************************/
+/* line 329, ../sass/print.scss */
+.geshi pre {
+  font-family: UbuntuMonoRegular;
+  background-color: white;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 2px 2px 2px #cccccc, #cccccc 1px 1px 2px;
+  -moz-box-shadow: inset 2px 2px 2px #cccccc, #cccccc 1px 1px 2px;
+  box-shadow: inset 2px 2px 2px #cccccc, #cccccc 1px 1px 2px;
+  min-height: 55px;
+  padding: 5px 10px 5px 0px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  position: relative;
+  font-size: 13px; }
+  /* line 340, ../sass/print.scss */
+  .geshi pre ol {
+    list-style: decimal;
+    margin-left: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px; }
+  /* line 346, ../sass/print.scss */
+  .geshi pre li {
+    border-left: 1px solid silver;
+    padding-left: 5px;
+    margin-left: 0px; }
+  /* line 351, ../sass/print.scss */
+  .geshi pre:after {
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 20px;
+    right: -50px;
+    width: 150px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+    content: "CODE";
+    background: orange;
+    text-align: left;
+    padding-left: 45px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+  /* line 373, ../sass/print.scss */
+  .geshi pre.php {
+    color: #555; }
+    /* line 374, ../sass/print.scss */
+    .geshi pre.php:after {
+      content: "PHP"; }
+    /* line 378, ../sass/print.scss */
+    .geshi pre.php a {
+      color: #3c4c72;
+      color: blue; }
+    /* line 382, ../sass/print.scss */
+    .geshi pre.php .de1 {
+      color: #555; }
+    /* line 385, ../sass/print.scss */
+    .geshi pre.php .br0 {
+      color: black; }
+    /* line 388, ../sass/print.scss */
+    .geshi pre.php .re0 {
+      color: #318495; }
+    /* line 391, ../sass/print.scss */
+    .geshi pre.php .sy0, .geshi pre.php .sy1 {
+      color: blue; }
+    /* line 394, ../sass/print.scss */
+    .geshi pre.php .st0 {
+      color: #036a07; }
+    /* line 400, ../sass/print.scss */
+    .geshi pre.php .co1, .geshi pre.php .co2, .geshi pre.php .coMULTI {
+      color: #ff7f00; }
+    /* line 403, ../sass/print.scss */
+    .geshi pre.php .kw1 {
+      color: blue; }
+    /* line 406, ../sass/print.scss */
+    .geshi pre.php .kw2 {
+      color: blue; }
+    /* line 409, ../sass/print.scss */
+    .geshi pre.php .st_h {
+      color: green; }
+  /* line 414, ../sass/print.scss */
+  .geshi pre.html5:after {
+    content: "HTML5"; }
+  /* line 417, ../sass/print.scss */
+  .geshi pre.html5 .imp {
+    font-weight: bold;
+    color: orange; }
+  /* line 418, ../sass/print.scss */
+  .geshi pre.html5 .kw2 {
+    color: #4169e1;
+    font-weight: bold; }
+  /* line 421, ../sass/print.scss */
+  .geshi pre.html5 .kw3 {
+    color: #4169e1;
+    font-style: italic; }
+  /* line 425, ../sass/print.scss */
+  .geshi pre.html5 .es0 {
+    color: #4169e1;
+    font-weight: bold; }
+  /* line 429, ../sass/print.scss */
+  .geshi pre.html5 .br0 {
+    color: #4169e1; }
+  /* line 432, ../sass/print.scss */
+  .geshi pre.html5 .sy0 {
+    color: rgba(65, 105, 225, 0.7); }
+  /* line 435, ../sass/print.scss */
+  .geshi pre.html5 .st0 {
+    color: green; }
+  /* line 438, ../sass/print.scss */
+  .geshi pre.html5 .nu0 {
+    color: red; }
+  /* line 439, ../sass/print.scss */
+  .geshi pre.html5 .sc-2 {
+    color: red; }
+  /* line 440, ../sass/print.scss */
+  .geshi pre.html5 .sc-1 {
+    color: red;
+    font-style: italic; }
+  /* line 441, ../sass/print.scss */
+  .geshi pre.html5 .sc0 {
+    color: red; }
+  /* line 442, ../sass/print.scss */
+  .geshi pre.html5 .sc1 {
+    color: red; }
+  /* line 443, ../sass/print.scss */
+  .geshi pre.html5 .sc2 {
+    color: rgba(65, 105, 225, 0.7); }
+  /* line 446, ../sass/print.scss */
+  .geshi pre.html5 span.xtra {
+    display: block; }
+  /* line 448, ../sass/print.scss */
+  .geshi pre.css {
+    color: black; }
+    /* line 449, ../sass/print.scss */
+    .geshi pre.css:after {
+      content: "  CSS"; }
+    /* line 453, ../sass/print.scss */
+    .geshi pre.css .imp {
+      font-weight: bold;
+      color: red; }
+    /* line 454, ../sass/print.scss */
+    .geshi pre.css .kw1 {
+      color: rgba(65, 105, 225, 0.7);
+      font-weight: bold; }
+    /* line 458, ../sass/print.scss */
+    .geshi pre.css .kw2 {
+      color: green; }
+    /* line 461, ../sass/print.scss */
+    .geshi pre.css .co1 {
+      color: orange; }
+    /* line 462, ../sass/print.scss */
+    .geshi pre.css .co2 {
+      color: fuchsia;
+      font-style: italic; }
+    /* line 463, ../sass/print.scss */
+    .geshi pre.css .coMULTI {
+      color: #808080;
+      font-style: italic; }
+    /* line 464, ../sass/print.scss */
+    .geshi pre.css .es0 {
+      color: fuchsia;
+      font-weight: bold; }
+    /* line 465, ../sass/print.scss */
+    .geshi pre.css .es2 {
+      color: fuchsia;
+      font-weight: bold; }
+    /* line 466, ../sass/print.scss */
+    .geshi pre.css .br0 {
+      color: black; }
+    /* line 468, ../sass/print.scss */
+    .geshi pre.css .sy0 {
+      color: black; }
+    /* line 470, ../sass/print.scss */
+    .geshi pre.css .st0 {
+      color: black; }
+    /* line 471, ../sass/print.scss */
+    .geshi pre.css .nu0 {
+      color: #c5060b; }
+    /* line 473, ../sass/print.scss */
+    .geshi pre.css .re0 {
+      color: black; }
+    /* line 474, ../sass/print.scss */
+    .geshi pre.css .re1 {
+      color: black;
+      font-style: italic; }
+    /* line 477, ../sass/print.scss */
+    .geshi pre.css .re2 {
+      color: black; }
+    /* line 479, ../sass/print.scss */
+    .geshi pre.css .re3 {
+      color: blue; }
+    /* line 481, ../sass/print.scss */
+    .geshi pre.css span.xtra {
+      display: block; }
+--></style>
+	
+	<div class='titlepage'>
+		<h1>Webdesign</h1>
+		<h2>F&uuml;UstgSBw</h2>
+		<h3>First Edition</h3>
+		<p>HF Weidinger<br/>L Siegerth</p>
+	</div>
+	
+	<div class='toc' id='toc'><h1>Inhaltsverzeichnis</h1>
+			<ul class='toc'>
+<li class='chapter'><a href='#chapter-1' class='PageRef'>CHAPTER</a></li>
+	<ul>
+	</ul>
+<li class='chapter'><a href='#chapter-2' class='PageRef'>CHAPTER 2</a></li>
+	<ul>
+<li class='section'><a href='#section-3' class='PageRef'>SECTION 3</a></li>
+<li class='section'><a href='#section-4' class='PageRef'>SECTION 4</a></li>
+	</ul>
+<li class='chapter'><a href='#chapter-404' class='PageRef'>Error</a></li>
+	<ul>
+	</ul>
+<li class='chapter'><a href='#chapter-427' class='PageRef'>CHAPTER 3</a></li>
+	<ul>
+	</ul>
+<li class='chapter'><a href='#chapter-428' class='PageRef'>CHAPTER 4</a></li>
+	<ul>
+	</ul>
+</ul>
+</div>
+<div class='chapter' id='chapter-1'><h1>CHAPTER</h1>
+		<article id='article-160'>
+			<h3></h3>
+			<div style="font-family:'SymbolFont'">S - P</div>
+<a href="http://www.justbenicestudio.com/studio/websymbols/">List of Symbols</a>
+		<article id='article-161'>
+			<h3></h3>
+			<style type="text/css">
+
+/* Palette color codes */
+/* Feel free to copy&paste color codes to your application */
+
+.primary-1 { background-color: #FFA500 }
+.primary-2 { background-color: #BF8D30 }
+.primary-3 { background-color: #A66C00 }
+.primary-4 { background-color: #FFBC40 }
+.primary-5 { background-color: #FFCE73 }
+
+.color-table {
+	margin: 2em 2em 5em;
+	border-collapse:collapse;
+	border:none;
+	border-spacing:0;
+	font-size:100%;
+	}
+.color-table th {
+	padding: 0 1em 0 0;
+	text-align:right;
+	vertical-align: middle;
+	font-size:110%;
+	border: none;
+	}
+.color-table td.sample {
+	width:10em; height:8em;
+	padding: 10px;
+	text-align:center;
+	vertical-align:middle;
+	font-size:90%;
+	border: 1px solid white;
+	white-space:nowrap;
+	}
+.color-table.small td.sample {
+	width:4em; height:4em;
+	padding:0;
+	border:none;
+	}
+.color-table .white { margin-bottom:0.2em; color:white }
+.color-table .black { margin-top:0.2em; color:black }
+
+</style>
+
+<p>Palette URL: <a href="http://colorschemedesigner.com/#0U11Tw0w0w0w0">http://colorschemedesigner.com/#0U11Tw0w0w0w0</a></p>
+<p>Color Space: RGB; </p>
+
+<table class="color-table">
+	<tr>
+		<th>Primary Color:</th>
+		<td class="sample primary-1">
+			<div class="white">
+<strong>FFA500</strong>
+			</div>
+			<div class="black">
+<strong>FFA500</strong>
+			</div>
+		</td>
+		<td class="sample primary-2">
+			<div class="white">
+<strong>BF8D30</strong>
+			</div>
+			<div class="black">
+<strong>BF8D30</strong>
+			</div>
+		</td>
+		<td class="sample primary-3">
+			<div class="white">
+<strong>A66C00</strong>
+			</div>
+			<div class="black">
+<strong>A66C00</strong>
+			</div>
+		</td>
+		<td class="sample primary-4">
+			<div class="white">
+<strong>FFBC40</strong>
+			</div>
+			<div class="black">
+<strong>FFBC40</strong>
+			</div>
+		</td>
+		<td class="sample primary-5">
+			<div class="white">
+<strong>FFCE73</strong>
+			</div>
+			<div class="black">
+<strong>FFCE73</strong>
+			</div>
+		</td>
+	</tr>
+</table>
+
+<table class="color-table small">
+	<tr>
+		<th>Primary Color:</th>
+		<td class="sample primary-1"></td>
+		<td class="sample primary-2"></td>
+		<td class="sample primary-3"></td>
+		<td class="sample primary-4"></td>
+		<td class="sample primary-5"></td>
+	</tr>
+</table>
+</div><div class='chapter' id='chapter-2'><h1>CHAPTER 2</h1>
+		<article id='article-154'>
+			<h3>Bedingungen f&uuml;r den vollkommenen Markt</h3>
+			<ul>
+    <li>Homogene G&uuml;ter</li>
+	<li>keine pers&ouml;nlichen Pr&auml;ferenzen zwischen den Marktteilnehmern</li>
+    <li>keine r&auml;umlichen Differenzierungen</li>
+    <li>keine zeitlichen Differenzierungen</li>
+    <li>vollst&auml;ndige Markttransparenz</li>    
+</ul>
+<strong class="conclusion">Wenn eine oder mehrere Bedingungen verletzt sind, spricht man von einem unvollkommenen Markt</strong><br/><br>
+<a href="http://de.wikipedia.org/wiki/Vollkommener_Markt">vollkommener Markt</a>
+				<caption>Listing</caption>
+				<div class='geshi'><pre class="html5"><ol><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="kw2">ul</span>&gt;</span></div></li><li class="li1"><div class="de1">    <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>Homogene G<span class="sc1">&amp;uuml;</span>ter<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span></div></li><li class="li1"><div class="de1">	<span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>keine pers<span class="sc1">&amp;ouml;</span>nlichen Pr<span class="sc1">&amp;auml;</span>ferenzen zwischen den Marktteilnehmern<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span></div></li><li class="li1"><div class="de1">    <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>keine r<span class="sc1">&amp;auml;</span>umlichen Differenzierungen<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span></div></li><li class="li1"><div class="de1">    <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>keine zeitlichen Differenzierungen<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span></div></li><li class="li1"><div class="de1">    <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>vollst<span class="sc1">&amp;auml;</span>ndige Markttransparenz<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>    </div></li><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">ul</span>&gt;</span></div></li><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="kw2">strong</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;conclusion&quot;</span>&gt;</span>Wenn eine oder mehrere Bedingungen verletzt sind, spricht man von einem unvollkommenen Markt<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">strong</span>&gt;&lt;<span class="kw2">br</span><span class="sy0">/</span>&gt;&lt;<span class="kw2">br</span>&gt;</span></div></li><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;http://de.wikipedia.org/wiki/Vollkommener_Markt&quot;</span>&gt;</span>vollkommener Markt<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;</span></div></li></ol></pre></div>
+			</article>
+		
+		<article id='article-155'>
+			<h3>Beispiele f&uuml;r Verletzungen der Bedingungen:</h3>
+			<ul>
+    <li>echte Diamanten - Rohdiamanten</li>
+    <li>"Stammlokal"</li>
+    <li>Internetgesch&auml;ft</li>
+    <li>unterschiedliche &Ouml;ffnungszeiten</li>
+    <li>Marktransparenz am ehesten gegeben im Internet</li>    
+</ul>
+		<article id='article-156'>
+			<h3>Beispiele von Marktformen</h3>
+			<h3>Vollst&auml;ndige Konkurrenz</h3>
+<ul>
+    <li>am ehesten gegeben auf dem Aktienmarkt und dem Devisenmarkt</li>
+    <li>Gleichgewichtspreis = Grenzkosten</li>    
+    <li>hr viele kleine Anbieter stehen gegen&uuml;ber sehr vielen kleinen Abnehmern
+</ul>
+<h3>Oligopson</h3>
+<ul>
+    <li>Automobilindustrie - wenige </li>
+    <li>Zulieferer - viele</li>    
+    <li>Wenige Anbieter stehen gegen&uuml;ber sehr vielen kleinen Abnehmern</li>
+</ul>
+<h3>Beschr&auml;nktes Monopson</h3>
+<ul>
+    <li>Staat - R&uuml;stungsindustrie</li>
+    <li>Gro&szlig;bauprojekte - Autobahn</li>
+    <li>Ein Nachfrager - wenige Anbieter</li>
+</ul><section id='section-3'><h2>SECTION 3</h2>
+		<article id='article-147'>
+			<h3>Coase Theorem</h3>
+			M&auml;rkte k&ouml;nnen das Problem der Externalit&auml;ten stets l&ouml;sen und die Ressourcen effizient zuteilen, Wenn die Betroffenene
+in der Lage sind, ohne Kosten &uuml;ber die Allokation zu verhandeln und zu tauschen 
+(d.h. auch unabh&auml;ngig von der Anfangszuteilung von Eigentumsrechten).
+<ul>
+    <li>Bedingung f&uuml;r das Coase-Theorem ist, dass die Ressourcen jemandem geh&ouml;ren (Eigentumsrechte)</li>
+    <li>Problematisch ist auch die Frage nach dem Verursacher und seinem Anteil an den externen Effekten (z.B. der 
+        Verschmutzung)</li>
+    <li>Verhandlungskosten steigen mit zunehmender Anzahl der Beteiligten</li>    
+</ul>
+<h3>Beispiel f&uuml;r eine erfolgreiche Anwendung des Coase-Theorems</h3>
+Schutz von freilebenden Elefanten
+<ul>
+    <li><strong>Kenia 1977:</strong> Verbot des Jagens<br><span class="conclusion">Elefantenpopulation sinkt von 167.000 auf 16.000 bis 1989</span></li>
+    <li><strong>Simbabwe 1982:</strong> Einf&uuml;hrung von Eigentumsrechten auf Elefanten f&uuml;r die Landbesitzer<br><span class="conclusion">Elefantenpopulation steigt 
+        von 40.000 auf 68.000 bis 1995</span></li>    
+</ul>
+		<article id='article-150'>
+			<h3>Externe Effekte</h3>
+			<h3>Positive externe Effekte</h3>
+Die am Markt realisierte Gleichgewichtsmenge ist zu niedrig
+<em>Subventionen</em>
+<h3>Negative externe Effekte</h3>
+Die am Markt realisierte Gleichgewichtsmenge ist zu hoch
+<em>Steuern</em>
+		<article id='article-151'>
+			<h3>Pigou-Steuer</h3>
+			Die Pigou-Steuer ist eine Steuer zur korrektur negativer externer Effekte
+<ul>
+	<li>Durch Steuern werden Produktionskosten erh&ouml;ht und die neue Gleichgewichtsmenge
+    f&auml;llt niedriger aus. Im Idealfall werden die betriebswirtschaftlichen Produktionskosten den volkswirtschaftlichen
+    kosten angepasst
+    </li>
+   	<li>Pigou-Steuern werden von &Ouml;konomen gegen&uuml;ber Regulierungen bevorzugt bei z.B. der Umweltpolitik</li>
+	<li>Umweltpolitik: Die Pigou-Steuer ist im Grunde ein Preis f&uuml;r das Recgt zur bestimmten Umweltverschmutzung</li>    
+</ul>
+<strong>Beispiel:</strong>
+Besteuerung von Giftschlamm
+		<article id='article-152'>
+			<h3>Subventionen</h3>
+			Subventionen dienen der Korrektur positiver externer Effekte. Die durch den Markt realisierte Menge
+eines Gutes mit positiven externen Effekten ist zu gering.
+<ul><li>Durch Subventionen werden die Produktionskosten gesenkt und die neue Gleichgewichtsmenge f&auml;llt h&ouml;her aus</li></ul>
+<strong>Anwendung:</strong> Bereiche bei denen Forschung betrieben wird, da "Spill-over" Effekte erwartet werden.</section><section id='section-4'><h2>SECTION 4</h2>
+		<article id='article-135'>
+			<h3>Was versteht man unter asymmetrischer Informationsverteilung?</h3>
+			<ul>
+    <li>ein Vertragspartner besitzt Informationen, die der andere Vertragspartner nicht hat und nutzt diese zum eigenen Vorteil</li>
+    <li>bildet die normative Grundlage f&uuml;r staatliches Eingreifen</li>
+</ul>
+		<article id='article-136'>
+			<h3>Warum sind bei z.B. bei Krankenversicherungen Zwangsmitgliedschaften sinnvoll?</h3>
+			Die Versicherung kann auf Grund der asymmetrischen Informationsverteilung im vornherein nicht wissen, wie hoch das Risiko bei einem bestimmten
+Versicherten werden kann.
+
+Daraus folgt, dass die Versicherung den Preis so w&auml;hlt um das mitlere Schadeneintrittsrisiko abzudecken.
+
+Versicherungsnehmer mit gutem Risiko haben somit keinen Anreiz, eine Versicherung abzuschlie&szlig;en. (subjektiv zu hoher Preis)
+
+je mehr gute Risikoinhaber nun aber die Versicherung verlassen, bzw. nicht abschlie&szlig;en, bleiben immer mehr schlechte Versicherungsnehmer &uuml;brig..... dadurch erh&ouml;ht sich der Durchschnittspreis und die Versicherung m&uuml;ssen den Preis erh&ouml;hen
+		<article id='article-137'>
+			<h3>Warum gibt es bei Versicherungen kaum 100% Versicherungssschutz, sondern oft mit Selbstbeteiligung? Auf welches &ouml;konomische Problem wird hier reagiert?</h3>
+			<ul>
+    <li>Die Selbstbeteilung Ex-Post Problem von Moral Hazard</li>
+    <li>Versicherer geht nach Abschlu&szlig; der Versicherung h&ouml;heres Risiko ein, weil durch die Versicherung der eventuelle Schaden gedeckt w&uuml;re.
+    </li>
+    <li><strong>L&ouml;sungsm&ouml;glichkeit:</strong><br/>Selbstbeteiligung verringert das Risiko f&uuml;r die Versicherer, vermindert aber auch Schutz f&uuml;r den Versicherten durch d. Versicherung (=> Zielkonflikt)</li>
+</ul>
+		<article id='article-139'>
+			<h3>Market for Lemons</h3>
+			<p>George Akerlof, geb. 1940</p>
+<ul>
+    <li>die durchschnittliche Qualit&auml;t von Gebrauchtwagen steigt mit zunehmendem Preis an</li>
+    <li>die Nachfrage biegt sich jedoch nach Hinten, da die K&auml;ufer wissen, dass die Qualit&auml;t bei niedrigen Preisen geringer ist.</li>
+</ul>
+<div class="blackbox">Beispiel f&uuml;r adverse Selektion</div>
+		<article id='article-141'>
+			<h3></h3>
+			<h1>Distributives Marktversagen</h1>
+		<article id='article-142'>
+			<h3>Gehen Sie auf die zwei unterschiedlichen Vorstellungen von Verteilungsgerechtigkeit ein.</h3>
+			<h3>ergebnisorientierte Gerechtigkeitstheorien <strong>konsequentialistisch</strong></h3>
+<p>Beurteilung nach Verteilungsergebnis</p>
+<div class="blackbox">egalit&auml;rer Liberalismus <strong>(RAWLS)</strong></div>
+<h3>verfahrensorientierte Gerechtigkeitstheorien <strong>prozedural</strong></h3>
+<p>Beurteilung des Verfahrens bzw. der Regeln</p>
+<div class="blackbox">Liberalismus</div>
+		<article id='article-143'>
+			<h3>Worin liegt der "normative" Konflikt bei distributivem Marktversagen? Beschreiben Sie die unterschiedlichen Sichtweisen f&uuml;r den Fall von hoch bzw. gering qualifizierten Arbeitskr&auml;ften.</h3>
+			<strong>Konflikt:</strong> es gibt 2 oder auch mehrere Normen, die zu der marktlichen Verteilungslogik kontr&auml;re Stellung einnehmen.</br>
+am Beispiel des unterschiedlichen Lohnniveaus von gering zu hoch qualifizierten
+Arbeitskr&auml;ften sowie der zunehmenden Lohnpreisung verursacht durch technologischen Fortschriftt in Form eines Substitutes f&uuml;r gering qualifizierte
+Arbeitskr&auml;ft durch z.B. Maschinen u zunehmnder Globalisierung, die verst&auml;rkt der Niedriglohnbereich betrifft, seoll einen normative Beurteilung
+der monatlichen Verteilungslogik erfolgen.<br><br><br>hierbei nimmt der egalit&auml;re Liberalismus die Position ein, dass diese Verteilung ungerecht ist, da sie die am schlechtesteten gestellten Individue einer Gesellschaft verschlechtert.<br><br><br>aus der Position d Liberatismus ist diese Verteilung gerecht, weil die ver&auml;nderten Lohnverh&auml;ltnisse
+die relativen Knappheitsverh&auml;ltnisse widerspiegelen u &uuml;ber gerechte Marktregeln zu Satnde gekommen sind</section></div><div class='chapter' id='chapter-404'><h1>Error</h1>
+		<article id='article-146'>
+			<h3>Uh - Oh - Something Went Wrong</h3>
+			<img class="shadow" src="./img/error.jpg"></div><div class='chapter' id='chapter-427'><h1>CHAPTER 3</h1>
+		<article id='article-163'>
+			<h3>jeweils viele kleine Nachfrager</h3>
+			<table>
+	<thead>
+    	<tr>
+        	<th>Zahl der Anbieter</th>
+        	<th>vollkommener Markt</th>
+        	<th>unvollkommener Markt</th>
+        </tr>
+    </thead>
+    <tbody>
+    	<tr>
+        	<td>viele kleine</td>
+            <td>vollst&auml;ndige Konkurrenz</td>
+            <td>monopolistische Konkurrenz</td>
+        </tr>
+        <tr>
+            <td>wenige mittlere</td>
+            <td>homogenes Oligopol</td>
+            <td>heterogenes Oligopol</td>
+        </tr>
+        <tr>
+            <td>ein gro&szlig;er</td>
+            <td>Monopol</td>
+        	<td>monopolistische Preisdifferenzierung</td>
+        </tr>
+    </tbody>
+</table>
+		<article id='article-164'>
+			<h3>Magisches Viereck der Wirtschaftspolitik</h3>
+			<h3>Stabilit&auml;ts - und Wachstumsgesetz</h3>
+<ol>
+	<li>hoher Besch&auml;ftigungsgrad</li>
+	<li>stabiles Preisniveau</li>    
+	<li>stetiges und angemessenes Wirtschaftswachstum</li>    
+	<li>au&szlig;enwirtschaftliches Gleichgewicht</li>    
+</ol>
+		<article id='article-165'>
+			<h3>egalit&auml;rer Liberalismus vs. Naturrechtslibertarismus</h3>
+			<table>
+	<thead>
+        <tr>
+            <th></th>
+            <th>Liberalismus</th>
+            <th>Libertarismus</th>
+        </tr>
+    </thead>
+    <tbody>
+    	<tr>
+            <td>Privateigentum</td>
+            <td>pragmatisch (Maximin)</td>
+            <td>unverletzlich</td>
+        </tr>
+        <tr>
+            <td>&ouml;ffentliche Produktion</td>
+            <td>pragmatisch (Maximin)</td>
+            <td>abgelehnt</td>
+        </tr>
+        <tr>
+            <td>Steuern</td>
+            <td>probates politisches Mittel</td>
+            <td>staatlicher Diebstahl</td>
+        </tr>        
+    	<tr>
+            <td>Privateigentum</td>
+            <td>pragmatisch (Maximin)</td>
+            <td>unverletzlich</td>
+        </tr>
+        <tr>
+            <td>Umverteilung</td>
+            <td>Bef&uuml;hrwortung (Maximin)</td>
+            <td>Verteilungsgerechtigkeit irrelevant</td>
+        </tr>        
+        <tr>
+            <td>Soziale Sicherungssysteme</td>
+            <td>unterst&uuml;tzt</td>
+            <td>abgelehnt</td>
+    </tbody>
+</table>
+		<article id='article-166'>
+			<h3>asymmetrische Informationsverteilung</h3>
+			<h3>adverse Selektion</h3>
+die <strong>uninformierte</strong> Marktseite ist nicht in der Lage, G&uuml;ter oder Individuen nach marktrelevanten exogenen Merkmalen zu unterscheiden (Negativauslese)
+<h3>moral hazard</h3>
+die <strong>informierte</strong> Marktseite ist nicht in der Lage, ihre Merkmale endogen zum eigenen Vorteil zu ver&auml;ndern, ohne dass die Gegenseite die Ver&auml;nderung (vollst&auml;ndig) beobachten oder kontrollieren k&ouml;nnte (moralisches Risiko)
+<br>
+<strong>Daraus resultierende allokative Effizienzprobleme:</strong><br>
+<ul>
+    <li>volkswirtschaftliche Kosten der Informationsverarbeitung</li>
+    <li>Beeintr&auml;chtigung des Preiswettbewerbs</li>
+    <li>d&uuml;nne oder nicht-existente M&auml;rkte</li>
+</ul></div><div class='chapter' id='chapter-428'><h1>CHAPTER 4</h1></div></body></html>

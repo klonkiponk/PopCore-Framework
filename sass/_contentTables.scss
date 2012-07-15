@@ -1,0 +1,30 @@
+article {
+	table {
+		margin-top: $blockMargin;
+		thead {
+			tr {
+				th {
+					padding:3px;
+					font-weight: bold;
+					width:30%;
+					border-bottom: 1px solid gray;
+				}
+			}
+		}
+		tbody {
+			tr {
+				&:nth-Child(even){
+					background-color: lightgray;
+					@include text-shadow(1px 1px 0px #fff);
+				}
+				td {
+					padding:3px;
+					&:first-Child {
+						border-right: 1px solid gray;
+						font-weight: bold;
+					}	
+				}
+			}
+		}
+	}
+}
