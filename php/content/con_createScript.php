@@ -5,7 +5,7 @@ function con_createScript ()
 	$script = con_createScriptHead();	
 	$script .= con_createScriptCss();
 	$script .= con_createScriptHeader();
-	//$script .= con_createScriptNavigation();
+	$script .= con_createScriptNavigation();
 	$script .= con_createScriptContents();
 	$script .= con_createScriptEnd();
 	$return = con_createPDF($script);

@@ -249,10 +249,10 @@ ul.toc, ul.toc ul {
   content: target-counter(attr(href, url), chapter) " "; }
 
 .toc li.section a::before {
-  content: target-counter(attr(href, url), chapter) "." target-counter(attr(href, url), KUCHEN) " "; }
+  content: target-counter(attr(href, url), chapter) "." target-counter(attr(href, url), section) " "; }
 
 .toc li.subSection a::before {
-  content: target-counter(attr(href, url), chapter) "." target-counter(attr(href, url), KUCHEN) "." target-counter(attr(href, url), subSection) " "; }
+  content: target-counter(attr(href, url), chapter) "." target-counter(attr(href, url), section) "." target-counter(attr(href, url), subSection) " "; }
 
 /**************************************\
 			   COUNTERS
@@ -270,6 +270,9 @@ section.chapter {
   counter-reset: subSection;
   counter-reset: paragraph;
   counter-reset: caption; }
+
+h1 {
+  counter-reset: section; }
 
 section.section {
   counter-increment: section;
@@ -528,7 +531,54 @@ GESHI - (CODE WITH SYNTAX HIGHLIGHTING)
 		<p>HF Weidinger<br/>L Siegerth</p>
 	</div>
 	
-	
+	<div class='toc' id='toc'><h1>Inhaltsverzeichnis</h1>
+			<ul class='toc'>
+<li class='chapter'><a href='#chapter-1' class='PageRef'>Grundlagen</a></li>
+	<ul>
+<li class='section'><a href='#section-502' class='PageRef'>Testseite</a></li>
+<ul>
+</ul><li class='section'><a href='#section-504' class='PageRef'>Testseite</a></li>
+<ul>
+</ul>	</ul>
+<li class='chapter'><a href='#chapter-2' class='PageRef'>HTML</a></li>
+	<ul>
+<li class='section'><a href='#section-3' class='PageRef'>HTM...Was?</a></li>
+<ul>
+</ul><li class='section'><a href='#section-4' class='PageRef'>Tags</a></li>
+<ul>
+</ul><li class='section'><a href='#section-5' class='PageRef'>Das Grundgeruest</a></li>
+<ul>
+<li class='subSection'><a href='#subSection-429' class='PageRef'>HEAD und BODY</a></li>
+<li class='subSection'><a href='#subSection-430' class='PageRef'>Absaetze</a></li>
+</ul><li class='section'><a href='#section-6' class='PageRef'>DOCTYPE</a></li>
+<ul>
+</ul><li class='section'><a href='#section-7' class='PageRef'>Sonderzeichen</a></li>
+<ul>
+</ul><li class='section'><a href='#section-8' class='PageRef'>Zeilenumbrueche</a></li>
+<ul>
+</ul>	</ul>
+<li class='chapter'><a href='#chapter-427' class='PageRef'>CSS</a></li>
+	<ul>
+<li class='section'><a href='#section-505' class='PageRef'>Embedding</a></li>
+<ul>
+</ul>	</ul>
+<li class='chapter'><a href='#chapter-500' class='PageRef'>WEBSERVER</a></li>
+	<ul>
+<li class='section'><a href='#section-436' class='PageRef'>HTTP und das Web</a></li>
+<ul>
+<li class='subSection'><a href='#subSection-438' class='PageRef'>Webserver und Protokolle</a></li>
+</ul><li class='section'><a href='#section-437' class='PageRef'>Apache</a></li>
+<ul>
+<li class='subSection'><a href='#subSection-439' class='PageRef'>Einfuehrung und Installation</a></li>
+<li class='subSection'><a href='#subSection-440' class='PageRef'>Konfiguration</a></li>
+<li class='subSection'><a href='#subSection-441' class='PageRef'>Sicherheit</a></li>
+<li class='subSection'><a href='#subSection-442' class='PageRef'>Indexes</a></li>
+<li class='subSection'><a href='#subSection-443' class='PageRef'>SSI</a></li>
+<li class='subSection'><a href='#subSection-503' class='PageRef'>CGI</a></li>
+</ul>	</ul>
+</ul>
+</div>
+
 
 
 
@@ -672,100 +722,18 @@ einem schlie&szlig;enden Tag umgeben.</strong>
 			Grunds&auml;tzlich wird ein Text immer am Ende des Browserfensters bzw. am Ende des umgebenden
 Blocks (z. B. der Tabellenzelle) automatisch an einem Leerzeichen umgebrochen.
 Um einen Zeilenumbruch an einer bestimmten Stelle zu erzwingen, verwendet man das
-Tag BR
-				<caption>Listing</caption>
-				<div class='geshi'><pre class="html5"><ol><li class="li1"><div class="de1">Grunds<span class="sc1">&amp;auml;</span>tzlich wird ein Text immer am Ende des Browserfensters bzw. am Ende des umgebenden</div></li><li class="li1"><div class="de1">Blocks (z. B. der Tabellenzelle) automatisch an einem Leerzeichen umgebrochen.</div></li><li class="li1"><div class="de1">Um einen Zeilenumbruch an einer bestimmten Stelle zu erzwingen, verwendet man das</div></li><li class="li1"><div class="de1">Tag BR</div></li></ol></pre></div>
-			</article>
-		</section></section>
+Tag BR</section></section>
 
 
 
 
 <section class='chapter' id='chapter-427'><h1>CSS</h1>
 
-		<article id='article-163'>
-			<h4>jeweils viele kleine Nachfrager</h4>
-
-			<table>
-	<thead>
-    	<tr>
-        	<th>Zahl der Anbieter</th>
-        	<th>vollkommener Markt</th>
-        	<th>unvollkommener Markt</th>
-        </tr>
-    </thead>
-    <tbody>
-    	<tr>
-        	<td>viele kleine</td>
-            <td>vollst&auml;ndige Konkurrenz</td>
-            <td>monopolistische Konkurrenz</td>
-        </tr>
-        <tr>
-            <td>wenige mittlere</td>
-            <td>homogenes Oligopol</td>
-            <td>heterogenes Oligopol</td>
-        </tr>
-        <tr>
-            <td>ein gro&szlig;er</td>
-            <td>Monopol</td>
-        	<td>monopolistische Preisdifferenzierung</td>
-        </tr>
-    </tbody>
-</table>
-		<article id='article-165'>
-			<h4>egalit&auml;rer Liberalismus vs. Naturrechtslibertarismus</h4>
-
-			<table>
-	<thead>
-        <tr>
-            <th></th>
-            <th>Liberalismus</th>
-            <th>Libertarismus</th>
-        </tr>
-    </thead>
-    <tbody>
-    	<tr>
-            <td>Privateigentum</td>
-            <td>pragmatisch (Maximin)</td>
-            <td>unverletzlich</td>
-        </tr>
-        <tr>
-            <td>&ouml;ffentliche Produktion</td>
-            <td>pragmatisch (Maximin)</td>
-            <td>abgelehnt</td>
-        </tr>
-        <tr>
-            <td>Steuern</td>
-            <td>probates politisches Mittel</td>
-            <td>staatlicher Diebstahl</td>
-        </tr>        
-    	<tr>
-            <td>Privateigentum</td>
-            <td>pragmatisch (Maximin)</td>
-            <td>unverletzlich</td>
-        </tr>
-        <tr>
-            <td>Umverteilung</td>
-            <td>Bef&uuml;hrwortung (Maximin)</td>
-            <td>Verteilungsgerechtigkeit irrelevant</td>
-        </tr>        
-        <tr>
-            <td>Soziale Sicherungssysteme</td>
-            <td>unterst&uuml;tzt</td>
-            <td>abgelehnt</td>
-    </tbody>
-</table>
 
 
 
 <section class='section' id='section-505'><h2>Embedding</h2>
-
-		<article id='article-204'>
-			<h4>Article</h4>
-
-			<h4>Your title here...</h4>
-
-<div class="homework"><img src="img/1342350590781.JPG" alt="" /></div></section></section>
+</section></section>
 
 
 

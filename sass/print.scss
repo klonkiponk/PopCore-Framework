@@ -258,10 +258,10 @@ ul.toc, ul.toc ul {
   content: target-counter(attr(href, url), chapter) " "; }
 
 .toc li.section a::before {
-  content: target-counter(attr(href, url), chapter) "." target-counter(attr(href, url), KUCHEN) " "; }
+  content: target-counter(attr(href, url), chapter) "." target-counter(attr(href, url), section) " "; }
 
 .toc li.subSection a::before {
-  content: target-counter(attr(href, url), chapter) "." target-counter(attr(href, url), KUCHEN) "." target-counter(attr(href, url), subSection) " "; }
+  content: target-counter(attr(href, url), chapter) "." target-counter(attr(href, url), section) "." target-counter(attr(href, url), subSection) " "; }
 /**************************************\
 			   COUNTERS
 \**************************************/
@@ -284,6 +284,10 @@ section.chapter {
 	counter-reset: caption;
 }
 
+
+h1 {
+	counter-reset: section;
+}
 section.section {
 	counter-increment: section;	
 	
