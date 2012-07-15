@@ -35,7 +35,7 @@ function db_writeToDb ()
                 $sql .= "'$value',";
                 break;
             case "content":
-                $value = $GLOBALS['DB']->real_escape_string($value);
+                //$value = $GLOBALS['DB']->real_escape_string($value);
 				$sql .= "'$value',";
                 break;
             default:
