@@ -258,23 +258,23 @@ body {
   counter-reset: paragraph;
   counter-reset: caption; }
 
-.chapter {
+section.chapter {
   counter-increment: chapter;
   counter-reset: section;
   counter-reset: subSection;
   counter-reset: paragraph;
   counter-reset: caption; }
 
-.section {
+section.section {
   counter-increment: section;
   counter-reset: subSection;
   counter-reset: paragraph; }
 
-.subSection {
+section.subSection {
   counter-increment: subSection;
   counter-reset: paragraph; }
 
-.paragraph {
+article {
   counter-increment: paragraph; }
 
 caption {
@@ -283,16 +283,16 @@ caption {
 div.chapter {
   page-break-before: always; }
 
-.chapter h1::before {
+.chapter h1:before {
   content: counter(chapter) " "; }
 
-.chapter h2::before {
+.chapter h2:before {
   content: counter(chapter) "." counter(section) " "; }
 
-.chapter h3::before {
+.chapter h3:before {
   content: counter(chapter) "." counter(section) "." counter(subSection) " "; }
 
-.chapter h4::before {
+.chapter h4:before {
   content: counter(chapter) "." counter(section) "." counter(subSection) "." counter(paragraph) " "; }
 
 caption:after {
@@ -331,9 +331,6 @@ h4 {
   color: #ffbc40;
   margin-top: 0.8em;
   margin-bottom: 1.3em; }
-
-h1, h2, h3 {
-  font-family: UbuntuLightRegular; }
 
 /**************************************\
 			   IMAGES

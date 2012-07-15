@@ -132,7 +132,8 @@
 						SEARCH
 		\**************************************/
 	    &.search {
-	    	
+   			border-left: 1px solid #333;
+
 		    background-color:#767676;
 		    @include filter-gradient(#767676, #494949, vertical);
 		    @include background-image(linear-gradient(top, #767676 0%, #636363 50%, #494949 51%,#767676 100%));
@@ -162,7 +163,7 @@
 				    //-webkit-appearance:none;
 				    color:#fff;
 				    
-				    width:160px;
+				    width:150px;
 				    padding:3px;
 				    @include box-shadow(0px 1px 3px #333 inset);
 				    &:focus {

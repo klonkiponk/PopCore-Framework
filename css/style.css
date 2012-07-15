@@ -440,6 +440,7 @@ section {
       float: none;
       display: block; }
     #globalnav li.search {
+      border-left: 1px solid #333;
       background-color: #767676;
       *zoom: 1;
       filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF767676', endColorstr='#FF494949');
@@ -473,7 +474,7 @@ section {
         border-radius: 15px;
         box-sizing: border-box;
         color: #fff;
-        width: 160px;
+        width: 150px;
         padding: 3px;
         -webkit-box-shadow: 0px 1px 3px #333333 inset;
         -moz-box-shadow: 0px 1px 3px #333333 inset;

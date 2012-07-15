@@ -139,7 +139,7 @@ function con_createScriptContents ()
 			  CHAPTERS
 \**************************************/
 	while ($chapter = $result->fetch_array()) {
-		$return .= "<section class='chapter' id='chapter-{$chapter['pid']}'><h1>{$chapter['name']}</h1>";
+		$return .= "\n\n\n\n\n<section class='chapter' id='chapter-{$chapter['pid']}'><h1>{$chapter['name']}</h1>\n";
 		//$return .= "<p class='sidenote'>{$topic['subtitle']}</p>"; //NOT YET IMPLEMENTED
 		$pid = $chapter['pid'];
 		
@@ -162,7 +162,7 @@ function con_createScriptContents ()
 		if (!empty($sections)) {
 			$return .= "";																				
 			while ($section = $sections->fetch_array()) { 
-				$return .= "<section class='section' id='section-{$section['pid']}'><h2>{$section['name']}</h2>";
+				$return .= "\n\n\n\n<section class='section' id='section-{$section['pid']}'><h2>{$section['name']}</h2>\n";
 					
 																										//ARTICLES
 					$return .= "";
@@ -180,7 +180,7 @@ function con_createScriptContents ()
 					$subSections = $GLOBALS['DB']->query($sqlSubSections);
 					if ($subSections->num_rows != 0) {	
 						while ($subSection = $subSections->fetch_array()) {
-							$return .= "<section class='subSection' id='subSection-{$subSection['pid']}'><h3>{$subSection['name']}</h3>";
+							$return .= "\n\n\n<section class='subSection' id='subSection-{$subSection['pid']}'><h3>{$subSection['name']}</h3>\n";
 							
 							
 							$sqlSubSectionArticles = "SELECT * FROM page_content WHERE page = {$subSection['pid']}";
@@ -217,7 +217,7 @@ function con_createArticle($article)
 	$article['name'] = con_replaceUmlaute($article['name']);
 	$return = "
 		<article id='article-{$article['uid']}'>
-			<h4>{$article['name']}</h4>
+			<h4>{$article['name']}</h4>\n
 			{$article['content']}";
 	
 	if (!empty($article['code'])){
