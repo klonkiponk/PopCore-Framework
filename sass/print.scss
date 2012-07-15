@@ -44,7 +44,6 @@
     font-style: normal;
 }
 
-
 /**************************************\
 			   COLORS
 \**************************************/
@@ -56,7 +55,6 @@ $primary2:#BF8D30;
 $primary3:#A66C00;
 $primary4:#FFBC40;
 $primary5:#FFCE73;
-
 
 /* COMPLIMENTARY COLORS*/
 
@@ -93,7 +91,6 @@ $fontNormal:UbuntuLightRegular;
 	font-size:1em;
 	line-height:1.2em;
 	font-family: $fontNormal;
-	
 	
 	@bottom-right {
 		content: "Seite " counter(page) " von " counter(pages);
@@ -163,12 +160,13 @@ caption {
 	text-align:center;
 }
 table {
+	margin-bottom: $blockMargin;
 	td {
 		border: 1px solid $complimentary5;
 	}
 	th {
 		border: 1px solid $complimentary4;
-		background-color: $primary4;
+		background-color: $primary5;
 	}
 }
 
@@ -260,10 +258,10 @@ ul.toc, ul.toc ul {
   content: target-counter(attr(href, url), chapter) " "; }
 
 .toc li.section a::before {
-  content: target-counter(attr(href, url), chapter) "." target-counter(attr(href, url), section) " "; }
+  content: target-counter(attr(href, url), chapter) "." target-counter(attr(href, url), KUCHEN) " "; }
 
 .toc li.subSection a::before {
-  content: target-counter(attr(href, url), chapter) "." target-counter(attr(href, url), section) "." target-counter(attr(href, url), subSection) " "; }
+  content: target-counter(attr(href, url), chapter) "." target-counter(attr(href, url), KUCHEN) "." target-counter(attr(href, url), subSection) " "; }
 /**************************************\
 			   COUNTERS
 \**************************************/
@@ -272,7 +270,7 @@ ul.toc, ul.toc ul {
 body {
 	counter-reset: chapter;
 	counter-reset: section;
-	counter-reset: subSection;
+	counter-reset: subSection;	
 	counter-reset: paragraph;
 	counter-reset: caption;  
 }
@@ -287,7 +285,7 @@ body {
 }
 
 .section {
-	counter-increment: section;
+	counter-increment: section;	
 	
 	counter-reset: subSection;
 	counter-reset: paragraph;
@@ -295,7 +293,7 @@ body {
 
 .subSection {
 	counter-increment: subSection;
-	
+		
 	counter-reset: paragraph;
 }   
 
@@ -359,7 +357,7 @@ h3 {
 	color:$primary3;
 }
 h4 {
-	string-set: paragrpah content();
+	string-set: paragraph content();
 	font-size:1.2em;
 	color:$primary4;
 	margin-top: 0.8em;

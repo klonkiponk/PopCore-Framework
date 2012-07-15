@@ -161,11 +161,13 @@ caption {
   margin-bottom: 3px;
   text-align: center; }
 
-table td {
-  border: 1px solid #6b90d4; }
-table th {
-  border: 1px solid #4577d4;
-  background-color: #ffbc40; }
+table {
+  margin-bottom: 15px; }
+  table td {
+    border: 1px solid #6b90d4; }
+  table th {
+    border: 1px solid #4577d4;
+    background-color: #ffce73; }
 
 /**************************************\
 			  TITLE PAGE
@@ -241,10 +243,10 @@ ul.toc, ul.toc ul {
   content: target-counter(attr(href, url), chapter) " "; }
 
 .toc li.section a::before {
-  content: target-counter(attr(href, url), chapter) "." target-counter(attr(href, url), section) " "; }
+  content: target-counter(attr(href, url), chapter) "." target-counter(attr(href, url), KUCHEN) " "; }
 
 .toc li.subSection a::before {
-  content: target-counter(attr(href, url), chapter) "." target-counter(attr(href, url), section) "." target-counter(attr(href, url), subSection) " "; }
+  content: target-counter(attr(href, url), chapter) "." target-counter(attr(href, url), KUCHEN) "." target-counter(attr(href, url), subSection) " "; }
 
 /**************************************\
 			   COUNTERS
@@ -324,7 +326,7 @@ h3 {
   color: #a66c00; }
 
 h4 {
-  string-set: paragrpah content();
+  string-set: paragraph content();
   font-size: 1.2em;
   color: #ffbc40;
   margin-top: 0.8em;
