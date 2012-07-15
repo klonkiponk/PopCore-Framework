@@ -5,11 +5,16 @@ img {
     @include box-shadow(3px 3px 3px #777);
     border:1px solid silver;
     width:350px;
-    // Browser Specific
-    -webkit-filter: sepia(50%);
+
+
+/*JUST A TEST FOR NEW WEBKKTS BROWSERS*/
+/*    -webkit-filter: sepia(50%);
     -moz-filter: sepia(50%);
     -o-filter: sepia(100%);
     -ms-filter: sepia(100%); 
         filter: sepia(50%);
+*/
+
+
         background-color: white;
 }

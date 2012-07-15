@@ -47,11 +47,11 @@ function sys_createEditFormForPageContent()
 				$return .= "<textarea class='markItUp' name=\"$key\">$value</textarea>";
 				break;
             case "code":
-                $return .= "<label for=\"$key\">$key</label>";
+                $return .= "<label for=\"$key\">Code</label>";
                 $return .= con_createSyntaxHighlight($value,'text/html','code');
                 break;
             case "code_type":
-                $return .= "<label for=\"$key\">$value</label>";
+                $return .= "<label for=\"$key\">Code</label>";
                 $return .= "<select name='$key'><option ";
                 if ($value == "PHP") {$return .= "selected";}
                 $return .= " >PHP</option><option ";
