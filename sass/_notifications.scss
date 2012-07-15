@@ -43,6 +43,7 @@
 	@include rounded;
 	overflow:hidden;
 }
+
 .green {
 	border: 2px solid rgba(34, 139, 34, 0.7);
 	background: rgba(34, 139, 34, 0.8);
@@ -61,6 +62,7 @@
 			box-shadow: 0px 0px 20px red;
 	-webkit-box-shadow: 0px 0px 20px red; 
 }
+
 .notification_content p{
 	font-size:1.1em;
 	@include text-shadow(#000 1px 1px 0px);
