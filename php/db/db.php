@@ -35,10 +35,24 @@ function db_connectToDb ()
     return $mysqli;
 }
 
+function db_search ()
+{
+	$sql = "SELECT page,name FROM page_content WHERE MATCH content AGAINST ('{$_POST['searchString']}')";
+	$results = $GLOBALS['DB']->query($sql);
 
 
+	echo "<ul>";
+	while ($result = $results->fetch_array()){
+		echo "<li><a href='./index.php?id={$result['page']}'>{$result['name']}</a></li>";
+	}
+	echo "</ul>";
 
-function db_createNewArticleForm () {
+
+}
+
+
+function db_createNewArticleForm ()
+{
     $mysqli = db_connectToDb();
     $sql = "SELECT * FROM page_content WHERE page={$_GET['id']}";
     $result = $GLOBALS['DB']->query( $sql );

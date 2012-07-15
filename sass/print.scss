@@ -392,6 +392,37 @@ img {
 	margin-top: $blockMargin;
 }
 
+.notes {
+	background: url('./img/papier2.png');
+	width:100%;
+	display:block;
+	margin-top: $blockMargin;
+	border: 1px solid #555;
+	@include box-shadow(2px 2px 5px #999);
+}
+
+.height10 {
+	height:5em;
+}
+.height20 {
+	height:10em;
+}
+.height50 {
+	height:20em;
+}
+.height50 {
+	height:50em;
+}
+.height70 {
+	height:70em;
+}
+.height90 {
+	height:90em;
+}
+.height100 {
+	height:100em;
+}
+
 
 /**************************************\
 GESHI - (CODE WITH SYNTAX HIGHLIGHTING)

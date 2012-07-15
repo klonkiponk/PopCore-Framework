@@ -28,70 +28,9 @@ article img {
 	box-shadow: 1px 1px 5px #333;
 }
 
-.homework {
-	border-radius: 5px;
-	margin-top: 1em;
-	padding-left: 0.8em;
-	-webkit-box-shadow: 1px 1px 5px #cccccc;
-	-moz-box-shadow: 1px 1px 5px #cccccc;
-	box-shadow: 1px 1px 5px #cccccc;
-	margin-right:55px;
-	position:relative;
-	background-color: #d5ebfb;
-	border: 1px solid #89c3eb;
-	-webkit-box-shadow: inset 0px 1px 5px white, 0px 1px 2px #555555;
-	-moz-box-shadow: inset 0px 1px 5px white, 0px 1px 2px #555555;
-	box-shadow: inset 0px 1px 5px white, 0px 1px 2px #555555;
-	padding:15px;
-}
-.homework span.h3 {
-	color: #378de5;
-	text-decoration: none;
-	text-shadow: 1px 1px 1px white;
-	font-weight:bold;
-	font-size:1.2em;
-}
-.homework:after {
-	position:absolute;
-	right:-50px;
-	top:8px;
-	font-size:2em;
-	line-height:1em;
-	font-family:SymbolFont;
-	content:"A";
-	color:#89c3eb;
-    text-shadow: #fff 1px 1px 0px,2px 2px 0px #d5ebfb,-1px -1px 0px #777;
-}
 .breadCrumb {
 	font-weight:bold;
 	color:#6B90D4;
-}
-.information {
-	border-radius: 5px;
-	margin-top: 1em;
-	padding-left: 0.8em;
-	-webkit-box-shadow: 1px 1px 5px #cccccc;
-	-moz-box-shadow: 1px 1px 5px #cccccc;
-	box-shadow: 1px 1px 5px #cccccc;
-	margin-right:55px;
-	position:relative;
-	background-color: #ffce73;
-	border: 1px solid #ffa500;
-	-webkit-box-shadow: inset 0px 1px 5px white, 0px 1px 2px #555555;
-	-moz-box-shadow: inset 0px 1px 5px white, 0px 1px 2px #555555;
-	box-shadow: inset 0px 1px 5px white, 0px 1px 2px #555555;
-	padding:15px;
-}
-.information:after {
-	position:absolute;
-	right:-50px;
-	top:10px;
-	font-size:2em;
-	line-height:1em;
-	font-family:SymbolFont;
-	content:"R";
-	color:#ffa500;
-    text-shadow: #fff 1px 1px 0px,2px 2px 0px #ffce73,-1px -1px 0px #777;
 }
 
 pre {
@@ -102,12 +41,6 @@ pre {
 }
 article {
 	text-align:justify;
-}
-span.h3{
-	font-weight:bold;
-	margin-top:1em;
-	display:block;
-	font-size:1.2em;
 }
 
 .apache, .apachecontainer {

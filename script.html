@@ -365,6 +365,37 @@ img {
   border: 1px solid gray;
   margin-top: 15px; }
 
+.notes {
+  background: url("./img/papier2.png");
+  width: 100%;
+  display: block;
+  margin-top: 15px;
+  border: 1px solid #555;
+  -webkit-box-shadow: 2px 2px 5px #999999;
+  -moz-box-shadow: 2px 2px 5px #999999;
+  box-shadow: 2px 2px 5px #999999; }
+
+.height10 {
+  height: 5em; }
+
+.height20 {
+  height: 10em; }
+
+.height50 {
+  height: 20em; }
+
+.height50 {
+  height: 50em; }
+
+.height70 {
+  height: 70em; }
+
+.height90 {
+  height: 90em; }
+
+.height100 {
+  height: 100em; }
+
 /**************************************\
 GESHI - (CODE WITH SYNTAX HIGHLIGHTING)
 \**************************************/
@@ -586,9 +617,9 @@ GESHI - (CODE WITH SYNTAX HIGHLIGHTING)
 <section class='chapter' id='chapter-1'><h1>Grundlagen</h1>
 
 		<article id='article-161'>
-			<h4>Woher kommt das Internet &ouml;&auml;&ouml;&ouml;&auml;&ouml;&auml;</h4>
+			<h4>Woher kommt das Internet</h4>
 
-			<h4>Die ersten Anf&auml;nge - Das ARPANet</h4>
+			<span class="h4">Die ersten Anf&auml;nge - Das ARPANet</span>
 Im amerikanischen Verteidigungsministerium wurde schon seit den 1960er Jahren dar&uuml;ber
 nachgedacht, wie man wichtige Daten, auch im Falle eines atomaren Angriffs, sch&uuml;tzen
 k&ouml;nnte. Die aus diesen &Uuml;berlegungen resultierende Grundidee war, die Daten redundant,
@@ -606,7 +637,7 @@ Institute of Technology und des US-Verteidigungsministeriums, f&uuml;r die US-Lu
 dieses Netzwerk entwickelten. Enscheidend f&uuml;r seine Entstehung waren die beiden Forscher
 Paul Baran und Donald Watts Davies. Sie steuerten wichtige Impulse zur Entwicklung
 bei.
-<h4>Wie ging es weiter?</h4>
+<span class="h4">Wie ging es weiter?</span>
 Bald sollte sich herausstellen, dass ein solches Netzwerk nicht nur f&uuml;r milit&auml;rischer Zwecke
 interessant war, sondern auch f&uuml;r die zivile Wissenschaft. Wissenschaftler in den USA
 hatten in den 1970er Jahren die M&ouml;glichkeit, Daten mit anderen Instituten, &uuml;ber das
@@ -660,19 +691,7 @@ der folgenden Kapitel.
 
 
 <section class='section' id='section-4'><h2>Tags</h2>
-
-		<article id='article-195'>
-			<h4></h4>
-
-			<div class="blackbox" style="box-shadow:2px 2px 2px #333"></div>
-				<caption>Listing</caption>
-				<div class='geshi'><pre class="html5"><ol><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="kw2">div</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;blackbox&quot;</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;box-shadow:2px 2px 2px #333&quot;</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span></div></li></ol></pre></div>
-			</article>
-		
-		<article id='article-205'>
-			<h4>Tags 2ter Artikel</h4>
-
-			<div class="homework">Inhalt</div><img class="small" src="img/1342374242780.JPG" alt="" /></section>
+</section>
 
 
 
@@ -835,7 +854,7 @@ Es gibt verschiedene Versionen des Apache. Am h&auml;ufigsten werden die Version
 	Speichern Sie sich diese Links als Bookmarks auf Ihrem PC!
     </ul>
 </div>
-<div class="notes 20"></div>
+<div class="notes height20"></div>
 		<article id='article-187'>
 			<h4>Installation</h4>
 
@@ -861,7 +880,7 @@ Mit Hilfe der SHA1-Checksumme einer Datei kann deren Echtheit verifziert werden.
     Wenn alles ordnungsgem&auml;&szlig; verlaufen ist, sollte die Meldung "Digest matches. Verification succeeded." erscheinen, und die Verifikation ist erfolgreich abgeschlossen.
     </p>
 </div>
-<div class="notes 20"></div>
+<div class="notes height20"></div>
 <span class="h3">Die Software installieren</span>
 <div class="homework">
     <p>
@@ -887,7 +906,7 @@ Mit Hilfe der SHA1-Checksumme einer Datei kann deren Echtheit verifziert werden.
 <div class="homework">
     Welche M&ouml;glichkeiten/Funktionen bietet der Apache Service Monitor?
 </div>
-<div class="notes 30"></div>
+<div class="notes height30"></div>
 <span class="h3">Der Apache in der Windows Dienstekonsole</span>
 <p>
     Wenn der Apache HTTP-Server als Dienst installiert wird, ist er selbstverst&auml;ndlich auch in der Windows Dienstekonsole zu finden.
@@ -895,7 +914,7 @@ Mit Hilfe der SHA1-Checksumme einer Datei kann deren Echtheit verifziert werden.
 <div class="homework">
 	Unter welchem Namen ist der HTTP-Server in der Windows Dienstekonsole zu finden?
 </div>
-<div class="notes 10"></div>
+<div class="notes height10"></div>
 <p>
     Nach einem Doppelklick auf den HTTP-Server Dienst &ouml;ffnet sich dessen Eigenschaftenfenster.
 </p>
@@ -1146,11 +1165,11 @@ Webseiten darzustellen ist nur eine Aufgaben, von vielen, die ein Webserver zu b
             <li>Falls der Zugriff noch nicht funktionieren sollte: Welche zus&auml;tzliche Direktive m&uuml;ssen Sie angeben, damit eine automatische <strong>Indizierung</strong> des Downloadordners funktioniert?</li>
     </ol>
 </div>
-<div class="notes 70"></div>
+<div class="notes height70"></div>
 <div class="homework">
     Benutzten Sie jetzt eine <span class="url">.htaccess</span>-Datei, um den Zugriff auf den Downloadornder zu erm&ouml;glichen! Welche &Auml;nderungen m&uuml;ssen dazu an der Hauptkonfigurationsdatei gemacht werden?
 </div>
-<div class="notes 70"></div>
+<div class="notes height70"></div>
 		<article id='article-201'>
 			<h4>Ein bisschen Farbe ins Spiel bringen</h4>
 
@@ -1160,9 +1179,9 @@ Das Modul "mod_autoindex.so" bietet viele verschiedene M&ouml;glichkeiten, um ei
 <div class="homework">
     Aktivieren Sie die Index-Options <span class="apache">FancyIndexing</span>! Was ver&auml;ndert sich dadurch sofort am Index?
 </div>
-<div class="notes 50"></div>
+<div class="notes height50"></div>
 				<caption>Listing</caption>
-				<div class='geshi'><pre class="apache"><ol><li class="li1"><div class="de1">&lt;p&gt;</div></li><li class="li1"><div class="de1">Das Modul <span class="st0">&quot;mod_autoindex.so&quot;</span> bietet viele verschiedene M&amp;ouml;glichkeiten, um einen einfachen, schmucklosen Verzeichnisindex ansprechender zu gestalten. Eine dieser M&amp;ouml;glichkeiten ist beispielsweise das hinzuf&amp;uuml;gen von Icons. Hierzu muss jedoch zu erst die Option &lt;span class=<span class="st0">&quot;apache&quot;</span>&gt;FancyIndexing&lt;/span&gt; aktiviert werden.</div></li><li class="li1"><div class="de1">&lt;/p&gt;</div></li><li class="li1"><div class="de1">&lt;div class=<span class="st0">&quot;homework&quot;</span>&gt;</div></li><li class="li1"><div class="de1">    Aktivieren Sie die Index-<span class="kw1">Options</span> &lt;span class=<span class="st0">&quot;apache&quot;</span>&gt;FancyIndexing&lt;/span&gt;! Was ver&amp;auml;ndert sich dadurch sofort am Index?</div></li><li class="li1"><div class="de1">&lt;/div&gt;</div></li><li class="li1"><div class="de1">&lt;div class=<span class="st0">&quot;notes 50&quot;</span>&gt;&lt;/div&gt;</div></li></ol></pre></div>
+				<div class='geshi'><pre class="apache"><ol><li class="li1"><div class="de1">&lt;p&gt;</div></li><li class="li1"><div class="de1">Das Modul <span class="st0">&quot;mod_autoindex.so&quot;</span> bietet viele verschiedene M&amp;ouml;glichkeiten, um einen einfachen, schmucklosen Verzeichnisindex ansprechender zu gestalten. Eine dieser M&amp;ouml;glichkeiten ist beispielsweise das hinzuf&amp;uuml;gen von Icons. Hierzu muss jedoch zu erst die Option &lt;span class=<span class="st0">&quot;apache&quot;</span>&gt;FancyIndexing&lt;/span&gt; aktiviert werden.</div></li><li class="li1"><div class="de1">&lt;/p&gt;</div></li><li class="li1"><div class="de1">&lt;div class=<span class="st0">&quot;homework&quot;</span>&gt;</div></li><li class="li1"><div class="de1">    Aktivieren Sie die Index-<span class="kw1">Options</span> &lt;span class=<span class="st0">&quot;apache&quot;</span>&gt;FancyIndexing&lt;/span&gt;! Was ver&amp;auml;ndert sich dadurch sofort am Index?</div></li><li class="li1"><div class="de1">&lt;/div&gt;</div></li><li class="li1"><div class="de1">&lt;div class=<span class="st0">&quot;notes height50&quot;</span>&gt;&lt;/div&gt;</div></li></ol></pre></div>
 			</article>
 		
 		<article id='article-202'>
@@ -1187,16 +1206,16 @@ Hierf&uuml;r existieren drei Direktiven:
 <div class="homework">
 Was ist ein <strong>MIME</strong>-Type?
 </div>
-<div class="notes 40"></div>
+<div class="notes height40"></div>
 <p>
 Da mit der HTTP-Server MIME-Typen verarbeiten kann, muss das Modul "mod_mime.so" geladen werden. Dieses Modul, wird zusammen mit einer Konfigurationsdatei f&uuml;r MIME-Typen geliefert. Um diese Datei zu laden, m&uuml;ssen die folgenden Direktiven in die Hauptkonfigurationsdatei aufgenommen werden:
 </p>
 <div class="homework">
     Nehmen Sie die Direktiven aus \beispiel{TypesConfig} in Ihre Hauptkonfigurationsdatei auf, und benutzen Sie die Direktive <span class="apache">AddIconByType</span>, um das Icon "compressed.gif" f&uuml;r ZIP-Dateien festzulegen! Welchen MIME-Type ben&ouml;tigen Sie hierf&uuml;r?	Testen Sie Ihr Ergebnis!
 </div>
-<div class="notes 70"></div>
+<div class="notes height70"></div>
 				<caption>Listing</caption>
-				<div class='geshi'><pre class="apache"><ol><li class="li1"><div class="de1">&lt;p&gt;</div></li><li class="li1"><div class="de1">Der Apache HTTP-Server kennt zwei Wege, um Dateitypen mit Icons zu verbinden:</div></li><li class="li1"><div class="de1">&lt;/p&gt;</div></li><li class="li1"><div class="de1">&lt;ul&gt;</div></li><li class="li1"><div class="de1">	&lt;li&gt;Durch Angabe des Dateityps&lt;/li&gt;</div></li><li class="li1"><div class="de1">	&lt;li&gt;Durch Angabe eines MIME-Types&lt;/li&gt;</div></li><li class="li1"><div class="de1">&lt;/ul&gt;</div></li><li class="li1"><div class="de1">&lt;p&gt;</div></li><li class="li1"><div class="de1">Hierf&amp;uuml;r existieren drei Direktiven:</div></li><li class="li1"><div class="de1">&lt;/p&gt;</div></li><li class="li1"><div class="de1">&lt;table style=<span class="st0">&quot;width:100%&quot;</span>&gt;</div></li><li class="li1"><div class="de1">    &lt;tr&gt;&lt;th&gt;Direktive&lt;/th&gt;&lt;th&gt;Bedeutung&lt;/th&gt;&lt;/tr&gt;</div></li><li class="li1"><div class="de1">	&lt;tr&gt;&lt;td&gt;&lt;span class=<span class="st0">&quot;apache&quot;</span>&gt;AddIcon&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Verbindet verschiedene Dateitypen mit einem Icon. &lt;span class=<span class="st0">&quot;apache&quot;</span>&gt;AddIcon&lt;/span&gt; nimmt den Namen einer Icon-Datei und eine oder mehrere Dateieindungen entgegen.&lt;/td&gt;&lt;/tr&gt;</div></li><li class="li1"><div class="de1">    &lt;tr&gt;&lt;td&gt;&lt;span class=<span class="st0">&quot;apache&quot;</span>&gt;AddIconByEncoding&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Verkn&amp;uuml;pft Dateien mit Hilfe des MIME-Types mit einem Icon. Hier wird der Name einer Icon-Datei und ein MIME-Type entgegen genommen.&lt;/td&gt;&lt;/tr&gt;</div></li><li class="li1"><div class="de1">	&lt;tr&gt;&lt;td&gt;&lt;span class=<span class="st0">&quot;apache&quot;</span>&gt;AddIconByType&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Verh&amp;auml;lt sich genau so, wie &lt;span class=<span class="st0">&quot;apache&quot;</span>&gt;AddIconByEncoding&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;</div></li><li class="li1"><div class="de1">&lt;/table&gt;</div></li><li class="li1"><div class="de1">&lt;div class=<span class="st0">&quot;homework&quot;</span>&gt;</div></li><li class="li1"><div class="de1">Was ist ein &lt;strong&gt;MIME&lt;/strong&gt;-Type?</div></li><li class="li1"><div class="de1">&lt;/div&gt;</div></li><li class="li1"><div class="de1">&lt;div class=<span class="st0">&quot;notes 40&quot;</span>&gt;&lt;/div&gt;</div></li><li class="li1"><div class="de1">&lt;p&gt;</div></li><li class="li1"><div class="de1">Da mit der HTTP-Server MIME-Typen verarbeiten kann, muss das Modul <span class="st0">&quot;mod_mime.so&quot;</span> geladen werden. Dieses Modul, wird zusammen mit einer Konfigurationsdatei f&amp;uuml;r MIME-Typen geliefert. Um diese Datei zu laden, m&amp;uuml;ssen die folgenden Direktiven in die Hauptkonfigurationsdatei aufgenommen werden:</div></li><li class="li1"><div class="de1">&lt;/p&gt;</div></li><li class="li1"><div class="de1">&lt;div class=<span class="st0">&quot;homework&quot;</span>&gt;</div></li><li class="li1"><div class="de1">    Nehmen Sie die Direktiven aus \beispiel{<span class="kw1">TypesConfig</span>} in Ihre Hauptkonfigurationsdatei auf, und benutzen Sie die Direktive &lt;span class=<span class="st0">&quot;apache&quot;</span>&gt;AddIconByType&lt;/span&gt;, um das Icon <span class="st0">&quot;compressed.gif&quot;</span> f&amp;uuml;r ZIP-Dateien festzulegen! Welchen MIME-Type ben&amp;ouml;tigen Sie hierf&amp;uuml;r?	Testen Sie Ihr Ergebnis!</div></li><li class="li1"><div class="de1">&lt;/div&gt;</div></li><li class="li1"><div class="de1">&lt;div class=<span class="st0">&quot;notes 70&quot;</span>&gt;&lt;/div&gt;</div></li></ol></pre></div>
+				<div class='geshi'><pre class="apache"><ol><li class="li1"><div class="de1">&lt;p&gt;</div></li><li class="li1"><div class="de1">Der Apache HTTP-Server kennt zwei Wege, um Dateitypen mit Icons zu verbinden:</div></li><li class="li1"><div class="de1">&lt;/p&gt;</div></li><li class="li1"><div class="de1">&lt;ul&gt;</div></li><li class="li1"><div class="de1">	&lt;li&gt;Durch Angabe des Dateityps&lt;/li&gt;</div></li><li class="li1"><div class="de1">	&lt;li&gt;Durch Angabe eines MIME-Types&lt;/li&gt;</div></li><li class="li1"><div class="de1">&lt;/ul&gt;</div></li><li class="li1"><div class="de1">&lt;p&gt;</div></li><li class="li1"><div class="de1">Hierf&amp;uuml;r existieren drei Direktiven:</div></li><li class="li1"><div class="de1">&lt;/p&gt;</div></li><li class="li1"><div class="de1">&lt;table style=<span class="st0">&quot;width:100%&quot;</span>&gt;</div></li><li class="li1"><div class="de1">    &lt;tr&gt;&lt;th&gt;Direktive&lt;/th&gt;&lt;th&gt;Bedeutung&lt;/th&gt;&lt;/tr&gt;</div></li><li class="li1"><div class="de1">	&lt;tr&gt;&lt;td&gt;&lt;span class=<span class="st0">&quot;apache&quot;</span>&gt;AddIcon&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Verbindet verschiedene Dateitypen mit einem Icon. &lt;span class=<span class="st0">&quot;apache&quot;</span>&gt;AddIcon&lt;/span&gt; nimmt den Namen einer Icon-Datei und eine oder mehrere Dateieindungen entgegen.&lt;/td&gt;&lt;/tr&gt;</div></li><li class="li1"><div class="de1">    &lt;tr&gt;&lt;td&gt;&lt;span class=<span class="st0">&quot;apache&quot;</span>&gt;AddIconByEncoding&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Verkn&amp;uuml;pft Dateien mit Hilfe des MIME-Types mit einem Icon. Hier wird der Name einer Icon-Datei und ein MIME-Type entgegen genommen.&lt;/td&gt;&lt;/tr&gt;</div></li><li class="li1"><div class="de1">	&lt;tr&gt;&lt;td&gt;&lt;span class=<span class="st0">&quot;apache&quot;</span>&gt;AddIconByType&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Verh&amp;auml;lt sich genau so, wie &lt;span class=<span class="st0">&quot;apache&quot;</span>&gt;AddIconByEncoding&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;</div></li><li class="li1"><div class="de1">&lt;/table&gt;</div></li><li class="li1"><div class="de1">&lt;div class=<span class="st0">&quot;homework&quot;</span>&gt;</div></li><li class="li1"><div class="de1">Was ist ein &lt;strong&gt;MIME&lt;/strong&gt;-Type?</div></li><li class="li1"><div class="de1">&lt;/div&gt;</div></li><li class="li1"><div class="de1">&lt;div class=<span class="st0">&quot;notes height40&quot;</span>&gt;&lt;/div&gt;</div></li><li class="li1"><div class="de1">&lt;p&gt;</div></li><li class="li1"><div class="de1">Da mit der HTTP-Server MIME-Typen verarbeiten kann, muss das Modul <span class="st0">&quot;mod_mime.so&quot;</span> geladen werden. Dieses Modul, wird zusammen mit einer Konfigurationsdatei f&amp;uuml;r MIME-Typen geliefert. Um diese Datei zu laden, m&amp;uuml;ssen die folgenden Direktiven in die Hauptkonfigurationsdatei aufgenommen werden:</div></li><li class="li1"><div class="de1">&lt;/p&gt;</div></li><li class="li1"><div class="de1">&lt;div class=<span class="st0">&quot;homework&quot;</span>&gt;</div></li><li class="li1"><div class="de1">    Nehmen Sie die Direktiven aus \beispiel{<span class="kw1">TypesConfig</span>} in Ihre Hauptkonfigurationsdatei auf, und benutzen Sie die Direktive &lt;span class=<span class="st0">&quot;apache&quot;</span>&gt;AddIconByType&lt;/span&gt;, um das Icon <span class="st0">&quot;compressed.gif&quot;</span> f&amp;uuml;r ZIP-Dateien festzulegen! Welchen MIME-Type ben&amp;ouml;tigen Sie hierf&amp;uuml;r?	Testen Sie Ihr Ergebnis!</div></li><li class="li1"><div class="de1">&lt;/div&gt;</div></li><li class="li1"><div class="de1">&lt;div class=<span class="st0">&quot;notes height70&quot;</span>&gt;&lt;/div&gt;</div></li></ol></pre></div>
 			</article>
 		
 		<article id='article-203'>
@@ -1210,17 +1229,17 @@ Verzeichnisaliase erm&ouml;glichen es, Ressourcen au&szlig;erhalb des DocumentRo
 <div class="homework">
 Laden Sie das Modul <span class="url">mod_alias.so</span>, und recherchieren Sie, welche Direktive f&uuml;r das Erstellen eines Verzeichnisaliases zust\"andig ist.
 </div>
-<div class="notes 50"></div>
+<div class="notes height50"></div>
 <div class="homework">
 Pr&uuml;fen Sie, ob im Verzeichnisindex jetzt ein Icon angezeigt wird! Falls	nicht, kontrollieren Sie Ihr Error-Log!
 </div>
-<div class="notes 50"></div>
+<div class="notes height50"></div>
 <p>
 Um den Zugriff auf die Icon-Ressource zu erm&ouml;glichen, muss dem Nutzer der Zugriff auf das <span class="url">icons</span>-Verzeichnis gew&auml;hrt werden. Dies geschieht wiederum mit einem <span class="apachecontainer">Directory</span>-Kontainer.
 <div class="homework">
 Worin unterscheiden sich die beiden folgenden <span class="apachecontainer">Directory</span>-Kontainer (Hinweis: Benutzen Sie Ihr Error-Log, um den Unterschied festzustellen)?
 </div>
-<div class="notes 50"></div>
+<div class="notes height50"></div>
 <div class="homework">
 Formatieren Sie den automatischen DirectoryIndex des Downloadordners nach den folgenden Angaben. Benutzen Sie die Onlinedokumentation zum "autoindex_module", um die ben&ouml;tigten Informationen zu recherchieren!
     <ul>
@@ -1234,9 +1253,9 @@ Formatieren Sie den automatischen DirectoryIndex des Downloadordners nach den fo
 		<li>Die Standardsortierung f&uuml;r den Verzeichnisindex ist eine aufsteigende Reihenfolge.</li>
     </ul>
 </div>
-<div class="notes 70"></div>
+<div class="notes height70"></div>
 				<caption>Listing</caption>
-				<div class='geshi'><pre class="apache"><ol><li class="li1"><div class="de1">&lt;p&gt;</div></li><li class="li1"><div class="de1">Das das Laden des Icons in der letzten &amp;Uuml;bung fehlschlug lagt daran, dass die ben&amp;ouml;tigte Ressource, das Icon, au&amp;szlig;erhalb des DocumentRoot-Verzeichnisses liegt. Um Ressourcen au&amp;szlig;erhalb des <span class="kw1">DocumentRoot</span> erreichen zu k&amp;ouml;nnen, muss mit Aliasnamen bzw. Virtuellen Verzeichnissen gearbeitet werden.</div></li><li class="li1"><div class="de1">&lt;div class=<span class="st0">&quot;information&quot;</span>&gt;</div></li><li class="li1"><div class="de1">Verzeichnisaliase erm&amp;ouml;glichen es, Ressourcen au&amp;szlig;erhalb des DocumentRoot-Verzeichnisses einzubinden. Zust&amp;auml;ndig ist hierf&amp;uuml;r das <span class="st0">&quot;alias_module&quot;</span> (&lt;span class=<span class="st0">&quot;url&quot;</span>&gt;mod_alias.so&lt;/span&gt;).</div></li><li class="li1"><div class="de1">&lt;/div&gt;</div></li><li class="li1"><div class="de1">&lt;div class=<span class="st0">&quot;homework&quot;</span>&gt;</div></li><li class="li1"><div class="de1">Laden Sie das Modul &lt;span class=<span class="st0">&quot;url&quot;</span>&gt;mod_alias.so&lt;/span&gt;, und recherchieren Sie, welche Direktive f&amp;uuml;r das Erstellen eines Verzeichnisaliases zust\<span class="st0">&quot;andig ist.</span></div></li><li class="li1"><div class="de1"><span class="st0">&lt;/div&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">&lt;div class=&quot;</span>notes <span class="nu0">50</span><span class="st0">&quot;&gt;&lt;/div&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">&lt;div class=&quot;</span>homework<span class="st0">&quot;&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">Pr&amp;uuml;fen Sie, ob im Verzeichnisindex jetzt ein Icon angezeigt wird! Falls	nicht, kontrollieren Sie Ihr Error-Log!</span></div></li><li class="li1"><div class="de1"><span class="st0">&lt;/div&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">&lt;div class=&quot;</span>notes <span class="nu0">50</span><span class="st0">&quot;&gt;&lt;/div&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">&lt;p&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">Um den Zugriff auf die Icon-Ressource zu erm&amp;ouml;glichen, muss dem Nutzer der Zugriff auf das &lt;span class=&quot;</span>url<span class="st0">&quot;&gt;icons&lt;/span&gt;-Verzeichnis gew&amp;auml;hrt werden. Dies geschieht wiederum mit einem &lt;span class=&quot;</span>apachecontainer<span class="st0">&quot;&gt;Directory&lt;/span&gt;-Kontainer.</span></div></li><li class="li1"><div class="de1"><span class="st0">&lt;div class=&quot;</span>homework<span class="st0">&quot;&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">Worin unterscheiden sich die beiden folgenden &lt;span class=&quot;</span>apachecontainer<span class="st0">&quot;&gt;Directory&lt;/span&gt;-Kontainer (Hinweis: Benutzen Sie Ihr Error-Log, um den Unterschied festzustellen)?</span></div></li><li class="li1"><div class="de1"><span class="st0">&lt;/div&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">&lt;div class=&quot;</span>notes <span class="nu0">50</span><span class="st0">&quot;&gt;&lt;/div&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">&lt;div class=&quot;</span>homework<span class="st0">&quot;&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">Formatieren Sie den automatischen DirectoryIndex des Downloadordners nach den folgenden Angaben. Benutzen Sie die Onlinedokumentation zum &quot;</span>autoindex_module<span class="st0">&quot;, um die ben&amp;ouml;tigten Informationen zu recherchieren!</span></div></li><li class="li1"><div class="de1"><span class="st0">    &lt;ul&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">		&lt;li&gt;Als Icon f&amp;uuml;r das &amp;uuml;bergeordnete Verzeichnis soll &lt;span class=&quot;</span>url<span class="st0">&quot;&gt;dir.gif&lt;/span&gt; verwendet werden!&lt;/li&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">		&lt;li&gt;F&amp;uuml;r &lt;span class=&quot;</span>url<span class="st0">&quot;&gt;*.msi&lt;/span&gt;-Dateien soll das Icon &lt;span class=&quot;</span>url<span class="st0">&quot;&gt;compressed.gif&lt;/span&gt; genutzt werden.&lt;/li&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">		&lt;li&gt;Das Standardicon f&amp;uuml;r alle unbekannten Dateitypen muss &lt;span class=&quot;</span>url<span class="st0">&quot;&gt;unknown.gif&lt;/span&gt; sein.&lt;/li&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">		&lt;li&gt;Im Index sollen Verzeichnisse immer an erster Stelle aufgelistet werden, und dann erst die Dateien.&lt;/li&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">		&lt;li&gt;Die Icons m&amp;uuml;ssen ein Teil der Links sein.&lt;/li&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">		&lt;li&gt;Dateinamen m&amp;uuml;ssen in ihrer vollen L&amp;auml;nge erhalten bleiben und d&amp;uuml;rfen nicht abgeschnitten werden.&lt;/li&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">		&lt;li&gt;Die Spalte &quot;</span>Description<span class="st0">&quot; soll ausgeblendet werden.&lt;/li&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">		&lt;li&gt;Die Standardsortierung f&amp;uuml;r den Verzeichnisindex ist eine aufsteigende Reihenfolge.&lt;/li&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">    &lt;/ul&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">&lt;/div&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">&lt;div class=&quot;</span>notes <span class="nu0">70</span><span class="st0">&quot;&gt;&lt;/div&gt;</span></div></li></ol></pre></div>
+				<div class='geshi'><pre class="apache"><ol><li class="li1"><div class="de1">&lt;p&gt;</div></li><li class="li1"><div class="de1">Das das Laden des Icons in der letzten &amp;Uuml;bung fehlschlug lagt daran, dass die ben&amp;ouml;tigte Ressource, das Icon, au&amp;szlig;erhalb des DocumentRoot-Verzeichnisses liegt. Um Ressourcen au&amp;szlig;erhalb des <span class="kw1">DocumentRoot</span> erreichen zu k&amp;ouml;nnen, muss mit Aliasnamen bzw. Virtuellen Verzeichnissen gearbeitet werden.</div></li><li class="li1"><div class="de1">&lt;div class=<span class="st0">&quot;information&quot;</span>&gt;</div></li><li class="li1"><div class="de1">Verzeichnisaliase erm&amp;ouml;glichen es, Ressourcen au&amp;szlig;erhalb des DocumentRoot-Verzeichnisses einzubinden. Zust&amp;auml;ndig ist hierf&amp;uuml;r das <span class="st0">&quot;alias_module&quot;</span> (&lt;span class=<span class="st0">&quot;url&quot;</span>&gt;mod_alias.so&lt;/span&gt;).</div></li><li class="li1"><div class="de1">&lt;/div&gt;</div></li><li class="li1"><div class="de1">&lt;div class=<span class="st0">&quot;homework&quot;</span>&gt;</div></li><li class="li1"><div class="de1">Laden Sie das Modul &lt;span class=<span class="st0">&quot;url&quot;</span>&gt;mod_alias.so&lt;/span&gt;, und recherchieren Sie, welche Direktive f&amp;uuml;r das Erstellen eines Verzeichnisaliases zust\<span class="st0">&quot;andig ist.</span></div></li><li class="li1"><div class="de1"><span class="st0">&lt;/div&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">&lt;div class=&quot;</span>notes height50<span class="st0">&quot;&gt;&lt;/div&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">&lt;div class=&quot;</span>homework<span class="st0">&quot;&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">Pr&amp;uuml;fen Sie, ob im Verzeichnisindex jetzt ein Icon angezeigt wird! Falls	nicht, kontrollieren Sie Ihr Error-Log!</span></div></li><li class="li1"><div class="de1"><span class="st0">&lt;/div&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">&lt;div class=&quot;</span>notes height50<span class="st0">&quot;&gt;&lt;/div&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">&lt;p&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">Um den Zugriff auf die Icon-Ressource zu erm&amp;ouml;glichen, muss dem Nutzer der Zugriff auf das &lt;span class=&quot;</span>url<span class="st0">&quot;&gt;icons&lt;/span&gt;-Verzeichnis gew&amp;auml;hrt werden. Dies geschieht wiederum mit einem &lt;span class=&quot;</span>apachecontainer<span class="st0">&quot;&gt;Directory&lt;/span&gt;-Kontainer.</span></div></li><li class="li1"><div class="de1"><span class="st0">&lt;div class=&quot;</span>homework<span class="st0">&quot;&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">Worin unterscheiden sich die beiden folgenden &lt;span class=&quot;</span>apachecontainer<span class="st0">&quot;&gt;Directory&lt;/span&gt;-Kontainer (Hinweis: Benutzen Sie Ihr Error-Log, um den Unterschied festzustellen)?</span></div></li><li class="li1"><div class="de1"><span class="st0">&lt;/div&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">&lt;div class=&quot;</span>notes height50<span class="st0">&quot;&gt;&lt;/div&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">&lt;div class=&quot;</span>homework<span class="st0">&quot;&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">Formatieren Sie den automatischen DirectoryIndex des Downloadordners nach den folgenden Angaben. Benutzen Sie die Onlinedokumentation zum &quot;</span>autoindex_module<span class="st0">&quot;, um die ben&amp;ouml;tigten Informationen zu recherchieren!</span></div></li><li class="li1"><div class="de1"><span class="st0">    &lt;ul&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">		&lt;li&gt;Als Icon f&amp;uuml;r das &amp;uuml;bergeordnete Verzeichnis soll &lt;span class=&quot;</span>url<span class="st0">&quot;&gt;dir.gif&lt;/span&gt; verwendet werden!&lt;/li&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">		&lt;li&gt;F&amp;uuml;r &lt;span class=&quot;</span>url<span class="st0">&quot;&gt;*.msi&lt;/span&gt;-Dateien soll das Icon &lt;span class=&quot;</span>url<span class="st0">&quot;&gt;compressed.gif&lt;/span&gt; genutzt werden.&lt;/li&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">		&lt;li&gt;Das Standardicon f&amp;uuml;r alle unbekannten Dateitypen muss &lt;span class=&quot;</span>url<span class="st0">&quot;&gt;unknown.gif&lt;/span&gt; sein.&lt;/li&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">		&lt;li&gt;Im Index sollen Verzeichnisse immer an erster Stelle aufgelistet werden, und dann erst die Dateien.&lt;/li&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">		&lt;li&gt;Die Icons m&amp;uuml;ssen ein Teil der Links sein.&lt;/li&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">		&lt;li&gt;Dateinamen m&amp;uuml;ssen in ihrer vollen L&amp;auml;nge erhalten bleiben und d&amp;uuml;rfen nicht abgeschnitten werden.&lt;/li&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">		&lt;li&gt;Die Spalte &quot;</span>Description<span class="st0">&quot; soll ausgeblendet werden.&lt;/li&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">		&lt;li&gt;Die Standardsortierung f&amp;uuml;r den Verzeichnisindex ist eine aufsteigende Reihenfolge.&lt;/li&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">    &lt;/ul&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">&lt;/div&gt;</span></div></li><li class="li1"><div class="de1"><span class="st0">&lt;div class=&quot;</span>notes height70<span class="st0">&quot;&gt;&lt;/div&gt;</span></div></li></ol></pre></div>
 			</article>
 		
 

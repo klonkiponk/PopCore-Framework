@@ -9059,3 +9059,280 @@ Sun Jul 15 19:52:02 2012: Converting document...
 Sun Jul 15 19:52:03 2012: Resolving cross-references...
 Sun Jul 15 19:52:04 2012: finished: success
 Sun Jul 15 19:52:04 2012: ---- end
+Sun Jul 15 23:23:02 2012: ---- begin
+Sun Jul 15 23:23:06 2012: Loading document...
+Sun Jul 15 23:23:06 2012: ./script.html:621: error: Tag section invalid
+Sun Jul 15 23:23:06 2012: ./script.html:623: error: Tag article invalid
+Sun Jul 15 23:23:06 2012: ./script.html:628: error: Invalid char in CDATA 0x1B
+Sun Jul 15 23:23:06 2012: ./script.html:635: error: Invalid char in CDATA 0x1B
+Sun Jul 15 23:23:06 2012: ./script.html:640: error: Invalid char in CDATA 0x1B
+Sun Jul 15 23:23:06 2012: ./script.html:654: error: Invalid char in CDATA 0x1B
+Sun Jul 15 23:23:06 2012: ./script.html:664: error: Tag article invalid
+Sun Jul 15 23:23:06 2012: ./script.html:676: error: Tag section invalid
+Sun Jul 15 23:23:06 2012: ./script.html:681: error: Tag section invalid
+Sun Jul 15 23:23:06 2012: ./script.html:687: error: Tag section invalid
+Sun Jul 15 23:23:06 2012: ./script.html:692: error: Tag section invalid
+Sun Jul 15 23:23:06 2012: ./script.html:697: error: Tag section invalid
+Sun Jul 15 23:23:06 2012: ./script.html:699: error: Tag article invalid
+Sun Jul 15 23:23:06 2012: ./script.html:707: error: Tag article invalid
+Sun Jul 15 23:23:06 2012: ./script.html:714: error: Tag section invalid
+Sun Jul 15 23:23:06 2012: ./script.html:718: error: Tag section invalid
+Sun Jul 15 23:23:06 2012: ./script.html:720: error: Tag article invalid
+Sun Jul 15 23:23:06 2012: ./script.html:729: error: Invalid char in CDATA 0x1B
+Sun Jul 15 23:23:06 2012: ./script.html:732: error: Invalid char in CDATA 0x1B
+Sun Jul 15 23:23:06 2012: ./script.html:737: error: Tag section invalid
+Sun Jul 15 23:23:06 2012: ./script.html:742: error: Tag section invalid
+Sun Jul 15 23:23:06 2012: ./script.html:747: error: Tag section invalid
+Sun Jul 15 23:23:06 2012: ./script.html:752: error: Tag section invalid
+Sun Jul 15 23:23:06 2012: ./script.html:754: error: Tag article invalid
+Sun Jul 15 23:23:06 2012: ./script.html:765: error: Tag section invalid
+Sun Jul 15 23:23:06 2012: ./script.html:770: error: Tag section invalid
+Sun Jul 15 23:23:06 2012: ./script.html:776: error: Tag section invalid
+Sun Jul 15 23:23:06 2012: ./script.html:781: error: Tag section invalid
+Sun Jul 15 23:23:06 2012: ./script.html:785: error: Tag section invalid
+Sun Jul 15 23:23:06 2012: ./script.html:787: error: Tag article invalid
+Sun Jul 15 23:23:06 2012: ./script.html:802: error: Tag article invalid
+Sun Jul 15 23:23:06 2012: ./script.html:825: error: Tag article invalid
+Sun Jul 15 23:23:06 2012: ./script.html:847: error: Tag section invalid
+Sun Jul 15 23:23:06 2012: ./script.html:851: error: Tag section invalid
+Sun Jul 15 23:23:06 2012: ./script.html:853: error: Tag article invalid
+Sun Jul 15 23:23:06 2012: ./script.html:874: error: Tag article invalid
+Sun Jul 15 23:23:06 2012: ./script.html:961: error: Tag section invalid
+Sun Jul 15 23:23:06 2012: ./script.html:963: error: Tag article invalid
+Sun Jul 15 23:23:06 2012: ./script.html:996: error: Tag article invalid
+Sun Jul 15 23:23:06 2012: ./script.html:1046: error: Tag article invalid
+Sun Jul 15 23:23:06 2012: ./script.html:1079: error: Tag section invalid
+Sun Jul 15 23:23:06 2012: ./script.html:1081: error: Tag article invalid
+Sun Jul 15 23:23:06 2012: ./script.html:1098: error: Tag article invalid
+Sun Jul 15 23:23:06 2012: ./script.html:1166: error: Tag section invalid
+Sun Jul 15 23:23:06 2012: ./script.html:1168: error: Tag article invalid
+Sun Jul 15 23:23:06 2012: ./script.html:1189: error: Tag article invalid
+Sun Jul 15 23:23:06 2012: ./script.html:1203: error: Tag article invalid
+Sun Jul 15 23:23:06 2012: ./script.html:1237: error: Tag article invalid
+Sun Jul 15 23:23:06 2012: ./script.html:1279: error: Tag section invalid
+Sun Jul 15 23:23:06 2012: ./script.html:1283: error: Tag section invalid
+Sun Jul 15 23:23:06 2012: ../img/papier2.png: warning: can't open input file: No such file or directory
+Sun Jul 15 23:23:06 2012: Converting document...
+Sun Jul 15 23:23:07 2012: Resolving cross-references...
+Sun Jul 15 23:23:08 2012: finished: success
+Sun Jul 15 23:23:08 2012: ---- end
+Sun Jul 15 23:23:58 2012: ---- begin
+Sun Jul 15 23:23:59 2012: Loading document...
+Sun Jul 15 23:23:59 2012: ./script.html:621: error: Tag section invalid
+Sun Jul 15 23:23:59 2012: ./script.html:623: error: Tag article invalid
+Sun Jul 15 23:23:59 2012: ./script.html:628: error: Invalid char in CDATA 0x1B
+Sun Jul 15 23:23:59 2012: ./script.html:635: error: Invalid char in CDATA 0x1B
+Sun Jul 15 23:23:59 2012: ./script.html:640: error: Invalid char in CDATA 0x1B
+Sun Jul 15 23:23:59 2012: ./script.html:654: error: Invalid char in CDATA 0x1B
+Sun Jul 15 23:23:59 2012: ./script.html:664: error: Tag article invalid
+Sun Jul 15 23:23:59 2012: ./script.html:676: error: Tag section invalid
+Sun Jul 15 23:23:59 2012: ./script.html:681: error: Tag section invalid
+Sun Jul 15 23:23:59 2012: ./script.html:687: error: Tag section invalid
+Sun Jul 15 23:23:59 2012: ./script.html:692: error: Tag section invalid
+Sun Jul 15 23:23:59 2012: ./script.html:697: error: Tag section invalid
+Sun Jul 15 23:23:59 2012: ./script.html:699: error: Tag article invalid
+Sun Jul 15 23:23:59 2012: ./script.html:707: error: Tag article invalid
+Sun Jul 15 23:23:59 2012: ./script.html:714: error: Tag section invalid
+Sun Jul 15 23:23:59 2012: ./script.html:718: error: Tag section invalid
+Sun Jul 15 23:23:59 2012: ./script.html:720: error: Tag article invalid
+Sun Jul 15 23:23:59 2012: ./script.html:729: error: Invalid char in CDATA 0x1B
+Sun Jul 15 23:23:59 2012: ./script.html:732: error: Invalid char in CDATA 0x1B
+Sun Jul 15 23:23:59 2012: ./script.html:737: error: Tag section invalid
+Sun Jul 15 23:23:59 2012: ./script.html:742: error: Tag section invalid
+Sun Jul 15 23:23:59 2012: ./script.html:747: error: Tag section invalid
+Sun Jul 15 23:23:59 2012: ./script.html:752: error: Tag section invalid
+Sun Jul 15 23:23:59 2012: ./script.html:754: error: Tag article invalid
+Sun Jul 15 23:23:59 2012: ./script.html:765: error: Tag section invalid
+Sun Jul 15 23:23:59 2012: ./script.html:770: error: Tag section invalid
+Sun Jul 15 23:23:59 2012: ./script.html:776: error: Tag section invalid
+Sun Jul 15 23:23:59 2012: ./script.html:781: error: Tag section invalid
+Sun Jul 15 23:23:59 2012: ./script.html:785: error: Tag section invalid
+Sun Jul 15 23:23:59 2012: ./script.html:787: error: Tag article invalid
+Sun Jul 15 23:23:59 2012: ./script.html:802: error: Tag article invalid
+Sun Jul 15 23:23:59 2012: ./script.html:825: error: Tag article invalid
+Sun Jul 15 23:23:59 2012: ./script.html:847: error: Tag section invalid
+Sun Jul 15 23:23:59 2012: ./script.html:851: error: Tag section invalid
+Sun Jul 15 23:23:59 2012: ./script.html:853: error: Tag article invalid
+Sun Jul 15 23:23:59 2012: ./script.html:874: error: Tag article invalid
+Sun Jul 15 23:23:59 2012: ./script.html:961: error: Tag section invalid
+Sun Jul 15 23:23:59 2012: ./script.html:963: error: Tag article invalid
+Sun Jul 15 23:23:59 2012: ./script.html:996: error: Tag article invalid
+Sun Jul 15 23:23:59 2012: ./script.html:1046: error: Tag article invalid
+Sun Jul 15 23:23:59 2012: ./script.html:1079: error: Tag section invalid
+Sun Jul 15 23:23:59 2012: ./script.html:1081: error: Tag article invalid
+Sun Jul 15 23:23:59 2012: ./script.html:1098: error: Tag article invalid
+Sun Jul 15 23:23:59 2012: ./script.html:1166: error: Tag section invalid
+Sun Jul 15 23:23:59 2012: ./script.html:1168: error: Tag article invalid
+Sun Jul 15 23:23:59 2012: ./script.html:1189: error: Tag article invalid
+Sun Jul 15 23:23:59 2012: ./script.html:1203: error: Tag article invalid
+Sun Jul 15 23:23:59 2012: ./script.html:1237: error: Tag article invalid
+Sun Jul 15 23:23:59 2012: ./script.html:1279: error: Tag section invalid
+Sun Jul 15 23:23:59 2012: ./script.html:1283: error: Tag section invalid
+Sun Jul 15 23:24:00 2012: Converting document...
+Sun Jul 15 23:24:01 2012: Resolving cross-references...
+Sun Jul 15 23:24:01 2012: finished: success
+Sun Jul 15 23:24:01 2012: ---- end
+Sun Jul 15 23:24:53 2012: ---- begin
+Sun Jul 15 23:24:55 2012: Loading document...
+Sun Jul 15 23:24:55 2012: ./script.html:617: error: Tag section invalid
+Sun Jul 15 23:24:55 2012: ./script.html:619: error: Tag article invalid
+Sun Jul 15 23:24:55 2012: ./script.html:624: error: Invalid char in CDATA 0x1B
+Sun Jul 15 23:24:55 2012: ./script.html:631: error: Invalid char in CDATA 0x1B
+Sun Jul 15 23:24:55 2012: ./script.html:636: error: Invalid char in CDATA 0x1B
+Sun Jul 15 23:24:55 2012: ./script.html:650: error: Invalid char in CDATA 0x1B
+Sun Jul 15 23:24:55 2012: ./script.html:660: error: Tag article invalid
+Sun Jul 15 23:24:55 2012: ./script.html:672: error: Tag section invalid
+Sun Jul 15 23:24:55 2012: ./script.html:677: error: Tag section invalid
+Sun Jul 15 23:24:55 2012: ./script.html:683: error: Tag section invalid
+Sun Jul 15 23:24:55 2012: ./script.html:688: error: Tag section invalid
+Sun Jul 15 23:24:55 2012: ./script.html:693: error: Tag section invalid
+Sun Jul 15 23:24:55 2012: ./script.html:695: error: Tag article invalid
+Sun Jul 15 23:24:55 2012: ./script.html:703: error: Tag article invalid
+Sun Jul 15 23:24:55 2012: ./script.html:710: error: Tag section invalid
+Sun Jul 15 23:24:55 2012: ./script.html:714: error: Tag section invalid
+Sun Jul 15 23:24:55 2012: ./script.html:716: error: Tag article invalid
+Sun Jul 15 23:24:55 2012: ./script.html:725: error: Invalid char in CDATA 0x1B
+Sun Jul 15 23:24:55 2012: ./script.html:728: error: Invalid char in CDATA 0x1B
+Sun Jul 15 23:24:55 2012: ./script.html:733: error: Tag section invalid
+Sun Jul 15 23:24:55 2012: ./script.html:738: error: Tag section invalid
+Sun Jul 15 23:24:55 2012: ./script.html:743: error: Tag section invalid
+Sun Jul 15 23:24:55 2012: ./script.html:748: error: Tag section invalid
+Sun Jul 15 23:24:55 2012: ./script.html:750: error: Tag article invalid
+Sun Jul 15 23:24:55 2012: ./script.html:761: error: Tag section invalid
+Sun Jul 15 23:24:55 2012: ./script.html:766: error: Tag section invalid
+Sun Jul 15 23:24:55 2012: ./script.html:772: error: Tag section invalid
+Sun Jul 15 23:24:55 2012: ./script.html:777: error: Tag section invalid
+Sun Jul 15 23:24:55 2012: ./script.html:781: error: Tag section invalid
+Sun Jul 15 23:24:55 2012: ./script.html:783: error: Tag article invalid
+Sun Jul 15 23:24:55 2012: ./script.html:798: error: Tag article invalid
+Sun Jul 15 23:24:55 2012: ./script.html:821: error: Tag article invalid
+Sun Jul 15 23:24:55 2012: ./script.html:843: error: Tag section invalid
+Sun Jul 15 23:24:55 2012: ./script.html:847: error: Tag section invalid
+Sun Jul 15 23:24:55 2012: ./script.html:849: error: Tag article invalid
+Sun Jul 15 23:24:55 2012: ./script.html:870: error: Tag article invalid
+Sun Jul 15 23:24:55 2012: ./script.html:957: error: Tag section invalid
+Sun Jul 15 23:24:55 2012: ./script.html:959: error: Tag article invalid
+Sun Jul 15 23:24:55 2012: ./script.html:992: error: Tag article invalid
+Sun Jul 15 23:24:55 2012: ./script.html:1042: error: Tag article invalid
+Sun Jul 15 23:24:55 2012: ./script.html:1075: error: Tag section invalid
+Sun Jul 15 23:24:55 2012: ./script.html:1077: error: Tag article invalid
+Sun Jul 15 23:24:55 2012: ./script.html:1094: error: Tag article invalid
+Sun Jul 15 23:24:55 2012: ./script.html:1162: error: Tag section invalid
+Sun Jul 15 23:24:55 2012: ./script.html:1164: error: Tag article invalid
+Sun Jul 15 23:24:55 2012: ./script.html:1185: error: Tag article invalid
+Sun Jul 15 23:24:55 2012: ./script.html:1199: error: Tag article invalid
+Sun Jul 15 23:24:55 2012: ./script.html:1233: error: Tag article invalid
+Sun Jul 15 23:24:55 2012: ./script.html:1275: error: Tag section invalid
+Sun Jul 15 23:24:55 2012: ./script.html:1279: error: Tag section invalid
+Sun Jul 15 23:24:55 2012: Converting document...
+Sun Jul 15 23:24:56 2012: Resolving cross-references...
+Sun Jul 15 23:24:57 2012: finished: success
+Sun Jul 15 23:24:57 2012: ---- end
+Sun Jul 15 23:55:35 2012: ---- begin
+Sun Jul 15 23:55:38 2012: Loading document...
+Sun Jul 15 23:55:38 2012: ./script.html:617: error: Tag section invalid
+Sun Jul 15 23:55:38 2012: ./script.html:619: error: Tag article invalid
+Sun Jul 15 23:55:38 2012: ./script.html:624: error: Invalid char in CDATA 0x1B
+Sun Jul 15 23:55:38 2012: ./script.html:631: error: Invalid char in CDATA 0x1B
+Sun Jul 15 23:55:38 2012: ./script.html:636: error: Invalid char in CDATA 0x1B
+Sun Jul 15 23:55:38 2012: ./script.html:650: error: Invalid char in CDATA 0x1B
+Sun Jul 15 23:55:38 2012: ./script.html:660: error: Tag article invalid
+Sun Jul 15 23:55:38 2012: ./script.html:672: error: Tag section invalid
+Sun Jul 15 23:55:38 2012: ./script.html:677: error: Tag section invalid
+Sun Jul 15 23:55:38 2012: ./script.html:683: error: Tag section invalid
+Sun Jul 15 23:55:38 2012: ./script.html:688: error: Tag section invalid
+Sun Jul 15 23:55:38 2012: ./script.html:693: error: Tag section invalid
+Sun Jul 15 23:55:38 2012: ./script.html:698: error: Tag section invalid
+Sun Jul 15 23:55:38 2012: ./script.html:702: error: Tag section invalid
+Sun Jul 15 23:55:38 2012: ./script.html:704: error: Tag article invalid
+Sun Jul 15 23:55:38 2012: ./script.html:713: error: Invalid char in CDATA 0x1B
+Sun Jul 15 23:55:38 2012: ./script.html:716: error: Invalid char in CDATA 0x1B
+Sun Jul 15 23:55:38 2012: ./script.html:721: error: Tag section invalid
+Sun Jul 15 23:55:38 2012: ./script.html:726: error: Tag section invalid
+Sun Jul 15 23:55:38 2012: ./script.html:731: error: Tag section invalid
+Sun Jul 15 23:55:38 2012: ./script.html:736: error: Tag section invalid
+Sun Jul 15 23:55:38 2012: ./script.html:738: error: Tag article invalid
+Sun Jul 15 23:55:38 2012: ./script.html:749: error: Tag section invalid
+Sun Jul 15 23:55:38 2012: ./script.html:754: error: Tag section invalid
+Sun Jul 15 23:55:38 2012: ./script.html:760: error: Tag section invalid
+Sun Jul 15 23:55:38 2012: ./script.html:765: error: Tag section invalid
+Sun Jul 15 23:55:38 2012: ./script.html:769: error: Tag section invalid
+Sun Jul 15 23:55:38 2012: ./script.html:771: error: Tag article invalid
+Sun Jul 15 23:55:38 2012: ./script.html:786: error: Tag article invalid
+Sun Jul 15 23:55:38 2012: ./script.html:809: error: Tag article invalid
+Sun Jul 15 23:55:38 2012: ./script.html:831: error: Tag section invalid
+Sun Jul 15 23:55:38 2012: ./script.html:835: error: Tag section invalid
+Sun Jul 15 23:55:38 2012: ./script.html:837: error: Tag article invalid
+Sun Jul 15 23:55:38 2012: ./script.html:858: error: Tag article invalid
+Sun Jul 15 23:55:38 2012: ./script.html:945: error: Tag section invalid
+Sun Jul 15 23:55:38 2012: ./script.html:947: error: Tag article invalid
+Sun Jul 15 23:55:38 2012: ./script.html:980: error: Tag article invalid
+Sun Jul 15 23:55:38 2012: ./script.html:1030: error: Tag article invalid
+Sun Jul 15 23:55:38 2012: ./script.html:1063: error: Tag section invalid
+Sun Jul 15 23:55:38 2012: ./script.html:1065: error: Tag article invalid
+Sun Jul 15 23:55:38 2012: ./script.html:1082: error: Tag article invalid
+Sun Jul 15 23:55:38 2012: ./script.html:1150: error: Tag section invalid
+Sun Jul 15 23:55:38 2012: ./script.html:1152: error: Tag article invalid
+Sun Jul 15 23:55:38 2012: ./script.html:1173: error: Tag article invalid
+Sun Jul 15 23:55:38 2012: ./script.html:1187: error: Tag article invalid
+Sun Jul 15 23:55:38 2012: ./script.html:1221: error: Tag article invalid
+Sun Jul 15 23:55:38 2012: ./script.html:1263: error: Tag section invalid
+Sun Jul 15 23:55:38 2012: ./script.html:1267: error: Tag section invalid
+Sun Jul 15 23:55:38 2012: Converting document...
+Sun Jul 15 23:55:39 2012: Resolving cross-references...
+Sun Jul 15 23:55:40 2012: finished: success
+Sun Jul 15 23:55:40 2012: ---- end
+Sun Jul 15 23:56:09 2012: ---- begin
+Sun Jul 15 23:56:10 2012: Loading document...
+Sun Jul 15 23:56:11 2012: ./script.html:617: error: Tag section invalid
+Sun Jul 15 23:56:11 2012: ./script.html:619: error: Tag article invalid
+Sun Jul 15 23:56:11 2012: ./script.html:624: error: Invalid char in CDATA 0x1B
+Sun Jul 15 23:56:11 2012: ./script.html:631: error: Invalid char in CDATA 0x1B
+Sun Jul 15 23:56:11 2012: ./script.html:636: error: Invalid char in CDATA 0x1B
+Sun Jul 15 23:56:11 2012: ./script.html:650: error: Invalid char in CDATA 0x1B
+Sun Jul 15 23:56:11 2012: ./script.html:660: error: Tag article invalid
+Sun Jul 15 23:56:11 2012: ./script.html:672: error: Tag section invalid
+Sun Jul 15 23:56:11 2012: ./script.html:677: error: Tag section invalid
+Sun Jul 15 23:56:11 2012: ./script.html:683: error: Tag section invalid
+Sun Jul 15 23:56:11 2012: ./script.html:688: error: Tag section invalid
+Sun Jul 15 23:56:11 2012: ./script.html:693: error: Tag section invalid
+Sun Jul 15 23:56:11 2012: ./script.html:698: error: Tag section invalid
+Sun Jul 15 23:56:11 2012: ./script.html:702: error: Tag section invalid
+Sun Jul 15 23:56:11 2012: ./script.html:704: error: Tag article invalid
+Sun Jul 15 23:56:11 2012: ./script.html:713: error: Invalid char in CDATA 0x1B
+Sun Jul 15 23:56:11 2012: ./script.html:716: error: Invalid char in CDATA 0x1B
+Sun Jul 15 23:56:11 2012: ./script.html:721: error: Tag section invalid
+Sun Jul 15 23:56:11 2012: ./script.html:726: error: Tag section invalid
+Sun Jul 15 23:56:11 2012: ./script.html:731: error: Tag section invalid
+Sun Jul 15 23:56:11 2012: ./script.html:736: error: Tag section invalid
+Sun Jul 15 23:56:11 2012: ./script.html:738: error: Tag article invalid
+Sun Jul 15 23:56:11 2012: ./script.html:749: error: Tag section invalid
+Sun Jul 15 23:56:11 2012: ./script.html:754: error: Tag section invalid
+Sun Jul 15 23:56:11 2012: ./script.html:760: error: Tag section invalid
+Sun Jul 15 23:56:11 2012: ./script.html:765: error: Tag section invalid
+Sun Jul 15 23:56:11 2012: ./script.html:769: error: Tag section invalid
+Sun Jul 15 23:56:11 2012: ./script.html:771: error: Tag article invalid
+Sun Jul 15 23:56:11 2012: ./script.html:786: error: Tag article invalid
+Sun Jul 15 23:56:11 2012: ./script.html:809: error: Tag article invalid
+Sun Jul 15 23:56:11 2012: ./script.html:831: error: Tag section invalid
+Sun Jul 15 23:56:11 2012: ./script.html:835: error: Tag section invalid
+Sun Jul 15 23:56:11 2012: ./script.html:837: error: Tag article invalid
+Sun Jul 15 23:56:11 2012: ./script.html:858: error: Tag article invalid
+Sun Jul 15 23:56:11 2012: ./script.html:945: error: Tag section invalid
+Sun Jul 15 23:56:11 2012: ./script.html:947: error: Tag article invalid
+Sun Jul 15 23:56:11 2012: ./script.html:980: error: Tag article invalid
+Sun Jul 15 23:56:11 2012: ./script.html:1030: error: Tag article invalid
+Sun Jul 15 23:56:11 2012: ./script.html:1063: error: Tag section invalid
+Sun Jul 15 23:56:11 2012: ./script.html:1065: error: Tag article invalid
+Sun Jul 15 23:56:11 2012: ./script.html:1082: error: Tag article invalid
+Sun Jul 15 23:56:11 2012: ./script.html:1150: error: Tag section invalid
+Sun Jul 15 23:56:11 2012: ./script.html:1152: error: Tag article invalid
+Sun Jul 15 23:56:11 2012: ./script.html:1173: error: Tag article invalid
+Sun Jul 15 23:56:11 2012: ./script.html:1187: error: Tag article invalid
+Sun Jul 15 23:56:11 2012: ./script.html:1221: error: Tag article invalid
+Sun Jul 15 23:56:11 2012: ./script.html:1263: error: Tag section invalid
+Sun Jul 15 23:56:11 2012: ./script.html:1267: error: Tag section invalid
+Sun Jul 15 23:56:11 2012: Converting document...
+Sun Jul 15 23:56:12 2012: Resolving cross-references...
+Sun Jul 15 23:56:13 2012: finished: success
+Sun Jul 15 23:56:13 2012: ---- end

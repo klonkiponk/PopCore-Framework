@@ -30,5 +30,8 @@ if (!empty($_POST['action'])){
         case "newArticle":
             $content = db_createNewArticleForm();
             break;
+        case "search":
+            $content = db_search();
+            break;    
     }
 }                                                     

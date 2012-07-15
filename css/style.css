@@ -1122,7 +1122,7 @@ h2 {
   text-shadow: 1px 1px 0px #555555;
   padding-right: 150px; }
 
-h3, h4, h5, h6 {
+h3, h4, h5, h6, span.h3, span.h4 {
   font-size: 1.2em;
   font-weight: bold;
   text-shadow: 1px 1px 1px #f2f2f2;
@@ -1131,7 +1131,8 @@ h3, h4, h5, h6 {
   -webkit-box-shadow: white 0px 2px 2px;
   -moz-box-shadow: white 0px 2px 2px;
   box-shadow: white 0px 2px 2px;
-  border-bottom: 1px solid #ccc; }
+  border-bottom: 1px solid #ccc;
+  display: block; }
 
 /**************************************\
 		   CONTENT - BUTTONS
@@ -1735,6 +1736,112 @@ pre.print_r:after {
   -o-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg); }
+
+.homework {
+  border-radius: 5px;
+  margin-top: 1em;
+  padding-left: 0.8em;
+  -webkit-box-shadow: 1px 1px 5px #cccccc;
+  -moz-box-shadow: 1px 1px 5px #cccccc;
+  box-shadow: 1px 1px 5px #cccccc;
+  margin-right: 55px;
+  position: relative;
+  background-color: #d5ebfb;
+  border: 1px solid #89c3eb;
+  -webkit-box-shadow: inset 0px 1px 5px white, 0px 1px 2px #555555;
+  -moz-box-shadow: inset 0px 1px 5px white, 0px 1px 2px #555555;
+  box-shadow: inset 0px 1px 5px white, 0px 1px 2px #555555;
+  padding: 15px; }
+
+.homework span.h3 {
+  color: #378de5;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px white;
+  font-weight: bold;
+  font-size: 1.2em; }
+
+.homework:after {
+  position: absolute;
+  right: -50px;
+  top: 8px;
+  font-size: 2em;
+  line-height: 1em;
+  font-family: SymbolFont;
+  content: "A";
+  color: #89c3eb;
+  text-shadow: white 1px 1px 0px, 2px 2px 0px #d5ebfb, -1px -1px 0px #777777; }
+
+.homework:before {
+  content: ".";
+  display: none;
+  clear: both; }
+
+.notes {
+  background: url("../img/papier2.png") -1px -4px;
+  width: 100%;
+  display: block;
+  margin-top: 2em;
+  -webkit-box-shadow: 2px 2px 5px #999999, inset 2px 2px 5px #999999;
+  -moz-box-shadow: 2px 2px 5px #999999, inset 2px 2px 5px #999999;
+  box-shadow: 2px 2px 5px #999999, inset 2px 2px 5px #999999;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px; }
+
+.height10 {
+  height: 5em; }
+
+.height20 {
+  height: 10em; }
+
+.height50 {
+  height: 20em; }
+
+.height50 {
+  height: 30em; }
+
+.height70 {
+  height: 30em; }
+
+.height90 {
+  height: 30em; }
+
+.height100 {
+  height: 30em; }
+
+.information {
+  border-radius: 5px;
+  margin-top: 1em;
+  padding-left: 0.8em;
+  -webkit-box-shadow: 1px 1px 5px #cccccc;
+  -moz-box-shadow: 1px 1px 5px #cccccc;
+  box-shadow: 1px 1px 5px #cccccc;
+  margin-right: 55px;
+  position: relative;
+  background-color: #ffce73;
+  border: 1px solid #ffa500;
+  -webkit-box-shadow: inset 0px 1px 5px white, 0px 1px 2px #555555;
+  -moz-box-shadow: inset 0px 1px 5px white, 0px 1px 2px #555555;
+  box-shadow: inset 0px 1px 5px white, 0px 1px 2px #555555;
+  padding: 15px; }
+
+.information:after {
+  position: absolute;
+  right: -50px;
+  top: 10px;
+  font-size: 2em;
+  line-height: 1em;
+  font-family: SymbolFont;
+  content: "R";
+  color: #ffa500;
+  text-shadow: white 1px 1px 0px, 2px 2px 0px #ffce73, -1px -1px 0px #777777; }
+
+.information:before {
+  content: ".";
+  display: none;
+  clear: both; }
 
 /**************************************\
 	   STANDARD CONTENT ELEMENTS
