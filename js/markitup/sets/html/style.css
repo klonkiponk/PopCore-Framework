@@ -1,0 +1,61 @@
+/* -------------------------------------------------------------------
+// markItUp!
+// By Jay Salvat - http://markitup.jaysalvat.com/
+// ------------------------------------------------------------------*/
+.markItUp .markItUpButton1 a {
+	background-image:url(images/h4.png); 
+}
+.markItUp .markItUpButton2 a {
+	background-image:url(images/h5.png); 
+}
+.markItUp .markItUpButton3 a {
+	background-image:url(images/h6.png); 
+}
+.markItUp .markItUpButton4 a {
+	background-image:url(images/paragraph.png); 
+}
+
+.markItUp .markItUpButton5 a {
+	background-image:url(images/bold.png);
+}
+.markItUp .markItUpButton6 a {
+	background-image:url(images/italic.png);
+}
+.markItUp .markItUpButton7 a {
+	background-image:url(images/stroke.png);
+}
+
+.markItUp .markItUpButton8 a {
+	background-image:url(images/list-bullet.png);
+}
+.markItUp .markItUpButton9 a {
+	background-image:url(images/list-numeric.png);
+}
+.markItUp .markItUpButton10 a {
+	background-image:url(images/list-item.png);
+}
+
+.markItUp .markItUpButton11 a {
+	background-image:url(images/picture.png); 
+}
+.markItUp .markItUpButton12 a {
+	background-image:url(images/link.png);
+}
+.markItUp .markItUpButton13 a {
+	background: rgb(184,225,252);
+background: -moz-linear-gradient(top,  rgba(184,225,252,1) 0%, rgba(169,210,243,1) 10%, rgba(144,186,228,1) 25%, rgba(144,188,234,1) 37%, rgba(144,191,240,1) 50%, rgba(107,168,229,1) 51%, rgba(162,218,245,1) 83%, rgba(189,243,253,1) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(184,225,252,1)), color-stop(10%,rgba(169,210,243,1)), color-stop(25%,rgba(144,186,228,1)), color-stop(37%,rgba(144,188,234,1)), color-stop(50%,rgba(144,191,240,1)), color-stop(51%,rgba(107,168,229,1)), color-stop(83%,rgba(162,218,245,1)), color-stop(100%,rgba(189,243,253,1)));
+background: -webkit-linear-gradient(top,  rgba(184,225,252,1) 0%,rgba(169,210,243,1) 10%,rgba(144,186,228,1) 25%,rgba(144,188,234,1) 37%,rgba(144,191,240,1) 50%,rgba(107,168,229,1) 51%,rgba(162,218,245,1) 83%,rgba(189,243,253,1) 100%);
+background: -o-linear-gradient(top,  rgba(184,225,252,1) 0%,rgba(169,210,243,1) 10%,rgba(144,186,228,1) 25%,rgba(144,188,234,1) 37%,rgba(144,191,240,1) 50%,rgba(107,168,229,1) 51%,rgba(162,218,245,1) 83%,rgba(189,243,253,1) 100%);
+background: -ms-linear-gradient(top,  rgba(184,225,252,1) 0%,rgba(169,210,243,1) 10%,rgba(144,186,228,1) 25%,rgba(144,188,234,1) 37%,rgba(144,191,240,1) 50%,rgba(107,168,229,1) 51%,rgba(162,218,245,1) 83%,rgba(189,243,253,1) 100%);
+background: linear-gradient(to bottom,  rgba(184,225,252,1) 0%,rgba(169,210,243,1) 10%,rgba(144,186,228,1) 25%,rgba(144,188,234,1) 37%,rgba(144,191,240,1) 50%,rgba(107,168,229,1) 51%,rgba(162,218,245,1) 83%,rgba(189,243,253,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b8e1fc', endColorstr='#bdf3fd',GradientType=0 );
+
+}
+
+.markItUp .clean a {
+	background-image:url(images/clean.png);
+}
+.markItUp .preview a {
+	background-image:url(images/preview.png);
+}
