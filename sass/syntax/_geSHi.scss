@@ -1,0 +1,282 @@
+/**************************************\
+GESHI - (CODE WITH SYNTAX HIGHLIGHTING)
+\**************************************/
+
+
+/************\
+geSHi Wrapper
+\************/
+div.geshi {
+	overflow:hidden;
+	position:relative;
+	margin-top:$blockMargin;
+}
+
+/*********************************************\
+For Each Programming Language another table.XXX
+\*********************************************/
+
+table.html5 {
+	&:after {
+		position: absolute;
+		top:20px;
+		right: -45px;
+		width: 150px;
+		height: 25px;
+		line-height: 25px;
+		font-size: 1.2em;
+		font-weight: bold;
+		color: #fff;
+
+		//    CHANGE TO RIGHT LANGUAGE      \\
+		content:"HTML";
+
+
+
+		@include text-shadow(#777 1px 1px 1px);
+		background-color: rgb(255,183,107);
+		@include filter-gradient(#ffb76b, #ff7f04, vertical);
+		@include background-image(linear-gradient(top,  rgba(255,183,107,1) 0%,rgba(255,167,61,1) 50%,rgba(255,124,0,1) 51%,rgba(255,127,4,1) 100%));
+		text-align: center;
+		@include box-shadow(0px 1px 5px #555);
+		-webkit-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-o-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+	overflow:none;
+	display:block;
+	background:#fff;
+	@include border-radius(5px);
+	@include box-shadow(inset -2px -2px 5px #999, inset 2px 2px 5px #999);
+	padding-top:3px;
+	padding-bottom:3px;
+	position:relative;
+	margin-top: 0px;
+	td.ln {
+		font-weight: normal;
+		padding:0px;
+		padding-right: 3px;
+		text-align: right;
+		border-right:1px solid silver;
+		margin:0px;
+		//background:#eee;
+		@include roundedLeft;
+		color:#999;
+	}
+	pre {
+		margin:0px;
+	}
+	.imp {
+		font-weight: bold; color: orange;
+	}
+	.kw2 {     //TAG    	 
+		color:rgba(65,105,225, 1.0);
+		font-weight: bold;
+	}
+	.kw3 {      //attribute
+		color:rgba(65,105,225, 1.0);
+		font-style:italic;
+	}
+	.es0 {
+		color:rgba(65,105,225, 1.0);
+		font-weight: bold;
+	}
+	.br0 {
+		color:rgba(65,105,225, 1.0);
+	}
+	.sy0 { //ZEICHEN
+		color:rgba(65,105,225, 0.7);
+	}
+	.st0 {     //VALUE
+		color:green;
+	 }
+	.nu0 {color: red;
+		
+	}
+	.sc-2 {color: red;
+		
+	}
+	.sc-1 {color: red; font-style: italic;
+		
+	}
+	.sc0 {color: red;
+		
+	}
+	.sc1 {color: red;
+		
+	}
+	.sc2 { //BRACKETS
+		color:rgba(65,105,225, 0.7);
+	}
+}
+
+table.css {
+	&:after {
+		position: absolute;
+		top:20px;
+		right: -45px;
+		width: 150px;
+		height: 25px;
+		line-height: 25px;
+		font-size: 1.2em;
+		font-weight: bold;
+		color: #fff;
+
+		//    CHANGE TO RIGHT LANGUAGE      \\
+		content:"CSS";
+
+
+
+		@include text-shadow(#777 1px 1px 1px);
+		background-color: rgb(255,183,107);
+		@include filter-gradient(#ffb76b, #ff7f04, vertical);
+		@include background-image(linear-gradient(top,  rgba(255,183,107,1) 0%,rgba(255,167,61,1) 50%,rgba(255,124,0,1) 51%,rgba(255,127,4,1) 100%));
+		text-align: center;
+		@include box-shadow(0px 1px 5px #555);
+		-webkit-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-o-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+	overflow:none;
+	display:block;
+	background:#fff;
+	@include border-radius(5px);
+	@include box-shadow(inset -2px -2px 5px #999, inset 2px 2px 5px #999);
+	padding-top:3px;
+	padding-bottom:3px;
+	position:relative;
+	margin-top: 0px;
+	td.ln {
+		font-weight: normal;
+		padding:0px;
+		padding-right: 3px;
+		text-align: right;
+		border-right:1px solid silver;
+		margin:0px;
+		//background:#eee;
+		@include roundedLeft;
+		color:#999;
+	}
+	pre {
+		margin:0px;
+	}
+	.imp {font-weight: bold; color: red;}
+	.kw1 {
+		color:rgba(65,105,225, 0.7);
+		font-weight: bold;
+	}
+	.kw2 { //VALUE
+		color: green;
+	}
+	.co1 {color: orange;}
+	.co2 {color: fuchsia; font-style: italic;}
+	.coMULTI {color: #808080; font-style: italic;}
+	.es0 {color: fuchsia; font-weight: bold;}
+	.es2 {color: fuchsia; font-weight: bold;}
+	.br0 { //BRACKETS
+		color: black;}
+	.sy0 { //SEMIKOLON
+		color: black;}
+	.st0 {color: black;}
+	.nu0 { //ColorValues rgba
+		color: rgb(197,6,11);}
+	.re0 {color: black;}
+	.re1 { //classes
+		color: black;
+		font-style:italic;}
+	.re2 { //font Value
+		color: black;}
+	.re3 { //Pixel Value
+		color: blue;}
+}
+
+table.php {
+	&:after {
+		position: absolute;
+		top:20px;
+		right: -45px;
+		width: 150px;
+		height: 25px;
+		line-height: 25px;
+		font-size: 1.2em;
+		font-weight: bold;
+		color: #fff;
+
+		//    CHANGE TO RIGHT LANGUAGE      \\
+		content:"PHP";
+
+
+
+		@include text-shadow(#777 1px 1px 1px);
+		background-color: rgb(255,183,107);
+		@include filter-gradient(#ffb76b, #ff7f04, vertical);
+		@include background-image(linear-gradient(top,  rgba(255,183,107,1) 0%,rgba(255,167,61,1) 50%,rgba(255,124,0,1) 51%,rgba(255,127,4,1) 100%));
+		text-align: center;
+		@include box-shadow(0px 1px 5px #555);
+		-webkit-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-o-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+	overflow:none;
+	display:block;
+	background:#fff;
+	@include border-radius(5px);
+	@include box-shadow(inset -2px -2px 5px #999, inset 2px 2px 5px #999);
+	padding-top:3px;
+	padding-bottom:3px;
+	position:relative;
+	margin-top: 0px;
+	td.ln {
+		font-weight: normal;
+		padding:0px;
+		padding-right: 3px;
+		text-align: right;
+		border-right:1px solid silver;
+		margin:0px;
+		//background:#eee;
+		@include roundedLeft;
+		color:#999;
+	}
+	pre {
+		margin:0px;
+	}
+	a {
+		color:rgb(60,76,114);
+	}
+	td.de1 pre.de1 {
+	    color:#555;
+	} 	
+	.br0 {
+		color:black;
+	}
+	.re0 { //Variable
+		color:rgb(49,132,149);
+	}
+	.sy0,.sy1 {
+		color:blue;
+	}
+	.st0 {
+		color:rgb(3,106,7);
+	}
+	.nu0 { //WERT einer Variable
+
+	}
+	.co1,.co2,.coMULTI {
+		color:rgb(255,127,0);
+	}
+	.kw1 {
+		color:blue;
+	}
+	.kw2 {
+		color:blue;
+	}
+	.st_h {
+	    color:green;
+	}      
+}

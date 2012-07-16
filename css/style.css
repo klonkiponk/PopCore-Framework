@@ -1782,390 +1782,286 @@ pre.print_r:after {
 /**************************************\
 GESHI - (CODE WITH SYNTAX HIGHLIGHTING)
 \**************************************/
-pre.php:after, pre.html5:after, pre.css:after {
-  position: absolute;
-  top: 20px;
-  right: -50px;
-  width: 150px;
-  height: 25px;
-  line-height: 25px;
-  font-size: 1.2em;
-  font-weight: bold;
-  color: #fff;
-  content: "CODE";
-  text-shadow: #999999 1px 1px 1px;
-  background: #ffa84c;
-  background: -moz-linear-gradient(top, #ffa84c 0%, #ff7b0d 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffa84c), color-stop(100%, #ff7b0d));
-  background: -webkit-linear-gradient(top, #ffa84c 0%, #ff7b0d 100%);
-  background: -o-linear-gradient(top, #ffa84c 0%, #ff7b0d 100%);
-  background: -ms-linear-gradient(top, #ffa84c 0%, #ff7b0d 100%);
-  background: linear-gradient(top, #ffa84c 0%, #ff7b0d 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffa84c', endColorstr='#ff7b0d',GradientType=0 );
-  text-align: center;
-  -webkit-box-shadow: 0 1px 5px #444;
-  -moz-box-shadow: 0 1px 5px #444;
-  box-shadow: 0 1px 5px #444;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg); }
-
-.geshi pre {
-  background-color: white;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -o-border-radius: 2px;
-  border-radius: 2px;
-  -webkit-box-shadow: inset 2px 2px 2px #cccccc, #cccccc 1px 1px 2px;
-  -moz-box-shadow: inset 2px 2px 2px #cccccc, #cccccc 1px 1px 2px;
-  box-shadow: inset 2px 2px 2px #cccccc, #cccccc 1px 1px 2px;
-  min-height: 55px;
-  padding: 5px 10px 5px 5px;
+/************\
+geSHi Wrapper
+\************/
+div.geshi {
   overflow: hidden;
-  border: 1px solid #ccc;
-  position: relative; }
-  .geshi pre ol {
-    list-style-type: decimal; }
-  .geshi pre li {
-    border-left: 1px solid silver;
-    padding-left: 5px; }
-  .geshi pre.php {
-    color: #555; }
-    .geshi pre.php:after {
-      content: "PHP"; }
-    .geshi pre.php a {
-      color: #3c4c72;
-      color: blue; }
-    .geshi pre.php .de1 {
-      color: #555; }
-    .geshi pre.php .br0 {
-      color: black; }
-    .geshi pre.php .re0 {
-      color: #318495; }
-    .geshi pre.php .sy0, .geshi pre.php .sy1 {
-      color: blue; }
-    .geshi pre.php .st0 {
-      color: #036a07; }
-    .geshi pre.php .co1, .geshi pre.php .co2, .geshi pre.php .coMULTI {
-      color: #ff7f00; }
-    .geshi pre.php .kw1 {
-      color: blue; }
-    .geshi pre.php .kw2 {
-      color: blue; }
-    .geshi pre.php .st_h {
-      color: green; }
-  .geshi pre.html5:after {
-    content: "HTML5"; }
-  .geshi pre.html5 .imp {
+  position: relative;
+  margin-top: 2em; }
+
+/*********************************************\
+For Each Programming Language another table.XXX
+\*********************************************/
+table.html5 {
+  overflow: none;
+  display: block;
+  background: #fff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: inset -2px -2px 5px #999999, inset 2px 2px 5px #999999;
+  -moz-box-shadow: inset -2px -2px 5px #999999, inset 2px 2px 5px #999999;
+  box-shadow: inset -2px -2px 5px #999999, inset 2px 2px 5px #999999;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  position: relative;
+  margin-top: 0px; }
+  table.html5:after {
+    position: absolute;
+    top: 20px;
+    right: -45px;
+    width: 150px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+    content: "HTML";
+    text-shadow: #777777 1px 1px 1px;
+    background-color: #ffb76b;
+    *zoom: 1;
+    filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFFFB76B', endColorstr='#FFFF7F04');
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffb76b), color-stop(50%, #ffa73d), color-stop(51%, #ff7c00), color-stop(100%, #ff7f04));
+    background-image: -webkit-linear-gradient(top, #ffb76b 0%, #ffa73d 50%, #ff7c00 51%, #ff7f04 100%);
+    background-image: -moz-linear-gradient(top, #ffb76b 0%, #ffa73d 50%, #ff7c00 51%, #ff7f04 100%);
+    background-image: -o-linear-gradient(top, #ffb76b 0%, #ffa73d 50%, #ff7c00 51%, #ff7f04 100%);
+    background-image: -ms-linear-gradient(top, #ffb76b 0%, #ffa73d 50%, #ff7c00 51%, #ff7f04 100%);
+    background-image: linear-gradient(top, #ffb76b 0%, #ffa73d 50%, #ff7c00 51%, #ff7f04 100%);
+    text-align: center;
+    -webkit-box-shadow: 0px 1px 5px #555555;
+    -moz-box-shadow: 0px 1px 5px #555555;
+    box-shadow: 0px 1px 5px #555555;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  table.html5 td.ln {
+    font-weight: normal;
+    padding: 0px;
+    padding-right: 3px;
+    text-align: right;
+    border-right: 1px solid silver;
+    margin: 0px;
+    border-top-left-radius: 4px;
+    -moz-border-radius-topleft: 4px;
+    border-bottom-left-radius: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    color: #999; }
+  table.html5 pre {
+    margin: 0px; }
+  table.html5 .imp {
     font-weight: bold;
     color: orange; }
-  .geshi pre.html5 .kw2 {
+  table.html5 .kw2 {
     color: #4169e1;
     font-weight: bold; }
-  .geshi pre.html5 .kw3 {
+  table.html5 .kw3 {
     color: #4169e1;
     font-style: italic; }
-  .geshi pre.html5 .es0 {
+  table.html5 .es0 {
     color: #4169e1;
     font-weight: bold; }
-  .geshi pre.html5 .br0 {
+  table.html5 .br0 {
     color: #4169e1; }
-  .geshi pre.html5 .sy0 {
+  table.html5 .sy0 {
     color: rgba(65, 105, 225, 0.7); }
-  .geshi pre.html5 .st0 {
+  table.html5 .st0 {
     color: green; }
-  .geshi pre.html5 .nu0 {
+  table.html5 .nu0 {
     color: red; }
-  .geshi pre.html5 .sc-2 {
+  table.html5 .sc-2 {
     color: red; }
-  .geshi pre.html5 .sc-1 {
+  table.html5 .sc-1 {
     color: red;
     font-style: italic; }
-  .geshi pre.html5 .sc0 {
+  table.html5 .sc0 {
     color: red; }
-  .geshi pre.html5 .sc1 {
+  table.html5 .sc1 {
     color: red; }
-  .geshi pre.html5 .sc2 {
+  table.html5 .sc2 {
     color: rgba(65, 105, 225, 0.7); }
-  .geshi pre.html5 span.xtra {
-    display: block; }
-  .geshi pre.css {
-    color: black; }
-    .geshi pre.css:after {
-      content: "SASS"; }
-    .geshi pre.css .imp {
-      font-weight: bold;
-      color: red; }
-    .geshi pre.css .kw1 {
-      color: rgba(65, 105, 225, 0.7);
-      font-weight: bold; }
-    .geshi pre.css .kw2 {
-      color: green; }
-    .geshi pre.css .co1 {
-      color: orange; }
-    .geshi pre.css .co2 {
-      color: fuchsia;
-      font-style: italic; }
-    .geshi pre.css .coMULTI {
-      color: #808080;
-      font-style: italic; }
-    .geshi pre.css .es0 {
-      color: fuchsia;
-      font-weight: bold; }
-    .geshi pre.css .es2 {
-      color: fuchsia;
-      font-weight: bold; }
-    .geshi pre.css .br0 {
-      color: black; }
-    .geshi pre.css .sy0 {
-      color: black; }
-    .geshi pre.css .st0 {
-      color: black; }
-    .geshi pre.css .nu0 {
-      color: #c5060b; }
-    .geshi pre.css .re0 {
-      color: black; }
-    .geshi pre.css .re1 {
-      color: black;
-      font-style: italic; }
-    .geshi pre.css .re2 {
-      color: black; }
-    .geshi pre.css .re3 {
-      color: blue; }
-    .geshi pre.css span.xtra {
-      display: block; }
 
-/**************************************\
-			   CODEMIRROR
-\**************************************/
-.CodeMirror {
-  line-height: 1em;
+table.css {
+  overflow: none;
+  display: block;
+  background: #fff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: inset -2px -2px 5px #999999, inset 2px 2px 5px #999999;
+  -moz-box-shadow: inset -2px -2px 5px #999999, inset 2px 2px 5px #999999;
+  box-shadow: inset -2px -2px 5px #999999, inset 2px 2px 5px #999999;
   padding-top: 3px;
-  padding-left: 3px;
-  text-align: left;
-  min-height: 75px;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -o-border-radius: 2px;
-  border-radius: 2px;
-  -webkit-box-shadow: inset 2px 2px 2px #cccccc, #cccccc 1px 1px 2px;
-  -moz-box-shadow: inset 2px 2px 2px #cccccc, #cccccc 1px 1px 2px;
-  box-shadow: inset 2px 2px 2px #cccccc, #cccccc 1px 1px 2px;
-  border: 1px solid #ccc;
-  background: white;
+  padding-bottom: 3px;
   position: relative;
-  overflow: hidden; }
+  margin-top: 0px; }
+  table.css:after {
+    position: absolute;
+    top: 20px;
+    right: -45px;
+    width: 150px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+    content: "CSS";
+    text-shadow: #777777 1px 1px 1px;
+    background-color: #ffb76b;
+    *zoom: 1;
+    filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFFFB76B', endColorstr='#FFFF7F04');
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffb76b), color-stop(50%, #ffa73d), color-stop(51%, #ff7c00), color-stop(100%, #ff7f04));
+    background-image: -webkit-linear-gradient(top, #ffb76b 0%, #ffa73d 50%, #ff7c00 51%, #ff7f04 100%);
+    background-image: -moz-linear-gradient(top, #ffb76b 0%, #ffa73d 50%, #ff7c00 51%, #ff7f04 100%);
+    background-image: -o-linear-gradient(top, #ffb76b 0%, #ffa73d 50%, #ff7c00 51%, #ff7f04 100%);
+    background-image: -ms-linear-gradient(top, #ffb76b 0%, #ffa73d 50%, #ff7c00 51%, #ff7f04 100%);
+    background-image: linear-gradient(top, #ffb76b 0%, #ffa73d 50%, #ff7c00 51%, #ff7f04 100%);
+    text-align: center;
+    -webkit-box-shadow: 0px 1px 5px #555555;
+    -moz-box-shadow: 0px 1px 5px #555555;
+    box-shadow: 0px 1px 5px #555555;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  table.css td.ln {
+    font-weight: normal;
+    padding: 0px;
+    padding-right: 3px;
+    text-align: right;
+    border-right: 1px solid silver;
+    margin: 0px;
+    border-top-left-radius: 4px;
+    -moz-border-radius-topleft: 4px;
+    border-bottom-left-radius: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    color: #999; }
+  table.css pre {
+    margin: 0px; }
+  table.css .imp {
+    font-weight: bold;
+    color: red; }
+  table.css .kw1 {
+    color: rgba(65, 105, 225, 0.7);
+    font-weight: bold; }
+  table.css .kw2 {
+    color: green; }
+  table.css .co1 {
+    color: orange; }
+  table.css .co2 {
+    color: fuchsia;
+    font-style: italic; }
+  table.css .coMULTI {
+    color: #808080;
+    font-style: italic; }
+  table.css .es0 {
+    color: fuchsia;
+    font-weight: bold; }
+  table.css .es2 {
+    color: fuchsia;
+    font-weight: bold; }
+  table.css .br0 {
+    color: black; }
+  table.css .sy0 {
+    color: black; }
+  table.css .st0 {
+    color: black; }
+  table.css .nu0 {
+    color: #c5060b; }
+  table.css .re0 {
+    color: black; }
+  table.css .re1 {
+    color: black;
+    font-style: italic; }
+  table.css .re2 {
+    color: black; }
+  table.css .re3 {
+    color: blue; }
 
-.CodeMirror:after {
-  position: absolute;
-  top: 20px;
-  right: -50px;
-  width: 150px;
-  height: 25px;
-  line-height: 25px;
-  font-size: 1.2em;
-  font-weight: bold;
-  color: #fff;
-  content: "CODE";
-  text-shadow: #999999 1px 1px 1px;
-  background: #ffa84c;
-  background: -moz-linear-gradient(top, #ffa84c 0%, #ff7b0d 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffa84c), color-stop(100%, #ff7b0d));
-  background: -webkit-linear-gradient(top, #ffa84c 0%, #ff7b0d 100%);
-  background: -o-linear-gradient(top, #ffa84c 0%, #ff7b0d 100%);
-  background: -ms-linear-gradient(top, #ffa84c 0%, #ff7b0d 100%);
-  background: linear-gradient(top, #ffa84c 0%, #ff7b0d 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffa84c', endColorstr='#ff7b0d',GradientType=0 );
-  text-align: center;
-  -webkit-box-shadow: 0 1px 5px #999999;
-  -moz-box-shadow: 0 1px 5px #999999;
-  box-shadow: 0 1px 5px #999999;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg); }
-
-.CodeMirror-scroll {
-  overflow: auto;
+table.php {
+  overflow: none;
+  display: block;
+  background: #fff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: inset -2px -2px 5px #999999, inset 2px 2px 5px #999999;
+  -moz-box-shadow: inset -2px -2px 5px #999999, inset 2px 2px 5px #999999;
+  box-shadow: inset -2px -2px 5px #999999, inset 2px 2px 5px #999999;
+  padding-top: 3px;
+  padding-bottom: 3px;
   position: relative;
-  outline: none; }
-
-.CodeMirror-gutter {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 10;
-  background-color: #f7f7f7;
-  border-right: 1px solid #eee;
-  min-width: 2em;
-  height: 100%; }
-
-.CodeMirror-gutter-text {
-  color: #aaa;
-  text-align: right;
-  padding: .4em .2em .4em .4em;
-  white-space: pre !important; }
-
-.CodeMirror-lines {
-  padding: .4em;
-  white-space: pre; }
-
-.CodeMirror pre {
-  -moz-border-radius: 0;
-  -webkit-border-radius: 0;
-  -o-border-radius: 0;
-  border-radius: 0;
-  border-width: 0;
-  margin: 0;
-  padding: 0;
-  background: transparent;
-  font-size: 14px;
-  padding: 0;
-  margin: 0;
-  white-space: pre;
-  word-wrap: normal;
-  line-height: inherit;
-  color: inherit; }
-
-.CodeMirror-wrap pre {
-  word-wrap: break-word;
-  white-space: pre-wrap;
-  word-break: normal; }
-
-.CodeMirror-wrap .CodeMirror-scroll {
-  overflow-x: hidden; }
-
-.CodeMirror textarea {
-  outline: none !important; }
-
-.CodeMirror pre.CodeMirror-cursor {
-  z-index: 10;
-  position: absolute;
-  visibility: hidden;
-  border-left: 1px solid black;
-  border-right: none;
-  width: 0; }
-
-.cm-keymap-fat-cursor pre.CodeMirror-cursor {
-  width: auto;
-  border: 0;
-  background: transparent;
-  background: rgba(0, 200, 0, 0.4);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#6600c800, endColorstr=#4c00c800); }
-
-/* Kludge to turn off filter in ie9+, which also accepts rgba */
-.cm-keymap-fat-cursor pre.CodeMirror-cursor:not(#nonsense_id) {
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false); }
-
-.CodeMirror-focused pre.CodeMirror-cursor {
-  visibility: visible; }
-
-div.CodeMirror-selected {
-  background: #d9d9d9; }
-
-.CodeMirror-focused div.CodeMirror-selected {
-  background: #d7d4f0; }
-
-.CodeMirror-searching {
-  background: #ffa;
-  background: rgba(255, 255, 0, 0.4); }
-
-/* Default theme */
-.cm-s-default span.cm-keyword {
-  color: #4169e1;
-  font-weight: bold; }
-
-.cm-s-default span.cm-atom {
-  color: blue; }
-
-.cm-s-default span.cm-number {
-  color: green; }
-
-.cm-s-default span.cm-def {
-  color: fuchsia; }
-
-.cm-s-default span.cm-variable {
-  color: #6666cc; }
-
-.cm-s-default span.cm-variable-2 {
-  color: teal; }
-
-.cm-s-default span.cm-variable-3 {
-  color: fuchsia; }
-
-.cm-s-default span.cm-property {
-  color: fuchsia; }
-
-.cm-s-default span.cm-operator {
-  color: blue; }
-
-.cm-s-default span.cm-comment {
-  color: orange; }
-
-.cm-s-default span.cm-string {
-  color: green; }
-
-.cm-s-default span.cm-string-2 {
-  color: fuchsia; }
-
-.cm-s-default span.cm-meta {
-  color: gray; }
-
-.cm-s-default span.cm-error {
-  color: fuchsia; }
-
-.cm-s-default span.cm-qualifier {
-  color: fuchsia; }
-
-.cm-s-default span.cm-builtin {
-  color: fuchsia; }
-
-.cm-s-default span.cm-bracket {
-  color: fuchsia; }
-
-.cm-s-default span.cm-tag {
-  color: #4169e1;
-  font-style: italic; }
-
-.cm-s-default span.cm-attribute {
-  color: blue; }
-
-.cm-s-default span.cm-header {
-  color: fuchsia; }
-
-.cm-s-default span.cm-quote {
-  color: fuchsia; }
-
-.cm-s-default span.cm-hr {
-  color: fuchsia; }
-
-.cm-s-default span.cm-link {
-  color: fuchsia; }
-
-.cm-s-default span.cm-word {
-  color: #555;
-  font-weight: bold; }
-
-span.cm-header, span.cm-strong {
-  font-weight: bold; }
-
-span.cm-em {
-  font-style: italic; }
-
-span.cm-emstrong {
-  font-style: italic;
-  font-weight: bold; }
-
-span.cm-link {
-  text-decoration: underline; }
-
-div.CodeMirror span.CodeMirror-matchingbracket {
-  color: fuchsia; }
-
-div.CodeMirror span.CodeMirror-nonmatchingbracket {
-  color: #f22; }
+  margin-top: 0px; }
+  table.php:after {
+    position: absolute;
+    top: 20px;
+    right: -45px;
+    width: 150px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+    content: "PHP";
+    text-shadow: #777777 1px 1px 1px;
+    background-color: #ffb76b;
+    *zoom: 1;
+    filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFFFB76B', endColorstr='#FFFF7F04');
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffb76b), color-stop(50%, #ffa73d), color-stop(51%, #ff7c00), color-stop(100%, #ff7f04));
+    background-image: -webkit-linear-gradient(top, #ffb76b 0%, #ffa73d 50%, #ff7c00 51%, #ff7f04 100%);
+    background-image: -moz-linear-gradient(top, #ffb76b 0%, #ffa73d 50%, #ff7c00 51%, #ff7f04 100%);
+    background-image: -o-linear-gradient(top, #ffb76b 0%, #ffa73d 50%, #ff7c00 51%, #ff7f04 100%);
+    background-image: -ms-linear-gradient(top, #ffb76b 0%, #ffa73d 50%, #ff7c00 51%, #ff7f04 100%);
+    background-image: linear-gradient(top, #ffb76b 0%, #ffa73d 50%, #ff7c00 51%, #ff7f04 100%);
+    text-align: center;
+    -webkit-box-shadow: 0px 1px 5px #555555;
+    -moz-box-shadow: 0px 1px 5px #555555;
+    box-shadow: 0px 1px 5px #555555;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  table.php td.ln {
+    font-weight: normal;
+    padding: 0px;
+    padding-right: 3px;
+    text-align: right;
+    border-right: 1px solid silver;
+    margin: 0px;
+    border-top-left-radius: 4px;
+    -moz-border-radius-topleft: 4px;
+    border-bottom-left-radius: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    color: #999; }
+  table.php pre {
+    margin: 0px; }
+  table.php a {
+    color: #3c4c72; }
+  table.php td.de1 pre.de1 {
+    color: #555; }
+  table.php .br0 {
+    color: black; }
+  table.php .re0 {
+    color: #318495; }
+  table.php .sy0, table.php .sy1 {
+    color: blue; }
+  table.php .st0 {
+    color: #036a07; }
+  table.php .co1, table.php .co2, table.php .coMULTI {
+    color: #ff7f00; }
+  table.php .kw1 {
+    color: blue; }
+  table.php .kw2 {
+    color: blue; }
+  table.php .st_h {
+    color: green; }

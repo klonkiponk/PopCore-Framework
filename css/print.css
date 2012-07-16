@@ -156,11 +156,9 @@ caption {
 
 table {
   margin-bottom: 15px; }
-  table td {
-    border: 1px solid #6b90d4; }
-  table th {
-    border: 1px solid #4577d4;
-    background-color: #ffce73; }
+
+pre {
+  font-family: UbuntuMonoRegular; }
 
 /**************************************\
 			  TITLE PAGE
@@ -288,9 +286,6 @@ div.chapter {
 .chapter h3:before {
   content: counter(chapter) "." counter(section) "." counter(subSection) " "; }
 
-.chapter h4:before {
-  content: counter(chapter) "." counter(section) "." counter(subSection) "." counter(paragraph) " "; }
-
 caption:after {
   content: " " counter(chapter) "." counter(caption); }
 
@@ -332,17 +327,15 @@ h4 {
 			   IMAGES
 \**************************************/
 img {
-  border: 3px solid #1047aa;
-  -webkit-box-shadow: 1px 1px 5px #29477f;
-  -moz-box-shadow: 1px 1px 5px #29477f;
-  box-shadow: 1px 1px 5px #29477f;
-  width: 350px; }
+  width: 250px;
+  margin: 0px auto;
+  display: block; }
 
 /**************************************\
 			   BOXES
 \**************************************/
 .homework {
-  background-color: #6b90d4;
+  background-color: #a0e1ff;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
@@ -362,181 +355,197 @@ img {
   -moz-box-shadow: 2px 2px 5px #999999;
   box-shadow: 2px 2px 5px #999999; }
 
-.height10 {
+.h10 {
   height: 5em; }
 
-.height20 {
+.h20 {
   height: 10em; }
 
-.height50 {
+.h30 {
+  height: 15em; }
+
+.h40 {
   height: 20em; }
 
-.height50 {
-  height: 50em; }
+.h50 {
+  height: 25em; }
 
-.height70 {
-  height: 70em; }
+.h60 {
+  height: 30em; }
 
-.height90 {
-  height: 90em; }
-
-.height100 {
-  height: 100em; }
+.h70 {
+  height: 35em; }
 
 /**************************************\
 GESHI - (CODE WITH SYNTAX HIGHLIGHTING)
 \**************************************/
-.geshi pre {
-  font-family: UbuntuMonoRegular;
-  background-color: white;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -o-border-radius: 2px;
-  border-radius: 2px;
-  -webkit-box-shadow: inset 2px 2px 2px #cccccc, #cccccc 1px 1px 2px;
-  -moz-box-shadow: inset 2px 2px 2px #cccccc, #cccccc 1px 1px 2px;
-  box-shadow: inset 2px 2px 2px #cccccc, #cccccc 1px 1px 2px;
-  min-height: 55px;
-  padding: 5px 10px 5px 0px;
+/************\
+geSHi Wrapper
+\************/
+div.geshi {
   overflow: hidden;
-  border: 1px solid #ccc;
   position: relative;
-  font-size: 13px; }
-  .geshi pre ol {
-    list-style: decimal;
-    margin-left: 30px;
+  margin-top: 0px;
+  font-size: 0.9em; }
+  div.geshi table {
+    border: 1px solid gray;
+    overflow: none;
+    display: block;
+    background: #fff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    position: relative;
     margin-top: 0px;
-    margin-bottom: 0px; }
-  .geshi pre li {
-    border-left: 1px solid silver;
-    padding-left: 5px;
-    margin-left: 0px; }
-  .geshi pre:after {
-    font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;
-    position: absolute;
-    top: 20px;
-    right: -50px;
-    width: 150px;
-    height: 25px;
-    line-height: 25px;
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #fff;
-    content: "CODE";
-    background: orange;
-    text-align: left;
-    padding-left: 45px;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box; }
-  .geshi pre.php {
-    color: #555; }
-    .geshi pre.php:after {
-      content: "PHP"; }
-    .geshi pre.php a {
-      color: #3c4c72;
-      color: blue; }
-    .geshi pre.php .de1 {
-      color: #555; }
-    .geshi pre.php .br0 {
-      color: black; }
-    .geshi pre.php .re0 {
-      color: #318495; }
-    .geshi pre.php .sy0, .geshi pre.php .sy1 {
-      color: blue; }
-    .geshi pre.php .st0 {
-      color: #036a07; }
-    .geshi pre.php .co1, .geshi pre.php .co2, .geshi pre.php .coMULTI {
-      color: #ff7f00; }
-    .geshi pre.php .kw1 {
-      color: blue; }
-    .geshi pre.php .kw2 {
-      color: blue; }
-    .geshi pre.php .st_h {
-      color: green; }
-  .geshi pre.html5:after {
-    content: "HTML5"; }
-  .geshi pre.html5 .imp {
-    font-weight: bold;
-    color: orange; }
-  .geshi pre.html5 .kw2 {
-    color: #4169e1;
-    font-weight: bold; }
-  .geshi pre.html5 .kw3 {
-    color: #4169e1;
-    font-style: italic; }
-  .geshi pre.html5 .es0 {
-    color: #4169e1;
-    font-weight: bold; }
-  .geshi pre.html5 .br0 {
-    color: #4169e1; }
-  .geshi pre.html5 .sy0 {
-    color: rgba(65, 105, 225, 0.7); }
-  .geshi pre.html5 .st0 {
-    color: green; }
-  .geshi pre.html5 .nu0 {
-    color: red; }
-  .geshi pre.html5 .sc-2 {
-    color: red; }
-  .geshi pre.html5 .sc-1 {
-    color: red;
-    font-style: italic; }
-  .geshi pre.html5 .sc0 {
-    color: red; }
-  .geshi pre.html5 .sc1 {
-    color: red; }
-  .geshi pre.html5 .sc2 {
-    color: rgba(65, 105, 225, 0.7); }
-  .geshi pre.html5 span.xtra {
-    display: block; }
-  .geshi pre.css {
-    color: black; }
-    .geshi pre.css:after {
-      content: "  CSS"; }
-    .geshi pre.css .imp {
+    min-height: 85px;
+    overflow: scroll; }
+    div.geshi table td.ln {
+      font-weight: normal;
+      padding: 0px;
+      padding-right: 3px;
+      text-align: right;
+      border-right: 1px solid silver;
+      margin: 0px;
+      color: #999;
+      width: 25px; }
+    div.geshi table td:nth-child(2) {
+      padding-left: 10px; }
+    div.geshi table:after {
+      position: absolute;
+      top: 20px;
+      right: -45px;
+      width: 150px;
+      height: 25px;
+      line-height: 25px;
+      font-size: 1.2em;
       font-weight: bold;
-      color: red; }
-    .geshi pre.css .kw1 {
-      color: rgba(65, 105, 225, 0.7);
-      font-weight: bold; }
-    .geshi pre.css .kw2 {
-      color: green; }
-    .geshi pre.css .co1 {
-      color: orange; }
-    .geshi pre.css .co2 {
-      color: fuchsia;
-      font-style: italic; }
-    .geshi pre.css .coMULTI {
-      color: #808080;
-      font-style: italic; }
-    .geshi pre.css .es0 {
-      color: fuchsia;
-      font-weight: bold; }
-    .geshi pre.css .es2 {
-      color: fuchsia;
-      font-weight: bold; }
-    .geshi pre.css .br0 {
-      color: black; }
-    .geshi pre.css .sy0 {
-      color: black; }
-    .geshi pre.css .st0 {
-      color: black; }
-    .geshi pre.css .nu0 {
-      color: #c5060b; }
-    .geshi pre.css .re0 {
-      color: black; }
-    .geshi pre.css .re1 {
-      color: black;
-      font-style: italic; }
-    .geshi pre.css .re2 {
-      color: black; }
-    .geshi pre.css .re3 {
-      color: blue; }
-    .geshi pre.css span.xtra {
-      display: block; }
+      color: #fff;
+      text-shadow: #777777 1px 1px 1px;
+      background-color: #ffb76b;
+      *zoom: 1;
+      filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFFFB76B', endColorstr='#FFFF7F04');
+      background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffb76b), color-stop(50%, #ffa73d), color-stop(51%, #ff7c00), color-stop(100%, #ff7f04));
+      background-image: -webkit-linear-gradient(top, #ffb76b 0%, #ffa73d 50%, #ff7c00 51%, #ff7f04 100%);
+      background-image: -moz-linear-gradient(top, #ffb76b 0%, #ffa73d 50%, #ff7c00 51%, #ff7f04 100%);
+      background-image: -o-linear-gradient(top, #ffb76b 0%, #ffa73d 50%, #ff7c00 51%, #ff7f04 100%);
+      background-image: -ms-linear-gradient(top, #ffb76b 0%, #ffa73d 50%, #ff7c00 51%, #ff7f04 100%);
+      background-image: linear-gradient(top, #ffb76b 0%, #ffa73d 50%, #ff7c00 51%, #ff7f04 100%);
+      text-align: center;
+      -webkit-box-shadow: 0px 1px 5px #555555;
+      -moz-box-shadow: 0px 1px 5px #555555;
+      box-shadow: 0px 1px 5px #555555;
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg); }
+
+/*********************************************\
+For Each Programming Language another table.XXX
+\*********************************************/
+.geshi table.html5:after {
+  content: "HTML"; }
+.geshi table.html5 pre {
+  margin: 0px; }
+.geshi table.html5 .imp {
+  font-weight: bold;
+  color: orange; }
+.geshi table.html5 .kw2 {
+  color: #4169e1;
+  font-weight: bold; }
+.geshi table.html5 .kw3 {
+  color: #4169e1;
+  font-style: italic; }
+.geshi table.html5 .es0 {
+  color: #4169e1;
+  font-weight: bold; }
+.geshi table.html5 .br0 {
+  color: #4169e1; }
+.geshi table.html5 .sy0 {
+  color: rgba(65, 105, 225, 0.7); }
+.geshi table.html5 .st0 {
+  color: green; }
+.geshi table.html5 .nu0 {
+  color: red; }
+.geshi table.html5 .sc-2 {
+  color: red; }
+.geshi table.html5 .sc-1 {
+  color: red;
+  font-style: italic; }
+.geshi table.html5 .sc0 {
+  color: red; }
+.geshi table.html5 .sc1 {
+  color: red; }
+.geshi table.html5 .sc2 {
+  color: rgba(65, 105, 225, 0.7); }
+
+.geshi table.css:after {
+  content: "CSS"; }
+.geshi table.css pre {
+  margin: 0px; }
+.geshi table.css .imp {
+  font-weight: bold;
+  color: red; }
+.geshi table.css .kw1 {
+  color: rgba(65, 105, 225, 0.7);
+  font-weight: bold; }
+.geshi table.css .kw2 {
+  color: green; }
+.geshi table.css .co1 {
+  color: orange; }
+.geshi table.css .co2 {
+  color: fuchsia;
+  font-style: italic; }
+.geshi table.css .coMULTI {
+  color: #808080;
+  font-style: italic; }
+.geshi table.css .es0 {
+  color: fuchsia;
+  font-weight: bold; }
+.geshi table.css .es2 {
+  color: fuchsia;
+  font-weight: bold; }
+.geshi table.css .br0 {
+  color: black; }
+.geshi table.css .sy0 {
+  color: black; }
+.geshi table.css .st0 {
+  color: black; }
+.geshi table.css .nu0 {
+  color: #c5060b; }
+.geshi table.css .re0 {
+  color: black; }
+.geshi table.css .re1 {
+  color: black;
+  font-style: italic; }
+.geshi table.css .re2 {
+  color: black; }
+.geshi table.css .re3 {
+  color: blue; }
+
+.geshi table.php:after {
+  content: "PHP"; }
+.geshi table.php pre {
+  margin: 0px; }
+.geshi table.php a {
+  color: #3c4c72; }
+.geshi table.php td.de1 pre.de1 {
+  color: #555; }
+.geshi table.php .br0 {
+  color: black; }
+.geshi table.php .re0 {
+  color: #318495; }
+.geshi table.php .sy0, .geshi table.php .sy1 {
+  color: blue; }
+.geshi table.php .st0 {
+  color: #036a07; }
+.geshi table.php .co1, .geshi table.php .co2, .geshi table.php .coMULTI {
+  color: #ff7f00; }
+.geshi table.php .kw1 {
+  color: blue; }
+.geshi table.php .kw2 {
+  color: blue; }
+.geshi table.php .st_h {
+  color: green; }

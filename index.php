@@ -43,7 +43,7 @@
 
                 if(!empty($row['php_code'])){echo "<label><h4>EXAMPLE:</h4></label>";}
                 eval($row['php_code']);
-                if(!empty($row['php_code'])){echo "<label><h4>CODE FOR THE EXAMPLE:</h4></label>";echo con_createSyntaxHighlight($row['php_code'],'text/x-php','php_code');}
+                //if(!empty($row['php_code'])){echo "<label><h4>CODE FOR THE EXAMPLE:</h4></label>";echo con_createSyntaxHighlight($row['php_code'],'text/x-php','php_code');}
                 
                 
                 switch($row['code_type']) {

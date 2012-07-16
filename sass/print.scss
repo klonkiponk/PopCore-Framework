@@ -52,8 +52,9 @@ $complimentary1:#1047AA;
 $complimentary2:#29477F;
 $complimentary3:#052A6E;
 $complimentary4:#4577D4;
-$complimentary5:#6b90D4;
-
+//$complimentary5:#6b90D4;
+//not from colorschemer
+$complimentary5:#a0e1ff;
 /**************************************\
 			   BLOCKS
 \**************************************/
@@ -152,14 +153,16 @@ caption {
 table {
 	margin-bottom: $blockMargin;
 	td {
-		border: 1px solid $complimentary5;
+		//border: 1px solid $complimentary5;
 	}
 	th {
-		border: 1px solid $complimentary4;
-		background-color: $primary5;
+		//border: 1px solid $complimentary4;
+		//background-color: $primary5;
 	}
 }
-
+pre {
+	font-family: UbuntuMonoRegular;
+}
 /**************************************\
 			  TITLE PAGE
 \**************************************/
@@ -315,8 +318,8 @@ div.chapter {
 	content: counter(chapter) "." counter(section) "." counter(subSection) " ";
 }
 
-.chapter h4:before {
-	content: counter(chapter) "." counter(section) "." counter(subSection) "." counter(paragraph) " "; }  
+//.chapter h4:before {
+//	content: counter(chapter) "." counter(section) "." counter(subSection) "." counter(paragraph) " "; }  
 
 
 caption:after {
@@ -365,9 +368,9 @@ h4 {
 \**************************************/
 
 img {
-	border:3px solid $complimentary1;
-	@include box-shadow(1px 1px 5px $complimentary2);
-	width:350px;
+	width:250px;
+	margin:0px auto;
+	display:block;
 }
 
 /**************************************\
@@ -391,26 +394,26 @@ img {
 	@include box-shadow(2px 2px 5px #999);
 }
 
-.height10 {
+.h10 {
 	height:5em;
 }
-.height20 {
+.h20 {
 	height:10em;
 }
-.height50 {
+.h30 {
+	height:15em;
+}
+.h40 {
 	height:20em;
 }
-.height50 {
-	height:50em;
+.h50 {
+	height:25em;
 }
-.height70 {
-	height:70em;
+.h60 {
+	height:30em;
 }
-.height90 {
-	height:90em;
-}
-.height100 {
-	height:100em;
+.h70 {
+	height:35em;
 }
 
 
@@ -418,160 +421,194 @@ img {
 GESHI - (CODE WITH SYNTAX HIGHLIGHTING)
 \**************************************/
 
-.geshi {
-	pre {
-		font-family: $fontMonotype;
-		background-color: white;
-		@include border-radius(2px);
-		@include box-shadow(inset 2px 2px 2px #ccc,#ccc 1px 1px 2px);
-		min-height: 55px;
-		padding:5px 10px 5px 0px;
-		overflow: hidden;
-		border:1px solid #ccc;
+
+/************\
+geSHi Wrapper
+\************/
+div.geshi {
+	overflow:hidden;
+	position:relative;
+	margin-top:0px;
+	font-size: 0.9em;
+	table {
+		border:1px solid gray;
+		overflow:none;
+		display:block;
+		background:#fff;
+		@include border-radius(5px);
 		position:relative;
-		font-size: 13px;
-		ol {
-			list-style: decimal;
-			margin-left: 30px;
-			margin-top: 0px;
-			margin-bottom: 0px;
+		margin-top: 0px;
+		min-height:85px;
+		overflow:scroll;		
+		td.ln {
+			font-weight: normal;
+			padding:0px;
+			padding-right: 3px;
+			text-align: right;
+			border-right:1px solid silver;
+			margin:0px;
+			//background:#eee;
+			color:#999;
+			width:25px;
 		}
-		li {
-			border-left:1px solid silver;
-			padding-left:5px;
-			margin-left: 0px;
+		td:nth-child(2) {
+			padding-left:10px;
 		}
 		&:after {
-			font-family:'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;
 			position: absolute;
 			top:20px;
-			right: -50px;
+			right: -45px;
 			width: 150px;
 			height: 25px;
 			line-height: 25px;
 			font-size: 1.2em;
 			font-weight: bold;
 			color: #fff;
-			content:"CODE";			
-			background: orange;
-			text-align: left;
-			padding-left: 45px;
+			@include text-shadow(#777 1px 1px 1px);
+			background-color: rgb(255,183,107);
+			@include filter-gradient(#ffb76b, #ff7f04, vertical);
+			@include background-image(linear-gradient(top,  rgba(255,183,107,1) 0%,rgba(255,167,61,1) 50%,rgba(255,124,0,1) 51%,rgba(255,127,4,1) 100%));
+			text-align: center;
+			@include box-shadow(0px 1px 5px #555);
 			-webkit-transform: rotate(45deg);
 			-moz-transform: rotate(45deg);
 			-o-transform: rotate(45deg);
 			-ms-transform: rotate(45deg);
 			transform: rotate(45deg);
-		    @include box-sizing(border-box);
 		}
-		&.php {
-			&:after {
-				content:"PHP";
-			}
-			color:#555;
-			a {
-				color:rgb(60,76,114);
-				color:blue;
-			}
-			.de1 {
-			    color:#555;
-			} 	
-			.br0 {
-				color:black;
-			}
-			.re0 { //Variable
-				color:rgb(49,132,149);
-			}
-			.sy0,.sy1 {
-				color:blue;
-			}
-			.st0 {
-				color:rgb(3,106,7);
-			}
-			.nu0 { //WERT einer Variable
+	}
+}
+
+/*********************************************\
+For Each Programming Language another table.XXX
+\*********************************************/
+
+.geshi table.html5 {
+	&:after {
+		content:"HTML";
+	}
+	pre {
+		margin:0px;
+	}
+	.imp {
+		font-weight: bold; color: orange;
+	}
+	.kw2 {     //TAG    	 
+		color:rgba(65,105,225, 1.0);
+		font-weight: bold;
+	}
+	.kw3 {      //attribute
+		color:rgba(65,105,225, 1.0);
+		font-style:italic;
+	}
+	.es0 {
+		color:rgba(65,105,225, 1.0);
+		font-weight: bold;
+	}
+	.br0 {
+		color:rgba(65,105,225, 1.0);
+	}
+	.sy0 { //ZEICHEN
+		color:rgba(65,105,225, 0.7);
+	}
+	.st0 {     //VALUE
+		color:green;
+	 }
+	.nu0 {color: red;
 		
-			}
-			.co1,.co2,.coMULTI {
-				color:rgb(255,127,0);
-			}
-			.kw1 {
-				color:blue;
-			}
-			.kw2 {
-				color:blue;
-			}
-			.st_h {
-			    color:green;
-			}              
-		}//php
-		&.html5 {
-			&:after {
-				content:"HTML5";
-			}
-			.imp {font-weight: bold; color: orange;}
-			.kw2 {     //TAG    	 
-				color:rgba(65,105,225, 1.0);
-				font-weight: bold;}
-			.kw3 {      //attribute
-				color:rgba(65,105,225, 1.0);
-				font-style:italic;
-			}
-			.es0 {
-				color:rgba(65,105,225, 1.0);
-				font-weight: bold;
-			}
-			.br0 {
-				color:rgba(65,105,225, 1.0);
-			}
-			.sy0 { //ZEICHEN
-				color:rgba(65,105,225, 0.7);
-			}
-			.st0 {     //VALUE
-				color:green;
-			 }
-			.nu0 {color: red;}
-			.sc-2 {color: red;}
-			.sc-1 {color: red; font-style: italic;}
-			.sc0 {color: red;}
-			.sc1 {color: red;}
-			.sc2 { //BRACKETS
-				color:rgba(65,105,225, 0.7);
-			}
-			span.xtra { display:block; }
-		}//html5	
-		&.css  {
-			&:after {
-				content:"  CSS"
-			}
-			color:black;	
-			.imp {font-weight: bold; color: red;}
-			.kw1 {
-				color:rgba(65,105,225, 0.7);
-				font-weight: bold;
-			}
-			.kw2 { //VALUE
-				color: green;
-			}
-			.co1 {color: orange;}
-			.co2 {color: fuchsia; font-style: italic;}
-			.coMULTI {color: #808080; font-style: italic;}
-			.es0 {color: fuchsia; font-weight: bold;}
-			.es2 {color: fuchsia; font-weight: bold;}
-			.br0 { //BRACKETS
-				color: black;}
-			.sy0 { //SEMIKOLON
-				color: black;}
-			.st0 {color: black;}
-			.nu0 { //ColorValues rgba
-				color: rgb(197,6,11);}
-			.re0 {color: black;}
-			.re1 { //classes
-				color: black;
-				font-style:italic;}
-			.re2 { //font-family Value
-				color: black;}
-			.re3 { //Pixel Value
-				color: blue;}
-			span.xtra { display:block; }
-		}//css	
-	}//pre
-}//geshi
+	}
+	.sc-2 {color: red;
+		
+	}
+	.sc-1 {color: red; font-style: italic;
+		
+	}
+	.sc0 {color: red;
+		
+	}
+	.sc1 {color: red;
+		
+	}
+	.sc2 { //BRACKETS
+		color:rgba(65,105,225, 0.7);
+	}
+}
+
+.geshi table.css {
+	&:after {
+		content:"CSS";
+	}
+	pre {
+		margin:0px;
+	}
+	.imp {font-weight: bold; color: red;}
+	.kw1 {
+		color:rgba(65,105,225, 0.7);
+		font-weight: bold;
+	}
+	.kw2 { //VALUE
+		color: green;
+	}
+	.co1 {color: orange;}
+	.co2 {color: fuchsia; font-style: italic;}
+	.coMULTI {color: #808080; font-style: italic;}
+	.es0 {color: fuchsia; font-weight: bold;}
+	.es2 {color: fuchsia; font-weight: bold;}
+	.br0 { //BRACKETS
+		color: black;}
+	.sy0 { //SEMIKOLON
+		color: black;}
+	.st0 {color: black;}
+	.nu0 { //ColorValues rgba
+		color: rgb(197,6,11);}
+	.re0 {color: black;}
+	.re1 { //classes
+		color: black;
+		font-style:italic;}
+	.re2 { //font Value
+		color: black;}
+	.re3 { //Pixel Value
+		color: blue;}
+}
+
+.geshi table.php {
+	&:after {
+		content:"PHP";
+	}
+	pre {
+		margin:0px;
+	}
+	a {
+		color:rgb(60,76,114);
+	}
+	td.de1 pre.de1 {
+	    color:#555;
+	} 	
+	.br0 {
+		color:black;
+	}
+	.re0 { //Variable
+		color:rgb(49,132,149);
+	}
+	.sy0,.sy1 {
+		color:blue;
+	}
+	.st0 {
+		color:rgb(3,106,7);
+	}
+	.nu0 { //WERT einer Variable
+
+	}
+	.co1,.co2,.coMULTI {
+		color:rgb(255,127,0);
+	}
+	.kw1 {
+		color:blue;
+	}
+	.kw2 {
+		color:blue;
+	}
+	.st_h {
+	    color:green;
+	}      
+}

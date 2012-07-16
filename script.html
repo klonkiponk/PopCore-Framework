@@ -162,11 +162,9 @@ caption {
 
 table {
   margin-bottom: 15px; }
-  table td {
-    border: 1px solid #6b90d4; }
-  table th {
-    border: 1px solid #4577d4;
-    background-color: #ffce73; }
+
+pre {
+  font-family: UbuntuMonoRegular; }
 
 /**************************************\
 			  TITLE PAGE
@@ -294,9 +292,6 @@ div.chapter {
 .chapter h3:before {
   content: counter(chapter) "." counter(section) "." counter(subSection) " "; }
 
-.chapter h4:before {
-  content: counter(chapter) "." counter(section) "." counter(subSection) "." counter(paragraph) " "; }
-
 caption:after {
   content: " " counter(chapter) "." counter(caption); }
 
@@ -338,17 +333,15 @@ h4 {
 			   IMAGES
 \**************************************/
 img {
-  border: 3px solid #1047aa;
-  -webkit-box-shadow: 1px 1px 5px #29477f;
-  -moz-box-shadow: 1px 1px 5px #29477f;
-  box-shadow: 1px 1px 5px #29477f;
-  width: 350px; }
+  width: 250px;
+  margin: 0px auto;
+  display: block; }
 
 /**************************************\
 			   BOXES
 \**************************************/
 .homework {
-  background-color: #6b90d4;
+  background-color: #a0e1ff;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
@@ -368,184 +361,200 @@ img {
   -moz-box-shadow: 2px 2px 5px #999999;
   box-shadow: 2px 2px 5px #999999; }
 
-.height10 {
+.h10 {
   height: 5em; }
 
-.height20 {
+.h20 {
   height: 10em; }
 
-.height50 {
+.h30 {
+  height: 15em; }
+
+.h40 {
   height: 20em; }
 
-.height50 {
-  height: 50em; }
+.h50 {
+  height: 25em; }
 
-.height70 {
-  height: 70em; }
+.h60 {
+  height: 30em; }
 
-.height90 {
-  height: 90em; }
-
-.height100 {
-  height: 100em; }
+.h70 {
+  height: 35em; }
 
 /**************************************\
 GESHI - (CODE WITH SYNTAX HIGHLIGHTING)
 \**************************************/
-.geshi pre {
-  font-family: UbuntuMonoRegular;
-  background-color: white;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -o-border-radius: 2px;
-  border-radius: 2px;
-  -webkit-box-shadow: inset 2px 2px 2px #cccccc, #cccccc 1px 1px 2px;
-  -moz-box-shadow: inset 2px 2px 2px #cccccc, #cccccc 1px 1px 2px;
-  box-shadow: inset 2px 2px 2px #cccccc, #cccccc 1px 1px 2px;
-  min-height: 55px;
-  padding: 5px 10px 5px 0px;
+/************\
+geSHi Wrapper
+\************/
+div.geshi {
   overflow: hidden;
-  border: 1px solid #ccc;
   position: relative;
-  font-size: 13px; }
-  .geshi pre ol {
-    list-style: decimal;
-    margin-left: 30px;
+  margin-top: 0px;
+  font-size: 0.9em; }
+  div.geshi table {
+    border: 1px solid gray;
+    overflow: none;
+    display: block;
+    background: #fff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    position: relative;
     margin-top: 0px;
-    margin-bottom: 0px; }
-  .geshi pre li {
-    border-left: 1px solid silver;
-    padding-left: 5px;
-    margin-left: 0px; }
-  .geshi pre:after {
-    font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;
-    position: absolute;
-    top: 20px;
-    right: -50px;
-    width: 150px;
-    height: 25px;
-    line-height: 25px;
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #fff;
-    content: "CODE";
-    background: orange;
-    text-align: left;
-    padding-left: 45px;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box; }
-  .geshi pre.php {
-    color: #555; }
-    .geshi pre.php:after {
-      content: "PHP"; }
-    .geshi pre.php a {
-      color: #3c4c72;
-      color: blue; }
-    .geshi pre.php .de1 {
-      color: #555; }
-    .geshi pre.php .br0 {
-      color: black; }
-    .geshi pre.php .re0 {
-      color: #318495; }
-    .geshi pre.php .sy0, .geshi pre.php .sy1 {
-      color: blue; }
-    .geshi pre.php .st0 {
-      color: #036a07; }
-    .geshi pre.php .co1, .geshi pre.php .co2, .geshi pre.php .coMULTI {
-      color: #ff7f00; }
-    .geshi pre.php .kw1 {
-      color: blue; }
-    .geshi pre.php .kw2 {
-      color: blue; }
-    .geshi pre.php .st_h {
-      color: green; }
-  .geshi pre.html5:after {
-    content: "HTML5"; }
-  .geshi pre.html5 .imp {
-    font-weight: bold;
-    color: orange; }
-  .geshi pre.html5 .kw2 {
-    color: #4169e1;
-    font-weight: bold; }
-  .geshi pre.html5 .kw3 {
-    color: #4169e1;
-    font-style: italic; }
-  .geshi pre.html5 .es0 {
-    color: #4169e1;
-    font-weight: bold; }
-  .geshi pre.html5 .br0 {
-    color: #4169e1; }
-  .geshi pre.html5 .sy0 {
-    color: rgba(65, 105, 225, 0.7); }
-  .geshi pre.html5 .st0 {
-    color: green; }
-  .geshi pre.html5 .nu0 {
-    color: red; }
-  .geshi pre.html5 .sc-2 {
-    color: red; }
-  .geshi pre.html5 .sc-1 {
-    color: red;
-    font-style: italic; }
-  .geshi pre.html5 .sc0 {
-    color: red; }
-  .geshi pre.html5 .sc1 {
-    color: red; }
-  .geshi pre.html5 .sc2 {
-    color: rgba(65, 105, 225, 0.7); }
-  .geshi pre.html5 span.xtra {
-    display: block; }
-  .geshi pre.css {
-    color: black; }
-    .geshi pre.css:after {
-      content: "  CSS"; }
-    .geshi pre.css .imp {
+    min-height: 85px;
+    overflow: scroll; }
+    div.geshi table td.ln {
+      font-weight: normal;
+      padding: 0px;
+      padding-right: 3px;
+      text-align: right;
+      border-right: 1px solid silver;
+      margin: 0px;
+      color: #999;
+      width: 25px; }
+    div.geshi table td:nth-child(2) {
+      padding-left: 10px; }
+    div.geshi table:after {
+      position: absolute;
+      top: 20px;
+      right: -45px;
+      width: 150px;
+      height: 25px;
+      line-height: 25px;
+      font-size: 1.2em;
       font-weight: bold;
-      color: red; }
-    .geshi pre.css .kw1 {
-      color: rgba(65, 105, 225, 0.7);
-      font-weight: bold; }
-    .geshi pre.css .kw2 {
-      color: green; }
-    .geshi pre.css .co1 {
-      color: orange; }
-    .geshi pre.css .co2 {
-      color: fuchsia;
-      font-style: italic; }
-    .geshi pre.css .coMULTI {
-      color: #808080;
-      font-style: italic; }
-    .geshi pre.css .es0 {
-      color: fuchsia;
-      font-weight: bold; }
-    .geshi pre.css .es2 {
-      color: fuchsia;
-      font-weight: bold; }
-    .geshi pre.css .br0 {
-      color: black; }
-    .geshi pre.css .sy0 {
-      color: black; }
-    .geshi pre.css .st0 {
-      color: black; }
-    .geshi pre.css .nu0 {
-      color: #c5060b; }
-    .geshi pre.css .re0 {
-      color: black; }
-    .geshi pre.css .re1 {
-      color: black;
-      font-style: italic; }
-    .geshi pre.css .re2 {
-      color: black; }
-    .geshi pre.css .re3 {
-      color: blue; }
-    .geshi pre.css span.xtra {
-      display: block; }
+      color: #fff;
+      text-shadow: #777777 1px 1px 1px;
+      background-color: #ffb76b;
+      *zoom: 1;
+      filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFFFB76B', endColorstr='#FFFF7F04');
+      background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffb76b), color-stop(50%, #ffa73d), color-stop(51%, #ff7c00), color-stop(100%, #ff7f04));
+      background-image: -webkit-linear-gradient(top, #ffb76b 0%, #ffa73d 50%, #ff7c00 51%, #ff7f04 100%);
+      background-image: -moz-linear-gradient(top, #ffb76b 0%, #ffa73d 50%, #ff7c00 51%, #ff7f04 100%);
+      background-image: -o-linear-gradient(top, #ffb76b 0%, #ffa73d 50%, #ff7c00 51%, #ff7f04 100%);
+      background-image: -ms-linear-gradient(top, #ffb76b 0%, #ffa73d 50%, #ff7c00 51%, #ff7f04 100%);
+      background-image: linear-gradient(top, #ffb76b 0%, #ffa73d 50%, #ff7c00 51%, #ff7f04 100%);
+      text-align: center;
+      -webkit-box-shadow: 0px 1px 5px #555555;
+      -moz-box-shadow: 0px 1px 5px #555555;
+      box-shadow: 0px 1px 5px #555555;
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg); }
+
+/*********************************************\
+For Each Programming Language another table.XXX
+\*********************************************/
+.geshi table.html5:after {
+  content: "HTML"; }
+.geshi table.html5 pre {
+  margin: 0px; }
+.geshi table.html5 .imp {
+  font-weight: bold;
+  color: orange; }
+.geshi table.html5 .kw2 {
+  color: #4169e1;
+  font-weight: bold; }
+.geshi table.html5 .kw3 {
+  color: #4169e1;
+  font-style: italic; }
+.geshi table.html5 .es0 {
+  color: #4169e1;
+  font-weight: bold; }
+.geshi table.html5 .br0 {
+  color: #4169e1; }
+.geshi table.html5 .sy0 {
+  color: rgba(65, 105, 225, 0.7); }
+.geshi table.html5 .st0 {
+  color: green; }
+.geshi table.html5 .nu0 {
+  color: red; }
+.geshi table.html5 .sc-2 {
+  color: red; }
+.geshi table.html5 .sc-1 {
+  color: red;
+  font-style: italic; }
+.geshi table.html5 .sc0 {
+  color: red; }
+.geshi table.html5 .sc1 {
+  color: red; }
+.geshi table.html5 .sc2 {
+  color: rgba(65, 105, 225, 0.7); }
+
+.geshi table.css:after {
+  content: "CSS"; }
+.geshi table.css pre {
+  margin: 0px; }
+.geshi table.css .imp {
+  font-weight: bold;
+  color: red; }
+.geshi table.css .kw1 {
+  color: rgba(65, 105, 225, 0.7);
+  font-weight: bold; }
+.geshi table.css .kw2 {
+  color: green; }
+.geshi table.css .co1 {
+  color: orange; }
+.geshi table.css .co2 {
+  color: fuchsia;
+  font-style: italic; }
+.geshi table.css .coMULTI {
+  color: #808080;
+  font-style: italic; }
+.geshi table.css .es0 {
+  color: fuchsia;
+  font-weight: bold; }
+.geshi table.css .es2 {
+  color: fuchsia;
+  font-weight: bold; }
+.geshi table.css .br0 {
+  color: black; }
+.geshi table.css .sy0 {
+  color: black; }
+.geshi table.css .st0 {
+  color: black; }
+.geshi table.css .nu0 {
+  color: #c5060b; }
+.geshi table.css .re0 {
+  color: black; }
+.geshi table.css .re1 {
+  color: black;
+  font-style: italic; }
+.geshi table.css .re2 {
+  color: black; }
+.geshi table.css .re3 {
+  color: blue; }
+
+.geshi table.php:after {
+  content: "PHP"; }
+.geshi table.php pre {
+  margin: 0px; }
+.geshi table.php a {
+  color: #3c4c72; }
+.geshi table.php td.de1 pre.de1 {
+  color: #555; }
+.geshi table.php .br0 {
+  color: black; }
+.geshi table.php .re0 {
+  color: #318495; }
+.geshi table.php .sy0, .geshi table.php .sy1 {
+  color: blue; }
+.geshi table.php .st0 {
+  color: #036a07; }
+.geshi table.php .co1, .geshi table.php .co2, .geshi table.php .coMULTI {
+  color: #ff7f00; }
+.geshi table.php .kw1 {
+  color: blue; }
+.geshi table.php .kw2 {
+  color: blue; }
+.geshi table.php .st_h {
+  color: green; }
 --></style>
 	
 	<div class='titlepage'>
@@ -672,7 +681,8 @@ der folgenden Kapitel.
 
 			
 				<caption>Listing</caption>
-				<div class='geshi'><pre class="html5"><ol><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="kw2">div</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;blackbox&quot;</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span></div></li></ol></pre></div>
+				<div class='geshi'><table class="html5"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
+</pre></td><td class="de1"><pre class="de1"><span class="sc2">&lt;<span class="kw2">div</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;blackbox&quot;</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span></pre></td></tr></tbody></table></div>
 			</article>
 		</section></section>
 
@@ -685,18 +695,147 @@ der folgenden Kapitel.
 
 
 <section class='section' id='section-3'><h2>HTM...Was?</h2>
-</section>
+
+		<article id='article-210'>
+			<h4></h4>
+
+			<img src="./img/1342467543102.JPG" alt="" /></section>
 
 
 
 <section class='section' id='section-4'><h2>Tags</h2>
 
 		<article id='article-195'>
-			<h4></h4>
+			<h4>geSHi HTML TEST</h4>
 
-			<div class="blackbox" style="box-shadow:2px 2px 2px #333"></div>
+			
 				<caption>Listing</caption>
-				<div class='geshi'><pre class="html5"><ol><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="kw2">div</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;blackbox&quot;</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span></div></li></ol></pre></div>
+				<div class='geshi'><table class="html5"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+</pre></td><td class="de1"><pre class="de1"><span class="sc2">&lt;<span class="kw2">div</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;blackbox&quot;</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;box-shadow:2px 2px 2px #333&quot;</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">div</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;blackbox&quot;</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;box-shadow:2px 2px 2px #333&quot;</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">div</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;blackbox&quot;</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;box-shadow:2px 2px 2px #333&quot;</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">div</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;blackbox&quot;</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;box-shadow:2px 2px 2px #333&quot;</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">div</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;blackbox&quot;</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;box-shadow:2px 2px 2px #333&quot;</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">div</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;blackbox&quot;</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;box-shadow:2px 2px 2px #333&quot;</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">div</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;blackbox&quot;</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;box-shadow:2px 2px 2px #333&quot;</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">div</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;blackbox&quot;</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;box-shadow:2px 2px 2px #333&quot;</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">div</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;blackbox&quot;</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;box-shadow:2px 2px 2px #333&quot;</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">div</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;blackbox&quot;</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;box-shadow:2px 2px 2px #333&quot;</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">div</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;blackbox&quot;</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;box-shadow:2px 2px 2px #333&quot;</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">div</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;blackbox&quot;</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;box-shadow:2px 2px 2px #333&quot;</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">div</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;blackbox&quot;</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;box-shadow:2px 2px 2px #333&quot;</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">div</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;blackbox&quot;</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;box-shadow:2px 2px 2px #333&quot;</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">div</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;blackbox&quot;</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;box-shadow:2px 2px 2px #333&quot;</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">div</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;blackbox&quot;</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;box-shadow:2px 2px 2px #333&quot;</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">div</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;blackbox&quot;</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;box-shadow:2px 2px 2px #333&quot;</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">div</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;blackbox&quot;</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;box-shadow:2px 2px 2px #333&quot;</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">div</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;blackbox&quot;</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;box-shadow:2px 2px 2px #333&quot;</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">div</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;blackbox&quot;</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;box-shadow:2px 2px 2px #333&quot;</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">div</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;blackbox&quot;</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;box-shadow:2px 2px 2px #333&quot;</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">div</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;blackbox&quot;</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;box-shadow:2px 2px 2px #333&quot;</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span></pre></td></tr></tbody></table></div>
+			</article>
+		
+		<article id='article-207'>
+			<h4>geSHi CSS TEST</h4>
+
+			
+				<caption>Listing</caption>
+				<div class='geshi'><table class="css"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+</pre></td><td class="de1"><pre class="de1">table<span class="re1">.html5</span> <span class="br0">&#123;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &amp;<span class="re2">:after </span><span class="br0">&#123;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">position</span><span class="sy0">:</span> <span class="kw2">absolute</span><span class="sy0">;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">top</span><span class="sy0">:</span><span class="re3">20px</span><span class="sy0">;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">right</span><span class="sy0">:</span> <span class="re3">-45px</span><span class="sy0">;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">width</span><span class="sy0">:</span> <span class="re3">150px</span><span class="sy0">;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">height</span><span class="sy0">:</span> <span class="re3">25px</span><span class="sy0">;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">line-height</span><span class="sy0">:</span> <span class="re3">25px</span><span class="sy0">;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">font-size</span><span class="sy0">:</span> <span class="re3">1.2em</span><span class="sy0">;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">font-weight</span><span class="sy0">:</span> <span class="kw2">bold</span><span class="sy0">;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">color</span><span class="sy0">:</span> <span class="re0">#fff</span><span class="sy0">;</span>
+&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // &nbsp; &nbsp;CHANGE TO RIGHT LANGUAGE &nbsp; &nbsp; &nbsp;\\
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">content</span><span class="sy0">:</span><span class="st0">&quot;HTML&quot;</span><span class="sy0">;</span>
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="co1">@include text-shadow(#777 1px 1px 1px);</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">background-color</span><span class="sy0">:</span> <span class="kw2">rgb</span><span class="br0">&#40;</span><span class="nu0">255</span><span class="sy0">,</span><span class="nu0">183</span><span class="sy0">,</span><span class="nu0">107</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="co1">@include filter-gradient(#ffb76b, #ff7f04, vertical);</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">text-align</span><span class="sy0">:</span> <span class="kw2">center</span><span class="sy0">;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="co1">@include box-shadow(0px 1px 5px #555);</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -webkit-transform<span class="sy0">:</span> rotate<span class="br0">&#40;</span>45deg<span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -moz-transform<span class="sy0">:</span> rotate<span class="br0">&#40;</span>45deg<span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -o-transform<span class="sy0">:</span> rotate<span class="br0">&#40;</span>45deg<span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -ms-transform<span class="sy0">:</span> rotate<span class="br0">&#40;</span>45deg<span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; transform<span class="sy0">:</span> rotate<span class="br0">&#40;</span>45deg<span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre></td></tr></tbody></table></div>
+			</article>
+		
+		<article id='article-208'>
+			<h4>geSHi PHP TEST</h4>
+
+			
+				<caption>Listing</caption>
+				<div class='geshi'><table class="php"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
+2
+3
+4
+5
+</pre></td><td class="de1"><pre class="de1"><span class="kw2">function</span> sys_securePage <span class="br0">&#40;</span><span class="br0">&#41;</span>
+<span class="br0">&#123;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="kw1">echo</span> <span class="st0">&quot;Content of the string&quot;</span><span class="sy0">;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="re0">$value</span> <span class="sy0">=</span> <span class="kw3">is_file</span><span class="br0">&#40;</span><span class="re0">$value</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre></td></tr></tbody></table></div>
 			</article>
 		</section>
 
@@ -720,7 +859,30 @@ der folgenden Kapitel.
 <strong class="conclusion">Jeder dieser drei Teile wird in Form eines Tags angegeben bzw. von einem &ouml;ffnenden und
 einem schlie&szlig;enden Tag umgeben.</strong>
 				<caption>Listing</caption>
-				<div class='geshi'><pre class="html5"><ol><li class="li1"><div class="de1"><span class="sc2">&lt;!doctype html&gt;</span></div></li><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="kw2">html</span>&gt;</span></div></li><li class="li1"><div class="de1">&nbsp;</div></li><li class="li1"><div class="de1">	<span class="sc2">&lt;<span class="kw2">head</span>&gt;</span></div></li><li class="li1"><div class="de1">		<span class="sc2">&lt;<span class="kw2">title</span>&gt;</span>Der Titel der HTML - Seite <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">title</span>&gt;</span></div></li><li class="li1"><div class="de1">	<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">head</span>&gt;</span></div></li><li class="li1"><div class="de1">&nbsp;</div></li><li class="li1"><div class="de1">    <span class="sc2">&lt;<span class="kw2">body</span>&gt;</span></div></li><li class="li1"><div class="de1">&nbsp;</div></li><li class="li1"><div class="de1">	<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">body</span>&gt;</span></div></li><li class="li1"><div class="de1">&nbsp;</div></li><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">html</span>&gt;</span></div></li></ol></pre></div>
+				<div class='geshi'><table class="html5"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="de1"><pre class="de1"><span class="sc2">&lt;!doctype html&gt;</span>
+<span class="sc2">&lt;<span class="kw2">html</span>&gt;</span>
+&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">head</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">title</span>&gt;</span>Der Titel der HTML - Seite <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">title</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">head</span>&gt;</span>
+&nbsp;
+&nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">body</span>&gt;</span>
+&nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">body</span>&gt;</span>
+&nbsp;
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">html</span>&gt;</span></pre></td></tr></tbody></table></div>
 			</article>
 		
 
@@ -750,7 +912,24 @@ Blocks (z. B. der Tabellenzelle) automatisch an einem Leerzeichen umgebrochen.
 Um einen Zeilenumbruch an einer bestimmten Stelle zu erzwingen, verwendet man das
 Tag BR
 				<caption>Listing</caption>
-				<div class='geshi'><pre class="html5"><ol><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="kw2">h1</span>&gt;</span>Ohne Umbrüche<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h1</span> &gt;</span></div></li><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Dieser Text steht in einem ersten Absatz .<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></div></li><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Dieser Text in einem weiteren .<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></div></li><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>In diesem dritten Absatz ist nun noch etwas mehr Text vorhanden .<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></div></li><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="kw2">h1</span>&gt;</span>Mit Umbrümchen <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h1</span> &gt;</span></div></li><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Dieser Text steht in <span class="sc2">&lt;<span class="kw2">br</span> &gt;</span> einem ersten Absatz .<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></div></li><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Dieser Text <span class="sc2">&lt;<span class="kw2">br</span> &gt;</span> in einem weiteren .<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></div></li><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>In diesem dritten <span class="sc2">&lt;<span class="kw2">br</span> &gt;</span> Absatz ist nun noch etwas mehr Text</div></li><li class="li1"><div class="de1">vorhanden .<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></div></li></ol></pre></div>
+				<div class='geshi'><table class="html5"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="de1"><pre class="de1"><span class="sc2">&lt;<span class="kw2">h1</span>&gt;</span>Ohne Umbrüche<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h1</span> &gt;</span>
+<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Dieser Text steht in einem ersten Absatz .<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Dieser Text in einem weiteren .<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>In diesem dritten Absatz ist nun noch etwas mehr Text vorhanden .<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">h1</span>&gt;</span>Mit Umbrümchen <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h1</span> &gt;</span>
+<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Dieser Text steht in <span class="sc2">&lt;<span class="kw2">br</span> &gt;</span> einem ersten Absatz .<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Dieser Text <span class="sc2">&lt;<span class="kw2">br</span> &gt;</span> in einem weiteren .<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>In diesem dritten <span class="sc2">&lt;<span class="kw2">br</span> &gt;</span> Absatz ist nun noch etwas mehr Text
+vorhanden .<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></pre></td></tr></tbody></table></div>
 			</article>
 		</section></section>
 
@@ -860,7 +1039,7 @@ Betrachtet man nur die physikalischen Komponenten des Internets, dann ist dieses
       <li>Wo, au&szlig;er im Internet, kann man Webserver finden? Nennen Sie mindestens drei M&ouml;glichkeiten!</li>        
   </ul>
 </div>
-<div class="notes 70"></div>
+<div class="notes h70"></div>
 		<article id='article-173'>
 			<h4>Das Hyper Text Transfer Protocol</h4>
 
@@ -883,7 +1062,7 @@ Um Nachrichten, Webseiten oder Bin&auml;rdateien mit anderen Webservern oder Bro
     <li>Worin liegt der Unterschied zwischen den Versionen "HTTP 1.0" und "HTTP 1.1"</li>
     </ul>    
 </div>
-<div class="notes 70"></div>
+<div class="notes h50"></div>
 		<article id='article-174'>
 			<h4>URL/URI und virtueller Dateipfad</h4>
 
@@ -1133,7 +1312,12 @@ In manchen Umgebungen kann es notwendig sein, dass ein Apache-Modul nur dann gel
 Im konkreten Falle des <span class="apachecontainer">IfModule</span>-Kontainers hei&szlig;t das, dass die in einem solchen Kontainer eingeschlossenen Direktiven nur dann ausgef&uuml;hrt werden, wenn [Bedingung] zutrifft. Das Beispiel auf dieser Seite zeigt den <span class="apachecontainer">IfModule</span>-Kontainer, zusammen mit der <span class="apache">DirectoryIndex</span>-Direktive. Diese wird nur dann ausgef&uuml;hrt, wenn das Modul <span class="apache">dir_module</span> geladen wurde.
 </p>
 				<caption>Listing</caption>
-				<div class='geshi'><pre class="html5"><ol><li class="li1"><div class="de1"><span class="sc2">&lt;IfModule dir_module&gt;</span></div></li><li class="li1"><div class="de1">  DirectoryIndex index.html</div></li><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="sy0">/</span>IfModule&gt;</span></div></li></ol></pre></div>
+				<div class='geshi'><table class="html5"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
+2
+3
+</pre></td><td class="de1"><pre class="de1"><span class="sc2">&lt;IfModule dir_module&gt;</span>
+&nbsp; DirectoryIndex index.html
+<span class="sc2">&lt;<span class="sy0">/</span>IfModule&gt;</span></pre></td></tr></tbody></table></div>
 			</article>
 		
 
@@ -1154,7 +1338,16 @@ Im konkreten Falle des <span class="apachecontainer">IfModule</span>-Kontainers 
 </div>
 <div class="notes 70"></div>
 				<caption>Listing</caption>
-				<div class='geshi'><pre class="apache"><ol><li class="li1"><div class="de1">&lt;<span class="kw3">Directory</span> /&gt;</div></li><li class="li1"><div class="de1">    <span class="kw1">AllowOverride</span> <span class="kw2">none</span></div></li><li class="li1"><div class="de1">    <span class="kw1">Require</span> <span class="kw2">all</span> denied</div></li><li class="li1"><div class="de1">&lt;/<span class="kw3">Directory</span>&gt;</div></li><li class="li1"><div class="de1">&nbsp;</div></li></ol></pre></div>
+				<div class='geshi'><table class="apache"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
+2
+3
+4
+5
+</pre></td><td class="de1"><pre class="de1">&lt;<span class="kw3">Directory</span> /&gt;
+&nbsp; &nbsp; <span class="kw1">AllowOverride</span> <span class="kw2">none</span>
+&nbsp; &nbsp; <span class="kw1">Require</span> <span class="kw2">all</span> denied
+&lt;/<span class="kw3">Directory</span>&gt;
+&nbsp;</pre></td></tr></tbody></table></div>
 			</article>
 		
 		<article id='article-199'>
@@ -1220,7 +1413,20 @@ Ein Beispiel zum vorangegangenen Merksatz:
     </ol>
 </div>
 				<caption>Listing</caption>
-				<div class='geshi'><pre class="html5"><ol><li class="li1"><div class="de1"># httpd.conf</div></li><li class="li1"><div class="de1"><span class="sc2">&lt;Directory <span class="st0">&quot;htdocs/selfhtml&quot;</span>&gt;</span></div></li><li class="li1"><div class="de1">  Require all granted</div></li><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="sy0">/</span>Directory&gt;</span></div></li><li class="li1"><div class="de1">&nbsp;</div></li><li class="li1"><div class="de1">#.htaccess-Datei</div></li><li class="li1"><div class="de1">  Require all granted</div></li></ol></pre></div>
+				<div class='geshi'><table class="html5"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="de1"><pre class="de1"># httpd.conf
+<span class="sc2">&lt;Directory <span class="st0">&quot;htdocs/selfhtml&quot;</span>&gt;</span>
+&nbsp; Require all granted
+<span class="sc2">&lt;<span class="sy0">/</span>Directory&gt;</span>
+&nbsp;
+#.htaccess-Datei
+&nbsp; Require all granted</pre></td></tr></tbody></table></div>
 			</article>
 		
 
@@ -1259,7 +1465,24 @@ Das Modul "mod_autoindex.so" bietet viele verschiedene M&ouml;glichkeiten, um ei
 </div>
 <div class="notes 50"></div>
 				<caption>Listing</caption>
-				<div class='geshi'><pre class="php"><ol><li class="li1"><div class="de1"><span class="sy0">&lt;</span>Directory <span class="st0">&quot;htdocs/download&quot;</span><span class="sy0">&gt;</span></div></li><li class="li1"><div class="de1">  <span class="kw1">Require</span> all granted</div></li><li class="li1"><div class="de1">&nbsp;</div></li><li class="li1"><div class="de1">  <span class="co2"># FancyIndexing aktivieren</span></div></li><li class="li1"><div class="de1">  IndexOptions FancyIndexing</div></li><li class="li1"><div class="de1">&nbsp;</div></li><li class="li1"><div class="de1">  Options      Indexes</div></li><li class="li1"><div class="de1"><span class="sy0">&lt;/</span>Directory<span class="sy0">&gt;</span></div></li><li class="li1"><div class="de1">&nbsp;</div></li></ol></pre></div>
+				<div class='geshi'><table class="php"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="de1"><pre class="de1"><span class="sy0">&lt;</span>Directory <span class="st0">&quot;htdocs/download&quot;</span><span class="sy0">&gt;</span>
+&nbsp; <span class="kw1">Require</span> all granted
+&nbsp;
+&nbsp; <span class="co2"># FancyIndexing aktivieren</span>
+ &nbsp;IndexOptions FancyIndexing
+&nbsp;
+&nbsp; Options &nbsp; &nbsp; &nbsp;Indexes
+<span class="sy0">&lt;/</span>Directory<span class="sy0">&gt;</span>
+&nbsp;</pre></td></tr></tbody></table></div>
 			</article>
 		
 		<article id='article-202'>
@@ -1293,7 +1516,10 @@ Da mit der HTTP-Server MIME-Typen verarbeiten kann, muss das Modul "mod_mime.so"
 </div>
 <div class="notes 70"></div>
 				<caption>Listing</caption>
-				<div class='geshi'><pre class="php"><ol><li class="li1"><div class="de1">LoadModule mime_module <span class="st0">&quot;modules/mod_mime.so&quot;</span></div></li><li class="li1"><div class="de1">TypesConfig <span class="st0">&quot;conf/mime.types&quot;</span></div></li></ol></pre></div>
+				<div class='geshi'><table class="php"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
+2
+</pre></td><td class="de1"><pre class="de1">LoadModule mime_module <span class="st0">&quot;modules/mod_mime.so&quot;</span>
+TypesConfig <span class="st0">&quot;conf/mime.types&quot;</span></pre></td></tr></tbody></table></div>
 			</article>
 		
 		<article id='article-203'>
@@ -1333,7 +1559,22 @@ Formatieren Sie den automatischen DirectoryIndex des Downloadordners nach den fo
 </div>
 <div class="notes 70"></div>
 				<caption>Listing</caption>
-				<div class='geshi'><pre class="php"><ol><li class="li1"><div class="de1"><span class="sy0">&lt;</span>Directory <span class="st0">&quot;/icons&quot;</span><span class="sy0">&gt;</span></div></li><li class="li1"><div class="de1">  <span class="kw1">Require</span> all granted</div></li><li class="li1"><div class="de1"><span class="sy0">&lt;/</span>Directory<span class="sy0">&gt;</span></div></li><li class="li1"><div class="de1">&nbsp;</div></li><li class="li1"><div class="de1"><span class="sy0">&lt;</span>Directory <span class="st0">&quot;E:/apache/httpd/2.4.2/icons&quot;</span><span class="sy0">&gt;</span></div></li><li class="li1"><div class="de1">  <span class="kw1">Require</span> all granted</div></li><li class="li1"><div class="de1"><span class="sy0">&lt;/</span>Directory<span class="sy0">&gt;</span></div></li><li class="li1"><div class="de1">&nbsp;</div></li></ol></pre></div>
+				<div class='geshi'><table class="php"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="de1"><pre class="de1"><span class="sy0">&lt;</span>Directory <span class="st0">&quot;/icons&quot;</span><span class="sy0">&gt;</span>
+&nbsp; <span class="kw1">Require</span> all granted
+<span class="sy0">&lt;/</span>Directory<span class="sy0">&gt;</span>
+&nbsp;
+<span class="sy0">&lt;</span>Directory <span class="st0">&quot;E:/apache/httpd/2.4.2/icons&quot;</span><span class="sy0">&gt;</span>
+&nbsp; <span class="kw1">Require</span> all granted
+<span class="sy0">&lt;/</span>Directory<span class="sy0">&gt;</span>
+&nbsp;</pre></td></tr></tbody></table></div>
 			</article>
 		
 
