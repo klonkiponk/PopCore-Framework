@@ -53,7 +53,7 @@
                     while ($section = $sectionCheckActive->fetch_array()) {
                         if ($section['pid'] == $_GET['id']){
                             $sectionActive = 1;
-							$breadCrumb['section'] = " :: ".$section['name'];
+							$breadCrumb['section'] = " :: <a href='index.php?id={$section['pid']}'>".$section['name']."</a>";
                         }
                         
                         //CHECK if current page is even a subsection
@@ -63,7 +63,7 @@
 		                    while ($subSection = $subSectionCheckActive->fetch_array()) {
 		                    	if ($subSection['pid'] == $_GET['id']){
 			                    	$subSectionActive = 1;
-									$breadCrumb['subSection'] = " :: ".$subSection['name'];
+									$breadCrumb['subSection'] = " :: <a href='index.php?id={$subSection['pid']}'>".$subSection['name']."</a>";
 			                    }
                             }	                        
                         }
@@ -74,13 +74,13 @@
 				//DEFINE THE CLASS FOR THE ROOT ITEM
                 if ($chapter['pid'] == $_GET['id']){
                     $menu .= 'active';
-					$breadCrumb['chapter'] = $chapter['name'];
+					$breadCrumb['chapter'] = "<a href='index.php?id={$chapter['pid']}'>".$chapter['name']."</a>";
                 } elseif ( $sectionActive == 1 ) {
                     $menu .= 'sectionActive';
-					$breadCrumb['chapter'] = $chapter['name'];
+					$breadCrumb['chapter'] = "<a href='index.php?id={$chapter['pid']}'>".$chapter['name']."</a>";
                 } elseif ( $subSectionActive == 1) {
 	                $menu .= 'subSectionActive';
-					$breadCrumb['chapter'] = $chapter['name'];
+					$breadCrumb['chapter'] = "<a href='index.php?id={$chapter['pid']}'>".$chapter['name']."</a>";
                 }
 				
 
@@ -106,7 +106,7 @@
 		                    	while ($subSection = $subSectionCheckActive->fetch_array()) {
 		                    		if ($subSection['pid'] == $_GET['id']){
 			                    		$menu .= ' subSectionActive';
-										$breadCrumb['section'] = " :: ".$section['name'];
+										$breadCrumb['section'] = " :: <a href='index.php?id={$section['pid']}'>".$section['name']."</a>";
 			                   		}
 			                	}	                        
 			                }

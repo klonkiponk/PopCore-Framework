@@ -60,6 +60,12 @@ function db_createNewArticleForm ()
 
 
     $form = "<article><h2>Create a new Article</h2>";
+	
+	$form .= '<label>IMAGE</label><form id="imageform" method="post" enctype="multipart/form-data" action="./js/ajaximage.php">
+				<input type="file" name="photoimg" id="photoimg" />
+				</form><div id="preview">
+				</div>';
+	
     $form .=  "<form enctype=\"multipart/form-data\" action=\"\" method=\"post\" >";    
 
     foreach ($result as $entry) {
@@ -83,7 +89,8 @@ function db_createNewArticleForm ()
                             <option>PHP</option>
                             <option>HTML</option>
                             <option>CSS</option>
-                            <option>APACHE</option>                                        
+                            <option>APACHE</option>
+							<option>PERL</option>
                         </select>";
         } elseif ($entry->name == "date"){
             //$form .= "<label for=\"$entry->name\">$entry->name</label>";

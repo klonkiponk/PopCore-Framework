@@ -29,8 +29,10 @@
 	    $geshi->enable_classes();
 	    $geshi->enable_keyword_links(false);
 	    
+		
+		//NOTES -- delete the surrounding div, not neccessary--- try around with the HEADER AND PRE TABLE THING
 	    $geshi->enable_line_numbers(GESHI_NORMAL_LINE_NUMBERS);
-	    
+	    //$geshi->set_header_type(GESHI_HEADER_PRE_TABLE); 
 	    $return = "<div class='geshi'>";
 	    $return .= $geshi->parse_code();
 	    $return .= "</div>";					       

@@ -20,10 +20,12 @@
         <?php        
             if (!empty($editform)){
                 echo $editform;
-            } else { 
+            } elseif (!empty($content)) {
+				echo $content;
+			} else {
             if (!empty($_GET)) {
                 $sql = "SELECT name,content,uid,code,php_code,code_type,date,image";
-                $sql .= " FROM page_content WHERE page = {$_GET['id']}";                       
+                $sql .= " FROM page_content WHERE page = {$_GET['id']} ORDER BY uid";                       
                 $pagecontent = $GLOBALS['DB']->query( $sql );
             }   
             while ($row = $pagecontent->fetch_array()){
@@ -46,21 +48,26 @@
                 
                 switch($row['code_type']) {
                     case "CSS":
-                            $row['code_type'] = "text/css";
+                            $row['code_type'] = "css";
                         break;
 					case "HTML":
-							$row['code_type'] = "text/html";
+							$row['code_type'] = "html5";
 						break;
 					case "APACHE":
-							$row['code_type'] = "text/x-sh";
+							$row['code_type'] = "apache";
+						break;
+					case "PERL":
+							$row['code_type'] = "perl";
 						break;
                     default:
-                            $row['code_type'] = "text/x-php";
+                            $row['code_type'] = "php";
                         break;
                 }
                 
                   
-                if(!empty($row['code'])){echo "<label><h4>SOURCE CODE:</h4></label>";echo con_createSyntaxHighlight($row['code'],$row['code_type'],'code');}
+                if(!empty($row['code'])){
+					echo con_CreateSyntax($row['code'],$row['code_type']);
+				}
                 if (isset($_SESSION['loggedin'])){
                     if ($_SESSION['role'] == 9) { //Funktionen nur fuer Admins freischalten
                         echo "<form action=\"\" method=\"post\" style=\"text-align:right;\">
@@ -86,9 +93,6 @@
             }
             }
             }
-            if (!empty($content)) {
-            echo $content;
-            }
         ?>
     </section><?php //CONTENT DIV end ?>
     <footer>
@@ -101,4 +105,5 @@
 	<?php sys_includeAdditionalScripts() //MEANT FOR jQUERY or ELSE ?>
     <?php if(!empty($message)){echo $message;}?>
 </body>
+</html></body>
 </html>

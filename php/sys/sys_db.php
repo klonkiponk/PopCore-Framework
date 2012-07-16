@@ -1,15 +1,5 @@
 <?php
 
-
-
-
-/**
- * sys_createEditFormForPageContent function.
- * 
- * @access public
- * @param mixed $_POST
- * @return void
- */
 function sys_createEditFormForPageContent()
 {
     $table = $_POST['table'];
@@ -44,11 +34,17 @@ function sys_createEditFormForPageContent()
                 $return .= "<label for=\"$key\">$key</label>";
                 //$return .= con_createSyntaxHighlight($value,'text/html','content');
 				//$return .= con_createRTE ($value, $key);
+				$value = preg_replace("/''/", "'", $value);
 				$return .= "<textarea class='markItUp' name=\"$key\">$value</textarea>";
 				break;
             case "code":
-                $return .= "<label for=\"$key\">Code</label>";
-                $return .= con_createSyntaxHighlight($value,'text/html','code');
+                $return .= "<label for=\"$key\">$key</label>";
+                //$return .= con_createSyntaxHighlight($value,'text/html','content');
+				//$return .= con_createRTE ($value, $key);
+				$value = preg_replace("/''/", "'", $value);
+				$return .= "<textarea class='markItUp' name=\"$key\">$value</textarea>";
+				//$return .= "<label for=\"$key\">Code</label>";
+                //$return .= con_createSyntaxHighlight($value,'text/html','code');		
                 break;
             case "code_type":
                 $return .= "<label for=\"$key\">Code</label>";
@@ -56,7 +52,9 @@ function sys_createEditFormForPageContent()
                 if ($value == "PHP") {$return .= "selected";}
                 $return .= " >PHP</option><option ";
                 if ($value == "HTML") {$return .= "selected";}
-                $return .= " >HTML</option><option ";                             
+                $return .= " >HTML</option><option ";
+				if ($value == "PERL") {$return .= "selected";}
+                $return .= " >PERL</option><option "; 				
                 if ($value == "CSS") {$return .= "selected";}
                 $return .= " >CSS</option><option ";
                 if ($value == "APACHE") {$return .= "selected";}

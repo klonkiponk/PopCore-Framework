@@ -1,4 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Arizonia);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -93,9 +92,16 @@ section, header {
 body {
   font-family: "UbuntuLightRegular", Verdana, Arial, Helvetica, sans-serif; }
 
-pre {
-  font-family: "UbuntuMonoRegular", monotype; }
+pre, textarea {
+  font-family: "UbuntuMonoRegular", monotype;
+  font-size: 1em;
+}
 
+span.tag {
+	font-weight:bold;
+	color:fuchsia;
+}  
+  
 /**************************************\
 GESHI - (CODE WITH SYNTAX HIGHLIGHTING)
 \**************************************/
@@ -118,7 +124,7 @@ CONTENT
 HEADINGS
 \**********************************/
 h1 {
-  font-family: Arizonia; }
+}
 
 /**********************************\
 LINKS
@@ -462,11 +468,12 @@ section {
       -moz-box-shadow: inset white 0px 0px 2px;
       box-shadow: inset white 0px 0px 2px; }
       #globalnav li.search span {
-        margin-top: 9px;
-        display: block; }
+        margin-top: 5px;
+        display: block;
+	  }
       #globalnav li.search form input[type=search] {
-        background-color: #767676;
-        border: 1px solid #555;
+        /*background-color: #767676;*/
+        /*border: 1px solid #555;*/
         -webkit-border-radius: 15px;
         -moz-border-radius: 15px;
         -ms-border-radius: 15px;
@@ -474,18 +481,18 @@ section {
         border-radius: 15px;
         box-sizing: border-box;
         color: #fff;
-        width: 150px;
+        width: 140px;
         padding: 3px;
         -webkit-box-shadow: 0px 1px 3px #333333 inset;
         -moz-box-shadow: 0px 1px 3px #333333 inset;
         box-shadow: 0px 1px 3px #333333 inset; }
         #globalnav li.search form input[type=search]:focus {
-          -webkit-box-shadow: 0px 1px 3px #777777 inset;
+          /*-webkit-box-shadow: 0px 1px 3px #777777 inset;
           -moz-box-shadow: 0px 1px 3px #777777 inset;
-          box-shadow: 0px 1px 3px #777777 inset;
+          box-shadow: 0px 1px 3px #777777 inset;*/
           background: #ffffff;
-          width: 160px;
-          border: 1px solid #ccc;
+          width: 140px;
+          /*border: 1px solid #ccc;*/
           color: #333; }
   #globalnav:after {
     content: ".";
@@ -1855,7 +1862,7 @@ pre.print_r:after {
 /**************************************\
 GESHI - (CODE WITH SYNTAX HIGHLIGHTING)
 \**************************************/
-pre.php:after, pre.html5:after, pre.css:after {
+pre.php:after, pre.html5:after, pre.css:after, pre.apache:after, pre.perl:after{
   position: absolute;
   top: 20px;
   right: -50px;
@@ -1863,7 +1870,6 @@ pre.php:after, pre.html5:after, pre.css:after {
   height: 25px;
   line-height: 25px;
   font-size: 1.2em;
-  font-weight: bold;
   color: #fff;
   content: "CODE";
   text-shadow: #999999 1px 1px 1px;
@@ -1931,7 +1937,7 @@ pre.php:after, pre.html5:after, pre.css:after {
     .geshi pre.php .st_h {
       color: green; }
   .geshi pre.html5:after {
-    content: "HTML5"; }
+    content: "HTML"; }
   .geshi pre.html5 .imp {
     font-weight: bold;
     color: orange; }
@@ -1968,7 +1974,7 @@ pre.php:after, pre.html5:after, pre.css:after {
   .geshi pre.css {
     color: black; }
     .geshi pre.css:after {
-      content: "SASS"; }
+      content: "CSS"; }
     .geshi pre.css .imp {
       font-weight: bold;
       color: red; }

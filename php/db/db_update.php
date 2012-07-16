@@ -69,9 +69,12 @@ function db_updateDb ()
 	        	break;
 			case "content":
 				//$value = $GLOBALS['DB']->real_escape_string($value);
+				$value = preg_replace("/'/", "''", $value);
+				break;
+			case "code":
+				$value = preg_replace("/'/", "''", $value);
 				break;
         }
-        
         $sql .= "$key='$value',";
     }
     //cut off commata
@@ -84,5 +87,6 @@ function db_updateDb ()
     //con_preFormat($sql); //
     
     //Perform Query
+	
     return db_performWritingQuery ($sql);
 }

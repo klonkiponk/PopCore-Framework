@@ -68,7 +68,7 @@ function con_createScriptNavigation ()
 	//DEFINITIONS
 	
 	#SQL for the Topics
-	$sql = "SELECT pid,name FROM pages WHERE sub = 0 and deleted = 0 and permission = 0 AND type < 300";
+	$sql = "SELECT pid,name FROM pages WHERE sub = 0 and deleted = 0 and permission = 0 AND type < 300 ORDER BY pid";
 	
 	//DEFINITIONS END
 	$return = '';		 
@@ -147,7 +147,7 @@ function con_createScriptContents ()
 
 		
 																		//PRINT CONTENT FROM THE CHAPTER PAGE
-		$sqlChapterArticles = "SELECT * FROM page_content WHERE page=$pid";
+		$sqlChapterArticles = "SELECT * FROM page_content WHERE page=$pid ORDER BY uid";
 		$chapterArticles = $GLOBALS['DB']->query($sqlChapterArticles);
 
 		while ($chapterArticle = $chapterArticles->fetch_array()){
@@ -166,7 +166,7 @@ function con_createScriptContents ()
 					
 																										//ARTICLES
 					$return .= "";
-					$sql3 = "SELECT * FROM page_content WHERE page = {$section['pid']}";
+					$sql3 = "SELECT * FROM page_content WHERE page = {$section['pid']} ORDER BY uid";
 					$articles = $GLOBALS['DB']->query($sql3);
 					// -- DEBUG -- //
 					//con_preFormat($content);
@@ -183,7 +183,7 @@ function con_createScriptContents ()
 							$return .= "\n\n\n<section class='subSection' id='subSection-{$subSection['pid']}'><h3>{$subSection['name']}</h3>\n";
 							
 							
-							$sqlSubSectionArticles = "SELECT * FROM page_content WHERE page = {$subSection['pid']}";
+							$sqlSubSectionArticles = "SELECT * FROM page_content WHERE page = {$subSection['pid']} ORDER BY uid";
 							$articles = $GLOBALS['DB']->query($sqlSubSectionArticles);
 							while ($article = $articles->fetch_array()) {
 								$return .= con_createArticle($article);
@@ -213,6 +213,11 @@ function con_createScriptCss()
 
 function con_createArticle($article)
 {
+
+/**************************************\
+			  ARTICLES
+\**************************************/	
+
 	$article['content'] = con_replaceUmlaute($article['content']);
 	$article['name'] = con_replaceUmlaute($article['name']);
 	$return = "
@@ -237,7 +242,7 @@ function con_createArticle($article)
 		 		break;	
 		}
 
-		$article['code'] = con_CreateSyntax($article['content'],$article['code_type']);
+		$article['code'] = con_CreateSyntax($article['code'],$article['code_type']);
 				
 		$return .= "
 				<caption>Listing</caption>

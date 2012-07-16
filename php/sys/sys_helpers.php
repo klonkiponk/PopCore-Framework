@@ -64,28 +64,6 @@ function con_createPageTitle ($id)
  * @param string $name (default: "code")
  * @return void
  */
-function con_createSyntaxHighlight ($content = "",$mode = "text/html",$name = "code")
-{
-    if (!isset($GLOBALS['CodeCount'])){
-        $GLOBALS['CodeCount'] = 1;
-    }
-    $return = "<textarea id='code-".$GLOBALS['CodeCount']."' cols='85' rows='10' name='$name'>$content</textarea>";
-
-    $return .= '<script>
-        var editor = CodeMirror.fromTextArea(document.getElementById("code-'.$GLOBALS['CodeCount'].'"), {
-        lineNumbers: true,
-        matchBrackets: true,
-        mode: "'.$mode.'",
-        indentUnit: 4,
-        indentWithTabs: false,
-        enterMode: "keep",
-        lineWrapping: true,
-        tabMode: "shift"
-        });
-        </script>';
-        $GLOBALS['CodeCount'] ++;
-    return $return;    
-}
 
 function con_preFormat ($content) 
 {

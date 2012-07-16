@@ -20,7 +20,7 @@ $path = "../img/";
 								{
 								
 									echo "<img src='img/".$actual_image_name."'  class='preview'><br>";
-									echo "<form><input class='preview' type='text' value='img/".$actual_image_name."'></form>";
+									echo "<form><input class='preview' type='text' value='./img/".$actual_image_name."'></form>";
 								}
 							else
 								echo "failed";

@@ -36,9 +36,16 @@ function db_writeToDb ()
                 break;
             case "content":
                 //$value = $GLOBALS['DB']->real_escape_string($value);
-				$sql .= "'$value',";
+				$sql .= "'";
+				$sql .= preg_replace("/'/", "''", $value);
+				$sql .= "',";
                 break;
-            default:
+            case "code":
+				$sql .= "'";
+				$sql .= preg_replace("/'/", "''", $value);
+				$sql .= "',";				
+				break;
+			default:
                 $value = html_entity_decode($value);
                 $sql .= "'$value',";
         }//end of switch
