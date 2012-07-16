@@ -46,16 +46,7 @@ html {
 
 
 
-@mixin grayGradientHover {
-	background: rgb(71,71,71); /* Old browsers */
-	background: -moz-linear-gradient(top,  rgba(71,71,71,1) 0%, rgba(60,60,60,1) 50%, rgba(44,44,44,1) 51%, rgba(71,71,71,1) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(71,71,71,1)), color-stop(50%,rgba(60,60,60,1)), color-stop(51%,rgba(44,44,44,1)), color-stop(100%,rgba(71,71,71,1))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  rgba(71,71,71,1) 0%,rgba(60,60,60,1) 50%,rgba(44,44,44,1) 51%,rgba(71,71,71,1) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  rgba(71,71,71,1) 0%,rgba(60,60,60,1) 50%,rgba(44,44,44,1) 51%,rgba(71,71,71,1) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  rgba(71,71,71,1) 0%,rgba(60,60,60,1) 50%,rgba(44,44,44,1) 51%,rgba(71,71,71,1) 100%); /* IE10+ */
-	background: linear-gradient(top,  rgba(71,71,71,1) 0%,rgba(60,60,60,1) 50%,rgba(44,44,44,1) 51%,rgba(71,71,71,1) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#474747', endColorstr='#474747',GradientType=0 ); /* IE6-9 */
-}
+
 
 
 @mixin lightBlueGradient {
@@ -214,15 +205,7 @@ $textShadowColor: #999;
   	   -o-transition: $value $time $animation;
   	   	  transition: $value $time $animation;	
 }
-@mixin transitionMenu{
-	$value:all;
-	$time:0.2s;
-	$animation:ease;
-  -webkit-transition: $value $time $animation;
-  	 -moz-transition: $value $time $animation;
-  	   -o-transition: $value $time $animation;
-  	   	  transition: $value $time $animation;		
-}
+
 
 @mixin rotation ($value: 7.5deg) {
   -webkit-transform: rotate($value);  // Saf3.1+, Chrome

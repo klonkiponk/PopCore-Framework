@@ -152,7 +152,7 @@
         //define the width - important for centering the menu above the content;
         $width = $rootPagesCount * 108;
         $width = $width -1;
-        $width = $width + 180;
+        $width = $width + 190;
         $opening = "<nav id='globalheader' style='width:{$width}px'><ul id='globalnav'>\n";
         $opening .= $menu;    
         echo $opening; #change it to a returning function instead of self-echoing

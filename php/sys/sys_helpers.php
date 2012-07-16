@@ -88,7 +88,7 @@ function sys_createHead ($author = "Insert Author via HTML Template",$descriptio
     echo "<meta charset=\"UTF-8\">\n";
     echo "<meta name=\"description\" content=\"$description\">\n";
     echo "<meta name='author' content='$author'>\n";
-    sys_includeCss('css');
+    echo sys_includeCss();
     echo "</head>\n";
 }
 function sys_includeAdditionalScripts ()
@@ -126,22 +126,12 @@ function sys_includeAdditionalScripts ()
     ';
 }
 
-function sys_includeCss ($path = "css")
+function sys_includeCss ()
 {
-    $dir = opendir($path);
-    while (false !== ($file = readdir($dir))){
-        if ($file != "." && $file != ".."){
-            $type = explode(".",$file);
-            if ($type[1] == "css"){
-                if ($type[0] == "print"){
-                    echo "<link rel='stylesheet' type='text/css' media='print' href='$path/$file' />\n";
-                } else {
-                    echo "<link rel='stylesheet' type='text/css' href='$path/$file' />\n";
-                }
-            }   
-        }           
-    }
-    closedir($dir);
+    $return  = "<link rel='stylesheet' type='text/css' media='print' href='css/print.css' />\n";
+   	$return .= "<link rel='stylesheet' type='text/css' href='css/style.css' />\n";
+   	$return .= "<link rel='stylesheet' type='text/css' href='css/addition.css' />\n";
+    return $return;
 }
 
 function sys_performLogin ($username,$password)

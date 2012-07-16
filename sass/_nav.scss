@@ -1,7 +1,14 @@
-@mixin navActive {
-	@include grayGradientHover;
-	//@include shadowMenuDark;
+@mixin grayGradientHover {
+	background: rgb(71,71,71); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(71,71,71,1) 0%, rgba(60,60,60,1) 50%, rgba(44,44,44,1) 51%, rgba(71,71,71,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(71,71,71,1)), color-stop(50%,rgba(60,60,60,1)), color-stop(51%,rgba(44,44,44,1)), color-stop(100%,rgba(71,71,71,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(71,71,71,1) 0%,rgba(60,60,60,1) 50%,rgba(44,44,44,1) 51%,rgba(71,71,71,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(71,71,71,1) 0%,rgba(60,60,60,1) 50%,rgba(44,44,44,1) 51%,rgba(71,71,71,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(71,71,71,1) 0%,rgba(60,60,60,1) 50%,rgba(44,44,44,1) 51%,rgba(71,71,71,1) 100%); /* IE10+ */
+	background: linear-gradient(top,  rgba(71,71,71,1) 0%,rgba(60,60,60,1) 50%,rgba(44,44,44,1) 51%,rgba(71,71,71,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#474747', endColorstr='#474747',GradientType=0 ); /* IE6-9 */
 }
+
 @mixin shadowMenu {
 	//@include box-shadow(1px 1px 1px #333, inset 0px 0px 1px #fff);
 }
@@ -26,6 +33,16 @@
 	 					inset $color2 $offset2 $blur2;
 	
 }
+
+@mixin transitionMenu{
+	$value:all;
+	$time:0.2s;
+	$animation:ease;
+  -webkit-transition: $value $time $animation;
+  	 -moz-transition: $value $time $animation;
+  	   -o-transition: $value $time $animation;
+  	   	  transition: $value $time $animation;		
+}
 #globalheader {
 	position:relative;
 	display:block;
@@ -33,15 +50,10 @@
 	margin:18px auto;
 	text-align:left;
 	z-index:1;
-	ul {
-		@include box-shadow(1px 1px 1px #333);
-	}
 }
 #globalnav {
 	@include border-radius(5px);
 	font-size:0.8em;
-	//border:1px solid #333;
-
 				
 	ul.section { //section menu
 		position: absolute;
@@ -79,8 +91,7 @@
 		background-color:#767676;
 		@include filter-gradient(#767676, #494949, vertical);
 		@include background-image(linear-gradient(top, #767676 0%, #636363 50%, #494949 51%,#767676 100%));
-		@include shadowMenu;
-		@include transitionMenu;
+//		@include transitionMenu;
 		@include text-shadow(#333 1px 1px 0px);
 		@include box-shadow(inset #fff 0px 0px 2px);
 		width:107px;
@@ -94,21 +105,18 @@
 		   	margin-top: 11px;
 			display: block;
 		}
-		&:hover, &.active, &:focus {
+		&:hover, &.active, &:focus,&.sectionActive, &.subSectionActive {
 		    @include grayGradientHover;
-            @include box-shadow(inset #555 0px 0px 20px);
-		}
-		&.sectionActive, &.subSectionActive {
-		    @include grayGradientHover;
-            @include box-shadow(inset #555 0px 0px 20px);
+    		@include box-shadow(0px 0px 0px);
 		}
 	} 
 	li {
+		@include box-shadow(1px 1px 1px #333);
 		list-style: none;
 	    float: left;
 	    position: relative;
 		text-align: center;
-		&:first-child a.root{
+		&:first-child, &:first-child a.root {
 			@include roundedLeft;
 			border-left:0px;
 		}
@@ -137,51 +145,34 @@
 		    background-color:#767676;
 		    @include filter-gradient(#767676, #494949, vertical);
 		    @include background-image(linear-gradient(top, #767676 0%, #636363 50%, #494949 51%,#767676 100%));
-	    	
-	    	height:36px;
+	    	height:26px;
 	    	padding-left: 10px;
 	    	padding-right: 10px;
+	    	padding-top: 10px;
 			@include roundedRight;
 			@include text-shadow(#333 1px 1px 0px);
-			@include box-shadow(inset #fff 0px 0px 2px);
-			
-    		span {
-	    		margin-top: 9px;
-	    		display: block;
-	    	}
+			@include box-shadow(inset #fff 0px 0px 2px,1px 1px 1px #333);
+
 	    	form {
 		    	input[type=search] {
 				    
-				    background-color:#767676;
 				    border:1px solid #555;
 				    
 				    @include border-radius(15px);
 				    
+				    
+				    @include transition-property(width);
+				    @include transition-duration(0.5s);
+				    
+				    color:#ccc;
 				    box-sizing: border-box;
-				    
-				    //   -moz-appearance:none;
-				    //-webkit-appearance:none;
-				    color:#fff;
-				    
-				    width:150px;
+				    width:159px;
 				    padding:3px;
-				    @include box-shadow(0px 1px 3px #333 inset);
 				    &:focus {
-				    	@include box-shadow(0px 1px 3px #777 inset);
-					    background: #ffffff;
-					    width:160px;
-					    border:1px solid #ccc;
 					    color:#333;
 				    }
 			    }
 		    }
 		}
-	}
-	&:after {
-		content:".";
-		display:block;
-		height:0;
-		clear:both;
-		visibility:hidden;
-	}          	
+	}        	
 }

@@ -130,20 +130,20 @@ time:before {
 
 @font-face {
   font-family: 'SymbolFont';
-  src: url("websymbols-regular-webfont.eot");
-  src: url("websymbols-regular-webfont.eot?#iefix") format("embedded-opentype"), url("websymbols-regular-webfont.woff") format("woff"), url("websymbols-regular-webfont.ttf") format("truetype"), url("websymbols-regular-webfont.svg#webfont") format("svg"); }
+  src: url("./fonts/websymbols-regular-webfont.eot");
+  src: url("./fonts/websymbols-regular-webfont.eot?#iefix") format("embedded-opentype"), url("./fonts/websymbols-regular-webfont.woff") format("woff"), url("./fonts/websymbols-regular-webfont.ttf") format("truetype"), url("./fonts/websymbols-regular-webfont.svg#webfont") format("svg"); }
 
 @font-face {
   font-family: 'UbuntuLightRegular';
-  src: url("ubuntu-light-webfont.eot");
-  src: url("ubuntu-light-webfont.eot?#iefix") format("embedded-opentype"), url("ubuntu-light-webfont.woff") format("woff"), url("ubuntu-light-webfont.ttf") format("truetype");
+  src: url("./fonts/ubuntu-light-webfont.eot");
+  src: url("./fonts/ubuntu-light-webfont.eot?#iefix") format("embedded-opentype"), url("./fonts/ubuntu-light-webfont.woff") format("woff"), url("./fonts/ubuntu-light-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'UbuntuMonoRegular';
-  src: url("ubuntumono-regular-webfont.eot");
-  src: url("ubuntumono-regular-webfont.eot?#iefix") format("embedded-opentype"), url("ubuntumono-regular-webfont.woff") format("woff"), url("ubuntumono-regular-webfont.ttf") format("truetype");
+  src: url("./fonts/ubuntumono-regular-webfont.eot");
+  src: url("./fonts/ubuntumono-regular-webfont.eot?#iefix") format("embedded-opentype"), url("./fonts/ubuntumono-regular-webfont.woff") format("woff"), url("./fonts/ubuntumono-regular-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
@@ -272,6 +272,14 @@ footer, .title {
 section {
   position: relative; }
 
+.breadCrumb {
+  color: #777; }
+  .breadCrumb a {
+    color: #333;
+    text-decoration: none; }
+    .breadCrumb a:hover {
+      color: orange; }
+
 /**************************************\
 				ANIMATIONS
 \**************************************/
@@ -282,10 +290,6 @@ section {
   margin: 18px auto;
   text-align: left;
   z-index: 1; }
-  #globalheader ul {
-    -webkit-box-shadow: 1px 1px 1px #333333;
-    -moz-box-shadow: 1px 1px 1px #333333;
-    box-shadow: 1px 1px 1px #333333; }
 
 #globalnav {
   -webkit-border-radius: 5px;
@@ -345,10 +349,6 @@ section {
     background-image: -o-linear-gradient(top, #767676 0%, #636363 50%, #494949 51%, #767676 100%);
     background-image: -ms-linear-gradient(top, #767676 0%, #636363 50%, #494949 51%, #767676 100%);
     background-image: linear-gradient(top, #767676 0%, #636363 50%, #494949 51%, #767676 100%);
-    -webkit-transition: all 0.2s ease;
-    -moz-transition: all 0.2s ease;
-    -o-transition: all 0.2s ease;
-    transition: all 0.2s ease;
     text-shadow: #333333 1px 1px 0px;
     -webkit-box-shadow: inset white 0px 0px 2px;
     -moz-box-shadow: inset white 0px 0px 2px;
@@ -363,7 +363,7 @@ section {
     #globalnav a span {
       margin-top: 11px;
       display: block; }
-    #globalnav a:hover, #globalnav a.active, #globalnav a:focus {
+    #globalnav a:hover, #globalnav a.active, #globalnav a:focus, #globalnav a.sectionActive, #globalnav a.subSectionActive {
       background: #474747;
       /* Old browsers */
       background: -moz-linear-gradient(top, #474747 0%, #3c3c3c 50%, #2c2c2c 51%, #474747 100%);
@@ -380,30 +380,13 @@ section {
       /* W3C */
       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#474747', endColorstr='#474747',GradientType=0 );
       /* IE6-9 */
-      -webkit-box-shadow: inset #555555 0px 0px 20px;
-      -moz-box-shadow: inset #555555 0px 0px 20px;
-      box-shadow: inset #555555 0px 0px 20px; }
-    #globalnav a.sectionActive, #globalnav a.subSectionActive {
-      background: #474747;
-      /* Old browsers */
-      background: -moz-linear-gradient(top, #474747 0%, #3c3c3c 50%, #2c2c2c 51%, #474747 100%);
-      /* FF3.6+ */
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #474747), color-stop(50%, #3c3c3c), color-stop(51%, #2c2c2c), color-stop(100%, #474747));
-      /* Chrome,Safari4+ */
-      background: -webkit-linear-gradient(top, #474747 0%, #3c3c3c 50%, #2c2c2c 51%, #474747 100%);
-      /* Chrome10+,Safari5.1+ */
-      background: -o-linear-gradient(top, #474747 0%, #3c3c3c 50%, #2c2c2c 51%, #474747 100%);
-      /* Opera 11.10+ */
-      background: -ms-linear-gradient(top, #474747 0%, #3c3c3c 50%, #2c2c2c 51%, #474747 100%);
-      /* IE10+ */
-      background: linear-gradient(top, #474747 0%, #3c3c3c 50%, #2c2c2c 51%, #474747 100%);
-      /* W3C */
-      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#474747', endColorstr='#474747',GradientType=0 );
-      /* IE6-9 */
-      -webkit-box-shadow: inset #555555 0px 0px 20px;
-      -moz-box-shadow: inset #555555 0px 0px 20px;
-      box-shadow: inset #555555 0px 0px 20px; }
+      -webkit-box-shadow: 0px 0px 0px;
+      -moz-box-shadow: 0px 0px 0px;
+      box-shadow: 0px 0px 0px; }
   #globalnav li {
+    -webkit-box-shadow: 1px 1px 1px #333333;
+    -moz-box-shadow: 1px 1px 1px #333333;
+    box-shadow: 1px 1px 1px #333333;
     list-style: none;
     float: left;
     position: relative;
@@ -411,7 +394,7 @@ section {
     /**************************************\
     				SEARCH
     \**************************************/ }
-    #globalnav li:first-child a.root {
+    #globalnav li:first-child, #globalnav li:first-child a.root {
       border-top-left-radius: 4px;
       -moz-border-radius-topleft: 4px;
       border-bottom-left-radius: 4px;
@@ -439,49 +422,41 @@ section {
       background-image: -o-linear-gradient(top, #767676 0%, #636363 50%, #494949 51%, #767676 100%);
       background-image: -ms-linear-gradient(top, #767676 0%, #636363 50%, #494949 51%, #767676 100%);
       background-image: linear-gradient(top, #767676 0%, #636363 50%, #494949 51%, #767676 100%);
-      height: 36px;
+      height: 26px;
       padding-left: 10px;
       padding-right: 10px;
+      padding-top: 10px;
       border-top-right-radius: 4px;
       -moz-border-radius-topright: 4px;
       border-bottom-right-radius: 4px;
       -moz-border-radius-bottomright: 4px;
       text-shadow: #333333 1px 1px 0px;
-      -webkit-box-shadow: inset white 0px 0px 2px;
-      -moz-box-shadow: inset white 0px 0px 2px;
-      box-shadow: inset white 0px 0px 2px; }
-      #globalnav li.search span {
-        margin-top: 9px;
-        display: block; }
+      -webkit-box-shadow: inset white 0px 0px 2px, 1px 1px 1px #333333;
+      -moz-box-shadow: inset white 0px 0px 2px, 1px 1px 1px #333333;
+      box-shadow: inset white 0px 0px 2px, 1px 1px 1px #333333; }
       #globalnav li.search form input[type=search] {
-        background-color: #767676;
         border: 1px solid #555;
         -webkit-border-radius: 15px;
         -moz-border-radius: 15px;
         -ms-border-radius: 15px;
         -o-border-radius: 15px;
         border-radius: 15px;
+        -webkit-transition-property: width;
+        -moz-transition-property: width;
+        -ms-transition-property: width;
+        -o-transition-property: width;
+        transition-property: width;
+        -webkit-transition-duration: 0.5s;
+        -moz-transition-duration: 0.5s;
+        -ms-transition-duration: 0.5s;
+        -o-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+        color: #ccc;
         box-sizing: border-box;
-        color: #fff;
-        width: 150px;
-        padding: 3px;
-        -webkit-box-shadow: 0px 1px 3px #333333 inset;
-        -moz-box-shadow: 0px 1px 3px #333333 inset;
-        box-shadow: 0px 1px 3px #333333 inset; }
+        width: 159px;
+        padding: 3px; }
         #globalnav li.search form input[type=search]:focus {
-          -webkit-box-shadow: 0px 1px 3px #777777 inset;
-          -moz-box-shadow: 0px 1px 3px #777777 inset;
-          box-shadow: 0px 1px 3px #777777 inset;
-          background: #ffffff;
-          width: 160px;
-          border: 1px solid #ccc;
           color: #333; }
-  #globalnav:after {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden; }
 
 /**************************************\
 			     ASIDE
@@ -505,8 +480,8 @@ aside {
   -webkit-box-shadow: rgba(0, 0, 0, 0.5) 1px 1px 4px;
   box-shadow: rgba(0, 0, 0, 0.5) 1px 1px 4px;
   position: absolute;
-  top: 10px;
-  right: -117px;
+  top: -12px;
+  right: -140px;
   z-index: 9997; }
   aside h1 {
     margin-top: 10px;
@@ -565,7 +540,10 @@ aside {
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
   -o-border-radius: 2px;
-  border-radius: 2px; }
+  border-radius: 2px;
+  -webkit-box-shadow: 1px 1px 1px #333333;
+  -moz-box-shadow: 1px 1px 1px #333333;
+  box-shadow: 1px 1px 1px #333333; }
 
 .login_form label {
   text-shadow: 1px 1px 1px #999999, 2px 2px 1px white;
@@ -1040,15 +1018,14 @@ input[type=text],
 \**************************************/
 h1 {
   font-size: 2em;
-  text-shadow: 1px 1px 0px #f2f2f2, 2px 2px 0px #777777;
+  text-shadow: 1px 1px 0px #f2f2f2, 2px 2px 5px #333333;
   padding: 0 0 2px 0;
   margin: 0 0 0 0;
   text-transform: uppercase;
   -webkit-box-shadow: white 0px 2px 2px;
   -moz-box-shadow: white 0px 2px 2px;
   box-shadow: white 0px 2px 2px;
-  line-height: 2em;
-  font-weight: bold; }
+  line-height: 2em; }
 
 h2 {
   font-size: 1.3em;

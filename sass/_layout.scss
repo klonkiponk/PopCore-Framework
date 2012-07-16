@@ -33,3 +33,13 @@ footer, .title {
 section {
     position:relative;
 }
+.breadCrumb {
+	color:#777;
+	a {
+		color:#333;
+		text-decoration: none;
+		&:hover {
+			color:$AccentColor1;
+		}
+	}
+}

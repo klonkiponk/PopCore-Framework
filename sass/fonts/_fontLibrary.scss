@@ -1,28 +1,28 @@
 @font-face{ 
 	font-family: 'SymbolFont';
-	src: url('websymbols-regular-webfont.eot');
-	src: url('websymbols-regular-webfont.eot?#iefix') format('embedded-opentype'),
-	     url('websymbols-regular-webfont.woff') format('woff'),
-	     url('websymbols-regular-webfont.ttf') format('truetype'),
-	     url('websymbols-regular-webfont.svg#webfont') format('svg');
+	src: url('./fonts/websymbols-regular-webfont.eot');
+	src: url('./fonts/websymbols-regular-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('./fonts/websymbols-regular-webfont.woff') format('woff'),
+	     url('./fonts/websymbols-regular-webfont.ttf') format('truetype'),
+	     url('./fonts/websymbols-regular-webfont.svg#webfont') format('svg');
 }
 
 @font-face {
     font-family: 'UbuntuLightRegular';
-    src: url('ubuntu-light-webfont.eot');
-    src: url('ubuntu-light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('ubuntu-light-webfont.woff') format('woff'),
-         url('ubuntu-light-webfont.ttf') format('truetype');
+    src: url('./fonts/ubuntu-light-webfont.eot');
+    src: url('./fonts/ubuntu-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/ubuntu-light-webfont.woff') format('woff'),
+         url('./fonts/ubuntu-light-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'UbuntuMonoRegular';
-    src: url('ubuntumono-regular-webfont.eot');
-    src: url('ubuntumono-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('ubuntumono-regular-webfont.woff') format('woff'),
-         url('ubuntumono-regular-webfont.ttf') format('truetype');
+    src: url('./fonts/ubuntumono-regular-webfont.eot');
+    src: url('./fonts/ubuntumono-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/ubuntumono-regular-webfont.woff') format('woff'),
+         url('./fonts/ubuntumono-regular-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }

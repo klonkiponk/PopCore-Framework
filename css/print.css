@@ -50,20 +50,20 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 \**************************************/
 @font-face {
   font-family: 'SymbolFont';
-  src: url("./font/websymbols-regular-webfont.eot");
-  src: url("./font/websymbols-regular-webfont.eot?#iefix") format("embedded-opentype"), url("./font/websymbols-regular-webfont.woff") format("woff"), url("./font/websymbols-regular-webfont.ttf") format("truetype"), url("./font/websymbols-regular-webfont.svg#webfont") format("svg"); }
+  src: url("./css/fonts/websymbols-regular-webfont.eot");
+  src: url("./css/fonts/websymbols-regular-webfont.eot?#iefix") format("embedded-opentype"), url("./css/fonts/websymbols-regular-webfont.woff") format("woff"), url("./css/fonts/websymbols-regular-webfont.ttf") format("truetype"), url("./css/fonts/websymbols-regular-webfont.svg#webfont") format("svg"); }
 
 @font-face {
   font-family: 'UbuntuLightRegular';
-  src: url("./font/ubuntu-light-webfont.eot");
-  src: url("./font/ubuntu-light-webfont.eot?#iefix") format("embedded-opentype"), url("./font/ubuntu-light-webfont.woff") format("woff"), url("./font/ubuntu-light-webfont.ttf") format("truetype");
+  src: url("./css/fonts/ubuntu-light-webfont.eot");
+  src: url("./css/fonts/ubuntu-light-webfont.eot?#iefix") format("embedded-opentype"), url("./css/fonts/ubuntu-light-webfont.woff") format("woff"), url("./css/fonts/ubuntu-light-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'UbuntuMonoRegular';
-  src: url("./font/ubuntumono-regular-webfont.eot");
-  src: url("./font/ubuntumono-regular-webfont.eot?#iefix") format("embedded-opentype"), url("./font/ubuntumono-regular-webfont.woff") format("woff"), url("./font/ubuntumono-regular-webfont.ttf") format("truetype");
+  src: url("./css/fonts/ubuntumono-regular-webfont.eot");
+  src: url("./css/fonts/ubuntumono-regular-webfont.eot?#iefix") format("embedded-opentype"), url("./css/fonts/ubuntumono-regular-webfont.woff") format("woff"), url("./css/fonts/ubuntumono-regular-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 

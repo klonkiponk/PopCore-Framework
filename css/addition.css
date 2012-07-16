@@ -28,11 +28,6 @@ article img {
 	box-shadow: 1px 1px 5px #333;
 }
 
-.breadCrumb {
-	font-weight:bold;
-	color:#6B90D4;
-}
-
 pre {
 	font-family:UbuntuMonoRegular;
 	margin-top:0.8em;

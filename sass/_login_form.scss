@@ -19,6 +19,7 @@
 	@include grayGradient;
 	@include shadowMenu;
 	@include rounded;
+	@include box-shadow(1px 1px 1px #333);
 }
 .login_form label{
 	@include textShadowLight;
