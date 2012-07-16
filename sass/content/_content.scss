@@ -16,6 +16,17 @@
 /**************************************\
 	   STANDARD CONTENT ELEMENTS
 \**************************************/
+pre, textarea {
+  font-family: "UbuntuMonoRegular", monotype;
+  font-size: 1em;
+}
+
+span.tag {
+	font-weight:bold;
+	color:fuchsia;
+}
+
+
 strong {
     font-weight:bold;
 }

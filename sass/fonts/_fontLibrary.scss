@@ -8,16 +8,6 @@
 }
 
 @font-face {
-    font-family: 'BaumansRegular';
-    src: url('baumans-regular-webfont.eot');
-    src: url('baumans-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('baumans-regular-webfont.woff') format('woff'),
-         url('baumans-regular-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
     font-family: 'UbuntuLightRegular';
     src: url('ubuntu-light-webfont.eot');
     src: url('ubuntu-light-webfont.eot?#iefix') format('embedded-opentype'),
@@ -36,5 +26,3 @@
     font-weight: normal;
     font-style: normal;
 }
-
-@import url(http://fonts.googleapis.com/css?family=Arizonia);

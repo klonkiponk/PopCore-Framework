@@ -92,16 +92,9 @@ section, header {
 body {
   font-family: "UbuntuLightRegular", Verdana, Arial, Helvetica, sans-serif; }
 
-pre, textarea {
-  font-family: "UbuntuMonoRegular", monotype;
-  font-size: 1em;
-}
+pre {
+  font-family: "UbuntuMonoRegular", monotype; }
 
-span.tag {
-	font-weight:bold;
-	color:fuchsia;
-}  
-  
 /**************************************\
 GESHI - (CODE WITH SYNTAX HIGHLIGHTING)
 \**************************************/
@@ -123,9 +116,6 @@ CONTENT
 /**********************************\
 HEADINGS
 \**********************************/
-h1 {
-}
-
 /**********************************\
 LINKS
 \**********************************/
@@ -142,13 +132,6 @@ time:before {
   font-family: 'SymbolFont';
   src: url("websymbols-regular-webfont.eot");
   src: url("websymbols-regular-webfont.eot?#iefix") format("embedded-opentype"), url("websymbols-regular-webfont.woff") format("woff"), url("websymbols-regular-webfont.ttf") format("truetype"), url("websymbols-regular-webfont.svg#webfont") format("svg"); }
-
-@font-face {
-  font-family: 'BaumansRegular';
-  src: url("baumans-regular-webfont.eot");
-  src: url("baumans-regular-webfont.eot?#iefix") format("embedded-opentype"), url("baumans-regular-webfont.woff") format("woff"), url("baumans-regular-webfont.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
 
 @font-face {
   font-family: 'UbuntuLightRegular';
@@ -468,12 +451,11 @@ section {
       -moz-box-shadow: inset white 0px 0px 2px;
       box-shadow: inset white 0px 0px 2px; }
       #globalnav li.search span {
-        margin-top: 5px;
-        display: block;
-	  }
+        margin-top: 9px;
+        display: block; }
       #globalnav li.search form input[type=search] {
-        /*background-color: #767676;*/
-        /*border: 1px solid #555;*/
+        background-color: #767676;
+        border: 1px solid #555;
         -webkit-border-radius: 15px;
         -moz-border-radius: 15px;
         -ms-border-radius: 15px;
@@ -481,18 +463,18 @@ section {
         border-radius: 15px;
         box-sizing: border-box;
         color: #fff;
-        width: 140px;
+        width: 150px;
         padding: 3px;
         -webkit-box-shadow: 0px 1px 3px #333333 inset;
         -moz-box-shadow: 0px 1px 3px #333333 inset;
         box-shadow: 0px 1px 3px #333333 inset; }
         #globalnav li.search form input[type=search]:focus {
-          /*-webkit-box-shadow: 0px 1px 3px #777777 inset;
+          -webkit-box-shadow: 0px 1px 3px #777777 inset;
           -moz-box-shadow: 0px 1px 3px #777777 inset;
-          box-shadow: 0px 1px 3px #777777 inset;*/
+          box-shadow: 0px 1px 3px #777777 inset;
           background: #ffffff;
-          width: 140px;
-          /*border: 1px solid #ccc;*/
+          width: 160px;
+          border: 1px solid #ccc;
           color: #333; }
   #globalnav:after {
     content: ".";
@@ -1584,6 +1566,14 @@ article table {
 /**************************************\
 	   STANDARD CONTENT ELEMENTS
 \**************************************/
+pre, textarea {
+  font-family: "UbuntuMonoRegular", monotype;
+  font-size: 1em; }
+
+span.tag {
+  font-weight: bold;
+  color: fuchsia; }
+
 strong {
   font-weight: bold; }
 
@@ -1862,7 +1852,7 @@ pre.print_r:after {
 /**************************************\
 GESHI - (CODE WITH SYNTAX HIGHLIGHTING)
 \**************************************/
-pre.php:after, pre.html5:after, pre.css:after, pre.apache:after, pre.perl:after{
+pre.php:after, pre.html5:after, pre.css:after {
   position: absolute;
   top: 20px;
   right: -50px;
@@ -1870,6 +1860,7 @@ pre.php:after, pre.html5:after, pre.css:after, pre.apache:after, pre.perl:after{
   height: 25px;
   line-height: 25px;
   font-size: 1.2em;
+  font-weight: bold;
   color: #fff;
   content: "CODE";
   text-shadow: #999999 1px 1px 1px;
@@ -1937,7 +1928,7 @@ pre.php:after, pre.html5:after, pre.css:after, pre.apache:after, pre.perl:after{
     .geshi pre.php .st_h {
       color: green; }
   .geshi pre.html5:after {
-    content: "HTML"; }
+    content: "HTML5"; }
   .geshi pre.html5 .imp {
     font-weight: bold;
     color: orange; }
@@ -1974,7 +1965,7 @@ pre.php:after, pre.html5:after, pre.css:after, pre.apache:after, pre.perl:after{
   .geshi pre.css {
     color: black; }
     .geshi pre.css:after {
-      content: "CSS"; }
+      content: "SASS"; }
     .geshi pre.css .imp {
       font-weight: bold;
       color: red; }

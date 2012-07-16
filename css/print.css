@@ -54,13 +54,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   src: url("./font/websymbols-regular-webfont.eot?#iefix") format("embedded-opentype"), url("./font/websymbols-regular-webfont.woff") format("woff"), url("./font/websymbols-regular-webfont.ttf") format("truetype"), url("./font/websymbols-regular-webfont.svg#webfont") format("svg"); }
 
 @font-face {
-  font-family: 'BaumansRegular';
-  src: url("./font/baumans-regular-webfont.eot");
-  src: url("./font/baumans-regular-webfont.eot?#iefix") format("embedded-opentype"), url("./font/baumans-regular-webfont.woff") format("woff"), url("./font/baumans-regular-webfont.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
   font-family: 'UbuntuLightRegular';
   src: url("./font/ubuntu-light-webfont.eot");
   src: url("./font/ubuntu-light-webfont.eot?#iefix") format("embedded-opentype"), url("./font/ubuntu-light-webfont.woff") format("woff"), url("./font/ubuntu-light-webfont.ttf") format("truetype");

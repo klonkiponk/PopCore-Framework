@@ -73,7 +73,6 @@ function sys_createEditFormForPageContent()
         }
     }     
     $return .= "  
-            </br>
             <button type='submit' name='action' value='update' class='button save' >update</button>
             <button type='submit' name='action' value='delete' class='button delete' >delete</button>
             <button type='submit' name='action' value='cancel' class='button spark' >cancel</button>";

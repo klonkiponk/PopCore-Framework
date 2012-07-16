@@ -89,23 +89,16 @@ function sys_createHead ($author = "Insert Author via HTML Template",$descriptio
     echo "<meta name=\"description\" content=\"$description\">\n";
     echo "<meta name='author' content='$author'>\n";
     sys_includeCss('css');
-    echo '<script src="js/CodeMirror/lib/codemirror.js"></script>';
-    echo '<script src="js/CodeMirror/mode/xml/xml.js"></script>';
-    echo '<script src="js/CodeMirror/mode/javascript/javascript.js"></script>';
-    echo '<script src="js/CodeMirror/mode/css/css.js"></script>';
-    echo '<script src="js/CodeMirror/mode/clike/clike.js"></script>';
-    echo '<script src="js/CodeMirror/mode/php/php.js"></script>';
-    echo '<script src="js/CodeMirror/mode/shell/shell.js"></script>';
     echo "</head>\n";
 }
 function sys_includeAdditionalScripts ()
 { 
     echo '
         <script src="./js/libs/jquery-1.7.1.min.js"></script>
-		<script type="text/javascript" src="markitup/jquery.markitup.js"></script>
-		<script type="text/javascript" src="etc/markItUp.js"></script>
-		<link rel="stylesheet" type="text/css" href="markitup/skins/markitup/style.css" />
-		<link rel="stylesheet" type="text/css" href="markitup/sets/html/style.css" />
+		<script type="text/javascript" src="js/markitup/jquery.markitup.js"></script>
+		<script type="text/javascript" src="js/markitup/markItUp.js"></script>
+		<link rel="stylesheet" type="text/css" href="js/markitup/skins/markitup/style.css" />
+		<link rel="stylesheet" type="text/css" href="js/markitup/sets/html/style.css" />
 		<script type="text/javascript" >
 		   $(document).ready(function() {
 			  $(".markItUp").markItUp(mySettings);
