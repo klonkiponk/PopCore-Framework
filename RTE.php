@@ -8,7 +8,7 @@ $_GET['id'] = 3;
         <?php $breadCrumb = con_createNavigation() ?> 
     </header>
 
- 
+ <?php con_preFormat($_SERVER) ?>
   
     <section id="content" role="main">
 

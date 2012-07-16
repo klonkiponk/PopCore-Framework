@@ -147,7 +147,7 @@
             }
         }
         //close the menu
-        $menu .= '<li class="search"><span><form action="" method="post"><input type="search" name="searchString" results=5 placeholder=Search...></input></span><button type="submit" class="sys" name="action" value="search">search</button></form></li>';
+        $menu .= '<li class="search"><form action="'.$_SERVER['REQUEST_URI'].'" method="post"><input type="search" name="searchString" placeholder=Search...><button type="submit" class="sys" name="action" value="search">search</button></form></li>';
         $menu .= "</ul></nav>\n";
         //define the width - important for centering the menu above the content;
         $width = $rootPagesCount * 108;

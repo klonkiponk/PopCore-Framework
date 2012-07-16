@@ -105,5 +105,4 @@
 	<?php sys_includeAdditionalScripts() //MEANT FOR jQUERY or ELSE ?>
     <?php if(!empty($message)){echo $message;}?>
 </body>
-</html></body>
 </html>
