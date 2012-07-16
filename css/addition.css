@@ -51,6 +51,22 @@ span.apachecontainer:after {
 	content: ">"
 }
 
+span.tag:before {
+	content: "<";
+	color:rgba(65, 105, 225, 0.699219);
+	font-weight: normal;
+}
+span.tag:after {
+	content: ">";
+	color:rgba(65, 105, 225, 0.699219);
+	font-weight: normal;
+}
+span.tag {
+	font-family:UbuntuMonoRegular;
+	color:rgb(65, 105, 225);
+	font-weight:bold;
+}
+
 .url {
 	font-family:UbuntuMonoRegular;
 }
@@ -102,28 +118,3 @@ div.emphasize:before {
   content: ".";
   display: none;
   clear: both; }
-
-
-.geshi pre.apache:after {
-    content: "apache";
-}
-.geshi pre.apache .kw2 {
-    color: blue;
-    font-weight: bold;
-}
-.geshi pre.apache .kw3 {
-    color: orange;
-    font-style: italic;
-}
-.geshi pre.apache .kw1 {
-    color: fuchsia;
-    font-style: italic;
-}
-
-.geshi pre.perl:after {
-    content: "perl";
-}
-.geshi pre.perl .de1 {
-    color: blue;
-    font-weight: bold;
-}

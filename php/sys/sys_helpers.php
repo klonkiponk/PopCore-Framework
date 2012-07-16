@@ -170,3 +170,38 @@ function con_createRTE ($content, $name)
 	$oFCKeditor->Value = $content;
 	return $oFCKeditor->create() ;
 }
+
+
+function sys_deleteIntFromArray ($array)
+{
+    foreach ($array as $key=>$value) {
+        if (is_int($key)) {
+            unset($array[$key]);
+        }
+    }
+    return $array;
+}
+
+
+function htmlEntityDecode($array) {
+    foreach ($array as $key=>$value) {
+        $array[$key] = html_entity_decode($value);
+    }
+    return $array;
+}
+
+function con_CreateSyntax($source,$language = 'php')
+{
+    $geshi = new GeSHi($source,$language);
+    $geshi->enable_classes();
+    $geshi->enable_keyword_links(false);
+    
+	
+	//NOTES -- delete the surrounding div, not neccessary--- try around with the HEADER AND PRE TABLE THING
+    $geshi->enable_line_numbers(GESHI_NORMAL_LINE_NUMBERS);
+    $geshi->set_header_type(GESHI_HEADER_PRE_TABLE); 
+    $return = "<div class='geshi'>";
+    $return .= $geshi->parse_code();
+    $return .= "</div>";					       
+    return $return;
+}
