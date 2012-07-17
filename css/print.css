@@ -160,6 +160,22 @@ table {
 pre {
   font-family: UbuntuMonoRegular; }
 
+strong {
+  font-weight: bold; }
+
+em {
+  font-style: italic; }
+
+sub {
+  position: relative;
+  bottom: 0.5em;
+  font-size: 0.8em; }
+
+sup {
+  position: relative;
+  top: 0.3em;
+  font-size: 0.8em; }
+
 /**************************************\
 			  TITLE PAGE
 \**************************************/
@@ -258,6 +274,9 @@ section.chapter {
 
 h1 {
   counter-reset: section; }
+
+h2 {
+  counter-reset: subSection; }
 
 section.section {
   counter-increment: section;

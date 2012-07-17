@@ -166,6 +166,22 @@ table {
 pre {
   font-family: UbuntuMonoRegular; }
 
+strong {
+  font-weight: bold; }
+
+em {
+  font-style: italic; }
+
+sub {
+  position: relative;
+  bottom: 0.5em;
+  font-size: 0.8em; }
+
+sup {
+  position: relative;
+  top: 0.3em;
+  font-size: 0.8em; }
+
 /**************************************\
 			  TITLE PAGE
 \**************************************/
@@ -264,6 +280,9 @@ section.chapter {
 
 h1 {
   counter-reset: section; }
+
+h2 {
+  counter-reset: subSection; }
 
 section.section {
   counter-increment: section;
@@ -708,7 +727,7 @@ der folgenden Kapitel.
 		<article id='article-195'>
 			<h4>geSHi HTML TEST</h4>
 
-			
+			ein <span class="tag">div</span>
 				<caption>Listing</caption>
 				<div class='geshi'><table class="html5"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
 2
@@ -1312,12 +1331,12 @@ In manchen Umgebungen kann es notwendig sein, dass ein Apache-Modul nur dann gel
 Im konkreten Falle des <span class="apachecontainer">IfModule</span>-Kontainers hei&szlig;t das, dass die in einem solchen Kontainer eingeschlossenen Direktiven nur dann ausgef&uuml;hrt werden, wenn [Bedingung] zutrifft. Das Beispiel auf dieser Seite zeigt den <span class="apachecontainer">IfModule</span>-Kontainer, zusammen mit der <span class="apache">DirectoryIndex</span>-Direktive. Diese wird nur dann ausgef&uuml;hrt, wenn das Modul <span class="apache">dir_module</span> geladen wurde.
 </p>
 				<caption>Listing</caption>
-				<div class='geshi'><table class="html5"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
+				<div class='geshi'><table class="apache"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
 2
 3
-</pre></td><td class="de1"><pre class="de1"><span class="sc2">&lt;IfModule dir_module&gt;</span>
-&nbsp; DirectoryIndex index.html
-<span class="sc2">&lt;<span class="sy0">/</span>IfModule&gt;</span></pre></td></tr></tbody></table></div>
+</pre></td><td class="de1"><pre class="de1">&lt;<span class="kw3">IfModule</span> dir_module&gt;
+&nbsp; <span class="kw1">DirectoryIndex</span> index.html
+&lt;/<span class="kw3">IfModule</span>&gt;</pre></td></tr></tbody></table></div>
 			</article>
 		
 
