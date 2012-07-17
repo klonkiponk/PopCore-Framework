@@ -29,8 +29,9 @@ function con_createPDF($return)
 	$file = "./script.html";
 	if ($prince->convert_file($file) == true) {
 		$return = con_createMessage('Script erfolgreich erstellt','green');
-		$return .= "<a style='display:block; color:white' href='./script.pdf' target='_blank'><div class='blackbox'>SCRIPT</div></a>";
-	} else {
+		$return .= "<a style='display:block; color:white' href='./script.pdf' target='_blank'><div class='blackbox'>PDF</div></a>";
+		$return .= "<a style='display:block; color:white' href='./script.html' target='_blank'><div class='blackbox'>HTML (Debug)</div></a>";
+		} else {
 		$return = con_createMessage('Fehler bei der Erstellung des Scripts','red');
 	}
 	return $return;	   

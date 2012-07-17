@@ -8,13 +8,27 @@
     </header>
 
     <section class="title">
-        <h1><?php echo con_createPageTitle($_GET['id']) ?></h1>
+
+			<?php $pageinfo = con_createPageTitle($_GET['id']);
+		
+			$title = $pageinfo['name'];
+			$subtitle = $pageinfo['subtitle']
+		
+			?>
+		<h1><?php echo $title;?></h1>
+		<span class="subtitle"><?php echo $subtitle; ?></span>
         <aside>
-            <?php con_createLogin() ?>
+            <?php con_createLogin();
+				if (isset($_SESSION['loggedin'])){
+					if ($_SESSION['role'] == 9) {
+						echo con_createAdminAsideMenu();
+					}
+				}
+			?>
         </aside>
     </section>
     <footer>
-        <p><?php echo $breadCrumb?> <span class="important"></span></p>
+        <p><?php echo $breadCrumb?></p>
     </footer>
     <section id="content" role="main">
         <?php        
@@ -79,19 +93,12 @@
                     }
                 }
                 echo "</article>";
-            }
-            
-            
-            
-            
-            
-            
-            if (isset($_SESSION['loggedin'])){
-                if ($_SESSION['role'] == 9) {
-                    echo con_createNewArticleButton();
-
-            }
-            }
+            }           
+				if (isset($_SESSION['loggedin'])){
+					if ($_SESSION['role'] == 9) {
+						echo con_createNewArticleButton();
+					}
+				}
             }
         ?>
     </section><?php //CONTENT DIV end ?>

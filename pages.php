@@ -8,9 +8,15 @@
     </header>
 
     <section class="title">
-        <h1><?php echo con_createPageTitle($_GET['id']) ?></h1>
+        <h1></h1>
         <aside>
-            <?php con_createLogin() ?>
+            <?php con_createLogin(); 
+				if (isset($_SESSION['loggedin'])){
+					if ($_SESSION['role'] == 9) {
+						echo con_createAdminAsideMenu();
+					}
+				}
+			?>
         </aside>
     </section>
     <section id="content" role="main">

@@ -157,7 +157,7 @@
         $opening .= $menu;    
         echo $opening; #change it to a returning function instead of self-echoing
 		
-		$breadCrumb = "Sie sind hier: <span class='breadCrumb'>".$breadCrumb['chapter'].$breadCrumb['section'].$breadCrumb['subSection']."</span>";
+		$breadCrumb = "<span class='breadCrumb'>Sie sind hier: ".$breadCrumb['chapter'].$breadCrumb['section'].$breadCrumb['subSection']."</span>";
 		
 		return $breadCrumb;
   }

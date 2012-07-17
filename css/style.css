@@ -1,3 +1,17 @@
+.subtitle {
+	color:#999;
+}
+section.title h1{
+	display:inline;
+	margin-right:25px;
+}
+span.h5 {
+	display:block;
+	border-bottom:1px solid silver;
+	margin-top:1em;
+}
+
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -2062,83 +2076,3 @@ table.php {
   table.php .st_h {
     color: green; }
 
-table.apache {
-  overflow: none;
-  display: block;
-  background: #fff;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px;
-  -webkit-box-shadow: inset -2px -2px 5px #999999, inset 2px 2px 5px #999999;
-  -moz-box-shadow: inset -2px -2px 5px #999999, inset 2px 2px 5px #999999;
-  box-shadow: inset -2px -2px 5px #999999, inset 2px 2px 5px #999999;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  position: relative;
-  margin-top: 0px; }
-  table.apache:after {
-    position: absolute;
-    top: 20px;
-    right: -45px;
-    width: 150px;
-    height: 25px;
-    line-height: 25px;
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #fff;
-    content: "apache";
-    text-shadow: #777777 1px 1px 1px;
-    background-color: #ffb76b;
-    *zoom: 1;
-    filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFFFB76B', endColorstr='#FFFF7F04');
-    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffb76b), color-stop(50%, #ffa73d), color-stop(51%, #ff7c00), color-stop(100%, #ff7f04));
-    background-image: -webkit-linear-gradient(top, #ffb76b 0%, #ffa73d 50%, #ff7c00 51%, #ff7f04 100%);
-    background-image: -moz-linear-gradient(top, #ffb76b 0%, #ffa73d 50%, #ff7c00 51%, #ff7f04 100%);
-    background-image: -o-linear-gradient(top, #ffb76b 0%, #ffa73d 50%, #ff7c00 51%, #ff7f04 100%);
-    background-image: -ms-linear-gradient(top, #ffb76b 0%, #ffa73d 50%, #ff7c00 51%, #ff7f04 100%);
-    background-image: linear-gradient(top, #ffb76b 0%, #ffa73d 50%, #ff7c00 51%, #ff7f04 100%);
-    text-align: center;
-    -webkit-box-shadow: 0px 1px 5px #555555;
-    -moz-box-shadow: 0px 1px 5px #555555;
-    box-shadow: 0px 1px 5px #555555;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg); }
-  table.apache td.ln {
-    font-weight: normal;
-    padding: 0px;
-    padding-right: 3px;
-    text-align: right;
-    border-right: 1px solid silver;
-    margin: 0px;
-    border-top-left-radius: 4px;
-    -moz-border-radius-topleft: 4px;
-    border-bottom-left-radius: 4px;
-    -moz-border-radius-bottomleft: 4px;
-    color: #999; }
-  table.apache pre {
-    margin: 0px; }
-  table.apache a {
-    color: #3c4c72; }
-  table.apache td.de1 pre.de1 {
-    color: #555; }
-  table.apache .br0 {
-    color: black; }
-  table.apache .re0 {
-    color: #318495; }
-  table.apache .sy0, table.apache .sy1 {
-    color: blue; }
-  table.apache .st0 {
-    color: #036a07; }
-  table.apache .co1, table.apache .co2, table.apache .coMULTI {
-    color: #ff7f00; }
-  table.apache .kw1 {
-    color: blue; }
-  table.apache .kw2 {
-    color: blue; }
-  table.apache .st_h {
-    color: green; }

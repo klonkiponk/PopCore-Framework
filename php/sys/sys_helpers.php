@@ -24,6 +24,20 @@ function con_createMessage ($content = "Erfolg", $color = "green")
     return $return;
 }
 
+function con_createAdminAsideMenu ()
+{
+	$return  = "<label>Administration</label>";
+	$return .= "<ul class='adminMenu'>";
+	$return .= "<li><a href='./phpMyAdmin/'>phpMyAdmin</a></li>";
+	$return .= "<li><a href='./pages.php'>Pages</a></li>";
+	$return .= "<li><a href='./user.php'>User</a></li>";
+	$return .= "<li><a href='./script.php'>Script erstellen</a></li>";
+	$return .= "<li><a href='./notes.php'>DEBUG</a></li>";
+	$return .= "</ul>";
+	return $return;
+}
+
+
 function con_createNewArticleButton ()
 {
     return '<form class="margin" action=" " method="post"><button type="submit" name="action" value="newArticle" class="button star">New Article</button></form>';
@@ -49,10 +63,11 @@ function con_createFooter ()
  */
 function con_createPageTitle ($id)
 {
-    $sql = "SELECT name FROM pages WHERE pid = $id";
+    $sql = "SELECT name,subtitle FROM pages WHERE pid = $id";
     $result = $GLOBALS['DB']->query($sql);
     $result = $result->fetch_array();
-    return $result['name'];
+	$return = array('name' => $result["name"], 'subtitle' => $result["subtitle"]);
+	return $return;
 }
 
 /**

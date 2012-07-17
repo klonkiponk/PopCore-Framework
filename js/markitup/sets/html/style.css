@@ -52,7 +52,9 @@ background: linear-gradient(to bottom,  rgba(184,225,252,1) 0%,rgba(169,210,243,
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b8e1fc', endColorstr='#bdf3fd',GradientType=0 );
 
 }
-
+.markItUp .markItUpButton14 a {
+	background-image:url(images/clean.png);
+}
 .markItUp .clean a {
 	background-image:url(images/clean.png);
 }
