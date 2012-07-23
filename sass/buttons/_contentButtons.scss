@@ -16,6 +16,7 @@
     padding: 0 1.5em;
     line-height:2em;
     font-weight: bold;
+    font-size:0.8em;
     text-decoration: none;
     color: #333;
     text-shadow: 0 1px 0 rgba(255,255,255,.8);
@@ -99,19 +100,81 @@
 	content: "U";
 	font-family: SymbolFont;
 	font-size:1.1em;
-	padding-right:5px;
+	padding-right:7px;
 	padding-left:7px;
 	margin-left: -17px;
 }
+
+.usersIcon:before {
+	content: "U";
+	font-family: SymbolFont;
+	font-size:1.1em;
+	padding-right:7px;
+	padding-left:7px;
+	margin-left: -17px;
+}
+
+.phpMyAdminIcon:before {
+	content: "D";
+	font-family: SymbolFont;
+	font-size:1.1em;
+	padding-right:7px;
+	padding-left:7px;
+	margin-left: -17px;
+}
+
+.phpMyAdminIcon:before {
+	content: "D";
+	font-family: SymbolFont;
+	font-size:1.1em;
+	padding-right:7px;
+	padding-left:7px;
+	margin-left: -17px;
+}
+
 .logout:before {
 	content: "X";
 	font-family: SymbolFont;
 	font-size:1.1em;
-	padding-right:5px;
+	padding-right:7px;
 	padding-left:7px;
 	margin-left: -17px;	
 }
+.notesIcon:before {
+	content:"q";
+	font-family: SymbolFont;
+	font-size:1.1em;
+	padding-right:7px;
+	padding-left:7px;
+	margin-left: -17px;		
+}
 
+.pagesIcon:before {
+	content:"a";
+	font-family: SymbolFont;
+	font-size:1.1em;
+	padding-right:7px;
+	padding-left:7px;
+	margin-left: -17px;		
+}
+
+.scriptIcon:before {
+	content:"/";
+	font-family: SymbolFont;
+	font-size:1.1em;
+	padding-right:7px;
+	padding-left:7px;
+	margin-left: -17px;		
+}
+
+.toTop:before {
+	content:":";
+	font-family: SymbolFont;
+	font-size:1.1em;
+	padding-right:7px;
+	padding-left:7px;
+	margin-left: -17px;	
+}
 
 .like:before
 {

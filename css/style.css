@@ -117,21 +117,25 @@ body {
 pre {
   font-family: "UbuntuMonoRegular", monotype; }
 
+/* line 17, ../sass/fonts/_fontAssignments.scss */
+.button {
+  font-family: "UbuntuLightRegular"; }
+
 /**************************************\
 GESHI - (CODE WITH SYNTAX HIGHLIGHTING)
 \**************************************/
-/* line 23, ../sass/fonts/_fontAssignments.scss */
+/* line 26, ../sass/fonts/_fontAssignments.scss */
 pre.php:after, pre.html5:after, pre.css:after {
   font-family: "UbuntuLightRegular", Verdana, Arial, Helvetica, sans-serif; }
 
 /**************************************\
 CODEMIRROR - (CODE WITH SYNTAX HIGHLIGHTING)
 \**************************************/
-/* line 31, ../sass/fonts/_fontAssignments.scss */
+/* line 34, ../sass/fonts/_fontAssignments.scss */
 .CodeMirror {
   font-family: "UbuntuMonoRegular", sans-serif; }
 
-/* line 34, ../sass/fonts/_fontAssignments.scss */
+/* line 37, ../sass/fonts/_fontAssignments.scss */
 .CodeMirror:after {
   font-family: "UbuntuLightRegular", Verdana, Arial, Helvetica, sans-serif; }
 
@@ -144,14 +148,14 @@ HEADINGS
 /**********************************\
 LINKS
 \**********************************/
-/* line 52, ../sass/fonts/_fontAssignments.scss */
+/* line 55, ../sass/fonts/_fontAssignments.scss */
 #content a:before {
   font-family: "SymbolFont"; }
 
 /**********************************\
 TIME TAG in each Article
 \**********************************/
-/* line 60, ../sass/fonts/_fontAssignments.scss */
+/* line 63, ../sass/fonts/_fontAssignments.scss */
 time:before {
   font-family: "SymbolFont"; }
 
@@ -254,7 +258,7 @@ html {
   background-position: center top;
   background-attachment: fixed; }
 
-/* line 10, ../sass/_layout.scss */
+/* line 9, ../sass/_layout.scss */
 #content {
   width: 960px;
   margin: 0 auto 15px auto;
@@ -274,7 +278,7 @@ html {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-/* line 21, ../sass/_layout.scss */
+/* line 20, ../sass/_layout.scss */
 footer, .title {
   width: 960px;
   margin: 0 auto 15px auto;
@@ -288,34 +292,34 @@ footer, .title {
   border-radius: 2px;
   color: #333;
   background: rgba(255, 255, 255, 0.85); }
-  /* line 28, ../sass/_layout.scss */
+  /* line 27, ../sass/_layout.scss */
   footer p, .title p {
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 15px; }
 
-/* line 34, ../sass/_layout.scss */
+/* line 33, ../sass/_layout.scss */
 #wrapper {
   margin-left: 208px;
   width: 900px; }
 
-/* line 38, ../sass/_layout.scss */
+/* line 37, ../sass/_layout.scss */
 .title {
   width: 930px;
   padding: 5px 15px; }
 
-/* line 42, ../sass/_layout.scss */
+/* line 41, ../sass/_layout.scss */
 section {
   position: relative; }
 
-/* line 45, ../sass/_layout.scss */
+/* line 44, ../sass/_layout.scss */
 .breadCrumb {
   color: #777; }
-  /* line 47, ../sass/_layout.scss */
+  /* line 46, ../sass/_layout.scss */
   .breadCrumb a {
     color: #333;
     text-decoration: none; }
-    /* line 50, ../sass/_layout.scss */
+    /* line 49, ../sass/_layout.scss */
     .breadCrumb a:hover {
       color: orange; }
 
@@ -1339,8 +1343,13 @@ aside.user {
       -webkit-box-shadow: 0px 0px 10px #cccccc inset;
       -moz-box-shadow: 0px 0px 10px #cccccc inset;
       box-shadow: 0px 0px 10px #cccccc inset; }
+  /* line 81, ../sass/_aside.scss */
+  aside.user div.administrationMenu a.button {
+    display: block;
+    width: 140px;
+    margin-top: 5px; }
 
-/* line 83, ../sass/_aside.scss */
+/* line 90, ../sass/_aside.scss */
 aside.subMenu {
   margin: 12px auto 18px auto;
   text-align: left;
@@ -1360,17 +1369,17 @@ aside.subMenu {
   top: -12px;
   left: -210px;
   z-index: 9997; }
-  /* line 94, ../sass/_aside.scss */
+  /* line 101, ../sass/_aside.scss */
   aside.subMenu h1 {
     margin-top: 10px;
     font-size: 120%; }
-  /* line 98, ../sass/_aside.scss */
+  /* line 105, ../sass/_aside.scss */
   aside.subMenu:after {
     content: "Submenu"; }
-  /* line 101, ../sass/_aside.scss */
+  /* line 108, ../sass/_aside.scss */
   aside.subMenu ul {
     list-style: none; }
-    /* line 103, ../sass/_aside.scss */
+    /* line 110, ../sass/_aside.scss */
     aside.subMenu ul li.section {
       margin-left: 0px;
       background-color: #f2f2f2;
@@ -1391,15 +1400,15 @@ aside.subMenu {
       -o-border-radius: 2px;
       border-radius: 2px;
       font-weight: bold; }
-      /* line 113, ../sass/_aside.scss */
+      /* line 120, ../sass/_aside.scss */
       aside.subMenu ul li.section a {
         color: #333; }
-      /* line 116, ../sass/_aside.scss */
+      /* line 123, ../sass/_aside.scss */
       aside.subMenu ul li.section:hover {
         -webkit-box-shadow: 0px 0px 10px #cccccc inset;
         -moz-box-shadow: 0px 0px 10px #cccccc inset;
         box-shadow: 0px 0px 10px #cccccc inset; }
-  /* line 121, ../sass/_aside.scss */
+  /* line 128, ../sass/_aside.scss */
   aside.subMenu li.subSection {
     margin-left: 0px;
     font-weight: normal;
@@ -1421,7 +1430,7 @@ aside.subMenu {
     -ms-border-radius: 2px;
     -o-border-radius: 2px;
     border-radius: 2px; }
-    /* line 132, ../sass/_aside.scss */
+    /* line 139, ../sass/_aside.scss */
     aside.subMenu li.subSection:hover {
       -webkit-box-shadow: 0px 0px 10px #cccccc inset;
       -moz-box-shadow: 0px 0px 10px #cccccc inset;
@@ -2490,6 +2499,7 @@ article table {
   padding: 0 1.5em;
   line-height: 2em;
   font-weight: bold;
+  font-size: 0.8em;
   text-decoration: none;
   color: #333;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
@@ -2500,7 +2510,7 @@ article table {
   -webkit-box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.8) inset, 0 1px 0 rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.8) inset, 0 1px 0 rgba(0, 0, 0, 0.3); }
 
-/* line 31, ../sass/buttons/_contentButtons.scss */
+/* line 32, ../sass/buttons/_contentButtons.scss */
 .button:hover {
   background-color: #ddd;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#fafafa), to(#dddddd));
@@ -2511,7 +2521,7 @@ article table {
   background-image: linear-gradient(top, #fafafa, #dddddd);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#fafafa', EndColorStr='#dddddd'); }
 
-/* line 43, ../sass/buttons/_contentButtons.scss */
+/* line 44, ../sass/buttons/_contentButtons.scss */
 .button:active {
   -moz-box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.3) inset;
   -webkit-box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.3) inset;
@@ -2519,12 +2529,12 @@ article table {
   position: relative;
   top: 1px; }
 
-/* line 51, ../sass/buttons/_contentButtons.scss */
+/* line 52, ../sass/buttons/_contentButtons.scss */
 .button:focus {
   outline: 0;
   background: #fafafa; }
 
-/* line 56, ../sass/buttons/_contentButtons.scss */
+/* line 57, ../sass/buttons/_contentButtons.scss */
 .button:before {
   background: #ccc;
   background: rgba(0, 0, 0, 0.1);
@@ -2542,85 +2552,148 @@ article table {
   border-radius: .15em 0 0 .15em;
   pointer-events: none; }
 
-/* line 74, ../sass/buttons/_contentButtons.scss */
+/* line 75, ../sass/buttons/_contentButtons.scss */
 .add:before {
   content: "\271A"; }
 
-/* line 79, ../sass/buttons/_contentButtons.scss */
+/* line 80, ../sass/buttons/_contentButtons.scss */
 .edit:before {
   content: "\270E"; }
 
-/* line 84, ../sass/buttons/_contentButtons.scss */
+/* line 85, ../sass/buttons/_contentButtons.scss */
 .delete:before {
   content: "\2718";
   color: #6d0019; }
 
-/* line 90, ../sass/buttons/_contentButtons.scss */
+/* line 91, ../sass/buttons/_contentButtons.scss */
 .save:before {
   content: "\2714"; }
 
-/* line 95, ../sass/buttons/_contentButtons.scss */
+/* line 96, ../sass/buttons/_contentButtons.scss */
 .email:before {
   content: "\2709"; }
 
-/* line 98, ../sass/buttons/_contentButtons.scss */
+/* line 99, ../sass/buttons/_contentButtons.scss */
 .login:before {
   content: "U";
   font-family: SymbolFont;
   font-size: 1.1em;
-  padding-right: 5px;
+  padding-right: 7px;
   padding-left: 7px;
   margin-left: -17px; }
 
-/* line 106, ../sass/buttons/_contentButtons.scss */
-.logout:before {
-  content: "X";
+/* line 108, ../sass/buttons/_contentButtons.scss */
+.usersIcon:before {
+  content: "U";
   font-family: SymbolFont;
   font-size: 1.1em;
-  padding-right: 5px;
+  padding-right: 7px;
   padding-left: 7px;
   margin-left: -17px; }
 
 /* line 117, ../sass/buttons/_contentButtons.scss */
+.phpMyAdminIcon:before {
+  content: "D";
+  font-family: SymbolFont;
+  font-size: 1.1em;
+  padding-right: 7px;
+  padding-left: 7px;
+  margin-left: -17px; }
+
+/* line 126, ../sass/buttons/_contentButtons.scss */
+.phpMyAdminIcon:before {
+  content: "D";
+  font-family: SymbolFont;
+  font-size: 1.1em;
+  padding-right: 7px;
+  padding-left: 7px;
+  margin-left: -17px; }
+
+/* line 135, ../sass/buttons/_contentButtons.scss */
+.logout:before {
+  content: "X";
+  font-family: SymbolFont;
+  font-size: 1.1em;
+  padding-right: 7px;
+  padding-left: 7px;
+  margin-left: -17px; }
+
+/* line 143, ../sass/buttons/_contentButtons.scss */
+.notesIcon:before {
+  content: "q";
+  font-family: SymbolFont;
+  font-size: 1.1em;
+  padding-right: 7px;
+  padding-left: 7px;
+  margin-left: -17px; }
+
+/* line 152, ../sass/buttons/_contentButtons.scss */
+.pagesIcon:before {
+  content: "a";
+  font-family: SymbolFont;
+  font-size: 1.1em;
+  padding-right: 7px;
+  padding-left: 7px;
+  margin-left: -17px; }
+
+/* line 161, ../sass/buttons/_contentButtons.scss */
+.scriptIcon:before {
+  content: "/";
+  font-family: SymbolFont;
+  font-size: 1.1em;
+  padding-right: 7px;
+  padding-left: 7px;
+  margin-left: -17px; }
+
+/* line 170, ../sass/buttons/_contentButtons.scss */
+.toTop:before {
+  content: ":";
+  font-family: SymbolFont;
+  font-size: 1.1em;
+  padding-right: 7px;
+  padding-left: 7px;
+  margin-left: -17px; }
+
+/* line 180, ../sass/buttons/_contentButtons.scss */
 .like:before {
   content: "\2764"; }
 
-/* line 122, ../sass/buttons/_contentButtons.scss */
+/* line 185, ../sass/buttons/_contentButtons.scss */
 .next:before {
   content: "\279C"; }
 
-/* line 127, ../sass/buttons/_contentButtons.scss */
+/* line 190, ../sass/buttons/_contentButtons.scss */
 .star:before {
   content: "\2605"; }
 
-/* line 132, ../sass/buttons/_contentButtons.scss */
+/* line 195, ../sass/buttons/_contentButtons.scss */
 .spark:before {
   content: "\2737"; }
 
-/* line 137, ../sass/buttons/_contentButtons.scss */
+/* line 200, ../sass/buttons/_contentButtons.scss */
 .play:before {
   content: "\25B6"; }
 
 /* Buttons and inputs */
-/* line 142, ../sass/buttons/_contentButtons.scss */
+/* line 205, ../sass/buttons/_contentButtons.scss */
 button.button, input.button {
   cursor: pointer;
   overflow: visible;
   /* removes extra side spacing in IE */ }
 
 /* removes extra inner spacing in Firefox */
-/* line 149, ../sass/buttons/_contentButtons.scss */
+/* line 212, ../sass/buttons/_contentButtons.scss */
 button::-moz-focus-inner {
   border: 0;
   padding: 0; }
 
 /* If line-height can't be modified, then fix Firefox spacing with padding */
-/* line 156, ../sass/buttons/_contentButtons.scss */
+/* line 219, ../sass/buttons/_contentButtons.scss */
 input::-moz-focus-inner {
   padding: .4em; }
 
 /* The disabled styles */
-/* line 162, ../sass/buttons/_contentButtons.scss */
+/* line 225, ../sass/buttons/_contentButtons.scss */
 .button[disabled], .button[disabled]:hover, .button.disabled, .button.disabled:hover {
   background: #eee;
   color: #aaa;
@@ -2672,16 +2745,8 @@ em {
   /* line 46, ../sass/content/_content.scss */
   #content a:hover {
     text-shadow: 1px 1px 0px white; }
-  /* line 49, ../sass/content/_content.scss */
-  #content a.toTop {
-    margin-top: 10px;
-    display: inline-block;
-    text-align: left; }
-    /* line 53, ../sass/content/_content.scss */
-    #content a.toTop:before {
-      content: ""; }
 
-/* line 59, ../sass/content/_content.scss */
+/* line 51, ../sass/content/_content.scss */
 blockquote {
   font-style: italic;
   margin: 20px;
@@ -2690,28 +2755,28 @@ blockquote {
   background: rgba(255, 255, 255, 0.8);
   color: gray; }
 
-/* line 68, ../sass/content/_content.scss */
+/* line 60, ../sass/content/_content.scss */
 select {
   display: block; }
 
-/* line 72, ../sass/content/_content.scss */
+/* line 64, ../sass/content/_content.scss */
 #content p {
   text-align: justify;
   margin-bottom: 5px; }
 
-/* line 76, ../sass/content/_content.scss */
+/* line 68, ../sass/content/_content.scss */
 .important {
   color: red;
   font-weight: bold; }
 
-/* line 81, ../sass/content/_content.scss */
+/* line 73, ../sass/content/_content.scss */
 #content .article_content {
   padding: 5px; }
-  /* line 83, ../sass/content/_content.scss */
+  /* line 75, ../sass/content/_content.scss */
   #content .article_content p {
     margin-bottom: 5px; }
 
-/* line 88, ../sass/content/_content.scss */
+/* line 80, ../sass/content/_content.scss */
 time {
   float: right;
   color: #f2f2f2;
@@ -2721,11 +2786,11 @@ time {
   position: absolute;
   top: 29px;
   right: 15px; }
-  /* line 97, ../sass/content/_content.scss */
+  /* line 89, ../sass/content/_content.scss */
   time:hover {
     color: #333; }
 
-/* line 101, ../sass/content/_content.scss */
+/* line 93, ../sass/content/_content.scss */
 .gradientbox {
   width: 198px;
   height: 173px;
@@ -2744,7 +2809,7 @@ time {
   background: #fff;
   position: relative; }
 
-/* line 111, ../sass/content/_content.scss */
+/* line 103, ../sass/content/_content.scss */
 .gradientbox:hover {
   background: white;
   /* Old browsers */
@@ -2763,7 +2828,7 @@ time {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 );
   /* IE6-9 */ }
 
-/* line 121, ../sass/content/_content.scss */
+/* line 113, ../sass/content/_content.scss */
 .newest:before {
   position: absolute;
   top: -11px;
@@ -2805,7 +2870,7 @@ time {
   -o-border-radius: 2px;
   border-radius: 2px; }
 
-/* line 140, ../sass/content/_content.scss */
+/* line 132, ../sass/content/_content.scss */
 pre.print_r {
   padding-left: 15px;
   border: 2px solid #ccc;
@@ -2817,7 +2882,7 @@ pre.print_r {
   position: relative;
   overflow: hidden; }
 
-/* line 149, ../sass/content/_content.scss */
+/* line 141, ../sass/content/_content.scss */
 pre.print_r:after {
   position: absolute;
   top: 20px;
@@ -2849,7 +2914,7 @@ pre.print_r:after {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg); }
 
-/* line 173, ../sass/content/_content.scss */
+/* line 165, ../sass/content/_content.scss */
 .notes {
   background: url("../img/papier2.png") -1px -4px;
   width: 100%;
@@ -2864,38 +2929,38 @@ pre.print_r:after {
   -o-border-radius: 5px;
   border-radius: 5px; }
 
-/* line 183, ../sass/content/_content.scss */
+/* line 175, ../sass/content/_content.scss */
 .height10 {
   height: 5em; }
 
-/* line 186, ../sass/content/_content.scss */
+/* line 178, ../sass/content/_content.scss */
 .height20 {
   height: 10em; }
 
-/* line 189, ../sass/content/_content.scss */
+/* line 181, ../sass/content/_content.scss */
 .height50 {
   height: 20em; }
 
-/* line 192, ../sass/content/_content.scss */
+/* line 184, ../sass/content/_content.scss */
 .height50 {
   height: 30em; }
 
-/* line 195, ../sass/content/_content.scss */
+/* line 187, ../sass/content/_content.scss */
 .height70 {
   height: 30em; }
 
-/* line 198, ../sass/content/_content.scss */
+/* line 190, ../sass/content/_content.scss */
 .height90 {
   height: 30em; }
 
-/* line 201, ../sass/content/_content.scss */
+/* line 193, ../sass/content/_content.scss */
 .height100 {
   height: 30em; }
 
 /**************************************\
 	   STANDARD CONTENT ELEMENTS
 \**************************************/
-/* line 214, ../sass/content/_content.scss */
+/* line 206, ../sass/content/_content.scss */
 .conclusion:before {
   content: "\27a5  ";
   font-size: 1.2em;

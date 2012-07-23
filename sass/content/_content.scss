@@ -46,14 +46,6 @@ em {
 	&:hover {
 		@include text-shadow(1px 1px 0px #fff);
 	}
-	&.toTop {
-		margin-top:10px;
-		display:inline-block;
-		text-align:left;
-		&:before {
-			content:"";
-		}
-	}
 }
 
 blockquote {

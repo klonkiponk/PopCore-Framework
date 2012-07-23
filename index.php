@@ -98,7 +98,7 @@
 	                        //echo "<h2>Predecessor: ".$predecessor."</h2>"; //
 	                        
 	                        echo "<form action=\"\" method=\"post\" style=\"text-align:right;\">
-                        <button type='submit' name='action' class='button edit' value='changeOrder' >MOVE UP</button> 
+                        <button type='submit' name='action' class='button order' value='changeOrder' >MOVE UP</button> 
                         <input type='hidden' name='thisOrder' value='{$row['contentorder']}'/>
                         <input type='hidden' name='table' value='page_content'/> 
                         <input type='hidden' name='predecessor' value='$predecessor'/>
@@ -109,7 +109,7 @@
                         
                     }
                 }
-                echo "<a class='toTop' href='#globalheader'><button class='button'>TOP</button></a></article>";
+                echo "<a href='#globalheader' class='button toTop'>TOP</a></article>";
                 $predecessor = $row['contentorder'];
             }           
 				if (isset($_SESSION['loggedin'])){

@@ -26,14 +26,12 @@ function con_createMessage ($content = "Erfolg", $color = "green")
 
 function con_createAdminAsideMenu ()
 {
-	$return  = "<label>Administration</label>";
-	$return .= "<ul class='adminMenu'>";
-	$return .= "<li class='adminMenu'><a href='./phpMyAdmin/'>phpMyAdmin</a></li>";
-	$return .= "<li class='adminMenu'><a href='./pages.php'>Pages</a></li>";
-	$return .= "<li class='adminMenu'><a href='./user.php'>User</a></li>";
-	$return .= "<li class='adminMenu'><a href='./script.php'>Script erstellen</a></li>";
-	$return .= "<li class='adminMenu'><a href='./notes.php'>DEBUG</a></li>";
-	$return .= "</ul>";
+	$return  = "<div class='administrationMenu'><label>Administration</label>";
+	$return .= "<a href='./phpMyAdmin/index.php' class='button phpMyAdminIcon'>PhpMyAdmin</a>";
+	$return .= "<a href='./notes.php' class='button notesIcon'>Notes</a>";
+	$return .= "<a href='./pages.php' class='button pagesIcon'>Pages</a>";
+	$return .= "<a href='./user.php' class='button usersIcon'>User</a>";
+	$return .= "<a href='./script.php' class='button scriptIcon'>Script</a></div>";
 	return $return;
 }
 

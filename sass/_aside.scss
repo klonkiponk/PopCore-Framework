@@ -77,6 +77,13 @@ aside.user {
 			@include box-shadow(0px 0px 10px #ccc inset);
 		}	  
   }
+  div.administrationMenu {
+	  a.button {
+		  display:block;
+		  width:140px;
+		  margin-top:5px;
+	  }
+  }
 }
 
 
