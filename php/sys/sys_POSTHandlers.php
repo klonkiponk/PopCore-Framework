@@ -18,6 +18,12 @@ if (!empty($_POST['action'])){
 		case "deletePage":
             $message = db_deletePageFromDb($_POST);
             break;
+   		case "editPage":
+            $editForm = sys_createEditPageForm($_POST);
+            break;    
+   		case "updatePage":
+            $editForm = db_updatePage($_POST);
+            break; 
         case "edit":
             $editform = sys_createEditFormForPageContent($_POST);
             break;
@@ -30,6 +36,9 @@ if (!empty($_POST['action'])){
         case "newArticle":
             $content = db_createNewArticleForm();
             break;
+        case "changeOrder":
+            $message = db_changeOrder();
+            break;            
         case "search":
             $content = db_search();
             break;    

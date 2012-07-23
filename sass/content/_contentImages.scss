@@ -2,8 +2,8 @@
 		   CONTENT - IMAGES
 \**************************************/
 img {
-    @include box-shadow(3px 3px 3px #777);
-    border:1px solid silver;
+    //@include box-shadow(3px 3px 3px #777);
+    //border:1px solid silver;
     width:350px;
 
 
@@ -14,7 +14,8 @@ img {
     -ms-filter: sepia(100%); 
         filter: sepia(50%);
 */
+}
 
-
-        background-color: white;
+img.shadow {
+	@include box-shadow(2px 2px 5px #333);
 }

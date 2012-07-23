@@ -2,8 +2,8 @@
 	   IMPORT Other Content Files
 \**************************************/
 
+@import "contentColors";
 @import "contentHeadings";
-@import "../buttons/contentButtons";
 @import "contentArticle";
 @import "contentForms";
 @import "contentLists";
@@ -11,22 +11,51 @@
 @import "contentDivs";
 @import "contentP";
 @import "contentTables";
-@import "contentColors";
+@import "../buttons/contentButtons";
 
 /**************************************\
 	   STANDARD CONTENT ELEMENTS
 \**************************************/
-pre, textarea {
+pre, textarea, code {
   font-family: "UbuntuMonoRegular", monotype;
   font-size: 1em;
 }
-
+code {  background: #eee;
+  padding-left: 5px;
+  padding-right: 5px;
+  @include box-shadow(inset 1px 1px 0px #777, 1px 1px 0px #fff);
+}
 strong {
     font-weight:bold;
 }
 em {
 	font-style:italic;
 }
+
+#content a {
+    color:#333;
+    font-weight:bold;
+    text-decoration: none;
+    /*&:before {
+		color:#febf04;
+		content:"K";
+		margin-right: 5px;
+		font-weight: normal;
+		@include text-shadow(1px 1px 0px #333);
+	}*/
+	&:hover {
+		@include text-shadow(1px 1px 0px #fff);
+	}
+	&.toTop {
+		margin-top:10px;
+		display:inline-block;
+		text-align:left;
+		&:before {
+			content:"";
+		}
+	}
+}
+
 blockquote {
 	font-style: italic;
 	margin:20px;
@@ -54,17 +83,16 @@ blockquote {
 }
 time {
     float:right;
-    color:#ffbc40/*$AccentColor1*/;
-    @include text-shadow(1px 1px 0px $AccentColor1Shadow);
-    margin:0px 0px 15px 15px;
+   	color:#f2f2f2;
+   	font-weight:bold;
+	@include text-shadow(1px 1px 0px #fff,-1px -1px 0px #ccc);
+	margin:0px 0px 15px 15px;
     position:absolute;
     top:29px;
     right:15px;
-}
-time:before {
-    content:"P ";
-    color:#ccc;
-    @include text-shadow(1px 1px 0px #333);
+    &:hover {
+	    color:#333;
+    }
 }
 .gradientbox {
     width:198px;
@@ -137,46 +165,6 @@ pre.print_r:after {
 	-ms-transform: rotate(45deg);
 	transform: rotate(45deg);   }
 	
-	
-.homework {
-	border-radius: 5px;
-	margin-top: 1em;
-	padding-left: 0.8em;
-	-webkit-box-shadow: 1px 1px 5px #cccccc;
-	-moz-box-shadow: 1px 1px 5px #cccccc;
-	box-shadow: 1px 1px 5px #cccccc;
-	margin-right:55px;
-	position:relative;
-	background-color: #d5ebfb;
-	border: 1px solid #89c3eb;
-	-webkit-box-shadow: inset 0px 1px 5px white, 0px 1px 2px #555555;
-	-moz-box-shadow: inset 0px 1px 5px white, 0px 1px 2px #555555;
-	box-shadow: inset 0px 1px 5px white, 0px 1px 2px #555555;
-	padding:15px;
-}
-.homework span.h3 {
-	color: #378de5;
-	text-decoration: none;
-	text-shadow: 1px 1px 1px white;
-	font-weight:bold;
-	font-size:1.2em;
-}
-.homework:after {
-	position:absolute;
-	right:-50px;
-	top:8px;
-	font-size:2em;
-	line-height:1em;
-	font-family:SymbolFont;
-	content:"A";
-	color:#89c3eb;
-    text-shadow: #fff 1px 1px 0px,2px 2px 0px #d5ebfb,-1px -1px 0px #777;
-}
-.homework:before {
-	content:".";
-	display:none;
-	clear: both;
-}
 
 .notes {
 	background: url('../img/papier2.png') -1px -4px;
@@ -210,38 +198,7 @@ pre.print_r:after {
 	height:30em;
 }
 
-.information {
-	border-radius: 5px;
-	margin-top: 1em;
-	padding-left: 0.8em;
-	-webkit-box-shadow: 1px 1px 5px #cccccc;
-	-moz-box-shadow: 1px 1px 5px #cccccc;
-	box-shadow: 1px 1px 5px #cccccc;
-	margin-right:55px;
-	position:relative;
-	background-color: #ffce73;
-	border: 1px solid #ffa500;
-	-webkit-box-shadow: inset 0px 1px 5px white, 0px 1px 2px #555555;
-	-moz-box-shadow: inset 0px 1px 5px white, 0px 1px 2px #555555;
-	box-shadow: inset 0px 1px 5px white, 0px 1px 2px #555555;
-	padding:15px;
-}
-.information:after {
-	position:absolute;
-	right:-50px;
-	top:10px;
-	font-size:2em;
-	line-height:1em;
-	font-family:SymbolFont;
-	content:"R";
-	color:#ffa500;
-    text-shadow: #fff 1px 1px 0px,2px 2px 0px #ffce73,-1px -1px 0px #777;
-}
-.information:before {
-	content:".";
-	display:none;
-	clear: both;
-}
+
 
 
 

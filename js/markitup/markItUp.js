@@ -26,12 +26,13 @@ mySettings = {
 		{separator:'---------------' },
 		{name:'Ul', openWith:'<ul>\n', closeWith:'</ul>\n' },
 		{name:'Ol', openWith:'<ol>\n', closeWith:'</ol>\n' },
-		{name:'Li', openWith:'<li>', closeWith:'</li>' },
+		{name:'Li', openWith:'<li>', closeWith:'</li>\n' },
 		{separator:'---------------' },
 		{name:'Picture', key:'P', replaceWith:'<img src="[![Source:!:http://]!]" alt="[![Alternative text]!]" />' },
 		{name:'Link', key:'L', openWith:'<a href="[![Link:!:http://]!]"(!( title="[![Title]!]")!)>', closeWith:'</a>', placeHolder:'Your text to link...' },
 		{separator:'---------------' },
-		{name:'Homework', openWith:'<div class="homework">', closeWith:'</div>'  },
-		{name:'TAG', openWith:'<span class="tag">', closeWith:'</span>'  }
+		{name:'Homework', openWith:'<div class="homework">', closeWith:'</div>\n'  },
+		{name:'TAG', openWith:'<span class="tag">', closeWith:'</span>'  },
+		{name:'ABBR', openWith:'<abbr title="">', closeWith:'</abbr>'  }		
 	]
 }

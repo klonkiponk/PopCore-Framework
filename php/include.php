@@ -1,15 +1,11 @@
 <?php
     session_start();
 
-    include 'php/sys/sys_helpers.php';	
 
-    define ('DBHOST','localhost');
-    define ('DBUSER','root');
-    define ('DBPASSWORD','root');
-    define ('DATABASE','Framework');
+    include 'etc/constants.php';
     
-    define ('SITETITLE','ITSysAdminFwWebSK');
     
+    include 'php/sys/sys_helpers.php';	
     include 'php/db/db.php';
     
     $DB = db_connectToDb();

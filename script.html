@@ -570,13 +570,18 @@ For Each Programming Language another table.XXX
 			<ul class='toc'>
 <li class='chapter'><a href='#chapter-1' class='PageRef'>Grundlagen</a></li>
 	<ul>
-	</ul>
+<li class='section'><a href='#section-518' class='PageRef'>Coding Guidelines</a></li>
+<ul>
+</ul><li class='section'><a href='#section-519' class='PageRef'>Entstehung des Internet</a></li>
+<ul>
+</ul>	</ul>
 <li class='chapter'><a href='#chapter-2' class='PageRef'>HTML</a></li>
 	<ul>
-<li class='section'><a href='#section-3' class='PageRef'>HTM...Was?</a></li>
+<li class='section'><a href='#section-3' class='PageRef'>Grundlagen HTML</a></li>
 <ul>
-</ul><li class='section'><a href='#section-4' class='PageRef'>Tags</a></li>
+</ul><li class='section'><a href='#section-4' class='PageRef'>Inhalte in HTML</a></li>
 <ul>
+<li class='subSection'><a href='#subSection-8' class='PageRef'>Zeilenumbrueche</a></li>
 <li class='subSection'><a href='#subSection-508' class='PageRef'>Tables</a></li>
 <li class='subSection'><a href='#subSection-509' class='PageRef'>Headings</a></li>
 <li class='subSection'><a href='#subSection-510' class='PageRef'>Paragraphs</a></li>
@@ -586,22 +591,17 @@ For Each Programming Language another table.XXX
 <li class='subSection'><a href='#subSection-514' class='PageRef'>Kommentare</a></li>
 <li class='subSection'><a href='#subSection-515' class='PageRef'>Textformatierung</a></li>
 <li class='subSection'><a href='#subSection-516' class='PageRef'>Listen</a></li>
-</ul><li class='section'><a href='#section-5' class='PageRef'>Das Grundgeruest</a></li>
+</ul><li class='section'><a href='#section-5' class='PageRef'>Struktur in HTML</a></li>
 <ul>
-<li class='subSection'><a href='#subSection-429' class='PageRef'>HEAD und BODY</a></li>
-<li class='subSection'><a href='#subSection-430' class='PageRef'>Absaetze</a></li>
-</ul><li class='section'><a href='#section-6' class='PageRef'>DOCTYPE</a></li>
-<ul>
-</ul><li class='section'><a href='#section-7' class='PageRef'>Sonderzeichen</a></li>
-<ul>
-</ul><li class='section'><a href='#section-8' class='PageRef'>Zeilenumbrueche</a></li>
-<ul>
-</ul><li class='section'><a href='#section-517' class='PageRef'>Blockelemente vs. Inline Elemente</a></li>
-<ul>
+<li class='subSection'><a href='#subSection-430' class='PageRef'>BLOCK</a></li>
+<li class='subSection'><a href='#subSection-517' class='PageRef'>Blockelemente vs. Inline Elemente</a></li>
+<li class='subSection'><a href='#subSection-520' class='PageRef'>Semantische Strukturierung</a></li>
 </ul>	</ul>
 <li class='chapter'><a href='#chapter-427' class='PageRef'>CSS</a></li>
 	<ul>
-	</ul>
+<li class='section'><a href='#section-522' class='PageRef'>Schriften</a></li>
+<ul>
+</ul>	</ul>
 <li class='chapter'><a href='#chapter-500' class='PageRef'>WEBSERVER</a></li>
 	<ul>
 <li class='section'><a href='#section-436' class='PageRef'>HTTP und das Web</a></li>
@@ -609,6 +609,7 @@ For Each Programming Language another table.XXX
 <li class='subSection'><a href='#subSection-438' class='PageRef'>Webserver und Protokolle</a></li>
 </ul><li class='section'><a href='#section-437' class='PageRef'>Apache</a></li>
 <ul>
+<li class='subSection'><a href='#subSection-521' class='PageRef'>Virtual Hosting</a></li>
 <li class='subSection'><a href='#subSection-439' class='PageRef'>Einfuehrung und Installation</a></li>
 <li class='subSection'><a href='#subSection-440' class='PageRef'>Konfiguration</a></li>
 <li class='subSection'><a href='#subSection-441' class='PageRef'>Sicherheit</a></li>
@@ -628,47 +629,6 @@ For Each Programming Language another table.XXX
 
 <section class='chapter' id='chapter-1'><h1>Grundlagen</h1>
 
-		<article id='article-161'>
-			<h4>Woher kommt das Internet</h4>
-
-			<h4>Die ersten Anf&auml;nge - Das ARPANet</h4>
-Im amerikanischen Verteidigungsministerium wurde schon seit den 1960er Jahren dar&uuml;ber
-nachgedacht, wie man wichtige Daten, auch im Falle eines atomaren Angriffs, sch&uuml;tzen
-k&ouml;nnte. Die aus diesen &Uuml;berlegungen resultierende Grundidee war, die Daten redundant,
-auf mehreren Rechnern gleichzeitig zu halten. Um die Aktualit&auml;t der Daten gewÃƒÂ¤hrleisten
-zu k&ouml;nnen, mussten diese in der Lage sein, sich selbst&auml;ndig, auf direktem Wege, abzugleichen.
-Die Schlussfolgerung aus diesen Anforderungen war, dass man ein Netzwerk ben&ouml;tigte, dass diese Rechner verbinden konnte. Eine weitere wichtige Forderung war, dass
-die Daten auf mehreren unterschiedlichen Wegen, von einem Rechner zum anderen gelangen
-konnten, damit auch im Falle eines Ausfalls einzelner Rechner, die &Uuml;bertragung noch
-m&ouml;glich war. Somit musste etwas bisher noch nicht da gewesenes geschaen werden.
-Das ARPANet stellt den Ursprung des heutigen Internets dar. Es wurde in den 1960er
-Jahren, w&auml;hrend des kalten Kriegs, zwischen den USA und der UdSSR, von den Amerikanern,
-entwickelt. Seinen Namen verdankt es der ARPA (Advanced Research Projects
-Agency), einer Gruppe von Wissenschaftlern, die 1962, unter der Leitung des Massachusetts
-Institute of Technology und des US-Verteidigungsministeriums, f&uuml;r die US-Luftwaffe,
-dieses Netzwerk entwickelten. Enscheidend f&uuml;r seine Entstehung waren die beiden Forscher
-Paul Baran und Donald Watts Davies. Sie steuerten wichtige Impulse zur Entwicklung
-bei.
-<h4>Wie ging es weiter?</h4>
-Bald sollte sich herausstellen, dass ein solches Netzwerk nicht nur f&uuml;r milit&auml;rischer Zwecke
-interessant war, sondern auch f&uuml;r die zivile Wissenschaft. Wissenschaftler in den USA
-hatten in den 1970er Jahren die M&ouml;glichkeit, Daten mit anderen Instituten, &uuml;ber das
-ARPANet, auszutauschen. Nicht die Tatsache, Daten redundant auf mehreren Rechnern
-halten zu k&ouml;nnen, sondern der Datenaustausch an sicht waren f&uuml;r sie interessant.
-Zu beginn der 1980er Jahre erkannte man, dass durch die nun deutlich gestiegene Rechnerzahl
-im ARPANet, und die vermischte zivile und milit&auml;rische Nutzung, eine Aufteilung
-des Netzwerks erforderlich wurde. Nur so war es den Milit&auml;rs m&ouml;glich Geheimnisse, und
-eigene Interessen zu wahren. F&uuml;r den milit&auml;rischen Datenaustausch wurde das "MilNet"
-geschaffen, das ARPANet wurde vollst&auml;ndig der zivilen Nutzung &uuml;berlassen.
-Durch diese Abkopplung stand einem weiteren Anwachsen des ARPANets nichts mehr
-im Wege. Und so b&uuml;rgerte sich nach und nach der Name "Internet" f&uuml;r dieses Netzwerk
-ein. Der Name ARPANet verschwand im laufe der 80er Jahre. Eng verkn&uuml;pft mit dem
-Siegeszug des Internets, war die Entstehung des Datenaustauschprotokolls, TCP/IP.
-
-<div class="information">Durch diese Abkopplung stand einem weiteren Anwachsen des <strong>ARPANets</strong> nichts mehr
-im Wege. Und so b&uuml;rgerte sich nach und nach der Name "Internet" f&uuml;r dieses Netzwerk
-ein. Der Name <strong>ARPANet</strong> verschwand im laufe der 80er Jahre. Eng verkn&uuml;pft mit dem
-Siegeszug des Internets, war die Entstehung des Datenaustauschprotokolls, TCP/IP.</div>
 		<article id='article-170'>
 			<h4>Weitere Informationen zur Entstehung des Internet</h4>
 
@@ -677,7 +637,17 @@ des Einstiegskapitels von SELFHTML zusammengefasst.
 <div class="homework">Erarbeiten Sie sich die in Tour 2 bei SELFHTML aufbereiteten Informationen zum
 Thema Grundlagen des Internets und betrachten Sie sie als Hintergundwissen bzw. Basis
 der folgenden Kapitel.
-    <a href="#">[17, SELFHTML - Tour 2]</a></div></section>
+    <a href="#">[17, SELFHTML - Tour 2]</a></div>
+
+
+
+<section class='section' id='section-518'><h2>Coding Guidelines</h2>
+</section>
+
+
+
+<section class='section' id='section-519'><h2>Entstehung des Internet</h2>
+</section></section>
 
 
 
@@ -687,20 +657,20 @@ der folgenden Kapitel.
 		<article id='article-217'>
 			<h4>Was ist HTML</h4>
 
-			<img class="floatright small" src="./img/1342451139code.jpg" alt="HTML Code" />
-<p>HTML ist die Auszeichnungssprache f&uuml;r die Inhalte einer Webseite. Mittels HTML wird die Strukturierung von Inhalten wie Texten, Bilder, Hyperlinks oder anderen Ressourcen vorgenommen.</p>
+			<img class="floatright small shadow" src="./img/1342451139code.jpg" alt="HTML Code" />
+<p><abbr title="Hyper Text Markup Language">HTML</abbr> ist die Auszeichnungssprache f&uuml;r die Inhalte einer Webseite. Mittels <abbr title="Hypter Text Markup Language">HTML</abbr> wird die Strukturierung von Inhalten wie Texten, Bilder, Hyperlinks oder anderen Ressourcen vorgenommen.</p>
 
-<p>HTML-Dokumente <code>html</code> <code>htm</code> bilden die Grundlage des World Wide Web (<strong>WWW</strong>). Es ist m&ouml;glich in HTML nicht nur die sichtbaren Inhalte zu strukturieren, sondern auch zus&auml;tzliche Informationen, wie zum Beispiel den Autor, das Datum oder eine Beschreibung der Seite zu hinterlegen.</p>
+<p>HTML-Dokumente <code>.html .htm</code> bilden die Grundlage des World Wide Web <abbr title="World Wide Web">WWW</abbr>. Es ist m&ouml;glich in HTML nicht nur die sichtbaren Inhalte zu strukturieren, sondern auch zus&auml;tzliche Informationen, wie zum Beispiel den Autor, das Datum oder eine Beschreibung der Seite zu hinterlegen.</p>
 
-<p>Die Definitionen, wie die Sprache aufgebaut ist und auch die Weiterentwicklung unterliegt dem World Wide Web Consortium (<strong>W3C</strong>).</p>
+<p>Die Definitionen, wie die Sprache aufgebaut ist und auch die Weiterentwicklung unterliegt dem World Wide Web Consortium <abbr title="World Wide Web Consortium">W3C</abbr>.</p>
 
-<p>Derzeit ist die aktuelle Version HTML5</p>
+<p>Derzeit ist die aktuelle Version <abbr title="Hyper Text Markup Language 5">HTML5</abbr></p>
 
 <div class="information">Das Acronym <strong>HTML</strong> steht f&uuml;r <strong>H</strong>yper<strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage</div>
 		<article id='article-269'>
 			<h4>Websites, Homepages, Webpages, etc....</h4>
 
-			Die oft geh&ouml;rten Begriffe
+			<img class="floatright small shadow" src="./img/1342703566homepage.jpg" alt="Bild mit einer Addresszeile eines Browsers" />Die oft geh&ouml;rten Begriffe
 <ul>
 	 <li>Website,</li>
 	 <li>Homepage,</li>
@@ -715,17 +685,19 @@ Im normalen Sprachgebrauch kann und wird zwischen diesen Begriffen nicht untersc
 Im engeren Sinne lassen sich jedoch kleinere Unterschiede feststellen.
 
 <span class="h4">Beispiel:</span>
-Ein <strong>Webauftritt</strong> kann aus mehreren einzelnen <strong>HTML-Seiten</strong> bestehen.
+Ein <strong>Webauftritt</strong> kann aus mehreren einzelnen <abbr title="Hyper Text Markup Language">HTML</abbr>-Seiten bestehen.
+<span class="h4">Beispiel 2:</span>
+Korrekt betrachtet ist eine <strong>Homepage</strong> nur eine <strong>einzelne</strong> <strong>Seite</strong>. Erst wenn es <strong>mehrere</strong> <strong>Pages</strong> sind, kann von einer <strong>Site</strong> gesprochen werden.
+<div class="information">Da umgangsprachlich diese Abgrenzungen jedoch nicht ber&uuml;cksichtigt werden, ist dies relativ irrelevant</div>
 
 
 
-
-<section class='section' id='section-3'><h2>HTM...Was?</h2>
+<section class='section' id='section-3'><h2>Grundlagen HTML</h2>
 
 		<article id='article-223'>
 			<h4>Versionen von HTML</h4>
 
-			<p>Die Standards f&uuml;r HTML werden durch das World Wide Web Consortium (W3C) entwickelt und ver&ouml;ffentlicht.</p>
+			<img class="small floatright shadow" src="./img/1342704172dfh.gif" alt="HTML Logo" /><p>Die Standards f&uuml;r HTML werden durch das World Wide Web Consortium <abbr title="World Wide Web Consortium">W3C</abbr> entwickelt und ver&ouml;ffentlicht.</p>
 
 <table>
 	 <thead>
@@ -759,7 +731,7 @@ Ein <strong>Webauftritt</strong> kann aus mehreren einzelnen <strong>HTML-Seiten
 	 	 <tr>
 	 	 	 <td>XHTML 1.1</td>
 	 	 	 <td>2001</td>
-	 	 	 <td>Eine Neuformulierung von HTML 4.01 mit Hilfe von XML</td>
+	 	 	 <td>Eine Neuformulierung von HTML 4.01 mit Hilfe von <abbr title="eXtensible Markup Language">XML</abbr></td>
 	 	 </tr>
 	 	 <tr>
 	 	 	 <td>HTML 5</td>
@@ -774,7 +746,7 @@ Ein <strong>Webauftritt</strong> kann aus mehreren einzelnen <strong>HTML-Seiten
 			Eine HTML Datei besteht grunds&auml;tzlich aus 3 Bereichen:
 
 <div class="information"><ol>
-<li>der Dokumenttypdeklaration <strong>(Doctype)</strong> ganz am Anfang der Datei, die die verwendete Dokumenttypdefinition <strong>(DTD)</strong> angibt, z. B. <strong>HTML 4.01 Strict</strong>,</li>
+<li>der Dokumenttypdeklaration <strong>(Doctype)</strong> ganz am Anfang der Datei, die die verwendete Dokumenttypdefinition <abbr title="Document Type Definition">DTD</abbr> angibt, z. B. <strong>HTML 4.01 Strict</strong>,</li>
 
 <li>dem HTML-Kopf <strong>(HEAD)</strong>, der haupts&auml;chlich technische oder dokumentarische Informationen enth&auml;lt, die &uuml;blicherweise nicht im Anzeigebereich des Browsers dargestellt werden</li>
 
@@ -810,7 +782,7 @@ dem HTML-K&ouml;rper <strong>(BODY)</strong>, der jene Informationen enth&auml;l
 		<article id='article-237'>
 			<h4>HTML - HEAD</h4>
 
-			<p>Der <span class="tag">head</span> - Bereich einer HTML-Datei dient der &Uuml;bergabe von zus&auml;tzlichen Daten, die nicht direkt zum anzuzeigenden Inhalt geh&ouml;ren. Diese Informationen k&ouml;nnen zum Beispiel externe Ressourcen wie CSS- oder Javascript-Dateien sein. Oder es k&ouml;nnen Informationen &uuml;ber den Author, das Erstellungsdatum, oder eine Beschreibung sein.</p>
+			<p>Der <span class="tag">head</span> - Bereich einer HTML-Datei dient der &Uuml;bergabe von zus&auml;tzlichen Daten, die nicht direkt zum anzuzeigenden Inhalt geh&ouml;ren. Diese Informationen k&ouml;nnen zum Beispiel externe Ressourcen wie CSS - oder Javascript-Dateien sein. Oder es k&ouml;nnen Informationen &uuml;ber den Author, das Erstellungsdatum, oder eine Beschreibung sein.</p>
 
 <span class="h4">M&ouml;gliche Elemente im <span class="tag">head</span></span>
 <table>
@@ -979,16 +951,51 @@ Er beinhaltet somit alle Elemente wie:</p>
 &nbsp;
 <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">body</span>&gt;</span></pre></td></tr></tbody></table></div>
 			</article>
-		</section>
+		
+		<article id='article-295'>
+			<h4>HTML - Doctype</h4>
+
+			<p>Der DOCTYPE in HTML dient nur dem Zweck, den Rechnern, die diese Seite &ouml;ffnen, eine Vorinformation zu geben. Der Computer kann sich dann direkt darauf einstellen, welche Tags folgen k&ouml;nnen und wie er diese interpretieren muss.
+Ein normaler Webbrowser wie Google Chrome, Firefox, Safari oder auch Opera (<strong>NEIN</strong>, der Inter Explorer <abbr title="Internet Explorer">IE</abbr> ist kein <strong>normaler</strong> Browser)</p> ignoriert diese Angabe g&auml;nzlich. Diese Angaben haben erst eine Relevanz, wenn autmatisierte Parse-Roboter (Crawler) die Seite &ouml;ffnen. Ein Crawler ist ein Programm, dass eine Webseite abruft und die ausgelesenen Inhalte verarbeitet. Im Gro&szlig;teil der F&auml;lle dient der abruf der Seiten der Indizierung der Inhalte f&uuml;r schnellere Suchanfragen.</p>
+<p>Um diesen Vorgang noch zu verbessern, gibt es neue Techniken und M&ouml;glichkeiten um die semantischen Angaben einer Seite durch viele Zusatzinformationen zu optimieren. Dies wird erreicht durch zus&auml;tzlich neue Tags, die f&uuml;r den menschlichen Betrachter nicht sichtbar sind.</p>
+<p>Werden zus&auml;tzliche Sprachen also in HTML eingebunden, m&uuml;ssen diese im DOCTYPE deklariert werden, so dass die Maschine wei&szlig;, wie Sie damit umzugehen hat.</p>
+
+<span class="h4">Beispielhaft verschiedene DOCTYPES w&auml;ren:</span>
+<table>
+         <thead>
+                 <tr>
+                         <th style="width:75%">DOCTYPE</th>
+                 </tr>
+         </thead>
+         <tbody>
+                 <tr>
+                         <td><span class="tag">!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"</span>
+<span class="tag">       "http://www.w3.org/TR/html4/loose.dtd"</span></td>
+                         <td>Zelleninhalt</td>
+                 </tr>
+                 <tr>
+                         <td><span class="tag">!doctype html</span>
+</td>
+                         <td>Zelleninhalt</td>
+                 </tr>
+                 <tr>
+                         <td><span class="tag">?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd"</span>
+</td>
+                         <td>Zelleninhalt</td>
+                 </tr>
+         </tbody>
+</table>
+
+<div class="information">Relevant ist in diesem Lehrgang lediglich der DOCTYPE <span class="tag">!doctype html</span>. Dieser DOCTYPE gibt an, dass das folgende Dokument in HTML5 geschrieben wurde</div></section>
 
 
 
-<section class='section' id='section-4'><h2>Tags</h2>
+<section class='section' id='section-4'><h2>Inhalte in HTML</h2>
 
 		<article id='article-278'>
 			<h4>TAGS in HTML</h4>
 
-			Ein Element in HTML wird parallel zu XML meist durch einen &ouml;ffnenden und schlie&szlig;enden Tag abgegrenzt. In HTML nennen sich Begrenzer tag.
+			Ein Element in <abbr title="HyperText Markup Language">HTML</abbr> wird parallel zu <abbr title="eXtensible Markup Language">XML</abbr> meist durch einen &ouml;ffnenden und schlie&szlig;enden Tag abgegrenzt. In HTML nennen sich diese Begrenzer <strong>tag</strong>.
 <span class="h4">&ouml;ffnender HTML Tag</span>
 <span class="tag">span</span>
 <span class="h4">schlie&szlig;ender HTML Tag</span>
@@ -1017,7 +1024,9 @@ Er beinhaltet somit alle Elemente wie:</p>
 
 <p>Ein selbstschlie&szlig;ender Tag - wie der Name schon sagt - schlie&szlig;t sich selbst d.h. er ben&ouml;tigt keinen eigenen schlie&szlig;enden Tag. Ein Beispiel hierf&uuml;r ist der Tag f&uuml;r die Ausgabe eines Bilder oder ein Button zum Abschicken eines Formulars. Der Tag wird innerhalb des &ouml;ffnenden Tags direkt wieder mit einem Slash "/" geschlossen<br />
 <span class="tag">img /</span></p>
-<div class="information">Seit HTML5 ist es nicht mehr n&ouml;tig die selbstschlie&szlig;enden Tags auch explizit mit dem Slash zu schlie&szlig;en, da durch die richtige Umsetzung der Spezifikation der nachfolgende Inhalt automatisch wieder ausgeschlossen wird. Auf Grund der Einheitlichkeit oder auch Umsetzungsprobleme von den leider immer noch zu stark vertetenen alten Browsern sollte der Tag trotzdem explizit geschlossen werden - HTML5 stellt trotzdem auch alles richtig dar.</div>
+
+
+<div class="information">Seit <strong>HTML5</strong> ist es nicht mehr n&ouml;tig die selbstschlie&szlig;enden Tags auch explizit mit dem Slash zu schlie&szlig;en, da durch die richtige Umsetzung der Spezifikation der nachfolgende Inhalt automatisch wieder ausgeschlossen wird. Auf Grund der Einheitlichkeit oder auch Umsetzungsprobleme von den leider immer noch zu stark vertetenen alten Browsern sollte der Tag trotzdem explizit geschlossen werden - <strong>HTML5</strong> stellt trotzdem auch alles richtig dar.</div>
 
 
 				<caption>Listing</caption>
@@ -1029,12 +1038,58 @@ Er beinhaltet somit alle Elemente wie:</p>
 		
 
 
+<section class='subSection' id='subSection-8'><h3>Zeilenumbrueche</h3>
+
+		<article id='article-180'>
+			<h4></h4>
+
+			Grunds&auml;tzlich wird ein Text immer am Ende des Browserfensters bzw. am Ende des umgebenden
+Blocks (z. B. der Tabellenzelle) automatisch an einem Leerzeichen umgebrochen.
+Um einen Zeilenumbruch an einer bestimmten Stelle zu erzwingen, verwendet man das
+Tag BR
+				<caption>Listing</caption>
+				<div class='geshi'><table class="html5"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="de1"><pre class="de1"><span class="sc2">&lt;<span class="kw2">h1</span>&gt;</span>Ohne Umbrüche<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h1</span> &gt;</span>
+<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Dieser Text steht in einem ersten Absatz .<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Dieser Text in einem weiteren .<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>In diesem dritten Absatz ist nun noch etwas mehr Text vorhanden .<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">h1</span>&gt;</span>Mit Umbrümchen <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h1</span> &gt;</span>
+<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Dieser Text steht in <span class="sc2">&lt;<span class="kw2">br</span> &gt;</span> einem ersten Absatz .<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Dieser Text <span class="sc2">&lt;<span class="kw2">br</span> &gt;</span> in einem weiteren .<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>In diesem dritten <span class="sc2">&lt;<span class="kw2">br</span> &gt;</span> Absatz ist nun noch etwas mehr Text
+vorhanden .<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></pre></td></tr></tbody></table></div>
+			</article>
+		
+
+
 <section class='subSection' id='subSection-508'><h3>Tables</h3>
 
 		<article id='article-241'>
-			<h4>Tabellen in HTML</h4>
+			<h4>Table</h4>
 
-			Das folgende Beispiel zeigt den minimalen Aufbau einer Tabelle.<br />
+			<span class="h4">[Englisch]: a table</span>
+<img class="floatCenter" src="./img/1342627743.jpeg" alt="Tisch" />
+
+<p>Das wohl erste an das man denkt, wenn man das Wort <span class="url">Table</span> h&ouml;rt, ist wohl ein Tisch.<br />
+Doch was hat dieser Tisch mit <abbr title="Hyper Text Markup Language">HTML</abbr> zu tun?<br />
+<br />
+<strong>Nat&uuml;rlich nichts!</strong> Jedoch hat das Wort Table im Englischen 2 Bedeutungen:
+<ul>
+<li>Tisch</li>
+<li>Tabelle</li>
+</ul>
+Nachdem es uns wohl im Schwerpunkt nicht darum gehen wird, m&ouml;glichste viele Bilder von Tischen auf unseren Seiten unterzubringen <em>-- au&szlig;er wir sind ein Schreiner mit Online-Shop --</em> wenden wir uns dem Thema <strong>Tabellen in HTML</strong> zu. 
+</p>
+<span class="h4">Tabellen in HTML</span>
+Das folgende Beispiel zeigt den minimalen Aufbau einer Tabelle.<br />
 Tabellen bestehen aus Reihen und Zeilen (rows tr und columns td).
 				<caption>Listing</caption>
 				<div class='geshi'><table class="html5"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
@@ -1237,6 +1292,241 @@ Falls ja, testen Sie an selbst gew&auml;hlten Beispielen, wie sich dieser verh&a
 <li>Denken Sie sich ein eigenes Beispiel aus, warum es solch einen Bereich innerhalb einer Tabelle geben sollte.</li></ol>
 
 </div>
+		<article id='article-281'>
+			<h4>Experimente mit Tabellen</h4>
+
+			<table class="example">
+         <thead>
+                 <tr>
+                         <th>Kopfzelle 1</th>
+                         <th>Kopfzelle 2</th>
+                         <th>Kopfzelle 3</th>
+                 </tr>
+         </thead>
+         <tbody>
+                 <tr>
+                         <td colspan="3" style="background:orange">Zelleninhalt</td>
+	 	 	 <td>Zelleninhalt</td>
+                 </tr>
+                 <tr>
+                         <td>Zelleninhalt</td>
+                         <td>Zelleninhalt</td>
+                         <td>Zelleninhalt</td>
+                         <td>Zelleninhalt</td>
+                 </tr>
+                 <tr>
+                         <td>Zelleninhalt</td>
+                         <td>Zelleninhalt</td>
+                         <td>Zelleninhalt</td>
+                         <td>Zelleninhalt</td>
+                 </tr>
+                 <tr>
+                         <td rowspan="2" style="background:orange">Zelleninhalt</td>
+                         <td>Zelleninhalt</td>
+                         <td>Zelleninhalt</td>
+                         <td>Zelleninhalt</td>
+                 </tr>
+                 <tr>
+                         <td>Zelleninhalt</td>
+                         <td>Zelleninhalt</td>
+                         <td>Zelleninhalt</td>
+                 </tr>
+                 <tr>
+                         <td>Zelleninhalt</td>
+                         <td colspan="2" rowspan="2" style="background:orange">Zelleninhalt</td>
+                 </tr>
+                 <tr>
+                         <td>Zelleninhalt</td>
+                         <td>Zelleninhalt</td>
+                 </tr>
+                 <tr>
+                         <td>Zelleninhalt</td>
+                         <td>Zelleninhalt</td>
+                         <td>Zelleninhalt</td>
+                         <td>Zelleninhalt</td>
+                         <td>Zelleninhalt</td>
+                         <td>Zelleninhalt</td>
+                 </tr>
+                 <tr>
+                         <td>Zelleninhalt</td>
+                         <td>
+	 	 	 	 <table style="width:100%; margin:0px;background:orange;">
+	 	 	 	 	 <tr>
+	 	 	 	 	 	 <td>A</td>
+	 	 	 	 	 	 <td><span class="tag">table</span></td>
+	 	 	 	 	 </tr>
+	 	 	 	 	 <tr>
+	 	 	 	 	 	 <td>in</td>
+	 	 	 	 	 	 <td>a <span class="tag">table</span></td>
+	 	 	 	 	 </tr>
+	 	 	 	 </table>
+	 	 	 </td>
+                         <td>Zelleninhalt</td>
+                         <td>Zelleninhalt</td>
+                         <td>Zelleninhalt</td>
+                         <td>Zelleninhalt</td>
+                 </tr>
+         </tbody>
+</table>
+				<caption>Listing</caption>
+				<div class='geshi'><table class="html5"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+</pre></td><td class="de1"><pre class="de1"><span class="sc2">&lt;<span class="kw2">table</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;example&quot;</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">thead</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">tr</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">th</span>&gt;</span>Kopfzelle 1<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">th</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">th</span>&gt;</span>Kopfzelle 2<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">th</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">th</span>&gt;</span>Kopfzelle 3<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">th</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">tr</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">thead</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">tbody</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">tr</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">td</span> <span class="kw3">colspan</span><span class="sy0">=</span><span class="st0">&quot;3&quot;</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;green&quot;</span>&gt;</span>Zelleninhalt<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">td</span>&gt;</span>Zelleninhalt<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">tr</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">tr</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">td</span>&gt;</span>Zelleninhalt<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">td</span>&gt;</span>Zelleninhalt<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">td</span>&gt;</span>Zelleninhalt<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">td</span>&gt;</span>Zelleninhalt<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">tr</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">tr</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">td</span>&gt;</span>Zelleninhalt<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">td</span>&gt;</span>Zelleninhalt<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">td</span>&gt;</span>Zelleninhalt<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">td</span>&gt;</span>Zelleninhalt<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">tr</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">tr</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">td</span> <span class="kw3">rowspan</span><span class="sy0">=</span><span class="st0">&quot;2&quot;</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;green&quot;</span>&gt;</span>Zelleninhalt<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">td</span>&gt;</span>Zelleninhalt<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">td</span>&gt;</span>Zelleninhalt<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">td</span>&gt;</span>Zelleninhalt<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">tr</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">tr</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">td</span>&gt;</span>Zelleninhalt<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">td</span>&gt;</span>Zelleninhalt<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">td</span>&gt;</span>Zelleninhalt<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">tr</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">tr</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">td</span>&gt;</span>Zelleninhalt<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">td</span> <span class="kw3">colspan</span><span class="sy0">=</span><span class="st0">&quot;2&quot;</span> <span class="kw3">rowspan</span><span class="sy0">=</span><span class="st0">&quot;2&quot;</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;green&quot;</span>&gt;</span>Zelleninhalt<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">tr</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">tr</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">td</span>&gt;</span>Zelleninhalt<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">td</span>&gt;</span>Zelleninhalt<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">tr</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">tr</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">td</span>&gt;</span>Zelleninhalt<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">td</span>&gt;</span>Zelleninhalt<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">td</span>&gt;</span>Zelleninhalt<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">td</span>&gt;</span>Zelleninhalt<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">td</span>&gt;</span>Zelleninhalt<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">td</span>&gt;</span>Zelleninhalt<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">tr</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">tr</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">td</span>&gt;</span>Zelleninhalt<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">td</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">table</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">tr</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">td</span>&gt;</span>A<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">td</span>&gt;&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;tag&quot;</span>&gt;</span>table<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">tr</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">tr</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">td</span>&gt;</span>in<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">td</span>&gt;</span>a <span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;tag&quot;</span>&gt;</span>table<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">tr</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">table</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">td</span>&gt;</span>Zelleninhalt<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">td</span>&gt;</span>Zelleninhalt<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">td</span>&gt;</span>Zelleninhalt<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="kw2">td</span>&gt;</span>Zelleninhalt<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">tr</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">tbody</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">table</span>&gt;</span></pre></td></tr></tbody></table></div>
+			</article>
+		
+		<article id='article-282'>
+			<h4>Selbststudium</h4>
+
+			<div class="homework">
+	 <span class="h4">Aufgabe</span>
+	 Bauen Sie nachfolgende Tabelle inhaltlich korrekt nach
+</div>
+
+
+<img class="large floatCenter" src="./img/1342629758abelle.png" alt="" />
 
 
 <section class='subSection' id='subSection-509'><h3>Headings</h3>
@@ -1244,9 +1534,10 @@ Falls ja, testen Sie an selbst gew&auml;hlten Beispielen, wie sich dieser verh&a
 		<article id='article-240'>
 			<h4>Headings - &Uuml;berschriften</h4>
 
-			<p>&Uuml;berschriften in HTML dienen der Strukturierung der Inhalte.</p>
-<p>Eine &Uuml;berschrift <span class="tag">H1</span> stellt immer die wichtigste &Uuml;berschrift auf einer Seite dar.</p>
-<p>Eine Suchmaschine wie zum Beispiel <strong>Google</strong> bewertet die Wichtigkeit des Textes einer &Uuml;berschrift nach der Klassifizierung mit dem jeweiligen <strong>H</strong> Tag.</p>
+			<p>&Uuml;berschriften dienen in <strong>HTML</strong> der Strukturierung der Inhalte. HTML kennt 6 Stufen von &Uuml;berschriften. Je niedriger die Nummer, desto wichtiger (besser) ist die &Uuml;berschrift. [Schulnotensystem]</p>
+<p>Eine &Uuml;berschrift <span class="tag">H1</span> stellt somit immer die wichtigste &Uuml;berschrift auf einer Seite dar.</p><div class="information">Eine <span class="tag">h1</span> - &Uuml;berschrift sollte nur einmalig auf einer Seite vertreten sein. Als &Uuml;berschrift f&uuml;r genau den Artikel, der auf der Seite zu finden ist.</div>
+
+<p>Eine Suchmaschine wie zum Beispiel <strong><a href="http://google.de">Google</a></strong> bewertet die Wichtigkeit des Textes einer &Uuml;berschrift nach der Klassifizierung mit dem jeweiligen <strong>H</strong> Tag.</p>
 
 
 <span style="-moz-box-shadow:0px 0px 0px;box-shadow:0px 0px 0px;font-family:Arial;border:0px;display:block;font-weight: bolder;font-size: 2em; margin: .67em 0" class="h1">Heading 1</span>
@@ -1280,26 +1571,50 @@ Falls ja, testen Sie an selbst gew&auml;hlten Beispielen, wie sich dieser verh&a
 <span class="sc2">&lt;<span class="kw2">h6</span>&gt;</span>Heading 6<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h6</span>&gt;</span></pre></td></tr></tbody></table></div>
 			</article>
 		
+		<article id='article-300'>
+			<h4>Hierarchische Strukturierung</h4>
+
+			<div class="homework"><span class="h4">Erstellenn nur mittels &Uuml;berschriften eine HTML-Seite, die die folgende Struktur logisch abbildet:</span>
+
+<ul>
+    <li>HTML
+        <ul>
+            <li>Grundlagen</li>
+            <li>Inhalte
+                <ul>
+                    <li>Tabellen</li>
+                    <li>Listen</li>
+                    <li>Formulare
+	                 <ul>
+	                     <li>Radio-Buttons</li>
+	                     <li>Checkboxes</li>
+	                     <li>Input</li>
+	                     <li>Textarea</li>
+	                 </ul>
+                    </li>
+                    <li>&Uuml;berschriften</li>
+                </ul>
+            </li>
+            <li>Struktur
+                <ul>
+                    <li>Aside</li>
+                    <li>Header</li>
+                    <li>Footer</li>
+                    <li>Navigation</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+
+</div>
 
 
 <section class='subSection' id='subSection-510'><h3>Paragraphs</h3>
 
-		<article id='article-246'>
-			<h4>Paragraphen und Zeilenumbr&uuml;che</h4>
-
-			<p>Ein Paragraph in HTML stellt &auml;hnlich wie in HTML einen zusammenh&auml;ngenden Text dar.<br />
-Jeder Paragraph soll eine semantische Trennung darstellen.</p>
-				<caption>Listing</caption>
-				<div class='geshi'><table class="html5"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
-2
-3
-</pre></td><td class="de1"><pre class="de1"><span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Dies ist ein Absatz<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
-<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Dies ist ein weiterer Absatz<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
-<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Dies ist der dritte Absatz<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></pre></td></tr></tbody></table></div>
-			</article>
-		
 		<article id='article-247'>
-			<h4>Zeilenumbr&uuml;che</h4>
+			<h4>HTML ignoriert Umbr&uuml;che im Code</h4>
 
 			Zeilenumbr&uuml;che sollten nur innerhalb von Elementen genutzt werden, und nicht f&uuml;r das Layout <em>"missbraucht"</em> werden.
 
@@ -1332,11 +1647,45 @@ Dies ist der dritte Satz des Paragraphs</p>
 
 			<div class="information">
 <ul>
-<li>Ein Paragraph in HTML entspricht dem Tastenkommando "ENTER" in Word.</li>
+<li><span class="tag">p</span> Ein <strong>Paragraph</strong> in HTML entspricht dem Tastenkommando "<strong>ENTER</strong>" in Word.</li>
 
-<li>Ein Zeilenumbruch in HTML entsprichet dem Tastenkommando "SHIFT-ENTER" in Word.</li>
+<li><span class="tag">br/</span>Ein <strong>Zeilenumbruch</strong> in HTML entsprichet dem Tastenkommando "<strong>SHIFT-ENTER</strong>" in Word.</li>
 </ul>
 </div>
+		<article id='article-303'>
+			<h4>Paragraphen und Zeilenumbr&uuml;che</h4>
+
+			<p>Paragraphen dienen wie &uuml;berall dazu, einen l&auml;ngeren Text in logische Abschnitte zu unterteilen. Genauso wie bei Word, sollte hierzu <strong>NICHT</strong> der einfache Zeilenumbruch [WORD: SHIFT-ENTER] genutzt werden. Sondern es sollte daf&uuml;r ein neuer Paragraph erstellt werden [WORD: ENTER].<br />
+In HTML wird dies durch den Tag <span class="tag">p</span> realisiert. Der einfache Zeilenumbruch ist der selbstschlie&szlig;ende Tag <span class="tag">br/</span></p>
+
+<span class="h4">Beispiel</span>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia nunc eu quam vestibulum pretium. Aliquam ullamcorper turpis ut nisi imperdiet dignissim. Quisque lacinia suscipit justo, ut mattis nisl dignissim ac. Morbi eget nibh eu neque auctor laoreet sed id leo. Suspendisse potenti. Maecenas sed sapien purus. Ut molestie pharetra justo sed hendrerit. Proin id odio vitae diam ullamcorper rhoncus. Nulla facilisi.</p>
+
+<p>Nam non nisl nisl. Vivamus ac pulvinar erat. In hac habitasse platea dictumst. Praesent tincidunt, neque eu pellentesque luctus, risus tortor porttitor sapien, et molestie nibh est sit amet neque. Integer sollicitudin lacus hendrerit risus dictum nec egestas ligula condimentum. In hac habitasse platea dictumst. Praesent ornare magna eu nisl ullamcorper et tincidunt dolor dapibus. Phasellus viverra elit ac nisi semper sed feugiat purus interdum. Nulla facilisi. Phasellus ornare tincidunt facilisis. Sed fringilla, dui adipiscing blandit rhoncus, mi dui mollis erat, sit amet facilisis risus ipsum id ipsum. Mauris et blandit felis. Mauris ligula nunc, cursus et ultricies quis, pharetra in arcu.</p>
+
+<p>Donec suscipit mi sed erat tempus tempus. Duis a magna sapien. Aenean elit nibh, dignissim dignissim vestibulum eu, accumsan quis nibh.<br />
+Sed ut nisi eget neque volutpat iaculis vel eu ante.<br />
+Sed placerat, augue vitae fringilla placerat, metus neque viverra odio, in laoreet nunc nibh euismod orci. Aliquam eu purus dolor.<br />
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam eu ullamcorper dui.</p>
+				<caption>Listing</caption>
+				<div class='geshi'><table class="html5"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="de1"><pre class="de1"><span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia nunc eu quam vestibulum pretium. Aliquam ullamcorper turpis ut nisi imperdiet dignissim. Quisque lacinia suscipit justo, ut mattis nisl dignissim ac. Morbi eget nibh eu neque auctor laoreet sed id leo. Suspendisse potenti. Maecenas sed sapien purus. Ut molestie pharetra justo sed hendrerit. Proin id odio vitae diam ullamcorper rhoncus. Nulla facilisi.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+&nbsp;
+<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Nam non nisl nisl. Vivamus ac pulvinar erat. In hac habitasse platea dictumst. Praesent tincidunt, neque eu pellentesque luctus, risus tortor porttitor sapien, et molestie nibh est sit amet neque. Integer sollicitudin lacus hendrerit risus dictum nec egestas ligula condimentum. In hac habitasse platea dictumst. Praesent ornare magna eu nisl ullamcorper et tincidunt dolor dapibus. Phasellus viverra elit ac nisi semper sed feugiat purus interdum. Nulla facilisi. Phasellus ornare tincidunt facilisis. Sed fringilla, dui adipiscing blandit rhoncus, mi dui mollis erat, sit amet facilisis risus ipsum id ipsum. Mauris et blandit felis. Mauris ligula nunc, cursus et ultricies quis, pharetra in arcu.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+&nbsp;
+<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Donec suscipit mi sed erat tempus tempus. Duis a magna sapien. Aenean elit nibh, dignissim dignissim vestibulum eu, accumsan quis nibh.<span class="sc2">&lt;<span class="kw2">br</span> <span class="sy0">/</span>&gt;</span>
+Sed ut nisi eget neque volutpat iaculis vel eu ante.<span class="sc2">&lt;<span class="kw2">br</span> <span class="sy0">/</span>&gt;</span>
+Sed placerat, augue vitae fringilla placerat, metus neque viverra odio, in laoreet nunc nibh euismod orci. Aliquam eu purus dolor.<span class="sc2">&lt;<span class="kw2">br</span> <span class="sy0">/</span>&gt;</span>
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam eu ullamcorper dui.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></pre></td></tr></tbody></table></div>
+			</article>
+		
 
 
 <section class='subSection' id='subSection-511'><h3>Images</h3>
@@ -1344,12 +1693,27 @@ Dies ist der dritte Satz des Paragraphs</p>
 		<article id='article-265'>
 			<h4>Bilder in HTML</h4>
 
-			<p>Bilder werden in HTML mittels des IMG tag eingebunden.</p>
+			<p>Bilder werden in HTML mittels des IMG tag eingebunden. Der Image ist auch ein selbstschlie&szlig;ender Tag. Die wichtigsten Attribute, der Img enthalten darf sind:</p>
 
-<img class="small" src="./img/1342446643_Logo_512.png" alt="HTML5 Logo" />
+<ul>
+<li>src</li>
+</ul>
+<p>Hier wird der Pfad des Bildes angegeben, dass eingebunden werden soll. Die Pfadangabe ist relativ von der HTML-Datei. Alternativ kann der Pfad auch absolut angegeben werden.</p>
+
+<ul>
+<li>alt</li>
+</ul>
+<p>Das <code>alt</code> - Attribut gibt eine <strong>alternative</strong> Darstellung an. Falls ein User innerhalb seines CLients die Darstellung von Bildern abgeschaltet hat, wird ihm dieser Text pr&auml;sentiert. Des weiteren ist diese Beschreibung relevant in Bezug auf Barrierefreiheit. Personen, die einen ScreenReader nutzen, wird an der Stelle des Bildes diese Beschreibung vorgelesen.</p>
+
+<ul>
+<li>title</li>
+</ul>
+<p>Das <code>title</code> - Attribut gibt dem Bild einen Titel. Dieser wird zum Beispiel beim MouseOver angezeigt</p>
+
+<img class="small" src="./img/1342446643_Logo_512.png" alt="Das Logo von HTML5. Ein oranges Schild im Hintergrund mit dem Buchstaben 5 als Aufdruck" title="HTML5 Logo"/>
 				<caption>Listing</caption>
 				<div class='geshi'><table class="html5"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
-</pre></td><td class="de1"><pre class="de1"><span class="sc2">&lt;<span class="kw2">img</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;./img/1342446643_Logo_512.png&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;HTML5 Logo&quot;</span> <span class="sy0">/</span>&gt;</span></pre></td></tr></tbody></table></div>
+</pre></td><td class="de1"><pre class="de1"><span class="sc2">&lt;<span class="kw2">img</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;./img/1342446643_Logo_512.png&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;Das Logo von HTML5. Ein oranges Schild im Hintergrund mit dem Buchstaben 5 als Aufdruck&quot;</span> <span class="kw3">title</span><span class="sy0">=</span><span class="st0">&quot;HTML5 Logo&quot;</span><span class="sy0">/</span>&gt;</span></pre></td></tr></tbody></table></div>
 			</article>
 		
 
@@ -1359,20 +1723,20 @@ Dies ist der dritte Satz des Paragraphs</p>
 		<article id='article-255'>
 			<h4>Das wichtigste im Web</h4>
 
-			<img src="./img/1342443439.jpg" alt="" class="floatright small"/><p>Links sind der wichtigste Bestandteil des WWW.</p>
+			<img src="./img/1342710597lttp.png" alt="" title="LINK" class="floatright small"/><p>Links sind der wichtigste Bestandteil des <abbr title="World Wide Web">WWW</abbr>.</p>
 
-<p>Ein Link ist eine Verkn&uuml;pfung zu einer Seite, Datei oder auch einem bestimmten Abschnitt innerhalb eines Dokuments.<br />
-Durch Klicken eines Links erh&auml;lt er Browser die Anweisung, die Ressource aufzurufen.</p>
+<p>Ein Link ist eine Verkn&uuml;pfung zu einer Seite, Datei oder auch einem bestimmten Abschnitt innerhalb eines Dokuments. Durch Klicken eines Links erh&auml;lt der Browser die Anweisung, die Ressource aufzurufen.</p>
 
 <p>Sie erm&ouml;glichen die Navigation nicht nur innerhalb einer Seite - sondern auch auf andere Seite.</p>
 
-<p>Ohne direkte Links zu anderen Seiten, w&auml;ren Sie immer dazu gezwungen, die URI einer Seite einzeln im Browser einzugeben und dann ENTER zu dr&uuml;cken.</p>
+<p>Ohne direkte Links zu anderen Seiten, w&auml;ren Sie immer dazu gezwungen, die <abbr title="Unique Ressource Identifier">URI</abbr> einer Seite einzeln im Browser einzugeben und dann ENTER zu dr&uuml;cken.</p>
 		<article id='article-256'>
 			<h4>HTML Link Syntax</h4>
 
-			Ein Link macht den kompletten Inhalt der innerhalb der beiden <code><a></a></code> steht klickbar.<br />
+			Ein Link macht den kompletten Inhalt, der innerhalb des Tags <span class="tag">a</span> steht, klickbar.<br />
 <br />
-Es kann somit nicht nur Text, sondern auch Bilder auch ganze Container mit einem link versehen werden
+Es kann somit nicht nur Text, sondern auch Bilder auch ganze Container mit einem link versehen werden.
+Das Wichtigste Attribut eines links ist <code>href</code>. Die Abk&uuml;rzung steht f&uuml;r Hyperlink Reference und gibt das Ziel an, auf welches der Link verweisen soll.
 				<caption>Listing</caption>
 				<div class='geshi'><table class="html5"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
 </pre></td><td class="de1"><pre class="de1"><span class="sc2">&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;#&quot;</span>&gt;</span>Link<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;</span></pre></td></tr></tbody></table></div>
@@ -1396,9 +1760,9 @@ Ein Klick auf solch einen Link &ouml;ffnet das im Betriebssystem als Standard ei
 		<article id='article-263'>
 			<h4>Links in neuen Fenstern</h4>
 
-			Mittels der Attribute eines Links eingestellt werden, dass ein Link in einem neuen Fenster ge&ouml;ffnet werden soll.
+			Mittels der Attribute eines Links kann eingestellt werden, dass ein Link z.B. in einem neuen Fenster ge&ouml;ffnet werden soll.
 
-Dies geschieht durch Angabe des Attributes: target
+Dies geschieht durch Angabe des Attributes: <code>target</code>
 
 
 <span class="h4">M&ouml;gliche Werte f&uuml;r das target Attribut:</span>
@@ -1446,7 +1810,7 @@ Dies geschieht durch Angabe des Attributes: target
 	 </tbody>
 </table>
 
-
+<span class="h4">Beispiel</span>
 
 	 <a href="http://www.google.de" target="_blank">Google in neuem Fenster</a>
 
@@ -1629,11 +1993,17 @@ Egal ob es die Auswahl eines Hotels - das Hinterlassen eines Kommentars, das pos
 		<article id='article-244'>
 			<h4>Einfache Kommentare</h4>
 
-			<p>Wie in einer normalen Programmiersprache bietet auch HTML die M&ouml;glichkeit den Quellcode zu kommentieren.</p>
+			<p>Wie in einer normalen Programmiersprache bietet auch <abbr title="Hyper Text Markup Language">HTML</abbr> die M&ouml;glichkeit den Quellcode zu kommentieren.</p>
 <p>Die eingebundenen Kommentare werden dann vom Browser dann nicht im gerenderten Frontend angezeigt</p>
 				<caption>Listing</caption>
 				<div class='geshi'><table class="html5"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
-</pre></td><td class="de1"><pre class="de1"><span class="sc-1">&lt;!-- Dies ist ein Kommentar --&gt;</span></pre></td></tr></tbody></table></div>
+2
+3
+4
+</pre></td><td class="de1"><pre class="de1">&nbsp;
+<span class="sc-1">&lt;!-- Dies ist ein Kommentar --&gt;</span>
+&nbsp;
+&nbsp;</pre></td></tr></tbody></table></div>
 			</article>
 		
 		<article id='article-245'>
@@ -1646,8 +2016,10 @@ Egal ob es die Auswahl eines Hotels - das Hinterlassen eines Kommentars, das pos
 2
 3
 4
+5
 </pre></td><td class="de1"><pre class="de1"><span class="sc-1">&lt;!-- </span>
 <span class="sc-1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Dies ist ein mehrzeiliger Kommentar</span>
+&nbsp;
 <span class="sc-1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Zweite Zeile des Kommentars</span>
 <span class="sc-1">--&gt;</span></pre></td></tr></tbody></table></div>
 			</article>
@@ -1737,27 +2109,152 @@ EM hat eine semantische Bedeutung und I besitzt lediglich die optischen Eigensch
 	 	 	 </td>
 	 	 </tr>
 	 </tbody>
-</table></section></section>
+</table>
+		<article id='article-306'>
+			<h4>Nummerieren, Definieren, oder einfach nur so....</h4>
 
-
-
-<section class='section' id='section-5'><h2>Das Grundgeruest</h2>
-
-
-
-<section class='subSection' id='subSection-429'><h3>HEAD und BODY</h3>
-
-		<article id='article-177'>
-			<h4>Kopf und K&ouml;rper - HEAD und BODY</h4>
-
-			Das Grundger&uuml;st einer HTML-Datei setzt sich aus drei Teilen zusammen:
+			<img class="small shadow floatright" src="./img/1342713494ufsliste.jpeg" alt="Einkaufsliste" /><p>HTML kennt <strong>3</strong> verschiedene M&ouml;glichkeiten Listen zu erstellen:</p>
 <ul>
-    <li>der Deklaration des Dokumenttyps,</li>
-    <li>dem Kopf der HTML-Datei (Header)</li>
-    <li>und dem K&ouml;rper der HTML-Datei, dem Body.</li>    
+    <li>unsortierte Listen</li>
+    <li>sortierte Listen</li>
+    <li>Definitionslisten</li>
+</ul><br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+
+		<article id='article-307'>
+			<h4>Unsortierte Listen - unordered lists [ul]</h4>
+
+			<p>Die einfachste Form einer Liste ist die Aufz&auml;hlung.<br />
+In HTML wird die unsortierte Liste mit dem Element <span class="tag">ul</span> eingeleitet und dementsprechend mit <span class="tag">/ul</span> wieder geschlossen.<br />
+Die einzelnen Elemente innerhalb einer Liste werden mit dem Tag <span class="tag">li</span> definiert.
+</p>
+<div class="information">Gem&auml;&szlig; den Spezifikation von HTML ist es nicht n&ouml;tig, jedes einzelne <span class="tag">li</span> auch wieder explizit zu schlie&szlig;en. Um eventuelle Darstellungsprobleme im vornherein zu verhindern und auch einen einheitlichen Coding-Stil zu gew&auml;hrleisten, sollten alle <span class="tag">li</span> auch wieder mit <span class="tag">/li</span> geschlossen werden.</div>
+
+<ul>
+    <li>Milch</li>
+    <li>&Auml;pfel</li>
+    <li>Bananen</li>
+    <li>Joghurt</li>
 </ul>
-<strong class="conclusion">Jeder dieser drei Teile wird in Form eines Tags angegeben bzw. von einem &ouml;ffnenden und
-einem schlie&szlig;enden Tag umgeben.</strong>
+
+				<caption>Listing</caption>
+				<div class='geshi'><table class="html5"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
+2
+3
+4
+5
+6
+</pre></td><td class="de1"><pre class="de1"><span class="sc2">&lt;<span class="kw2">ul</span>&gt;</span>
+&nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>Milch<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+&nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>Äpfel<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+&nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>Bananen<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+&nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>Joghurt<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">ul</span>&gt;</span></pre></td></tr></tbody></table></div>
+			</article>
+		</section></section>
+
+
+
+<section class='section' id='section-5'><h2>Struktur in HTML</h2>
+
+
+
+<section class='subSection' id='subSection-430'><h3>BLOCK</h3>
+
+
+
+<section class='subSection' id='subSection-517'><h3>Blockelemente vs. Inline Elemente</h3>
+
+		<article id='article-259'>
+			<h4>Gruppierung von Elementen</h4>
+
+			<p>HTML-Elemente k&ouml;nnen mit Hilfe der beiden Tags <span class="tag">span</span> und <span class="tag">div</span> zu Gruppen zusammengefasst werden. Der Unterschied zwischen diesen beiden Elementen liegt in Ihrer Darstellungsform.<br />Grunds&auml;tzlich haben diese beiden Elemente keinerlei Auswirkung auf das Design. Jedoch hat ein <span class="tag">DIV</span>-Container von Haus aus eine Breite von <strong>100%</strong>. Ein <span class="tag">span</span>-Tag hingegen hat keine feste Breite, sondern gliedert sich in den flie&szlig;enden Tag mit ein.</p>
+
+<div class="information">Ein <span class="tag">span</span> sollte also benutzt werden, wenn man nur einzelne Buchstaben oder W&ouml;rter innerhalb eines Textes markieren will; ein <span class="tag">div</span> hingegen, wenn man einen ganzen Block gruppieren und hervorheben will.</div>
+		<article id='article-260'>
+			<h4>HTML Block Elemente</h4>
+
+			<strong>BLOCK</strong> Elemente werden normalerweise <em> -- (kann mit <abbr title="Cascading Style Sheets">CSS</abbr> &uuml;berschrieben werden) --</em> in einer neuen Linie dargestellt.<br />
+
+Sie haben grunds&auml;tzlich eine <strong>Breite</strong> von <strong>100%</strong>.
+
+<span class="h4">Beispiele f&uuml;r Block Elemente:</span>
+
+<ul>
+	 <li><span class="tag">h1</span></li>
+	 <li><span class="tag">p</span></li>
+	 <li><span class="tag">ul</span></li>
+	 <li><span class="tag">table</span></li>
+	 <li><span class="tag">div</span></li>
+</ul>
+
+<style type="text/css">
+    <!--
+        .orange {
+	    background:orange;
+	}
+    -->
+</style>
+
+<p class="orange">Inhalt des orange <span class="tag">P</span></p>
+				<caption>Listing</caption>
+				<div class='geshi'><table class="html5"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="de1"><pre class="de1"><span class="sc2">&lt;<span class="kw2">style</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/css&quot;</span>&gt;</span>
+&nbsp; &nbsp; <span class="sc-1">&lt;!--</span>
+<span class="sc-1"> &nbsp; &nbsp; &nbsp; &nbsp;.orange {</span>
+<span class="sc-1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; background:orange;</span>
+<span class="sc-1">&nbsp; &nbsp; &nbsp; &nbsp; }</span>
+<span class="sc-1"> &nbsp; &nbsp;--&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">style</span>&gt;</span>
+&nbsp;
+&nbsp;
+&nbsp;
+<span class="sc2">&lt;<span class="kw2">p</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;orange&quot;</span>&gt;</span>Inhalt des orange <span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;tag&quot;</span>&gt;</span>P<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></pre></td></tr></tbody></table></div>
+			</article>
+		
+		<article id='article-261'>
+			<h4>HTML Inline Elemente</h4>
+
+			HTML Inline-Elemente werden im Gegensatz zu den Block-Elementen normalerweise innerhalb des normalen Textfluss dargestellt.
+
+<span class="h4">Beispiele f&uuml;r Inline Elemente:</span>
+
+<ul>
+	 <li><span class="tag">span</span></li>
+	 <li><span class="tag">img</span></li>
+	 <li><span class="tag">strong</span></li>
+	 <li><span class="tag">em</span></li>
+	 <li><span class="tag">a</span></li>
+</ul>
+
+
+<style type="text/css"><!--
+	 .orange {
+	 	 background:orange;
+	 }
+ --></style>
+
+
+<span class="orange">Inhalt des orange<span class="tag">SPAN</span></span>
+
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae eros eros, vel ultricies dolor. Aenean ultricies adipiscing viverra. Morbi in adipiscing quam. Proin neque lacus, lacinia placerat porta at, adipiscing ut neque. Nunc metus arcu, consectetur id lobortis in, <span class="orange">lacinia nec augue.</span> Ut vitae ipsum sit amet velit ornare dapibus. <span class="orange">Curabitur</span> eget libero vitae sem hendrerit porttitor id sed arcu. Sed condimentum ligula at nunc suscipit nec auctor tortor interdum. Proin non leo leo, sed consequat leo. Aliquam eu libero mi. Etiam non orci ac turpis porta laoreet. Ut sollicitudin porttitor mi, vel consectetur lorem lobortis ut. Nunc ipsum ipsum, faucibus eget rhoncus ac, faucibus eu magna.</p>
 				<caption>Listing</caption>
 				<div class='geshi'><table class="html5"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
 2
@@ -1771,240 +2268,80 @@ einem schlie&szlig;enden Tag umgeben.</strong>
 10
 11
 12
-</pre></td><td class="de1"><pre class="de1"><span class="sc2">&lt;!doctype html&gt;</span>
-<span class="sc2">&lt;<span class="kw2">html</span>&gt;</span>
+13
+14
+15
+16
+17
+18
+19
+</pre></td><td class="de1"><pre class="de1"><span class="sc2">&lt;<span class="kw2">style</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/css&quot;</span>&gt;</span>
+&nbsp; &nbsp; <span class="sc-1">&lt;!--</span>
+<span class="sc-1"> &nbsp; &nbsp; &nbsp; &nbsp;.orange {</span>
+<span class="sc-1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; background:orange;</span>
+<span class="sc-1">&nbsp; &nbsp; &nbsp; &nbsp; }</span>
+<span class="sc-1"> &nbsp; &nbsp;--&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">style</span>&gt;</span>
 &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">head</span>&gt;</span>
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">title</span>&gt;</span>Der Titel der HTML - Seite <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">title</span>&gt;</span>
-&nbsp; &nbsp; &nbsp; &nbsp; <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">head</span>&gt;</span>
 &nbsp;
-&nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">body</span>&gt;</span>
-&nbsp; &nbsp; 
-&nbsp; &nbsp; &nbsp; &nbsp; <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">body</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;orange&quot;</span>&gt;</span>Inhalt des orange SPAN<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span>
 &nbsp;
-<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">html</span>&gt;</span></pre></td></tr></tbody></table></div>
+&nbsp;
+<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae eros eros, vel ultricies dolor.
+Aenean ultricies adipiscing viverra. Morbi in adipiscing quam. Proin neque lacus, lacinia placerat porta at,
+adipiscing ut neque. Nunc metus arcu, consectetur id lobortis in, <span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;orange&quot;</span>&gt;</span>lacinia nec augue.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span>
+Ut vitae ipsum sit amet velit ornare dapibus. <span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;orange&quot;</span>&gt;</span>Curabitur<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span> eget libero vitae sem hendrerit
+porttitor id sed arcu. Sed condimentum ligula at nunc suscipit nec auctor tortor interdum. Proin non leo leo, sed
+consequat leo. Aliquam eu libero mi. Etiam non orci ac turpis porta laoreet. Ut sollicitudin porttitor mi, vel consectetur
+lorem lobortis ut. Nunc ipsum ipsum, faucibus eget rhoncus ac, faucibus eu magna.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></pre></td></tr></tbody></table></div>
 			</article>
 		
 
 
-<section class='subSection' id='subSection-430'><h3>Absaetze</h3>
-</section></section>
+<section class='subSection' id='subSection-520'><h3>Semantische Strukturierung</h3>
 
+		<article id='article-305'>
+			<h4>Bek&auml;mpfung des Missbrauchs</h4>
 
-
-<section class='section' id='section-6'><h2>DOCTYPE</h2>
-</section>
-
-
-
-<section class='section' id='section-7'><h2>Sonderzeichen</h2>
-</section>
-
-
-
-<section class='section' id='section-8'><h2>Zeilenumbrueche</h2>
-
-		<article id='article-180'>
-			<h4></h4>
-
-			Grunds&auml;tzlich wird ein Text immer am Ende des Browserfensters bzw. am Ende des umgebenden
-Blocks (z. B. der Tabellenzelle) automatisch an einem Leerzeichen umgebrochen.
-Um einen Zeilenumbruch an einer bestimmten Stelle zu erzwingen, verwendet man das
-Tag BR
-				<caption>Listing</caption>
-				<div class='geshi'><table class="html5"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
-2
-3
-4
-5
-6
-7
-8
-9
-</pre></td><td class="de1"><pre class="de1"><span class="sc2">&lt;<span class="kw2">h1</span>&gt;</span>Ohne Umbrüche<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h1</span> &gt;</span>
-<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Dieser Text steht in einem ersten Absatz .<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
-<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Dieser Text in einem weiteren .<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
-<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>In diesem dritten Absatz ist nun noch etwas mehr Text vorhanden .<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
-<span class="sc2">&lt;<span class="kw2">h1</span>&gt;</span>Mit Umbrümchen <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h1</span> &gt;</span>
-<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Dieser Text steht in <span class="sc2">&lt;<span class="kw2">br</span> &gt;</span> einem ersten Absatz .<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
-<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Dieser Text <span class="sc2">&lt;<span class="kw2">br</span> &gt;</span> in einem weiteren .<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
-<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>In diesem dritten <span class="sc2">&lt;<span class="kw2">br</span> &gt;</span> Absatz ist nun noch etwas mehr Text
-vorhanden .<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></pre></td></tr></tbody></table></div>
-			</article>
-		</section>
-
-
-
-<section class='section' id='section-517'><h2>Blockelemente vs. Inline Elemente</h2>
-
-		<article id='article-259'>
-			<h4>Gruppierung von Elementen</h4>
-
-			HTML-Elemente k&ouml;nnen mit Hilfe der beiden Tags <span class="tag">&lt;span></span> und <span class="tag">&lt;div></span> zu Gruppen zusammengefasst werden
-		<article id='article-260'>
-			<h4>HTML Block Elemente</h4>
-
-			BLOCK Elemente werden normalerweise <em>(kann mit CSS &uuml;berschrieben werden)</em> in einer neuen Linie dargestellt.<br />
-
-Sie haben grunds&auml;tzlich eine <strong>Breite</strong> von <strong>100%</strong>.
-
-<span class="h4">Beispiele f&uuml;r Block Elemente:</span>
+			<p>Mit der Einf&uuml;hrung von HTML5 wurden endlich Elemente geschaffen, um eine Seite semantisch korrekt zu strukturieren. In den Zeiten vor HTML5 wurden meist normale Container dazu missbraucht, mittels Ihrer ID zu beschreiben, was sie beinhalten. Durch die Analyse von Milliarden von Webseiten konnte ein eindeutiges Muster ermittelt werden, welche Bereiche auf einer Webseite zwingend notwendig sind. In fast allen F&auml;llen gab es Container mit den folgenden IDs:</p>
 
 <ul>
-	 <li>h1</li>
-	 <li>p</li>
-	 <li>ul</li>
-	 <li>table</li>
-	 <li>div</li>
+	 <li>#nav bzw. #navigation</li>
+	 <li>#header</li>
+	 <li>#footer</li>
+	 <li>#content</li>
+	 <li>#content_left bzw. #content_right</li>
 </ul>
 
-<style type="text/css"><!--
-	 .orange {
-	 	 background:orange;
-	 }
- --></style>
-
-<p class="orange">Inhalt des orange <span class="tag">DIVS</span></p>
-				<caption>Listing</caption>
-				<div class='geshi'><table class="html5"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
-2
-3
-4
-5
-6
-7
-8
-</pre></td><td class="de1"><pre class="de1"><span class="sc2">&lt;<span class="kw2">style</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/css&quot;</span>&gt;</span><span class="sc-1">&lt;!--</span>
-<span class="sc-1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.orange{</span>
-<span class="sc-1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;background:orange;</span>
-<span class="sc-1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span>
-<span class="sc-1"> --&gt;</span><span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">style</span>&gt;</span>
-&nbsp;
-&nbsp;
-<span class="sc2">&lt;<span class="kw2">p</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;orange&quot;</span>&gt;</span>Inhalt des orange DIVS<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></pre></td></tr></tbody></table></div>
-			</article>
-		
-		<article id='article-261'>
-			<h4>HTML Inline Elemente</h4>
-
-			HTML Inline-Elemente werden im Gegensatz zu den Block-Elementen normalerweise innerhalb des normalen Textfluss dargestellt.
-
-<span class="h4">Beispiele f&uuml;r Inline Elemente:</span>
+<p>Da bei dieser empirischen Untersuchung derart viele &Uuml;bereinstimmungen in der Struktur von Webseiten gefunden wurde, veranlasste dies die <abbr title="Web Hypertext Application Technology Working Group">WHATWG</abbr> (Community des W3C zur Weiterentwicklung von HTML) gewisse Elemente zu schaffen, die exakt nur diesem Zweck dienen. Durch die Nutzung dieser neuen Elemente wird versucht eine gr&ouml;&szlig;ere Vereinheitlichung zu schaffen und zus&auml;tzlich den Computern mehr Hilfe zu bieten, die Struktur einer Seite an Hand eindeutiger Objekte zu verstehen. Die wichtigsten neugeschaffenen Elemente sind:</p>
 
 <ul>
-	 <li>span</li>
-	 <li>img</li>
-	 <li>strong</li>
-	 <li>em</li>
-	 <li>a</li>
+    <li><span class="tag">nav</span></li>
+    <li><span class="tag">header</span></li>
+    <li><span class="tag">footer</span></li>
+    <li><span class="tag">article</span></li>
+    <li><span class="tag">aside</span></li>
 </ul>
 
-
-<style type="text/css"><!--
-	 .orange {
-	 	 background:orange;
-	 }
- --></style>
-
-
-<span class="orange">Inhalt des orange<span class="tag">SPAN</span></span>
-				<caption>Listing</caption>
-				<div class='geshi'><table class="html5"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
-2
-3
-4
-5
-6
-7
-8
-</pre></td><td class="de1"><pre class="de1"><span class="sc2">&lt;<span class="kw2">style</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/css&quot;</span>&gt;</span><span class="sc-1">&lt;!--</span>
-<span class="sc-1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.orange {</span>
-<span class="sc-1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;background:orange;</span>
-<span class="sc-1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span>
-<span class="sc-1"> --&gt;</span><span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">style</span>&gt;</span>
-&nbsp;
-&nbsp;
-<span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;orange&quot;</span>&gt;</span>Inhalt des orange SPAN<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span></pre></td></tr></tbody></table></div>
-			</article>
-		</section></section>
+Eine genauere Erkl&auml;rung dieser Elemente er&uuml;brigt sich auf Grund der Eindeutigkeit der Namen.
+<div class="information">Diese Elemente verhalten sich in der Handhabung mit <abbr title="Cascading Style Sheets">CSS</abbr> exakt wie ein Container. --> auch &auml;ltere Browser stellen diese Elemente richtig dar. (n&auml;mlich ohne optische Darstellung, so wie einen Container)</div>
+<div class="information"><span class="h4">Exakte Definition der Elemente</span><a href="http://developers.whatwg.org/">WHATWG</a></div>
+</section></section></section>
 
 
 
 
 <section class='chapter' id='chapter-427'><h1>CSS</h1>
 
-		<article id='article-163'>
-			<h4>jeweils viele kleine Nachfrager</h4>
 
-			<table>
-	<thead>
-    	<tr>
-        	<th>Zahl der Anbieter</th>
-        	<th>vollkommener Markt</th>
-        	<th>unvollkommener Markt</th>
-        </tr>
-    </thead>
-    <tbody>
-    	<tr>
-        	<td>viele kleine</td>
-            <td>vollst&auml;ndige Konkurrenz</td>
-            <td>monopolistische Konkurrenz</td>
-        </tr>
-        <tr>
-            <td>wenige mittlere</td>
-            <td>homogenes Oligopol</td>
-            <td>heterogenes Oligopol</td>
-        </tr>
-        <tr>
-            <td>ein gro&szlig;er</td>
-            <td>Monopol</td>
-        	<td>monopolistische Preisdifferenzierung</td>
-        </tr>
-    </tbody>
-</table>
-		<article id='article-165'>
-			<h4>egalit&auml;rer Liberalismus vs. Naturrechtslibertarismus</h4>
 
-			<table>
-	<thead>
-        <tr>
-            <th></th>
-            <th>Liberalismus</th>
-            <th>Libertarismus</th>
-        </tr>
-    </thead>
-    <tbody>
-    	<tr>
-            <td>Privateigentum</td>
-            <td>pragmatisch (Maximin)</td>
-            <td>unverletzlich</td>
-        </tr>
-        <tr>
-            <td>&ouml;ffentliche Produktion</td>
-            <td>pragmatisch (Maximin)</td>
-            <td>abgelehnt</td>
-        </tr>
-        <tr>
-            <td>Steuern</td>
-            <td>probates politisches Mittel</td>
-            <td>staatlicher Diebstahl</td>
-        </tr>        
-    	<tr>
-            <td>Privateigentum</td>
-            <td>pragmatisch (Maximin)</td>
-            <td>unverletzlich</td>
-        </tr>
-        <tr>
-            <td>Umverteilung</td>
-            <td>Bef&uuml;hrwortung (Maximin)</td>
-            <td>Verteilungsgerechtigkeit irrelevant</td>
-        </tr>        
-        <tr>
-            <td>Soziale Sicherungssysteme</td>
-            <td>unterst&uuml;tzt</td>
-            <td>abgelehnt</td>
-    </tbody>
-</table></section>
+
+<section class='section' id='section-522'><h2>Schriften</h2>
+
+		<article id='article-304'>
+			<h4></h4>
+
+			<img class="medium floatCenter" src="./img/134271125224930.jpg" alt="" /></section></section>
 
 
 
@@ -2039,7 +2376,7 @@ Betrachtet man nur die physikalischen Komponenten des Internets, dann ist dieses
 			<h4>Das Hyper Text Transfer Protocol</h4>
 
 			<p>
-Um Nachrichten, Webseiten oder Bin&auml;rdateien mit anderen Webservern oder Browsern austauschen zu k&ouml;nnen, ben&ouml;tigen Webserver Protokolle, wie z. B. das "Hyper Text Transfer Protocol", kurz HTTP.
+Um Nachrichten, Webseiten oder Bin&auml;rdateien mit anderen Webservern oder Browsern austauschen zu k&ouml;nnen, ben&ouml;tigen Webserver Protokolle, wie z. B. das "Hyper Text Transfer Protocol", kurz <abbr title="Hyper Text Transfer Protocol">HTTP</abbr>.
 </p>
 <div class="homework">
 	<p>
@@ -2062,7 +2399,7 @@ Um Nachrichten, Webseiten oder Bin&auml;rdateien mit anderen Webservern oder Bro
 			<h4>URL/URI und virtueller Dateipfad</h4>
 
 			<p>
-Ein URI ("Uniform Resource Indicator/Identifier") bezeichnet die vollst&auml;ndige Adresse, um beliebige Daten auf einem Server im Internet zu finden. Ein Beispiel f&uuml;r einen URI k&ouml;nnte sein:
+Ein <abbr title="Uniform Resource Indicator/Identifier">URI</abbr> ("Uniform Resource Indicator/Identifier") bezeichnet die vollst&auml;ndige Adresse, um beliebige Daten auf einem Server im Internet zu finden. Ein Beispiel f&uuml;r einen URI k&ouml;nnte sein:
 </p>
 
 <p>
@@ -2074,14 +2411,128 @@ Ein URI ("Uniform Resource Indicator/Identifier") bezeichnet die vollst&auml;ndi
 		Benutzen Sie zur Beantwortung der folgenden Fragen den deutschen Wikipedia-Artikel "URI"!</p>
     <ul>
 		<li>Wie hei&szlig;en die Teile, in die sich der obige URI gliedert (Hinweis: Es sind f&uuml;nf Teile)?</li>
-		<li>Worin liegt der Unterschied zwischen einem URI und einem URL?</li>
+		<li>Worin liegt der Unterschied zwischen einem URI und einem URL?</li><!--URI k&ouml;nnen IDs benutzten z. B. www.google.de#footer-->
 	</ul>
-</div></section></section>
+</div>
+
+</section></section>
 
 
 
 <section class='section' id='section-437'><h2>Apache</h2>
 
+
+
+<section class='subSection' id='subSection-521'><h3>Virtual Hosting</h3>
+
+		<article id='article-301'>
+			<h4>IP-Basiertes Virtual Hossting</h4>
+
+			Unter dem Begriff "Virtual Hosting" versteht man die M&ouml;glichkeit auf einem einzigen physikalischen Webserver mehrere Webangebote gleichzeit bereitzustellen.
+</p>
+<img src="./img/1342706690al_hosting.png" alt="Virtual Hosting" class="floatCenter" style="width:450px"/>
+<p>
+Virtual Hosting kann IP-Basiert oder Namensbezogen erfolgen. Um IP-Basiertes Virtual Hosting betreiben zu k&ouml;nnen, braucht ein Webserver mehrere IP-Adressen, bzw. eine IP-Adresse mit mehreren freien Ports. Die Reihenfolge der Schritte zur Konfiguration von V-Hosts ist:
+<ol>
+	<li>Konfiguration der IP-Einstellungen am Webserver durch Sys-/Netzwerkadmin.</li>
+	<li>Freischalten von IP-Adresse und Port an einer evtl. vorhandenen Firewall durch den Sys-/Netzwerkadmin.</li>
+	<li>Konfiguration des Apache Webservers mittles des <span class="apachecontainer">VirtualHost</span>-Kontainers.</li>
+</ol>
+<p>
+Der Kontainer <span class="apachecontainer">VirtualHost</span> wird verwendet, um in der Hauptkonfigurationsdatei des Apache Webservers einen Virtuellen Host darzustellen. Am Ende dieser Sektion ist ein Beispiel dazu angegeben.
+</p>
+<div class="homework">
+	 <ol>
+	 	 <li>Wo k&ouml;nnen Sie in der Onlinedokumentation ersehen, welche Direktiven f&uuml;r einen <span class="apachecontainer">VirtualHost</span>-Kontainer zul&auml;ssig sind?</li>
+	 	 <li>Warum ist hier die Direktive <span class="apache">ServerName</span> sehr wichtig? Recherchieren Sie unter: <span class="url">http://httpd.apache.org/docs/2.4/dns-caveats.html</span></li>
+	 	 <li>Benutzen Sie das unten angegebene Konfigurationsbeispiel, um einen Webauftritt f&uuml;r SelfHTML zu erstellen! SelfHTML soll unter der URL <span class="url">http://localhost:8080</span> f&uuml;r alle Nutzer erreichbar sein! Welche Konfigurationsschritte sind dazu notwendig?</li>
+	 </ol>
+</div>
+<div class="information">
+F&uuml;r die Angabe eines Ports gibt es drei M&ouml;glichkeiten:
+	 <ul>
+	 	 <li>Keine Angabe, z. B. <span class="url">127.0.0.1</span>: In diesem Fall wird Port 80 angenommen.</li>
+	 	 <li>Angabe eines Ports, z. B. <span class="url">127.0.0.1:8080</span>: Es wird der angegebene Port verwendet.</li>
+	 	 <li>Angabe eines *, z. B. <span class="url">127.0.0.1:*</span>: Ein so konfigurierter Virtual Host beantwortet Anfragen auf allen Ports.</li>
+	 </ul>
+</div>
+<div class="notes h50"></div>
+<div class="homework">
+Erstellen Sie einen weiteren virtuellen Host, der auf Port 80 den MediaWiki bereitstellt!
+</div>
+<div class="notes h50"></div>
+
+				<caption>Listing</caption>
+				<div class='geshi'><table class="apache"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="de1"><pre class="de1">&lt;<span class="kw3">VirtualHost</span> <span class="st0">&quot;127.0.0.1:8080&quot;</span>&gt;
+&nbsp; <span class="kw1">ServerAdmin</span> &nbsp; &nbsp;root@127.0.0.1
+&nbsp; <span class="kw1">DocumentRoot</span> &nbsp; <span class="st0">&quot;E:/apache/httpd/2.4.2/htdocs/port_8080&quot;</span>
+&nbsp; <span class="kw1">ServerName</span> &nbsp; &nbsp; <span class="st0">&quot;www.example.org&quot;</span>
+&nbsp; <span class="kw1">DirectoryIndex</span> index.php
+&lt;/<span class="kw3">VirtualHost</span>&gt;
+&nbsp;</pre></td></tr></tbody></table></div>
+			</article>
+		
+		<article id='article-302'>
+			<h4>Virtuelle Hosts richtig konfigurieren</h4>
+
+			<p>
+Sobald eine gr&ouml;&szlig;ere Anzahl von Virtuellen Hosts auf einem Apache Webserver konfiguriert wird, kann es leicht passieren, dass dessen Konfigurationsdatei sehr un&uuml;bersichtlich wird. Um dies zu vermeiden, bietet er die M&ouml;glichkeit einzelne Konfigurationsabschnitte, z. B. die Konfiguration eines Virtual Hosts, in eine andere Datei auszulagern und diese in die Konfiguration des Servers einzubinden.
+</p>
+<div class="homework">
+Benutzen Sie die Apache Onlinedokumentation, um zu Recherchieren wie die beiden Direktiven <span class="apache">Include</span> und <span class="apache">IncludeOptional</span> funktionieren, bzw. worin sich beide unterscheiden!
+</div>
+<div class="notes h50"></div>
+<div class="homework">
+Benutzen Sie f&uuml;r die folgenden Aufgaben die beiden unten angegebenen Virtuellen Hosts!
+	 <ul>
+	 	 <li>Speichern Sie die Konfigurationen der beiden Virtual Hosts in jeweils einer eigenen Datei (port_80.conf und port_8080.conf)</li>
+	 	 <li>Konfigurieren Sie Ihren Apache so, dass beide VHosts dargestellt werden. Sollte die Konfiguration von VHost 1 nicht gelesen werden k&ouml;nnen, muss der Start des Apache Servers unterbrochen werden. Bei VHost 2 ist diese Ma&szlig;nahme nicht notwendig, bzw. nicht erw&uuml;nscht!</li>
+	 </ul>
+</div>
+<div class="information">
+Wenn Sie virtuelle Hosts konfigurieren, sollte der physikalische Webserver h&ouml;chstens noch eine Fehlerseite bereitstellen. Alle Webauftritte werden dann durch die virtuellen Server dargestellt.
+</div>
+
+				<caption>Listing</caption>
+				<div class='geshi'><table class="php"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+</pre></td><td class="de1"><pre class="de1"><span class="co2">#VHost 1 - port_80.conf</span>
+<span class="sy0">&lt;</span>VirtualHost <span class="st0">&quot;127.0.0.1&quot;</span><span class="sy0">&gt;</span>
+&nbsp; ServerAdmin &nbsp; &nbsp;root<span class="sy0">@</span>127<span class="sy0">.</span>0<span class="sy0">.</span>0<span class="sy0">.</span>1
+&nbsp; DocumentRoot &nbsp; <span class="st0">&quot;E:/Apache/httpd/2.4.2/htdocs/port_80&quot;</span>
+&nbsp; ServerName &nbsp; &nbsp; <span class="st0">&quot;www.example.org&quot;</span>
+<span class="sy0">&lt;/</span>VirtualHost<span class="sy0">&gt;</span>
+&nbsp;
+<span class="co2">#VHost 2 - port_8080.conf</span>
+<span class="sy0">&lt;</span>VirtualHost <span class="st0">&quot;127.0.0.1:8080&quot;</span><span class="sy0">&gt;</span>
+&nbsp; ServerAdmin &nbsp; &nbsp;root<span class="sy0">@</span>127<span class="sy0">.</span>0<span class="sy0">.</span>0<span class="sy0">.</span>1
+&nbsp; DocumentRoot &nbsp; <span class="st0">&quot;E:/Apache/httpd/2.4.2/htdocs/port_8080&quot;</span>
+&nbsp; ServerName &nbsp; &nbsp; <span class="st0">&quot;www.example.de&quot;</span>
+&nbsp; DirectoryIndex index<span class="sy0">.</span>php
+<span class="sy0">&lt;/</span>VirtualHost<span class="sy0">&gt;</span>
+&nbsp;</pre></td></tr></tbody></table></div>
+			</article>
+		
 
 
 <section class='subSection' id='subSection-439'><h3>Einfuehrung und Installation</h3>
@@ -2112,32 +2563,27 @@ Es gibt verschiedene Versionen des Apache. Am h&auml;ufigsten werden die Version
 
 			<span class="h3">Die Echtheit des Installationspaketes &uuml;berpr&uuml;fen</span>
 <div class="homework">
-    Laden Sie die aktuellste Version (2.4.x) des Apache HTTP-Servers f&uuml;r Windows, und die dazugeh&ouml;rige SHA1-Datei herunter!
-    (<a href="http://www.anindya.com/apache-http-server-2-4-2-x86-and-x64-windows-installers/" target="_blank">Download here</a>)
+Laden Sie die aktuellste Version (2.4.x) des Apache HTTP-Servers f&uuml;r Windows, und die dazugeh&ouml;rige SHA1-Datei herunter! (<a href="http://www.anindya.com/apache-http-server-2-4-2-x86-and-x64-windows-installers/" target="_blank">Download here</a>)
 </div>
 <p>
 Mit Hilfe der SHA1-Checksumme einer Datei kann deren Echtheit verifziert werden. F&uuml;r das Installationspaket wird die Checksumme "64D78A9C90E005E8F4F55F4E1C3720E856BBC005" bereitgestellt. Um eine &Uuml;berpr&uuml;fung dieses Pakets durchf&uuml;hren zu k&ouml;nnen, wird zus&auml;tzlich noch eine Software ben&ouml;tigt, die SHA1-Checksummen generieren kann. Eine solche Software ist z. B. "digestIT2004".
 </p>
 <div class="homework">
-    <p>
-    Laden Sie die Software "digestIT2004" aus dem Internet herunter (<a href="http://www.colonywest.us/versions/download.php?release_id=3" target="_blank">Download here</a>), und installieren Sie sie (Complete Installation). F&uuml;hren Sie jetzt eine Verifikation des Apache-Installationspaketes, gem&auml;&szlig; der folgenden Anleitung durch!
-    </p>
+Laden Sie die Software "digestIT2004" aus dem Internet herunter (<a href="http://www.colonywest.us/versions/download.php?release_id=3" target="_blank">Download here</a>), und installieren Sie sie (Complete Installation). F&uuml;hren Sie jetzt eine Verifikation des Apache-Installationspaketes, gem&auml;&szlig; der folgenden Anleitung durch!
     <ol>
         <li>Markieren und Kopieren Sie sich die SHA1-Checksumme (64D78A9C90E005E8F4F55F4E1C3720E856BBC005).</li>
         <li>Klicken Sie mit der rechten Maustaste auf das Installationspaket. Es erscheint ein Kontextmen&uuml;.</li>
 		<li>Klicken Sie auf den Men&uuml;eintrag "digestIT 2004" mit der	linken Maustaste.</li>
 		<li>W&auml;hlen Sie den Men&uuml;punkt "Verify SHA1 Hash"!</li>
     </ol>
-	<p>
-    Wenn alles ordnungsgem&auml;&szlig; verlaufen ist, sollte die Meldung "Digest matches. Verification succeeded." erscheinen, und die Verifikation ist erfolgreich abgeschlossen.
+<p>
+Wenn alles ordnungsgem&auml;&szlig; verlaufen ist, sollte die Meldung "Digest matches. Verification succeeded." erscheinen, und die Verifikation ist erfolgreich abgeschlossen.
     </p>
 </div>
 <div class="notes h20"></div>
 <span class="h3">Die Software installieren</span>
 <div class="homework">
-    <p>
-		Installieren Sie, nach den folgenden Vorgaben, den Apache HTTP-Server auf Ihrem Laptop!
-    </p>
+Installieren Sie, nach den folgenden Vorgaben, den Apache HTTP-Server auf Ihrem Laptop!
 	<ul>
         <li>Network Domain: apache.org</li>
         <li>Server Name: localhost</li>
@@ -2179,9 +2625,7 @@ Mit Hilfe der SHA1-Checksumme einer Datei kann deren Echtheit verifziert werden.
 Nach der Installation des HTTP-Servers finden sich in dessen Installationsverzeichnis diverse Unterverzeichnisse. Diese sind:
 </p>
 <div class="homework">
-	<p>
-    	Welche Bedeutung haben die unten aufgef&uuml;hrten Unterverzeichnisse?
-    </p>
+Welche Bedeutung haben die unten aufgef&uuml;hrten Unterverzeichnisse?
     <table style="width:100%;line-height:3">
     	<tr><td style="width:10%">bin</td><td> </td></tr>
 		<tr><td>cgi-bin</td><td></td></tr>
@@ -2265,9 +2709,8 @@ Aktuell ist der Apache noch nicht in der Lage, Webseiten auszuliefern. Dies lieg
 Mit den beiden Direktiven <span class="apache">Listen</span> und <span class="apache">DocumentRoot</span> hat der Apache HTTP-Server bereits alle Informationen, die er f&uuml;r einen rudiment&auml;ren Betrieb ben&ouml;tigt. F&uuml;r den produktiven Betrieb eines Apache HTTP-Servers gen&uuml;gen diese Angaben jedoch noch nicht. Es existieren weitere Direktiven, die zur Mindestkonfiguration dieses Webservers geh&ouml;ren. Die folgende Auflistung zeigt einige davon.
 </p>
 <div class="homework">
-	<p>
-		Recherchieren Sie die Bedeutung der Direktiven in der obigen Auflistung!
-    </p>
+Recherchieren Sie die Bedeutung der Direktiven in der obigen Auflistung!
+
     <table style="width:100%">
         <tr><th style="width:25%">Direktive</th><th>Bedeutung</th></tr>
 		<tr><td style="line-height:3"><span class="apache">DefaultType</span></td><td></td></tr>
@@ -2287,10 +2730,14 @@ Wie bereits zu Anfang erw&auml;hnt, ist der Apache HTTP-Server ein modular aufge
 </p>
 <div class="homework">
 	<ul>
-    	<li>Recherchieren Sie in der Onlinedokumentation (Dynamic Shared Objects), wie das Laden von Modulen funktioniert (Syntax)!</li>
-		<li>Recherchieren Sie in der Dokumentation was die Direktive <span class="apache">DirectoryIndex index.html</span> bedeutet!</li>
-		<li>Welches Modul muss geladen werden, damit die <span class="apache">DirectoryIndex</span>-Direktive funktioniert?</li>
-		<li>Laden Sie das betreffende Modul, tragen Sie diese Direktive in Ihre Datei <span class="url">httpd.conf</span> ein und pr&uuml;fen Sie was passiert, wenn Sie die URL <span class="url">http://localhost</span>, nach einem Webserverneustart, aufrufen!</li>
+	 	 <li>Recherchieren Sie in der Onlinedokumentation (Dynamic Shared Objects), wie das Laden von Modulen funktioniert (Syntax)!</li>
+	 	 <li>Recherchieren Sie in der Dokumentation was die Direktive <span class="apache">DirectoryIndex index.html</span> bedeutet!</li>
+	 	 <li>Welches Modul muss geladen werden, damit die <span class="apache">DirectoryIndex</span>-Direktive funktioniert?</li>
+	 	 <li>Laden Sie das betreffende Modul, tragen Sie diese Direktive in Ihre Datei <span class="url">httpd.conf</span> ein und pr&uuml;fen Sie was passiert, wenn Sie die URL <span class="url">http://localhost</span>, nach einem Webserverneustart, aufrufen!</li>
+	 	 <li>Was passiert, wenn Sie die folgende URL in Ihrem Browser aufrufen: <span class="url">http://localhost/login.php</span>?</li>
+	 	 <li>Lesen Sie in der Dokumentation &uuml;ber die Direktive <span class="apache">FallbackResource</span> nach, und benutzten Sie diese, um im Falle eines HTTP-404-Fehlers auf eine Fehlerseite zu verweisen!</li>
+	 	 <li>Worin besteht der wesentliche Unterschied zwischen der <span class="apache">FallbackResource</span>-Direktive und der Direktive <span class="apache">ErrorDocument</span>?</li>
+	 	 <li>Konfigurieren Sie Ihren Apache jetzt so, dass er statt der <span class="apache">FallbackResource</span>-Direktive die <span class="apache">ErrorDocument</span>-Direktive nutzt, um im Falle eines HTTP-404-Fehlers die Fehlerseite zu zeigen!</li>
     </ul>
 </div>
 <div class="notes h100"></div>
@@ -2299,9 +2746,7 @@ Wie bereits zu Anfang erw&auml;hnt, ist der Apache HTTP-Server ein modular aufge
 In manchen Umgebungen kann es notwendig sein, dass ein Apache-Modul nur dann geladen werden darf, wenn eine bestimmte Bedingung erf&uuml;llt ist. Um dies zu erreichen, muss der <span class="apache">IfModule</span>-Kontainer eingesetzt werden.
 </p>
 <div class="information">
-<p>
-    Ein Kontainer besteht aus einem &ouml;ffnenden Tag (z. B. <span class="apachecontainer">IfModule [Bedingung]</span> und einem schlie&szlig;enden Tag (<span class="apachecontainer">/IfModule</span>). Beide Tags umschlie&szlig;en Direktiven, die nur dann ausgef&uuml;hrt werden, wenn der beteffende Kontainer bei einer Anfrage angesprochen wird.
-    </p>
+Ein Kontainer besteht aus einem &ouml;ffnenden Tag (z. B. <span class="apachecontainer">IfModule [Bedingung]</span> und einem schlie&szlig;enden Tag (<span class="apachecontainer">/IfModule</span>). Beide Tags umschlie&szlig;en Direktiven, die nur dann ausgef&uuml;hrt werden, wenn der beteffende Kontainer bei einer Anfrage angesprochen wird.
 </div>
 <p>
 Im konkreten Falle des <span class="apachecontainer">IfModule</span>-Kontainers hei&szlig;t das, dass die in einem solchen Kontainer eingeschlossenen Direktiven nur dann ausgef&uuml;hrt werden, wenn [Bedingung] zutrifft. Das Beispiel auf dieser Seite zeigt den <span class="apachecontainer">IfModule</span>-Kontainer, zusammen mit der <span class="apache">DirectoryIndex</span>-Direktive. Diese wird nur dann ausgef&uuml;hrt, wenn das Modul <span class="apache">dir_module</span> geladen wurde.
@@ -2402,7 +2847,7 @@ Ein Beispiel zum vorangegangenen Merksatz:
     Im Verzeichniss <span class="url">htdocs/selfhtml/css</span> ist jedoch in der<span class="url"> .htaccess</span>-Datei die Direktive <span class="apache">Require all granted</span> gesetzt. Daraus folgt, dass der Zugriff auf das Verzeichnis <span class="url">htdocs/selfhtml/css</span> f&uuml;r alle Nutzer gesperrt ist, weil die <span class="apache">Require all granted</span>-Direktive als zweites gefunden wird, und somit G&uuml;ltigkeit hat. Nutzer k&ouml;nnen also nur auf das Verzeichnis <span class="url">htdocs/selfhtml</span> zugreifen.
 <div class="homework">
     <ol>
-		<li>Wie verh&auml;t es sich zwischen einer .<span class="url">.htaccess</span>-Datei und der Hauptkonfigurationsdatei? Kann eine <span class="url">.htaccess</span>-Datei Direktiven aus der Hauptkonfigurationsdatei &uuml;berschreiben, und umgekehrt?</li>
+		<li>Wie verh&auml;lt es sich zwischen einer .<span class="url">.htaccess</span>-Datei und der Hauptkonfigurationsdatei? Kann eine <span class="url">.htaccess</span>-Datei Direktiven aus der Hauptkonfigurationsdatei &uuml;berschreiben, und umgekehrt?</li>
 		<li>Was passiert, wenn ein Benutzer, in seinem Browser, die folgende URL aufruft: <span class="url">http://localhost/selfhtml/htaccess</span> oder <span class="url">http://localhost/selfhtml/.htaccess</span>?
             <li>Wie kann verhindert werden, dass sich ein Nutzer den Inhalt einer <span class="url">.htaccess</span>-Datei anzeigen l&auml;sst (Hinweis: Schlagen Sie hierf&uuml;r die <span class="apache">FilesMatch</span>-Direktive nach!)
     </ol>
@@ -2476,9 +2921,7 @@ Benutzen Sie die Apache Onlinedokumentation, um herauszufinden welche Bedeutung 
 </div>
 <div class="notes h90"></div>
 <div class="homework">
-<p>
 Richten Sie die folgenden Zugriffsregeln ein:
-</p>
 <ul>
 	 <li>Alle Computer, die der Dom&auml;ne IT-TRAINING.FUS angeh&ouml;ren, d&uuml;rfen zwischen 7:00 Uhr und 16:00 Uhr auf das Verzeichnis <span class="url">htdocs</span> zugreifen. Computer, welche dieser Dom&auml;ne nicht angeh&ouml;ren, d&uuml;rfen nur zwischen 8:00 Uhr und 12:00 Uhr zugreifen.</li>
 	 <li>Alle Computer, die sich im IP-Subnetz des Webservers befinden (<span class="url">10.2.11.64/26</span>) d&uuml;rfen mit dem Mozilla FireFox auf das Verzeichnis <span class="url">htdocs/selfhtml</span> zugreifen. Alle Computer die sich nicht in diesem IP-Subnetz befinden d&uuml;rfen zus&auml;tzlich zum FireFox auch den Browser Internet Explorer nutzen!</li>
@@ -2486,9 +2929,7 @@ Richten Sie die folgenden Zugriffsregeln ein:
 </div>
 <div class="notes h70"></div>
 <div class="homework">
-	 <p>
 	 Was bewirken die unten angegebenen Konfigurationen?
-	 </p>
 </div>
 				<caption>Listing</caption>
 				<div class='geshi'><table class="apache"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
@@ -2515,6 +2956,12 @@ Richten Sie die folgenden Zugriffsregeln ein:
 &nbsp; <span class="kw1">Require</span> local</pre></td></tr></tbody></table></div>
 			</article>
 		
+		<article id='article-280'>
+			<h4>Abw&auml;rtskompatibilit&auml;t</h4>
+
+			<p>
+  Im Apache HTTP-Server wurden bis zur Version 2.2 die Direktiven <span class="apache">Allow From</span> und <span class="apache">Deny From</span>, bzw. <span class="apache">Order</span>, statt der <span class="apache">Require</span>-Direktive eingesetzt. Um abw&auml;rtskompatibel zu bleiben, hat der Apache in der Version 2.4 ein Modul namens <span class="apache">mod_access_compat</span>. Dies enth&auml;lt die oben genannten Direktiven, so dass diese auch weiterhin noch eingesetzt werden k&ouml;nnen.
+</p>
 
 
 <section class='subSection' id='subSection-442'><h3>Indexes</h3>
@@ -3146,9 +3593,7 @@ MySQL existiert sowohl als kommerzielle Software, als auch als Open Source Produ
 	 <span class="url">http://www.mysql.de/downloads/mysql</span>
 </p>
 <div class="homework">
-	<p>
-	 	 Laden Sie MySQL, als Windows MSI-Installer von der obigen Adresse herunter und installieren Sie es mit den folgenden Angaben!
-	</p>
+Laden Sie MySQL, als Windows MSI-Installer von der obigen Adresse herunter und installieren Sie es mit den folgenden Angaben!
 	<ul>
 		<li>Installationstyp: Complete</li>
 		<li>Haken setzen bei: Launch the MySQL Instance Configuration Wizard</li>
@@ -3183,9 +3628,7 @@ MediaWiki wird unter  <span class="url">http://www.mediawiki.org/wiki/Download/d
 Bevor die Installation des MediaWiki gestartet werden kann, m&uuml;ssen noch	einige Einstellungen f&uuml;r die Nutzung von PHP vorgenommen. PHP wird mit Hilfe der Datei <span class="url">php.ini</span> konfiguriert.
 </p>
 <div class="homework">
-	<p>
-		&Ouml;ffnen Sie die Datei <span class="url">E:phpphp.ini</span>, und nehmen Sie die im folgenden beschriebenen &Auml;nderungen vor!
-	</p>
+&Ouml;ffnen Sie die Datei <span class="url">E:phpphp.ini</span>, und nehmen Sie die im folgenden beschriebenen &Auml;nderungen vor!
 	<ul>
 		<li>Suchen Sie die Zeile <span style="color:#088A4B">;extension\_dir ="ext"</span> und entfernen Sie das Kommentarzeichen (;)!</li>
 		<li>Suchen Sie die Zeile <span style="color:#088A4B">;extension=php\_mysql.dll</span> und entfernen Sie das Kommentarzeichen!</li>
@@ -3257,4 +3700,94 @@ ErrorLog "logs/error.log"
 <div class="information">
 Auch wenn die <span class="apache">ErrorLog</span>-Direktive nicht angegeben wurde erstellt der Apache eine Log-Datei namens <span class="url">error.log</span>, im Verzeichnis <span class="url">[ServerRoot]/logs</span>.
 </div>
-</section></section></section></body></html>
+
+		<article id='article-292'>
+			<h4>Access Logs</h4>
+
+			<p>
+Zus&auml;tzlich zum Error-Log kennt der Apache sogenannte Access-Logs. Diese enthalten verbindungsspezifische Informationen zu den Fehlermeldungen im Error-Log. Das Format einer Access-Log Datei ist frei w&auml;hlbar. Ein Access-Log kann mittels der Direktive <span class="apache">CustomLog</span> erstellt werden.
+<div class="information">
+Es ist erlaubt mehrere <span class="apache">CustomLog</span>-Direktiven in der Hauptkonfigurationsdatei zu verwenden, um mehrere Access-Logs zu konfigurieren.
+</div>
+<div class="homework">
+	 <ul>
+	 	 <li>Wie lautet die Syntax der Direktive <span class="apache">CustomLog</span>?</li>
+	 	 <li>Welche Aufgabe hat die Direktive <span class="apache">LogFormat</span>?</li>
+	 	 <li>Wo finden Sie in der Onlinedokumentation Informationen &uuml;ber die einzelnen Formatparameter der Direktive <span class="apache">LogFormat</span>?</li>
+	 	 <li>Was verbirgt sich hinter der Abk&uuml;rzung CLF?</li>
+	 	 <li>Wie kann ein Format f&uuml;r ein bestimmtes Access-Log festgelegt werden (Syntax)?</li>
+	 </ul>
+</div>
+<div class="notes h80"></div>
+		<article id='article-293'>
+			<h4>Rotierende Log-Dateien (Log rotation)</h4>
+
+			<p>
+Bei einem Webserver auf den t&auml;glich mehrere tausend Zugriffe erfolgen, kann eine Log-Datei sehr schnell anwachsen und dadurch un&uuml;bersichtlich	werden. Um so etwas zu vermeiden, kann der Apache seine Log-Dateien in konfigurierbaren Zeitabst&auml;nden automatisch austauschen. Dieser Mechanismus wird als "Log Rotation" bezeichnet und ist sowohl f&uuml;r das Error-Log als auch f&uuml;r alle Access-Logs getrennt einstellbar.
+</p>
+<p>
+Sowohl bei der <span class="apache">ErrorLog</span>- als auch bei der <span class="apache">CustomLog</span>-Direktive sind zwei neue Angaben hinzugekommen. Der erste Teil ist <span class="apache">|bin/rotatelogs.exe</span> . Der senkrechte Strich, am Anfang der Zeile wird als "Pipe-Zeichen" bezeichnet. Er sorgt f&uuml;r das Pipelining der Loging-Informationen an das Programm <span class="url">rotatelogs.exe</span> , welche dann die Meldungen in die jeweilige Log-Datei schreibt, und alle n-Sekunden (hier ist n = 21600) eine neue Datei beginnt.
+</p>
+<div class="informationen">
+Unter dem Begriff "Pipelining" versteht man eine Art der Interprozesskommunikation. Das hei&szlig;t zwei Prozesse tauschen Informationen untereinander aus. In diesem speziellen Fall gibt der Apache Webserver Informationen an das Programm <span class="url">rotatelogs.exe</span> weiter.
+</div>
+<img src="./img/1342703701tation.png" alt="pipelining" class="floatCenter" style="width:400px"/>
+<div class="homework">
+Konfigurieren Sie Ihr Error-Log so, dass es alle 30 Sekunden rotiert!
+</div>
+<div class="notes h30"></div>
+
+				<caption>Listing</caption>
+				<div class='geshi'><table class="apache"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
+2
+3
+</pre></td><td class="de1"><pre class="de1"><span class="kw1">ErrorLog</span> &nbsp;<span class="st0">&quot;|bin/rotatelogs.exe logs/error.log 21600&quot;</span>
+<span class="kw1">LogFormat</span> <span class="st0">&quot;%h %l %u %t &quot;</span>%r<span class="st0">&quot; %&gt;s %b&quot;</span> common
+<span class="kw1">CustomLog</span> <span class="st0">&quot;|bin/rotatelogs.exe logs/access.log 21600&quot;</span> common</pre></td></tr></tbody></table></div>
+			</article>
+		
+		<article id='article-298'>
+			<h4>Bedingtes Logging - Das setenvif_module-Modul</h4>
+
+			<p>
+Um schon w&auml;hrend des Loggings eine Auswahl treffen zu k&ouml;nnen, welche Informationen protokolliert werden sollen, kennt der Apache die M&ouml;glichkeit, mit Hilfe des Moduls <span class="apache">mod_setenvif.so</span> Bedingungen f&uuml;r das Logging zu formulieren.
+</p>
+<div class="homework">
+Recherchieren Sie mit Hilfe der Onlinedokumentation nach der Bedeutung der Anweisungen aus dem unten angegebenen Beispiel!
+</div>
+<div class="notes h40"></div>
+
+				<caption>Listing</caption>
+				<div class='geshi'><table class="apache"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
+2
+3
+4
+</pre></td><td class="de1"><pre class="de1"><span class="kw1">LoadModule</span> setenvif_module <span class="st0">&quot;module/mod_setenvif.so&quot;</span>
+<span class="kw1">SetEnvIf</span> &nbsp; Remote_Addr <span class="st0">&quot;127.0.0.1&quot;</span> dontlog
+<span class="kw1">CustomLog</span> &nbsp;<span class="st0">&quot;logs/access.log&quot;</span> env!=dontlog
+&nbsp;</pre></td></tr></tbody></table></div>
+			</article>
+		
+		<article id='article-299'>
+			<h4>Bedingtes Logging - LogFormat und HTTP-Fehlercodes</h4>
+
+			<p>
+Die <span class="apache">LogFormat</span>-Direktive erlaubt es, Log-Format f&uuml;r bestimmte HTTP-Fehlercodes festzulegen. Im unten gezeigten Beispiel 1 wird eine Access-Log Datei namens <span class="url">logs/access_http400error.log</span> erstellt, in welche nur Eintr&auml;ge f&uuml;r den HTTP-Fehlercode 404 - Not Found - gemacht werden. Beispiel 2 hingegen zeigt die M&ouml;glichkeit der Verneinung. In der Datei <span class="url">logs/access_referer.log</span> werden alle Fehlercodes, au&szlig;er 200, 302 und 304 geloggt.
+</p>
+				<caption>Listing</caption>
+				<div class='geshi'><table class="php"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="de1"><pre class="de1"><span class="co2">#Beispiel 1</span>
+LogFormat <span class="st0">&quot;%404{User-agent}i %U %a&quot;</span> http404
+CustomLog <span class="st0">&quot;logs/access_http404error.log&quot;</span> http404
+&nbsp;
+<span class="co2">#Beispiel 2</span>
+LogFormat <span class="st0">&quot;%!200, 302, 304 {Referer}i&quot;</span> referer
+CustomLog <span class="st0">&quot;logs/access_referer.log&quot;</span> referer</pre></td></tr></tbody></table></div>
+			</article>
+		</section></section></section></body></html>

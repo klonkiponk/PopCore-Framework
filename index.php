@@ -17,7 +17,9 @@
 			?>
 		<h1><?php echo $title;?></h1>
 		<span class="subtitle"><?php echo $subtitle; ?></span>
-        <aside>
+        	<aside class="subMenu"><?php	echo con_createSubNavigation(); ?></aside>
+
+        <aside class="user">
             <?php con_createLogin();
 				if (isset($_SESSION['loggedin'])){
 					if ($_SESSION['role'] == 9) {
@@ -38,10 +40,10 @@
 				echo $content;
 			} else {
             if (!empty($_GET)) {
-                $sql = "SELECT name,content,uid,code,php_code,code_type,date,image";
-                $sql .= " FROM page_content WHERE page = {$_GET['id']} ORDER BY uid";                       
+                $sql = "SELECT name,content,uid,code,php_code,code_type,date,contentorder";
+                $sql .= " FROM page_content WHERE page = {$_GET['id']} ORDER BY contentorder";                       
                 $pagecontent = $GLOBALS['DB']->query( $sql );
-            }   
+            }
             while ($row = $pagecontent->fetch_array()){
                 //foreach($row as $key=>$value){
                 //    $value = html_entity_decode($value);
@@ -90,9 +92,25 @@
                         <input class='sys' type='text' name='table' value='page_content'/>        
                         <button type='submit' name='action' class='button delete' value='delete' >DELETE</button>                       
                         </form>";
+                        
+                        if(isset($predecessor)){
+	                        // - DEBUG - //
+	                        //echo "<h2>Predecessor: ".$predecessor."</h2>"; //
+	                        
+	                        echo "<form action=\"\" method=\"post\" style=\"text-align:right;\">
+                        <button type='submit' name='action' class='button edit' value='changeOrder' >MOVE UP</button> 
+                        <input type='hidden' name='thisOrder' value='{$row['contentorder']}'/>
+                        <input type='hidden' name='table' value='page_content'/> 
+                        <input type='hidden' name='predecessor' value='$predecessor'/>
+                        </form>";
+	                        
+	                        
+                        }
+                        
                     }
                 }
-                echo "</article>";
+                echo "<a class='toTop' href='#globalheader'><button class='button'>TOP</button></a></article>";
+                $predecessor = $row['contentorder'];
             }           
 				if (isset($_SESSION['loggedin'])){
 					if ($_SESSION['role'] == 9) {

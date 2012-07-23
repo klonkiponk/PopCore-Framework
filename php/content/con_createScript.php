@@ -25,7 +25,7 @@ function con_createPDF($return)
 	
 	$prince = new Prince('/usr/local/bin/prince');
 	// -- DEBUG -- //
-	$prince->setLog('./prince.log');
+	//$prince->setLog('./prince.log');
 	$file = "./script.html";
 	if ($prince->convert_file($file) == true) {
 		$return = con_createMessage('Script erfolgreich erstellt','green');

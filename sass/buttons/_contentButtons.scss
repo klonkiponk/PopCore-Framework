@@ -73,6 +73,7 @@
 .add:before
 {
         content: "\271A";
+        color: #0a4931;
 }
 
 .edit:before
@@ -83,6 +84,7 @@
 .delete:before
 {
         content: "\2718";
+        color:#6d0019;
 }
 
 .save:before
@@ -94,7 +96,10 @@
 {
         content: "\2709";
 }
-
+.login:before {
+	content: "U";
+	font-family: SymbolFont;
+}
 .like:before
 {
         content: "\2764";

@@ -2,22 +2,44 @@
 	   Primary Colors
 \**************************************/
 
-$primary1:#FF7F00;
-$primary2:#BF7730;
-$primary3:#A65200;
-$primary4:#FF9F40;
-$primary5:#FFB873;
+/* http://colorschemedesigner.com/#0U21Tw0w0w0w0 */
 
+/**************************************\
+	   Primary Colors
+\**************************************/
+
+$primary1:#FFA500;
+$primary2:#D59723;
+$primary3:#C47F00;
+$primary4:#FFB42A;
+$primary5:#FFD24C;
 
 /**************************************\
 	   Complimentary Colors
 \**************************************/
 
-$complimentary1:#04819E;
-$complimentary2:#206676;
-$complimentary3:#015367;
-$complimentary4:#38B2CE;
-$complimentary5:#60B9CE;
+$complimentary1:#1047A9;
+$complimentary2:#23498E;
+$complimentary3:#083482;
+$complimentary4:#3165C6;
+$complimentary5:#8C8CE1;
+
+
+/**************************************\
+	   Shadows
+\**************************************/
+
+$shadow1:0px 1px 2px #555;
+$shadow2:#333;
+$shadow3:#777;
+$shadow4:#ccc;
+$shadow5:inset 0px 1px 5px #fff;
+
+/**************************************\
+	   Text-Shadows
+\**************************************/
+
+$textshadow1:1px 1px 0px #333;
 
 /**************************************\
 	   Gradients

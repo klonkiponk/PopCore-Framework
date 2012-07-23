@@ -10,7 +10,7 @@
 	left: 50%;
 	width: 450px;
 	margin-left: -225px;
-	z-index:9998;
+	z-index:10;
 	label {
 	    cursor: pointer;
 	    z-index:9999;
@@ -49,12 +49,6 @@
 	background: rgba(34, 139, 34, 0.8);
 			box-shadow: 0px 0px 20px green;
 	-webkit-box-shadow: 0px 0px 20px green;
-}
-.orange {
-	border: 2px solid rgba(255, 140, 0, 0.9);
-	background: rgba(255, 215, 0, 0.9);
-			box-shadow: 0px 0px 20px orange;
-	-webkit-box-shadow: 0px 0px 20px orange;
 }
 .red {
    	border: 2px solid rgba(255, 0, 0, 0.9);
@@ -122,36 +116,41 @@
 	0% { opacity: 0; }
 	10% { opacity: 1; }
 	90% { opacity: 1; -webkit-transform: translateY(0px);}
+	98% { opacity: 0; -webkit-transform: translateY(-30px);}
 	99% { opacity: 0; -webkit-transform: translateY(-30px);}
-	100% { opacity: 0; }
+	100% { opacity:0; display:none;}
 }
 @-moz-keyframes fadeOut {
 	0% { opacity: 0; }
 	10% { opacity: 1; }
 	90% { opacity: 1; -moz-transform: translateY(0px);}
-	99% { opacity: 0; -moz-transform: translateY(-30px);}
-	100% { opacity: 0; }
+	98% { opacity: 0; -moz-transform: translateY(-30px);}
+	99% { opacity: 0; -moz-transform: translateY(-30px); }
+	100% { opacity:0; display:none;}
 }
 @-o-keyframes fadeOut {
 	0% { opacity: 0; }
 	10% { opacity: 1; }
 	90% { opacity: 1; -o-transform: translateY(0px);}
-	99% { opacity: 0; -o-transform: translateY(-30px);}
-	100% { opacity: 0; }
+	98% { opacity: 0; -o-transform: translateY(-30px);}
+	99% { opacity: 0; -o-transform: translateY(-3000px); }
+	100% { opacity:0; display:none;}	
 }
 @-ms-keyframes fadeOut {
 	0% { opacity: 0; }
 	10% { opacity: 1; }
 	90% { opacity: 1; -ms-transform: translateY(0px);}
-	99% { opacity: 0; -ms-transform: translateY(-30px);}
-	100% { opacity: 0; }
+	98% { opacity: 0; -ms-transform: translateY(-30px);}
+	99% { opacity: 0; -ms-transform: translateY(-3000px); }
+	100% { opacity:0; display:none;}	
 }
 @keyframes fadeOut {
 	0% { opacity: 0; }
 	10% { opacity: 1; }
 	90% { opacity: 1; transform: translateY(0px);}
-	99% { opacity: 0; transform: translateY(-30px);}
-	100% { opacity: 0; }
+	98% { opacity: 0; transform: translateY(-30px);}
+	99% { opacity: 0; transform: translateY(-30000px); }
+	100% { opacity:0; display:none;}	
 }
 @-webkit-keyframes runProgress {
 	0%{ width: 0%; background: rgba(255,255,255,0.3); }

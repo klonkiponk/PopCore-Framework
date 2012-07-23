@@ -55,6 +55,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b8e1fc', end
 .markItUp .markItUpButton14 a {
 	background-image:url(images/clean.png);
 }
+.markItUp .markItUpButton15 a {
+	background-image:url(images/link.png);
+}
+
 .markItUp .clean a {
 	background-image:url(images/clean.png);
 }

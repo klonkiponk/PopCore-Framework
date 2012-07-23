@@ -23,26 +23,8 @@ body {
 
 .clear {clear:both};
 
-html {
-	color:#333;
-    background:#F2F2F2;
-}
-#content a {
-    color:#FFBC40/*$AccentColor1*/;
-    @include text-shadow(1px 1px 0px #fff/*$AccentColor1Shadow*/);
-    text-decoration: none;
-    &:before {
-		content:"L";
-		vertical-align: top;
-		margin-right: 5px;
-	}
-	&:hover {
-		@include text-shadow(1px 1px 0px #555);
-		&:before {
-			
-		}
-	}
-}
+
+
 
 
 

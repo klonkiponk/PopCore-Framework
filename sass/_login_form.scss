@@ -2,25 +2,6 @@
 	position:relative;
 	width:175px;
 }
-.login_form:after {
-	position:absolute;
-	top:-26px;
-	right: -5px;
-	width: 100px;
-	height: 23px;
-	line-height: 23px;
-	font-size: 1em;
-	content:"Login";
-//	text-transform: uppercase;
-	text-align: center;
-	color:white;
-	@include rotation(0deg);
-	@include textShadowLightMenu;
-	@include grayGradient;
-	@include shadowMenu;
-	@include rounded;
-	@include box-shadow(1px 1px 1px #333);
-}
 .login_form label{
 	@include textShadowLight;
 	margin: 5px 0;

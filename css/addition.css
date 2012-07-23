@@ -22,10 +22,7 @@ img.large {
 }
 article img {
 	max-width:900px;
-	margin:5px;
-		-webkit-box-shadow: 1px 1px 5px #333;
-	-moz-box-shadow: 1px 1px 5px #333;
-	box-shadow: 1px 1px 5px #333;
+	margin:10px;
 }
 
 pre {
@@ -60,6 +57,7 @@ span.tag:after {
 	content: ">";
 	color:rgba(65, 105, 225, 0.699219);
 	font-weight: normal;
+	margin-right:2px;
 }
 span.tag {
 	font-family:UbuntuMonoRegular;
@@ -86,99 +84,9 @@ img.floatCenter {
 	margin-top:12px;
 }
 
-div.emphasize {
-  border-radius: 5px;
-  margin-top: 1em;
-  padding-left: 0.8em;
-  -webkit-box-shadow: 1px 1px 5px #cccccc;
-  -moz-box-shadow: 1px 1px 5px #cccccc;
-  box-shadow: 1px 1px 5px #cccccc;
-  margin-right: 55px;
-  position: relative;
-  background-color: #fbd5d5;
-  border: 1px solid #c30e38;
-  -webkit-box-shadow: inset 0px 1px 5px white, 0px 1px 2px #555555;
-  -moz-box-shadow: inset 0px 1px 5px white, 0px 1px 2px #555555;
-  box-shadow: inset 0px 1px 5px white, 0px 1px 2px #555555;
-  padding: 15px;
-}
-
-div.emphasize:after {
-  position: absolute;
-  right: -50px;
-  top: 8px;
-  font-size: 2em;
-  line-height: 1em;
-  font-family: SymbolFont;
-  content: "e";
-  color:#eb8999;
-  text-shadow: white 1px 1px 0px, 2px 2px 0px #d5ebfb, -1px -1px 0px #777777; }
-
-div.emphasize:before {
-  content: ".";
-  display: none;
-  clear: both; }
-  
-  table.apache {
-  overflow: none;
-  display: block;
-  background: #fff;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px;
-  -webkit-box-shadow: inset -2px -2px 5px #999999, inset 2px 2px 5px #999999;
-  -moz-box-shadow: inset -2px -2px 5px #999999, inset 2px 2px 5px #999999;
-  box-shadow: inset -2px -2px 5px #999999, inset 2px 2px 5px #999999;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  position: relative;
-  margin-top: 0px; }
   table.apache:after {
-    position: absolute;
-    top: 20px;
-    right: -45px;
-    width: 150px;
-    height: 25px;
-    line-height: 25px;
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #fff;
     content: "Apache";
-    text-shadow: #777777 1px 1px 1px;
-    background-color: #ffb76b;
-    *zoom: 1;
-    filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFFFB76B', endColorstr='#FFFF7F04');
-    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffb76b), color-stop(50%, #ffa73d), color-stop(51%, #ff7c00), color-stop(100%, #ff7f04));
-    background-image: -webkit-linear-gradient(top, #ffb76b 0%, #ffa73d 50%, #ff7c00 51%, #ff7f04 100%);
-    background-image: -moz-linear-gradient(top, #ffb76b 0%, #ffa73d 50%, #ff7c00 51%, #ff7f04 100%);
-    background-image: -o-linear-gradient(top, #ffb76b 0%, #ffa73d 50%, #ff7c00 51%, #ff7f04 100%);
-    background-image: -ms-linear-gradient(top, #ffb76b 0%, #ffa73d 50%, #ff7c00 51%, #ff7f04 100%);
-    background-image: linear-gradient(top, #ffb76b 0%, #ffa73d 50%, #ff7c00 51%, #ff7f04 100%);
-    text-align: center;
-    -webkit-box-shadow: 0px 1px 5px #555555;
-    -moz-box-shadow: 0px 1px 5px #555555;
-    box-shadow: 0px 1px 5px #555555;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg); }
-  table.apache td.ln {
-    font-weight: normal;
-    padding: 0px;
-    padding-right: 3px;
-    text-align: right;
-    border-right: 1px solid silver;
-    margin: 0px;
-    border-top-left-radius: 4px;
-    -moz-border-radius-topleft: 4px;
-    border-bottom-left-radius: 4px;
-    -moz-border-radius-bottomleft: 4px;
-    color: #999; }
-  table.apache pre {
-    margin: 0px; }
+  }
   table.apache a {
     color: #3c4c72; }
   table.apache td.de1 pre.de1 {
@@ -199,3 +107,26 @@ div.emphasize:before {
     color: blue; }
   table.apache .st_h {
     color: green; }
+
+div.homework  ul, ol {
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
+
+div.homework ol li {
+  margin-top: 0.5em;
+}
+
+div.homework ul li {
+  margin-top: 0.5em;
+}
+
+div.homework ol ul {
+  margin-left: 2em;
+}
+
+div.homework li p {
+ margin-top: 0.5em;
+ margin-bottom: 0.5em;
+ margin-left: 1em;
+}

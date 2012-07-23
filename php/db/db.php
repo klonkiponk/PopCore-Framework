@@ -4,6 +4,7 @@ include 'php/db/db_write.php';
 include 'php/db/db_update.php';
 include 'php/db/db_helper.php';
 include 'php/db/db_read.php';
+include 'php/db/db_changeOrder.php';
 
 /**
  * performs a Database Query
@@ -16,7 +17,7 @@ function db_performWritingQuery ($sql)
     if ($GLOBALS['DB']->query($sql) == false) {
         return con_createMessage($GLOBALS['DB']->error,'red');
     } else {
-        return con_createMessage($sql,'green');
+        return con_createMessage("AffectedRows: ".$GLOBALS['DB']->affected_rows,'green');
     }
 }
 /**
@@ -97,7 +98,8 @@ function db_createNewArticleForm ()
             //$form .= "<label for=\"$entry->name\">$entry->name</label>";
             //$form .= "<input type=\"text\" name=\"$entry->name\" value=\"".date(DATE_ATOM)."\"/>";                        
         
-        } elseif ($entry->name == "image"){
+        } elseif ($entry->name == "image"){  
+        } elseif ($entry->name == "contentorder"){    
 			
 		} else {
             switch ($entry->type) {
@@ -181,7 +183,9 @@ function sys_createEditFormForPageContent()
 			case "page":
             	break;
 			case "date":
-            	break;	
+            	break;
+            case "contentorder":
+            	break;		
             default:
                 $return .= "<label for=\"$key\">$key</label>";
                 $return .= "<input type=\"text\" name=\"$key\" value=\"$value\"/>";

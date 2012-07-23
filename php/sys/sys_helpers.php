@@ -28,11 +28,11 @@ function con_createAdminAsideMenu ()
 {
 	$return  = "<label>Administration</label>";
 	$return .= "<ul class='adminMenu'>";
-	$return .= "<li><a href='./phpMyAdmin/'>phpMyAdmin</a></li>";
-	$return .= "<li><a href='./pages.php'>Pages</a></li>";
-	$return .= "<li><a href='./user.php'>User</a></li>";
-	$return .= "<li><a href='./script.php'>Script erstellen</a></li>";
-	$return .= "<li><a href='./notes.php'>DEBUG</a></li>";
+	$return .= "<li class='adminMenu'><a href='./phpMyAdmin/'>phpMyAdmin</a></li>";
+	$return .= "<li class='adminMenu'><a href='./pages.php'>Pages</a></li>";
+	$return .= "<li class='adminMenu'><a href='./user.php'>User</a></li>";
+	$return .= "<li class='adminMenu'><a href='./script.php'>Script erstellen</a></li>";
+	$return .= "<li class='adminMenu'><a href='./notes.php'>DEBUG</a></li>";
 	$return .= "</ul>";
 	return $return;
 }
@@ -40,7 +40,7 @@ function con_createAdminAsideMenu ()
 
 function con_createNewArticleButton ()
 {
-    return '<form class="margin" action=" " method="post"><button type="submit" name="action" value="newArticle" class="button star">New Article</button></form>';
+    return '<form class="margin" action=" " method="post"><button type="submit" name="action" value="newArticle" class="button add">New Article</button></form>';
 } 
 
 /**

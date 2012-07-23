@@ -75,12 +75,15 @@
                 if ($chapter['pid'] == $_GET['id']){
                     $menu .= 'active';
 					$breadCrumb['chapter'] = "<a href='index.php?id={$chapter['pid']}'>".$chapter['name']."</a>";
+					$GLOBALS['chapter'] = $chapter['pid'];					
                 } elseif ( $sectionActive == 1 ) {
                     $menu .= 'sectionActive';
 					$breadCrumb['chapter'] = "<a href='index.php?id={$chapter['pid']}'>".$chapter['name']."</a>";
+					$GLOBALS['chapter'] = $chapter['pid'];					
                 } elseif ( $subSectionActive == 1) {
 	                $menu .= 'subSectionActive';
 					$breadCrumb['chapter'] = "<a href='index.php?id={$chapter['pid']}'>".$chapter['name']."</a>";
+	                $GLOBALS['chapter'] = $chapter['pid'];
                 }
 				
 
@@ -161,3 +164,45 @@
 		
 		return $breadCrumb;
   }
+
+function con_createSubNavigation()
+{
+  	if(!isset($_GET['id'])){
+       $_GET['id'] = 1; 
+    }
+	
+	
+	
+	$subMenu = "SUBMENU";
+	
+	
+    if (isset($_SESSION['loggedin'])){
+       switch ($_SESSION['role']) {
+           case 9: //admin
+	           $sql = "SELECT name,pid FROM pages WHERE sub={$GLOBALS['chapter']} AND deleted != 1 AND type <= 300";
+	           break;
+           case 1: //LoggedIn
+               $sql = "SELECT name,pid FROM pages WHERE sub={$GLOBALS['chapter']} AND deleted != 1 AND permission <= 1 AND type < 300";
+               break;
+        }
+    } else {
+            $sql = "SELECT name,pid FROM pages WHERE sub={$GLOBALS['chapter']} AND deleted != 1 AND permission = 0 AND type < 300";
+    }
+    $result = $GLOBALS['DB']->query( $sql );
+	$submenu = "<nav id='submenu'><ul>";	
+	while ($section = $result->fetch_array()) {
+		$submenu .= "<li class='section'><a href='index.php?id=".$section['pid']."'>{$section['name']}</a>";
+		
+		
+		$submenu .= "<ul>";
+		$sqlSubSections = "SELECT pid,name FROM pages WHERE sub={$section['pid']}";
+		$subSections = $GLOBALS['DB']->query($sqlSubSections);
+		while ($subSection = $subSections->fetch_array()) {
+			$submenu .= "<li class='subSection'><a href='index.php?id=".$subSection['pid']."'>{$subSection['name']}</a>";
+		}
+		$submenu .= "</ul>";
+		$submenu .= "</li>";
+	}
+	$submenu .= "</ul></nav>";
+	return $submenu;
+}
