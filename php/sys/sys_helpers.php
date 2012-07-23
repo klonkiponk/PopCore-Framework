@@ -51,7 +51,7 @@ function con_createNewArticleButton ()
  */
 function con_createFooter ()
 {
-    echo "<p>PHP Workshop</p>\n";
+    echo "<p>ITSysAdminFwWebSK</p>\n";
 }
     
 /**
@@ -98,7 +98,7 @@ function sys_createHead ($author = "Insert Author via HTML Template",$descriptio
     echo "<head>\n";
     echo "<title>";
     echo SITETITLE;
-    echo " :: $title</title>\n";
+    echo " :: {$title['name']}</title>\n";
     echo "<link rel=\"icon\" href=\"img/favicon.ico\" type=\"image/x-icon\" />\n";  
     echo "<meta charset=\"UTF-8\">\n";
     echo "<meta name=\"description\" content=\"$description\">\n";

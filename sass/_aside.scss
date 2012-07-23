@@ -23,7 +23,7 @@ aside {
 
 aside:after {
 	position:absolute;
-	top:-10px;
+	top:-13px;
 	right: 8px;
 	width: 100px;
 	height: 23px;
@@ -119,15 +119,16 @@ aside.subMenu {
 		}
 	}
 	  li.subSection {
-		  margin-left: 10px;
+		  margin-left: 0px;
 		  font-weight: normal;
-		  margin-top:5px;
-		  margin-bottom: 5px;
+		  margin-top:3px;
+		  margin-bottom: 3px;
 		  padding:5px;
 		  border: 1px solid #ccc;
   		  background-color: #f2f2f2;
 		  @include filter-gradient(#f2f2f2, #cccccc, vertical);
 		  @include background-image(linear-gradient(top,  #f2f2f2 0%,#ddd 76%,#f2f2f2 100%));
+		  @include border-radius(2px);
 		  &:hover {
 			  @include box-shadow(0px 0px 10px #ccc inset);
 		  }

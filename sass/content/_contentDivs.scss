@@ -18,7 +18,6 @@ div.blackbox {
     color:#fff;
     width:440px;
     margin:5px;
-    @include transitionMenu;
     &:hover{
         @include grayGradientHover;
         border:1px solid #222;

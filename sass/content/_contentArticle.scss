@@ -3,7 +3,6 @@
 \**************************************/
 
 article {
-        //background:rgba(200,200,200,0.5);
         background-color: #f2f2f2;
         @include filter-gradient(#f2f2f2, #cccccc, vertical);
         @include background-image(linear-gradient(top,  #f2f2f2 0%,#ddd 76%,#f2f2f2 100%));
@@ -22,69 +21,3 @@ article {
             margin:0px;
         }
 }
-article.user {
-        padding:0px;
-        div {
-            margin:0px;
-            //@include box-shadow(0px 0px 1px #000);
-            /*background-color: #e2e2e2;
-            @include filter-gradient(#e2e2e2, #fefefe, vertical);
-            @include background-image(linear-gradient(top,  #e2e2e2 0%,#fefefe 100%));*/
-            p {
-                padding:5px;
-            }
-            h3 {
-                margin:0px;
-            }
-        }                                                                                      
-}
-article.numbers {
-    margin-bottom:60px;
-        
-    background-color: #f2f2f2;
-    @include filter-gradient(#f2f2f2, #cccccc, vertical);
-    @include background-image(linear-gradient(top,  #f2f2f2 0%,#ddd 76%,#f2f2f2 100%));
-
-    @include box-shadow(inset white 0px 0px 40px);
-
-    
-    h4 {
-        display:inline-block;
-        font-size:2em;
-        width:50px;
-        height:50px;
-        text-align:center;
-        @include border-radius(50px);
-        //color:#31A0EA;
-        color:#777;
-        margin-top:5px;
-        @include text-shadow(2px 2px 5px white,-2px -2px 5px white);
-        @include box-shadow(0px 0px 5px #777, inset 0px 0px 20px white);
-        background-color: #ebf1f6;
-        @include filter-gradient(#ebf1f6, #d5ebfb, vertical);
-        @include background-image(linear-gradient(top,  #ebf1f6 0%,#abd3ee 50%,#89c3eb 51%,#d5ebfb 100%));
-        border:2px solid white;
-        margin-right:10px;       
-        &.orange {
-            background-color: #f85032;
-            @include filter-gradient(#f85032, #e73827, vertical);
-            @include background-image(linear-gradient(top,  #f85032 0%,#f16f5c 50%,#f6290c 51%,#f02f17 71%,#e73827 100%));
-        }
-    }
-    h2 {
-        display:inline-block;
-        vertical-align:middle;
-        margin-top:-20px;
-        border-bottom:1px solid white;
-    }
-    p {
-        margin:10px 0px;
-        padding-left:67px;
-    }
-    h5 {
-        color:rgba(65, 105, 225, 1);
-        //color:white;
-        margin-top:30px;
-        margin-bottom:2px;
-    }
-}              

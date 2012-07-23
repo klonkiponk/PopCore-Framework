@@ -73,7 +73,6 @@
 .add:before
 {
         content: "\271A";
-        color: #0a4931;
 }
 
 .edit:before
@@ -99,7 +98,21 @@
 .login:before {
 	content: "U";
 	font-family: SymbolFont;
+	font-size:1.1em;
+	padding-right:5px;
+	padding-left:7px;
+	margin-left: -17px;
 }
+.logout:before {
+	content: "X";
+	font-family: SymbolFont;
+	font-size:1.1em;
+	padding-right:5px;
+	padding-left:7px;
+	margin-left: -17px;	
+}
+
+
 .like:before
 {
         content: "\2764";

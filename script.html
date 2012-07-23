@@ -4,7 +4,8 @@
 	<title>ItSysAdminFwWebSK</title>
 	<meta charset='utf-8'>
 </head>
-<body><style type="text/css" media="print,screen"><!--html, body, div, span, applet, object, iframe,
+<body><style type="text/css" media="print,screen"><!--/* line 17, ../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
@@ -24,30 +25,38 @@ time, mark, audio, video {
   font: inherit;
   vertical-align: baseline; }
 
+/* line 20, ../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 body {
   line-height: 1; }
 
+/* line 22, ../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none; }
 
+/* line 24, ../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+/* line 26, ../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle; }
 
+/* line 28, ../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none; }
+  /* line 101, ../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
   q:before, q:after, blockquote:before, blockquote:after {
     content: "";
     content: none; }
 
+/* line 30, ../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none; }
 
+/* line 114, ../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block; }
 
@@ -137,34 +146,55 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /**************************************\
 			   ELEMENTS
 \**************************************/
+/* line 129, ../sass/print.scss */
 ol {
   list-style: decimal;
   margin-bottom: 10px;
   margin-top: 10px; }
 
+/* line 134, ../sass/print.scss */
 ul {
   list-style: square;
   margin-bottom: 10px;
   margin-top: 10px; }
 
+/* line 139, ../sass/print.scss */
 li {
   margin-left: 25px; }
 
+/* line 143, ../sass/print.scss */
 a {
   text-decoration: none;
   color: #000; }
 
+/* line 147, ../sass/print.scss */
 caption {
   display: block;
   font-size: 80%;
   margin-bottom: 3px;
   text-align: center; }
 
+/* line 153, ../sass/print.scss */
 table {
   margin-bottom: 15px; }
 
+/* line 163, ../sass/print.scss */
 pre {
   font-family: UbuntuMonoRegular; }
+
+/* line 166, ../sass/print.scss */
+abbr {
+  border-bottom: 0px;
+  text-decoration: none;
+  font-weight: bold; }
+
+/* line 171, ../sass/print.scss */
+p {
+  margin-top: 0.5em; }
+
+/* line 175, ../sass/print.scss */
+strong {
+  font-weight: bold; }
 
 /**************************************\
 			  TITLE PAGE
@@ -185,6 +215,7 @@ pre {
   @top-right {
     content: normal; } }
 
+/* line 201, ../sass/print.scss */
 .titlepage {
   page-break-after: always;
   text-align: center; }
@@ -192,6 +223,7 @@ pre {
 /**************************************\
 			  	 BODY
 \**************************************/
+/* line 210, ../sass/print.scss */
 body {
   text-align: justify;
   font-family: UbuntuLightRegular;
@@ -201,53 +233,67 @@ body {
 /**************************************\
 			  	 TOC
 \**************************************/
+/* line 221, ../sass/print.scss */
 ul.toc, ul.toc ul {
   list-style-type: none; }
 
+/* line 225, ../sass/print.scss */
 .toc ul {
   margin: 0px; }
 
+/* line 228, ../sass/print.scss */
 .toc li.chapter a, .toc li.section a {
   font-family: UbuntuLightRegular; }
 
+/* line 232, ../sass/print.scss */
 .toc ul ul {
   margin-left: 27px; }
 
+/* line 236, ../sass/print.scss */
 .toc li a.PageRef::after {
   content: " " leader(".  ") "" target-counter(attr(href, url), page); }
 
+/* line 240, ../sass/print.scss */
 .toc li.chapter {
   margin-bottom: 0.5em;
   margin-top: 0.5em;
   border-bottom: 1px solid gray;
   padding-bottom: 4px; }
 
+/* line 246, ../sass/print.scss */
 .toc li.chapter a {
   font-size: 120%; }
 
+/* line 251, ../sass/print.scss */
 .toc li.section {
   margin-bottom: 0.5em;
   margin-top: 0.5em; }
 
+/* line 256, ../sass/print.scss */
 .toc li.subSection {
   margin-bottom: 0.4em;
   margin-top: 0.4em; }
 
+/* line 260, ../sass/print.scss */
 .toc li.chapter a.PageRef::after {
   content: " " leader(" ") "" target-counter(attr(href, url), page); }
 
+/* line 263, ../sass/print.scss */
 .toc li.chapter a::before {
   content: target-counter(attr(href, url), chapter) " "; }
 
+/* line 266, ../sass/print.scss */
 .toc li.section a::before {
   content: target-counter(attr(href, url), chapter) "." target-counter(attr(href, url), section) " "; }
 
+/* line 269, ../sass/print.scss */
 .toc li.subSection a::before {
   content: target-counter(attr(href, url), chapter) "." target-counter(attr(href, url), section) "." target-counter(attr(href, url), subSection) " "; }
 
 /**************************************\
 			   COUNTERS
 \**************************************/
+/* line 276, ../sass/print.scss */
 body {
   counter-reset: chapter;
   counter-reset: section;
@@ -255,6 +301,7 @@ body {
   counter-reset: paragraph;
   counter-reset: caption; }
 
+/* line 284, ../sass/print.scss */
 section.chapter {
   counter-increment: chapter;
   counter-reset: section;
@@ -262,44 +309,53 @@ section.chapter {
   counter-reset: paragraph;
   counter-reset: caption; }
 
+/* line 294, ../sass/print.scss */
 h1 {
   counter-reset: section; }
-h2 {
-  counter-reset: subSection;
-}
+
+/* line 297, ../sass/print.scss */
 section.section {
   counter-increment: section;
   counter-reset: subSection;
   counter-reset: paragraph; }
 
+/* line 304, ../sass/print.scss */
 section.subSection {
   counter-increment: subSection;
   counter-reset: paragraph; }
 
+/* line 310, ../sass/print.scss */
 article {
   counter-increment: paragraph; }
 
+/* line 314, ../sass/print.scss */
 caption {
   counter-increment: caption; }
 
+/* line 318, ../sass/print.scss */
 div.chapter {
   page-break-before: always; }
 
+/* line 322, ../sass/print.scss */
 .chapter h1:before {
   content: counter(chapter) " "; }
 
+/* line 326, ../sass/print.scss */
 .chapter h2:before {
   content: counter(chapter) "." counter(section) " "; }
 
+/* line 330, ../sass/print.scss */
 .chapter h3:before {
   content: counter(chapter) "." counter(section) "." counter(subSection) " "; }
 
+/* line 338, ../sass/print.scss */
 caption:after {
   content: " " counter(chapter) "." counter(caption); }
 
 /**************************************\
 			   HEADINGS
 \**************************************/
+/* line 346, ../sass/print.scss */
 h1 {
   string-set: chapter content();
   margin-top: 250px;
@@ -310,6 +366,7 @@ h1 {
   line-height: 2em;
   page-break-before: always; }
 
+/* line 356, ../sass/print.scss */
 h2 {
   string-set: section content();
   margin-top: 1.6em;
@@ -317,6 +374,7 @@ h2 {
   font-size: 1.7em;
   color: #bf8d30; }
 
+/* line 363, ../sass/print.scss */
 h3 {
   string-set: subSection content();
   margin-top: 0.8em;
@@ -324,6 +382,15 @@ h3 {
   font-size: 1.3em;
   color: #a66c00; }
 
+/* line 370, ../sass/print.scss */
+span.h3 {
+  margin-top: 0.8em;
+  margin-bottom: 1.3em;
+  font-size: 1.3em;
+  color: #a66c00;
+  display: block; }
+
+/* line 377, ../sass/print.scss */
 h4 {
   string-set: paragraph content();
   font-size: 1.2em;
@@ -334,16 +401,43 @@ h4 {
 /**************************************\
 			   IMAGES
 \**************************************/
+/* line 390, ../sass/print.scss */
 img {
   width: 250px;
   margin: 0px auto;
   display: block; }
 
+/* line 395, ../sass/print.scss */
+.floatleft {
+  float: left; }
+
+/* line 398, ../sass/print.scss */
+.floatright {
+  float: right; }
+
+/* line 401, ../sass/print.scss */
+.floatCenter {
+  margin: 0px auto;
+  display: block; }
+
+/* line 405, ../sass/print.scss */
+.small {
+  width: 150px; }
+
+/* line 408, ../sass/print.scss */
+.medium {
+  width: 50%; }
+
+/* line 411, ../sass/print.scss */
+.large {
+  width: 100%; }
+
 /**************************************\
 			   BOXES
 \**************************************/
+/* line 419, ../sass/print.scss */
 .homework {
-  background-color: #a0e1ff;
+  background-color: #b5c6d0;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
@@ -352,7 +446,11 @@ img {
   padding: 10px;
   border: 1px solid gray;
   margin-top: 15px; }
+  /* line 425, ../sass/print.scss */
+  .homework span.h4 {
+    display: block; }
 
+/* line 430, ../sass/print.scss */
 .notes {
   background: url("./img/papier2.png");
   width: 100%;
@@ -363,24 +461,31 @@ img {
   -moz-box-shadow: 2px 2px 5px #999999;
   box-shadow: 2px 2px 5px #999999; }
 
+/* line 439, ../sass/print.scss */
 .h10 {
   height: 5em; }
 
+/* line 442, ../sass/print.scss */
 .h20 {
   height: 10em; }
 
+/* line 445, ../sass/print.scss */
 .h30 {
   height: 15em; }
 
+/* line 448, ../sass/print.scss */
 .h40 {
   height: 20em; }
 
+/* line 451, ../sass/print.scss */
 .h50 {
   height: 25em; }
 
+/* line 454, ../sass/print.scss */
 .h60 {
   height: 30em; }
 
+/* line 457, ../sass/print.scss */
 .h70 {
   height: 35em; }
 
@@ -390,11 +495,13 @@ GESHI - (CODE WITH SYNTAX HIGHLIGHTING)
 /************\
 geSHi Wrapper
 \************/
+/* line 470, ../sass/print.scss */
 div.geshi {
   overflow: hidden;
   position: relative;
   margin-top: 0px;
   font-size: 0.9em; }
+  /* line 475, ../sass/print.scss */
   div.geshi table {
     border: 1px solid gray;
     overflow: none;
@@ -409,6 +516,7 @@ div.geshi {
     margin-top: 0px;
     min-height: 85px;
     overflow: scroll; }
+    /* line 485, ../sass/print.scss */
     div.geshi table td.ln {
       font-weight: normal;
       padding: 0px;
@@ -418,8 +526,10 @@ div.geshi {
       margin: 0px;
       color: #999;
       width: 25px; }
+    /* line 496, ../sass/print.scss */
     div.geshi table td:nth-child(2) {
       padding-left: 10px; }
+    /* line 499, ../sass/print.scss */
     div.geshi table:after {
       position: absolute;
       top: 20px;
@@ -453,108 +563,153 @@ div.geshi {
 /*********************************************\
 For Each Programming Language another table.XXX
 \*********************************************/
+/* line 529, ../sass/print.scss */
 .geshi table.html5:after {
   content: "HTML"; }
+/* line 532, ../sass/print.scss */
 .geshi table.html5 pre {
   margin: 0px; }
+/* line 535, ../sass/print.scss */
 .geshi table.html5 .imp {
   font-weight: bold;
   color: orange; }
+/* line 538, ../sass/print.scss */
 .geshi table.html5 .kw2 {
   color: #4169e1;
   font-weight: bold; }
+/* line 542, ../sass/print.scss */
 .geshi table.html5 .kw3 {
   color: #4169e1;
   font-style: italic; }
+/* line 546, ../sass/print.scss */
 .geshi table.html5 .es0 {
   color: #4169e1;
   font-weight: bold; }
+/* line 550, ../sass/print.scss */
 .geshi table.html5 .br0 {
   color: #4169e1; }
+/* line 553, ../sass/print.scss */
 .geshi table.html5 .sy0 {
   color: rgba(65, 105, 225, 0.7); }
+/* line 556, ../sass/print.scss */
 .geshi table.html5 .st0 {
   color: green; }
+/* line 559, ../sass/print.scss */
 .geshi table.html5 .nu0 {
   color: red; }
+/* line 562, ../sass/print.scss */
 .geshi table.html5 .sc-2 {
   color: red; }
+/* line 565, ../sass/print.scss */
 .geshi table.html5 .sc-1 {
   color: red;
   font-style: italic; }
+/* line 568, ../sass/print.scss */
 .geshi table.html5 .sc0 {
   color: red; }
+/* line 571, ../sass/print.scss */
 .geshi table.html5 .sc1 {
   color: red; }
+/* line 574, ../sass/print.scss */
 .geshi table.html5 .sc2 {
   color: rgba(65, 105, 225, 0.7); }
 
+/* line 580, ../sass/print.scss */
 .geshi table.css:after {
   content: "CSS"; }
+/* line 583, ../sass/print.scss */
 .geshi table.css pre {
   margin: 0px; }
+/* line 586, ../sass/print.scss */
 .geshi table.css .imp {
   font-weight: bold;
   color: red; }
+/* line 587, ../sass/print.scss */
 .geshi table.css .kw1 {
   color: rgba(65, 105, 225, 0.7);
   font-weight: bold; }
+/* line 591, ../sass/print.scss */
 .geshi table.css .kw2 {
   color: green; }
+/* line 594, ../sass/print.scss */
 .geshi table.css .co1 {
   color: orange; }
+/* line 595, ../sass/print.scss */
 .geshi table.css .co2 {
   color: fuchsia;
   font-style: italic; }
+/* line 596, ../sass/print.scss */
 .geshi table.css .coMULTI {
   color: #808080;
   font-style: italic; }
+/* line 597, ../sass/print.scss */
 .geshi table.css .es0 {
   color: fuchsia;
   font-weight: bold; }
+/* line 598, ../sass/print.scss */
 .geshi table.css .es2 {
   color: fuchsia;
   font-weight: bold; }
+/* line 599, ../sass/print.scss */
 .geshi table.css .br0 {
   color: black; }
+/* line 601, ../sass/print.scss */
 .geshi table.css .sy0 {
   color: black; }
+/* line 603, ../sass/print.scss */
 .geshi table.css .st0 {
   color: black; }
+/* line 604, ../sass/print.scss */
 .geshi table.css .nu0 {
   color: #c5060b; }
+/* line 606, ../sass/print.scss */
 .geshi table.css .re0 {
   color: black; }
+/* line 607, ../sass/print.scss */
 .geshi table.css .re1 {
   color: black;
   font-style: italic; }
+/* line 610, ../sass/print.scss */
 .geshi table.css .re2 {
   color: black; }
+/* line 612, ../sass/print.scss */
 .geshi table.css .re3 {
   color: blue; }
 
+/* line 617, ../sass/print.scss */
 .geshi table.php:after {
   content: "PHP"; }
+/* line 620, ../sass/print.scss */
 .geshi table.php pre {
   margin: 0px; }
+/* line 623, ../sass/print.scss */
 .geshi table.php a {
   color: #3c4c72; }
+/* line 626, ../sass/print.scss */
 .geshi table.php td.de1 pre.de1 {
   color: #555; }
+/* line 629, ../sass/print.scss */
 .geshi table.php .br0 {
   color: black; }
+/* line 632, ../sass/print.scss */
 .geshi table.php .re0 {
   color: #318495; }
+/* line 635, ../sass/print.scss */
 .geshi table.php .sy0, .geshi table.php .sy1 {
   color: blue; }
+/* line 638, ../sass/print.scss */
 .geshi table.php .st0 {
   color: #036a07; }
+/* line 644, ../sass/print.scss */
 .geshi table.php .co1, .geshi table.php .co2, .geshi table.php .coMULTI {
   color: #ff7f00; }
+/* line 647, ../sass/print.scss */
 .geshi table.php .kw1 {
   color: blue; }
+/* line 650, ../sass/print.scss */
 .geshi table.php .kw2 {
   color: blue; }
+/* line 653, ../sass/print.scss */
 .geshi table.php .st_h {
   color: green; }
 --></style>
@@ -572,6 +727,8 @@ For Each Programming Language another table.XXX
 	<ul>
 <li class='section'><a href='#section-518' class='PageRef'>Coding Guidelines</a></li>
 <ul>
+<li class='subSection'><a href='#subSection-527' class='PageRef'>HTML</a></li>
+<li class='subSection'><a href='#subSection-528' class='PageRef'>CSS</a></li>
 </ul><li class='section'><a href='#section-519' class='PageRef'>Entstehung des Internet</a></li>
 <ul>
 </ul>	</ul>
@@ -601,6 +758,11 @@ For Each Programming Language another table.XXX
 	<ul>
 <li class='section'><a href='#section-522' class='PageRef'>Schriften</a></li>
 <ul>
+</ul><li class='section'><a href='#section-524' class='PageRef'>CSS3 - Effekte</a></li>
+<ul>
+<li class='subSection'><a href='#subSection-523' class='PageRef'>text-shadow</a></li>
+<li class='subSection'><a href='#subSection-525' class='PageRef'>box-shadow</a></li>
+<li class='subSection'><a href='#subSection-526' class='PageRef'>border-radius</a></li>
 </ul>	</ul>
 <li class='chapter'><a href='#chapter-500' class='PageRef'>WEBSERVER</a></li>
 	<ul>
@@ -642,7 +804,15 @@ der folgenden Kapitel.
 
 
 <section class='section' id='section-518'><h2>Coding Guidelines</h2>
-</section>
+
+
+
+<section class='subSection' id='subSection-527'><h3>HTML</h3>
+
+
+
+<section class='subSection' id='subSection-528'><h3>CSS</h3>
+</section></section>
 
 
 
@@ -2341,7 +2511,197 @@ Eine genauere Erkl&auml;rung dieser Elemente er&uuml;brigt sich auf Grund der Ei
 		<article id='article-304'>
 			<h4></h4>
 
-			<img class="medium floatCenter" src="./img/134271125224930.jpg" alt="" /></section></section>
+			<img class="medium floatCenter" src="./img/134271125224930.jpg" alt="" /></section>
+
+
+
+<section class='section' id='section-524'><h2>CSS3 - Effekte</h2>
+
+
+
+<section class='subSection' id='subSection-523'><h3>text-shadow</h3>
+
+		<article id='article-314'>
+			<h4>Einfacher Textschatten</h4>
+
+			<p style="font-size:3em; text-shadow: 1px 1px #333; color:#999">Einfacher Textschatten</p>
+		<article id='article-315'>
+			<h4>Breiter Textschatten</h4>
+
+			<p style="font-size:3em;text-shadow:
+    1px 1px #ccc,
+    2px 2px #ccc,
+    3px 3px #ccc,
+    4px 4px #ccc,
+    5px 5px #ccc,
+    6px 6px #ccc; ; color:#999">Einfacher Textschatten</p>
+		<article id='article-316'>
+			<h4></h4>
+
+			<p style="font-size:3em;text-shadow:
+1px 0 #EEEEEE, 0 1px #CCCCCC,
+2px 1px #EEEEEE, 1px 2px #CCCCCC,
+3px 2px #EEEEEE, 2px 3px #CCCCCC,
+4px 3px #EEEEEE, 3px 4px #CCCCCC,
+5px 4px #EEEEEE, 4px 5px #CCCCCC,
+6px 5px #EEEEEE, 5px 6px #CCCCCC,
+6px 6px #EEEEEE;
+color:#999">Einfacher Textschatten</p>
+		<article id='article-317'>
+			<h4></h4>
+
+			<p style="font-size:3em;text-shadow:
+1px 0px 1px #eee, 0px 1px 1px #ccc,
+2px 1px 1px #eee, 1px 2px 1px #ccc,
+3px 2px 1px #eee, 2px 3px 1px #ccc,
+4px 3px 1px #eee, 3px 4px 1px #ccc,
+5px 4px 1px #eee, 4px 5px 1px #ccc,
+6px 5px 1px #eee, 5px 6px 1px #ccc,
+6px 6px 1px #eee;color:#999">Einfacher Textschatten</p>
+		<article id='article-318'>
+			<h4></h4>
+
+			<p style="font-size:3em;color: #E7E7E7;
+    text-shadow: 0 -1px #999999, 1px 0 #999999, 0 1px #999999, -1px 0 #999999;">Kontur</p>
+		<article id='article-319'>
+			<h4></h4>
+
+			<style type="text/css">
+
+p.css_letterpress {
+    background: none repeat scroll 0 0 #DBDBDB;
+    color: #CCCCCC;
+    text-shadow: 0 -1px 1px #666666, 0 1px 1px #FFFFFF;
+    font-size:3em;
+    height:200px;
+    line-height:3em;
+    padding-left:100px;
+}
+
+</style>
+
+<p class="css_letterpress">Letterpress</p>
+		<article id='article-320'>
+			<h4></h4>
+
+			<style type="text/css">
+
+p.css_emboss {
+    background: none repeat scroll 0 0 #CCCCCC;
+    color: #DBDBDB;
+    text-shadow: 0 -1px 1px #FFFFFF, 0 1px 1px #666666;
+    font-size:3em;
+    height:200px;
+    line-height:3em;
+    padding-left:100px;
+}
+
+</style>
+
+<p class="css_emboss">Emboss</p>
+		<article id='article-321'>
+			<h4></h4>
+
+			<style type="text/css">
+
+p.css_glow {
+    color: #222222;
+    text-shadow: 0 0 0.2em #8877FF, 0 0 0.2em #8877FF, 0 0 0.2em #8877FF;
+    font-size:3em;
+}
+
+</style>
+
+<p class="css_glow">Glow-Effekt</p>
+		<article id='article-322'>
+			<h4></h4>
+
+			<style type="text/css">
+
+p.css_neon {
+    background: none repeat scroll 0 0 #000000;
+    color: #FFFFFF;
+    text-shadow:
+    0 0 10px #FFFFFF,
+    0 0 20px #FFFFFF,
+    0 0 30px #FFFFFF,
+    0 0 40px #FF00DE,
+    0 0 70px #FF00DE,
+    0 0 80px #FF00DE,
+    0 0 100px #FF00DE,
+    0 0 150px #FF00DE;
+    font-size:5em;
+    height:300px;
+    line-height:5em;
+    padding-left:100px;
+}
+
+</style>
+
+<p class="css_neon">Neon</p>
+		<article id='article-323'>
+			<h4></h4>
+
+			<style type="text/css">
+
+p.css_fire {
+    background: none repeat scroll 0 0 #000000;
+    color: #fff;
+    text-shadow:
+    0 0 20px #fefcc9,
+    10px -10px 30px #feec85,
+    -20px -20px 40px #ffae34,
+    20px -40px 50px #ec760c,
+    -20px -60px 60px #cd4606,
+    0 -80px 70px #973716,
+    10px -90px 80px #451b0e;
+    font-size:5em;
+    height:300px;
+    line-height:5em;
+    text-align:center;
+    padding-left:100px;
+}
+
+</style>
+
+<p class="css_fire">feuerartiger Effekt</p>
+		<article id='article-324'>
+			<h4></h4>
+
+			<style type="text/css">
+
+p.css_retro {
+    color: #707070;
+    text-shadow:
+    3px 3px 0 #EEEEEE, 5px 5px 0 #707070;;
+    font-size:5em;
+}
+
+</style>
+
+<p class="css_retro">Retro Design</p>
+		<article id='article-325'>
+			<h4>text-shadow</h4>
+
+			<img class="floatCenter" style="width:344px" src="./img/1343062506ext-shadow.png" alt="" />
+<p>Die <span class="url">text-shadow</span> - Eigenschaft wurde bereits in CSS 2.0 eingef&uuml;hrt. Jedoch wurde diese CSS-Eigenschaft von keinen Browser implementiert. In CSS 2.1 wurde die Textschatten-Eigenschaft entfernt und erst wieder in CSS3 in Kraft gesetzt. Daraufhin fingen fast alle Browser-Hersteller mit der Umsetzung der Text-Schatten an.</p>
+				<caption>Listing</caption>
+				<div class='geshi'><table class="css"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
+2
+3
+</pre></td><td class="de1"><pre class="de1">h1 <span class="br0">&#123;</span>
+&nbsp; &nbsp; <span class="kw1">text-shadow</span><span class="sy0">:</span> <span class="re3">1px</span> <span class="re3">1px</span> <span class="re3">5px</span> <span class="re0">#333</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre></td></tr></tbody></table></div>
+			</article>
+		
+
+
+<section class='subSection' id='subSection-525'><h3>box-shadow</h3>
+
+
+
+<section class='subSection' id='subSection-526'><h3>border-radius</h3>
+</section></section></section>
 
 
 

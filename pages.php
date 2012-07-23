@@ -4,13 +4,23 @@
 ?>
 <body>
     <header>
-        <?php con_createNavigation() ?> 
+        <?php $breadCrumb = con_createNavigation() ?> 
     </header>
 
     <section class="title">
-        <h1>Pages Administration</h1>
-        <aside>
-            <?php con_createLogin(); 
+
+			<?php $pageinfo = con_createPageTitle($_GET['id']);
+		
+			$title = $pageinfo['name'];
+			$subtitle = $pageinfo['subtitle']
+		
+			?>
+		<h1><?php echo $title;?></h1>
+		<span class="subtitle"><?php echo $subtitle; ?></span>
+        	<aside class="subMenu"><?php	echo con_createSubNavigation(); ?></aside>
+
+        <aside class="user">
+            <?php con_createLogin();
 				if (isset($_SESSION['loggedin'])){
 					if ($_SESSION['role'] == 9) {
 						echo con_createAdminAsideMenu();
@@ -19,20 +29,11 @@
 			?>
         </aside>
     </section>
+    <footer>
+        <p><?php echo $breadCrumb?></p>
+    </footer>
     <section id="content" role="main">
-    
-    <style type="text/css">
-	    ul.chapters {
-		    background:#FFA500;
-		}
-		ul.chapters li.chapter ul.sections {
-			background: #FFBC40;
-		}
-		ul.chapters li.chapter ul.sections ul.subSections {
-			background: #FFCE73;
-		}
-    </style>
-    <?php
+          <?php
     	
 	
 	function con_listAllPages ()
@@ -130,6 +131,11 @@
 				   <label for="type">Seitentyp</label>
 				   <input type="text" name="type" value="'.$page['type'].'">
 				   <label for="permission">Permission</label>
+		   	        <select name="permission">
+	                	<option value="">ALL</option>
+	                	<option value="1">Registered</option>
+	                	<option value="9">Administrator</option>
+	                </select>				   
 				   <input type="text" name="permission" value="'.$page['permission'].'">
 				   <button type="submit" class="button" name="action" value="updatePage">Update</button>';
         
@@ -161,13 +167,15 @@
 			echo sys_createNewPageForm();
 			echo con_listAllPages(); 
 		}
-	?>
-    </article>
-    </section><?php //CONTENT DIV end ?>
+	?>    </section><?php //CONTENT DIV end ?>
     <footer>
         <?php con_createFooter() ?>
+
     </footer>
-    <?php sys_includeAdditionalScripts() //MEANT FOR jQUERY or ELSE ?>
+
+	
+	
+	<?php sys_includeAdditionalScripts() //MEANT FOR jQUERY or ELSE ?>
     <?php if(!empty($message)){echo $message;}?>
 </body>
 </html>

@@ -54,7 +54,7 @@ $complimentary3:#052A6E;
 $complimentary4:#4577D4;
 //$complimentary5:#6b90D4;
 //not from colorschemer
-$complimentary5:#a0e1ff;
+$complimentary5:#b5c6d0;
 /**************************************\
 			   BLOCKS
 \**************************************/
@@ -163,6 +163,19 @@ table {
 pre {
 	font-family: UbuntuMonoRegular;
 }
+abbr {
+	border-bottom:0px;
+	text-decoration: none;
+	font-weight: bold;
+}
+p {
+	margin-top:0.5em;
+}
+
+strong {
+	font-weight:bold;
+} 
+
 /**************************************\
 			  TITLE PAGE
 \**************************************/
@@ -354,13 +367,20 @@ h3 {
 	font-size:1.3em;
 	color:$primary3;
 }
+span.h3 {
+	margin-top: 0.8em;
+	margin-bottom: 1.3em;
+	font-size:1.3em;
+	color:$primary3;
+	display:block;
+}
 h4 {
 	string-set: paragraph content();
 	font-size:1.2em;
 	color:$primary4;
 	margin-top: 0.8em;
 	margin-bottom: 1.3em;
-} 
+}
 
 
 /**************************************\
@@ -371,6 +391,25 @@ img {
 	width:250px;
 	margin:0px auto;
 	display:block;
+}
+.floatleft {
+	float:left;
+}
+.floatright {
+	float:right;
+}
+.floatCenter {
+	margin:0px auto;
+	display:block;
+}
+.small {
+	width:150px;
+}
+.medium {
+	width:50%;
+}
+.large {
+	width:100%;
 }
 
 /**************************************\
@@ -383,6 +422,9 @@ img {
 	padding:10px;
 	border: 1px solid gray;
 	margin-top: $blockMargin;
+	span.h4 {
+		display:block;
+	}
 }
 
 .notes {

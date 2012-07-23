@@ -12,6 +12,7 @@ div.geshi {
 	margin-top:$blockMargin;
 	table {
 		overflow:none;
+		min-height:75px;
 		display:block;
 		background:#fff;
 		@include border-radius(5px);
