@@ -105,6 +105,16 @@
 	margin-left: -17px;
 }
 
+.order:before {
+	content: "~";
+	font-family: SymbolFont;
+	font-size:1.1em;
+	padding-right:7px;
+	padding-left:7px;
+	margin-left: -17px;
+}
+
+
 .usersIcon:before {
 	content: "U";
 	font-family: SymbolFont;
@@ -173,7 +183,8 @@
 	font-size:1.1em;
 	padding-right:7px;
 	padding-left:7px;
-	margin-left: -17px;	
+	margin-left: -17px;
+	color:#555;	
 }
 
 .like:before

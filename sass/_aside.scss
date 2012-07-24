@@ -5,6 +5,7 @@ aside {
 	padding:10px;
 	padding-top: 20px;
 	width:176px;
+	box-sizing: border-box;
 	ul {
       list-style-type:square;
       }
@@ -18,7 +19,7 @@ aside {
               //text-decoration:underline;
           }
       }
-  }
+    }
 }	
 
 aside:after {
@@ -48,9 +49,13 @@ aside.user {
   @include rounded;
   @include shadow;
   position:absolute;
-  top:-12px;
-  right:-210px;
-  z-index:9997;
+  top:60px;
+  right:-100px;
+  z-index:10;
+  @include single-transition(right,1s,ease,0s);
+  &:hover {
+	  right:0px;
+  }
   h1 {
       margin-top:10px;
       font-size:120%;
@@ -95,9 +100,13 @@ aside.subMenu {
 	@include rounded;
 	@include shadow;
 	position:absolute;
-	top:-12px;
-	left:-210px;
-	z-index:9997;
+	top:60px;
+	left:-100px;
+    @include single-transition(left,1s,ease,0s);
+    z-index:10;
+	&:hover {
+		left:0px;
+	}
 	h1 {
 		margin-top:10px;
 		font-size:120%;

@@ -6,7 +6,16 @@
     <header>
         <?php $breadCrumb = con_createNavigation() ?> 
     </header>
-
+    <aside class="user">
+        <?php con_createLogin();
+			if (isset($_SESSION['loggedin'])){
+				if ($_SESSION['role'] == 9) {
+					echo con_createAdminAsideMenu();
+				}
+			}
+		?>
+    </aside>
+	<aside class="subMenu"><?php	echo con_createSubNavigation(); ?></aside>
     <section class="title">
 
 			<?php $pageinfo = con_createPageTitle($_GET['id']);
@@ -17,17 +26,7 @@
 			?>
 		<h1><?php echo $title;?></h1>
 		<span class="subtitle"><?php echo $subtitle; ?></span>
-        	<aside class="subMenu"><?php	echo con_createSubNavigation(); ?></aside>
 
-        <aside class="user">
-            <?php con_createLogin();
-				if (isset($_SESSION['loggedin'])){
-					if ($_SESSION['role'] == 9) {
-						echo con_createAdminAsideMenu();
-					}
-				}
-			?>
-        </aside>
     </section>
     <footer>
         <p><?php echo $breadCrumb?></p>
