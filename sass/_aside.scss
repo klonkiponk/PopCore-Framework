@@ -22,7 +22,7 @@ aside {
     }
 }	
 
-aside:after {
+/*aside:after {
 	position:absolute;
 	top:-13px;
 	right: 8px;
@@ -37,9 +37,7 @@ aside:after {
 	@include shadowMenu;
 	@include rounded;
 	@include box-shadow(1px 1px 1px #333);	
-}
-
-
+}*/
 
 aside.user {
   margin: 12px auto 18px auto;
@@ -50,18 +48,23 @@ aside.user {
   @include shadow;
   position:absolute;
   top:60px;
-  right:-100px;
+  right:0px;
+  width:100px;
   z-index:10;
-  @include single-transition(right,1s,ease,0s);
+  overflow:hidden;
+  opacity: 0.7;
+  @include transition();
+  //@include single-transition(width,1s,ease,0s);
   &:hover {
-	  right:10px;
+	  width:200px;
+	  opacity: 1.0;
   }
   h1 {
       margin-top:10px;
       font-size:120%;
   }
   &:after {
-	content:"User";
+//	content:"User";
   }
   ul {
   		list-style: none;
@@ -85,7 +88,7 @@ aside.user {
   div.administrationMenu {
 	  a.button {
 		  display:block;
-		  width:120px;
+		  width:145px;
 		  margin-top:5px;
 	  }
   }
@@ -102,17 +105,20 @@ aside.subMenu {
 	position:absolute;
 	top:60px;
 	left:-100px;
-    @include single-transition(left,1s,ease,0s);
+	opacity:0.7;
+    @include transition();
+    //@include single-transition(left,1s,ease,0s);
     z-index:10;
 	&:hover {
-		left:10px;
+		left:0px;
+		opacity:1.0;
 	}
 	h1 {
 		margin-top:10px;
 		font-size:120%;
 	}
 	&:after {
-	 	content:"Submenu";
+//	 	content:"Submenu";
 	}
 	ul {
 		list-style: none;
@@ -142,7 +148,7 @@ aside.subMenu {
 		  overflow:hidden;
 		  text-overflow: ellipsis;
 		  a {
-			  width:110px;
+			  width:134px;
 			  padding-left: 5px;
 		  }
 		  //padding:5px;

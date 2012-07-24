@@ -73,7 +73,7 @@ function db_createNewArticleForm ()
     foreach ($result as $entry) {
         if($entry->name == 'uid'){
         } elseif ($entry->name == 'page') {
-            $form .= "<input class=\"sys\" type=\"text\" name=\"page\" value=\"{$_GET['id']}\"/>";
+            $form .= "<input type=\"hidden\" name=\"page\" value=\"{$_GET['id']}\"/>";
         } elseif ($entry->name == 'content') {
             $form .= "<label for=\"$entry->name\">$entry->name</label>";
 			$form .= "<textarea class='markItUp' name=\"$entry->name\"></textarea>";
@@ -82,7 +82,7 @@ function db_createNewArticleForm ()
             //$form .= "<label for=\"$entry->name\">$entry->name</label>";
             //$form .= con_createSyntaxHighlight('','text/x-php','php_code');
         } elseif ($entry->name == 'code') {
-            $form .= "<label for=\"$entry->name\">$entry->name</label>";
+            //$form .= "<label for=\"$entry->name\">$entry->name</label>";
 			$form .= "<textarea class='markItUp' name=\"$entry->name\"></textarea>";
             //$form .= con_createSyntaxHighlight('','text/x-php','code');                                                   
         } elseif ($entry->name == 'code_type') {
@@ -110,7 +110,7 @@ function db_createNewArticleForm ()
             }//end Switch        
         }//end else
     }//end foreach
-    $form .= "<input class=\"sys\" type=\"text\" name=\"table\" value=\"page_content\"/>";
+    $form .= "<input type=\"hidden\" name=\"table\" value=\"page_content\"/>";
     $form .= "<br/><button type=\"submit\" name=\"action\" class=\"button edit\" value=\"writeToDb\">write</button>";
     $form .= "</form></article>";
 
@@ -135,7 +135,7 @@ function sys_createEditFormForPageContent()
     foreach($result as $key=>$value) { 
         switch ($key) {
             case "uid":
-                $return .= "<input class=\"sys\"type=\"text\" name=\"$key\" value=\"$value\" />";
+                $return .= "<input type=\"hidden\" name=\"$key\" value=\"$value\" />";
                 break;
             case "php_code":
                 //$return .= "<label for=\"$key\">$key <span class='uppercase important'>PHP Code wird ausgef&uuml;hrt auf der Seite und Code angezeigt</span></label>";
@@ -153,7 +153,7 @@ function sys_createEditFormForPageContent()
 				$return .= "<textarea class='markItUp' name=\"$key\">$value</textarea>";
 				break;
             case "code":
-                $return .= "<label for=\"$key\">$key</label>";
+                //$return .= "<label for=\"$key\">$key</label>";
                 //$return .= con_createSyntaxHighlight($value,'text/html','content');
 				//$return .= con_createRTE ($value, $key);
 				$value = preg_replace("/''/", "'", $value);
@@ -193,8 +193,8 @@ function sys_createEditFormForPageContent()
             <button type='submit' name='action' value='update' class='button save' >update</button>
             <button type='submit' name='action' value='delete' class='button delete' >delete</button>
             <button type='submit' name='action' value='cancel' class='button spark' >cancel</button>";
-    $return .= "<input class='sys' type='text' name='uid' value='$uid'/>
-                    <input class='sys' type='text' name='table' value='$table'/>                
+    $return .= "<input type='hidden' name='uid' value='$uid'/>
+                    <input type='hidden' name='table' value='$table'/>                
           </form></article>";
     return $return;
     
@@ -225,7 +225,7 @@ function con_createEditForm ()
     foreach($row as $key=>$value) { 
         switch ($key) {
             case "uid":
-                $return .= "<input class=\"sys\"type=\"text\" name=\"$key\" value=\"$value\" />";
+                $return .= "<input type=\"hidden\" name=\"$key\" value=\"$value\" />";
                 break;
             case "code":
                 $return .= "<label for=\"$key\">$key</label>";
@@ -246,8 +246,8 @@ function con_createEditForm ()
             <button type='submit' name='update' class='button save' >update</button>
             <button type='submit' name='delete' class='button delete' >delete</button>
             <button type='submit' name='cancel' class='button spark' >cancel</button>";
-    $return .= "<input class='sys' type='text' name='uid' value='$uid'/>
-                    <input class='sys' type='text' name='table' value='$table'/>                
+    $return .= "<input type='hidden' name='uid' value='$uid'/>
+                    <input type='hidden' name='table' value='$table'/>                
           </form>";    
     return $return;
 }
@@ -265,7 +265,7 @@ function con_createPageEditForm (){
     foreach ($row as $key=>$value) {
         switch ($key) {
             case "uid":    
-                $return .= "<input class=\"sys\"type=\"text\" name=\"$key\" value=\"$value\" />";
+                $return .= "<input type=\"hidden\" name=\"$key\" value=\"$value\" />";
                 break;
             default:
                 $return .= "<label for=\"$key\">$key</label>";
@@ -326,7 +326,7 @@ function con_createGeneralForm ($table)
                     break;
             }        
         }}//end of uid check
-        $return['content'] .= "<input class=\"sys\" type=\"text\" name=\"table\" value=\"$table\"/>";
+        $return['content'] .= "<input type=\"hidden\" name=\"table\" value=\"$table\"/>";
         $return['content'] .= "<br/><button type=\"submit\" name=\"submit\" class=\"button edit\">write</button>";
         $return['content'] .= "</form>";
     }
@@ -382,7 +382,7 @@ function con_echoEachEntry($result,$table)
         foreach ($row as $key=>$value){  
             switch ($key) {
                 case "uid":
-                    $return .= "<input class=\"sys\" type=\"text\" name=\"$key\" value=\"$value\" />";
+                    $return .= "<input type=\"hidden\" name=\"$key\" value=\"$value\" />";
                     break;
                 case "name":
                     $return .= "<a name=\"$value\"/></a>";
@@ -402,8 +402,8 @@ function con_echoEachEntry($result,$table)
             if ($_SESSION['role'] == 1) {  //Funktionen nur fuer Admins freischalten
                 $return .= "
                 <form action=\"\" method=\"post\" style=\"text-align:right;\"><button type='submit' name='edit' class='button edit' value='edit' >EDIT</button> 
-                <input class='sys' type='text' name='uid' value='{$row['uid']}'/>
-                <input class='sys' type='text' name='table' value='$table'/>        
+                <input type='hidden' name='uid' value='{$row['uid']}'/>
+                <input type='hidden' type='text' name='table' value='$table'/>        
                 <button type='submit' name='delete' class='button delete' value='loeschen' >DELETE</button>                       
                 </form>
                 ";

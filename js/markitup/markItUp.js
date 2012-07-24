@@ -32,7 +32,12 @@ mySettings = {
 		{name:'Link', key:'L', openWith:'<a href="[![Link:!:http://]!]"(!( title="[![Title]!]")!)>', closeWith:'</a>', placeHolder:'Your text to link...' },
 		{separator:'---------------' },
 		{name:'Homework', openWith:'<div class="homework">', closeWith:'</div>\n'  },
+		{name:'Information', openWith:'<div class="information">', closeWith:'</div>\n'  },
+		{name:'Emphasize', openWith:'<div class="emphasize">', closeWith:'</div>\n'  },
+		{separator:'---------------' },
+		{name:'ABBR', openWith:'<abbr title="">', closeWith:'</abbr>'  },		
 		{name:'TAG', openWith:'<span class="tag">', closeWith:'</span>'  },
-		{name:'ABBR', openWith:'<abbr title="">', closeWith:'</abbr>'  }		
+		{name:'Attribute', openWith:'<span class="attribute">', closeWith:'</span>'  }
+		
 	]
 }

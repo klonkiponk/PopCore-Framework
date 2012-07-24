@@ -7,8 +7,8 @@
 }
 .login_form label{
 	@include textShadowLight;
-	margin: 5px 0;
-	display:block;				
+	display:block;	
+	margin:0px;			
 }
 .login_form input[type=text],
 .login_form input[type=password] { 

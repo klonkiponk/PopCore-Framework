@@ -171,11 +171,6 @@ function con_createSubNavigation()
        $_GET['id'] = 1; 
     }
 	
-	
-	
-	$subMenu = "SUBMENU";
-	
-	
     if (isset($_SESSION['loggedin'])){
        switch ($_SESSION['role']) {
            case 9: //admin
@@ -189,20 +184,22 @@ function con_createSubNavigation()
             $sql = "SELECT name,pid FROM pages WHERE sub={$GLOBALS['chapter']} AND deleted != 1 AND permission = 0 AND type < 300";
     }
     $result = $GLOBALS['DB']->query( $sql );
-	$submenu = "<nav id='submenu'><ul>";	
-	while ($section = $result->fetch_array()) {
-		$submenu .= "<li class='section'><a href='index.php?id=".$section['pid']."'>{$section['name']}</a>";
-		
-		
-		$submenu .= "<ul>";
-		$sqlSubSections = "SELECT pid,name FROM pages WHERE sub={$section['pid']}";
-		$subSections = $GLOBALS['DB']->query($sqlSubSections);
-		while ($subSection = $subSections->fetch_array()) {
-			$submenu .= "<li class='subSection'><a class='button' href='index.php?id=".$subSection['pid']."'>{$subSection['name']}</a>";
+	if ($result->num_rows != 0){
+		$submenu = "<aside class='subMenu'><nav id='submenu'><ul>";	
+		while ($section = $result->fetch_array()) {
+			$submenu .= "<li class='section'><a href='index.php?id=".$section['pid']."'>{$section['name']}</a>";
+			
+			
+			$submenu .= "<ul>";
+			$sqlSubSections = "SELECT pid,name FROM pages WHERE sub={$section['pid']}";
+			$subSections = $GLOBALS['DB']->query($sqlSubSections);
+			while ($subSection = $subSections->fetch_array()) {
+				$submenu .= "<li class='subSection'><a class='button' href='index.php?id=".$subSection['pid']."'>{$subSection['name']}</a>";
+			}
+			$submenu .= "</ul>";
+			$submenu .= "</li>";
 		}
-		$submenu .= "</ul>";
-		$submenu .= "</li>";
+		$submenu .= "</ul></nav></aside>";
+		return $submenu;
 	}
-	$submenu .= "</ul></nav>";
-	return $submenu;
 }

@@ -3,10 +3,11 @@
     sys_createHead("Kevin Siegerth","Development Framework");       
 ?>
 <body>
+	<div class="mainWrapper">
 	<header>
         <?php $breadCrumb = con_createNavigation() ?> 
     </header>
-	<aside class="subMenu"><?php	echo con_createSubNavigation(); ?></aside>
+    <?php	echo con_createSubNavigation(); ?>
 	<aside class="user">
             <?php con_createLogin();
 				if (isset($_SESSION['loggedin'])){
@@ -87,8 +88,8 @@
                     if ($_SESSION['role'] == 9) { //Funktionen nur fuer Admins freischalten
                         echo "<form action=\"\" method=\"post\" style=\"text-align:right; display:inline; float:right;\">
                         <button type='submit' name='action' class='button edit' value='edit' >EDIT</button> 
-                        <input class='sys' type='text' name='uid' value='{$row['uid']}'/>
-                        <input class='sys' type='text' name='table' value='page_content'/>        
+                        <input type='hidden' name='uid' value='{$row['uid']}'/>
+                        <input type='hidden' name='table' value='page_content'/>        
                         <button type='submit' name='action' class='button delete' value='delete' >DELETE</button>                       
                         </form>";
                         
@@ -127,5 +128,6 @@
 
 	<?php sys_includeAdditionalScripts() //MEANT FOR jQUERY or ELSE ?>
     <?php if(!empty($message)){echo $message;}?>
+	</div>
 </body>
 </html>

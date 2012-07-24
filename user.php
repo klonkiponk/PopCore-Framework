@@ -51,8 +51,8 @@
 	                    if ($_SESSION['role'] == 9) { //Funktionen nur fuer Admins freischalten
 	                        $content .= "<form action=\"\" method=\"post\" style=\"text-align:right;\">
 	                        <button type='submit' name='action' class='button edit' value='edit' >EDIT</button> 
-	                        <input class='sys' type='text' name='uid' value='{$row['uid']}'/>
-	                        <input class='sys' type='text' name='table' value='user'/>        
+	                        <input type='hidden' name='uid' value='{$row['uid']}'/>
+	                        <input type='hidden' name='table' value='user'/>        
 	                        <button type='submit' name='action' class='button delete' value='delete' >DELETE</button>                       
 	                        </form>";
 	                    }
@@ -75,7 +75,7 @@
 	                        
 	                        
 	                        
-	                        <input class='sys' type='text' name='table' value='user'/>        
+	                        <input type='hidden' name='table' value='user'/>        
 	                        <button type='submit' name='action' class='button' value='writeToDb' >writeToDb</button>                       
 	                        </form></article>";
 	                    }

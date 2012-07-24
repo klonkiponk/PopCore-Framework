@@ -5,7 +5,7 @@
 		
 <style type="text/css"><!--
 
-html {
+body {
 	background: url('img/chalkboard.jpg') fixed;
 
 }
@@ -122,7 +122,7 @@ h1.developmentDone {
 	<input type="text" name="name" placeholder="Insert New Note"/>
 	<input type="text" name="category" placeholder="Category" />
 	<input type="submit" formnovalidate style="visibility:hidden" class="button" name="action" value="writeToDb"/>
-	<input type="hidden" class="sys" name="table" value="development"/>
+	<input type="hidden" name="table" value="development"/>
 </form>
 </section>
 <section class="development">
