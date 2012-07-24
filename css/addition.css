@@ -126,7 +126,19 @@ div.homework ol ul {
 }
 
 div.homework li p {
- margin-top: 0.5em;
- margin-bottom: 0.5em;
- margin-left: 1em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: 1em;
+}
+
+.moveUp:before {
+  font-family: "SymbolFont";
+  content: ":";
+}
+
+.belowArticleButtons {
+	height:45px;
+}
+div.emphasize {
+  text-align: left;
 }

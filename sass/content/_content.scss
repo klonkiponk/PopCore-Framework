@@ -194,7 +194,12 @@ pre.print_r:after {
 	height:30em;
 }
 
-
+span.attribute:before {
+	content:'"';
+}
+span.attribute:after {
+	content:'"';
+}
 
 
 

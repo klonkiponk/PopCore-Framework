@@ -128,11 +128,8 @@ function sys_createEditFormForPageContent()
     $result = sys_deleteIntFromArray($result);
     //con_preFormat($result);
 
-    $return = '<article><h2>Edit an Page Entry</h2>';
-	$return .= '<label>IMAGE</label><form id="imageform" method="post" enctype="multipart/form-data" action="./js/ajaximage.php">
-				<input type="file" name="photoimg" id="photoimg" />
-				</form><div id="preview">
-</div>';
+    $return = '<article><h2>Edit a Page Entry</h2>';
+	$return .= '<label>IMAGE</label><a onClick="return popup(this)" href="./php/gallery/gallery.php"><button class="button" type="button">Durchsuchen</button></a><div id="preview"></div>';
 	
 	$return .= '<form action="" method="post" enctype="multipart/form-data">';    
     foreach($result as $key=>$value) { 

@@ -160,7 +160,7 @@
         $opening .= $menu;    
         echo $opening; #change it to a returning function instead of self-echoing
 		
-		$breadCrumb = "<span class='breadCrumb'>Sie sind hier: ".$breadCrumb['chapter'].$breadCrumb['section'].$breadCrumb['subSection']."</span>";
+		$breadCrumb = $breadCrumb['chapter'].$breadCrumb['section'].$breadCrumb['subSection'];
 		
 		return $breadCrumb;
   }
@@ -198,7 +198,7 @@ function con_createSubNavigation()
 		$sqlSubSections = "SELECT pid,name FROM pages WHERE sub={$section['pid']}";
 		$subSections = $GLOBALS['DB']->query($sqlSubSections);
 		while ($subSection = $subSections->fetch_array()) {
-			$submenu .= "<li class='subSection'><a href='index.php?id=".$subSection['pid']."'>{$subSection['name']}</a>";
+			$submenu .= "<li class='subSection'><a class='button' href='index.php?id=".$subSection['pid']."'>{$subSection['name']}</a>";
 		}
 		$submenu .= "</ul>";
 		$submenu .= "</li>";

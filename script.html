@@ -727,8 +727,6 @@ For Each Programming Language another table.XXX
 	<ul>
 <li class='section'><a href='#section-518' class='PageRef'>Coding Guidelines</a></li>
 <ul>
-<li class='subSection'><a href='#subSection-527' class='PageRef'>HTML</a></li>
-<li class='subSection'><a href='#subSection-528' class='PageRef'>CSS</a></li>
 </ul><li class='section'><a href='#section-519' class='PageRef'>Entstehung des Internet</a></li>
 <ul>
 </ul>	</ul>
@@ -758,11 +756,6 @@ For Each Programming Language another table.XXX
 	<ul>
 <li class='section'><a href='#section-522' class='PageRef'>Schriften</a></li>
 <ul>
-</ul><li class='section'><a href='#section-524' class='PageRef'>CSS3 - Effekte</a></li>
-<ul>
-<li class='subSection'><a href='#subSection-523' class='PageRef'>text-shadow</a></li>
-<li class='subSection'><a href='#subSection-525' class='PageRef'>box-shadow</a></li>
-<li class='subSection'><a href='#subSection-526' class='PageRef'>border-radius</a></li>
 </ul>	</ul>
 <li class='chapter'><a href='#chapter-500' class='PageRef'>WEBSERVER</a></li>
 	<ul>
@@ -781,6 +774,17 @@ For Each Programming Language another table.XXX
 <li class='subSection'><a href='#subSection-505' class='PageRef'>PERL mit mod_perl.so</a></li>
 <li class='subSection'><a href='#subSection-506' class='PageRef'>Apache und PHP</a></li>
 <li class='subSection'><a href='#subSection-507' class='PageRef'>Die Log-Dateien des Apache</a></li>
+<li class='subSection'><a href='#subSection-523' class='PageRef'>Secure Socket Layer (SSL)</a></li>
+</ul><li class='section'><a href='#section-525' class='PageRef'>Tomcat</a></li>
+<ul>
+<li class='subSection'><a href='#subSection-534' class='PageRef'>Der Apache Tomcat - Ein Applikationsserver</a></li>
+</ul><li class='section'><a href='#section-526' class='PageRef'>Internet Information Services</a></li>
+<ul>
+<li class='subSection'><a href='#subSection-527' class='PageRef'>Herkunft und Installation der IIS</a></li>
+<li class='subSection'><a href='#subSection-529' class='PageRef'>Datensicherung</a></li>
+<li class='subSection'><a href='#subSection-530' class='PageRef'>Remoteverwaltung</a></li>
+<li class='subSection'><a href='#subSection-532' class='PageRef'>Authentifizierung und Autorisierung</a></li>
+<li class='subSection'><a href='#subSection-531' class='PageRef'>Bereitstellen von Webseiten</a></li>
 </ul>	</ul>
 </ul>
 </div>
@@ -804,48 +808,7 @@ der folgenden Kapitel.
 
 
 <section class='section' id='section-518'><h2>Coding Guidelines</h2>
-
-
-
-<section class='subSection' id='subSection-527'><h3>HTML</h3>
-
-		<article id='article-326'>
-			<h4>Kommentare in HTML</h4>
-
-			
-				<caption>Listing</caption>
-				<div class='geshi'><table class="html5"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-</pre></td><td class="de1"><pre class="de1"><span class="sc-1">&lt;!-- Ein einzeiliger Kommentar --&gt;</span>
-&nbsp;
-<span class="sc-1">&lt;!-- </span>
-&nbsp;
-<span class="sc-1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Ein mehrzeiliger Kommentar </span>
-<span class="sc-1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;zweite Zeile des Kommentar</span>
-&nbsp;
-<span class="sc-1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;p&gt;ausgeblendeter HTML Code&lt;/p&gt;</span>
-&nbsp;
-<span class="sc-1">--&gt;</span>
-&nbsp;
-&nbsp;
-<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>normaler HTML Code zum Vergleich<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></pre></td></tr></tbody></table></div>
-			</article>
-		
-
-
-<section class='subSection' id='subSection-528'><h3>CSS</h3>
-</section></section>
+</section>
 
 
 
@@ -2544,197 +2507,7 @@ Eine genauere Erkl&auml;rung dieser Elemente er&uuml;brigt sich auf Grund der Ei
 		<article id='article-304'>
 			<h4></h4>
 
-			<img class="medium floatCenter" src="./img/134271125224930.jpg" alt="" /></section>
-
-
-
-<section class='section' id='section-524'><h2>CSS3 - Effekte</h2>
-
-
-
-<section class='subSection' id='subSection-523'><h3>text-shadow</h3>
-
-		<article id='article-314'>
-			<h4>Einfacher Textschatten</h4>
-
-			<p style="font-size:3em; text-shadow: 1px 1px #333; color:#999">Einfacher Textschatten</p>
-		<article id='article-315'>
-			<h4>Breiter Textschatten</h4>
-
-			<p style="font-size:3em;text-shadow:
-    1px 1px #ccc,
-    2px 2px #ccc,
-    3px 3px #ccc,
-    4px 4px #ccc,
-    5px 5px #ccc,
-    6px 6px #ccc; ; color:#999">Einfacher Textschatten</p>
-		<article id='article-316'>
-			<h4></h4>
-
-			<p style="font-size:3em;text-shadow:
-1px 0 #EEEEEE, 0 1px #CCCCCC,
-2px 1px #EEEEEE, 1px 2px #CCCCCC,
-3px 2px #EEEEEE, 2px 3px #CCCCCC,
-4px 3px #EEEEEE, 3px 4px #CCCCCC,
-5px 4px #EEEEEE, 4px 5px #CCCCCC,
-6px 5px #EEEEEE, 5px 6px #CCCCCC,
-6px 6px #EEEEEE;
-color:#999">Einfacher Textschatten</p>
-		<article id='article-317'>
-			<h4></h4>
-
-			<p style="font-size:3em;text-shadow:
-1px 0px 1px #eee, 0px 1px 1px #ccc,
-2px 1px 1px #eee, 1px 2px 1px #ccc,
-3px 2px 1px #eee, 2px 3px 1px #ccc,
-4px 3px 1px #eee, 3px 4px 1px #ccc,
-5px 4px 1px #eee, 4px 5px 1px #ccc,
-6px 5px 1px #eee, 5px 6px 1px #ccc,
-6px 6px 1px #eee;color:#999">Einfacher Textschatten</p>
-		<article id='article-318'>
-			<h4></h4>
-
-			<p style="font-size:3em;color: #E7E7E7;
-    text-shadow: 0 -1px #999999, 1px 0 #999999, 0 1px #999999, -1px 0 #999999;">Kontur</p>
-		<article id='article-319'>
-			<h4></h4>
-
-			<style type="text/css">
-
-p.css_letterpress {
-    background: none repeat scroll 0 0 #DBDBDB;
-    color: #CCCCCC;
-    text-shadow: 0 -1px 1px #666666, 0 1px 1px #FFFFFF;
-    font-size:3em;
-    height:200px;
-    line-height:3em;
-    padding-left:100px;
-}
-
-</style>
-
-<p class="css_letterpress">Letterpress</p>
-		<article id='article-320'>
-			<h4></h4>
-
-			<style type="text/css">
-
-p.css_emboss {
-    background: none repeat scroll 0 0 #CCCCCC;
-    color: #DBDBDB;
-    text-shadow: 0 -1px 1px #FFFFFF, 0 1px 1px #666666;
-    font-size:3em;
-    height:200px;
-    line-height:3em;
-    padding-left:100px;
-}
-
-</style>
-
-<p class="css_emboss">Emboss</p>
-		<article id='article-321'>
-			<h4></h4>
-
-			<style type="text/css">
-
-p.css_glow {
-    color: #222222;
-    text-shadow: 0 0 0.2em #8877FF, 0 0 0.2em #8877FF, 0 0 0.2em #8877FF;
-    font-size:3em;
-}
-
-</style>
-
-<p class="css_glow">Glow-Effekt</p>
-		<article id='article-322'>
-			<h4></h4>
-
-			<style type="text/css">
-
-p.css_neon {
-    background: none repeat scroll 0 0 #000000;
-    color: #FFFFFF;
-    text-shadow:
-    0 0 10px #FFFFFF,
-    0 0 20px #FFFFFF,
-    0 0 30px #FFFFFF,
-    0 0 40px #FF00DE,
-    0 0 70px #FF00DE,
-    0 0 80px #FF00DE,
-    0 0 100px #FF00DE,
-    0 0 150px #FF00DE;
-    font-size:5em;
-    height:300px;
-    line-height:5em;
-    padding-left:100px;
-}
-
-</style>
-
-<p class="css_neon">Neon</p>
-		<article id='article-323'>
-			<h4></h4>
-
-			<style type="text/css">
-
-p.css_fire {
-    background: none repeat scroll 0 0 #000000;
-    color: #fff;
-    text-shadow:
-    0 0 20px #fefcc9,
-    10px -10px 30px #feec85,
-    -20px -20px 40px #ffae34,
-    20px -40px 50px #ec760c,
-    -20px -60px 60px #cd4606,
-    0 -80px 70px #973716,
-    10px -90px 80px #451b0e;
-    font-size:5em;
-    height:300px;
-    line-height:5em;
-    text-align:center;
-    padding-left:100px;
-}
-
-</style>
-
-<p class="css_fire">feuerartiger Effekt</p>
-		<article id='article-324'>
-			<h4></h4>
-
-			<style type="text/css">
-
-p.css_retro {
-    color: #707070;
-    text-shadow:
-    3px 3px 0 #EEEEEE, 5px 5px 0 #707070;;
-    font-size:5em;
-}
-
-</style>
-
-<p class="css_retro">Retro Design</p>
-		<article id='article-325'>
-			<h4>text-shadow</h4>
-
-			<img class="floatCenter" style="width:344px" src="./img/1343062506ext-shadow.png" alt="" />
-<p>Die <span class="url">text-shadow</span> - Eigenschaft wurde bereits in CSS 2.0 eingef&uuml;hrt. Jedoch wurde diese CSS-Eigenschaft von keinen Browser implementiert. In CSS 2.1 wurde die Textschatten-Eigenschaft entfernt und erst wieder in CSS3 in Kraft gesetzt. Daraufhin fingen fast alle Browser-Hersteller mit der Umsetzung der Text-Schatten an.</p>
-				<caption>Listing</caption>
-				<div class='geshi'><table class="css"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
-2
-3
-</pre></td><td class="de1"><pre class="de1">h1 <span class="br0">&#123;</span>
-&nbsp; &nbsp; <span class="kw1">text-shadow</span><span class="sy0">:</span> <span class="re3">1px</span> <span class="re3">1px</span> <span class="re3">5px</span> <span class="re0">#333</span><span class="sy0">;</span>
-<span class="br0">&#125;</span></pre></td></tr></tbody></table></div>
-			</article>
-		
-
-
-<section class='subSection' id='subSection-525'><h3>box-shadow</h3>
-
-
-
-<section class='subSection' id='subSection-526'><h3>border-radius</h3>
-</section></section></section>
+			<img class="medium floatCenter" src="./img/134271125224930.jpg" alt="" /></section></section>
 
 
 
@@ -2819,7 +2592,7 @@ Ein <abbr title="Uniform Resource Indicator/Identifier">URI</abbr> ("Uniform Res
 <section class='subSection' id='subSection-521'><h3>Virtual Hosting</h3>
 
 		<article id='article-301'>
-			<h4>IP-Basiertes Virtual Hossting</h4>
+			<h4>IP-Basiertes Virtual Hosting</h4>
 
 			Unter dem Begriff "Virtual Hosting" versteht man die M&ouml;glichkeit auf einem einzigen physikalischen Webserver mehrere Webangebote gleichzeit bereitzustellen.
 </p>
@@ -2878,23 +2651,31 @@ Erstellen Sie einen weiteren virtuellen Host, der auf Port 80 den MediaWiki bere
 			<p>
 Sobald eine gr&ouml;&szlig;ere Anzahl von Virtuellen Hosts auf einem Apache Webserver konfiguriert wird, kann es leicht passieren, dass dessen Konfigurationsdatei sehr un&uuml;bersichtlich wird. Um dies zu vermeiden, bietet er die M&ouml;glichkeit einzelne Konfigurationsabschnitte, z. B. die Konfiguration eines Virtual Hosts, in eine andere Datei auszulagern und diese in die Konfiguration des Servers einzubinden.
 </p>
+<div class="information">
+Wenn Sie virtuelle Hosts konfigurieren, sollte der physikalische Webserver h&ouml;chstens noch eine Fehlerseite bereitstellen. Alle Webauftritte werden dann durch die virtuellen Server dargestellt.
+</div>
 <div class="homework">
 Benutzen Sie die Apache Onlinedokumentation, um zu Recherchieren wie die beiden Direktiven <span class="apache">Include</span> und <span class="apache">IncludeOptional</span> funktionieren, bzw. worin sich beide unterscheiden!
 </div>
 <div class="notes h50"></div>
 <div class="homework">
-Benutzen Sie f&uuml;r die folgenden Aufgaben die beiden unten angegebenen Virtuellen Hosts!
+Benutzen Sie f&uuml;r die folgenden Aufgaben die beiden unten angegebenen Virtuellen Hosts VHost1 und VHost2!
 	 <ul>
 	 	 <li>Speichern Sie die Konfigurationen der beiden Virtual Hosts in jeweils einer eigenen Datei (port_80.conf und port_8080.conf)</li>
 	 	 <li>Konfigurieren Sie Ihren Apache so, dass beide VHosts dargestellt werden. Sollte die Konfiguration von VHost 1 nicht gelesen werden k&ouml;nnen, muss der Start des Apache Servers unterbrochen werden. Bei VHost 2 ist diese Ma&szlig;nahme nicht notwendig, bzw. nicht erw&uuml;nscht!</li>
+	 	 <li>Konfigurieren Sie jetzt VHost3 und speichern Sie seine Konfiguration in der Datei generic.conf. Binden Sie diese Datei an erster Stelle ein, und zwar genauso wie die Konfiguration von VHost2.</li>
+	 	 <li>Testen Sie den Zugriff auf die URL <span class="url">http://localhost</span>! Welcher VHost antwortet?</li>
+	 	 <li>Verschieben Sie VHost 3 auf den ersten Platz, so dass die Reihenfolge der VHosts 3, 1, 2 lautet und testen Sie erneut den Zugriff auf <span class="url">http://localhost</span>! Welcher VHost antwortet jetzt?</li>
+	 	 <li>Legen Sie f&uuml;r die beiden virtuellen Hosts 1 und 3 explizit den Port 80 fest (<span class="apachecontainer">VirtualHost "127.0.0.1:80"</span>)! Welche Antwort erhalten Sie, wenn Sie jetzt auf <span class="url">http://localhost</span> zugreifen?</li>
+	 	 <li>Konfigurieren Sie einen weiteren virtuellen Host der Unter der IP-Adresse <span class="url">10.3.11.xx</span> (xx = Platznummer) die Datei <span class="url">begruessung.html</span> anzeigt, und PERL-Skripte verarbeiten kann. Speichern Sie auch dessen Konfiguration in einer eigenen Datei, und binden Sie diese an dritter Stelle so ein, dass der Serverstart unterbrochen wird, falls die Datei nicht verf&uuml;gbar ist.</li>
+	 	 <li>Konfigurieren Sie den virtual Host <span class="apachecontainer">VirtualHost 10.3.11.xx</span> explizit f&uuml;r Port 80 (<span class="apachecontainer">VirtualHost 10.3.11.xx:80</span>)!</li>
+	 	 <li>Tragen Sie die folgende Direktive in Ihre Konfiguration ein: <span class="apache">NameVirtualHost 10.3.11.xx:*</span>!</li>
+	 	 <li>Testen Sie den Zugriff auf die URL <span class="url">http://10.3.11.xx:80</span>! Welche Antwort erhalten Sie?</li>
 	 </ul>
 </div>
-<div class="information">
-Wenn Sie virtuelle Hosts konfigurieren, sollte der physikalische Webserver h&ouml;chstens noch eine Fehlerseite bereitstellen. Alle Webauftritte werden dann durch die virtuellen Server dargestellt.
-</div>
-
+<div class="notes h50"></div>
 				<caption>Listing</caption>
-				<div class='geshi'><table class="php"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
+				<div class='geshi'><table class="apache"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
 2
 3
 4
@@ -2909,20 +2690,295 @@ Wenn Sie virtuelle Hosts konfigurieren, sollte der physikalische Webserver h&oum
 13
 14
 15
-</pre></td><td class="de1"><pre class="de1"><span class="co2">#VHost 1 - port_80.conf</span>
-<span class="sy0">&lt;</span>VirtualHost <span class="st0">&quot;127.0.0.1&quot;</span><span class="sy0">&gt;</span>
-&nbsp; ServerAdmin &nbsp; &nbsp;root<span class="sy0">@</span>127<span class="sy0">.</span>0<span class="sy0">.</span>0<span class="sy0">.</span>1
-&nbsp; DocumentRoot &nbsp; <span class="st0">&quot;E:/Apache/httpd/2.4.2/htdocs/port_80&quot;</span>
-&nbsp; ServerName &nbsp; &nbsp; <span class="st0">&quot;www.example.org&quot;</span>
-<span class="sy0">&lt;/</span>VirtualHost<span class="sy0">&gt;</span>
+16
+17
+18
+19
+20
+21
+22
+</pre></td><td class="de1"><pre class="de1"><span class="co1">#VHost 1 - port_80.conf</span>
+&lt;<span class="kw3">VirtualHost</span> <span class="st0">&quot;127.0.0.1&quot;</span>&gt;
+&nbsp; <span class="kw1">ServerAdmin</span> &nbsp; &nbsp;root@127.0.0.1
+&nbsp; <span class="kw1">DocumentRoot</span> &nbsp; <span class="st0">&quot;E:/Apache/httpd/2.4.2/htdocs/port_80&quot;</span>
+&nbsp; <span class="kw1">ServerName</span> &nbsp; &nbsp; <span class="st0">&quot;www.example.org&quot;</span>
+&lt;/<span class="kw3">VirtualHost</span>&gt;
 &nbsp;
-<span class="co2">#VHost 2 - port_8080.conf</span>
-<span class="sy0">&lt;</span>VirtualHost <span class="st0">&quot;127.0.0.1:8080&quot;</span><span class="sy0">&gt;</span>
-&nbsp; ServerAdmin &nbsp; &nbsp;root<span class="sy0">@</span>127<span class="sy0">.</span>0<span class="sy0">.</span>0<span class="sy0">.</span>1
-&nbsp; DocumentRoot &nbsp; <span class="st0">&quot;E:/Apache/httpd/2.4.2/htdocs/port_8080&quot;</span>
-&nbsp; ServerName &nbsp; &nbsp; <span class="st0">&quot;www.example.de&quot;</span>
-&nbsp; DirectoryIndex index<span class="sy0">.</span>php
-<span class="sy0">&lt;/</span>VirtualHost<span class="sy0">&gt;</span>
+<span class="co1">#VHost 2 - port_8080.conf</span>
+&lt;<span class="kw3">VirtualHost</span> <span class="st0">&quot;127.0.0.1:8080&quot;</span>&gt;
+&nbsp; <span class="kw1">ServerAdmin</span> &nbsp; &nbsp;root@127.0.0.1
+&nbsp; <span class="kw1">DocumentRoot</span> &nbsp; <span class="st0">&quot;E:/Apache/httpd/2.4.2/htdocs/port_8080&quot;</span>
+&nbsp; <span class="kw1">ServerName</span> &nbsp; &nbsp; <span class="st0">&quot;www.example.de&quot;</span>
+&nbsp; <span class="kw1">DirectoryIndex</span> index.php
+&lt;/<span class="kw3">VirtualHost</span>&gt;
+&nbsp;
+<span class="co1">#VHost 3 - generic.conf</span>
+&lt;<span class="kw3">VirtualHost</span> <span class="st0">&quot;127.0.0.1:*&quot;</span>&gt;
+&nbsp; <span class="kw1">ServerAdmin</span> &nbsp; &nbsp;root@127.0.0.1
+&nbsp; <span class="kw1">DocumentRoot</span> &nbsp; <span class="st0">&quot;E:/Apache/httpd/2.4.2/htdocs/generic&quot;</span>
+&nbsp; <span class="kw1">ServerName</span> &nbsp; &nbsp; <span class="st0">&quot;www.example.com&quot;</span>
+&lt;/<span class="kw3">VirtualHost</span>&gt;
+&nbsp;</pre></td></tr></tbody></table></div>
+			</article>
+		
+		<article id='article-308'>
+			<h4>Name-Based Virtual Hosts konfigurieren</h4>
+
+			<p>
+Moderner und daher auch von der Apache Foundation empfohlen ist das Name-Based Virtual Hosting. Bei dieser Variante werden die virtuellen Hosts nach ihrem Hostnamen unterschieden, d. h. es k&ouml;nnen sich viele V-Hosts eine einzige IP-Adresse teilen.
+</p>
+<p>
+F&uuml;r die Aktivierung des Name-Based V-Hosting, muss die <span class="apache">NameVirtualHost</span>-Direktive genutzt werden. Um z. B. einen namens-basierten virtuellen Host auf der IP-Adresse 10.2.11.120 und dem DNS-Namen <span class="url">selfhtml.it-training.fus</span> zu erstellen, muss eine Konfiguration eingerichtet werden, wie sie unten abgebildet ist. Dieses Beispiel ist jedoch nur ein Auszug aus der Hauptkonfigurationsdatei. An dem <span class="apachecontainer">VirtualHost</span>-Kontainer hat sich nichts ge&auml;ndert. Lediglich die <span class="apache">NameVirtualHost</span>-Direktive ist neu	hinzugekommen.
+</p>
+<div class="information">
+Um das Name-Based V-Hosting zu aktivieren, muss die <span class="apache">NameVirtualHost</span>-Direktive mit der IP-Adresse und dem Port	konfiguriert werden, auf dem der V-Host aktiviert werden soll. Des weiteren muss jeder Name-Based V-Host <span style="text-transform:uppercase;letter-spacing:0.5em;font-weight:bold">zwingend</span> eine <span class="apache">ServerName</span>-Direktive erhalten, um von den anderen V-Hosts unterscheidbar zu bleiben!
+</div>
+				<caption>Listing</caption>
+				<div class='geshi'><table class="apache"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="de1"><pre class="de1"><span class="kw1">Listen</span> 10.2.11.120:<span class="nu0">80</span>
+&nbsp;
+<span class="kw1">NameVirtualHost</span> <span class="st0">&quot;10.2.11.120:80&quot;</span>
+&nbsp;
+&lt;<span class="kw3">VirtualHost</span> <span class="st0">&quot;10.2.11.120:80&quot;</span>&gt;
+&nbsp; <span class="kw1">DocumentRoot</span> &nbsp; <span class="st0">&quot;E:/Apache/httpd/2.4.2/htdocs/selfhtml.it-training.fus&quot;</span>
+&nbsp; <span class="kw1">ServerAdmin</span> &nbsp; &nbsp;root@127.0.0.1
+&nbsp; <span class="kw1">ServerName</span> &nbsp; &nbsp; <span class="st0">&quot;selfhtml.it-training.fus&quot;</span>
+&lt;/<span class="kw3">VirtualHost</span>&gt;
+&nbsp;</pre></td></tr></tbody></table></div>
+			</article>
+		
+		<article id='article-309'>
+			<h4>Der Host-Server antwortet nicht mehr!</h4>
+
+			<div class="information">
+Sobald das Name-Based Virtual Hosting aktiviert wurde antwortet der Webserver selbst nicht mehr. Antworten werden nur noch von den virtuellen Servern verschickt!
+</div>
+<p>
+Um sicherzustellen, dass immer eine Antwort von Ihrem Webserver kommt, sollte ein Default V-Host eingerichtet werden. F&uuml;r den Default V-Host gelten folgende Regeln:
+</p>
+<ul>
+	 <li>Er sollte immer als erstes in der Liste der V-Hosts stehen, so dass er standardm&auml;&szlig;ig antwortet.</li>
+	 <li>Die Direktiven <span class="apache">DocumentRoot</span> und <span class="apache">ServerName</span> sollten die gleichen Argumente aufweisen, wie die gleichnamigen Direktiven im Hauptserver.</li>
+</ul>
+<p>
+Das der Default V-Host immer als erstes in der Liste der V-Hosts stehen sollte, h&auml;ngt damit zusammen, wie der Apache Webserver Client-Anfragenabarbeitet. Wenn eine Anfrage eintrifft:
+</p>
+<ol>
+	 <li>Pr&uuml;ft der Apache zuerst, ob die IP-Adresse einer der IP-Adressen entspricht, die in einer <span class="apache">NameVirtualHost</span>-Direktive angegeben wurden.</li>
+	 <li>Wenn dies der Fall ist, wird jeder einzelne <span class="apachecontainer">VirtualHost</span>-Kontainer durchsucht, bis einer gefunden wird, dessen <span class="apache">ServerName</span>-Direktive dem angeforderten Server entspricht.</li>
+	 <li>Ist ein solcher Server gefunden worden, wird dessen Konfiguration verwendet. Falls nicht, wird der erste V-Host in der Liste genutzt, dessen IP-Adresse passend ist!</li>
+</ol>
+<div class="information">
+Wenn zwei virtual Hosts mit gleicher IP-Adresse/Port-Konfiguration auf treten, diese aber unterschiedliche Eintr&auml;ge in der <span class="apache">ServerName</span>-Direktive haben, wird automatisch das Name-Based VHosting aktiviert. Ein hinzuf&uuml;gen der <span class="apache">NameVirtualHost</span>-Direktive ist nicht mehr notwendig!
+</div>
+				<caption>Listing</caption>
+				<div class='geshi'><table class="apache"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="de1"><pre class="de1"><span class="kw1">Listen</span> 10.2.11.120
+&nbsp;
+<span class="kw1">NameVirtualHost</span> <span class="st0">&quot;10.2.11.120:*&quot;</span>
+&nbsp;
+&lt;<span class="kw3">VirtualHost</span> <span class="st0">&quot;10.2.11.120:*&quot;</span>&gt;
+&nbsp; <span class="kw1">DirectoryIndex</span> error.html
+&nbsp; <span class="kw1">DocumentRoot</span> &nbsp; <span class="st0">&quot;E:/Apache/httpd/2.4.2/htdocs&quot;</span>
+&nbsp; <span class="kw1">ServerAdmin</span> &nbsp; &nbsp;root@10.2.11.120
+&nbsp; <span class="kw1">ServerName</span> &nbsp; &nbsp; <span class="st0">&quot;FEA11-119VD02.IT-TRAINING.FUS&quot;</span>
+&lt;/<span class="kw3">VirtualHost</span>&gt;
+&nbsp;</pre></td></tr></tbody></table></div>
+			</article>
+		
+		<article id='article-310'>
+			<h4>Ein Server - mehrere Namen</h4>
+
+			<p>
+ Soll ein Name Based Virtual Host unter mehreren DNS-Namen verf&uuml;gbar sein, kann die <span class="apache">ServerAlias</span>-Direktive genutzt werden, um alle gew&uuml;nschten Namen anzugeben.
+</p>
+<div class="information">
+Alle Aliasnamen m&uuml;ssen auch auf einem DNS-Server eingetragen sein, damit der V-Host erreichbar ist!
+</div>
+				<caption>Listing</caption>
+				<div class='geshi'><table class="apache"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="de1"><pre class="de1"><span class="kw1">NameVirtualHost</span> <span class="st0">&quot;10.2.11.120:80&quot;</span>
+&nbsp;
+&lt;<span class="kw3">VirtualHost</span> <span class="st0">&quot;10.2.11.120:80&quot;</span>&gt;
+&nbsp; <span class="kw1">DocumentRoot</span> &nbsp; <span class="st0">&quot;E:/Apache/httpd/2.4.2/htdocs/selfhtml.it-training.fus&quot;</span>
+&nbsp; <span class="kw1">ServerAdmin</span> &nbsp; &nbsp;root@10.2.11.120
+&nbsp;
+&nbsp; <span class="co1"># Dieser Server hat zwei zusaetzliche Aliasnamen</span>
+&nbsp; <span class="kw1">ServerAlias</span> &nbsp; &nbsp;selfhtml.it-training.de selfhtml.it-training.org
+&nbsp; <span class="kw1">ServerName</span> &nbsp; &nbsp; <span class="st0">&quot;selfhtml.it-training.fus&quot;</span>
+&lt;/<span class="kw3">VirtualHost</span>&gt;
+&nbsp;</pre></td></tr></tbody></table></div>
+			</article>
+		
+		<article id='article-311'>
+			<h4>Umleitung - Redirect</h4>
+
+			<p>
+Es gibt verschiedene Gr&uuml;nde, warum der Apache eine Nutzeranfrage auf eine andere URL umleiten muss. In unserem Falle geht es darum, dass der Standard V-Host alle Anfragen auf einen anderen virtuellen Host umleiten soll, so dass immer eine korrekte Antwort vom Webserver geliefert wird.
+</p
+<p>
+Dies geschieht am einfachsten mit der Direktive <span class="apache">Redirect</span>. Diese hat die folgende Syntax.
+</p>
+<p>							
+<span class="apache" style="text-align:center">Redirect [Status] URL-Pattern URL</span>
+</p>
+<p>
+Sie nimmt drei Argumente entgegen:
+</p>
+<ul>
+	 <li><span class="apache">Status</span>: Hierbei handelt es sich um eine HTTP-Statusmeldung, die dem Client &uuml;bermittelt wird. Der Status kann sein:
+	 	 <ul>
+	 	 	 <li><span class="apache">permanent</span>: Dies ist die HTTP-Statusmeldung 301, die dem Client mitteilt, dass eine Resource dauerhaft umgezogen ist.</li>
+	 	 	 <li><span class="apache">temp</span>: Die HTTP-Statusmeldung 302 teilt dem Client mit, dass eine Resource nur zeitweilig umgezogen ist.</li>
+	 	 	 <li><span class="apache">seeother</span>: HTTP-Statusmeldung Nummer 303 sagt aus, dass eine Resource dauerhaft durch eine andere ersetzt wurde.</li>
+	 	 	 <li><span class="apache">gone</span>: Mit der HTTP-Statusmeldung 410 wird dem Client mitgeteilt, dass eine Resource dauerhaft nicht mehr verf&uuml;gbar ist. Dies ist die einzige Statusmeldung, die einen Fehler darstellt, so dass keine Weiterleitung mehr erfolgt. Bei dieser Statusmeldung muss das Argument <span class="url">URL</span> entfallen!</li>
+	 	 </ul>
+	 <div class="information">
+Wird das Argument <span class="apache">Status</span> ausgelassen, wir automatisch "temp" als Standard versandt.
+  	 </div>
+	 <li><span class="url">URL-Pattern</span> Das URL-Pattern ist eine Zeichenkette, die	als Vergleichswert dient. Sie wird mit der angeforderten URL verglichen. Wenn der Vergleich erfolgreich war, d. h. das Vergleichsmuster auf die URL passt, wird die Umleitung durchgef&uuml;hrt.</li>
+	 <li><span class="url">URL</span> Hierbei handelt es sich um die Resource, zu der hin umgeleitet werden soll.</li>
+</ul>
+<div class="homework">
+Entwerfen Sie zu dem unten angegebenen VHost einen Default Virtual Host, der alle Anforderungen an diesen V-Host weiterleitet! Ersetzen Sie die IP-Adresse und den Hostnamen durch Ihre eigene IP-Adresse und Ihren Hostnamen! Hinweis: Der Slash (/) kann als URL-Pattern f&uuml;r jede beliebige Anforderung genutzt werden!
+</div>
+<div class="notes h70"></div>
+<p>
+Eine sehr viel flexiblere und m&auml;chtigere Variante um Redirects zu bewerkstelligen, stellt das Apache Modul <span class="apache">mod_rewrite</span> dar, dass jedoch in der Summe seiner M&ouml;glichkeiten f&uuml;r diese Unterrichtsunterlage zu umfangreich ist.
+</p>
+<div class="information">
+Das Apache-Modul <span class="apache">mod_rewrite</span> erm&ouml;glicht ein regelbasiertes Umleiten von Client-Anforderungen auf eine andere URL. Es handelt sich hierbei um ein Modul mit umfassenden M&ouml;glichkeiten und hoher Flexibilit&auml;t, dass sogar Abfragen auf externe Datenbanksystem unterst&uuml;tzt.
+</div>
+<div class="homework">
+	 <ul>
+		 <li>
+	 	 	Konfiguration des Hauptservers:
+			<ul>
+				 <li>Die HTML-Dokumente des Hauptservers sollen f&uuml;r jeden Host, aus dem Verzeichnis <span class="url">E:\Apache\httpd\2.4.2\htdocs</span> abrufbar sein!</li>
+	 	 	 	 <li>Der Name des Hauptservers ist "wwwXX.it-training.fus", wobei XX Ihre zweistellige Platznummer darstellt (z. B. www01 oder www11)!</li>
+				 <li>Der Server beantwortet Anfragen auf Port 80!</li>
+				 <li>Das Error-Log hei&szlig;t <span class="url">logs\error.log</span> und muss st&uuml;ndlich ausgetauscht werden.</li>
+				 <li>Fehler werden erst ab der Stufe "error" geloggt.</li>
+	 	 	 	 <li>Es muss zus&auml;tzlich ein Access-Log im CLF-Format konfiguriert werden! Auch hier ist ein st&uuml;ndlicher Wechsel der Logs einzustellen (<span class="url">logs\access.log</span>)!</li>
+	 	 	 	 <li>Der Server muss mit verschiedenen MIME-Types umgehen k&ouml;nnen!</li>
+	 	 	</ul> 
+	 	 </li>
+	 	 <li>
+	 	 	 Konfiguration des benannten virtuellen Servers "wwwXX.ssi.it-training.fus"
+	 	 	 <ul>
+	 	 	 	 <li>Die HTML-Dokumente dieses Servers sollen f&uuml;r jeden Host, aus dem Verzeichnis <span class="url">E:\Apache\httpd\2.4.2\htdocs\ssi</span> abrufbar sein!</li>
+				 <li>Dieser Server beantwortet Anfragen auf Port 80!</li>
+	 	 	 	 <li>Das Error-Log hei&szlig;t <span class="url">logs\ssi\error.log</span> und muss st&uuml;ndlich ausgetauscht werden.</li>
+				 <li>Fehler werden erst ab der Stufe "error" geloggt.</li>
+	 	 	 	 <li>Es muss zus&auml;tzlich ein Access-Log im CLF-Format konfiguriert werden! Auch hier ist ein st&uuml;ndlicher Wechsel der Logs einzustellen (<span class="url">logs\ssi\access.log</span>)!</li>
+	 	 	 	 <li>Der Server muss mit verschiedenen MIME-Types umgehen k&ouml;nnen!</li>
+	 	 	 	 <li>Die Standardwebsite dieses Servers ist <span class="url">index.shtml</span>. Diese soll auch dann geladen werden, wenn der Nutzer keine explizite Angabe einer HTML-Seite gemacht hat!</li>
+	 	 	 	 <li>Sollte die Standardwebseite nicht geladen werden k&ouml;nnen, muss der Nutzer auf die Seite <span class="url">error.html</span> umgeleitet werden. Benutzten Sie hierf&uuml;r eine Standardfehlerseite, so wie Sie sie im Unterricht erstellt haben!</li>
+				 <li>Aktivieren Sie SSI f&uuml;r diesen Server! Hinweis: Die HTML-Seite <span class="url">index.shtml</span> ist eine HTML-Seite mit SSI-Kommandos. Sie k&ouml;nnen an dieser Stelle entweder eine neue HTML-Seite entwerfen, oder eine aus den vorangegangenen &Uuml;bungen nutzen!</li>
+	 	 	 </ul>
+	 	 </li>
+	 	 <li>
+	 	 	 Konfiguration des benannten virtuellen Servers "wwwXX.selfhtml.it-training.fus":
+	 	 	 <ul>
+	 	 	 	 <li>Die HTML-Dokumente dieses Servers sollen f&uuml;r jeden Host, aus dem Verzeichnis <span class="url">E:\Apache\httpd\2.4.2\htdocs\selfhtml} abrufbar sein!</li>
+	 	 	 	 <li>Dieser Server beantwortet Anfragen auf Port 80!</li>
+	 	 	 	 <li>Das Error-Log hei&szlig;t <span class="url">logs\selfhtml\error.log</span> und muss st&uuml;ndlich ausgetauscht werden.</li>
+	 	 	 	 <li>Fehler werden erst ab der Stufe "error" geloggt.</li>
+				 <li> Es muss zus&auml;tzlich ein Access-Log im CLF-Format konfiguriert werden! Auch hier ist ein st&uuml;ndlicher Wechsel der Logs einzustellen (<span class="url">logs\selfhtml\access.log</span>)!</li>
+	 	 	 	 <li>Der Server muss mit verschiedenen MIME-Types umgehen k&ouml;nnen!</li>
+	 			 <li>Die Standardwebsite dieses Servers ist <span class="url">index.htm</span>. Diese soll auch dann geladen werden, wenn der Nutzer keine explizite Angabe einer HTML-Seite gemacht hat!</li>
+	 	 	 	 <li>Sollte die Standardwebseite nicht geladen werden k&ouml;nnen, muss der Nutzer auf die Seite <span class="url">error.html</span> umgeleitet werden. Benutzten Sie hierf&uuml;r eine Standardfehlerseite, so wie Sie sie im Unterricht erstellt haben!</li>
+				 <li>Dieser Server soll ebenfalls unter den Namen "wwwXX.selfhtml.it-training.org" und "wwwXX.selfhtml.it-training.de" verf&uuml;gbar sein!</li>
+	 	 	 </ul>
+	 	 </li>
+	 	 <li>
+	 	 	 Konfiguration des benannten virtuellen Servers "wwwXX.mediawiki.it-training.fus":
+	 	 	 <ul>
+				 <li>F&uuml;hren Sie die Konfiguration dieses Servers mit Hilfe von .htaccess-Dateien durch!</li>
+	 	 	 	 <li>Die HTML-Dokumente dieses Servers sollen f&uuml;r jeden Host, aus dem Verzeichnis 	<span class="url">E:\Apache\httpd\2.4.2\htdocs\mediawiki</span> abrufbar sein!</li>
+	 	 	 	 <li>Dieser Server beantwortet Anfragen auf Port 80!</li>
+	 	 	 	 <li>Das Error-Log hei&szlig;t <span class="url">logs\mediawiki\error.log</span> und muss st&uuml;ndlich ausgetauscht werden.</li>
+				 <li>Fehler werden erst ab der Stufe "error" geloggt.</li>
+				 <li>Es muss zus&auml;tzlich ein Access-Log im CLF-Format konfiguriert werden! Auch hier ist ein st&uuml;ndlicher Wechsel der Logs einzustellen (<span class="url">logs\mediawiki\access.log</span>)!</li>
+	 	 	 	 <li>Der Server muss mit verschiedenen MIME-Types umgehen k&ouml;nnen!</li>
+	 	 	 	 <li>Die Standardwebsite dieses Servers ist <span class="url">index.php</span>. Diese soll auch dann geladen werden, wenn der Nutzer keine explizite Angabe einer HTML-Seite gemacht hat!</li>
+	 	 	 	 <li>Sollte die Standardwebseite nicht geladen werden k&ouml;nnen, muss der Nutzer auf die Seite <span class="url">error.html</span> umgeleitet werden. Benutzten Sie hierf&uuml;r eine Standardfehlerseite, so wie Sie sie im Unterricht erstellt haben!</li>
+	 	 	 	 <li>Der MediaWiki muss korrekt angezeigt werden!</li>
+	 	 	 </ul>
+	 	 </li>
+	</ul>
+</div>
+				<caption>Listing</caption>
+				<div class='geshi'><table class="apache"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+</pre></td><td class="de1"><pre class="de1">&lt;<span class="kw3">VirtualHost</span> <span class="st0">&quot;10.2.11.120:8080&quot;</span>&gt;
+&nbsp; <span class="kw1">Alias</span> <span class="st0">&quot;/perl&quot;</span> &nbsp; &nbsp; &nbsp;<span class="st0">&quot;E:/Apache/httpd/2.4.2/perl&quot;</span>
+&nbsp; <span class="kw1">DirectoryIndex</span> hallo.html
+&nbsp; <span class="kw1">DocumentRoot</span> <span class="st0">&quot;E:/Apache/httpd/2.4.2/htdocs&quot;</span>
+&nbsp; <span class="kw1">ServerName</span> <span class="st0">&quot;FEA11-119VD02.IT-TRAINING.FUS&quot;</span>
+&nbsp;
+&nbsp; &lt;<span class="kw3">Directory</span> <span class="st0">&quot;htdocs&quot;</span>&gt;
+&nbsp; &nbsp; <span class="kw1">AddHandler</span> application/x-httpd-php .php
+&nbsp; &nbsp; <span class="kw1">Options</span> &nbsp; &nbsp;<span class="kw2">Includes</span>
+&nbsp; &nbsp; <span class="kw1">Require</span> &nbsp; &nbsp;<span class="kw2">all</span> granted
+&nbsp; &lt;/<span class="kw3">Directory</span>&gt;
+&nbsp;
+&nbsp; &lt;<span class="kw3">Directory</span> <span class="st0">&quot;E:/Apache/httpd/2.4.2/perl&quot;</span>&gt;
+&nbsp; &nbsp; <span class="kw1">Options</span> &nbsp; &nbsp; &nbsp; &nbsp;ExecCGI
+&nbsp; &nbsp; PerlHandler &nbsp; &nbsp;ModPerl::Registry
+&nbsp; &nbsp; PerlSendHeader <span class="kw2">On</span>
+&nbsp; &nbsp; <span class="kw1">AddHandler</span> &nbsp; &nbsp; perl-<span class="kw1">script</span> .pl
+&nbsp; &nbsp; <span class="kw1">Require</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="kw2">all</span> granted
+&nbsp; &lt;/<span class="kw3">Directory</span>&gt;
+&lt;/<span class="kw3">VirtualHost</span>&gt;
 &nbsp;</pre></td></tr></tbody></table></div>
 			</article>
 		
@@ -4183,4 +4239,621 @@ CustomLog <span class="st0">&quot;logs/access_http404error.log&quot;</span> http
 LogFormat <span class="st0">&quot;%!200, 302, 304 {Referer}i&quot;</span> referer
 CustomLog <span class="st0">&quot;logs/access_referer.log&quot;</span> referer</pre></td></tr></tbody></table></div>
 			</article>
-		</section></section></section></body></html>
+		
+
+
+<section class='subSection' id='subSection-523'><h3>Secure Socket Layer (SSL)</h3>
+
+		<article id='article-312'>
+			<h4>SSL - Eine kurze Einleitung</h4>
+
+			<p>
+Der Secure Socket Layer, kurz SSL sorgt daf&uuml;r, dass Verbindungen verschl&uuml;sselt, und somit f&uuml;r Dritte unlesbar, aufgebaut werden k&ouml;nnen. F&uuml;r viele Anwendungen im Internet, wie z. B. Internet Banking, ist diese	Technologie unverzichtbar, um die Vertraulichkeit der Daten zu gew&auml;hrleisten.
+</p>
+<p>
+Die Onlinedokumentation des Apache HTTP-Servers bietet eine umfassende und informatiefe Einf&uuml;hrung in das Thema "Verschl&uuml;sselung mit SSL". Sie finden dieses Dokument unter: <span class="url" style="text-align:center">http://httpd.apache.org/docs/2.4/ssl/ssl_intro.html</span>
+</p
+
+		<article id='article-313'>
+			<h4>OpenSSL installieren</h4>
+
+			<div class="information">
+Da das SSL-Protokoll eine nahezu un&uuml;berschaubare Vielfalt an M&ouml;glichkeiten kennt, soll in dieser Unterrichtsunterlage nur eine rudiment&auml;re Anleitung zur Konfiguration einer einfachen SSL-Verbindung gegeben werden.
+</div>
+<p>
+Um eine SSL-Verbindung erstellen zu k&ouml;nnen, m&uuml;ssen im ersten Schritt Zertifikate erzeugt werden, welche dann unter anderem f&uuml;r die Verschl&uuml;sselung der Verbindung genutzt werden. Ein einfaches und kostenlose Mittel zur Erstellung von Zertifikaten ist das Tool: "OpenSSL", dessen Installation hier nun beschrieben wird.
+</p>
+<p>
+Das Open Source Projekt "OpenSSL" stellt ein mit kommerziellen Produkten vergleichbares Tool Kit mit vollst&auml;ndiger Unterst&uuml;tzung der SSL-Technologie dar. Es fu&szlig;t auf der von Eric	A. Young und Tim J. Hudson entwickelten "SSLeay library" und wird unter einer Lizenz vertrieben, die mit der Lizenz des Apache Webservers vergleichbar ist. Dadurch ist es sowohl f&uuml;r kommerzielle als auch f&uuml;r nicht kommerzielle Projekte kostenfrei einsetzbar.
+</p>
+<p>
+OpenSSL existiert f&uuml;r verschiedene Betriebssystem der Unix/Linux-Welt, und auch f&uuml;r Microsoft Windows. Der Download der Windowsversion kann von	der folgenden URL erfolgen: <span class="url">http://slproweb.com/download/Win64OpenSSL_Light-1_0_1c.exe</span>
+</p>
+<div class="information">
+Damit OpenSSL unter Windows installiert werden kann, m&uuml;ssen zus&auml;tzlich die "Microsoft Visual C++ 2008 Redistributables" heruntergeladen und installiert werden! Diese sind unter der folgenden URL zu finden: <span class="url">http://www.microsoft.com/de-de/download/details.aspx?id=15336</span>
+</div>
+<div class="homework">
+Laden Sie die "Microsoft Visual C++ 2008 Redistributables" und OpenSSL in der Version "Win64 OpenSSL v1.0.1c Light" herunter und installieren Sie beide Produkte! Hiweis: Installieren Sie OpenSSL in das Verzeichnis <span class="url">E:\ OpenSSL\1.0.1c\win64} und w"ahlen Sie die Option "Copy OpenSSL DLLs to the Windows system directory"!
+</div>
+<div class="notes h40"></div>
+		<article id='article-314'>
+			<h4>Ein Zertifikat mit OpenSSL generieren</h4>
+
+			<div class="information">
+Da der Fokus dieser Unterrichtsunterlage auf der Konfiguration von SSL f&uuml;r den Apache HTTP-Server liegt, wird an dieser Stelle die Erstellung eines selbst-signierten Serverzertifikats beschrieben. Dies ist jedoch keine Variante f&uuml;r eine Produktivumgebung. Der betrieb eines SSL-Gesicherten Webservers im Internet erfordert weit mehr Kenntnisse &uuml;ber SSL, als an dieser Stelle vermittelt werden k&ouml;nnen.
+</div>
+<div class="homework">
+	 <ol>
+	 	 <li>Erstellen Sie die folgenden Arbeitsverzeichnisse:
+	 	 	 <ul>
+	 	 	 	 <li><span class="url">E:\ssl</span></li>
+	 	 	 	 <li><span class="url">E:\ssl\keys</span></li>
+				 <li><span class="url">E:\ssl\certs</span></li>
+	 	 	 </ul>
+	 	 <li>Laden Sie eine Kopie der Datei <span class="url">openssl.cfg</span> von der folgenden URL herunter: <span class="url">http://www.dylanbeattie.net/docs/openssl.conf</span>
+<div class="information">
+Achtung: Hierbei handelt es sich um eine &ouml;ffentlich zug&auml;ngliche und stark vereinfachte Version der Konfigurationsdatei f&uuml;r OpenSSL, die keinesfalls im Produktivbetrieb eingesetzt werden sollte!
+</div></li>
+	 	 <li>Erstellen Sie die Datei <span class="url">E:\ssl\database.txt</span>. Bei dieser Datei handelt es sich um eine leere Datei.</li>
+		 <li>Erstellen Sie die Datei <span class="url">E:\ssl\serial.txt</span>. Diese Datei enth&auml;lt lediglich die Zeichenkette 01.</li>
+		 <li>Erstellen Sie ein selbst-signiertes CA Zertifikat f&uuml;r Ihren Webserver, inklusive Private Key.
+	 	 	 <p>
+	 	 	 	 <span class="url">openssl req -new -x509 -days 365 -sha1 -newkey rsa:1024 -nodes -keyout E:\ssl\keys\server.key -out E:\ssl\certs\server.cert -config E:\OpenSSL\1.0.1c\win64\bin\openssl.cfg}</span>
+	 	 	 </p>
+	 	 </li>
+		 <li>Recherchieren Sie in der OpenSSL Onlinehilfe, was die einzelnen Parameter des Kommandos <span class="url">openssl req</span> bedeuten! Sie finden die OpenSSL Onlinehilfe unter: <span class="url">http://www.openssl.org/docs/apps/req.html</span>
+	 </ol>
+</div>
+<div class="notes h100"></div>
+		<article id='article-315'>
+			<h4>Den Apache mit SSL konfigurieren - Der Hauptserver</h4>
+
+			<p>
+Der erste und auch wichtigste Schritt bei der Konfiguration von SSL f&uuml;r den Apache HTTP-Server ist, dem Webserver mitzuteilen, dass er auf dem HTTPS-Port 443 arbeiten soll. Dies geschieht mit Hilfe der <span class="apache">Listen 443</span>-Direktive. Der zweite Schritt ist optional. Um x509- und pkcs7-Zertifikatsdateien korrekt zu unterst&uuml;tzen, sollte der Webserver deren MIME-Types kennen. Verwenden Sie hierzu die <span class="apache">AddType</span>-Direktive.
+</p>
+<div class="information">
+W&auml;hrend die ersten beiden Schritte f&uuml;r den Hauptserver zu konfigurieren sind, sind alle weiteren Schritte f&uuml;r jeden einzelnen V-Host durchzuf&uuml;hren.
+</div>
+				<caption>Listing</caption>
+				<div class='geshi'><table class="apache"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
+2
+3
+</pre></td><td class="de1"><pre class="de1"><span class="kw1">AddType</span> application/x-x509-ca-cert &nbsp;.crt
+<span class="kw1">AddType</span> application/x-pkcs7-crl &nbsp; &nbsp; .crl
+&nbsp;</pre></td></tr></tbody></table></div>
+			</article>
+		
+		<article id='article-316'>
+			<h4>Den Apache mit SSL konfigurieren - Die virtuellen Hosts</h4>
+
+			<p>
+Jeder V-Host der mit SSL arbeiten soll ben&ouml;tigt mindestens drei Dinge:
+</p>
+<ul>
+	 <li>Die SSL-Engine muss eingeschaltet werden</li>
+	 <li>Ein SSL-Zertifikat muss vorhanden sein, und evlt. auch ein Privat Key-File.</li>
+	 <li>Die Angabe welche Verschl&uuml;sselungsverfahren (engl. CipherSuits) genutzt werden d&uuml;rfen.</li>
+</ul>
+<p>
+Die SSL-Konfiguration eines virtuellen Servers k&ouml;nnte also so aussehen, wie unten angegeben. Dieses Beispiel enth"alt jedoch nur die f&uuml;rr die Nutzung von SSL absolut notwendigen Direktiven.
+</p>
+<p>
+Die komplexeste Direktive d&uuml;rfte zweifelsohne  <span class="apache">SSLCipherSuite</span> sein. Sie besteht aus einer Liste verschiedener Verschl&uuml;sselungsverfahren und pr&auml;fixen, die durch	Doppelpunkte von einander getrennt werden. Der Client und der Webserver einigen sich bei ihrem Handshake auf eines der erlaubten Verfahren, und nutzen dies anschlie&szlig;end f&uuml;r die Verschl&uuml;sselung der Verbindung.
+</p>
+<p>
+Die Liste kann aus vier verschiedenen Komponenten bestehen:
+</p>
+<ul>
+	 <li>Schl&uuml;sselaustauschalgorithmen</li>
+	 <li>Authentifizierungsalgorithmen</li>
+	 <li>Verschl&uuml;sselungsalgorithmen</li>
+	 <li>MAC-Digest-Algorithmen</li>
+</ul>
+<p>
+Zus&auml;tzlich gibt es Aliasnamen, die stellvertretend f&uuml;r eine ganze Gruppe von Algorithmen stehen, wie z. B. ALL, HIGH, MEDIUM, LOW oder SSLv2. Die in der Liste verwendeten Pr&auml;fixe bedeuten:
+</p>
+<ul>
+	 <li>Ohne Pr&auml;fix : Hinzuf&uuml;gen des Algorithmus/der Gruppe von Algorithmen zur Liste</li>
+	 <li><strong>+</strong>: Der Algorithmus soll an der genannten Stelle in die Liste eingef&uuml;gt werden.</li>
+	 <li><strong>-</strong>: Der Algorithmus soll aus der Liste entfernt werden, um sp&auml;ter an einer anderen Stelle wieder eingef&uuml;gt werden zu k&ouml;nnen.</li>
+	 <li><strong>!</strong>: Unwiderruflicher Ausschluss des Algorithmus/der Gruppe von Algorithmen aus der Liste.</li>
+</ul>
+<p>
+Ein Beispiel f&uuml;r die <span class="url">SSLCipherSuite</span>-Direktive ist unten angegeben. Es bedeutet:
+</p>
+<ul>
+	 <li>ALL : Alle Algorithmen sind zul"assig</li>
+	 <li>!ADH : Schlie&szlig;e alle Algorithmen aus, die zur Gruppe der "Anonymen Diffie-Hellman-Algorithmen" geh&ouml;ren.</li>
+	 <li>Entferne die Gruppe der MEDIUM-Verschl&uuml;sselungsalgorithmen an dieser Stelle aus der Liste.</li>
+	 <li>F&uuml;ge die Gruppe der SSLv3-Algorithmen an dieser Stelle in die Liste ein.</li>
+	 <li>F&uuml;ge die Gruppe der MEDIUM-Algorithmen an der neuen Stelle wieder in die Liste ein.</li>
+</ul>
+<div class="information">
+Die Erstellung eines CipherSuite-Strings sollte grunds&auml;tzlich durch einen Security-Admin, und nicht durch den Webadmin selbst erfolgen!
+</div>
+<div class="homework">
+Fertigen Sie jetzt eine Sicherheitskopie ihrer Hauptkonfigurationsdatei	an! Erstellen Sie einen Webserver, der die folgenden Webauftrittebereitstellt! Alle V-Hosts haben eigene Error- und Access-Logs (CLF), die im 2 Stunden Rhythmus rotieren. Jeder V-Host stellt eine Seite dar, ohne das diese vom Nutzer angegeben werden muss (z. B. <span class="url">www.selfhtml.de</span> zeigt direkt die Seite <span class="url">index.htm</span>). Wenn ein Nutzer versucht ohne HTTPS-Verbindung auf einen der beiden mit HTTPS gesicherten Hosts zuzugreifen (z. B. <span class="url">http://selfhtml.de:443</span>), soll er auf die Adresse <span class="url">https://selfhtml.de</span> umgeleitet werden.
+</div>
+<img src="./img/1343039376luss_aufgabe.png" alt="abschlussaufgabe SSL" class="floatCenter" style="width:450px"/>
+				<caption>Listing</caption>
+				<div class='geshi'><table class="apache"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="de1"><pre class="de1"><span class="co1"># Die SSL-Engine einschalten</span>
+<span class="kw1">SSLEngine</span> <span class="kw2">On</span>
+&nbsp;
+<span class="co1"># Das Serverzertifikat + Private Key festlegen</span>
+<span class="kw1">SSLCertificateFile</span> &nbsp; &nbsp;<span class="st0">&quot;E:/ssl/certs/server.crt&quot;</span>
+<span class="kw1">SSLCertificateKeyFile</span> <span class="st0">&quot;E:/ssl/keys/server.key&quot;</span>
+SLLCipherSuite &nbsp; &nbsp; &nbsp; &nbsp;<span class="kw2">ALL</span>:!ADH:-MEDIUM:+SSLv3:+MEDIUM
+&nbsp;</pre></td></tr></tbody></table></div>
+			</article>
+		</section></section>
+
+
+
+<section class='section' id='section-525'><h2>Tomcat</h2>
+
+		<article id='article-328'>
+			<h4>Der Apache Tomcat - Ein Applikationsserver</h4>
+
+			
+
+
+<section class='subSection' id='subSection-534'><h3>Der Apache Tomcat - Ein Applikationsserver</h3>
+
+		<article id='article-329'>
+			<h4>Was ist ein Applikationsserver</h4>
+
+			<div class="emphasize">
+Ein Anwendungsserver (engl. application server) ist im Allgemeinen ein Server in einem Computernetzwerk, auf dem Anwendungsprogramme ausgef&uuml;hrt werden. Im engeren Sinne bezeichnet der Begriff eine Software, die spezielle Dienst zur Verf&uuml;gung stellt, wie beispielsweise Transaktionen, Authentifizierung oder den Zugriff auf Verzeichnisdienste und Datenbanken &uuml;ber definierte Schnittstellen. (Quelle: Wikipedia http://de.wikipedia.org/wiki/Anwendungsserver)
+</div></section></section>
+
+
+
+<section class='section' id='section-526'><h2>Internet Information Services</h2>
+
+
+
+<section class='subSection' id='subSection-527'><h3>Herkunft und Installation der IIS</h3>
+
+		<article id='article-317'>
+			<h4>Herkunft</h4>
+
+			<p>
+Die Internet Information Services (kurz IIS) sind eine Entwicklung der Firma Microsoft, f&uuml;r deren Windows Produktpalette. Sie stellen einen Webserver Dienst mit vielen modularen Zusatzfunktionen dar, &auml;hnlich dem marktf&uuml;hrenden Konkurrenten Apache.
+</p>
+<p>
+Die Entwicklung der IIS begann mit Microsoft Windows NT 3.51.
+</p>
+<img src="./img/1343039776istorie.png" alt="iis history" class="floatCenter" style="width:450px"/>
+<div class="information">
+Die IIS sind nicht standardm&auml;ssig installiert. Sie m&uuml;ssen als Zusatzoption nachinstalliert werden!
+</div>
+<div class="homework">
+Nutzen Sie Wikipedia, um herauszufinden, wer die IIS entwickelt hat bzw. wo sie urspr&uuml;nglich entwickelt wurden!
+</div>
+<p>
+Die IIS sind in der Lage, nicht nur HTML-Seiten auszuliefern, sondern sie stellen auch noch viele andere Dienste zur Verf&uuml;gung:
+</p>
+<ul>
+	 <li>HTTP</li>
+         <li>FTP</li>
+         <li>SMTP</li>
+         <li>NNTP</li>
+         <li>WebDAV</li>
+         <li>IIS Admin Service</li>
+</ul>
+<div class="information">
+Bei der Installation der IIS werden nur der HTTP-Dienst und die IIS Admin Services installiert. Alle anderen Dienst m&uuml;ssen nachinstalliert bzw. aktiviert werden.
+</div>
+<p>
+Alle Dienste, die die IIS zur Verf&uuml;gung stellen k&ouml;nnen, sind in sogenannten ISAPI-DLL Modulen verpackt. Diese k&ouml;nnen nach bedarf hinzugef&uuml;gt oder entfernt werden.
+</p>
+		<article id='article-318'>
+			<h4>Installation</h4>
+
+			<p>
+Es gibt drei M&ouml;glichkeiten die IIS zu installieren:
+</p>
+      <ol>
+        <li>Die Installation &uuml;ber den Server-Konfigurationsassistenten</li>
+        <li>Die Installation mit Hilfe der Systemsteuerung</li>
+        <li>Die unbeaufsichtigte Installation</li>
+      </ol>
+      <div class="information">
+        Microsoft empfiehlt aus Sicherheitsgr&uuml;nden die Installation der IIS nur auf einem NTFS-formatierten Laufwerk vorzunehmen, da dieses Dateisystem mehr Sicherheit bietet, als FAT bzw. FAT32.
+      </div>
+<span class="h3">Installation &uuml;ber den Server-Konfigurationsassistenten</span>
+        <ol>
+          <li>Klicken Sie im Startmen&uuml; auf Serververwaltung.</li>
+	  <img src="./img/1343048825nstall_1.png" alt="installation schritt 1" class="floatCenter" style="width:300px"/>
+          <li>Klicken Sie unter Serverfunktionen verwalten auf Funktion hinzuf&uuml;gen oder entfernen.</li>
+	  <img src="./img/1343048877nstall_2.png" alt="installation schritt 2" class="floatCenter" style="width:300px"/>
+          <li> Klicken Sie auf Weiter.</li>
+	  <img src="./img/1343048938nstall_3.png" alt="installation schritt 3" class="floatCenter" style="width:300px"/>
+          <li>Klicken Sie unter Serverfunktion auf Anwendungsserver (IIS, ASP.NET) und dann auf Weiter.</li>
+	  <img src="./img/1343048952nstall_4.png" alt="installation schritt 4" class="floatCenter" style="width:300px"/>
+          <li>W&auml;hlen Sie zus&auml;tzliche Anwendungsserveroptionen aus, falls Sie diese ben&ouml;tigen und klicken dann auf Weiter.</li>
+          <li> Klicken Sie auf Weiter.</li>
+          <li> Klicken Sie auf Fertigstellen</li>
+	  <img src="./img/1343048989nstall_5.png" alt="installation schritt 5" class="floatCenter" style="width:300px"/>
+        </ol>
+	 <p>
+        Die Internet Information Services werden installiert. Nach der Installation kann das IIS Admin Tool im Windows Startmen&uuml; aufgerufen werden.
+	  <img src="./img/1343049020nstall_6.png" alt="installation schritt 6" class="floatCenter" style="width:300px"/>
+	 </p>
+        <div class="information">
+          Bei dieser Installationsmethode wird ASP.NET automatisch aktiviert!
+        </div>
+<span class="h3">Installation mit Hilfe der Systemsteuerung</span>
+        <ol>
+          <li>Klicken Sie im Startmen&uuml; auf Systemsteuerung.</li>
+          <li>Klicken Sie auf Software.</li>
+          <li>Klicken Sie auf Windows-Komponenten hinzuf&uuml;gen/entfernen.</li>
+          <li>Klicken Sie im Listenfeld Komponenten auf Anwendungsserver.</li>
+          <li>Klicken Sie auf Details.</li>
+          <li>Klicken Sie auf Internetinformationsdienste-Manager.</li>
+          <li>Klicken Sie auf Details, um eine Liste der optionalen IIS-Komponenten anzuzeigen. W&auml;hlen Sie die ben&ouml;tigten Komponenten aus, um diese zu installieren.</li>
+          <li>Klicken Sie auf OK, bis Sie zum Assistenten f&uuml;r Windows-Komponenten zur&uuml;ckkehren.</li>
+          <li>Klicken Sie auf Weiter, um den Assistenten f&uuml;r Windows-Komponenten abzuschlie&szlig;en.</li>
+        </ol>
+<span class="h3">Wichtige Verzeichnisse der IIS</span>
+	 <p>
+        W&auml;hrend der Installation der IIS werden die folgenden Verzeichnisse angelegt:
+	 </p>
+        <ul>
+          <li><span class="url">\InetPub</span></li>
+          <li><span class="url">%SYSTEMROOT%\Help\IIsHelp</span></li>
+          <li><span class="url">%SYSTEMROOT%\System32\InetSrv</span></li>
+          <li><span class="url">%SYSTEMROOT%\System32\InetSrv\MetaBack</span></li>
+        </ul>
+	 <p>
+        Diese Verzeichnisse enthalten Benutzerdaten und k&ouml;nnen nicht verschoben werden.
+	 </p>
+        <div class="information">
+          Bei der Deinstallation von IIS wird das Verzeichnis <span class="url">IISHelp</span> entfernt. Die Verzeichnisse <span class="url">InetPub</span> und <span class="url">InetSrv</span> bleiben auf dem Computer.
+        </div>
+<span class="h3">Optionale Komponenten</span>
+<p>
+Die IIS umfassen optionale Komponenten die jederzeit nachinstalliert werden k&ouml;nnen. Die kann auf unterschiedlichen Wegen geschehen:
+</p>
+<ul>
+<li>&Uuml;ber die Option Windows Komponenten hinzuf&uuml;gen/entfernen</li>
+<li>Im IIS Admin Tool</li>
+</ul>
+<span class="h3">Hinzuf&uuml;gen optionaler Komponenten</span>
+          <div class="homework">
+            Benutzen Sie das Microsoft Technet, um herauszufinden, wie optionale Komponenten nachinstalliert bzw. deinstalliert werden k&ouml;nnen! Der folgende Link f&uuml;hrt sie zum Technet: <span class="url">http://technet.microsoft.com/de-de/library/default.aspx</span>
+          </div>
+
+
+
+<section class='subSection' id='subSection-529'><h3>Datensicherung</h3>
+
+		<article id='article-319'>
+			<h4>Sichern und Wiederherstellen der Metabase</h4>
+
+			<p>
+Die Metabase enth&auml;lt eine hierarchische Struktur, die die Konfiguration der IIS speichert. Seit Version 6 Sie besteht aus zwei XML-Dateien: MetaBase.XML und MBSchema.XML. Beide sind im Verzeichnis %SYSTEMROOT%\System32\InetSrv abgelegt. Nur Mitglieder der Gruppe der Administratoren k&ouml;nnen diese Dateien ver&auml;ndern.
+</p>
+<p>
+Werden die IIS gestartet, wird der Inhalt der Datei MetaBase.XML in einen Bereich des Arbeitsspeichers kopiert, der als "In-Memory Metabase" bezeichnet wird. Die Metabase besteht somit insgesamt aus den drei Teilen:
+</p>
+        <ul>
+          <li> MetaBase.XML</li>
+          <li> MBSchema.XML</li>
+          <li> In-Memory Metabase</li>
+        </ul>
+<p>
+Werden Ver&auml;nderungen an der Konfiguration der IIS vorgenommen, werden diese zuerst in der In-Memory MetaBase zwischengespeichert und anschlie&szlig;end persistent in die XML-Dateien &uuml;bertragen. Diese &Uuml;bertragung findet in bestimmten Zeitintervallen statt.
+</p>
+<p>
+IIS-Admins sollten in regelm&auml;&szlig;igen Zeitabst&auml;nden eine Sicherung der Metabase durchf&uuml;hren, so dass ein Verlust der aktuellen Konfiguration ausgeschlossen ist. Die erste automatische Sicherung der MetaBase erfolgt direkt im Anschluss an die Installation der IIS. Diese Sicherung ist notwendig, damit der Urzustand der IIS-Installation bei bedarf wiederhergestellt werden kann.
+</p>
+<p>
+Die Metabase kann mit Hilfe des IIS Admin Tools oder eines Skripts gesichert werden. Beim Sichern werden Kopien der beiden XML-Dateien MetaBase.XML und MBSchema.XML erstellt. Jede Sicherung kann bzw. sollte mit einem Passwort versehen werden.
+</p>
+<p>
+Die Sicherungskopien der MetaBase werden im Verzeichnis %SYSTEMROOT%\System32\InetSrv\MetaBack gespeichert.
+</p>
+<span class="h3">Sichern der Metabase</span>
+<ol>
+            <li>Starten Sie das IIS Admin Tool im Windows Startmen&uuml;.</li>
+            <li>Klicken Sie mit der rechten Maustaste auf den lokalen Computer.</li>
+            <li>W&auml;hlen Sie im Kontextmen&uuml; Alle Aufgaben aus.</li>
+            <li>Klicken Sie auf Konfiguration Sichern Wiederherstellen.</li>
+	    <img src="./img/1343050152ave_metabase_1.png" alt="save metabase" class="floatCenter" style="width:300px"/>
+            <li> Klicken Sie auf Sicherungskopie erstellen.</li>
+	    <img src="./img/1343050204ave_metabase_2.png" alt="save metabase" class="floatCenter" style="width:300px"/>
+            <li> Geben Sie der Sicherungskopie einen Namen und ein Passwort.</li>
+	    <img src="./img/1343050215ave_metabase_3.png" alt="save metabase" class="floatCenter" style="width:300px"/>
+            <li> Klicken Sie auf OK.</li>
+          </ol>
+<span class="h3">Wiederherstellen der Metabase</span>
+<ol>
+            <li>Starten Sie das IIS Admin Tool im Windows Startmen&uuml;.</li>
+            <li>Klicken Sie mit der rechten Maustaste auf den lokalen Computer.</li>
+            <li>W&auml;hlen Sie im Kontextmen&uuml; Alle Aufgaben aus.</li>
+            <li>Klicken Sie auf Konfiguration Sichern/Wiederherstellen.</li>
+	    <img src="./img/1343050152ave_metabase_1.png" alt="save metabase" class="floatCenter" style="width:300px"/>
+            <li> Klicken Sie im Listenfeld Sicherungskopien auf die automatische Sicherungs-kopie, die Sie wiederherstellen m&ouml;chten.</li>
+            <img src="./img/1343050298estore_metabase_1.png" alt="restore metabase" class="floatCenter" style="width:300px"/>
+            <li> Klicken Sie auf Wiederherstellen.</li>
+            <img src="./img/1343050338estore_metabase_2.png" alt="restore metabase" class="floatCenter" style="width:300px"/>
+            <li> Geben Sie das Passwort ein und klicken Sie auf OK.</li>
+            <img src="./img/1343050348estore_metabase_3.png" alt="restore metabase" class="floatCenter" style="width:300px"/>
+            <li> Klicken Sie auf OK und der Vorgang wird beendet.</li>
+            <img src="./img/1343050358estore_metabase_4.png" alt="restore metabase" class="floatCenter" style="width:300px"/>
+            <li> Klicken Sie auf Schlie&szlig;en</li>
+          </div>
+
+
+
+<section class='subSection' id='subSection-530'><h3>Remoteverwaltung</h3>
+
+		<article id='article-320'>
+			<h4>Einrichten der Remoteverwaltung</h4>
+
+			<div class="homework">
+Benutzen Sie das Microsoft Technet, um herauszufinden, wie die Remoteverwaltung der IIS per IIS Admin Tool und HTTP konfiguriert werden kann! Der folgende Link f&uuml;hrt sie zum Technet: <span class="url">http://technet.microsoft.com/de-de/library/default.aspx</span>
+</div>
+
+
+<section class='subSection' id='subSection-532'><h3>Authentifizierung und Autorisierung</h3>
+
+		<article id='article-324'>
+			<h4>Anonyme Authentifizierung</h4>
+
+			<p>
+Die Internet Information Services k&ouml;nnen so konfiguriert werden, dass jeder Nutzer zuerst einen Nutzernamen und ein Passwort eingeben muss, bevor er zugriff auf eine bestimmte Website erh&auml;lt. Dies wird als Authentifizierung bezeichnet. Es stehen mehrere Authentifizierungsverfahren zur Verf&uuml;gung:
+</p>
+        <ul>
+          <li>Anonyme Authentifizierung</li>
+          <li>Standardauthentifizierung</li>
+          <li>Digestauthentifizierung</li>
+          <li>Erweiterte Digestauthentifizierung</li>
+          <li>Integrierte Windows-Authentifizierung</li>
+          <li>UNC-Authentifizierung</li>
+          <li>.NET Passport-Authentifizierung</li>
+          <li>Authentifizierung von FTP-Sites</li>
+        </ul>
+<p>
+Mit Hilfe der anonymen Authentifizierung k&ouml;nnen Nutzer, ohne die Angabe von Nutzername und Passwort, auf &ouml;ffentliche Bereiche einer Website zugriff erhalten. F&uuml;r dieses Verfahren wird auf dem Webserver das Nutzerkonto "IUSR_Computername" genutzt, das f&uuml;r das Setup zur Gruppe "G&auml;ste" hinzugef&uuml;gt wird. Mit Ausnahme des Kontos "Gast", haben Mitglieder der Gruppe "G&auml;ste" die gleichen Rechte, wie Die der Gruppe "Benutzer".
+</p>
+<p>
+Um die Anonyme Authentifizierung zu aktivieren, gehen Sie wie folgt vor:
+</p>
+<ol>
+            <li>W&auml;hlen Sie im IIS-Manager das gew&uuml;nschte Objekt, aus f&uuml;r das die anonyme Authentifizierung aktiviert werden soll (z. B. ein virtuelles Verzeichnis oder eine Website).</li>
+            <img src="./img/1343052451tandardwebsite.png" alt="Standardwebsite" class="floatCenter" style="width:300px"/>
+            <li>&Ouml;ffnen Sie mit der rechten Maustaste das Kontextmen&uuml; des betreffenden Objekts und w&auml;hlen Sie den Punkt "Eigenschaften".</li>
+            <li>Klicken Sie auf die Registerkarte "Verzeichnissicherheit" bzw. "Dateisicherheit".</li>
+            <img src="./img/1343052488erzeichnissicherheit.png" alt="Verzeichnissicherheit" class="floatCenter" style="width:300px"/>
+            <li>Klicken Sie unter "Authentifizierung und Zugriffssteuerung" auf die Schaltfl&auml;che bearbeiten.</li>
+            <li>Aktivieren Sie das H&auml;kchen f&uuml;r die anonyme Authentifizierung und tragen Sie ein entsprechendes Benutzerkonto ein.</li>
+            <img src="./img/1343052515nonymer_zugriff.png" alt="Anonymer Zugriff" class="floatCenter" style="width:300px"/>
+            <li>Klicken Sie auf "OK".</li>
+            <li>Klicken Sie auf "OK".</li>
+          </ol>
+		<article id='article-325'>
+			<h4>Standardauthentifizierung</h4>
+
+			<p>
+Die Standardauthentifizierung stelle eine Methode dar, bei der Nutzernamen und Passw&ouml;rter unverschl&uuml;sselt &uuml;ber das Netzwerk &uuml;bertragen werden. Es ist jedoch m&ouml;glich, die Standardauthentifizierung in Zusammenhang mit den Verschl&uuml;sselungstechniken des Webservers zu nutzen, um so die Sicherheit zu erh&ouml;hen.
+</p>
+<p>
+Wird f&uuml;r eine Website die Standardauthentifizierung aktiviert, so m&uuml;ssen auch entsprechende Windowsbenutzerkonten erstellt und NTFS-Rechte gesetzt werden.
+</p>
+<ol>
+            <li>W&auml;hlen Sie im IIS-Manager das gew&uuml;nschte Objekt, aus f&uuml;r das die Standardauthentifizierung aktiviert werden soll (z. B. ein virtuelles Verzeichnis oder eine Website).</li>
+            <li>&Ouml;ffnen Sie mit der rechten Maustaste das Kontextmen&uuml; des betreffenden Objekts und w&auml;hlen Sie den Punkt "Eigenschaften".</li>
+            <li>Klicken Sie auf die Registerkarte "Verzeichnissicherheit" bzw. "Dateisicherheit".</li>
+            <li>Klicken Sie unter "Authentifizierung und Zugriffssteuerung" auf die Schaltfl&auml;che bearbeiten.</li>
+            <li>Deaktivieren Sie das H&auml;kchen f&uuml;r die anonyme Authentifizierung</li>
+            <li>Aktivieren Sie das H&auml;kchen f&uuml;r die Standardauthentifizierung.</li>
+            <li>Da diese Methode, wie bereits erw&auml;hnt, die Nutzernamen und Passw&ouml;rter im Klartext verschickt, erscheint an dieser Stelle eine Warnmeldung, die Sie auf diesen Umstand hinweist. Klicken Sie auf JA.</li>
+            <img src="./img/1343053357tandardauthentifizierung1.png" alt="Standardauthentifizierung" class="floatCenter" style="width:300px"/>
+            <li>Geben Sie im Feld Standarddom&auml;ne ein Standardd&auml;monensuffix an. Dieses wird immer dann verwendet, wenn der Nutzer bei der Authentifizierung kein Dom&auml;nensuffix angibt.</li>
+            <p>
+	 	 <strong>Beispiel 1:</strong> Als Standarddom&auml;ne wird "it-training.fus" eingetragen. Der Nutzer gibt als Nutzername den Wert "cMueller" ein. Sein Nutzername wird durch die Standarddom&auml;ne in "cMueller@it-training.fus" erg&auml;nzt.
+	   </p>
+	   <p>
+                 <strong>Beispiel 2:</strong> Als Standarddom&auml;ne wird "it-training.fus" eingetragen. Der Nutzer gibt als Nutzername den Wert "cMueller@FueUstgSBw.bw" ein. Es erfolgt keine Erg&auml;nzung, da der Nutzername bereits ein Dom&auml;nensuffix enth&auml;lt.
+	   </p>
+             <img src="./img/1343053418tandardauthentifizierung2.png" alt="Standardauthentifizierung" class="floatCenter" style="width:300px"/>
+            <li> Klicken Sie auf OK.</li>
+            <li> Klicken Sie auf OK.</li>
+<div class="homework">
+Welche Aufgabe hat das Textfeld "Bereich" im Dialogfeld "Authentifizierungsmethoden"? Was passiert mit dort eingetragenen Werten?
+</div>
+<p>
+Au&szlig;er der Tatsache, das Nutzernamen und Passw&ouml;rter unverschl&uuml;sselt &uuml;bertragen werden, stellt auch der Tokencache in Problem dar. Die Aufgabe des Tokencaches ist es, Anmeldeinformationen zwischenzuspeichern. D. h. hat sich ein Nutzer einmal am Webserver angemeldet, wird dessen Anmeldeinformation, das sog. Benutzertoken, im Tokencache zwischengespeichert. Dies sorgt daf&uuml;r, das ein einmal angemeldeter Nutzer sich nicht bei jeder weiteren Webseite, die eine Authentifizierung fordert, erneut anmelden muss.
+</p>
+<p>
+Problematisch ist, dass ein Angreifer diesen Tokencache nutzen k&ouml;nnte, um sich unberechtigten Zugriff zum Webserver zu verschaffen. Dies kann jedoch durch die richtige Konfiguration des Tokencaches verhindert, bzw. das Risiko kann verringert, werden.
+</p>
+<p>
+Die Einstellungen f&uuml;r den Tokencache werden in der Windowsregistrierungsdatei vorgenommen.
+</p>
+<ol>
+            <li>&Ouml;ffnen Sie den Windows Registrierungseditor Regedit32.exe</li>
+            <li>W&auml;hlen Sie den Registrierungsschl&uuml;ssel  \\HKEY\_LOCAL\_MACHINE\System\CurrentControlSet\ Services\InetInfo\Parameters.</li>
+            <li>Klicken Sie auf das Men&uuml; "Bearbeiten" und w&auml;hlen Sie den Men&uuml;punkt "Neu".</li>
+            <li>W&auml;hlen Sie den Typ "DWORD-Wert"</li>
+            <img src="./img/1343053647okencache1.png" alt="Tokencache" class="floatCenter" style="width:300px"/>
+            <li>Geben als Name "UserTokenTTL" ein.</li>
+            <li>Doppelklicken Sie auf "UserTokenTTL" und geben Sie als Wert eine Zahl ein. Diese legt die Sekunden fest, wie lange ein Benutzertoken g&uuml;ltig ist, bzw. wann es aus dem Cache entfernt wird.</li>
+            <img src="./img/1343053686okencache2.png" alt="Tokencache" class="floatCenter" style="width:300px"/>
+            <li>Schlie&szlig;en Sie den Registrierungseditor.</li>
+            <li>Starten Sie die IIS neu.</li>
+          </ol>
+
+		<article id='article-326'>
+			<h4>Integrierte Windows-Authentifizierung</h4>
+
+			<p>
+Im Gegensatz zur Standard-/Basisauthentifizierung stellt die Integrierte Windows-Authentifizierung eine sogenannte "sichere Authentifizierungsmethode" dar. Sicher hei&szlig;t in diesem Falle, das kein Nutzername und kein Passwort &uuml;ber das Netzwerk &uuml;bertragen werden, sondern nur ein Hashwert. Vormals wurde diese Art der Authentifizierung auch als NTLM-Authentifizierung bezeichnet.
+</p>
+<ol>
+            <li>W&auml;hlen Sie im IIS-Manager das gew&uuml;nschte Objekt, aus f&uuml;r das die Integrierte Windows-Authentifizierung aktiviert werden soll (z. B. ein virtuelles Verzeichnis oder eine Website).</li>
+            <li>&Ouml;ffnen Sie mit der rechten Maustaste das Kontextmen&uuml; des betreffenden Objekts und w&auml;hlen Sie den Punkt "Eigenschaften".</li>
+            <li>Klicken Sie auf die Registerkarte "Verzeichnissicherheit" bzw. "Dateisicherheit".</li>
+            <li>Klicken Sie unter "Authentifizierung und Zugriffssteuerung" auf die Schaltfl&auml;che bearbeiten.</li>
+            <li>Deaktivieren Sie das H&auml;kchen f&uuml;r die anonyme Authentifizierung</li>
+            <li>Aktivieren Sie das H&auml;kchen f&uuml;r die integrierte Windows-Authentifizierung.</li>
+            <li>Klicken Sie auf "OK".</li>
+            <li>Klicken Sie auf "OK".</li>
+</ol>
+
+		<article id='article-327'>
+			<h4>Autorisierung</h4>
+
+			<span class="h3">NTFS-Berechtigungen einsetzen</span>
+<div class="homework">
+Welche Empfehlungen gelten beim Sichern von Dateien mit NTFS-Berechtigungen? Ermitteln Sie dies mit Hilfe des Microsoft TechNet!
+</div>
+<ol>
+<li>W&auml;hlen Sie im IIS-Manager die Website/Datei aus die Sie sichern m&ouml;chten.</li>
+<li>Klicken Sie mit der rechten Maustaste und w&auml;hlen Sie im Kontextmen&uuml; den Punkt "Berechtigungen".</li>
+<li>Vergeben Sie, die entsprechenden Berechtigungen.</li>
+<li>Klicken Sie auf "OK".</li>
+</ol>
+<span class="h3">Benutzung von Websiteberechtigungen</span>
+<p>
+Websiteberechtigungen sind nur als Erg&auml;nzung zu den NTFS-Berechtigungen zu sehen, nicht aber als alleiniges Mittel, um eine Website zu sichern. Im Gegensatz zu NTFS-Berechtigungen gelten Websiteberechtigungen unabh&auml;ngig von Nutzerkonten, also immer f&uuml;r alle Nutzer.
+</p>
+<div class="homework">
+rmitteln Sie, mit Hilfe des Microsoft TechNet, welche Regeln gelten, wenn Sie NTFS-Berechtigungen zusammen mit Websiteberechtigungen einsetzen und wie Sie Websiteberechtigungen einrichten!
+</div>
+<span class="h3">Erm&ouml;glichen von anonymen Zugriffen</span>
+<p>
+Anonymer Zugriff ist die am h&auml;ufigsten verwendete Zugriffsform. Hiermit kann ein Nutzer ohne weitere Authentifizierung auf eine Website zugreifen. Wie diese Art der Authentifizierung konfiguriert wird, wurde bereits im Vorfeld beschrieben. Genutzt wird sie, in dem der gew&uuml;nschten Website die NTFS-Berechtigungen:
+</p>
+<ul>
+    <li>Lesen und Ausf&uuml;hren</li>
+    <li>Ordnerinhalt auflisten</li>
+    <li>Lesen</li>
+</ul>
+<p>
+zugewiesen werden.
+</p>
+
+
+<section class='subSection' id='subSection-531'><h3>Bereitstellen von Webseiten</h3>
+
+		<article id='article-321'>
+			<h4>Die Standardwebsite</h4>
+
+			<p>
+Das Bereitstellen von Websites durch die Internet Information Services geschieht in zwei Schritten:
+</p>
+<ul>
+	 <li>Erstellen der Website</li>
+         <li>Erstellen einer Konfiguration f&uuml;r die IIS, zum Bereitstellen der Website.</li>
+</ul>
+<p>
+An dieser Stelle wird nur der zweite Aufz&auml;hlungspunkt behandelt, das Erstellen der Konfiguration f&uuml;r die Bereitstellung der Website durch die IIS.
+</p>
+<p>
+Nach der Installation stellen die IIS automatisch eine Website dar, die Standardwebsite. Diese besteht aus zwei Dateien, die sich im Verzeichnis <span class="url">InetPub\wwwroot</span> befinden. Sie hei&szlig;en:
+          <ul>
+            <li><span class="url">iisstart.htm</span></li>
+            <li><span class="url">pagerror.gif</span></li>
+          </ul>
+<p>
+Diese Seite zeigt die Meldung an, das auf diesem Webserver noch keine Standardwebseite eingerichtet wurde, bzw. das diese sich noch in Bearbeitung befindet.
+</p>
+<p>
+Um eine eigene Standardwebsite f&uuml;r Ihren Webserver zu konfigurieren, unternehmen Sie folgende Schritte:
+</p>
+<ol>
+            <li>&Ouml;ffnen Sie die IIS Admin Tools</li>
+            <li>Erweitern Sie die Hierarchie in der linken Fensterh&auml;lfte: Internetinformationsdienste &#8594; (lokaler Computer) &#8594; Websites &#8594; Standardwebsite</li>
+            <li>Klicken Sie mit der rechten Maustaste auf Standardwebsite und &ouml;ffnen Sie die Eigenschaften der Standardwebsite.</li>
+            <li>W&auml;hlen Sie die Registerkarte "Dokumente".</li>
+            <img src="./img/1343051074egister_dokumente.png" alt="Registerkarte Dokumente" class="floatCenter" style="width:300px"/>
+            <li>Setzen Sie den Haken bei "Standardinhaltseite anzeigen", falls dies nicht bereits geschehen ist.</li>
+            <li>Benutzen Sie die Schaltfl&auml;che "Entfernen", um alle nicht ben&ouml;tigten Dateinamen aus der Liste zu entfernen.</li>
+            <li>F&uuml;gen Sie, mit Hilfe der Schaltfl&auml;che "Hinzuf"ugen" den Dateinamen Ihrer Standardwebsite hinzu.</li>
+            <li>Klicken Sie auf "OK".</li>
+            <li>Testen Sie mit dem Browser Ihrer Wahl, ob die &Auml;nderung funktioniert.</li>
+          </div>
+		<article id='article-322'>
+			<h4>Erstellen neuer Websites</h4>
+
+			<ol>
+            <li>&Ouml;ffnen Sie die IIS Admin Tools</li>
+            <li>Um Ressourcenkonflikte zu vermeiden, beenden Sie die Standardwebseite</li>
+            <li>Klicken Sie mit der rechten Maustaste auf den Ordner "Websites" um das Kontextmen&uuml; zu &ouml;ffnen, und klicken Sie auf die Eigenschaft "Neu" → "Website...".</li>
+            <img src="./img/1343051305reate_new_site_1.png" alt="IIS Create new site" class="floatCenter" style="width:300px"/>
+            <li>Klicken Sie auf "Weiter"</li>
+            <img src="./img/1343051349reate_new_site_2.png" alt="IIS Create new site" class="floatCenter" style="width:300px"/>
+            <li>Geben Sie einen Namen f&uuml;r Ihre Website an. Dieser wird nur innerhalb der Admin Tools angezeigt und klicken Sie auf "Weiter".</li>
+            <img src="./img/1343051361reate_new_site_3.png" alt="IIS Create new site" class="floatCenter" style="width:300px"/>
+            <li>Geben Sie das Verzeichnis an, in dem Ihre Website erstellt werden soll und klicken Sie auf "Weiter".</li>
+            <img src="./img/1343051370reate_new_site_4.png" alt="IIS Create new site" class="floatCenter" style="width:300px"/>
+            <li>Legen Sie die Websiteberechtigungen f&uuml;r Ihre Website fest und klicken Sie auf "Weiter".</li>
+            <img src="./img/1343051383reate_new_site_5.png" alt="IIS Create new site" class="floatCenter" style="width:300px"/>
+            <li>Klicken Sie auf "Fertigstellen".</li>
+            <li>Klicken Sie mit der rechten Maustaste auf den Ordner "Websites" um das Kontextmen&uuml; zu &ouml;ffnen, und klicken Sie auf "Eigenschaftten"</li>
+            <img src="./img/1343051413reate_new_site_6.png" alt="IIS Create new site" class="floatCenter" style="width:300px"/>
+            <li>&Ouml;ffnen Sie die Registerkarte "Dokumenten" und entfernen Sie alle Eintr&auml;ge aus der Liste der Standardinhaltsseiten.</li>
+            <img src="./img/1343051423reate_new_site_7.png" alt="IIS Create new site" class="floatCenter" style="width:300px"/>
+            <li>F&uuml;gen Sie die Seite "leistungsnachweis.html" als neue Standardinhaltsseite hinzu.</li>
+            <img src="./img/1343051450reate_new_site_8.png" alt="IIS Create new site" class="floatCenter" style="width:300px"/>
+            <li>Klicken Sie auf "OK".</li>
+          </div>
+		<article id='article-323'>
+			<h4>Virtuelle Verzeichnisse</h4>
+
+			<p>
+Mit Hilfe eines Webservers k&ouml;nnen nicht nur Websites angezeigt werden, sondern auch Dateien jeglicher Art ver&ouml;ffentlicht werden. Diese m&uuml;ssen sich dazu entweder im Stammverzeichnis der Website, oder in einem virtuellen Verzeichnis befinden.
+</p>
+<p>
+Virtuelle Verzeichnisse k&ouml;nnen sein:
+</p>
+<ul>
+	 <li>Ein beliebiges Verzeichnis auf dem Webserver, au&szlig;erhalb des Stammverzeichnisses Ihrer Website.</li>
+         <li>Eine Windowsfreigabe auf einem Dateiserver in Ihrem Netzwerk.</li>
+</ul>
+<div class="information">
+Ein virtuelles Verzeichnis ist ein Verzeichnis, das nicht im Basisverzeichnis enthalten ist, das jedoch Clientbrowsern so angezeigt wird, als ob dies der Fall w&auml;re.
+</div>
+<p>
+Virtuelle Verzeichnisse k&ouml;nnen auf zwei unterschiedliche Arten angelegt werden:
+</p>
+<ul>
+	 <li> Mit Hilfe der IIS Admin Tools</li>
+	 <li> Mit dem Windows Explorer</li>
+</div>
+<p>
+Um ein Virtuelles Verzeichnis mit Hilfe der IIS Admin Tools anzulegen...
+<ol>
+            <li>&Ouml;ffnen Sie die IIS Admin Tools</li>
+            <li>Erweitern Sie die Hierarchie in der linken Fensterh&auml;lfte: Internetinformationsdienste &#8594; (lokaler Computer) &#8594; Websites</li>
+            <li>Klicken Sie mit der rechten Maustaste auf die Website, der Sie ein virtuelles Verzeichnis hinzuf&uuml;gen wollen.</li>
+            <li>W&auml;hlen Sie im Kontextmen&uuml; den Punkt Neu &#8594; Virtuelles Verzeichnis. Der Assistent zum Erstellen von virtuellen Verzeichnissen &ouml;ffnet sich.</li>
+            <img src="./img/1343051830irtuelles_verzeichnis1.png" alt="Virtuelles Verzeichnis" class="floatCenter" style="width:300px"/>
+            <li>Klicken Sie auf "Weiter".</li>
+            <li>Geben Sie im Feld Alias einen kurzen, einpr&auml;gsamen Namen f&uuml;r Ihr Verzeichnis an.</li>
+            <img src="./img/1343051869irtuelles_verzeichnis2.png" alt="Virtuelles Verzeichnis" class="floatCenter" style="width:300px"/>
+            <li>Klicken Sie auf "Weiter".</li>
+
+            <li>Geben Sie im Feld Pfad das physikalische Verzeichnis an, auf das Ihr virtuelles Verzeichnis verweist.</li>
+            <img src="./img/1343051882irtuelles_verzeichnis3.png" alt="Virtuelles Verzeichnis" class="floatCenter" style="width:300px"/>
+            <li>Klicken Sie auf "Weiter".</li>
+            <li>Legen Sie die Berechtigungen fest, die f&uuml;r Ihr Verzeichnis gelten sollen.</li>
+            <img src="./img/1343051896irtuelles_verzeichnis4.png" alt="Virtuelles Verzeichnis" class="floatCenter" style="width:300px"/>
+            <li>Klicken Sie auf "Weiter".</li>
+            <li>Klicken Sie auf "Fertigstellen", um den Vorgang zu beenden.</li>
+          </div>
+<div class="homework">
+            Finden Sie, mit Hilfe des Microsoft Technet, heraus, wie Sie im Windows Explorer Virtuelle Verzeichnisse anlegen k&ouml;nnen! Der folgende Link f&uuml;hrt sie zum Technet: <span class="url">http://technet.microsoft.com/de-de/library/default.aspx</span>
+          </div>
+</section></section></section></body></html>

@@ -1,9 +1,5 @@
-html {
-	color:#333;
-    background:#F2F2F2;
-//    background: url('../img/chalkboard.jpg'); 
-    background-position: center top;
-    background-attachment: fixed;
+body {
+	background:#F2F2F2;
 }
 
 #content {
@@ -43,6 +39,7 @@ section {
 }
 .breadCrumb {
 	color:#777;
+	display:block;
 	a {
 		color:#333;
 		text-decoration: none;

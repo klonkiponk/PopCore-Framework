@@ -121,21 +121,25 @@ pre {
 .button {
   font-family: "UbuntuLightRegular"; }
 
+/* line 20, ../sass/fonts/_fontAssignments.scss */
+span.attribute {
+  font-family: "UbuntuMonoRegular", monotype; }
+
 /**************************************\
 GESHI - (CODE WITH SYNTAX HIGHLIGHTING)
 \**************************************/
-/* line 26, ../sass/fonts/_fontAssignments.scss */
+/* line 29, ../sass/fonts/_fontAssignments.scss */
 pre.php:after, pre.html5:after, pre.css:after {
   font-family: "UbuntuLightRegular", Verdana, Arial, Helvetica, sans-serif; }
 
 /**************************************\
 CODEMIRROR - (CODE WITH SYNTAX HIGHLIGHTING)
 \**************************************/
-/* line 34, ../sass/fonts/_fontAssignments.scss */
+/* line 37, ../sass/fonts/_fontAssignments.scss */
 .CodeMirror {
   font-family: "UbuntuMonoRegular", sans-serif; }
 
-/* line 37, ../sass/fonts/_fontAssignments.scss */
+/* line 40, ../sass/fonts/_fontAssignments.scss */
 .CodeMirror:after {
   font-family: "UbuntuLightRegular", Verdana, Arial, Helvetica, sans-serif; }
 
@@ -148,14 +152,14 @@ HEADINGS
 /**********************************\
 LINKS
 \**********************************/
-/* line 55, ../sass/fonts/_fontAssignments.scss */
+/* line 58, ../sass/fonts/_fontAssignments.scss */
 #content a:before {
   font-family: "SymbolFont"; }
 
 /**********************************\
 TIME TAG in each Article
 \**********************************/
-/* line 63, ../sass/fonts/_fontAssignments.scss */
+/* line 66, ../sass/fonts/_fontAssignments.scss */
 time:before {
   font-family: "SymbolFont"; }
 
@@ -258,13 +262,10 @@ body {
   display: none; }
 
 /* line 1, ../sass/_layout.scss */
-html {
-  color: #333;
-  background: #F2F2F2;
-  background-position: center top;
-  background-attachment: fixed; }
+body {
+  background: #F2F2F2; }
 
-/* line 9, ../sass/_layout.scss */
+/* line 5, ../sass/_layout.scss */
 #content {
   width: 960px;
   margin: 0 auto 15px auto;
@@ -284,7 +285,7 @@ html {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-/* line 20, ../sass/_layout.scss */
+/* line 16, ../sass/_layout.scss */
 footer, .title {
   width: 960px;
   margin: 0 auto 15px auto;
@@ -298,34 +299,35 @@ footer, .title {
   border-radius: 2px;
   color: #333;
   background: rgba(255, 255, 255, 0.85); }
-  /* line 27, ../sass/_layout.scss */
+  /* line 23, ../sass/_layout.scss */
   footer p, .title p {
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 15px; }
 
-/* line 33, ../sass/_layout.scss */
+/* line 29, ../sass/_layout.scss */
 #wrapper {
   margin-left: 208px;
   width: 900px; }
 
-/* line 37, ../sass/_layout.scss */
+/* line 33, ../sass/_layout.scss */
 .title {
   width: 930px;
   padding: 5px 15px; }
 
-/* line 41, ../sass/_layout.scss */
+/* line 37, ../sass/_layout.scss */
 section {
   position: relative; }
 
-/* line 44, ../sass/_layout.scss */
+/* line 40, ../sass/_layout.scss */
 .breadCrumb {
-  color: #777; }
-  /* line 46, ../sass/_layout.scss */
+  color: #777;
+  display: block; }
+  /* line 43, ../sass/_layout.scss */
   .breadCrumb a {
     color: #333;
     text-decoration: none; }
-    /* line 49, ../sass/_layout.scss */
+    /* line 46, ../sass/_layout.scss */
     .breadCrumb a:hover {
       color: orange; }
 
@@ -1241,7 +1243,7 @@ section {
 aside {
   padding: 10px;
   padding-top: 20px;
-  width: 176px;
+  width: 200px;
   box-sizing: border-box; }
   /* line 9, ../sass/_aside.scss */
   aside ul {
@@ -1320,7 +1322,7 @@ aside.user {
   transition: right 1s ease 0s; }
   /* line 56, ../sass/_aside.scss */
   aside.user:hover {
-    right: 0px; }
+    right: 10px; }
   /* line 59, ../sass/_aside.scss */
   aside.user h1 {
     margin-top: 10px;
@@ -1362,7 +1364,7 @@ aside.user {
   /* line 86, ../sass/_aside.scss */
   aside.user div.administrationMenu a.button {
     display: block;
-    width: 140px;
+    width: 120px;
     margin-top: 5px; }
 
 /* line 95, ../sass/_aside.scss */
@@ -1393,7 +1395,7 @@ aside.subMenu {
   z-index: 10; }
   /* line 107, ../sass/_aside.scss */
   aside.subMenu:hover {
-    left: 0px; }
+    left: 10px; }
   /* line 110, ../sass/_aside.scss */
   aside.subMenu h1 {
     margin-top: 10px;
@@ -1437,34 +1439,26 @@ aside.subMenu {
   aside.subMenu li.subSection {
     margin-left: 0px;
     font-weight: normal;
-    margin-top: 3px;
-    margin-bottom: 3px;
-    padding: 5px;
-    border: 1px solid #ccc;
-    background-color: #f2f2f2;
-    *zoom: 1;
-    filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFF2F2F2', endColorstr='#FFCCCCCC');
-    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f2f2f2), color-stop(76%, #dddddd), color-stop(100%, #f2f2f2));
-    background-image: -webkit-linear-gradient(top, #f2f2f2 0%, #dddddd 76%, #f2f2f2 100%);
-    background-image: -moz-linear-gradient(top, #f2f2f2 0%, #dddddd 76%, #f2f2f2 100%);
-    background-image: -o-linear-gradient(top, #f2f2f2 0%, #dddddd 76%, #f2f2f2 100%);
-    background-image: -ms-linear-gradient(top, #f2f2f2 0%, #dddddd 76%, #f2f2f2 100%);
-    background-image: linear-gradient(top, #f2f2f2 0%, #dddddd 76%, #f2f2f2 100%);
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    -ms-border-radius: 2px;
-    -o-border-radius: 2px;
-    border-radius: 2px; }
-    /* line 148, ../sass/_aside.scss */
-    aside.subMenu li.subSection:hover {
-      -webkit-box-shadow: 0px 0px 10px #cccccc inset;
-      -moz-box-shadow: 0px 0px 10px #cccccc inset;
-      box-shadow: 0px 0px 10px #cccccc inset; }
+    margin-top: 5px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  		  /*background-color: #f2f2f2;
+		  @include filter-gradient(#f2f2f2, #cccccc, vertical);
+		  @include background-image(linear-gradient(top,  #f2f2f2 0%,#ddd 76%,#f2f2f2 100%));
+		  @include border-radius(2px);*/
+    /*		  &:hover {
+    			  @include box-shadow(0px 0px 10px #ccc inset);
+    		  }*/ }
+    /* line 144, ../sass/_aside.scss */
+    aside.subMenu li.subSection a {
+      width: 110px;
+      padding-left: 5px; }
 
 /* line 1, ../sass/_login_form.scss */
 .login_form {
   position: relative;
-  width: 175px; }
+  width: 180px; }
   /* line 2, ../sass/_login_form.scss */
   .login_form button {
     margin-top: 5px; }
@@ -1478,7 +1472,6 @@ aside.subMenu {
 /* line 14, ../sass/_login_form.scss */
 .login_form input[type=text],
 .login_form input[type=password] {
-  width: 162px;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
@@ -1490,13 +1483,16 @@ aside.subMenu {
   -webkit-box-shadow: inset rgba(0, 0, 0, 0.5) 2px 2px 2px;
   box-shadow: inset rgba(0, 0, 0, 0.5) 2px 2px 2px;
   border: 1px solid silver;
-  padding: 5px; }
+  padding: 5px;
+  width: 180px;
+  box-sizing: border-box; }
 
-/* line 21, ../sass/_login_form.scss */
+/* line 22, ../sass/_login_form.scss */
 .login_form input[type=submit] {
-  margin-top: 4px; }
+  margin-top: 4px;
+  display: block; }
 
-/* line 25, ../sass/_login_form.scss */
+/* line 33, ../sass/_login_form.scss */
 input[type=text],
 [type=password] {
   -webkit-border-radius: 2px;
@@ -1510,7 +1506,8 @@ input[type=text],
   -webkit-box-shadow: inset rgba(0, 0, 0, 0.5) 2px 2px 2px;
   box-shadow: inset rgba(0, 0, 0, 0.5) 2px 2px 2px;
   border: 1px solid silver;
-  padding: 5px; }
+  padding: 5px;
+  display: block; }
 
 /**************************************\
 		   CONTENT - FORUM
@@ -2100,6 +2097,12 @@ span.subtitle {
   color: #bbb;
   font-size: 1.2em; }
 
+/* line 47, ../sass/content/_contentHeadings.scss */
+span.h5 {
+  display: block;
+  margin: 20px 0 10px 0;
+  border-bottom: 1px solid #ccc; }
+
 /**************************************\
 		   CONTENT  - ARTICLES
 \**************************************/
@@ -2178,7 +2181,6 @@ form {
 label {
   display: block;
   margin: 5px 0px;
-  text-transform: capitalize;
   text-shadow: 1px 1px 1px #999999, 2px 2px 1px white; }
 
 /**************************************\
@@ -2992,10 +2994,18 @@ pre.print_r:after {
 .height100 {
   height: 30em; }
 
+/* line 197, ../sass/content/_content.scss */
+span.attribute:before {
+  content: '"'; }
+
+/* line 200, ../sass/content/_content.scss */
+span.attribute:after {
+  content: '"'; }
+
 /**************************************\
 	   STANDARD CONTENT ELEMENTS
 \**************************************/
-/* line 206, ../sass/content/_content.scss */
+/* line 211, ../sass/content/_content.scss */
 .conclusion:before {
   content: "\27a5  ";
   font-size: 1.2em;
@@ -3176,7 +3186,7 @@ table.css .nu0 {
   color: #c5060b; }
 /* line 139, ../sass/syntax/_geSHi.scss */
 table.css .re0 {
-  color: black; }
+  color: red; }
 /* line 140, ../sass/syntax/_geSHi.scss */
 table.css .re1 {
   color: black;
@@ -3186,7 +3196,7 @@ table.css .re2 {
   color: black; }
 /* line 145, ../sass/syntax/_geSHi.scss */
 table.css .re3 {
-  color: blue; }
+  color: red; }
 
 /* line 150, ../sass/syntax/_geSHi.scss */
 table.php:after {

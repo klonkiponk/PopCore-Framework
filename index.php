@@ -3,34 +3,33 @@
     sys_createHead("Kevin Siegerth","Development Framework");       
 ?>
 <body>
-    <header>
+	<header>
         <?php $breadCrumb = con_createNavigation() ?> 
     </header>
-    <aside class="user">
-        <?php con_createLogin();
-			if (isset($_SESSION['loggedin'])){
-				if ($_SESSION['role'] == 9) {
-					echo con_createAdminAsideMenu();
-				}
-			}
-		?>
-    </aside>
 	<aside class="subMenu"><?php	echo con_createSubNavigation(); ?></aside>
+	<aside class="user">
+            <?php con_createLogin();
+				if (isset($_SESSION['loggedin'])){
+					if ($_SESSION['role'] == 9) {
+						echo con_createAdminAsideMenu();
+					}
+				}
+			?>
+    </aside>	
     <section class="title">
 
-			<?php $pageinfo = con_createPageTitle($_GET['id']);
+		<?php 
 		
-			$title = $pageinfo['name'];
-			$subtitle = $pageinfo['subtitle']
+		$pageinfo = con_createPageTitle($_GET['id']);
+		$title = $pageinfo['name'];
+		$subtitle = $pageinfo['subtitle']
 		
-			?>
+		?>
 		<h1><?php echo $title;?></h1>
 		<span class="subtitle"><?php echo $subtitle; ?></span>
-
+		<span class='breadCrumb'>Sie sind hier: <?php echo $breadCrumb?></span>
+    
     </section>
-    <footer>
-        <p><?php echo $breadCrumb?></p>
-    </footer>
     <section id="content" role="main">
         <?php        
             if (!empty($editform)){
@@ -83,9 +82,10 @@
                 if(!empty($row['code'])){
 					echo con_CreateSyntax($row['code'],$row['code_type']);
 				}
+				echo "<div class='belowArticleButtons'>";
                 if (isset($_SESSION['loggedin'])){
                     if ($_SESSION['role'] == 9) { //Funktionen nur fuer Admins freischalten
-                        echo "<form action=\"\" method=\"post\" style=\"text-align:right;\">
+                        echo "<form action=\"\" method=\"post\" style=\"text-align:right; display:inline; float:right;\">
                         <button type='submit' name='action' class='button edit' value='edit' >EDIT</button> 
                         <input class='sys' type='text' name='uid' value='{$row['uid']}'/>
                         <input class='sys' type='text' name='table' value='page_content'/>        
@@ -96,7 +96,7 @@
 	                        // - DEBUG - //
 	                        //echo "<h2>Predecessor: ".$predecessor."</h2>"; //
 	                        
-	                        echo "<form action=\"\" method=\"post\" style=\"text-align:right;\">
+	                        echo "<form style='display:inline; float:right' action=\"\" method=\"post\" style=\"text-align:right;\">
                         <button type='submit' name='action' class='button order' value='changeOrder' >MOVE UP</button> 
                         <input type='hidden' name='thisOrder' value='{$row['contentorder']}'/>
                         <input type='hidden' name='table' value='page_content'/> 
@@ -108,7 +108,7 @@
                         
                     }
                 }
-                echo "<a href='#globalheader' class='button toTop'>TOP</a></article>";
+                echo "<a href='#globalheader' style='float:left; margin-top:15px;' class='button toTop'>TOP</a></article>";
                 $predecessor = $row['contentorder'];
             }           
 				if (isset($_SESSION['loggedin'])){
@@ -116,6 +116,7 @@
 						echo con_createNewArticleButton();
 					}
 				}
+				echo "</div><div class='clear'></div>";
             }
         ?>
     </section><?php //CONTENT DIV end ?>
@@ -124,8 +125,6 @@
 
     </footer>
 
-	
-	
 	<?php sys_includeAdditionalScripts() //MEANT FOR jQUERY or ELSE ?>
     <?php if(!empty($message)){echo $message;}?>
 </body>
