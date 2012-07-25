@@ -168,6 +168,7 @@ function sys_createEditFormForPageContent()
                 //$return .= con_createSyntaxHighlight($value,'text/html','content');
 				//$return .= con_createRTE ($value, $key);
 				$value = preg_replace("/''/", "'", $value);
+				$value = stripslashes($value);
 				$return .= "<textarea class='markItUp' name=\"$key\">$value</textarea>";
 				break;
             case "code":

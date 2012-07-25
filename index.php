@@ -54,7 +54,7 @@
                 if(!empty($row['image'])){
 	                echo "<img style='width:220px;float:right;' src='./img/".$row['image']."'/>\n";
                 }
-                echo "{$row['content']}";
+                echo stripslashes($row['content']);
 
                 if(!empty($row['php_code'])){echo "<label><h4>EXAMPLE:</h4></label>";}
                 eval($row['php_code']);
