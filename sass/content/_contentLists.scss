@@ -1,43 +1,30 @@
 /**************************************\
 		   CONTENT - LISTS
 \**************************************/
-ol {
+#content section ol {
     list-style-type:decimal;
-    li {
-        margin-left:30px;
-    }
-}
-article ul{
-    list-style-type: square;
     margin:20px 0px;
     li {
         margin-left:20px;
         margin-bottom:8px;
-        &.done {
-            font-size:1.2em;
-            color:green;
-            font-weight:bold;
-            @include text-shadow(1px 1px 1px #003300);
-            &:before {
-                content:"\2714\ ";              
-                font-size:1.4em;
-            }
-        }
-        &.toBeDone {
-            font-size:1.2em;
-            color:red;
-            font-weight:bold;
-            @include text-shadow(1px 1px 1px #300000);
-            &:before {
-                content:"\2718\ ";
-                font-size:1.4em;
-            }
-            a {
-                color:white;
-                @include text-shadow(1px 1px 2px #333);
-            }
-        }
-    }                     
-}    
+    }
+}
+#content section ul {
+    list-style-type: square;
+    margin:20px 0px;
+    > li {
+	    margin-left: 20px;
+	    margin-bottom: 8px;
+    }
+}
+.homework li, .information li,  .emphasize li {
+	margin-left: 20px;
+	margin-bottom: 8px;
+}
+
+#content section div.markItUp ul li {
+	margin-left:2px;
+}
+
 
 

@@ -69,9 +69,12 @@ function db_updateDb ()
 	        	break;
 			case "content":
 				//$value = $GLOBALS['DB']->real_escape_string($value);
-				$value = preg_replace("/'/", "''", $value);
+//				$value = preg_replace("/'/", "''", $value);
+				$value = addslashes($value);
 				break;
 			case "code":
+//				$value = addslashes($value);
+
 				$value = preg_replace("/'/", "''", $value);
 				break;
         }

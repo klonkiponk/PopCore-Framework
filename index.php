@@ -31,7 +31,7 @@
 		<span class='breadCrumb'>Sie sind hier: <?php echo $breadCrumb?></span>
     
     </section>
-    <section id="content" role="main">
+    <article id="content" role="main">
         <?php        
             if (!empty($editform)){
                 echo $editform;
@@ -47,12 +47,12 @@
                 //foreach($row as $key=>$value){
                 //    $value = html_entity_decode($value);
                 //}
-                echo "<article>";
-                echo "<h2>{$row['name']}</h2>";
-                echo "<time datetime=\"{$row['date']}\">{$row['date']}</time>";                
+                echo "<section>\n\n\n";
+                echo "<h2>{$row['name']}</h2>\n";
+                echo "<time datetime=\"{$row['date']}\">{$row['date']}</time>\n";                
 
                 if(!empty($row['image'])){
-	                echo "<img style='width:220px;float:right;' src='./img/".$row['image']."'/>";
+	                echo "<img style='width:220px;float:right;' src='./img/".$row['image']."'/>\n";
                 }
                 echo "{$row['content']}";
 
@@ -86,30 +86,30 @@
 				echo "<div class='belowArticleButtons'>";
                 if (isset($_SESSION['loggedin'])){
                     if ($_SESSION['role'] == 9) { //Funktionen nur fuer Admins freischalten
-                        echo "<form action=\"\" method=\"post\" style=\"text-align:right; display:inline; float:right;\">
+                        echo "\n\n<form action=\"".$_SERVER['REQUEST_URI']."\" method=\"post\" style=\"text-align:right; display:inline; float:right;\">
                         <button type='submit' name='action' class='button edit' value='edit' >EDIT</button> 
                         <input type='hidden' name='uid' value='{$row['uid']}'/>
                         <input type='hidden' name='table' value='page_content'/>        
                         <button type='submit' name='action' class='button delete' value='delete' >DELETE</button>                       
-                        </form>";
+                        </form>\n\n";
                         
                         if(isset($predecessor)){
 	                        // - DEBUG - //
 	                        //echo "<h2>Predecessor: ".$predecessor."</h2>"; //
 	                        
-	                        echo "<form style='display:inline; float:right' action=\"\" method=\"post\" style=\"text-align:right;\">
+	                        echo "\n\n<form style='display:inline; float:right; text-align:right;' action=\".".$_SERVER['REQUEST_URI']."\" method=\"post\">
                         <button type='submit' name='action' class='button order' value='changeOrder' >MOVE UP</button> 
                         <input type='hidden' name='thisOrder' value='{$row['contentorder']}'/>
                         <input type='hidden' name='table' value='page_content'/> 
                         <input type='hidden' name='predecessor' value='$predecessor'/>
-                        </form>";
+                        </form>\n\n";
 	                        
 	                        
                         }
                         
                     }
                 }
-                echo "<a href='#globalheader' style='float:left; margin-top:15px;' class='button toTop'>TOP</a></article>";
+                echo "<a href='#globalheader' style='float:left; margin-top:15px;' class='button toTop'>TOP</a>\n</div></section>\n\n";
                 $predecessor = $row['contentorder'];
             }           
 				if (isset($_SESSION['loggedin'])){
@@ -117,10 +117,10 @@
 						echo con_createNewArticleButton();
 					}
 				}
-				echo "</div><div class='clear'></div>";
+				echo "<hr class='clear'>";
             }
         ?>
-    </section><?php //CONTENT DIV end ?>
+    </article><?php //CONTENT DIV end ?>
     <footer>
         <?php con_createFooter() ?>
 

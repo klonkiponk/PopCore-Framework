@@ -2,7 +2,7 @@
 		   CONTENT  - ARTICLES
 \**************************************/
 
-article {
+article section {
         background-color: #f2f2f2;
         @include filter-gradient(#f2f2f2, #cccccc, vertical);
         @include background-image(linear-gradient(top,  #f2f2f2 0%,#ddd 76%,#f2f2f2 100%));

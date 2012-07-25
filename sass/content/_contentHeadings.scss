@@ -34,18 +34,21 @@ h3,h4,h5,h6, span.h3, span.h4 {
     border-bottom: 1px solid #ccc;
     display:block;
     @include text-shadow(1px 1px 0px #fff);
+    clear:both;
 }
 .title h1 {
 	display:inline;
 	margin-right: 15px;
 	@include box-shadow(0px 0px 0px);
 }
-span.subtitle {
+.title span.subtitle {
 	color:#bbb;
 	font-size: 1.2em;
 }
-span.h5 {
+span.h5, span.h6 {
 	display:block;
 	margin: 20px 0 10px 0;
 	border-bottom: 1px solid #ccc;
+	font-weight: bold;
+	clear:both;
 }

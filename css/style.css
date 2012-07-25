@@ -1,4 +1,4 @@
-/* line 17, ../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, ../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -19,38 +19,38 @@ time, mark, audio, video {
   font: inherit;
   vertical-align: baseline; }
 
-/* line 20, ../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 20, ../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 body {
   line-height: 1; }
 
-/* line 22, ../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none; }
 
-/* line 24, ../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/* line 26, ../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle; }
 
-/* line 28, ../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none; }
-  /* line 101, ../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+  /* line 101, ../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
   q:before, q:after, blockquote:before, blockquote:after {
     content: "";
     content: none; }
 
-/* line 30, ../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none; }
 
-/* line 114, ../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 114, ../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block; }
 
@@ -199,6 +199,10 @@ body {
   -webkit-box-shadow: 1px 1px 5px #333333;
   -moz-box-shadow: 1px 1px 5px #333333;
   box-shadow: 1px 1px 5px #333333; }
+
+/* line 31, ../sass/_config.scss */
+hr {
+  border: none; }
 
 /* line 1, ../sass/_sys.scss */
 .floatleft {
@@ -1244,18 +1248,22 @@ aside {
   padding: 10px;
   padding-top: 20px;
   width: 200px;
-  box-sizing: border-box; }
-  /* line 9, ../sass/_aside.scss */
+  box-sizing: border-box;
+  opacity: 0.5; }
+  /* line 10, ../sass/_aside.scss */
   aside ul {
     list-style-type: square; }
-  /* line 12, ../sass/_aside.scss */
+  /* line 13, ../sass/_aside.scss */
   aside li {
     margin-left: 20px; }
-    /* line 14, ../sass/_aside.scss */
+    /* line 15, ../sass/_aside.scss */
     aside li a {
       text-shadow: #cccccc 1px 1px 1px;
       display: block;
       text-decoration: none; }
+  /* line 24, ../sass/_aside.scss */
+  aside:hover {
+    opacity: 1.0; }
 
 /*aside:after {
 	position:absolute;
@@ -1273,7 +1281,7 @@ aside {
 	@include rounded;
 	@include box-shadow(1px 1px 1px #333);	
 }*/
-/* line 42, ../sass/_aside.scss */
+/* line 46, ../sass/_aside.scss */
 aside.user {
   margin: 12px auto 18px auto;
   text-align: left;
@@ -1295,23 +1303,21 @@ aside.user {
   width: 100px;
   z-index: 10;
   overflow: hidden;
-  opacity: 0.7;
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
   -o-transition: all 1s ease;
   transition: all 1s ease; }
-  /* line 58, ../sass/_aside.scss */
+  /* line 60, ../sass/_aside.scss */
   aside.user:hover {
-    width: 200px;
-    opacity: 1.0; }
-  /* line 62, ../sass/_aside.scss */
+    width: 200px; }
+  /* line 63, ../sass/_aside.scss */
   aside.user h1 {
     margin-top: 10px;
     font-size: 120%; }
-  /* line 69, ../sass/_aside.scss */
+  /* line 70, ../sass/_aside.scss */
   aside.user ul {
     list-style: none; }
-  /* line 72, ../sass/_aside.scss */
+  /* line 73, ../sass/_aside.scss */
   aside.user li.adminMenu {
     margin-left: 0px;
     background-color: #f2f2f2;
@@ -1331,21 +1337,21 @@ aside.user {
     -ms-border-radius: 2px;
     -o-border-radius: 2px;
     border-radius: 2px; }
-    /* line 81, ../sass/_aside.scss */
+    /* line 82, ../sass/_aside.scss */
     aside.user li.adminMenu a {
       color: #333; }
-    /* line 84, ../sass/_aside.scss */
+    /* line 85, ../sass/_aside.scss */
     aside.user li.adminMenu:hover {
       -webkit-box-shadow: 0px 0px 10px #cccccc inset;
       -moz-box-shadow: 0px 0px 10px #cccccc inset;
       box-shadow: 0px 0px 10px #cccccc inset; }
-  /* line 89, ../sass/_aside.scss */
+  /* line 90, ../sass/_aside.scss */
   aside.user div.administrationMenu a.button {
     display: block;
     width: 145px;
     margin-top: 5px; }
 
-/* line 98, ../sass/_aside.scss */
+/* line 99, ../sass/_aside.scss */
 aside.subMenu {
   margin: 12px auto 18px auto;
   text-align: left;
@@ -1364,24 +1370,22 @@ aside.subMenu {
   position: absolute;
   top: 60px;
   left: -100px;
-  opacity: 0.7;
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
   -o-transition: all 1s ease;
   transition: all 1s ease;
   z-index: 10; }
-  /* line 112, ../sass/_aside.scss */
+  /* line 111, ../sass/_aside.scss */
   aside.subMenu:hover {
-    left: 0px;
-    opacity: 1.0; }
-  /* line 116, ../sass/_aside.scss */
+    left: 0px; }
+  /* line 114, ../sass/_aside.scss */
   aside.subMenu h1 {
     margin-top: 10px;
     font-size: 120%; }
-  /* line 123, ../sass/_aside.scss */
+  /* line 121, ../sass/_aside.scss */
   aside.subMenu ul {
     list-style: none; }
-    /* line 125, ../sass/_aside.scss */
+    /* line 123, ../sass/_aside.scss */
     aside.subMenu ul li.section {
       margin-left: 0px;
       background-color: #f2f2f2;
@@ -1402,30 +1406,23 @@ aside.subMenu {
       -o-border-radius: 2px;
       border-radius: 2px;
       font-weight: bold; }
-      /* line 135, ../sass/_aside.scss */
+      /* line 133, ../sass/_aside.scss */
       aside.subMenu ul li.section a {
         color: #333; }
-      /* line 138, ../sass/_aside.scss */
+      /* line 136, ../sass/_aside.scss */
       aside.subMenu ul li.section:hover {
         -webkit-box-shadow: 0px 0px 10px #cccccc inset;
         -moz-box-shadow: 0px 0px 10px #cccccc inset;
         box-shadow: 0px 0px 10px #cccccc inset; }
-  /* line 143, ../sass/_aside.scss */
+  /* line 141, ../sass/_aside.scss */
   aside.subMenu li.subSection {
     margin-left: 0px;
     font-weight: normal;
     margin-top: 5px;
     margin-bottom: 5px;
     overflow: hidden;
-    text-overflow: ellipsis;
-  		  /*background-color: #f2f2f2;
-		  @include filter-gradient(#f2f2f2, #cccccc, vertical);
-		  @include background-image(linear-gradient(top,  #f2f2f2 0%,#ddd 76%,#f2f2f2 100%));
-		  @include border-radius(2px);*/
-    /*		  &:hover {
-    			  @include box-shadow(0px 0px 10px #ccc inset);
-    		  }*/ }
-    /* line 150, ../sass/_aside.scss */
+    text-overflow: ellipsis; }
+    /* line 148, ../sass/_aside.scss */
     aside.subMenu li.subSection a {
       width: 134px;
       padding-left: 5px; }
@@ -2057,9 +2054,10 @@ h3, h4, h5, h6, span.h3, span.h4 {
   box-shadow: white 0px 2px 2px;
   border-bottom: 1px solid #ccc;
   display: block;
-  text-shadow: 1px 1px 0px white; }
+  text-shadow: 1px 1px 0px white;
+  clear: both; }
 
-/* line 38, ../sass/content/_contentHeadings.scss */
+/* line 39, ../sass/content/_contentHeadings.scss */
 .title h1 {
   display: inline;
   margin-right: 15px;
@@ -2067,22 +2065,24 @@ h3, h4, h5, h6, span.h3, span.h4 {
   -moz-box-shadow: 0px 0px 0px;
   box-shadow: 0px 0px 0px; }
 
-/* line 43, ../sass/content/_contentHeadings.scss */
-span.subtitle {
+/* line 44, ../sass/content/_contentHeadings.scss */
+.title span.subtitle {
   color: #bbb;
   font-size: 1.2em; }
 
-/* line 47, ../sass/content/_contentHeadings.scss */
-span.h5 {
+/* line 48, ../sass/content/_contentHeadings.scss */
+span.h5, span.h6 {
   display: block;
   margin: 20px 0 10px 0;
-  border-bottom: 1px solid #ccc; }
+  border-bottom: 1px solid #ccc;
+  font-weight: bold;
+  clear: both; }
 
 /**************************************\
 		   CONTENT  - ARTICLES
 \**************************************/
 /* line 5, ../sass/content/_contentArticle.scss */
-article {
+article section {
   background-color: #f2f2f2;
   *zoom: 1;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFF2F2F2', endColorstr='#FFCCCCCC');
@@ -2106,7 +2106,7 @@ article {
   -moz-box-shadow: #cccccc 1px 1px 2px;
   box-shadow: #cccccc 1px 1px 2px; }
   /* line 20, ../sass/content/_contentArticle.scss */
-  article p {
+  article section p {
     margin: 0px; }
 
 /**************************************\
@@ -2162,64 +2162,48 @@ label {
 		   CONTENT - LISTS
 \**************************************/
 /* line 4, ../sass/content/_contentLists.scss */
-ol {
-  list-style-type: decimal; }
-  /* line 6, ../sass/content/_contentLists.scss */
-  ol li {
-    margin-left: 30px; }
-
-/* line 10, ../sass/content/_contentLists.scss */
-article ul {
-  list-style-type: square;
+#content section ol {
+  list-style-type: decimal;
   margin: 20px 0px; }
-  /* line 13, ../sass/content/_contentLists.scss */
-  article ul li {
+  /* line 7, ../sass/content/_contentLists.scss */
+  #content section ol li {
     margin-left: 20px;
     margin-bottom: 8px; }
-    /* line 16, ../sass/content/_contentLists.scss */
-    article ul li.done {
-      font-size: 1.2em;
-      color: green;
-      font-weight: bold;
-      text-shadow: 1px 1px 1px #003300; }
-      /* line 21, ../sass/content/_contentLists.scss */
-      article ul li.done:before {
-        content: "\2714\ ";
-        font-size: 1.4em; }
-    /* line 26, ../sass/content/_contentLists.scss */
-    article ul li.toBeDone {
-      font-size: 1.2em;
-      color: red;
-      font-weight: bold;
-      text-shadow: 1px 1px 1px #300000; }
-      /* line 31, ../sass/content/_contentLists.scss */
-      article ul li.toBeDone:before {
-        content: "\2718\ ";
-        font-size: 1.4em; }
-      /* line 35, ../sass/content/_contentLists.scss */
-      article ul li.toBeDone a {
-        color: white;
-        text-shadow: 1px 1px 2px #333333; }
+
+/* line 12, ../sass/content/_contentLists.scss */
+#content section ul {
+  list-style-type: square;
+  margin: 20px 0px; }
+  /* line 15, ../sass/content/_contentLists.scss */
+  #content section ul > li {
+    margin-left: 20px;
+    margin-bottom: 8px; }
+
+/* line 20, ../sass/content/_contentLists.scss */
+.homework li, .information li, .emphasize li {
+  margin-left: 20px;
+  margin-bottom: 8px; }
+
+/* line 25, ../sass/content/_contentLists.scss */
+#content section div.markItUp ul li {
+  margin-left: 2px; }
 
 /**************************************\
 		   CONTENT - IMAGES
 \**************************************/
-/* line 4, ../sass/content/_contentImages.scss */
-img {
-  width: 350px;
-  /*JUST A TEST FOR NEW WEBKKTS BROWSERS*/
-  /*    -webkit-filter: sepia(50%);
-      -moz-filter: sepia(50%);
-      -o-filter: sepia(100%);
-      -ms-filter: sepia(100%); 
-          filter: sepia(50%);
-  */ }
-
-/* line 19, ../sass/content/_contentImages.scss */
+/* line 8, ../sass/content/_contentImages.scss */
 img.shadow {
   -webkit-box-shadow: 2px 2px 5px #333333;
   -moz-box-shadow: 2px 2px 5px #333333;
   box-shadow: 2px 2px 5px #333333; }
+
+/* line 12, ../sass/content/_contentImages.scss */
+img.sepia {
+  -webkit-filter: sepia(50%);
+  -moz-filter: sepia(50%);
+  -o-filter: sepia(100%);
+  -ms-filter: sepia(100%);
+  filter: sepia(50%); }
 
 /**************************************\
 		   CONTENT - DIVS
@@ -2339,18 +2323,26 @@ div.information {
     color: #febf04;
     text-shadow: 1px 1px 0px #333; }
   /* line 65, ../sass/content/_contentDivs.scss */
-  div.information:before {
-    content: ".";
-    display: none;
-    clear: both; }
+  div.information span.h3 {
+    margin-top: 0px;
+    -webkit-box-shadow: white 0px 1px 1px;
+    -moz-box-shadow: white 0px 1px 1px;
+    box-shadow: white 0px 1px 1px; }
+  /* line 69, ../sass/content/_contentDivs.scss */
+  div.information span.h4 {
+    margin-top: 0px;
+    -webkit-box-shadow: white 0px 1px 1px;
+    -moz-box-shadow: white 0px 1px 1px;
+    box-shadow: white 0px 1px 1px; }
 
-/* line 72, ../sass/content/_contentDivs.scss */
+/* line 75, ../sass/content/_contentDivs.scss */
 div.homework {
   border-radius: 5px;
   margin-top: 1em;
   padding-left: 0.8em;
   margin-right: 55px;
   position: relative;
+  clear: both;
   background-color: #f2f6f8;
   *zoom: 1;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFF2F6F8', endColorstr='#FFB5C6D0');
@@ -2360,16 +2352,12 @@ div.homework {
   background-image: -o-linear-gradient(top, #f2f6f8 0%, #b5c6d0 100%);
   background-image: -ms-linear-gradient(top, #f2f6f8 0%, #b5c6d0 100%);
   background-image: linear-gradient(top, #f2f6f8 0%, #b5c6d0 100%);
-  /*background-color: rgb(222,239,255);
-  @include filter-gradient(#deefff, #98bede, vertical);
-  @include background-image(linear-gradient(top,  rgba(222,239,255,1) 0%,rgba(152,190,222,1) 100%));
-  */
   border: 1px solid #98bede;
   -webkit-box-shadow: inset 0px 1px 5px white, 0px 1px 2px #555555;
   -moz-box-shadow: inset 0px 1px 5px white, 0px 1px 2px #555555;
   box-shadow: inset 0px 1px 5px white, 0px 1px 2px #555555;
   padding: 15px; }
-  /* line 91, ../sass/content/_contentDivs.scss */
+  /* line 88, ../sass/content/_contentDivs.scss */
   div.homework:after {
     position: absolute;
     right: -50px;
@@ -2380,25 +2368,23 @@ div.homework {
     content: "A";
     color: #98bede;
     text-shadow: 1px 1px 0px #333; }
-  /* line 102, ../sass/content/_contentDivs.scss */
-  div.homework:before {
-    content: ".";
-    display: none;
-    clear: both; }
-  /* line 107, ../sass/content/_contentDivs.scss */
+  /* line 99, ../sass/content/_contentDivs.scss */
   div.homework span.h3 {
     margin-top: 0px;
     -webkit-box-shadow: white 0px 1px 1px;
     -moz-box-shadow: white 0px 1px 1px;
     box-shadow: white 0px 1px 1px; }
-  /* line 111, ../sass/content/_contentDivs.scss */
+  /* line 103, ../sass/content/_contentDivs.scss */
   div.homework span.h4 {
     margin-top: 0px;
     -webkit-box-shadow: white 0px 1px 1px;
     -moz-box-shadow: white 0px 1px 1px;
     box-shadow: white 0px 1px 1px; }
+  /* line 107, ../sass/content/_contentDivs.scss */
+  div.homework ul {
+    list-style: square; }
 
-/* line 118, ../sass/content/_contentDivs.scss */
+/* line 113, ../sass/content/_contentDivs.scss */
 div.emphasize {
   border-radius: 5px;
   margin-top: 1em;
@@ -2423,7 +2409,7 @@ div.emphasize {
   -moz-box-shadow: inset 0px 1px 5px white, 0px 1px 2px #555555;
   box-shadow: inset 0px 1px 5px white, 0px 1px 2px #555555;
   padding: 15px; }
-  /* line 136, ../sass/content/_contentDivs.scss */
+  /* line 131, ../sass/content/_contentDivs.scss */
   div.emphasize:after {
     position: absolute;
     right: -50px;
@@ -2434,13 +2420,13 @@ div.emphasize {
     content: "e";
     color: #ff5c5c;
     text-shadow: -1px -1px 0px #333333; }
-  /* line 147, ../sass/content/_contentDivs.scss */
+  /* line 142, ../sass/content/_contentDivs.scss */
   div.emphasize:before {
     content: ".";
     display: none;
     clear: both; }
 
-/* line 154, ../sass/content/_contentDivs.scss */
+/* line 149, ../sass/content/_contentDivs.scss */
 div.comment {
   background-color: #f2f6f8;
   *zoom: 1;
@@ -2458,29 +2444,26 @@ div.comment {
 			   CONTENT - P
 \**************************************/
 /* line 4, ../sass/content/_contentP.scss */
-article p {
+#content p {
   margin-top: 2em; }
 
-/* line 2, ../sass/content/_contentTables.scss */
-article table {
-  margin-top: 2em; }
-  /* line 6, ../sass/content/_contentTables.scss */
-  article table thead tr th {
-    padding: 3px;
-    font-weight: bold;
-    width: 30%;
-    border-bottom: 1px solid gray; }
-  /* line 16, ../sass/content/_contentTables.scss */
-  article table tbody tr:nth-Child(even) {
-    background-color: lightgray;
-    text-shadow: 1px 1px 0px white; }
-  /* line 20, ../sass/content/_contentTables.scss */
-  article table tbody tr td {
-    padding: 3px; }
-    /* line 22, ../sass/content/_contentTables.scss */
-    article table tbody tr td:first-Child {
-      border-right: 1px solid gray;
-      font-weight: bold; }
+/* line 6, ../sass/content/_contentTables.scss */
+#content table thead tr th {
+  padding: 3px;
+  font-weight: bold;
+  width: 30%;
+  border-bottom: 1px solid gray; }
+/* line 16, ../sass/content/_contentTables.scss */
+#content table tbody tr:nth-Child(even) {
+  background-color: lightgray;
+  text-shadow: 1px 1px 0px white; }
+/* line 20, ../sass/content/_contentTables.scss */
+#content table tbody tr td {
+  padding: 3px; }
+  /* line 22, ../sass/content/_contentTables.scss */
+  #content table tbody tr td:first-Child {
+    border-right: 1px solid gray;
+    font-weight: bold; }
 
 /**************************************\
 		   CONTENT - BUTTONS
@@ -2781,14 +2764,7 @@ select {
   color: red;
   font-weight: bold; }
 
-/* line 73, ../sass/content/_content.scss */
-#content .article_content {
-  padding: 5px; }
-  /* line 75, ../sass/content/_content.scss */
-  #content .article_content p {
-    margin-bottom: 5px; }
-
-/* line 80, ../sass/content/_content.scss */
+/* line 72, ../sass/content/_content.scss */
 time {
   float: right;
   color: #f2f2f2;
@@ -2798,11 +2774,11 @@ time {
   position: absolute;
   top: 29px;
   right: 15px; }
-  /* line 89, ../sass/content/_content.scss */
+  /* line 81, ../sass/content/_content.scss */
   time:hover {
     color: #333; }
 
-/* line 93, ../sass/content/_content.scss */
+/* line 85, ../sass/content/_content.scss */
 .gradientbox {
   width: 198px;
   height: 173px;
@@ -2821,7 +2797,7 @@ time {
   background: #fff;
   position: relative; }
 
-/* line 103, ../sass/content/_content.scss */
+/* line 95, ../sass/content/_content.scss */
 .gradientbox:hover {
   background: white;
   /* Old browsers */
@@ -2840,49 +2816,7 @@ time {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 );
   /* IE6-9 */ }
 
-/* line 113, ../sass/content/_content.scss */
-.newest:before {
-  position: absolute;
-  top: -11px;
-  right: 6px;
-  width: 100px;
-  height: 23px;
-  line-height: 23px;
-  font-size: 1em;
-  content: "new";
-  text-align: center;
-  color: white;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  filter: progid:DXImageTransform.Microsoft.Matrix(/* IE6–IE9 */                      M11=0.9914448613738104, M12=-0.13052619222005157,M21=0.13052619222005157, M22=0.9914448613738104, sizingMethod='auto expand');
-  zoom: 1;
-  text-shadow: 1px 1px 1px #999999;
-  background: #767676;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #767676 0%, #636363 50%, #494949 51%, #767676 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #767676), color-stop(50%, #636363), color-stop(51%, #494949), color-stop(100%, #767676));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #767676 0%, #636363 50%, #494949 51%, #767676 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #767676 0%, #636363 50%, #494949 51%, #767676 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #767676 0%, #636363 50%, #494949 51%, #767676 100%);
-  /* IE10+ */
-  background: linear-gradient(top, #767676 0%, #636363 50%, #494949 51%, #767676 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#767676', endColorstr='#767676',GradientType=0 );
-  /* IE6-9 */
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -o-border-radius: 2px;
-  border-radius: 2px; }
-
-/* line 132, ../sass/content/_content.scss */
+/* line 106, ../sass/content/_content.scss */
 pre.print_r {
   padding-left: 15px;
   border: 2px solid #ccc;
@@ -2894,7 +2828,7 @@ pre.print_r {
   position: relative;
   overflow: hidden; }
 
-/* line 141, ../sass/content/_content.scss */
+/* line 116, ../sass/content/_content.scss */
 pre.print_r:after {
   position: absolute;
   top: 20px;
@@ -2926,7 +2860,7 @@ pre.print_r:after {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg); }
 
-/* line 165, ../sass/content/_content.scss */
+/* line 139, ../sass/content/_content.scss */
 .notes {
   background: url("../img/papier2.png") -1px -4px;
   width: 100%;
@@ -2941,51 +2875,41 @@ pre.print_r:after {
   -o-border-radius: 5px;
   border-radius: 5px; }
 
-/* line 175, ../sass/content/_content.scss */
+/* line 149, ../sass/content/_content.scss */
 .height10 {
   height: 5em; }
 
-/* line 178, ../sass/content/_content.scss */
+/* line 152, ../sass/content/_content.scss */
 .height20 {
   height: 10em; }
 
-/* line 181, ../sass/content/_content.scss */
+/* line 155, ../sass/content/_content.scss */
 .height50 {
   height: 20em; }
 
-/* line 184, ../sass/content/_content.scss */
+/* line 158, ../sass/content/_content.scss */
 .height50 {
   height: 30em; }
 
-/* line 187, ../sass/content/_content.scss */
+/* line 161, ../sass/content/_content.scss */
 .height70 {
   height: 30em; }
 
-/* line 190, ../sass/content/_content.scss */
+/* line 164, ../sass/content/_content.scss */
 .height90 {
   height: 30em; }
 
-/* line 193, ../sass/content/_content.scss */
+/* line 167, ../sass/content/_content.scss */
 .height100 {
   height: 30em; }
 
-/* line 197, ../sass/content/_content.scss */
+/* line 171, ../sass/content/_content.scss */
 span.attribute:before {
   content: '"'; }
 
-/* line 200, ../sass/content/_content.scss */
+/* line 174, ../sass/content/_content.scss */
 span.attribute:after {
   content: '"'; }
-
-/**************************************\
-	   STANDARD CONTENT ELEMENTS
-\**************************************/
-/* line 211, ../sass/content/_content.scss */
-.conclusion:before {
-  content: "\27a5  ";
-  font-size: 1.2em;
-  color: orange;
-  text-shadow: 1px 1px 0px #333333; }
 
 /**************************************\
 GESHI - (CODE WITH SYNTAX HIGHLIGHTING)

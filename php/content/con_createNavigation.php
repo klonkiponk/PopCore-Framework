@@ -130,17 +130,14 @@
            	                        if ($subSection['pid'] == $_GET['id']){
 	           	                        $menu .= 'active';
 	           	                    }
-	           	                    $menu .= '" href="index.php?id='.$subSection['pid'].'"><span>'.$subSection['name'].'</span></a></li>'."\n";
+	           	                    $menu .= '" href="index.php?id='.$subSection['pid'].'"><span>'.$subSection['name'].'</span></a></li>';
 		                        }
-   		                        $menu .= "</ul>\n";
+   		                        $menu .= "</ul>";
 	                        }
 	                        //END OF SUBSECTION MENU
-	                        
-	                        
-	                        
-	                        $menu .= "</li>\n";
+	                        $menu .= "</li>";
 	                    }
-	                    $menu .= "</ul>\n";
+	                    $menu .= "</ul>";
 	                    //END OF SECTION MENU	                    
                     }//END of if EMPTY Sections
 

@@ -61,7 +61,7 @@ function db_createNewArticleForm ()
     $result = $result->fetch_fields();
 
 
-    $form = "<article><h2>Create a new Article</h2>";
+    $form = "<section><h2>Create new Section</h2>";
 	
 	$form .= '<label>IMAGE</label><form id="imageform" method="post" enctype="multipart/form-data" action="./js/ajaximage.php">
 				<input type="file" name="photoimg" id="photoimg" />
@@ -112,12 +112,21 @@ function db_createNewArticleForm ()
     }//end foreach
     $form .= "<input type=\"hidden\" name=\"table\" value=\"page_content\"/>";
     $form .= "<br/><button type=\"submit\" name=\"action\" class=\"button edit\" value=\"writeToDb\">write</button>";
-    $form .= "</form></article>";
+    $form .= "</form></section>";
 
     return $form;         
 }//end function
 
 
+/**
+ * sys_createEditFormForPageContent function.
+ * 
+ * This Function creates the form for Editing an existing Section
+ * It will be processed, if a admin hits the "EDIT" Button for a section
+ *
+ * @access public
+ * @return void
+ */
 function sys_createEditFormForPageContent()
 {
     $table = $_POST['table'];
@@ -126,10 +135,19 @@ function sys_createEditFormForPageContent()
     $result = $GLOBALS['DB']->query ($sql);
     $result = $result->fetch_array();
     $result = sys_deleteIntFromArray($result);
+    // - DEBUG - //
     //con_preFormat($result);
-
-    $return = '<article><h2>Edit a Page Entry</h2>';
-	$return .= '<label>IMAGE</label><a onClick="return popup(this)" href="./php/gallery/gallery.php"><button class="button" type="button">Durchsuchen</button></a><div id="preview"></div>';
+    $return = '<section><h2>Edit a Page Entry</h2>';
+	
+	
+	/*THIS LINES PREPARES THE IMAGE BRWOSER GALLERY - is not implemented yet, therefore commented out*/
+	//$return .= '<label>IMAGE</label><a onClick="return popup(this)" href="./php/gallery/gallery.php"><button class="button" type="button">Durchsuchen</button></a><div id="preview"></div>';
+	$return .= '<label>IMAGE</label><form id="imageform" method="post" enctype="multipart/form-data" action="./js/ajaximage.php">
+				<input type="file" name="photoimg" id="photoimg" />
+				</form><div id="preview">
+				</div>';
+	
+	
 	
 	$return .= '<form action="" method="post" enctype="multipart/form-data">';    
     foreach($result as $key=>$value) { 
@@ -195,7 +213,7 @@ function sys_createEditFormForPageContent()
             <button type='submit' name='action' value='cancel' class='button spark' >cancel</button>";
     $return .= "<input type='hidden' name='uid' value='$uid'/>
                     <input type='hidden' name='table' value='$table'/>                
-          </form></article>";
+          </form></section>";
     return $return;
     
     

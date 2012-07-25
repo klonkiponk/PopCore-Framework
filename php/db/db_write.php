@@ -48,12 +48,14 @@ function db_writeToDb ()
             case "content":
                 //$value = $GLOBALS['DB']->real_escape_string($value);
 				$sql .= "'";
-				$sql .= preg_replace("/'/", "''", $value);
+				//$sql .= preg_replace("/'/", "''", $value);
+				$sql .= addslashes($value);
 				$sql .= "',";
                 break;
             case "code":
 				$sql .= "'";
 				$sql .= preg_replace("/'/", "''", $value);
+		//		$value = addslashes($value);
 				$sql .= "',";				
 				break;
 			default:

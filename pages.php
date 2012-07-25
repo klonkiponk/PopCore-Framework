@@ -32,7 +32,7 @@
     <footer>
         <p><?php echo $breadCrumb?></p>
     </footer>
-    <section id="content" role="main">
+    <article id="content" role="main">
           <?php
     	
 	
@@ -159,7 +159,7 @@
 	}
 	
     ?>
-    <article class="pagesAdmin">
+    <section class="pagesAdmin">
 	<?php 
 		if (!empty($editForm)) {
 			echo $editForm;
@@ -167,7 +167,9 @@
 			echo sys_createNewPageForm();
 			echo con_listAllPages(); 
 		}
-	?>    </section><?php //CONTENT DIV end ?>
+	?>
+    </section>
+        </article><?php //CONTENT DIV end ?>
     <footer>
         <?php con_createFooter() ?>
 

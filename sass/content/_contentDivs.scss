@@ -62,10 +62,13 @@ div.information {
 	    text-shadow:
 	    	1px 1px 0px #333;
 	}
-	&:before {
-		content:".";
-		display:none;
-		clear: both;
+	span.h3 {
+		margin-top:0px;
+	    @include box-shadow(#fff 0px 1px 1px);
+	}
+	span.h4 {
+		margin-top:0px;
+	    @include box-shadow(#fff 0px 1px 1px);		
 	}
 }
 
@@ -75,17 +78,11 @@ div.homework {
 	padding-left: 0.8em;
 	margin-right:55px;
 	position:relative;
-
-
-background-color: #f2f6f8;
-@include filter-gradient(#f2f6f8, #b5c6d0, vertical);
-@include background-image(linear-gradient(top,  #f2f6f8 0%,#b5c6d0 100%));
-
-	
-	/*background-color: rgb(222,239,255);
-	@include filter-gradient(#deefff, #98bede, vertical);
-	@include background-image(linear-gradient(top,  rgba(222,239,255,1) 0%,rgba(152,190,222,1) 100%));
-	*/border: 1px solid #98bede;
+	clear:both;
+	background-color: #f2f6f8;
+	@include filter-gradient(#f2f6f8, #b5c6d0, vertical);
+	@include background-image(linear-gradient(top,  #f2f6f8 0%,#b5c6d0 100%));
+	border: 1px solid #98bede;
 	@include box-shadow($shadow5, $shadow1);
 	padding:15px;
 	&:after {
@@ -99,11 +96,6 @@ background-color: #f2f6f8;
 		color:#98bede;
 	    text-shadow: 1px 1px 0px #333;		
 	}
-	&:before {
-		content:".";
-		display:none;
-		clear: both;	
-	}
 	span.h3 {
 		margin-top:0px;
 	    @include box-shadow(#fff 0px 1px 1px);
@@ -111,6 +103,9 @@ background-color: #f2f6f8;
 	span.h4 {
 		margin-top:0px;
 	    @include box-shadow(#fff 0px 1px 1px);		
+	}
+	ul {
+		list-style: square;
 	}
 }
 

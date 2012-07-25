@@ -69,14 +69,6 @@ select {
     color:red;
     font-weight:bold;
 }
-#content {
-    .article_content {
-        padding:5px;
-        p {
-            margin-bottom:5px;
-        }
-    }
-}
 time {
     float:right;
    	color:#f2f2f2;
@@ -110,24 +102,6 @@ time {
     background: linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(243,243,243,1) 75%,rgba(237,237,237,1) 80%,rgba(255,255,255,1) 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
 }
-.newest:before {
-    position:absolute;
-    top:-11px;
-    right: 6px;
-    width: 100px;
-    height: 23px;
-    line-height: 23px;
-    font-size: 1em;
-    content:"new";
-//  text-transform: uppercase;
-    text-align: center;
-    color:white;
-    @include rotation(0deg);
-    @include textShadowLightMenu;
-    @include grayGradient;
-    @include shadowMenu;
-    @include rounded;
-}
 
 pre.print_r {
     padding-left:15px;
@@ -138,6 +112,7 @@ pre.print_r {
     position:relative;
     overflow:hidden;
 }
+
 pre.print_r:after {
 	position: absolute;
 	top:20px;
@@ -161,7 +136,6 @@ pre.print_r:after {
 	-ms-transform: rotate(45deg);
 	transform: rotate(45deg);   }
 	
-
 .notes {
 	background: url('../img/papier2.png') -1px -4px;
 	width:100%;
@@ -199,18 +173,4 @@ span.attribute:before {
 }
 span.attribute:after {
 	content:'"';
-}
-
-
-
-
-/**************************************\
-	   STANDARD CONTENT ELEMENTS
-\**************************************/
-
-.conclusion:before {
-    content:"\27a5  ";
-    font-size: 1.2em;
-    color: $AccentColor1;
-    @include text-shadow(1px 1px 0px #333);
 }

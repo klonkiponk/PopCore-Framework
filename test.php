@@ -31,7 +31,7 @@
         <p><?php echo $breadCrumb?></p>
     </footer>
     <section id="content" role="main">
-        <?php        
+        <?php  con_preFormat($GLOBALS);      
             if (!empty($editform)){
                 echo $editform;
             } elseif (!empty($content)) {
@@ -95,7 +95,7 @@
 	                        // - DEBUG - //
 	                        //echo "<h2>Predecessor: ".$predecessor."</h2>"; //
 	                        
-	                        echo "<form action=\"\" method=\"post\" style=\"text-align:right;\">
+	                        echo "<form action=\".".$_SERVER['REQUEST_URI']."\" method=\"post\" style=\"text-align:right;\">
                         <button type='submit' name='action' class='button edit' value='changeOrder' >MOVE UP</button> 
                         <input type='hidden' name='thisOrder' value='{$row['contentorder']}'/>
                         <input type='hidden' name='table' value='page_content'/> 

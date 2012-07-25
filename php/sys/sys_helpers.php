@@ -38,7 +38,7 @@ function con_createAdminAsideMenu ()
 
 function con_createNewArticleButton ()
 {
-    return '<form class="margin" action=" " method="post"><button type="submit" name="action" value="newArticle" class="button add">New Article</button></form>';
+    return '<form class="margin" action="'.$_SERVER['REQUEST_URI'].'" method="post"><button type="submit" name="action" value="newArticle" class="button add">New Article</button></form>';
 } 
 
 /**
@@ -174,16 +174,6 @@ function sys_performLogout ()
     //header("Location:{$_SERVER['HTTP_ORIGIN']}");
     exit;
 }
-
-function con_createRTE ($content, $name)
-{
-	include 'fckeditor/fckeditor.php';
-	$oFCKeditor = new FCKeditor($name) ;
-	$oFCKeditor->BasePath = '/fckeditor/' ;
-	$oFCKeditor->Value = $content;
-	return $oFCKeditor->create() ;
-}
-
 
 function sys_deleteIntFromArray ($array)
 {
