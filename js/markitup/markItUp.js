@@ -28,7 +28,7 @@ mySettings = {
 		{name:'Ol', openWith:'<ol>\n', closeWith:'</ol>\n' },
 		{name:'Li', openWith:'<li>', closeWith:'</li>\n' },
 		{separator:'---------------' },
-		{name:'Picture', key:'P', replaceWith:'<img src="[![Source:!:http://]!]" alt="[![Alternative text]!]" />' },
+		{name:'Picture', key:'P', replaceWith:'<a href="[![ImageZoom URL:!:http://]!]" class="imageZoom"><img src="[![ImageUrl:!:http://]!]" alt="" class="[![class:!:small]!]"/></a>' },
 		{name:'Link', key:'L', openWith:'<a href="[![Link:!:http://]!]"(!( title="[![Title]!]")!)>', closeWith:'</a>', placeHolder:'Your text to link...' },
 		{separator:'---------------' },
 		{name:'Homework', openWith:'<div class="homework">', closeWith:'</div>\n'  },

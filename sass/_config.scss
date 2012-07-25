@@ -33,7 +33,9 @@ hr {
 }
 
 
-
+.fancybox-close {
+display:none;
+}
 
 @mixin lightBlueGradient {
 background-color: gray; // Old browsers

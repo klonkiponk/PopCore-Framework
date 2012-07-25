@@ -138,14 +138,8 @@ function sys_includeAdditionalScripts ()
 		echo '
 		<link rel="stylesheet" href="./js/fancybox/jquery.fancybox.css?v=2.0.6" type="text/css" media="screen" />
 		<script type="text/javascript" src="./js/fancybox/jquery.fancybox.pack.js?v=2.0.6"></script>
-		<script type="text/javascript">
-			$(document).ready(function() {
-				$(".imageZoom").fancybox();
-			});
-		</script>		
-    ';
+		<script type="text/javascript" src="./etc/fancyBox.js"></script>';
 }
-
 function sys_includeCss ()
 {
     $return  = "<link rel='stylesheet' type='text/css' media='print' href='css/print.css' />\n";
