@@ -48,6 +48,16 @@ span.apachecontainer:after {
 	content: ">"
 }
 
+.tomcat, .tomcatxmltag {
+	color:#df0101;
+	font-family:UbuntuMonoRegular; }
+
+span.tomcatxmltag:before {
+	content: "<"; }
+
+span.tomcatxmltag:after {
+	content: ">"; }
+
 span.tag:before {
 	content: "<";
 	color:rgba(65, 105, 225, 0.699219);
@@ -142,3 +152,4 @@ div.homework li p {
 div.emphasize {
   text-align: left;
 }
+

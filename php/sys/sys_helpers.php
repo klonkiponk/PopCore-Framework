@@ -109,7 +109,7 @@ function sys_includeAdditionalScripts ()
     echo '
         <script src="./js/libs/jquery-1.7.1.min.js"></script>
 		<script type="text/javascript" src="js/markitup/jquery.markitup.js"></script>
-		<script type="text/javascript" src="js/markitup/markItUp.js"></script>
+		<script type="text/javascript" src="etc/markItUp.js"></script>
 		<link rel="stylesheet" type="text/css" href="js/markitup/skins/markitup/style.css" />
 		<link rel="stylesheet" type="text/css" href="js/markitup/sets/html/style.css" />
 		<script type="text/javascript" >
