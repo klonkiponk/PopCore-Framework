@@ -93,6 +93,8 @@ function db_createNewArticleForm ()
                             <option>CSS</option>
                             <option>APACHE</option>
 							<option>PERL</option>
+							<option>XML</option>	
+							<option>JAVASCRIPT</option>							
                         </select>";
         } elseif ($entry->name == "date"){
             //$form .= "<label for=\"$entry->name\">$entry->name</label>";
@@ -168,7 +170,7 @@ function sys_createEditFormForPageContent()
                 //$return .= con_createSyntaxHighlight($value,'text/html','content');
 				//$return .= con_createRTE ($value, $key);
 				$value = preg_replace("/''/", "'", $value);
-				$value = stripslashes($value);
+//				$value = addslashes($value);
 				$return .= "<textarea class='markItUp' name=\"$key\">$value</textarea>";
 				break;
             case "code":
@@ -189,6 +191,10 @@ function sys_createEditFormForPageContent()
                 $return .= " >HTML</option><option ";
 				if ($value == "PERL") {$return .= "selected";}
                 $return .= " >PERL</option><option "; 				
+   				if ($value == "XML") {$return .= "selected";}
+                $return .= " >XML</option><option ";
+   				if ($value == "JAVASCRIPT") {$return .= "selected";}
+                $return .= " >JAVASCRIPT</option><option ";
                 if ($value == "CSS") {$return .= "selected";}
                 $return .= " >CSS</option><option ";
                 if ($value == "APACHE") {$return .= "selected";}

@@ -6,7 +6,7 @@ GESHI - (CODE WITH SYNTAX HIGHLIGHTING)
 /************\
 geSHi Wrapper
 \************/
-div.geshi {
+#content div.geshi {
 	overflow:hidden;
 	position:relative;
 	margin-top:$blockMargin;
@@ -21,16 +21,26 @@ div.geshi {
 		padding-bottom:3px;
 		position:relative;
 		margin-top: 0px;
+		td {
+			border:0px;
+			
+		}
 		td.ln {
 			font-weight: normal;
 			padding:0px;
 			padding-right: 3px;
 			text-align: right;
+			border:0px;
 			border-right:1px solid silver;
 			margin:0px;
 			//background:#eee;
 			@include roundedLeft;
 			color:#999;
+			min-width: 0px;
+			width:20px;
+			pre {
+				padding-left:0px;
+			}
 		}
 		pre {
 			margin:0px;
@@ -111,7 +121,6 @@ table.html5 {
 		color:rgba(65,105,225, 0.7);
 	}
 }
-
 table.css {
 	&:after {
 		content:"CSS";
@@ -149,6 +158,44 @@ table.css {
 table.php {
 	&:after {
 		content:"PHP";
+	}
+	a {
+		color:rgb(60,76,114);
+	}
+	td.de1 pre.de1 {
+	    color:#555;
+	} 	
+	.br0 {
+		color:black;
+	}
+	.re0 { //Variable
+		color:rgb(49,132,149);
+	}
+	.sy0,.sy1 {
+		color:blue;
+	}
+	.st0 {
+		color:rgb(3,106,7);
+	}
+	.nu0 { //WERT einer Variable
+
+	}
+	.co1,.co2,.coMULTI {
+		color:rgb(255,127,0);
+	}
+	.kw1 {
+		color:blue;
+	}
+	.kw2 {
+		color:blue;
+	}
+	.st_h {
+	    color:green;
+	}      
+}
+table.javascript {
+	&:after {
+		content:"JAVASCRIPT";
 	}
 	a {
 		color:rgb(60,76,114);

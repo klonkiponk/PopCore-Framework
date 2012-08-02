@@ -14,7 +14,7 @@ $path = "../img/";
 					{
 					if($size<(1024*1024))
 						{
-							$actual_image_name = time().substr(str_replace(" ", "_", $txt), 5).".".$ext;
+							$actual_image_name = @date("Ymd")."_".$txt.".".$ext;
 							$tmp = $_FILES['photoimg']['tmp_name'];
 							if(move_uploaded_file($tmp, $path.$actual_image_name))
 								{
@@ -33,7 +33,7 @@ $path = "../img/";
 				}
 				
 			else
-				echo "Please select image..!";
+				echo "Select image..!";
 				
 			exit;
 		}

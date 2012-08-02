@@ -39,6 +39,9 @@ if (!empty($_POST['action'])){
         case "changeOrder":
             $message = db_changeOrder();
             break;            
+        case "deleteImage":
+            $message = sys_deleteImageFromFolder();
+            break;       
         case "search":
             $content = db_search();
             break;    

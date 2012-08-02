@@ -130,7 +130,9 @@ function sys_includeAdditionalScripts ()
 						target: '#preview'
 					}).submit();
 				});
-			});";
+			});
+			
+			";
 		echo '		
 		</script>';
 		
@@ -208,4 +210,63 @@ function con_CreateSyntax($source,$language = 'php')
     $return .= $geshi->parse_code();
     $return .= "</div>";					       
     return $return;
+}
+
+$GLOBALS['images'] = array('jpg','jpeg','png','gif','JPG','PNG','JPEG','GIF','svg','SVG','ico');
+
+
+function con_ListFolder($path)
+{
+	echo "<h1>".$path."</h1>";
+	$files = scandir($path);
+    foreach($files as $file) {
+	    if (is_dir($file)) { // '.' and '..' are found
+	    }
+	    else {
+	    	$file = explode(".",$file);
+		    if (!isset($file[1])) {
+			    $folderArray[] = $file[0]; //HERE WE CREATE THE ARRAY WITH ALL THE FOLDERS
+		    } elseif ( in_array($file[1],$GLOBALS['images'])) {
+			    $imageArray[] = $file[0].'.'.$file[1];
+		    } else {
+			    $fileArray[] = $file[0].'.'.$file[1]; //HERE WE CREATE THE ARRAY WITH ALL THE FILES, THAT ARE IN THE ACTUAL FOLDER
+		    }
+	    }
+    }
+    
+    if (!empty($imageArray)) {
+    	echo "<h2>images</h2>";
+	    foreach ($imageArray as $file) {
+
+		    echo "<div class='imageBrowserSingleImage'>";
+		    echo '<a class="imageZoom" href="'.$path.'/'.$file.'"><img style="width:98px;height:98px;" src="'.$path.'/'.$file.'" /></a>';
+		    echo "</div>";
+
+	    }
+    }    
+    echo "<hr class='clear'>";
+    if (!empty($fileArray)) {
+    	echo "<h2>other Files</h2>";
+	    foreach ($fileArray as $file) {
+		    echo $file."<br/>";
+	    }
+    }
+    if (!empty($folderArray)){
+	    foreach ($folderArray as $folder) {
+		    con_ListFolder($path."/".$folder);
+	    }
+	}
+}
+
+function sys_deleteImageFromFolder ()
+{
+	//con_preFormat($_POST);
+	if (unlink($_POST['img']) == TRUE) {
+	$return = con_createMessage("Deleted Image {$_POST['img']}",'green');	
+	return $return;		
+	} else {
+		return con_createMessage("error occured",'red');	 
+	}
+	
+
 }

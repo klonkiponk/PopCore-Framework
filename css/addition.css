@@ -12,7 +12,7 @@ input.preview {
 	color:white;
 }
 img.small {
-	width:200px;
+	width:205px;
 }
 img.medium {
 	width:450px;
@@ -153,3 +153,68 @@ div.emphasize {
   text-align: left;
 }
 
+#content a.anchor {
+  color : #0080FF;
+  text-decoration: underline;
+}
+
+#content a.anchor:before {
+  font-family: "SymbolFont";
+  content : "K";
+}
+
+table.xml:after {
+  content: "XML"; }
+
+table.xml .imp {
+  font-weight: bold;
+  color: orange; }
+
+table.xml .kw2 {
+  color: #4169e1;
+  font-weight: bold; }
+
+table.xml .kw3 {
+  color: #4169e1;
+  font-style: italic; }
+
+table.xml .es0 {
+  color: #4169e1;
+  font-weight: bold; }
+
+table.xml .br0 {
+  color: #4169e1; }
+
+table.xml .sy0 {
+  color: rgba(65, 105, 225, 0.7); }
+
+table.xml .st0 {
+  color: green; }
+
+table.xml .nu0 {
+  color: red; }
+
+table.xml .sc-2 {
+  color: red; }
+
+table.xml .sc-1 {
+  color: orange;
+  font-style: italic; }
+
+table.xml .sc0 {
+  color: red; }
+
+table.xml .sc1 {
+  color: red; }
+
+table.xml .sc2 {
+  color: rgba(65, 105, 225, 0.7); }
+                                   
+table.xml .re0 {   /*ATTRIBUTES*/
+  color: #0080FF; }
+
+table.xml .re1 {   /*OPENING BRACKETS*/
+  color: red; }
+
+table.xml .re2 {   /*CLOSING BRACKETS*/
+  color: red; }

@@ -125,7 +125,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     margin-bottom: 15px; }
 
   @top-right {
-    content: string(chapter) " :: " string(section);
+    content: string(chapter);
     color: gray;
     border-bottom: 1px solid silver;
     font-size: 90%;
@@ -166,29 +166,34 @@ caption {
   display: block;
   font-size: 80%;
   margin-bottom: 3px;
+  margin-top: 15px;
   text-align: center; }
 
-/* line 153, ../sass/print.scss */
+/* line 154, ../sass/print.scss */
 table {
   margin-bottom: 15px; }
 
-/* line 163, ../sass/print.scss */
+/* line 164, ../sass/print.scss */
 pre {
   font-family: UbuntuMonoRegular; }
 
-/* line 166, ../sass/print.scss */
+/* line 167, ../sass/print.scss */
 abbr {
   border-bottom: 0px;
   text-decoration: none;
   font-weight: bold; }
 
-/* line 171, ../sass/print.scss */
+/* line 172, ../sass/print.scss */
 p {
   margin-top: 0.5em; }
 
-/* line 175, ../sass/print.scss */
+/* line 176, ../sass/print.scss */
 strong {
   font-weight: bold; }
+
+/* line 180, ../sass/print.scss */
+.clear {
+  clear: both; }
 
 /**************************************\
 			  TITLE PAGE
@@ -209,7 +214,7 @@ strong {
   @top-right {
     content: normal; } }
 
-/* line 201, ../sass/print.scss */
+/* line 205, ../sass/print.scss */
 .titlepage {
   page-break-after: always;
   text-align: center; }
@@ -217,77 +222,77 @@ strong {
 /**************************************\
 			  	 BODY
 \**************************************/
-/* line 210, ../sass/print.scss */
+/* line 214, ../sass/print.scss */
 body {
   text-align: justify;
   font-family: UbuntuLightRegular;
-  font-size: 1em;
+  font-size: 0.8em;
   line-height: 1.2em; }
 
 /**************************************\
 			  	 TOC
 \**************************************/
-/* line 221, ../sass/print.scss */
+/* line 225, ../sass/print.scss */
 ul.toc, ul.toc ul {
   list-style-type: none; }
 
-/* line 225, ../sass/print.scss */
+/* line 229, ../sass/print.scss */
 .toc ul {
   margin: 0px; }
 
-/* line 228, ../sass/print.scss */
+/* line 232, ../sass/print.scss */
 .toc li.chapter a, .toc li.section a {
   font-family: UbuntuLightRegular; }
 
-/* line 232, ../sass/print.scss */
+/* line 236, ../sass/print.scss */
 .toc ul ul {
   margin-left: 27px; }
 
-/* line 236, ../sass/print.scss */
+/* line 240, ../sass/print.scss */
 .toc li a.PageRef::after {
   content: " " leader(".  ") "" target-counter(attr(href, url), page); }
 
-/* line 240, ../sass/print.scss */
+/* line 244, ../sass/print.scss */
 .toc li.chapter {
   margin-bottom: 0.5em;
   margin-top: 0.5em;
   border-bottom: 1px solid gray;
   padding-bottom: 4px; }
 
-/* line 246, ../sass/print.scss */
+/* line 250, ../sass/print.scss */
 .toc li.chapter a {
   font-size: 120%; }
 
-/* line 251, ../sass/print.scss */
+/* line 255, ../sass/print.scss */
 .toc li.section {
   margin-bottom: 0.5em;
   margin-top: 0.5em; }
 
-/* line 256, ../sass/print.scss */
+/* line 260, ../sass/print.scss */
 .toc li.subSection {
   margin-bottom: 0.4em;
   margin-top: 0.4em; }
 
-/* line 260, ../sass/print.scss */
+/* line 264, ../sass/print.scss */
 .toc li.chapter a.PageRef::after {
   content: " " leader(" ") "" target-counter(attr(href, url), page); }
 
-/* line 263, ../sass/print.scss */
+/* line 267, ../sass/print.scss */
 .toc li.chapter a::before {
   content: target-counter(attr(href, url), chapter) " "; }
 
-/* line 266, ../sass/print.scss */
+/* line 270, ../sass/print.scss */
 .toc li.section a::before {
   content: target-counter(attr(href, url), chapter) "." target-counter(attr(href, url), section) " "; }
 
-/* line 269, ../sass/print.scss */
+/* line 273, ../sass/print.scss */
 .toc li.subSection a::before {
   content: target-counter(attr(href, url), chapter) "." target-counter(attr(href, url), section) "." target-counter(attr(href, url), subSection) " "; }
 
 /**************************************\
 			   COUNTERS
 \**************************************/
-/* line 276, ../sass/print.scss */
+/* line 280, ../sass/print.scss */
 body {
   counter-reset: chapter;
   counter-reset: section;
@@ -295,7 +300,7 @@ body {
   counter-reset: paragraph;
   counter-reset: caption; }
 
-/* line 284, ../sass/print.scss */
+/* line 288, ../sass/print.scss */
 section.chapter {
   counter-increment: chapter;
   counter-reset: section;
@@ -303,148 +308,308 @@ section.chapter {
   counter-reset: paragraph;
   counter-reset: caption; }
 
-/* line 294, ../sass/print.scss */
+/* line 298, ../sass/print.scss */
 h1 {
   counter-reset: section; }
 
-/* line 297, ../sass/print.scss */
+/* line 301, ../sass/print.scss */
 section.section {
   counter-increment: section;
   counter-reset: subSection;
   counter-reset: paragraph; }
 
-/* line 304, ../sass/print.scss */
+/* line 308, ../sass/print.scss */
 section.subSection {
   counter-increment: subSection;
   counter-reset: paragraph; }
 
-/* line 310, ../sass/print.scss */
+/* line 314, ../sass/print.scss */
 article {
   counter-increment: paragraph; }
 
-/* line 314, ../sass/print.scss */
+/* line 318, ../sass/print.scss */
 caption {
   counter-increment: caption; }
 
-/* line 318, ../sass/print.scss */
+/* line 322, ../sass/print.scss */
 div.chapter {
   page-break-before: always; }
 
-/* line 322, ../sass/print.scss */
+/* line 326, ../sass/print.scss */
 .chapter h1:before {
   content: counter(chapter) " "; }
 
-/* line 326, ../sass/print.scss */
+/* line 330, ../sass/print.scss */
 .chapter h2:before {
   content: counter(chapter) "." counter(section) " "; }
 
-/* line 330, ../sass/print.scss */
+/* line 334, ../sass/print.scss */
 .chapter h3:before {
   content: counter(chapter) "." counter(section) "." counter(subSection) " "; }
 
-/* line 338, ../sass/print.scss */
+/* line 342, ../sass/print.scss */
 caption:after {
-  content: " " counter(chapter) "." counter(caption); }
+  content: " " counter(chapter) "." counter(caption) ": " string(paragraph); }
 
 /**************************************\
 			   HEADINGS
 \**************************************/
-/* line 346, ../sass/print.scss */
+/* line 350, ../sass/print.scss */
 h1 {
   string-set: chapter content();
   margin-top: 250px;
-  color: #ffa500;
-  font-size: 2em;
+  color: #333;
+  font-size: 2.5em;
   margin-bottom: 1.9em;
-  border-bottom: 1px solid gray;
-  line-height: 2em;
+  border-bottom: 1px solid #333;
+  line-height: 2.5em;
   page-break-before: always; }
 
-/* line 356, ../sass/print.scss */
+/* line 360, ../sass/print.scss */
 h2 {
   string-set: section content();
   margin-top: 1.6em;
   margin-bottom: 1.6em;
-  font-size: 1.7em;
-  color: #bf8d30; }
+  padding-bottom: 0.2em;
+  font-size: 1.9em;
+  line-height: 2.2em;
+  color: #333;
+  counter-reset: subSection;
+  border-bottom: 1px solid #333; }
 
-/* line 363, ../sass/print.scss */
+/* line 371, ../sass/print.scss */
 h3 {
   string-set: subSection content();
   margin-top: 0.8em;
   margin-bottom: 1.3em;
-  font-size: 1.3em;
-  color: #a66c00; }
+  font-size: 1.6em;
+  line-height: 1.8em;
+  color: #333;
+  border-bottom: 1px solid #333; }
 
-/* line 370, ../sass/print.scss */
+/* line 380, ../sass/print.scss */
 span.h3 {
   margin-top: 0.8em;
   margin-bottom: 1.3em;
   font-size: 1.3em;
-  color: #a66c00;
+  color: #333;
+  display: block;
+  border-bottom: 1px solid #333; }
+
+/* line 388, ../sass/print.scss */
+h4, span.h4 {
+  string-set: paragraph content();
+  font-size: 1.1em;
+  color: #333;
+  margin-top: 0.8em;
+  margin-bottom: 1.3em;
+  border-bottom: 1px solid #333;
   display: block; }
 
-/* line 377, ../sass/print.scss */
-h4 {
-  string-set: paragraph content();
-  font-size: 1.2em;
-  color: #ffbc40;
-  margin-top: 0.8em;
-  margin-bottom: 1.3em; }
+/* line 397, ../sass/print.scss */
+h5, span.h5, h6, span.h6 {
+  display: block;
+  margin: 20px 0 10px 0;
+  border-bottom: 1px solid #333;
+  clear: both; }
 
 /**************************************\
 			   IMAGES
 \**************************************/
-/* line 390, ../sass/print.scss */
+/* line 410, ../sass/print.scss */
 img {
   width: 250px;
-  margin: 0px auto;
+  margin: 10px;
   display: block; }
 
-/* line 395, ../sass/print.scss */
+/* line 416, ../sass/print.scss */
 .floatleft {
   float: left; }
 
-/* line 398, ../sass/print.scss */
+/* line 420, ../sass/print.scss */
 .floatright {
   float: right; }
 
-/* line 401, ../sass/print.scss */
+/* line 424, ../sass/print.scss */
 .floatCenter {
-  margin: 0px auto;
+  margin: 10px auto;
   display: block; }
 
-/* line 405, ../sass/print.scss */
+/* line 429, ../sass/print.scss */
 .small {
   width: 150px; }
 
-/* line 408, ../sass/print.scss */
+/* line 433, ../sass/print.scss */
 .medium {
   width: 50%; }
 
-/* line 411, ../sass/print.scss */
+/* line 437, ../sass/print.scss */
 .large {
   width: 100%; }
+
+/* line 441, ../sass/print.scss */
+img.shadow {
+  border: 1px solid gray; }
+
+/**************************************\
+			   TABLES
+\**************************************/
+/* line 449, ../sass/print.scss */
+table td {
+  border: 1px solid silver;
+  padding: 5px; }
+
+/* line 453, ../sass/print.scss */
+table th {
+  border: 1px solid gray;
+  font-weight: bold;
+  padding: 5px; }
+
+/* line 458, ../sass/print.scss */
+table tr:nth-child(even) {
+  background: #eee; }
 
 /**************************************\
 			   BOXES
 \**************************************/
-/* line 419, ../sass/print.scss */
-.homework {
-  background-color: #b5c6d0;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px;
-  padding: 10px;
-  border: 1px solid gray;
-  margin-top: 15px; }
-  /* line 425, ../sass/print.scss */
-  .homework span.h4 {
-    display: block; }
+/* line 467, ../sass/print.scss */
+div.blackbox {
+  border: 1px solid #333;
+  background: #555;
+  color: #fff; }
+  /* line 471, ../sass/print.scss */
+  div.blackbox a {
+    color: #fff; }
 
-/* line 430, ../sass/print.scss */
+/* line 476, ../sass/print.scss */
+div.homework {
+  border-radius: 5px;
+  margin-top: 1em;
+  margin-right: 0px;
+  position: relative;
+  clear: both;
+  background-color: #f2f6f8;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFF2F6F8', endColorstr='#FFB5C6D0');
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f2f6f8), color-stop(100%, #b5c6d0));
+  background-image: -webkit-linear-gradient(top, #f2f6f8 0%, #b5c6d0 100%);
+  background-image: -moz-linear-gradient(top, #f2f6f8 0%, #b5c6d0 100%);
+  background-image: -o-linear-gradient(top, #f2f6f8 0%, #b5c6d0 100%);
+  background-image: -ms-linear-gradient(top, #f2f6f8 0%, #b5c6d0 100%);
+  background-image: linear-gradient(top, #f2f6f8 0%, #b5c6d0 100%);
+  border: 1px solid #98bede;
+  padding: 10px; }
+  /* line 488, ../sass/print.scss */
+  div.homework:after {
+    position: absolute;
+    right: -40px;
+    top: 8px;
+    font-size: 2em;
+    line-height: 1em;
+    font-family: SymbolFont;
+    content: "A";
+    color: #98bede;
+    text-shadow: 1px 1px 0px #333; }
+  /* line 499, ../sass/print.scss */
+  div.homework span.h3 {
+    margin-top: 0px;
+    border-bottom: 1px solid #98bede; }
+  /* line 503, ../sass/print.scss */
+  div.homework span.h4 {
+    margin-top: 0px;
+    border-bottom: 1px solid #98bede; }
+  /* line 507, ../sass/print.scss */
+  div.homework span.h5 {
+    border-bottom: 1px solid #98bede; }
+  /* line 510, ../sass/print.scss */
+  div.homework ul {
+    list-style: square; }
+
+/* line 516, ../sass/print.scss */
+div.information {
+  border-radius: 5px;
+  margin-top: 15px;
+  margin-right: 0px;
+  position: relative;
+  background-color: #ffd65e;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFFFD65E', endColorstr='#FFFEBF04');
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffd65e), color-stop(100%, #febf04));
+  background-image: -webkit-linear-gradient(top, #ffd65e 0%, #febf04 100%);
+  background-image: -moz-linear-gradient(top, #ffd65e 0%, #febf04 100%);
+  background-image: -o-linear-gradient(top, #ffd65e 0%, #febf04 100%);
+  background-image: -ms-linear-gradient(top, #ffd65e 0%, #febf04 100%);
+  background-image: linear-gradient(top, #ffd65e 0%, #febf04 100%);
+  border: 1px solid #febf04;
+  padding: 10px;
+  clear: both; }
+  /* line 528, ../sass/print.scss */
+  div.information:after {
+    position: absolute;
+    right: -40px;
+    top: 10px;
+    font-size: 2em;
+    line-height: 1em;
+    font-family: SymbolFont;
+    content: "R";
+    color: #febf04;
+    text-shadow: 1px 1px 0px #333; }
+  /* line 540, ../sass/print.scss */
+  div.information span.h3 {
+    margin-top: 0px;
+    -webkit-box-shadow: white 0px 1px 1px;
+    -moz-box-shadow: white 0px 1px 1px;
+    box-shadow: white 0px 1px 1px; }
+  /* line 544, ../sass/print.scss */
+  div.information span.h4 {
+    margin-top: 0px;
+    -webkit-box-shadow: white 0px 1px 1px;
+    -moz-box-shadow: white 0px 1px 1px;
+    box-shadow: white 0px 1px 1px;
+    border-bottom: 1px solid #febf04; }
+  /* line 549, ../sass/print.scss */
+  div.information span.h5 {
+    margin-top: 0px;
+    -webkit-box-shadow: white 0px 1px 1px;
+    -moz-box-shadow: white 0px 1px 1px;
+    box-shadow: white 0px 1px 1px;
+    border-bottom: 1px solid #febf04; }
+
+/* line 556, ../sass/print.scss */
+div.emphasize {
+  border-radius: 5px;
+  margin-top: 1em;
+  margin-right: 0px;
+  position: relative;
+  background-color: #febbbb;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFFEBBBB', endColorstr='#FFFF5C5C');
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #febbbb), color-stop(45%, #fe9090), color-stop(100%, #ff5c5c));
+  background-image: -webkit-linear-gradient(top, #febbbb 0%, #fe9090 45%, #ff5c5c 100%);
+  background-image: -moz-linear-gradient(top, #febbbb 0%, #fe9090 45%, #ff5c5c 100%);
+  background-image: -o-linear-gradient(top, #febbbb 0%, #fe9090 45%, #ff5c5c 100%);
+  background-image: -ms-linear-gradient(top, #febbbb 0%, #fe9090 45%, #ff5c5c 100%);
+  background-image: linear-gradient(top, #febbbb 0%, #fe9090 45%, #ff5c5c 100%);
+  border: 1px solid #ff5c5c;
+  padding: 10px; }
+  /* line 566, ../sass/print.scss */
+  div.emphasize:after {
+    position: absolute;
+    right: -40px;
+    top: 10px;
+    font-size: 2em;
+    line-height: 1em;
+    font-family: SymbolFont;
+    content: "e";
+    color: #ff5c5c;
+    text-shadow: -1px -1px 0px #333333; }
+  /* line 577, ../sass/print.scss */
+  div.emphasize:before {
+    content: ".";
+    display: none;
+    clear: both; }
+
+/* line 586, ../sass/print.scss */
 .notes {
   background: url("./img/papier2.png");
   width: 100%;
@@ -455,33 +620,99 @@ img {
   -moz-box-shadow: 2px 2px 5px #999999;
   box-shadow: 2px 2px 5px #999999; }
 
-/* line 439, ../sass/print.scss */
+/* line 595, ../sass/print.scss */
 .h10 {
   height: 5em; }
 
-/* line 442, ../sass/print.scss */
+/* line 598, ../sass/print.scss */
 .h20 {
   height: 10em; }
 
-/* line 445, ../sass/print.scss */
+/* line 601, ../sass/print.scss */
 .h30 {
   height: 15em; }
 
-/* line 448, ../sass/print.scss */
+/* line 604, ../sass/print.scss */
 .h40 {
   height: 20em; }
 
-/* line 451, ../sass/print.scss */
+/* line 607, ../sass/print.scss */
 .h50 {
   height: 25em; }
 
-/* line 454, ../sass/print.scss */
+/* line 610, ../sass/print.scss */
 .h60 {
   height: 30em; }
 
-/* line 457, ../sass/print.scss */
+/* line 613, ../sass/print.scss */
 .h70 {
   height: 35em; }
+
+/* line 616, ../sass/print.scss */
+.h80 {
+  height: 40em; }
+
+/**************************************\
+			   SPANS
+\**************************************/
+/* line 625, ../sass/print.scss */
+span.tag:before {
+  content: "<";
+  color: rgba(65, 105, 225, 0.699);
+  font-weight: normal; }
+
+/* line 630, ../sass/print.scss */
+span.tag:after {
+  content: ">";
+  color: rgba(65, 105, 225, 0.699);
+  font-weight: normal;
+  margin-right: 2px; }
+
+/* line 636, ../sass/print.scss */
+span.tag {
+  font-family: UbuntuMonoRegular;
+  color: #4169e1;
+  font-weight: bold; }
+
+/* line 642, ../sass/print.scss */
+.apache, .apachecontainer {
+  color: #378de5;
+  font-family: UbuntuMonoRegular; }
+
+/* line 647, ../sass/print.scss */
+span.apachecontainer:before {
+  content: "<"; }
+
+/* line 651, ../sass/print.scss */
+span.apachecontainer:after {
+  content: ">"; }
+
+/* line 655, ../sass/print.scss */
+.tomcat, .tomcatxmltag {
+  color: #df0101;
+  font-family: UbuntuMonoRegular; }
+
+/* line 659, ../sass/print.scss */
+span.tomcatxmltag:before {
+  content: "<"; }
+
+/* line 662, ../sass/print.scss */
+span.tomcatxmltag:after {
+  content: ">"; }
+
+/* line 665, ../sass/print.scss */
+span.attribute:before {
+  content: '"'; }
+
+/* line 668, ../sass/print.scss */
+span.attribute:after {
+  content: '"'; }
+
+/* line 671, ../sass/print.scss */
+a.anchor:before {
+  font-family: "SymbolFont";
+  content: "K";
+  margin-right: 5px; }
 
 /**************************************\
 GESHI - (CODE WITH SYNTAX HIGHLIGHTING)
@@ -489,13 +720,12 @@ GESHI - (CODE WITH SYNTAX HIGHLIGHTING)
 /************\
 geSHi Wrapper
 \************/
-/* line 470, ../sass/print.scss */
+/* line 685, ../sass/print.scss */
 div.geshi {
   overflow: hidden;
   position: relative;
-  margin-top: 0px;
   font-size: 0.9em; }
-  /* line 475, ../sass/print.scss */
+  /* line 689, ../sass/print.scss */
   div.geshi table {
     border: 1px solid gray;
     overflow: none;
@@ -509,8 +739,11 @@ div.geshi {
     position: relative;
     margin-top: 0px;
     min-height: 85px;
-    overflow: scroll; }
-    /* line 485, ../sass/print.scss */
+    overflow: hidden; }
+    /* line 699, ../sass/print.scss */
+    div.geshi table td {
+      border: 0px; }
+    /* line 702, ../sass/print.scss */
     div.geshi table td.ln {
       font-weight: normal;
       padding: 0px;
@@ -519,11 +752,13 @@ div.geshi {
       border-right: 1px solid silver;
       margin: 0px;
       color: #999;
-      width: 25px; }
-    /* line 496, ../sass/print.scss */
+      width: 20px !important; }
+    /* line 713, ../sass/print.scss */
     div.geshi table td:nth-child(2) {
-      padding-left: 10px; }
-    /* line 499, ../sass/print.scss */
+      padding-left: 10px;
+      width: 660px !important;
+      overflow: hidden; }
+    /* line 718, ../sass/print.scss */
     div.geshi table:after {
       position: absolute;
       top: 20px;
@@ -557,152 +792,177 @@ div.geshi {
 /*********************************************\
 For Each Programming Language another table.XXX
 \*********************************************/
-/* line 529, ../sass/print.scss */
-.geshi table.html5:after {
+/* line 748, ../sass/print.scss */
+table.html5:after {
   content: "HTML"; }
-/* line 532, ../sass/print.scss */
-.geshi table.html5 pre {
-  margin: 0px; }
-/* line 535, ../sass/print.scss */
-.geshi table.html5 .imp {
+/* line 751, ../sass/print.scss */
+table.html5 .imp {
   font-weight: bold;
   color: orange; }
-/* line 538, ../sass/print.scss */
-.geshi table.html5 .kw2 {
+/* line 754, ../sass/print.scss */
+table.html5 .kw2 {
   color: #4169e1;
   font-weight: bold; }
-/* line 542, ../sass/print.scss */
-.geshi table.html5 .kw3 {
+/* line 758, ../sass/print.scss */
+table.html5 .kw3 {
   color: #4169e1;
   font-style: italic; }
-/* line 546, ../sass/print.scss */
-.geshi table.html5 .es0 {
+/* line 762, ../sass/print.scss */
+table.html5 .es0 {
   color: #4169e1;
   font-weight: bold; }
-/* line 550, ../sass/print.scss */
-.geshi table.html5 .br0 {
+/* line 766, ../sass/print.scss */
+table.html5 .br0 {
   color: #4169e1; }
-/* line 553, ../sass/print.scss */
-.geshi table.html5 .sy0 {
+/* line 769, ../sass/print.scss */
+table.html5 .sy0 {
   color: rgba(65, 105, 225, 0.7); }
-/* line 556, ../sass/print.scss */
-.geshi table.html5 .st0 {
+/* line 772, ../sass/print.scss */
+table.html5 .st0 {
   color: green; }
-/* line 559, ../sass/print.scss */
-.geshi table.html5 .nu0 {
+/* line 775, ../sass/print.scss */
+table.html5 .nu0 {
   color: red; }
-/* line 562, ../sass/print.scss */
-.geshi table.html5 .sc-2 {
+/* line 778, ../sass/print.scss */
+table.html5 .sc-2 {
   color: red; }
-/* line 565, ../sass/print.scss */
-.geshi table.html5 .sc-1 {
-  color: red;
+/* line 781, ../sass/print.scss */
+table.html5 .sc-1 {
+  color: orange;
   font-style: italic; }
-/* line 568, ../sass/print.scss */
-.geshi table.html5 .sc0 {
+/* line 784, ../sass/print.scss */
+table.html5 .sc0 {
   color: red; }
-/* line 571, ../sass/print.scss */
-.geshi table.html5 .sc1 {
+/* line 787, ../sass/print.scss */
+table.html5 .sc1 {
   color: red; }
-/* line 574, ../sass/print.scss */
-.geshi table.html5 .sc2 {
+/* line 790, ../sass/print.scss */
+table.html5 .sc2 {
   color: rgba(65, 105, 225, 0.7); }
 
-/* line 580, ../sass/print.scss */
-.geshi table.css:after {
+/* line 795, ../sass/print.scss */
+table.css:after {
   content: "CSS"; }
-/* line 583, ../sass/print.scss */
-.geshi table.css pre {
-  margin: 0px; }
-/* line 586, ../sass/print.scss */
-.geshi table.css .imp {
+/* line 798, ../sass/print.scss */
+table.css .imp {
   font-weight: bold;
   color: red; }
-/* line 587, ../sass/print.scss */
-.geshi table.css .kw1 {
+/* line 799, ../sass/print.scss */
+table.css .kw1 {
   color: rgba(65, 105, 225, 0.7);
   font-weight: bold; }
-/* line 591, ../sass/print.scss */
-.geshi table.css .kw2 {
+/* line 803, ../sass/print.scss */
+table.css .kw2 {
   color: green; }
-/* line 594, ../sass/print.scss */
-.geshi table.css .co1 {
+/* line 806, ../sass/print.scss */
+table.css .co1 {
   color: orange; }
-/* line 595, ../sass/print.scss */
-.geshi table.css .co2 {
+/* line 807, ../sass/print.scss */
+table.css .co2 {
   color: fuchsia;
   font-style: italic; }
-/* line 596, ../sass/print.scss */
-.geshi table.css .coMULTI {
-  color: #808080;
+/* line 808, ../sass/print.scss */
+table.css .coMULTI {
+  color: orange;
   font-style: italic; }
-/* line 597, ../sass/print.scss */
-.geshi table.css .es0 {
+/* line 809, ../sass/print.scss */
+table.css .es0 {
   color: fuchsia;
   font-weight: bold; }
-/* line 598, ../sass/print.scss */
-.geshi table.css .es2 {
+/* line 810, ../sass/print.scss */
+table.css .es2 {
   color: fuchsia;
   font-weight: bold; }
-/* line 599, ../sass/print.scss */
-.geshi table.css .br0 {
+/* line 811, ../sass/print.scss */
+table.css .br0 {
   color: black; }
-/* line 601, ../sass/print.scss */
-.geshi table.css .sy0 {
+/* line 813, ../sass/print.scss */
+table.css .sy0 {
   color: black; }
-/* line 603, ../sass/print.scss */
-.geshi table.css .st0 {
+/* line 815, ../sass/print.scss */
+table.css .st0 {
   color: black; }
-/* line 604, ../sass/print.scss */
-.geshi table.css .nu0 {
+/* line 816, ../sass/print.scss */
+table.css .nu0 {
   color: #c5060b; }
-/* line 606, ../sass/print.scss */
-.geshi table.css .re0 {
-  color: black; }
-/* line 607, ../sass/print.scss */
-.geshi table.css .re1 {
+/* line 818, ../sass/print.scss */
+table.css .re0 {
+  color: red; }
+/* line 819, ../sass/print.scss */
+table.css .re1 {
   color: black;
   font-style: italic; }
-/* line 610, ../sass/print.scss */
-.geshi table.css .re2 {
+/* line 822, ../sass/print.scss */
+table.css .re2 {
   color: black; }
-/* line 612, ../sass/print.scss */
-.geshi table.css .re3 {
-  color: blue; }
+/* line 824, ../sass/print.scss */
+table.css .re3 {
+  color: red; }
 
-/* line 617, ../sass/print.scss */
-.geshi table.php:after {
+/* line 829, ../sass/print.scss */
+table.php:after {
   content: "PHP"; }
-/* line 620, ../sass/print.scss */
-.geshi table.php pre {
-  margin: 0px; }
-/* line 623, ../sass/print.scss */
-.geshi table.php a {
+/* line 832, ../sass/print.scss */
+table.php a {
   color: #3c4c72; }
-/* line 626, ../sass/print.scss */
-.geshi table.php td.de1 pre.de1 {
+/* line 835, ../sass/print.scss */
+table.php td.de1 pre.de1 {
   color: #555; }
-/* line 629, ../sass/print.scss */
-.geshi table.php .br0 {
+/* line 838, ../sass/print.scss */
+table.php .br0 {
   color: black; }
-/* line 632, ../sass/print.scss */
-.geshi table.php .re0 {
+/* line 841, ../sass/print.scss */
+table.php .re0 {
   color: #318495; }
-/* line 635, ../sass/print.scss */
-.geshi table.php .sy0, .geshi table.php .sy1 {
+/* line 844, ../sass/print.scss */
+table.php .sy0, table.php .sy1 {
   color: blue; }
-/* line 638, ../sass/print.scss */
-.geshi table.php .st0 {
+/* line 847, ../sass/print.scss */
+table.php .st0 {
   color: #036a07; }
-/* line 644, ../sass/print.scss */
-.geshi table.php .co1, .geshi table.php .co2, .geshi table.php .coMULTI {
+/* line 853, ../sass/print.scss */
+table.php .co1, table.php .co2, table.php .coMULTI {
   color: #ff7f00; }
-/* line 647, ../sass/print.scss */
-.geshi table.php .kw1 {
+/* line 856, ../sass/print.scss */
+table.php .kw1 {
   color: blue; }
-/* line 650, ../sass/print.scss */
-.geshi table.php .kw2 {
+/* line 859, ../sass/print.scss */
+table.php .kw2 {
   color: blue; }
-/* line 653, ../sass/print.scss */
-.geshi table.php .st_h {
+/* line 862, ../sass/print.scss */
+table.php .st_h {
+  color: green; }
+
+/* line 867, ../sass/print.scss */
+table.javascript:after {
+  content: "JAVASCRIPT"; }
+/* line 870, ../sass/print.scss */
+table.javascript a {
+  color: #3c4c72; }
+/* line 873, ../sass/print.scss */
+table.javascript td.de1 pre.de1 {
+  color: #555; }
+/* line 876, ../sass/print.scss */
+table.javascript .br0 {
+  color: black; }
+/* line 879, ../sass/print.scss */
+table.javascript .re0 {
+  color: #318495; }
+/* line 882, ../sass/print.scss */
+table.javascript .sy0, table.javascript .sy1 {
+  color: blue; }
+/* line 885, ../sass/print.scss */
+table.javascript .st0 {
+  color: #036a07; }
+/* line 891, ../sass/print.scss */
+table.javascript .co1, table.javascript .co2, table.javascript .coMULTI {
+  color: #ff7f00; }
+/* line 894, ../sass/print.scss */
+table.javascript .kw1 {
+  color: blue; }
+/* line 897, ../sass/print.scss */
+table.javascript .kw2 {
+  color: blue; }
+/* line 900, ../sass/print.scss */
+table.javascript .st_h {
   color: green; }

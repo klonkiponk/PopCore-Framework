@@ -11,6 +11,8 @@
 @import "contentDivs";
 @import "contentP";
 @import "contentTables";
+@import "contentSpans";
+@import "contentImageBrowser";
 @import "../buttons/contentButtons";
 
 /**************************************\
@@ -166,11 +168,4 @@ pre.print_r:after {
 }
 .height100 {
 	height:30em;
-}
-
-span.attribute:before {
-	content:'"';
-}
-span.attribute:after {
-	content:'"';
 }

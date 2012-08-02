@@ -49,7 +49,10 @@ function db_writeToDb ()
                 //$value = $GLOBALS['DB']->real_escape_string($value);
 				$sql .= "'";
 				//$sql .= preg_replace("/'/", "''", $value);
-				$sql .= addslashes($value);
+	//			$sql .= addslashes($value);
+$sql .= mysql_real_escape_string ($value);
+
+				
 				$sql .= "',";
                 break;
             case "code":
@@ -71,12 +74,16 @@ function db_writeToDb ()
     
     //Perform Query  
     $write1 = db_performWritingQuery ($sql);
-    
+
     if ($_POST['table'] == 'page_content'){
 		$sql = "UPDATE page_content SET contentorder='{$GLOBALS['DB']->insert_id}' WHERE uid = {$GLOBALS['DB']->insert_id}";   
+		return db_performWritingQuery ($sql);
+	} elseif ($_POST['table'] == 'pages'){
+		$sql = "UPDATE pages SET pageorder='{$GLOBALS['DB']->insert_id}' WHERE pid = {$GLOBALS['DB']->insert_id}";   
 		return db_performWritingQuery ($sql);
 	} else {
 		return $write1;
 	}
+
     
 }

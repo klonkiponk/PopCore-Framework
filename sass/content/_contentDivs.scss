@@ -13,15 +13,12 @@ div.blackbox {
     @include grayGradient;
     border:1px solid #111;
     @include rounded(4px);
-    @include box-shadow(#000 0px 0px 5px,inset #fff 0px 0px 1px);
+    @include box-shadow(#777 1px 1px 5px,inset #fff 0px 0px 1px);
     padding:10px;
     color:#fff;
     width:440px;
     margin:5px;
     &:hover{
-        @include grayGradientHover;
-        border:1px solid #222;
-        @include shadowMenuDark;
     }
     font-size:1em;
     h1 {
@@ -50,6 +47,7 @@ div.information {
 	border: 1px solid #febf04;
 	@include box-shadow($shadow5, $shadow1);
 	padding:15px;
+	clear:both;
 	&:after {
 		position:absolute;
 		right:-50px;
@@ -68,7 +66,13 @@ div.information {
 	}
 	span.h4 {
 		margin-top:0px;
-	    @include box-shadow(#fff 0px 1px 1px);		
+	    @include box-shadow(#fff 0px 1px 1px);
+	    border-bottom:1px solid #febf04;		
+	}
+	span.h5 {
+		margin-top:0px;
+	    @include box-shadow(#fff 0px 1px 1px);
+	    border-bottom:1px solid #febf04;		
 	}
 }
 
@@ -152,4 +156,20 @@ div.comment {
 	@include background-image(linear-gradient(top,  #f2f6f8 0%,#d8e1e7 50%,#b5c6d0 51%,#e0eff9 100%));
 	border:1px solid #e0eff9;
 	margin:0px;
+	margin-top: 10px;
 }
+
+div.whiteBox {
+	background-color: rgb(255,255,255);
+	@include filter-gradient(#ffffff, #ffffff, vertical);
+	@include background-image(linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%));
+	@include border-radius(4px);
+	@include box-shadow(1px 1px 5px #777);
+	margin-top: 10px;
+	padding:5px;
+	span.h4 {
+		margin-top:0px;
+	    @include box-shadow(#fff 0px 1px 1px);		
+	}
+}
+

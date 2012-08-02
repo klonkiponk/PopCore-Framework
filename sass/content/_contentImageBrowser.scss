@@ -1,0 +1,19 @@
+/**************************************\
+		   CONTENT - IMAGEBROWSER
+\**************************************/
+
+
+div.imageBrowserSingleImage {
+	//border:1px solid orange;
+	float:left;
+	box-sizing: border-box;
+	width:140px;
+	margin: 5px;
+	position: relative;
+	@include box-shadow(1px 1px 5px #333);
+	img {
+		margin:0px;
+		margin: 0px auto;
+		display: block;
+	}
+}

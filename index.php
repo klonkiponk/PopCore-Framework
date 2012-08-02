@@ -54,8 +54,8 @@
                 if(!empty($row['image'])){
 	                echo "<img style='width:220px;float:right;' src='./img/".$row['image']."'/>\n";
                 }
-                echo stripslashes($row['content']);
-
+                //echo stripslashes($row['content']);
+                echo $row['content'];
                 if(!empty($row['php_code'])){echo "<label><h4>EXAMPLE:</h4></label>";}
                 eval($row['php_code']);
                 //if(!empty($row['php_code'])){echo "<label><h4>CODE FOR THE EXAMPLE:</h4></label>";echo con_createSyntaxHighlight($row['php_code'],'text/x-php','php_code');}
@@ -73,6 +73,12 @@
 						break;
 					case "PERL":
 							$row['code_type'] = "perl";
+						break;
+					case "XML":
+							$row['code_type'] = "xml";
+						break;	
+					case "JAVASCRIPT":
+							$row['code_type'] = "javascript";
 						break;
                     default:
                             $row['code_type'] = "php";
@@ -97,7 +103,7 @@
 	                        // - DEBUG - //
 	                        //echo "<h2>Predecessor: ".$predecessor."</h2>"; //
 	                        
-	                        echo "\n\n<form style='display:inline; float:right; text-align:right;' action=\".".$_SERVER['REQUEST_URI']."\" method=\"post\">
+	                        echo "\n\n<form style='display:inline; float:right; text-align:right; margin-right:4px;' action=\".".$_SERVER['REQUEST_URI']."\" method=\"post\">
                         <button type='submit' name='action' class='button order' value='changeOrder' >MOVE UP</button> 
                         <input type='hidden' name='thisOrder' value='{$row['contentorder']}'/>
                         <input type='hidden' name='table' value='page_content'/> 

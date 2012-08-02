@@ -8,14 +8,14 @@
         if (isset($_SESSION['loggedin'])){
             switch ($_SESSION['role']) {
                 case 9: //admin
-                $sql = "SELECT sub,name,pid FROM pages WHERE deleted != 1 AND type <= 300";
+                $sql = "SELECT sub,name,pid FROM pages WHERE deleted != 1 AND type <= 300 ORDER BY pageorder";
                     break;
                 case 1: //LoggedIn
-                    $sql = "SELECT sub,name,pid FROM pages WHERE deleted != 1 AND permission <= 1 AND type < 300";
+                    $sql = "SELECT sub, name, pid FROM pages WHERE deleted != 1 AND permission <= 1 AND type < 300 ORDER BY pageorder";
                     break;
             }
         } else {
-            $sql = "SELECT sub,name,pid FROM pages WHERE deleted != 1 AND permission = 0 AND type < 300";
+            $sql = "SELECT sub, name, pid FROM pages WHERE deleted != 1 AND permission = 0 AND type < 300 ORDER BY pageorder";
         }
         $result = $GLOBALS['DB']->query( $sql );
 
@@ -47,7 +47,7 @@
                 $subSectionActive = 0;
 					
                 //CHECK if current page is a active section
-                $sqlSectionCheckActive = "SELECT pid,name FROM pages WHERE sub={$chapter['pid']}";
+                $sqlSectionCheckActive = "SELECT pid, name FROM pages WHERE sub={$chapter['pid']} ORDER BY pageorder";
                 $sectionCheckActive = $GLOBALS['DB']->query( $sqlSectionCheckActive );
                 if ( $sectionCheckActive->num_rows != 0) {
                     while ($section = $sectionCheckActive->fetch_array()) {
@@ -57,7 +57,7 @@
                         }
                         
                         //CHECK if current page is even a subsection
-                        $sqlSubSectionCheckActive = "SELECT pid,name FROM pages WHERE sub={$section['pid']}";
+                        $sqlSubSectionCheckActive = "SELECT pid,name FROM pages WHERE sub={$section['pid']} ORDER BY pageorder";
                         $subSectionCheckActive = $GLOBALS['DB']->query( $sqlSubSectionCheckActive );
                         if ( $subSectionCheckActive->num_rows != 0) {
 		                    while ($subSection = $subSectionCheckActive->fetch_array()) {
@@ -93,7 +93,7 @@
                 
                 
                 // CREATE SECTION MENU
-                $sqlSections = "SELECT pid,name FROM pages WHERE sub={$chapter['pid']}";
+                $sqlSections = "SELECT pid, name FROM pages WHERE sub={$chapter['pid']} ORDER BY pageorder";
                 $sections = $GLOBALS['DB']->query( $sqlSections );
                     
                     if ( $sections->num_rows != 0 ) {
@@ -103,7 +103,7 @@
 	                        if ($section['pid'] == $_GET['id']){
 	                            $menu .= 'active';
 	                        }
-	                        $sqlSubSectionCheckActive = "SELECT pid FROM pages WHERE sub={$section['pid']}";
+	                        $sqlSubSectionCheckActive = "SELECT pid FROM pages WHERE sub={$section['pid']} ORDER BY pageorder";
 	                        $subSectionCheckActive = $GLOBALS['DB']->query( $sqlSubSectionCheckActive );
 	                        if ( $subSectionCheckActive->num_rows != 0) {
 		                    	while ($subSection = $subSectionCheckActive->fetch_array()) {
@@ -120,7 +120,7 @@
 	                        
 	                        
 	                        //CREATE SUBSECTION MENU
-	                        $sqlSubSections = "SELECT pid,name FROM pages WHERE sub={$section['pid']}";
+	                        $sqlSubSections = "SELECT pid, IF (LENGTH(name) > 20, CONCAT(LEFT(name, 20), '...'), name) AS name  FROM pages WHERE sub={$section['pid']} ORDER BY pageorder";
 	                        $subSections = $GLOBALS['DB']->query($sqlSubSections);
 	                        
 	                        if ( $subSections->num_rows != 0 ) {
@@ -171,14 +171,14 @@ function con_createSubNavigation()
     if (isset($_SESSION['loggedin'])){
        switch ($_SESSION['role']) {
            case 9: //admin
-	           $sql = "SELECT name,pid FROM pages WHERE sub={$GLOBALS['chapter']} AND deleted != 1 AND type <= 300";
+	           $sql = "SELECT name,pid FROM pages WHERE sub={$GLOBALS['chapter']} AND deleted != 1 AND type <= 300 ORDER BY pageorder";
 	           break;
            case 1: //LoggedIn
-               $sql = "SELECT name,pid FROM pages WHERE sub={$GLOBALS['chapter']} AND deleted != 1 AND permission <= 1 AND type < 300";
+               $sql = "SELECT name,pid FROM pages WHERE sub={$GLOBALS['chapter']} AND deleted != 1 AND permission <= 1 AND type < 300 ORDER BY pageorder";
                break;
         }
     } else {
-            $sql = "SELECT name,pid FROM pages WHERE sub={$GLOBALS['chapter']} AND deleted != 1 AND permission = 0 AND type < 300";
+            $sql = "SELECT name,pid FROM pages WHERE sub={$GLOBALS['chapter']} AND deleted != 1 AND permission = 0 AND type < 300 ORDER BY pageorder";
     }
     $result = $GLOBALS['DB']->query( $sql );
 	if ($result->num_rows != 0){
@@ -188,7 +188,7 @@ function con_createSubNavigation()
 			
 			
 			$submenu .= "<ul>";
-			$sqlSubSections = "SELECT pid,name FROM pages WHERE sub={$section['pid']}";
+	                        $sqlSubSections = "SELECT pid, IF (LENGTH(name) > 20, CONCAT(LEFT(name, 20), '...'), name) AS name  FROM pages WHERE sub={$section['pid']} ORDER BY pageorder";
 			$subSections = $GLOBALS['DB']->query($sqlSubSections);
 			while ($subSection = $subSections->fetch_array()) {
 				$submenu .= "<li class='subSection'><a class='button' href='index.php?id=".$subSection['pid']."'>{$subSection['name']}</a>";

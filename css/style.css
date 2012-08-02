@@ -1,4 +1,4 @@
-/* line 17, ../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, ../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -19,38 +19,38 @@ time, mark, audio, video {
   font: inherit;
   vertical-align: baseline; }
 
-/* line 20, ../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 20, ../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 body {
   line-height: 1; }
 
-/* line 22, ../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none; }
 
-/* line 24, ../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/* line 26, ../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle; }
 
-/* line 28, ../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none; }
-  /* line 101, ../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+  /* line 101, ../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
   q:before, q:after, blockquote:before, blockquote:after {
     content: "";
     content: none; }
 
-/* line 30, ../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none; }
 
-/* line 114, ../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 114, ../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block; }
 
@@ -203,6 +203,10 @@ body {
 /* line 31, ../sass/_config.scss */
 hr {
   border: none; }
+
+/* line 36, ../sass/_config.scss */
+.fancybox-close {
+  display: none; }
 
 /* line 1, ../sass/_sys.scss */
 .floatleft {
@@ -2244,53 +2248,29 @@ div.blackbox {
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px;
-  -webkit-box-shadow: black 0px 0px 5px, inset white 0px 0px 1px;
-  -moz-box-shadow: black 0px 0px 5px, inset white 0px 0px 1px;
-  box-shadow: black 0px 0px 5px, inset white 0px 0px 1px;
+  -webkit-box-shadow: #777777 1px 1px 5px, inset white 0px 0px 1px;
+  -moz-box-shadow: #777777 1px 1px 5px, inset white 0px 0px 1px;
+  box-shadow: #777777 1px 1px 5px, inset white 0px 0px 1px;
   padding: 10px;
   color: #fff;
   width: 440px;
   margin: 5px;
   font-size: 1em; }
-  /* line 21, ../sass/content/_contentDivs.scss */
-  div.blackbox:hover {
-    background: #474747;
-    /* Old browsers */
-    background: -moz-linear-gradient(top, #474747 0%, #3c3c3c 50%, #2c2c2c 51%, #474747 100%);
-    /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #474747), color-stop(50%, #3c3c3c), color-stop(51%, #2c2c2c), color-stop(100%, #474747));
-    /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #474747 0%, #3c3c3c 50%, #2c2c2c 51%, #474747 100%);
-    /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #474747 0%, #3c3c3c 50%, #2c2c2c 51%, #474747 100%);
-    /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #474747 0%, #3c3c3c 50%, #2c2c2c 51%, #474747 100%);
-    /* IE10+ */
-    background: linear-gradient(top, #474747 0%, #3c3c3c 50%, #2c2c2c 51%, #474747 100%);
-    /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#474747', endColorstr='#474747',GradientType=0 );
-    /* IE6-9 */
-    border: 1px solid #222;
-    -ms-box-shadow: black 1px 1px 1px, inset rgba(0, 0, 0, 0.7) 0 0 20px;
-    -o-box-shadow: black 1px 1px 1px, inset rgba(0, 0, 0, 0.7) 0 0 20px;
-    -moz-box-shadow: black 1px 1px 1px, inset rgba(0, 0, 0, 0.7) 0 0 20px;
-    -webkit-box-shadow: black 1px 1px 1px, inset rgba(0, 0, 0, 0.7) 0 0 20px;
-    box-shadow: black 1px 1px 1px, inset rgba(0, 0, 0, 0.7) 0 0 20px; }
-  /* line 27, ../sass/content/_contentDivs.scss */
+  /* line 24, ../sass/content/_contentDivs.scss */
   div.blackbox h1 {
     text-shadow: black 1px 1px 2px;
     font-size: 17px; }
 
-/* line 32, ../sass/content/_contentDivs.scss */
+/* line 29, ../sass/content/_contentDivs.scss */
 .half {
   float: left; }
-  /* line 34, ../sass/content/_contentDivs.scss */
+  /* line 31, ../sass/content/_contentDivs.scss */
   .half:nth-child(even):after {
     content: ".";
     clear: both;
     display: none; }
 
-/* line 41, ../sass/content/_contentDivs.scss */
+/* line 38, ../sass/content/_contentDivs.scss */
 div.information {
   border-radius: 5px;
   margin-top: 1em;
@@ -2310,8 +2290,9 @@ div.information {
   -webkit-box-shadow: inset 0px 1px 5px white, 0px 1px 2px #555555;
   -moz-box-shadow: inset 0px 1px 5px white, 0px 1px 2px #555555;
   box-shadow: inset 0px 1px 5px white, 0px 1px 2px #555555;
-  padding: 15px; }
-  /* line 53, ../sass/content/_contentDivs.scss */
+  padding: 15px;
+  clear: both; }
+  /* line 51, ../sass/content/_contentDivs.scss */
   div.information:after {
     position: absolute;
     right: -50px;
@@ -2322,20 +2303,28 @@ div.information {
     content: "R";
     color: #febf04;
     text-shadow: 1px 1px 0px #333; }
-  /* line 65, ../sass/content/_contentDivs.scss */
+  /* line 63, ../sass/content/_contentDivs.scss */
   div.information span.h3 {
     margin-top: 0px;
     -webkit-box-shadow: white 0px 1px 1px;
     -moz-box-shadow: white 0px 1px 1px;
     box-shadow: white 0px 1px 1px; }
-  /* line 69, ../sass/content/_contentDivs.scss */
+  /* line 67, ../sass/content/_contentDivs.scss */
   div.information span.h4 {
     margin-top: 0px;
     -webkit-box-shadow: white 0px 1px 1px;
     -moz-box-shadow: white 0px 1px 1px;
-    box-shadow: white 0px 1px 1px; }
+    box-shadow: white 0px 1px 1px;
+    border-bottom: 1px solid #febf04; }
+  /* line 72, ../sass/content/_contentDivs.scss */
+  div.information span.h5 {
+    margin-top: 0px;
+    -webkit-box-shadow: white 0px 1px 1px;
+    -moz-box-shadow: white 0px 1px 1px;
+    box-shadow: white 0px 1px 1px;
+    border-bottom: 1px solid #febf04; }
 
-/* line 75, ../sass/content/_contentDivs.scss */
+/* line 79, ../sass/content/_contentDivs.scss */
 div.homework {
   border-radius: 5px;
   margin-top: 1em;
@@ -2357,7 +2346,7 @@ div.homework {
   -moz-box-shadow: inset 0px 1px 5px white, 0px 1px 2px #555555;
   box-shadow: inset 0px 1px 5px white, 0px 1px 2px #555555;
   padding: 15px; }
-  /* line 88, ../sass/content/_contentDivs.scss */
+  /* line 92, ../sass/content/_contentDivs.scss */
   div.homework:after {
     position: absolute;
     right: -50px;
@@ -2368,23 +2357,23 @@ div.homework {
     content: "A";
     color: #98bede;
     text-shadow: 1px 1px 0px #333; }
-  /* line 99, ../sass/content/_contentDivs.scss */
+  /* line 103, ../sass/content/_contentDivs.scss */
   div.homework span.h3 {
     margin-top: 0px;
     -webkit-box-shadow: white 0px 1px 1px;
     -moz-box-shadow: white 0px 1px 1px;
     box-shadow: white 0px 1px 1px; }
-  /* line 103, ../sass/content/_contentDivs.scss */
+  /* line 107, ../sass/content/_contentDivs.scss */
   div.homework span.h4 {
     margin-top: 0px;
     -webkit-box-shadow: white 0px 1px 1px;
     -moz-box-shadow: white 0px 1px 1px;
     box-shadow: white 0px 1px 1px; }
-  /* line 107, ../sass/content/_contentDivs.scss */
+  /* line 111, ../sass/content/_contentDivs.scss */
   div.homework ul {
     list-style: square; }
 
-/* line 113, ../sass/content/_contentDivs.scss */
+/* line 117, ../sass/content/_contentDivs.scss */
 div.emphasize {
   border-radius: 5px;
   margin-top: 1em;
@@ -2409,7 +2398,7 @@ div.emphasize {
   -moz-box-shadow: inset 0px 1px 5px white, 0px 1px 2px #555555;
   box-shadow: inset 0px 1px 5px white, 0px 1px 2px #555555;
   padding: 15px; }
-  /* line 131, ../sass/content/_contentDivs.scss */
+  /* line 135, ../sass/content/_contentDivs.scss */
   div.emphasize:after {
     position: absolute;
     right: -50px;
@@ -2420,13 +2409,13 @@ div.emphasize {
     content: "e";
     color: #ff5c5c;
     text-shadow: -1px -1px 0px #333333; }
-  /* line 142, ../sass/content/_contentDivs.scss */
+  /* line 146, ../sass/content/_contentDivs.scss */
   div.emphasize:before {
     content: ".";
     display: none;
     clear: both; }
 
-/* line 149, ../sass/content/_contentDivs.scss */
+/* line 153, ../sass/content/_contentDivs.scss */
 div.comment {
   background-color: #f2f6f8;
   *zoom: 1;
@@ -2438,7 +2427,36 @@ div.comment {
   background-image: -ms-linear-gradient(top, #f2f6f8 0%, #d8e1e7 50%, #b5c6d0 51%, #e0eff9 100%);
   background-image: linear-gradient(top, #f2f6f8 0%, #d8e1e7 50%, #b5c6d0 51%, #e0eff9 100%);
   border: 1px solid #e0eff9;
-  margin: 0px; }
+  margin: 0px;
+  margin-top: 10px; }
+
+/* line 162, ../sass/content/_contentDivs.scss */
+div.whiteBox {
+  background-color: white;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFFFFFFF', endColorstr='#FFFFFFFF');
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(50%, #f3f3f3), color-stop(51%, #ededed), color-stop(100%, #ffffff));
+  background-image: -webkit-linear-gradient(top, #ffffff 0%, #f3f3f3 50%, #ededed 51%, #ffffff 100%);
+  background-image: -moz-linear-gradient(top, #ffffff 0%, #f3f3f3 50%, #ededed 51%, #ffffff 100%);
+  background-image: -o-linear-gradient(top, #ffffff 0%, #f3f3f3 50%, #ededed 51%, #ffffff 100%);
+  background-image: -ms-linear-gradient(top, #ffffff 0%, #f3f3f3 50%, #ededed 51%, #ffffff 100%);
+  background-image: linear-gradient(top, #ffffff 0%, #f3f3f3 50%, #ededed 51%, #ffffff 100%);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 1px 1px 5px #777777;
+  -moz-box-shadow: 1px 1px 5px #777777;
+  box-shadow: 1px 1px 5px #777777;
+  margin-top: 10px;
+  padding: 5px; }
+  /* line 170, ../sass/content/_contentDivs.scss */
+  div.whiteBox span.h4 {
+    margin-top: 0px;
+    -webkit-box-shadow: white 0px 1px 1px;
+    -moz-box-shadow: white 0px 1px 1px;
+    box-shadow: white 0px 1px 1px; }
 
 /**************************************\
 			   CONTENT - P
@@ -2451,19 +2469,50 @@ div.comment {
 #content table thead tr th {
   padding: 3px;
   font-weight: bold;
-  width: 30%;
   border-bottom: 1px solid gray; }
-/* line 16, ../sass/content/_contentTables.scss */
+/* line 15, ../sass/content/_contentTables.scss */
 #content table tbody tr:nth-Child(even) {
   background-color: lightgray;
   text-shadow: 1px 1px 0px white; }
-/* line 20, ../sass/content/_contentTables.scss */
+/* line 19, ../sass/content/_contentTables.scss */
 #content table tbody tr td {
-  padding: 3px; }
-  /* line 22, ../sass/content/_contentTables.scss */
-  #content table tbody tr td:first-Child {
-    border-right: 1px solid gray;
-    font-weight: bold; }
+  padding: 3px;
+  border: 1px solid silver;
+  min-width: 200px; }
+
+/* line 1, ../sass/content/_contentSpans.scss */
+span.attribute:before {
+  content: '"'; }
+
+/* line 4, ../sass/content/_contentSpans.scss */
+span.attribute:after {
+  content: '"'; }
+
+/* line 8, ../sass/content/_contentSpans.scss */
+a.download:before {
+  font-family: SymbolFont;
+  content: "Z";
+  color: blue;
+  margin-right: 5px; }
+
+/**************************************\
+		   CONTENT - IMAGEBROWSER
+\**************************************/
+/* line 6, ../sass/content/_contentImageBrowser.scss */
+div.imageBrowserSingleImage {
+  float: left;
+  box-sizing: border-box;
+  width: 140px;
+  margin: 5px;
+  position: relative;
+  -webkit-box-shadow: 1px 1px 5px #333333;
+  -moz-box-shadow: 1px 1px 5px #333333;
+  box-shadow: 1px 1px 5px #333333; }
+  /* line 14, ../sass/content/_contentImageBrowser.scss */
+  div.imageBrowserSingleImage img {
+    margin: 0px;
+    margin: 0px auto;
+    display: block; }
 
 /**************************************\
 		   CONTENT - BUTTONS
@@ -2703,12 +2752,12 @@ input::-moz-focus-inner {
 /**************************************\
 	   STANDARD CONTENT ELEMENTS
 \**************************************/
-/* line 19, ../sass/content/_content.scss */
+/* line 21, ../sass/content/_content.scss */
 pre, textarea, code {
   font-family: "UbuntuMonoRegular", monotype;
   font-size: 1em; }
 
-/* line 23, ../sass/content/_content.scss */
+/* line 25, ../sass/content/_content.scss */
 code {
   background: #eee;
   padding-left: 5px;
@@ -2717,15 +2766,15 @@ code {
   -moz-box-shadow: inset 1px 1px 0px #777777, 1px 1px 0px white;
   box-shadow: inset 1px 1px 0px #777777, 1px 1px 0px white; }
 
-/* line 28, ../sass/content/_content.scss */
+/* line 30, ../sass/content/_content.scss */
 strong {
   font-weight: bold; }
 
-/* line 31, ../sass/content/_content.scss */
+/* line 33, ../sass/content/_content.scss */
 em {
   font-style: italic; }
 
-/* line 35, ../sass/content/_content.scss */
+/* line 37, ../sass/content/_content.scss */
 #content a {
   color: #333;
   font-weight: bold;
@@ -2737,11 +2786,11 @@ em {
 		font-weight: normal;
 		@include text-shadow(1px 1px 0px #333);
 	}*/ }
-  /* line 46, ../sass/content/_content.scss */
+  /* line 48, ../sass/content/_content.scss */
   #content a:hover {
     text-shadow: 1px 1px 0px white; }
 
-/* line 51, ../sass/content/_content.scss */
+/* line 53, ../sass/content/_content.scss */
 blockquote {
   font-style: italic;
   margin: 20px;
@@ -2750,21 +2799,21 @@ blockquote {
   background: rgba(255, 255, 255, 0.8);
   color: gray; }
 
-/* line 60, ../sass/content/_content.scss */
+/* line 62, ../sass/content/_content.scss */
 select {
   display: block; }
 
-/* line 64, ../sass/content/_content.scss */
+/* line 66, ../sass/content/_content.scss */
 #content p {
   text-align: justify;
   margin-bottom: 5px; }
 
-/* line 68, ../sass/content/_content.scss */
+/* line 70, ../sass/content/_content.scss */
 .important {
   color: red;
   font-weight: bold; }
 
-/* line 72, ../sass/content/_content.scss */
+/* line 74, ../sass/content/_content.scss */
 time {
   float: right;
   color: #f2f2f2;
@@ -2774,11 +2823,11 @@ time {
   position: absolute;
   top: 29px;
   right: 15px; }
-  /* line 81, ../sass/content/_content.scss */
+  /* line 83, ../sass/content/_content.scss */
   time:hover {
     color: #333; }
 
-/* line 85, ../sass/content/_content.scss */
+/* line 87, ../sass/content/_content.scss */
 .gradientbox {
   width: 198px;
   height: 173px;
@@ -2797,7 +2846,7 @@ time {
   background: #fff;
   position: relative; }
 
-/* line 95, ../sass/content/_content.scss */
+/* line 97, ../sass/content/_content.scss */
 .gradientbox:hover {
   background: white;
   /* Old browsers */
@@ -2816,7 +2865,7 @@ time {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 );
   /* IE6-9 */ }
 
-/* line 106, ../sass/content/_content.scss */
+/* line 108, ../sass/content/_content.scss */
 pre.print_r {
   padding-left: 15px;
   border: 2px solid #ccc;
@@ -2828,7 +2877,7 @@ pre.print_r {
   position: relative;
   overflow: hidden; }
 
-/* line 116, ../sass/content/_content.scss */
+/* line 118, ../sass/content/_content.scss */
 pre.print_r:after {
   position: absolute;
   top: 20px;
@@ -2860,7 +2909,7 @@ pre.print_r:after {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg); }
 
-/* line 139, ../sass/content/_content.scss */
+/* line 141, ../sass/content/_content.scss */
 .notes {
   background: url("../img/papier2.png") -1px -4px;
   width: 100%;
@@ -2875,41 +2924,33 @@ pre.print_r:after {
   -o-border-radius: 5px;
   border-radius: 5px; }
 
-/* line 149, ../sass/content/_content.scss */
+/* line 151, ../sass/content/_content.scss */
 .height10 {
   height: 5em; }
 
-/* line 152, ../sass/content/_content.scss */
+/* line 154, ../sass/content/_content.scss */
 .height20 {
   height: 10em; }
 
-/* line 155, ../sass/content/_content.scss */
+/* line 157, ../sass/content/_content.scss */
 .height50 {
   height: 20em; }
 
-/* line 158, ../sass/content/_content.scss */
+/* line 160, ../sass/content/_content.scss */
 .height50 {
   height: 30em; }
 
-/* line 161, ../sass/content/_content.scss */
+/* line 163, ../sass/content/_content.scss */
 .height70 {
   height: 30em; }
 
-/* line 164, ../sass/content/_content.scss */
+/* line 166, ../sass/content/_content.scss */
 .height90 {
   height: 30em; }
 
-/* line 167, ../sass/content/_content.scss */
+/* line 169, ../sass/content/_content.scss */
 .height100 {
   height: 30em; }
-
-/* line 171, ../sass/content/_content.scss */
-span.attribute:before {
-  content: '"'; }
-
-/* line 174, ../sass/content/_content.scss */
-span.attribute:after {
-  content: '"'; }
 
 /**************************************\
 GESHI - (CODE WITH SYNTAX HIGHLIGHTING)
@@ -2918,12 +2959,12 @@ GESHI - (CODE WITH SYNTAX HIGHLIGHTING)
 geSHi Wrapper
 \************/
 /* line 9, ../sass/syntax/_geSHi.scss */
-div.geshi {
+#content div.geshi {
   overflow: hidden;
   position: relative;
   margin-top: 2em; }
   /* line 13, ../sass/syntax/_geSHi.scss */
-  div.geshi table {
+  #content div.geshi table {
     overflow: none;
     min-height: 75px;
     display: block;
@@ -2941,23 +2982,32 @@ div.geshi {
     position: relative;
     margin-top: 0px; }
     /* line 24, ../sass/syntax/_geSHi.scss */
-    div.geshi table td.ln {
+    #content div.geshi table td {
+      border: 0px; }
+    /* line 28, ../sass/syntax/_geSHi.scss */
+    #content div.geshi table td.ln {
       font-weight: normal;
       padding: 0px;
       padding-right: 3px;
       text-align: right;
+      border: 0px;
       border-right: 1px solid silver;
       margin: 0px;
       border-top-left-radius: 4px;
       -moz-border-radius-topleft: 4px;
       border-bottom-left-radius: 4px;
       -moz-border-radius-bottomleft: 4px;
-      color: #999; }
-    /* line 35, ../sass/syntax/_geSHi.scss */
-    div.geshi table pre {
+      color: #999;
+      min-width: 0px;
+      width: 20px; }
+      /* line 41, ../sass/syntax/_geSHi.scss */
+      #content div.geshi table td.ln pre {
+        padding-left: 0px; }
+    /* line 45, ../sass/syntax/_geSHi.scss */
+    #content div.geshi table pre {
       margin: 0px; }
-    /* line 38, ../sass/syntax/_geSHi.scss */
-    div.geshi table:after {
+    /* line 48, ../sass/syntax/_geSHi.scss */
+    #content div.geshi table:after {
       position: absolute;
       top: 20px;
       right: -45px;
@@ -2990,145 +3040,179 @@ div.geshi {
 /*********************************************\
 For Each Programming Language another table.XXX
 \*********************************************/
-/* line 68, ../sass/syntax/_geSHi.scss */
+/* line 78, ../sass/syntax/_geSHi.scss */
 table.html5:after {
   content: "HTML"; }
-/* line 71, ../sass/syntax/_geSHi.scss */
+/* line 81, ../sass/syntax/_geSHi.scss */
 table.html5 .imp {
   font-weight: bold;
   color: orange; }
-/* line 74, ../sass/syntax/_geSHi.scss */
+/* line 84, ../sass/syntax/_geSHi.scss */
 table.html5 .kw2 {
   color: #4169e1;
   font-weight: bold; }
-/* line 78, ../sass/syntax/_geSHi.scss */
+/* line 88, ../sass/syntax/_geSHi.scss */
 table.html5 .kw3 {
   color: #4169e1;
   font-style: italic; }
-/* line 82, ../sass/syntax/_geSHi.scss */
+/* line 92, ../sass/syntax/_geSHi.scss */
 table.html5 .es0 {
   color: #4169e1;
   font-weight: bold; }
-/* line 86, ../sass/syntax/_geSHi.scss */
+/* line 96, ../sass/syntax/_geSHi.scss */
 table.html5 .br0 {
   color: #4169e1; }
-/* line 89, ../sass/syntax/_geSHi.scss */
+/* line 99, ../sass/syntax/_geSHi.scss */
 table.html5 .sy0 {
   color: rgba(65, 105, 225, 0.7); }
-/* line 92, ../sass/syntax/_geSHi.scss */
+/* line 102, ../sass/syntax/_geSHi.scss */
 table.html5 .st0 {
   color: green; }
-/* line 95, ../sass/syntax/_geSHi.scss */
+/* line 105, ../sass/syntax/_geSHi.scss */
 table.html5 .nu0 {
   color: red; }
-/* line 98, ../sass/syntax/_geSHi.scss */
+/* line 108, ../sass/syntax/_geSHi.scss */
 table.html5 .sc-2 {
   color: red; }
-/* line 101, ../sass/syntax/_geSHi.scss */
+/* line 111, ../sass/syntax/_geSHi.scss */
 table.html5 .sc-1 {
   color: orange;
   font-style: italic; }
-/* line 104, ../sass/syntax/_geSHi.scss */
+/* line 114, ../sass/syntax/_geSHi.scss */
 table.html5 .sc0 {
   color: red; }
-/* line 107, ../sass/syntax/_geSHi.scss */
+/* line 117, ../sass/syntax/_geSHi.scss */
 table.html5 .sc1 {
   color: red; }
-/* line 110, ../sass/syntax/_geSHi.scss */
+/* line 120, ../sass/syntax/_geSHi.scss */
 table.html5 .sc2 {
   color: rgba(65, 105, 225, 0.7); }
 
-/* line 116, ../sass/syntax/_geSHi.scss */
+/* line 125, ../sass/syntax/_geSHi.scss */
 table.css:after {
   content: "CSS"; }
-/* line 119, ../sass/syntax/_geSHi.scss */
+/* line 128, ../sass/syntax/_geSHi.scss */
 table.css .imp {
   font-weight: bold;
   color: red; }
-/* line 120, ../sass/syntax/_geSHi.scss */
+/* line 129, ../sass/syntax/_geSHi.scss */
 table.css .kw1 {
   color: rgba(65, 105, 225, 0.7);
   font-weight: bold; }
-/* line 124, ../sass/syntax/_geSHi.scss */
+/* line 133, ../sass/syntax/_geSHi.scss */
 table.css .kw2 {
   color: green; }
-/* line 127, ../sass/syntax/_geSHi.scss */
+/* line 136, ../sass/syntax/_geSHi.scss */
 table.css .co1 {
   color: orange; }
-/* line 128, ../sass/syntax/_geSHi.scss */
+/* line 137, ../sass/syntax/_geSHi.scss */
 table.css .co2 {
   color: fuchsia;
   font-style: italic; }
-/* line 129, ../sass/syntax/_geSHi.scss */
+/* line 138, ../sass/syntax/_geSHi.scss */
 table.css .coMULTI {
   color: orange;
   font-style: italic; }
-/* line 130, ../sass/syntax/_geSHi.scss */
+/* line 139, ../sass/syntax/_geSHi.scss */
 table.css .es0 {
   color: fuchsia;
   font-weight: bold; }
-/* line 131, ../sass/syntax/_geSHi.scss */
+/* line 140, ../sass/syntax/_geSHi.scss */
 table.css .es2 {
   color: fuchsia;
   font-weight: bold; }
-/* line 132, ../sass/syntax/_geSHi.scss */
+/* line 141, ../sass/syntax/_geSHi.scss */
 table.css .br0 {
   color: black; }
-/* line 134, ../sass/syntax/_geSHi.scss */
+/* line 143, ../sass/syntax/_geSHi.scss */
 table.css .sy0 {
   color: black; }
-/* line 136, ../sass/syntax/_geSHi.scss */
+/* line 145, ../sass/syntax/_geSHi.scss */
 table.css .st0 {
   color: black; }
-/* line 137, ../sass/syntax/_geSHi.scss */
+/* line 146, ../sass/syntax/_geSHi.scss */
 table.css .nu0 {
   color: #c5060b; }
-/* line 139, ../sass/syntax/_geSHi.scss */
+/* line 148, ../sass/syntax/_geSHi.scss */
 table.css .re0 {
   color: red; }
-/* line 140, ../sass/syntax/_geSHi.scss */
+/* line 149, ../sass/syntax/_geSHi.scss */
 table.css .re1 {
   color: black;
   font-style: italic; }
-/* line 143, ../sass/syntax/_geSHi.scss */
+/* line 152, ../sass/syntax/_geSHi.scss */
 table.css .re2 {
   color: black; }
-/* line 145, ../sass/syntax/_geSHi.scss */
+/* line 154, ../sass/syntax/_geSHi.scss */
 table.css .re3 {
   color: red; }
 
-/* line 150, ../sass/syntax/_geSHi.scss */
+/* line 159, ../sass/syntax/_geSHi.scss */
 table.php:after {
   content: "PHP"; }
-/* line 153, ../sass/syntax/_geSHi.scss */
+/* line 162, ../sass/syntax/_geSHi.scss */
 table.php a {
   color: #3c4c72; }
-/* line 156, ../sass/syntax/_geSHi.scss */
+/* line 165, ../sass/syntax/_geSHi.scss */
 table.php td.de1 pre.de1 {
   color: #555; }
-/* line 159, ../sass/syntax/_geSHi.scss */
+/* line 168, ../sass/syntax/_geSHi.scss */
 table.php .br0 {
   color: black; }
-/* line 162, ../sass/syntax/_geSHi.scss */
+/* line 171, ../sass/syntax/_geSHi.scss */
 table.php .re0 {
   color: #318495; }
-/* line 165, ../sass/syntax/_geSHi.scss */
+/* line 174, ../sass/syntax/_geSHi.scss */
 table.php .sy0, table.php .sy1 {
   color: blue; }
-/* line 168, ../sass/syntax/_geSHi.scss */
+/* line 177, ../sass/syntax/_geSHi.scss */
 table.php .st0 {
   color: #036a07; }
-/* line 174, ../sass/syntax/_geSHi.scss */
+/* line 183, ../sass/syntax/_geSHi.scss */
 table.php .co1, table.php .co2, table.php .coMULTI {
   color: #ff7f00; }
-/* line 177, ../sass/syntax/_geSHi.scss */
+/* line 186, ../sass/syntax/_geSHi.scss */
 table.php .kw1 {
   color: blue; }
-/* line 180, ../sass/syntax/_geSHi.scss */
+/* line 189, ../sass/syntax/_geSHi.scss */
 table.php .kw2 {
   color: blue; }
-/* line 183, ../sass/syntax/_geSHi.scss */
+/* line 192, ../sass/syntax/_geSHi.scss */
 table.php .st_h {
+  color: green; }
+
+/* line 197, ../sass/syntax/_geSHi.scss */
+table.javascript:after {
+  content: "JAVASCRIPT"; }
+/* line 200, ../sass/syntax/_geSHi.scss */
+table.javascript a {
+  color: #3c4c72; }
+/* line 203, ../sass/syntax/_geSHi.scss */
+table.javascript td.de1 pre.de1 {
+  color: #555; }
+/* line 206, ../sass/syntax/_geSHi.scss */
+table.javascript .br0 {
+  color: black; }
+/* line 209, ../sass/syntax/_geSHi.scss */
+table.javascript .re0 {
+  color: #318495; }
+/* line 212, ../sass/syntax/_geSHi.scss */
+table.javascript .sy0, table.javascript .sy1 {
+  color: blue; }
+/* line 215, ../sass/syntax/_geSHi.scss */
+table.javascript .st0 {
+  color: #036a07; }
+/* line 221, ../sass/syntax/_geSHi.scss */
+table.javascript .co1, table.javascript .co2, table.javascript .coMULTI {
+  color: #ff7f00; }
+/* line 224, ../sass/syntax/_geSHi.scss */
+table.javascript .kw1 {
+  color: blue; }
+/* line 227, ../sass/syntax/_geSHi.scss */
+table.javascript .kw2 {
+  color: blue; }
+/* line 230, ../sass/syntax/_geSHi.scss */
+table.javascript .st_h {
   color: green; }
 
 /* line 17, ../sass/style.scss */
@@ -3143,4 +3227,3 @@ abbr:before {
   font-weight: normal;
   color: #febf04;
   text-shadow: 1px 1px 0px #333333; }
-
