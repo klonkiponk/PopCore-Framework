@@ -430,64 +430,68 @@ img {
 
 /* line 416, ../sass/print.scss */
 .floatleft {
-  float: left; }
+  float: left;
+  margin-left: 0px;
+  margin-top: 0px; }
 
-/* line 420, ../sass/print.scss */
+/* line 422, ../sass/print.scss */
 .floatright {
-  float: right; }
+  float: right;
+  margin-right: 0px;
+  margin-top: 0px; }
 
-/* line 424, ../sass/print.scss */
+/* line 428, ../sass/print.scss */
 .floatCenter {
   margin: 10px auto;
   display: block; }
 
-/* line 429, ../sass/print.scss */
+/* line 433, ../sass/print.scss */
 .small {
   width: 150px; }
 
-/* line 433, ../sass/print.scss */
+/* line 437, ../sass/print.scss */
 .medium {
   width: 50%; }
 
-/* line 437, ../sass/print.scss */
+/* line 441, ../sass/print.scss */
 .large {
   width: 100%; }
 
-/* line 441, ../sass/print.scss */
+/* line 445, ../sass/print.scss */
 img.shadow {
   border: 1px solid gray; }
 
 /**************************************\
 			   TABLES
 \**************************************/
-/* line 449, ../sass/print.scss */
+/* line 453, ../sass/print.scss */
 table td {
   border: 1px solid silver;
   padding: 5px; }
 
-/* line 453, ../sass/print.scss */
+/* line 457, ../sass/print.scss */
 table th {
   border: 1px solid gray;
   font-weight: bold;
   padding: 5px; }
 
-/* line 458, ../sass/print.scss */
+/* line 462, ../sass/print.scss */
 table tr:nth-child(even) {
   background: #eee; }
 
 /**************************************\
 			   BOXES
 \**************************************/
-/* line 467, ../sass/print.scss */
+/* line 471, ../sass/print.scss */
 div.blackbox {
   border: 1px solid #333;
   background: #555;
   color: #fff; }
-  /* line 471, ../sass/print.scss */
+  /* line 475, ../sass/print.scss */
   div.blackbox a {
     color: #fff; }
 
-/* line 476, ../sass/print.scss */
+/* line 480, ../sass/print.scss */
 div.homework {
   border-radius: 5px;
   margin-top: 1em;
@@ -505,7 +509,7 @@ div.homework {
   background-image: linear-gradient(top, #f2f6f8 0%, #b5c6d0 100%);
   border: 1px solid #98bede;
   padding: 10px; }
-  /* line 488, ../sass/print.scss */
+  /* line 492, ../sass/print.scss */
   div.homework:after {
     position: absolute;
     right: -40px;
@@ -516,22 +520,22 @@ div.homework {
     content: "A";
     color: #98bede;
     text-shadow: 1px 1px 0px #333; }
-  /* line 499, ../sass/print.scss */
+  /* line 503, ../sass/print.scss */
   div.homework span.h3 {
     margin-top: 0px;
     border-bottom: 1px solid #98bede; }
-  /* line 503, ../sass/print.scss */
+  /* line 507, ../sass/print.scss */
   div.homework span.h4 {
     margin-top: 0px;
     border-bottom: 1px solid #98bede; }
-  /* line 507, ../sass/print.scss */
+  /* line 511, ../sass/print.scss */
   div.homework span.h5 {
     border-bottom: 1px solid #98bede; }
-  /* line 510, ../sass/print.scss */
+  /* line 514, ../sass/print.scss */
   div.homework ul {
     list-style: square; }
 
-/* line 516, ../sass/print.scss */
+/* line 520, ../sass/print.scss */
 div.information {
   border-radius: 5px;
   margin-top: 15px;
@@ -549,31 +553,31 @@ div.information {
   border: 1px solid #febf04;
   padding: 10px;
   clear: both; }
-  /* line 528, ../sass/print.scss */
+  /* line 532, ../sass/print.scss */
   div.information:after {
     position: absolute;
     right: -40px;
-    top: 10px;
+    top: 0px;
     font-size: 2em;
     line-height: 1em;
     font-family: SymbolFont;
     content: "R";
     color: #febf04;
     text-shadow: 1px 1px 0px #333; }
-  /* line 540, ../sass/print.scss */
+  /* line 544, ../sass/print.scss */
   div.information span.h3 {
     margin-top: 0px;
     -webkit-box-shadow: white 0px 1px 1px;
     -moz-box-shadow: white 0px 1px 1px;
     box-shadow: white 0px 1px 1px; }
-  /* line 544, ../sass/print.scss */
+  /* line 548, ../sass/print.scss */
   div.information span.h4 {
     margin-top: 0px;
     -webkit-box-shadow: white 0px 1px 1px;
     -moz-box-shadow: white 0px 1px 1px;
     box-shadow: white 0px 1px 1px;
     border-bottom: 1px solid #febf04; }
-  /* line 549, ../sass/print.scss */
+  /* line 553, ../sass/print.scss */
   div.information span.h5 {
     margin-top: 0px;
     -webkit-box-shadow: white 0px 1px 1px;
@@ -581,7 +585,7 @@ div.information {
     box-shadow: white 0px 1px 1px;
     border-bottom: 1px solid #febf04; }
 
-/* line 556, ../sass/print.scss */
+/* line 560, ../sass/print.scss */
 div.emphasize {
   border-radius: 5px;
   margin-top: 1em;
@@ -598,7 +602,7 @@ div.emphasize {
   background-image: linear-gradient(top, #febbbb 0%, #fe9090 45%, #ff5c5c 100%);
   border: 1px solid #ff5c5c;
   padding: 10px; }
-  /* line 566, ../sass/print.scss */
+  /* line 570, ../sass/print.scss */
   div.emphasize:after {
     position: absolute;
     right: -40px;
@@ -609,13 +613,13 @@ div.emphasize {
     content: "e";
     color: #ff5c5c;
     text-shadow: -1px -1px 0px #333333; }
-  /* line 577, ../sass/print.scss */
+  /* line 581, ../sass/print.scss */
   div.emphasize:before {
     content: ".";
     display: none;
     clear: both; }
 
-/* line 586, ../sass/print.scss */
+/* line 590, ../sass/print.scss */
 .notes {
   background: url("./img/papier2.png");
   width: 100%;
@@ -626,95 +630,95 @@ div.emphasize {
   -moz-box-shadow: 2px 2px 5px #999999;
   box-shadow: 2px 2px 5px #999999; }
 
-/* line 595, ../sass/print.scss */
+/* line 599, ../sass/print.scss */
 .h10 {
   height: 5em; }
 
-/* line 598, ../sass/print.scss */
+/* line 602, ../sass/print.scss */
 .h20 {
   height: 10em; }
 
-/* line 601, ../sass/print.scss */
+/* line 605, ../sass/print.scss */
 .h30 {
   height: 15em; }
 
-/* line 604, ../sass/print.scss */
+/* line 608, ../sass/print.scss */
 .h40 {
   height: 20em; }
 
-/* line 607, ../sass/print.scss */
+/* line 611, ../sass/print.scss */
 .h50 {
   height: 25em; }
 
-/* line 610, ../sass/print.scss */
+/* line 614, ../sass/print.scss */
 .h60 {
   height: 30em; }
 
-/* line 613, ../sass/print.scss */
+/* line 617, ../sass/print.scss */
 .h70 {
   height: 35em; }
 
-/* line 616, ../sass/print.scss */
+/* line 620, ../sass/print.scss */
 .h80 {
   height: 40em; }
 
 /**************************************\
 			   SPANS
 \**************************************/
-/* line 625, ../sass/print.scss */
+/* line 629, ../sass/print.scss */
 span.tag:before {
   content: "<";
   color: rgba(65, 105, 225, 0.699);
   font-weight: normal; }
 
-/* line 630, ../sass/print.scss */
+/* line 634, ../sass/print.scss */
 span.tag:after {
   content: ">";
   color: rgba(65, 105, 225, 0.699);
   font-weight: normal;
   margin-right: 2px; }
 
-/* line 636, ../sass/print.scss */
+/* line 640, ../sass/print.scss */
 span.tag {
   font-family: UbuntuMonoRegular;
   color: #4169e1;
   font-weight: bold; }
 
-/* line 642, ../sass/print.scss */
+/* line 646, ../sass/print.scss */
 .apache, .apachecontainer {
   color: #378de5;
   font-family: UbuntuMonoRegular; }
 
-/* line 647, ../sass/print.scss */
+/* line 651, ../sass/print.scss */
 span.apachecontainer:before {
   content: "<"; }
 
-/* line 651, ../sass/print.scss */
+/* line 655, ../sass/print.scss */
 span.apachecontainer:after {
   content: ">"; }
 
-/* line 655, ../sass/print.scss */
+/* line 659, ../sass/print.scss */
 .tomcat, .tomcatxmltag {
   color: #df0101;
   font-family: UbuntuMonoRegular; }
 
-/* line 659, ../sass/print.scss */
+/* line 663, ../sass/print.scss */
 span.tomcatxmltag:before {
   content: "<"; }
 
-/* line 662, ../sass/print.scss */
+/* line 666, ../sass/print.scss */
 span.tomcatxmltag:after {
   content: ">"; }
 
-/* line 665, ../sass/print.scss */
+/* line 669, ../sass/print.scss */
 span.attribute:before {
   content: '"'; }
 
-/* line 668, ../sass/print.scss */
+/* line 672, ../sass/print.scss */
 span.attribute:after {
   content: '"'; }
 
-/* line 671, ../sass/print.scss */
+/* line 675, ../sass/print.scss */
 a.anchor:before {
   font-family: "SymbolFont";
   content: "K";
@@ -726,12 +730,12 @@ GESHI - (CODE WITH SYNTAX HIGHLIGHTING)
 /************\
 geSHi Wrapper
 \************/
-/* line 685, ../sass/print.scss */
+/* line 689, ../sass/print.scss */
 div.geshi {
   overflow: hidden;
   position: relative;
   font-size: 0.9em; }
-  /* line 689, ../sass/print.scss */
+  /* line 693, ../sass/print.scss */
   div.geshi table {
     border: 1px solid gray;
     overflow: none;
@@ -746,10 +750,10 @@ div.geshi {
     margin-top: 0px;
     min-height: 85px;
     overflow: hidden; }
-    /* line 699, ../sass/print.scss */
+    /* line 703, ../sass/print.scss */
     div.geshi table td {
       border: 0px; }
-    /* line 702, ../sass/print.scss */
+    /* line 706, ../sass/print.scss */
     div.geshi table td.ln {
       font-weight: normal;
       padding: 0px;
@@ -759,12 +763,12 @@ div.geshi {
       margin: 0px;
       color: #999;
       width: 20px !important; }
-    /* line 713, ../sass/print.scss */
+    /* line 717, ../sass/print.scss */
     div.geshi table td:nth-child(2) {
       padding-left: 10px;
       width: 660px !important;
       overflow: hidden; }
-    /* line 718, ../sass/print.scss */
+    /* line 722, ../sass/print.scss */
     div.geshi table:after {
       position: absolute;
       top: 20px;
@@ -798,212 +802,210 @@ div.geshi {
 /*********************************************\
 For Each Programming Language another table.XXX
 \*********************************************/
-/* line 748, ../sass/print.scss */
+/* line 752, ../sass/print.scss */
 table.html5:after {
   content: "HTML"; }
-/* line 751, ../sass/print.scss */
+/* line 755, ../sass/print.scss */
 table.html5 .imp {
   font-weight: bold;
   color: orange; }
-/* line 754, ../sass/print.scss */
+/* line 758, ../sass/print.scss */
 table.html5 .kw2 {
   color: #4169e1;
   font-weight: bold; }
-/* line 758, ../sass/print.scss */
+/* line 762, ../sass/print.scss */
 table.html5 .kw3 {
   color: #4169e1;
   font-style: italic; }
-/* line 762, ../sass/print.scss */
+/* line 766, ../sass/print.scss */
 table.html5 .es0 {
   color: #4169e1;
   font-weight: bold; }
-/* line 766, ../sass/print.scss */
+/* line 770, ../sass/print.scss */
 table.html5 .br0 {
   color: #4169e1; }
-/* line 769, ../sass/print.scss */
+/* line 773, ../sass/print.scss */
 table.html5 .sy0 {
   color: rgba(65, 105, 225, 0.7); }
-/* line 772, ../sass/print.scss */
+/* line 776, ../sass/print.scss */
 table.html5 .st0 {
   color: green; }
-/* line 775, ../sass/print.scss */
+/* line 779, ../sass/print.scss */
 table.html5 .nu0 {
   color: red; }
-/* line 778, ../sass/print.scss */
+/* line 782, ../sass/print.scss */
 table.html5 .sc-2 {
   color: red; }
-/* line 781, ../sass/print.scss */
+/* line 785, ../sass/print.scss */
 table.html5 .sc-1 {
   color: orange;
   font-style: italic; }
-/* line 784, ../sass/print.scss */
+/* line 788, ../sass/print.scss */
 table.html5 .sc0 {
   color: red; }
-/* line 787, ../sass/print.scss */
+/* line 791, ../sass/print.scss */
 table.html5 .sc1 {
   color: red; }
-/* line 790, ../sass/print.scss */
+/* line 794, ../sass/print.scss */
 table.html5 .sc2 {
   color: rgba(65, 105, 225, 0.7); }
 
-/* line 795, ../sass/print.scss */
+/* line 799, ../sass/print.scss */
 table.css:after {
   content: "CSS"; }
-/* line 798, ../sass/print.scss */
+/* line 802, ../sass/print.scss */
 table.css .imp {
   font-weight: bold;
   color: red; }
-/* line 799, ../sass/print.scss */
+/* line 803, ../sass/print.scss */
 table.css .kw1 {
   color: rgba(65, 105, 225, 0.7);
   font-weight: bold; }
-/* line 803, ../sass/print.scss */
+/* line 807, ../sass/print.scss */
 table.css .kw2 {
   color: green; }
-/* line 806, ../sass/print.scss */
+/* line 810, ../sass/print.scss */
 table.css .co1 {
   color: orange; }
-/* line 807, ../sass/print.scss */
+/* line 811, ../sass/print.scss */
 table.css .co2 {
   color: fuchsia;
   font-style: italic; }
-/* line 808, ../sass/print.scss */
+/* line 812, ../sass/print.scss */
 table.css .coMULTI {
   color: orange;
   font-style: italic; }
-/* line 809, ../sass/print.scss */
+/* line 813, ../sass/print.scss */
 table.css .es0 {
   color: fuchsia;
   font-weight: bold; }
-/* line 810, ../sass/print.scss */
+/* line 814, ../sass/print.scss */
 table.css .es2 {
   color: fuchsia;
   font-weight: bold; }
-/* line 811, ../sass/print.scss */
+/* line 815, ../sass/print.scss */
 table.css .br0 {
   color: black; }
-/* line 813, ../sass/print.scss */
+/* line 817, ../sass/print.scss */
 table.css .sy0 {
   color: black; }
-/* line 815, ../sass/print.scss */
+/* line 819, ../sass/print.scss */
 table.css .st0 {
   color: black; }
-/* line 816, ../sass/print.scss */
+/* line 820, ../sass/print.scss */
 table.css .nu0 {
   color: #c5060b; }
-/* line 818, ../sass/print.scss */
+/* line 822, ../sass/print.scss */
 table.css .re0 {
   color: red; }
-/* line 819, ../sass/print.scss */
+/* line 823, ../sass/print.scss */
 table.css .re1 {
   color: black;
   font-style: italic; }
-/* line 822, ../sass/print.scss */
+/* line 826, ../sass/print.scss */
 table.css .re2 {
   color: black; }
-/* line 824, ../sass/print.scss */
+/* line 828, ../sass/print.scss */
 table.css .re3 {
   color: red; }
 
-/* line 829, ../sass/print.scss */
+/* line 833, ../sass/print.scss */
 table.php:after {
   content: "PHP"; }
-/* line 832, ../sass/print.scss */
+/* line 836, ../sass/print.scss */
 table.php a {
   color: #3c4c72; }
-/* line 835, ../sass/print.scss */
+/* line 839, ../sass/print.scss */
 table.php td.de1 pre.de1 {
   color: #555; }
-/* line 838, ../sass/print.scss */
+/* line 842, ../sass/print.scss */
 table.php .br0 {
   color: black; }
-/* line 841, ../sass/print.scss */
+/* line 845, ../sass/print.scss */
 table.php .re0 {
   color: #318495; }
-/* line 844, ../sass/print.scss */
+/* line 848, ../sass/print.scss */
 table.php .sy0, table.php .sy1 {
   color: blue; }
-/* line 847, ../sass/print.scss */
+/* line 851, ../sass/print.scss */
 table.php .st0 {
   color: #036a07; }
-/* line 853, ../sass/print.scss */
+/* line 857, ../sass/print.scss */
 table.php .co1, table.php .co2, table.php .coMULTI {
   color: #ff7f00; }
-/* line 856, ../sass/print.scss */
+/* line 860, ../sass/print.scss */
 table.php .kw1 {
   color: blue; }
-/* line 859, ../sass/print.scss */
+/* line 863, ../sass/print.scss */
 table.php .kw2 {
   color: blue; }
-/* line 862, ../sass/print.scss */
+/* line 866, ../sass/print.scss */
 table.php .st_h {
   color: green; }
 
-/* line 867, ../sass/print.scss */
+/* line 871, ../sass/print.scss */
 table.javascript:after {
   content: "JAVASCRIPT"; }
-/* line 870, ../sass/print.scss */
+/* line 874, ../sass/print.scss */
 table.javascript a {
   color: #3c4c72; }
-/* line 873, ../sass/print.scss */
+/* line 877, ../sass/print.scss */
 table.javascript td.de1 pre.de1 {
   color: #555; }
-/* line 876, ../sass/print.scss */
+/* line 880, ../sass/print.scss */
 table.javascript .br0 {
   color: black; }
-/* line 879, ../sass/print.scss */
+/* line 883, ../sass/print.scss */
 table.javascript .re0 {
   color: #318495; }
-/* line 882, ../sass/print.scss */
+/* line 886, ../sass/print.scss */
 table.javascript .sy0, table.javascript .sy1 {
   color: blue; }
-/* line 885, ../sass/print.scss */
+/* line 889, ../sass/print.scss */
 table.javascript .st0 {
   color: #036a07; }
-/* line 891, ../sass/print.scss */
+/* line 895, ../sass/print.scss */
 table.javascript .co1, table.javascript .co2, table.javascript .coMULTI {
   color: #ff7f00; }
-/* line 894, ../sass/print.scss */
+/* line 898, ../sass/print.scss */
 table.javascript .kw1 {
   color: blue; }
-/* line 897, ../sass/print.scss */
+/* line 901, ../sass/print.scss */
 table.javascript .kw2 {
   color: blue; }
-/* line 900, ../sass/print.scss */
+/* line 904, ../sass/print.scss */
 table.javascript .st_h {
   color: green; }
 --></style>
 	
 	<div class='titlepage'>
-		<h1>ITSysAdminFwWebSK</h1>
-		F&uuml;UstgSBw<br>
+		<img style='margin-top:250px; margin-bottom:100px' class='floatCenter' src='./img/20120802_20120802_20120802_SysAdminFw_Logo.png' alt='' class='floatCenter'/>
+		<strong style='font-size:2em;'>F&uuml;UstgSBw</strong><br><br>
 		Lehrgruppe C / IX. Inspektion
-		<br/>
-		First Edition
+		<br/><br>
+		<strong>DRAFT</stong>
 		<p>HF Weidinger<br/>L Siegerth</p>
 	</div>
 	
 	<div class='toc' id='toc'><h1>Inhaltsverzeichnis</h1>
 			<ul class='toc'>
-<li class='chapter'><a href='#chapter-1' class='PageRef'>Grundlagen</a></li>
+<li class='chapter'><a href='#chapter-1' class='PageRef'>Einf&uuml;hrung</a></li>
 	<ul>
-<li class='section'><a href='#section-539' class='PageRef'>Links</a></li>
-<ul>
-</ul>	</ul>
+	</ul>
 <li class='chapter'><a href='#chapter-2' class='PageRef'>HTML</a></li>
 	<ul>
 <li class='section'><a href='#section-3' class='PageRef'>Grundlagen HTML</a></li>
 <ul>
 </ul><li class='section'><a href='#section-4' class='PageRef'>Inhalte in HTML</a></li>
 <ul>
-<li class='subSection'><a href='#subSection-508' class='PageRef'>Tables</a></li>
-<li class='subSection'><a href='#subSection-509' class='PageRef'>Headings</a></li>
-<li class='subSection'><a href='#subSection-510' class='PageRef'>Paragraphs</a></li>
-<li class='subSection'><a href='#subSection-511' class='PageRef'>Images</a></li>
-<li class='subSection'><a href='#subSection-512' class='PageRef'>Links</a></li>
-<li class='subSection'><a href='#subSection-513' class='PageRef'>Formulare</a></li>
+<li class='subSection'><a href='#subSection-510' class='PageRef'>Paragraphen</a></li>
 <li class='subSection'><a href='#subSection-515' class='PageRef'>Textformatierung</a></li>
+<li class='subSection'><a href='#subSection-509' class='PageRef'>&Uuml;berschriften</a></li>
 <li class='subSection'><a href='#subSection-516' class='PageRef'>Listen</a></li>
+<li class='subSection'><a href='#subSection-511' class='PageRef'>Bilder</a></li>
+<li class='subSection'><a href='#subSection-512' class='PageRef'>Links</a></li>
+<li class='subSection'><a href='#subSection-508' class='PageRef'>Tabellen</a></li>
+<li class='subSection'><a href='#subSection-513' class='PageRef'>Formulare</a></li>
 <li class='subSection'><a href='#subSection-554' class='PageRef'>Externe Inhalte</a></li>
 </ul><li class='section'><a href='#section-5' class='PageRef'>Struktur in HTML</a></li>
 <ul>
@@ -1015,13 +1017,13 @@ table.javascript .st_h {
 <li class='section'><a href='#section-540' class='PageRef'>CSS - Basics</a></li>
 <ul>
 <li class='subSection'><a href='#subSection-522' class='PageRef'>Schriften</a></li>
-<li class='subSection'><a href='#subSection-545' class='PageRef'>Borders</a></li>
 <li class='subSection'><a href='#subSection-546' class='PageRef'>Farben</a></li>
+<li class='subSection'><a href='#subSection-545' class='PageRef'>R&auml;nder</a></li>
+<li class='subSection'><a href='#subSection-549' class='PageRef'>Breite und H&ouml;he</a></li>
+<li class='subSection'><a href='#subSection-553' class='PageRef'>Hintergr&uuml;nde</a></li>
+<li class='subSection'><a href='#subSection-555' class='PageRef'>Links</a></li>
 <li class='subSection'><a href='#subSection-547' class='PageRef'>Au&szlig;en und Innenabst&auml;nde</a></li>
 <li class='subSection'><a href='#subSection-548' class='PageRef'>das CSS Box Modell</a></li>
-<li class='subSection'><a href='#subSection-549' class='PageRef'>Breite und H&ouml;he</a></li>
-<li class='subSection'><a href='#subSection-553' class='PageRef'>Backgrounds</a></li>
-<li class='subSection'><a href='#subSection-555' class='PageRef'>Links</a></li>
 <li class='subSection'><a href='#subSection-556' class='PageRef'>Einbinden von mehreren CSS Dateien</a></li>
 </ul><li class='section'><a href='#section-541' class='PageRef'>Layouting with CSS</a></li>
 <ul>
@@ -1031,9 +1033,13 @@ table.javascript .st_h {
 <li class='subSection'><a href='#subSection-543' class='PageRef'>text-shadow</a></li>
 <li class='subSection'><a href='#subSection-544' class='PageRef'>box-shadow</a></li>
 <li class='subSection'><a href='#subSection-552' class='PageRef'>CSS - only Slider</a></li>
-<li class='subSection'><a href='#subSection-557' class='PageRef'>Eine einfache Bildergalerie</a></li>
 <li class='subSection'><a href='#subSection-559' class='PageRef'>Bouncing Balls with CSS</a></li>
 <li class='subSection'><a href='#subSection-560' class='PageRef'>border-radius</a></li>
+</ul>	</ul>
+<li class='chapter'><a href='#chapter-558' class='PageRef'>Webseiten</a></li>
+	<ul>
+<li class='section'><a href='#section-561' class='PageRef'>Dynamische Webseiten</a></li>
+<ul>
 </ul>	</ul>
 <li class='chapter'><a href='#chapter-500' class='PageRef'>WEBSERVER</a></li>
 	<ul>
@@ -1070,16 +1076,11 @@ table.javascript .st_h {
 <li class='subSection'><a href='#subSection-531' class='PageRef'>Bereitstellen von Webseiten</a></li>
 <li class='subSection'><a href='#subSection-532' class='PageRef'>Authentifizierung und Autorisierung</a></li>
 </ul>	</ul>
-<li class='chapter'><a href='#chapter-558' class='PageRef'>Webseiten</a></li>
-	<ul>
-<li class='section'><a href='#section-561' class='PageRef'>Dynamische Webseiten</a></li>
-<ul>
-</ul>	</ul>
 <li class='chapter'><a href='#chapter-518' class='PageRef'>Coding Guidelines</a></li>
 	<ul>
-<li class='section'><a href='#section-537' class='PageRef'>CSS</a></li>
+<li class='section'><a href='#section-538' class='PageRef'>HTML</a></li>
 <ul>
-</ul><li class='section'><a href='#section-538' class='PageRef'>HTML</a></li>
+</ul><li class='section'><a href='#section-537' class='PageRef'>CSS</a></li>
 <ul>
 </ul>	</ul>
 </ul>
@@ -1089,99 +1090,119 @@ table.javascript .st_h {
 
 
 
-<section class='chapter' id='chapter-1'><h1>Grundlagen</h1>
+<section class='chapter' id='chapter-1'><h1>Einf&uuml;hrung</h1>
 
+		<article id='article-475'>
+			<h4>ITSysAdminFwWebSK</h4>
+
+			<br />
+<br />
+<br />
+<br />
+<br />
+<a href="./img/20120802_20120802_20120802_SysAdminFw_Logo.png" class="imageZoom"><img src="./img/20120802_20120802_20120802_SysAdminFw_Logo.png" alt="" class="floatCenter"/></a><br />
+<br />
+<br />
+<br />
+<br />
+
+		<article id='article-477'>
+			<h4>Ziele</h4>
+
+			<p>Der Lehrgang ITSysAdminFwWebSK soll Ihnen die Grundlagen der Webentwicklung n&auml;her bringen. Die Inhalte des Lehrgangs gliedern sich wie folgt:</p>
+<span class="h4">Webdesign</span>
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>Entwicklung von Webseiten</li>
+</ul>
+<span class="h4">Webserver</span>
+<ul>
+<li>Apache</li>
+<li>Tomcat</li>
+<li>IIS</li>
+</ul>
+
+<p>Der Lehrgang wird Sie in den ersten beiden Kapiteln in die Programmierung mit der Markup-Language HTML vertraut machen. HTML ist die Sprache mit der Webseiten geschrieben werden. Das folgende Kapitel CSS wird Ihnen beibringen wie Sie mittels der Sprache CSS ihre erstellten HTML-Seiten optisch ansprechend gestalten k&ouml;nnen.<br />
+Diese beiden Kapitel sollen Sie dazu bef&auml;higen selbstst&auml;ndig Webauftritte mit mehrere Seiten in einem ansprechenden Design zu erstellen. Das Kapitel Entwicklung von Webseiten schlie&szlig;t die beiden Kapitel ab. Es wird dort ein komplettes Projekt umgesetzt werden.</p>
+<p>Das zweite gro&szlig;e Bereich behandelt das Thema Einrichtung und Betreuung von Webservern. Sie sollen hier die Einrichtung und Administration von einfachen Webservern lernen. Sie sollten danach auch in der Lage sein, einen Webserver an speziellere Bed&uuml;rfnisse wie der Installation von serverseitigen Erweiterungen anzupassen und zu betreuen.</p>
+<p>Das vorliegende Script soll Ihnen helfen, die im Unterricht erlernten Techniken im Selbststudium zu vertiefen. Es wurde versucht, dieses Script sehr umfangreich zu erstellen und es sind daher auch viele Aufgaben zur eigenen Bearbeitung hinterlegt. Es wird jedoch darauf hingewiesen, dass dieses Script den Unterricht und die aktive Mitarbeit an den Unterrichten nicht ersetzen soll und kann.</p>
+<p>Der Besuch dieses Lehrgang setzt einige Grunderfahrungen voraus. Eine der Vorraussetzung zum Besuch dieses Lehrgangs ist es, den Lehrgang ITFwInfoVarbBw erfolgreich abgeschlossen zu haben. Es wird daher nicht auf die folgenden Themen explizit eingangen, jedoch Kenntnisse vorausgesetzt:</p>
+<div class="information"><span class="h4">Vorraussetzungen</span>
+<ul>
+<li>Sicherer Umgang mit verschiedenen Betriebsystemen</li>
+<li>Kenntnisse im Bereich Netzwerktechnik, speziell:
+
+<ul>
+<li>FTP</li>
+<li>HTTP</li>
+<li>TCP/IP</li>
+<li>DNS</li>
+</ul>
+
+
+</li>
+<li>Kenntnisse in der Betreuung von Windows Server</li>
+
+
+</ul>
+
+</div>
+		<article id='article-476'>
+			<h4>The history of the Internet</h4>
+
+			<iframe width="900" height="506" src="http://www.youtube.com/embed/9hIQjrMHTv4?rel=0" frameborder="0" allowfullscreen></iframe>
 		<article id='article-333'>
 			<h4>Warum &uuml;berhaupt HTML, CSS etc... Ich kann doch auch in C++ programmieren</h4>
 
 			<a href="./img/1343283866-HTML5-logo.png" class="imageZoom"><img src="./img/1343283866-HTML5-logo.png" alt="" class="small floatright"/></a><p>Der gr&ouml;&szlig;te Vorteil in der Programmierung mit HTML, CSS, und co. ist, dass Sie absolut Plattform unabh&auml;ngig sind.<br />
-Eine Webseite, die in validem HTML mit validem CSS geschrieben ist, wird auf jedem Ger&auml;t gleich dargestellt. Egal ob Sie einen PC mit Windows, einen Mac mit OSX, ein Android mit Chrome oder ein iPad mit Safari nutzen, Sie haben immer exakt das gleiche Ergebnis. Sofern Sie sich an die Standards halten. Der eigentlich noch bessere Vorteil, ist, dass sie keinerlei Software auf dem Client installieren m&uuml;ssen. Selbst komplexeste Anwendungen, die zus&auml;tzlich zu HTML noch Datenbanken und Programmiersprachen wie Ruby, Pearl, Python oder PHP laufen alle serverseitig und &uuml;bermitteln Ihnen nur reines HTML.
-</p><div class="information">Anwendungen in <strong>HTML</strong> sind absolut Plattform - unabh&auml;ngig</div>
+Eine Webseite, die in validem HTML mit validem CSS geschrieben ist, wird auf jedem Ger&auml;t gleich dargestellt. Egal ob Sie einen PC mit Windows, einen Mac mit OSX, ein Android mit Chrome oder ein iPad mit Safari nutzen, Sie haben immer exakt das gleiche Ergebnis. Sofern Sie sich an die Standards halten. Der eigentlich noch bessere Vorteil, ist, dass sie keinerlei Software auf dem Client installieren m&uuml;ssen. Ein Browser ist immer von Anfang an vorhanden. Selbst komplexeste Anwendungen, die zus&auml;tzlich zu HTML noch Datenbanken und Programmiersprachen wie Ruby, Pearl, Python oder PHP nutzen, laufen alle serverseitig und &uuml;bermitteln Ihnen nur reines HTML.
+</p>
 		<article id='article-332'>
 			<h4>Ben&ouml;tigte Software</h4>
 
 			<p>F&uuml;r das Erstellen Ihrer ersten eigenen Webseiten brauchen Sie g&auml;nzlich wenig Software. Theoretisch reicht Ihnen ein einfacher Editor und ein Browser, um Ihre Ergebnisse zu betrachten</p>
 <span class="h4">Browser</span>
+<p>Wir empfehlen Ihre erstellten Seiten immer auf mehreren Browsern zu testen. Die wohl wichtigsten Browser sind nachgehend aufgelistet</p> 
 <table>
 <tr>
 <td><a href="./img/20120801_chrome_logo.gif" class="imageZoom"><img src="./img/20120801_chrome_logo.gif" alt="" class="small"/></a></td>
 <td>Google Chrome</td>
-<td><a class="download" href="https://www.google.com/intl/en/chrome/business/browser/">Download-Site</a></td>
-<td><a class="download" href="/upd/software/ChromeStandaloneSetup.exe">Local Download</a></td>
+
 </tr>
 
 <tr>
-<td>SAFARI LOGO</td>
+<td><a href="./img/20120803_safari (1).jpg" class="imageZoom"><img src="./img/20120803_safari (1).jpg" alt="" class="small"/></a></td>
 <td>Apple Safari</td>
-<td></td>
-<td><a class="download" href="/upd/software/SafariSetup-5.1.7.exe">Local Download</a></td>
 </tr>
 
 <tr>
 <td><a href="./img/20120801_firefoxlogo.png" class="imageZoom"><img src="./img/20120801_firefoxlogo.png" alt=""  class="small"/></a></td>
 <td>Firefox</td>
-<td><a class="download" href="http://www.mozilla.org/en-US/firefox/all.html">Firefox</a></td>
-<td><a class="download" href="/upd/software/Firefox Setup 14.0.1.exe">Local Download</a></td>
 </tr>
 
 
 <tr>
 <td><a href="./img/20120801_opera_logo.png" class="imageZoom"><img src="./img/20120801_opera_logo.png" alt="" class="small"/></a></td>
 <td>Opera</td>
-<td><a class="download" href="http://www.opera.com/browser/download/?os=windows&ver=12.00&local=y">Download</a></td>
-<td><a class="download" href="/upd/software/Opera_1200_int_Setup.exe">Local Download</a></td>
 </tr>
 
 
 
 </table>
 <span class="h4">FTP-Client</span>
+<p>Zur &Uuml;bertragung der HTML - Seiten auf den Server wird ein FTP-Client ben&ouml;tigt. FileZilla ist OpenSource und daher unsere erste Wahl.</p>
 <table>
-<tr><td><a href="./img/20120801_filezilla.gif" class="imageZoom"><img style="height:50px;" src="./img/20120801_filezilla.gif" alt="" class="small"/></a></td><td>FileZilla FTP Client</td><td><a class="download" href="http://www.filezilla.de/download.htm">FileZilla FTP Client</a></td>
-<td><a class="download" href="/upd/software/
-FileZilla_3.2.7.1_win32-setup.exe">Local Download</a></td>
+<tr><td><a href="./img/20120801_filezilla.gif" class="imageZoom"><img style="height:50px;" src="./img/20120801_filezilla.gif" alt="" class="small"/></a></td><td>FileZilla FTP Client</td></td>
 </tr>
 </table>
 
 
 <span class="h4">Editor</span>
+<p>Es w&uuml;rde Notepad als Editor f&uuml;r die Erstellung komplexester Anwendungen reichen. Die Software Notepad++ unterst&uuml;tz jedoch Syntax Highlighting in vielen verschiedenen Programmiersprachen und ist nebenbei auch noch kostenlos.</p>
 <table>
-<tr><td><a href="./img/20120801_notepad++logo.png" class="imageZoom"><img src="./img/20120801_notepad++logo.png" alt="" class="small"/></a></td><td>Notepad++ Editor</td><td><a class="download" href="http://notepad-plus-plus.org/download/v6.1.5.html">Download</a></td><td><a class="download" href="/upd/software/
-npp.6.1.5.Installer.exe">Local Download</a></td></tr>
-</table>
-
-
-
-<span class="h4">Utilities</span>
-<table>
-<tr><td>
-
-<a href="./img/20120801_logo.gif" class="imageZoom"><img src="./img/20120801_logo.gif" alt="" class="small"/></a>
-
-</td><td>Colorpix</td><td><a class="download" href="http://www.colorschemer.com/download.php">Download</a></td>
-<td><a class="download" href="/upd/software/
-ColorPix.exe">Local Download</a></td>
-</tr>
-</table>
-
-<a href="/upd/software/client_setup_2.8.155286.178.exe">COMODO</a>
-
-
-
-<section class='section' id='section-539'><h2>Links</h2>
-
-		<article id='article-345'>
-			<h4>Weiterf&uuml;hrende Links</h4>
-
-			<p>Die folgende Auflistung stellt einige Links dar, die Sie in diesem Lehrgang des &ouml;fteren ben&ouml;tigen werden.</p>
-<ul>
-<li>
-<a class="anchor" href="http://validator.w3.org/">HTML Validator des W3C</a></li>
-<li><a class="anchor" href="http://de.selfhtml.org/">SELFHTML</a></li>
-<li><a class="anchor" href="http://www.w3schools.com">W3SCHOOLS</a></li>
-<li><a class="anchor" href="http://notepad-plus-plus.org/download/v6.1.5.html">Notepad ++</a></li>
-<li><a class="anchor" href="http://colorschemedesigner.com">ColorSchemeDesigner</a></li>
-</ul></section></section>
+<tr><td><a href="./img/20120801_notepad++logo.png" class="imageZoom"><img src="./img/20120801_notepad++logo.png" alt="" class="small"/></a></td><td>Notepad++ Editor</td></tr>
+</table></section>
 
 
 
@@ -1313,7 +1334,7 @@ Dabei kommt der Begriff TAG aus dem Englischen und hat dort die Bedeutung von "E
 
 			Eine HTML Datei besteht grunds&auml;tzlich aus 3 Bereichen:
 
-<img class="medium" src="./img/Aufbau_HTML_Dokument.png" alt="" />
+<img class="medium floatCenter" src="./img/Aufbau_HTML_Dokument.png" alt="" />
 
 <div class="information"><ol>
 <li>der Dokumenttypdeklaration <strong>(Doctype)</strong> ganz am Anfang der Datei, die die verwendete Dokumenttypdefinition <abbr title="Document Type Definition">DTD</abbr> angibt, z. B. <strong>HTML 4.01 Strict</strong>,</li>
@@ -1531,7 +1552,7 @@ Er beinhaltet somit alle Elemente wie</p>
 &nbsp;
 <span class="sc2">&lt;<span class="kw2">h1</span>&gt;</span>Willkommen auf meiner Webseite<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h1</span>&gt;</span>
 &nbsp;
-<span class="sc2">&lt;<span class="kw2">h2</span>&gt;</span>Hier habe ich eine Liste f<span class="sc1">&amp;uuml;</span>r euch erstellt<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h2</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">h2</span>&gt;</span>Hier eine Liste<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h2</span>&gt;</span>
 &nbsp;
 <span class="sc2">&lt;<span class="kw2">ul</span>&gt;</span>
 &nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>Links<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
@@ -1569,7 +1590,8 @@ Ihre erste Seite soll bereits folgende Merkmale aufweisen k&ouml;nnen:
 <li>einen anzuzeigenden Text: "Hello World!"</li>
 </ul>
 Laden Sie diese Datei anschlie&szlig;end auf den f&uuml;r Sie bereitgestellten Webserver und betrachten Sie ihr Ergebnis!
-</div></section>
+</div>
+<div class="notes h60"></div></section>
 
 
 
@@ -1621,7 +1643,582 @@ Laden Sie diese Datei anschlie&szlig;end auf den f&uuml;r Sie bereitgestellten W
 		
 
 
-<section class='subSection' id='subSection-508'><h3>Tables</h3>
+<section class='subSection' id='subSection-510'><h3>Paragraphen</h3>
+
+		<article id='article-303'>
+			<h4>Paragraphen und Zeilenumbr&uuml;che</h4>
+
+			<p>Paragraphen dienen wie &uuml;berall dazu, einen l&auml;ngeren Text in logische Abschnitte zu unterteilen. Genauso wie bei Word, sollte hierzu <strong>NICHT</strong> der einfache Zeilenumbruch <strong>[WORD: <em>SHIFT-ENTER</em>]</strong> genutzt werden. Sondern es sollte daf&uuml;r ein neuer Paragraph erstellt werden <strong>[WORD: <em>ENTER</em>]</strong>.<br />
+In HTML wird dies durch den Tag <span class="tag">p</span> realisiert. Der einfache Zeilenumbruch ist der selbstschlie&szlig;ende Tag <span class="tag">br/</span></p>
+
+<span class="h4">Beispiel</span>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia nunc eu quam vestibulum pretium. Aliquam ullamcorper turpis ut nisi imperdiet dignissim. Quisque lacinia suscipit justo, ut mattis nisl dignissim ac. Morbi eget nibh eu neque auctor laoreet sed id leo. Suspendisse potenti. Maecenas sed sapien purus. Ut molestie pharetra justo sed hendrerit. Proin id odio vitae diam ullamcorper rhoncus. Nulla facilisi.</p>
+
+<p>Nam non nisl nisl. Vivamus ac pulvinar erat. In hac habitasse platea dictumst. Praesent tincidunt, neque eu pellentesque luctus, risus tortor porttitor sapien, et molestie nibh est sit amet neque. Integer sollicitudin lacus hendrerit risus dictum nec egestas ligula condimentum. In hac habitasse platea dictumst. Praesent ornare magna eu nisl ullamcorper et tincidunt dolor dapibus. Phasellus viverra elit ac nisi semper sed feugiat purus interdum. Nulla facilisi. Phasellus ornare tincidunt facilisis. Sed fringilla, dui adipiscing blandit rhoncus, mi dui mollis erat, sit amet facilisis risus ipsum id ipsum. Mauris et blandit felis. Mauris ligula nunc, cursus et ultricies quis, pharetra in arcu.</p>
+
+<p>Donec suscipit mi sed erat tempus tempus. Duis a magna sapien. Aenean elit nibh, dignissim dignissim vestibulum eu, accumsan quis nibh.<br />
+Sed ut nisi eget neque volutpat iaculis vel eu ante.<br />
+Sed placerat, augue vitae fringilla placerat, metus neque viverra odio, in laoreet nunc nibh euismod orci. Aliquam eu purus dolor.<br />
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam eu ullamcorper dui.</p>
+				<caption>Listing</caption>
+				<div class='geshi'><table class="html5"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="de1"><pre class="de1"><span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia nunc eu quam vestibulum pretium. Aliquam ullamcorper turpis ut nisi imperdiet dignissim. Quisque lacinia suscipit justo, ut mattis nisl dignissim ac. Morbi eget nibh eu neque auctor laoreet sed id leo. Suspendisse potenti. Maecenas sed sapien purus. Ut molestie pharetra justo sed hendrerit. Proin id odio vitae diam ullamcorper rhoncus. Nulla facilisi.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+&nbsp;
+<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Nam non nisl nisl. Vivamus ac pulvinar erat. In hac habitasse platea dictumst. Praesent tincidunt, neque eu pellentesque luctus, risus tortor porttitor sapien, et molestie nibh est sit amet neque. Integer sollicitudin lacus hendrerit risus dictum nec egestas ligula condimentum. In hac habitasse platea dictumst. Praesent ornare magna eu nisl ullamcorper et tincidunt dolor dapibus. Phasellus viverra elit ac nisi semper sed feugiat purus interdum. Nulla facilisi. Phasellus ornare tincidunt facilisis. Sed fringilla, dui adipiscing blandit rhoncus, mi dui mollis erat, sit amet facilisis risus ipsum id ipsum. Mauris et blandit felis. Mauris ligula nunc, cursus et ultricies quis, pharetra in arcu.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+&nbsp;
+<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Donec suscipit mi sed erat tempus tempus. Duis a magna sapien. Aenean elit nibh, dignissim dignissim vestibulum eu, accumsan quis nibh.<span class="sc2">&lt;<span class="kw2">br</span> <span class="sy0">/</span>&gt;</span>
+Sed ut nisi eget neque volutpat iaculis vel eu ante.<span class="sc2">&lt;<span class="kw2">br</span> <span class="sy0">/</span>&gt;</span>
+Sed placerat, augue vitae fringilla placerat, metus neque viverra odio, in laoreet nunc nibh euismod orci. Aliquam eu purus dolor.<span class="sc2">&lt;<span class="kw2">br</span> <span class="sy0">/</span>&gt;</span>
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam eu ullamcorper dui.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></pre></td></tr></tbody></table></div>
+			</article>
+		
+		<article id='article-247'>
+			<h4>HTML ignoriert Umbr&uuml;che im Code</h4>
+
+			Zeilenumbr&uuml;che sollten nur innerhalb von Elementen genutzt werden, und nicht f&uuml;r das Layout <em>"missbraucht"</em> werden.
+
+<span class="h4">Beispiel:</span>
+<p>Dies ist ein einzelner Paragraph. 
+Dies ist der zweite Satz des Paragraphs. Dies ist der dritte Satz des Paragraphs</p>
+				<caption>Listing</caption>
+				<div class='geshi'><table class="html5"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
+2
+</pre></td><td class="de1"><pre class="de1"><span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Dies ist ein einzelner Paragraph. 
+Dies ist der zweite Satz des Paragraphs. Dies ist der dritte Satz des Paragraphs<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></pre></td></tr></tbody></table></div>
+			</article>
+		
+		<article id='article-248'>
+			<h4>Beispiele f&uuml;r Zeilenumbr&uuml;che:</h4>
+
+			<p>Dies ist ein einzelner Paragraph.
+<br />
+Dies ist der zweite Satz des Paragraphs.
+<br />
+Dies ist der dritte Satz des Paragraphs</p>
+				<caption>Listing</caption>
+				<div class='geshi'><table class="html5"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
+</pre></td><td class="de1"><pre class="de1"><span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Dies ist ein einzelner Paragraph.<span class="sc2">&lt;<span class="kw2">br</span> <span class="sy0">/</span>&gt;</span>Dies ist der zweite Satz des Paragraphs.<span class="sc2">&lt;<span class="kw2">br</span> <span class="sy0">/</span>&gt;</span>Dies ist der dritte Satz des Paragraphs<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></pre></td></tr></tbody></table></div>
+			</article>
+		
+		<article id='article-249'>
+			<h4>Zusammenfassung</h4>
+
+			<div class="information">
+<ul>
+<li><span class="tag">p</span> Ein <strong>Paragraph</strong> in HTML entspricht dem Tastenkommando "<strong>ENTER</strong>" in Word.</li>
+
+<li><span class="tag">br/</span>Ein <strong>Zeilenumbruch</strong> in HTML entsprichet dem Tastenkommando "<strong>SHIFT-ENTER</strong>" in Word.</li>
+</ul>
+</div>
+<div class="homework">Erstellen Sie mehrere verschiedene Paragraphen. Machen Sie sich vertraut mit den Unterschieden zwischen <span class="tag">br/</span> und <span class="tag">p</span></div>
+<div class="notes h50"></div>
+
+
+<section class='subSection' id='subSection-515'><h3>Textformatierung</h3>
+
+		<article id='article-250'>
+			<h4>Einfache Formatierungen</h4>
+
+			<p>HTML ist nicht daf&uuml;r gedacht, Text optisch zu formatieren. Jedoch haben manche Element von Haus aus eine optische Hinterlegung. Diese ist jedoch noch aus den Anf&auml;ngen von HTML &uuml;brig geblieben. Eine Formatierung eines Textes erfolgt ausschlie&szlig;lich &uuml;ber CSS. Die im Folgenden kurz vorgestellten Formen der Formatierung mit den Mitteln von HTML dienen der semantischen Hinterlegung von Text.</p>
+
+<p><strong>This text is bold</strong></p>
+
+<p><em>This text is italic</em></p>
+
+<p><pre>This is computer output</pre></p>
+
+<p><del>Dieser Text ist durchgestrichen</del></p>
+				<caption>Listing</caption>
+				<div class='geshi'><table class="html5"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="de1"><pre class="de1"><span class="sc2">&lt;<span class="kw2">p</span>&gt;&lt;<span class="kw2">strong</span>&gt;</span>This text is bold<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">strong</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+&nbsp;
+<span class="sc2">&lt;<span class="kw2">p</span>&gt;&lt;<span class="kw2">em</span>&gt;</span>This text is italic<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">em</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+&nbsp;
+<span class="sc2">&lt;<span class="kw2">p</span>&gt;&lt;<span class="kw2">pre</span>&gt;</span>This is computer output<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">pre</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+&nbsp;
+<span class="sc2">&lt;<span class="kw2">p</span>&gt;&lt;<span class="kw2">del</span>&gt;</span>Dieser Text ist durchgestrichen<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">del</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></pre></td></tr></tbody></table></div>
+			</article>
+		
+		<article id='article-251'>
+			<h4>b vs. strong</h4>
+
+			<p>In den meisten normalen Browsern werden die beiden TAGs <span class="tag">b</span> und <span class="tag">strong</span> identisch dargestellt.<br />
+Sie d&uuml;rfen jedoch nicht als komplement&auml;r angesehen werden.</p>
+
+<span class="h4">Unterschiede:</span>
+
+<span class="h5"><span class="tag">b</span></span>
+
+Der Tag b dient lediglich der optische fetteren Darstellung eines Ausdrucks.
+Inhaltlich (semantisch) hat dieser Ausdruck nicht mehr Bedeutung als normaler Text.
+
+<span class="h5"><span class="tag">strong</span></span>
+
+Der Tag strong hat zus&auml;tzlich zur optischen Gestaltung eine semantische Bedeutung:
+Ein Ausdruck der mit strong markiert wurde ist als wichtiger zu betrachten, als normaler Text.
+
+<span class="h6">Warum sollte mich das interessieren wenn beide Tags exakt gleich dargestellt werden?</span>
+
+<div class="information"><span class="h4">Beispiel:</span>
+
+Ein Screenreader (Ger&auml;t, dass den Inhalt einer Homepage vorlesen kann - wird benutzt von Menschen mit Sehbehinderungen) w&uuml;rde bei dem Tag strong diesen Ausdruck auch betont vorlesen.
+
+Dies ist bei dem Tag <span class="tag">b</span> nicht der Fall.
+
+</div>
+		<article id='article-252'>
+			<h4>em vs. i</h4>
+
+			Parallel zu den tags <span class="tag">b</span> und <span class="tag">strong</span> verhalten sich auch die Tags <span class="tag">em</span> und <span class="tag">i</span>.
+
+<span class="tag">em</span> hat eine semantische Bedeutung und <span class="tag">i</span> besitzt lediglich die optischen Eigenschaften f&uuml;r den Browser.
+
+
+<section class='subSection' id='subSection-509'><h3>&Uuml;berschriften</h3>
+
+		<article id='article-240'>
+			<h4>Headings - &Uuml;berschriften</h4>
+
+			<p>&Uuml;berschriften dienen in <strong>HTML</strong> der Strukturierung der Inhalte. HTML kennt 6 Stufen von &Uuml;berschriften. Je niedriger die Nummer, desto wichtiger (besser) ist die &Uuml;berschrift. [Schulnotensystem]</p>
+<p>Eine &Uuml;berschrift <span class="tag">h1</span> stellt somit immer die wichtigste &Uuml;berschrift auf einer Seite dar.</p><div class="information">Eine <span class="tag">h1</span> - &Uuml;berschrift sollte nur einmalig auf einer Seite vertreten sein. Als &Uuml;berschrift f&uuml;r genau den Artikel, der auf der Seite zu finden ist.</div>
+
+<p>Eine Suchmaschine wie zum Beispiel <strong><a href="http://google.de">Google</a></strong> bewertet die Wichtigkeit des Textes einer &Uuml;berschrift nach der Klassifizierung mit dem jeweiligen <span class="tag">hX</span> Tag.</p>
+
+<span class="h4">Beispiel der standardm&auml;&szlig;igen Darstellung von &Uuml;berschriften in einem Browser</span>
+
+<span style="margin:5px 0px;-moz-box-shadow:0px 0px 0px;box-shadow:0px 0px 0px;font-family:Arial;border:0px;display:block;font-weight: bolder;font-size: 2em; margin: .67em 0" class="h1">Heading 1</span>
+
+
+<span style="margin:5px 0px;-moz-box-shadow:0px 0px 0px;box-shadow:0px 0px 0px;font-family:Arial;border:0px;display:block;font-weight: bolder;font-size: 1.5em; margin: .75em 0" class="h2">Heading 2</span>
+
+
+<span style="margin:5px 0px;-moz-box-shadow:0px 0px 0px;box-shadow:0px 0px 0px;font-family:Arial;border:0px;display:block;font-weight: bolder;font-size: 1.17em; margin: .83em 0" class="h3">Heading 3</span>
+
+
+<span style="margin:5px 0px;-moz-box-shadow:0px 0px 0px;box-shadow:0px 0px 0px;font-family:Arial;border:0px;display:block;font-weight: bolder;font-size:1em;margin:0px;padding:0px;" class="h4">Heading 4</span>
+
+
+<span style="margin:5px 0px;-moz-box-shadow:0px 0px 0px;box-shadow:0px 0px 0px;font-family:Arial;border:0px;display:block;font-weight: bolder" class="h5">Heading 5</span>
+
+
+<span style="margin:5px 0px;-moz-box-shadow:0px 0px 0px;box-shadow:0px 0px 0px;font-family:Arial;border:0px;display:block;font-weight: bolder" class="h6">Heading 6</span>
+				<caption>Listing</caption>
+				<div class='geshi'><table class="html5"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
+2
+3
+4
+5
+6
+</pre></td><td class="de1"><pre class="de1"><span class="sc2">&lt;<span class="kw2">h1</span>&gt;</span>Heading 1<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h1</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">h2</span>&gt;</span>Heading 2<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h2</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">h3</span>&gt;</span>Heading 3<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h3</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">h4</span>&gt;</span>Heading 4<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h4</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">h5</span>&gt;</span>Heading 5<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h5</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">h6</span>&gt;</span>Heading 6<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h6</span>&gt;</span></pre></td></tr></tbody></table></div>
+			</article>
+		
+		<article id='article-300'>
+			<h4>Hierarchische Strukturierung</h4>
+
+			<div class="homework"><span class="h4">Erstellen Sie nur mittels &Uuml;berschriften eine HTML-Seite, die die folgende Struktur logisch abbildet:</span>
+
+<ul>
+    <li>HTML
+        <ul>
+            <li>Grundlagen</li>
+            <li>Inhalte
+                <ul>
+                    <li>Tabellen</li>
+                    <li>Listen</li>
+                    <li>Formulare
+	                 <ul>
+	                     <li>Radio-Buttons</li>
+	                     <li>Checkboxes</li>
+	                     <li>Input</li>
+	                     <li>Textarea</li>
+	                 </ul>
+                    </li>
+                    <li>&Uuml;berschriften</li>
+                </ul>
+            </li>
+            <li>Struktur
+                <ul>
+                    <li>Aside</li>
+                    <li>Header</li>
+                    <li>Footer</li>
+                    <li>Navigation</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+
+</div>
+
+
+<section class='subSection' id='subSection-516'><h3>Listen</h3>
+
+		<article id='article-306'>
+			<h4>Nummerieren, Definieren, oder einfach nur so....</h4>
+
+			<img class="small shadow floatright" src="./img/1342713494ufsliste.jpeg" alt="Einkaufsliste" /><p>HTML kennt <strong>3</strong> verschiedene M&ouml;glichkeiten Listen zu erstellen:</p>
+<ul>
+    <li>unsortierte Listen</li>
+    <li>sortierte Listen</li>
+    <li>Definitionslisten</li>
+</ul><br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+
+		<article id='article-307'>
+			<h4>Unsortierte Listen - unordered lists [ul]</h4>
+
+			<p>Die einfachste Form einer Liste ist die Aufz&auml;hlung.<br />
+In HTML wird die unsortierte Liste mit dem Element <span class="tag">ul</span> eingeleitet und dementsprechend mit <span class="tag">/ul</span> wieder geschlossen.<br />
+Die einzelnen Elemente innerhalb einer Liste werden mit dem Tag <span class="tag">li</span> definiert.
+</p>
+<div class="information">Gem&auml;&szlig; den Spezifikation von HTML ist es nicht n&ouml;tig, jedes einzelne <span class="tag">li</span> auch wieder explizit zu schlie&szlig;en. Um eventuelle Darstellungsprobleme im vornherein zu verhindern und auch einen einheitlichen Coding-Stil zu gew&auml;hrleisten, sollten alle <span class="tag">li</span> auch wieder mit <span class="tag">/li</span> geschlossen werden.</div>
+<span class="h4">Beispiel f&uuml;r eine einfache Liste</span>
+<ul>
+    <li>Milch</li>
+    <li>&Auml;pfel</li>
+    <li>Bananen</li>
+    <li>Joghurt</li>
+</ul>
+
+				<caption>Listing</caption>
+				<div class='geshi'><table class="html5"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
+2
+3
+4
+5
+6
+</pre></td><td class="de1"><pre class="de1"><span class="sc2">&lt;<span class="kw2">ul</span>&gt;</span>
+&nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>Milch<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+&nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>&Auml;pfel<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+&nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>Bananen<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+&nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>Joghurt<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">ul</span>&gt;</span></pre></td></tr></tbody></table></div>
+			</article>
+		
+		<article id='article-258'>
+			<h4>Geordnete und ungeordnete Listen</h4>
+
+			<p>Sie haben soeben gelernt wie sie eine normale Aufz&auml;hlungsliste erstellen k&ouml;nnen. Jedoch haben Sie die teilweise die Anforderung innerhalbe einer Liste eine Rangordnung darzustellen - zum Beispiel eine Ergebnisliste eines Wettkampfs. Sie k&ouml;nnten nun manuell in Ihrer Liste jeweils vor die Elemente noch eine Zahl schreiben. Dies ist jedoch eine sehr umst&auml;ndlicher und auch nicht der korrekte Weg. Betrachten Sie den folgenden Code und vergleichen das Ergebnis zwischen einer <span class="attribute">ordered</span> und einer <span class="attribute">unordered</span> List.</p>
+<table class="example">
+	 <thead>
+	 	 <tr>
+	 	 	 <th>ungeordnete Liste</th>
+	 	 	 <th>nummerierte Liste</th>
+	 	 </tr>
+	 </thead>
+	 <tbody>
+	 	 <tr>
+	 	 	 <td>
+	 	 	 	 <ul>
+	 	 	 	 	 <li>Listenelement</li>
+	 	 	 	 	 <li>Listenelement</li>
+	 	 	 	 	 <li>Listenelement</li>
+	 	 	 	 	 <li>Listenelement</li>
+	 	 	 	 	 <li>Listenelement</li>
+	 	 	 	 </ul>
+	 	 	 </td>
+	 	 	 <td>
+	 	 	 	 <ol>
+	 	 	 	 	 <li>erstes Element</li>
+	 	 	 	 	 <li>zweites Element</li>
+	 	 	 	 	 <li>drittes Element</li>
+	 	 	 	 	 <li>viertes Element</li>
+	 	 	 	 	 <li>f&uuml;nftes Element</li>
+	 	 	 	 </ol>
+	 	 	 </td>
+	 	 </tr>
+	 </tbody>
+</table>
+				<caption>Listing</caption>
+				<div class='geshi'><table class="html5"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+</pre></td><td class="de1"><pre class="de1"><span class="sc2">&lt;<span class="kw2">ul</span>&gt;</span>
+&nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>Listenelement<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+&nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>Listenelement<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+&nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>Listenelement<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+&nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>Listenelement<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+&nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>Listenelement<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">ul</span>&gt;</span>
+&nbsp;
+&nbsp;
+<span class="sc2">&lt;<span class="kw2">ol</span>&gt;</span>
+&nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>erstes Element<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+&nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>zweites Element<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+&nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>drittes Element<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+&nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>viertes Element<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+&nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>f&uuml;nftes Element<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">ol</span>&gt;</span></pre></td></tr></tbody></table></div>
+			</article>
+		
+		<article id='article-472'>
+			<h4>Selbststudium</h4>
+
+			<div class="homework"><span class="h4">Aufgabe</span>
+Erstellen Sie eine Liste: Die aktuelle Weltranglisten-Ordnung der Fu&szlig;ball - Nationalmannschaften.<br />
+Welche Art von Liste w&uuml;rden Sie nutzen?
+</div>
+
+
+<div class="homework"><span class="h4">Aufgabe:</span>
+Recherchieren Sie in Eigenarbeit, wie man eine Definitionsliste erstellt.<br />
+Erstellen Sie eine Definitionsliste mit mehreren verschiedenen Dienstgraden der Bundeswehr.
+</div>
+
+
+<div class="homework"><span class="h4">Aufgabe:</span>
+Stellen Sie sich den Verzeichnisbaum Ihres Windows - Nutzerverzeichnisses vor.<br />
+Sie haben mehrere verschiedene Ordner, die auch Unterordner enthalten.<br />
+Welche M&ouml;glichkeiten sehen Sie, dies in HTML umzusetzen.<br />
+Erstellen Sie eine Liste mit 3 Ordnern und jeweils 5 Unterordnern.
+</div>
+<div class="notes h40"></div>
+
+
+<section class='subSection' id='subSection-511'><h3>Bilder</h3>
+
+		<article id='article-265'>
+			<h4>Bilder in HTML</h4>
+
+			<p>Bilder werden in HTML mittels des <span class="tag">img</span> tag eingebunden. Der Image-Tag ist auch ein selbstschlie&szlig;ender Tag. Die wichtigsten Attribute, die der <span class="tag">img</span>-Tag enthalten darf sind:</p>
+
+<span class="h4">src</span>
+<p>Hier wird der Pfad des Bildes angegeben, dass eingebunden werden soll. Die Pfadangabe ist relativ von der HTML-Datei. Alternativ kann der Pfad auch absolut angegeben werden.</p>
+
+<span class="h4">alt</span>
+<p>Das <span class="attribute">alt</span>-Attribut gibt eine <strong>alternative</strong> Darstellung an. Falls ein User innerhalb seines CLients die Darstellung von Bildern abgeschaltet hat, wird ihm dieser Text pr&auml;sentiert. Des weiteren ist diese Beschreibung relevant in Bezug auf Barrierefreiheit. Personen, die einen ScreenReader nutzen, wird an der Stelle des Bildes diese Beschreibung vorgelesen.</p>
+
+<span class="h4">title</span>
+<p>Das <span class="attribute">title</span>-Attribut gibt dem Bild einen Titel. Dieser wird zum Beispiel beim MouseOver angezeigt</p>
+
+<img class="small" src="./img/1342446643_Logo_512.png" alt="Das Logo von HTML5. Ein oranges Schild im Hintergrund mit dem Buchstaben 5 als Aufdruck" title="HTML5 Logo"/>
+				<caption>Listing</caption>
+				<div class='geshi'><table class="html5"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
+2
+</pre></td><td class="de1"><pre class="de1"><span class="sc2">&lt;<span class="kw2">img</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;./img/1342446643_Logo_512.png&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;Das Logo von HTML5. Ein oranges Schild</span></span>
+<span class="sc2"><span class="st0">im Hintergrund mit dem Buchstaben 5 als Aufdruck&quot;</span> <span class="kw3">title</span><span class="sy0">=</span><span class="st0">&quot;HTML5 Logo&quot;</span><span class="sy0">/</span>&gt;</span></pre></td></tr></tbody></table></div>
+			</article>
+		
+		<article id='article-478'>
+			<h4>Selbststudium</h4>
+
+			<div class="homework"><span class="h4">Aufgabe</span>Binden Sie mehrere verschiedene Bilder in Ihre Seiten ein.<br />
+<br />
+Testen Sie dabei die M&ouml;glichkeiten der Einbindung mit relativen und auch absoluten Pfadangaben.<br />
+<br />
+Vergeben Sie f&uuml;r jedes Bild die Attribute <span class="attribute">alt</span> und <span class="attribute">title</span></div>
+<div class="notes h50"></div>
+
+
+
+<section class='subSection' id='subSection-512'><h3>Links</h3>
+
+		<article id='article-255'>
+			<h4>Das wichtigste im Web</h4>
+
+			<img src="./img/1342710597lttp.png" alt="" title="LINK" class="floatright small"/><p>Links sind der wichtigste Bestandteil des <abbr title="World Wide Web">WWW</abbr>.</p>
+
+<p>Ein Link ist eine Verkn&uuml;pfung zu einer Seite, Datei oder auch einem bestimmten Abschnitt innerhalb eines Dokuments. Durch Klicken eines Links erh&auml;lt der Browser die Anweisung, die Ressource aufzurufen.</p>
+
+<p>Sie erm&ouml;glichen die Navigation nicht nur innerhalb einer Seite - sondern auch auf andere Seite.</p>
+
+<p>Ohne direkte Links zu anderen Seiten, w&auml;ren Sie immer dazu gezwungen, die <abbr title="Unique Ressource Identifier">URI</abbr> einer Seite einzeln im Browser einzugeben und dann ENTER zu dr&uuml;cken.</p>
+		<article id='article-256'>
+			<h4>HTML Link Syntax</h4>
+
+			Ein Link macht den kompletten Inhalt, der innerhalb des Tags <span class="tag">a</span> steht, klickbar.<br />
+<br />
+Es kann somit nicht nur Text, sondern auch Bilder oder ganze Container mit einem link versehen werden.
+Das wichtigste Attribut eines links ist <span class="attribute">href</span>. Die Abk&uuml;rzung steht f&uuml;r Hyperlink Reference und gibt das Ziel an, auf welches der Link verweisen soll.
+				<caption>Listing</caption>
+				<div class='geshi'><table class="html5"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
+</pre></td><td class="de1"><pre class="de1"><span class="sc2">&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;#&quot;</span>&gt;</span>Link<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;</span></pre></td></tr></tbody></table></div>
+			</article>
+		
+		<article id='article-262'>
+			<h4>Link zu einer E-Mail Adresse</h4>
+
+			Mit Hilfe der normalen Links k&ouml;nnen auch Verkn&uuml;pfungen zu e-Mail Adressen erstellt werden.
+
+Funktionsweise:
+Ein Klick auf solch einen Link &ouml;ffnet das im Betriebssystem als Standard eingestellte e-Mail-Programm und &uuml;bergibt die hinterlegte Email-Adresse.
+
+
+<a href="mailto:test@example.org">Schick mir eine Mail</a>
+				<caption>Listing</caption>
+				<div class='geshi'><table class="html5"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
+</pre></td><td class="de1"><pre class="de1"><span class="sc2">&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;mailto:test@example.org&quot;</span>&gt;</span>Schick mir eine Mail<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;</span></pre></td></tr></tbody></table></div>
+			</article>
+		
+		<article id='article-263'>
+			<h4>Links in neuen Fenstern</h4>
+
+			<p>Mittels der Attribute eines Links kann eingestellt werden, dass ein Link z.B. in einem neuen Fenster ge&ouml;ffnet werden soll.
+
+Dies geschieht durch Angabe des Attributes: <span class="attribute">target</span><br />
+Dieses Attribute ist jedoch lediglich noch ein &Uuml;berbleibsel aus der Zeit, in denen HTML noch Frames genutzt wurden. Es sollte mittlerweile komplett darauf verzichtet werden, dem User vorzugeben, wie ein Link ge&ouml;ffnet wird. Das Attribut <span class="attribute">target</span> ist mittlerweile auch aus den Spezifikationen f&uuml;r HTML entfernt worden. Diese Einstellung machen die Browser bzw. der User f&uuml;r sich selbst. F&uuml;r den Fall, dass Sie jedoch explizit einen link in einem neuen Fenster (Tab) ge&ouml;ffnet haben m&ouml;chten, stellen wir Ihnen diese <span class="attribute">deprecated</span> - L&ouml;sung trotzdem vor. 
+</p>
+
+<span class="h4">M&ouml;gliche Werte f&uuml;r das target Attribut:</span>
+
+<style type="text/css">
+	 table.example {
+	 	 border:1px solid gray;
+	 }
+	 table.example td {
+	 	 border:1px solid gray;
+         }
+	 table.example th {
+	 	 border:1px solid gray;
+	 }
+</style>
+
+<table class="example">
+	 <thead>
+	 	 <tr>
+	 	 	 <th>Wert</th>
+	 	 	 <th>Auswirkung</th>
+	 	 </tr>
+	 </thead>
+	 <tbody>
+	 	 <tr>
+	 	 	 <td>_blank</td>
+	 	 	 <td>neues Fenster</td>
+	 	 </tr>
+	 	 <tr>
+	 	 	 <td>_self <em>(standard)</em></td>
+	 	 	 <td>in eigentlichen Fenster</td>
+	 	 </tr>
+	 	 <tr>
+	 	 	 <td>_top</td>
+	 	 	 <td>im eigentlichen Fenster <em>(nur bei Nutzung von Frames relevant)</em></td>
+	 	 </tr>
+	 	 <tr>
+	 	 	 <td>_parent</td>
+	 	 	 <td>im Eltern-Frame <em>(nur bei Nutzung von Frames relevant)</em></td>
+	 	 </tr>
+	 	 <tr>
+	 	 	 <td><em>framename</em></td>
+	 	 	 <td>im benannten Frame</td>
+	 	 </tr>
+	 </tbody>
+</table>
+
+<span class="h4">Beispiel</span>
+
+	 <a class="anchor" href="http://www.google.de" target="_blank">Google in neuem Fenster</a>
+
+				<caption>Listing</caption>
+				<div class='geshi'><table class="html5"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
+</pre></td><td class="de1"><pre class="de1"><span class="sc2">&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;http://www.google.de&quot;</span> <span class="kw3">target</span><span class="sy0">=</span><span class="st0">&quot;_blank&quot;</span>&gt;</span>Google in neuem Fenster<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;</span></pre></td></tr></tbody></table></div>
+			</article>
+		
+		<article id='article-267'>
+			<h4>verschiedene Beispiele f&uuml;r Links</h4>
+
+			<span class="h4">Bilder als Links</span>
+<a href="./img/1342449951le-pic.jpg"><img class="small" src="./img/1342449951le-pic.jpg" alt="Boo - the Dog" /></a>
+<br />
+Ein Klick auf den Hund &ouml;ffnet das Bild in seinem Ursprung
+<div class="clear"></div>
+<span class="h4">Container als Links</span>
+<a href=""><div class="blackbox">Ein komplettes DIV als Link</div></a>
+<span class="h4">Buttons als Links</span>
+<a href=""><button class="button">Button</button></a>
+<span class="h4">Text als Links</span>
+<a href="">Dieser Text ist ein Link</a>
+				<caption>Listing</caption>
+				<div class='geshi'><table class="html5"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="de1"><pre class="de1"><span class="sc-1">&lt;!-- IMAGE-Link --&gt;</span>
+<span class="sc2">&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;./img/1342449951le-pic.jpg&quot;</span>&gt;&lt;<span class="kw2">img</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;small&quot;</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;./img/1342449951le-pic.jpg&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;Boo - the Dog&quot;</span> <span class="sy0">/</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;</span>
+&nbsp;
+<span class="sc-1">&lt;!-- DIV-Link --&gt;</span>
+<span class="sc2">&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;&quot;</span>&gt;&lt;<span class="kw2">div</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;blackbox&quot;</span>&gt;</span>Ein komplettes DIV als Link<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;</span>
+&nbsp;
+<span class="sc-1">&lt;!-- button-Link --&gt;</span>
+<span class="sc2">&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;&quot;</span>&gt;&lt;<span class="kw2">button</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;button&quot;</span>&gt;</span>Button<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">button</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;</span>
+&nbsp;
+<span class="sc-1">&lt;!-- Text-Link --&gt;</span>
+<span class="sc2">&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;&quot;</span>&gt;</span>Dieser Text ist ein Link<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;</span>
+&nbsp;</pre></td></tr></tbody></table></div>
+			</article>
+		
+		<article id='article-470'>
+			<h4>Downloads</h4>
+
+			<span class="h4">Wie stelle ich nun einen Donwload-Link bereit?</span>
+<p>Stellen Sie sich einen klassischen Download vor: Sie klicken auf einen link, und kurze Zeit sp&auml;ter f&auml;ngt ihr Browser an, diese Datei herunter zu laden. Doch warum macht dies der Browser? Ist der Begriff Donwload ein eigenes Attribut innerhalb von HTML?<br />
+Sie k&ouml;nnen das Verhalten eines <span class="attribute">Download</span> nicht steuern.</p>
+
+<div class="information">Ein Download ist die Ma&szlig;nahme eines Browsers auf eine Datei, mit der er nichts anfangen kann.</div>
+
+
+<span class="h4">MP3 Download</span>
+<p>Fr&uuml;her war es einfach, z.B. seinem Kameraden eine MP3-File zukommen zu lassen. Man hat die MP3-Datei einfach auf seinen Webserver geschoben, dem Kameraden den Link geschickt und schon hat der Browser die Datei f&uuml;r die lokale Nutzung heruntergeladen.<br />
+Mittlerweile k&ouml;nnen die modernen Browser aber auch intern MP3's abspielen. Ihr Kamerad wird Ihren Link also anklicken und der Browser spielt die Musik direkt ab. Ihr Kamerad m&uuml;sste mittlerweile explizit ausw&auml;hlen, dass er die MP3 speichern m&ouml;chte.</p>
+<span class="h4">PDF Download</span>
+<p>Selbiges gilt mittlerweile auch f&uuml;r .pdf - Dateien</p>
+<span class="h4">Bilder Download</span>
+<p>Bei dem Begriff Bilder-Download denken Sie sich bestimmt: Wieso denn Bilder Download... Jeder Browser kann doch fast alle Arten von Bildern anzeigen. Mit dieser Aussage h&auml;tten Sie jedoch nur teilweise Recht. Es gibt spezielle Nur-Text-Browser. Ein Link auf ein Bild w&uuml;rde es in diesem Fall nicht in Ihrem Browser anzeigen, sondern einen Download starten.</p>
+		<article id='article-479'>
+			<h4>Selbststudium</h4>
+
+			<div class="homework"><span class="h4">Aufgabe</span>Erstellen Sie 5 verschiedene HTML Seiten. Erzeugen Sie auf jeder Seite Links zu den jeweiligen anderen Seiten. Nutzen Sie auf jeder Seite mindestens einmal ein Bild als Link.<br />
+<br />
+Erstellen Sie eine Seite, auf der Sie mehrere verschiedene Word Dokumente zum Donwload anbieten</div>
+<div class="notes h50"></div>
+
+
+<section class='subSection' id='subSection-508'><h3>Tabellen</h3>
 
 		<article id='article-241'>
 			<h4>Table</h4>
@@ -1858,6 +2455,7 @@ Falls ja, testen Sie an selbst gew&auml;hlten Beispielen, wie sich dieser verh&a
 <li>Denken Sie sich ein eigenes Beispiel aus, warum es solch einen Bereich innerhalb einer Tabelle geben sollte.</li></ol>
 
 </div>
+<div class="notes h20"></div>
 		<article id='article-281'>
 			<h4>Experimente mit Tabellen</h4>
 
@@ -2117,353 +2715,6 @@ Falls ja, testen Sie an selbst gew&auml;hlten Beispielen, wie sich dieser verh&a
 </div>
 
 
-<section class='subSection' id='subSection-509'><h3>Headings</h3>
-
-		<article id='article-240'>
-			<h4>Headings - &Uuml;berschriften</h4>
-
-			<p>&Uuml;berschriften dienen in <strong>HTML</strong> der Strukturierung der Inhalte. HTML kennt 6 Stufen von &Uuml;berschriften. Je niedriger die Nummer, desto wichtiger (besser) ist die &Uuml;berschrift. [Schulnotensystem]</p>
-<p>Eine &Uuml;berschrift <span class="tag">h1</span> stellt somit immer die wichtigste &Uuml;berschrift auf einer Seite dar.</p><div class="information">Eine <span class="tag">h1</span> - &Uuml;berschrift sollte nur einmalig auf einer Seite vertreten sein. Als &Uuml;berschrift f&uuml;r genau den Artikel, der auf der Seite zu finden ist.</div>
-
-<p>Eine Suchmaschine wie zum Beispiel <strong><a href="http://google.de">Google</a></strong> bewertet die Wichtigkeit des Textes einer &Uuml;berschrift nach der Klassifizierung mit dem jeweiligen <span class="tag">hX</span> Tag.</p>
-
-<span class="h4">Beispiel der standardm&auml;&szlig;igen Darstellung von &Uuml;berschriften in einem Browser</span>
-
-<span style="-moz-box-shadow:0px 0px 0px;box-shadow:0px 0px 0px;font-family:Arial;border:0px;display:block;font-weight: bolder;font-size: 2em; margin: .67em 0" class="h1">Heading 1</span>
-
-
-<span style="-moz-box-shadow:0px 0px 0px;box-shadow:0px 0px 0px;font-family:Arial;border:0px;display:block;font-weight: bolder;font-size: 1.5em; margin: .75em 0" class="h2">Heading 2</span>
-
-
-<span style="-moz-box-shadow:0px 0px 0px;box-shadow:0px 0px 0px;font-family:Arial;border:0px;display:block;font-weight: bolder;font-size: 1.17em; margin: .83em 0" class="h3">Heading 3</span>
-
-
-<span style="-moz-box-shadow:0px 0px 0px;box-shadow:0px 0px 0px;font-family:Arial;border:0px;display:block;font-weight: bolder;font-size:1em;margin:0px;padding:0px;" class="h4">Heading 4</span>
-
-
-<span style="-moz-box-shadow:0px 0px 0px;box-shadow:0px 0px 0px;font-family:Arial;border:0px;display:block;font-weight: bolder" class="h5">Heading 5</span>
-
-
-<span style="-moz-box-shadow:0px 0px 0px;box-shadow:0px 0px 0px;font-family:Arial;border:0px;display:block;font-weight: bolder" class="h6">Heading 6</span>
-				<caption>Listing</caption>
-				<div class='geshi'><table class="html5"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
-2
-3
-4
-5
-6
-</pre></td><td class="de1"><pre class="de1"><span class="sc2">&lt;<span class="kw2">h1</span>&gt;</span>Heading 1<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h1</span>&gt;</span>
-<span class="sc2">&lt;<span class="kw2">h2</span>&gt;</span>Heading 2<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h2</span>&gt;</span>
-<span class="sc2">&lt;<span class="kw2">h3</span>&gt;</span>Heading 3<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h3</span>&gt;</span>
-<span class="sc2">&lt;<span class="kw2">h4</span>&gt;</span>Heading 4<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h4</span>&gt;</span>
-<span class="sc2">&lt;<span class="kw2">h5</span>&gt;</span>Heading 5<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h5</span>&gt;</span>
-<span class="sc2">&lt;<span class="kw2">h6</span>&gt;</span>Heading 6<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h6</span>&gt;</span></pre></td></tr></tbody></table></div>
-			</article>
-		
-		<article id='article-300'>
-			<h4>Hierarchische Strukturierung</h4>
-
-			<div class="homework"><span class="h4">Erstellen Sie nur mittels &Uuml;berschriften eine HTML-Seite, die die folgende Struktur logisch abbildet:</span>
-
-<ul>
-    <li>HTML
-        <ul>
-            <li>Grundlagen</li>
-            <li>Inhalte
-                <ul>
-                    <li>Tabellen</li>
-                    <li>Listen</li>
-                    <li>Formulare
-	                 <ul>
-	                     <li>Radio-Buttons</li>
-	                     <li>Checkboxes</li>
-	                     <li>Input</li>
-	                     <li>Textarea</li>
-	                 </ul>
-                    </li>
-                    <li>&Uuml;berschriften</li>
-                </ul>
-            </li>
-            <li>Struktur
-                <ul>
-                    <li>Aside</li>
-                    <li>Header</li>
-                    <li>Footer</li>
-                    <li>Navigation</li>
-                </ul>
-            </li>
-        </ul>
-    </li>
-</ul>
-
-
-</div>
-
-
-<section class='subSection' id='subSection-510'><h3>Paragraphs</h3>
-
-		<article id='article-303'>
-			<h4>Paragraphen und Zeilenumbr&uuml;che</h4>
-
-			<p>Paragraphen dienen wie &uuml;berall dazu, einen l&auml;ngeren Text in logische Abschnitte zu unterteilen. Genauso wie bei Word, sollte hierzu <strong>NICHT</strong> der einfache Zeilenumbruch <strong>[WORD: <em>SHIFT-ENTER</em>]</strong> genutzt werden. Sondern es sollte daf&uuml;r ein neuer Paragraph erstellt werden <strong>[WORD: <em>ENTER</em>]</strong>.<br />
-In HTML wird dies durch den Tag <span class="tag">p</span> realisiert. Der einfache Zeilenumbruch ist der selbstschlie&szlig;ende Tag <span class="tag">br/</span></p>
-
-<span class="h4">Beispiel</span>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia nunc eu quam vestibulum pretium. Aliquam ullamcorper turpis ut nisi imperdiet dignissim. Quisque lacinia suscipit justo, ut mattis nisl dignissim ac. Morbi eget nibh eu neque auctor laoreet sed id leo. Suspendisse potenti. Maecenas sed sapien purus. Ut molestie pharetra justo sed hendrerit. Proin id odio vitae diam ullamcorper rhoncus. Nulla facilisi.</p>
-
-<p>Nam non nisl nisl. Vivamus ac pulvinar erat. In hac habitasse platea dictumst. Praesent tincidunt, neque eu pellentesque luctus, risus tortor porttitor sapien, et molestie nibh est sit amet neque. Integer sollicitudin lacus hendrerit risus dictum nec egestas ligula condimentum. In hac habitasse platea dictumst. Praesent ornare magna eu nisl ullamcorper et tincidunt dolor dapibus. Phasellus viverra elit ac nisi semper sed feugiat purus interdum. Nulla facilisi. Phasellus ornare tincidunt facilisis. Sed fringilla, dui adipiscing blandit rhoncus, mi dui mollis erat, sit amet facilisis risus ipsum id ipsum. Mauris et blandit felis. Mauris ligula nunc, cursus et ultricies quis, pharetra in arcu.</p>
-
-<p>Donec suscipit mi sed erat tempus tempus. Duis a magna sapien. Aenean elit nibh, dignissim dignissim vestibulum eu, accumsan quis nibh.<br />
-Sed ut nisi eget neque volutpat iaculis vel eu ante.<br />
-Sed placerat, augue vitae fringilla placerat, metus neque viverra odio, in laoreet nunc nibh euismod orci. Aliquam eu purus dolor.<br />
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam eu ullamcorper dui.</p>
-				<caption>Listing</caption>
-				<div class='geshi'><table class="html5"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
-2
-3
-4
-5
-6
-7
-8
-</pre></td><td class="de1"><pre class="de1"><span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia nunc eu quam vestibulum pretium. Aliquam ullamcorper turpis ut nisi imperdiet dignissim. Quisque lacinia suscipit justo, ut mattis nisl dignissim ac. Morbi eget nibh eu neque auctor laoreet sed id leo. Suspendisse potenti. Maecenas sed sapien purus. Ut molestie pharetra justo sed hendrerit. Proin id odio vitae diam ullamcorper rhoncus. Nulla facilisi.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
-&nbsp;
-<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Nam non nisl nisl. Vivamus ac pulvinar erat. In hac habitasse platea dictumst. Praesent tincidunt, neque eu pellentesque luctus, risus tortor porttitor sapien, et molestie nibh est sit amet neque. Integer sollicitudin lacus hendrerit risus dictum nec egestas ligula condimentum. In hac habitasse platea dictumst. Praesent ornare magna eu nisl ullamcorper et tincidunt dolor dapibus. Phasellus viverra elit ac nisi semper sed feugiat purus interdum. Nulla facilisi. Phasellus ornare tincidunt facilisis. Sed fringilla, dui adipiscing blandit rhoncus, mi dui mollis erat, sit amet facilisis risus ipsum id ipsum. Mauris et blandit felis. Mauris ligula nunc, cursus et ultricies quis, pharetra in arcu.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
-&nbsp;
-<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Donec suscipit mi sed erat tempus tempus. Duis a magna sapien. Aenean elit nibh, dignissim dignissim vestibulum eu, accumsan quis nibh.<span class="sc2">&lt;<span class="kw2">br</span> <span class="sy0">/</span>&gt;</span>
-Sed ut nisi eget neque volutpat iaculis vel eu ante.<span class="sc2">&lt;<span class="kw2">br</span> <span class="sy0">/</span>&gt;</span>
-Sed placerat, augue vitae fringilla placerat, metus neque viverra odio, in laoreet nunc nibh euismod orci. Aliquam eu purus dolor.<span class="sc2">&lt;<span class="kw2">br</span> <span class="sy0">/</span>&gt;</span>
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam eu ullamcorper dui.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></pre></td></tr></tbody></table></div>
-			</article>
-		
-		<article id='article-247'>
-			<h4>HTML ignoriert Umbr&uuml;che im Code</h4>
-
-			Zeilenumbr&uuml;che sollten nur innerhalb von Elementen genutzt werden, und nicht f&uuml;r das Layout <em>"missbraucht"</em> werden.
-
-<span class="h4">Beispiel:</span>
-<p>Dies ist ein einzelner Paragraph. 
-Dies ist der zweite Satz des Paragraphs. Dies ist der dritte Satz des Paragraphs</p>
-				<caption>Listing</caption>
-				<div class='geshi'><table class="html5"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
-2
-</pre></td><td class="de1"><pre class="de1"><span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Dies ist ein einzelner Paragraph. 
-Dies ist der zweite Satz des Paragraphs. Dies ist der dritte Satz des Paragraphs<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></pre></td></tr></tbody></table></div>
-			</article>
-		
-		<article id='article-248'>
-			<h4>Beispiele f&uuml;r Zeilenumbr&uuml;che:</h4>
-
-			<p>Dies ist ein einzelner Paragraph.
-<br />
-Dies ist der zweite Satz des Paragraphs.
-<br />
-Dies ist der dritte Satz des Paragraphs</p>
-				<caption>Listing</caption>
-				<div class='geshi'><table class="html5"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
-</pre></td><td class="de1"><pre class="de1"><span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Dies ist ein einzelner Paragraph.<span class="sc2">&lt;<span class="kw2">br</span> <span class="sy0">/</span>&gt;</span>Dies ist der zweite Satz des Paragraphs.<span class="sc2">&lt;<span class="kw2">br</span> <span class="sy0">/</span>&gt;</span>Dies ist der dritte Satz des Paragraphs<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></pre></td></tr></tbody></table></div>
-			</article>
-		
-		<article id='article-249'>
-			<h4>Zusammenfassung</h4>
-
-			<div class="information">
-<ul>
-<li><span class="tag">p</span> Ein <strong>Paragraph</strong> in HTML entspricht dem Tastenkommando "<strong>ENTER</strong>" in Word.</li>
-
-<li><span class="tag">br/</span>Ein <strong>Zeilenumbruch</strong> in HTML entsprichet dem Tastenkommando "<strong>SHIFT-ENTER</strong>" in Word.</li>
-</ul>
-</div>
-
-
-<section class='subSection' id='subSection-511'><h3>Images</h3>
-
-		<article id='article-265'>
-			<h4>Bilder in HTML</h4>
-
-			<p>Bilder werden in HTML mittels des <span class="tag">img</span> tag eingebunden. Der Image-Tag ist auch ein selbstschlie&szlig;ender Tag. Die wichtigsten Attribute, die der <span class="tag">img</span>-Tag enthalten darf sind:</p>
-
-<span class="h4">src</span>
-<p>Hier wird der Pfad des Bildes angegeben, dass eingebunden werden soll. Die Pfadangabe ist relativ von der HTML-Datei. Alternativ kann der Pfad auch absolut angegeben werden.</p>
-
-<span class="h4">alt</span>
-<p>Das <span class="attribute">alt</span>-Attribut gibt eine <strong>alternative</strong> Darstellung an. Falls ein User innerhalb seines CLients die Darstellung von Bildern abgeschaltet hat, wird ihm dieser Text pr&auml;sentiert. Des weiteren ist diese Beschreibung relevant in Bezug auf Barrierefreiheit. Personen, die einen ScreenReader nutzen, wird an der Stelle des Bildes diese Beschreibung vorgelesen.</p>
-
-<span class="h4">title</span>
-<p>Das <span class="attribute">title</span>-Attribut gibt dem Bild einen Titel. Dieser wird zum Beispiel beim MouseOver angezeigt</p>
-
-<img class="small" src="./img/1342446643_Logo_512.png" alt="Das Logo von HTML5. Ein oranges Schild im Hintergrund mit dem Buchstaben 5 als Aufdruck" title="HTML5 Logo"/>
-				<caption>Listing</caption>
-				<div class='geshi'><table class="html5"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
-2
-</pre></td><td class="de1"><pre class="de1"><span class="sc2">&lt;<span class="kw2">img</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;./img/1342446643_Logo_512.png&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;Das Logo von HTML5. Ein oranges Schild</span></span>
-<span class="sc2"><span class="st0">im Hintergrund mit dem Buchstaben 5 als Aufdruck&quot;</span> <span class="kw3">title</span><span class="sy0">=</span><span class="st0">&quot;HTML5 Logo&quot;</span><span class="sy0">/</span>&gt;</span></pre></td></tr></tbody></table></div>
-			</article>
-		
-
-
-<section class='subSection' id='subSection-512'><h3>Links</h3>
-
-		<article id='article-255'>
-			<h4>Das wichtigste im Web</h4>
-
-			<img src="./img/1342710597lttp.png" alt="" title="LINK" class="floatright small"/><p>Links sind der wichtigste Bestandteil des <abbr title="World Wide Web">WWW</abbr>.</p>
-
-<p>Ein Link ist eine Verkn&uuml;pfung zu einer Seite, Datei oder auch einem bestimmten Abschnitt innerhalb eines Dokuments. Durch Klicken eines Links erh&auml;lt der Browser die Anweisung, die Ressource aufzurufen.</p>
-
-<p>Sie erm&ouml;glichen die Navigation nicht nur innerhalb einer Seite - sondern auch auf andere Seite.</p>
-
-<p>Ohne direkte Links zu anderen Seiten, w&auml;ren Sie immer dazu gezwungen, die <abbr title="Unique Ressource Identifier">URI</abbr> einer Seite einzeln im Browser einzugeben und dann ENTER zu dr&uuml;cken.</p>
-		<article id='article-256'>
-			<h4>HTML Link Syntax</h4>
-
-			Ein Link macht den kompletten Inhalt, der innerhalb des Tags <span class="tag">a</span> steht, klickbar.<br />
-<br />
-Es kann somit nicht nur Text, sondern auch Bilder oder ganze Container mit einem link versehen werden.
-Das wichtigste Attribut eines links ist <span class="attribute">href</span>. Die Abk&uuml;rzung steht f&uuml;r Hyperlink Reference und gibt das Ziel an, auf welches der Link verweisen soll.
-				<caption>Listing</caption>
-				<div class='geshi'><table class="html5"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
-</pre></td><td class="de1"><pre class="de1"><span class="sc2">&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;#&quot;</span>&gt;</span>Link<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;</span></pre></td></tr></tbody></table></div>
-			</article>
-		
-		<article id='article-262'>
-			<h4>Link zu einer E-Mail Adresse</h4>
-
-			Mit Hilfe der normalen Links k&ouml;nnen auch Verkn&uuml;pfungen zu e-Mail Adressen erstellt werden.
-
-Funktionsweise:
-Ein Klick auf solch einen Link &ouml;ffnet das im Betriebssystem als Standard eingestellte e-Mail-Programm und &uuml;bergibt die hinterlegte Email-Adresse.
-
-
-<a href="mailto:test@example.org">Schick mir eine Mail</a>
-				<caption>Listing</caption>
-				<div class='geshi'><table class="html5"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
-</pre></td><td class="de1"><pre class="de1"><span class="sc2">&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;mailto:test@example.org&quot;</span>&gt;</span>Schick mir eine Mail<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;</span></pre></td></tr></tbody></table></div>
-			</article>
-		
-		<article id='article-263'>
-			<h4>Links in neuen Fenstern</h4>
-
-			<p>Mittels der Attribute eines Links kann eingestellt werden, dass ein Link z.B. in einem neuen Fenster ge&ouml;ffnet werden soll.
-
-Dies geschieht durch Angabe des Attributes: <span class="attribute">target</span><br />
-Dieses Attribute ist jedoch lediglich noch ein &Uuml;berbleibsel aus der Zeit, in denen HTML noch Frames genutzt wurden. Es sollte mittlerweile komplett darauf verzichtet werden, dem User vorzugeben, wie ein Link ge&ouml;ffnet wird. Das Attribut <span class="attribute">target</span> ist mittlerweile auch aus den Spezifikationen f&uuml;r HTML entfernt worden. Diese Einstellung machen die Browser bzw. der User f&uuml;r sich selbst. F&uuml;r den Fall, dass Sie jedoch explizit einen link in einem neuen Fenster (Tab) ge&ouml;ffnet haben m&ouml;chten, stellen wir Ihnen diese <span class="attribute">deprecated</span> - L&ouml;sung trotzdem vor. 
-</p>
-
-<span class="h4">M&ouml;gliche Werte f&uuml;r das target Attribut:</span>
-
-<style type="text/css">
-	 table.example {
-	 	 border:1px solid gray;
-	 }
-	 table.example td {
-	 	 border:1px solid gray;
-         }
-	 table.example th {
-	 	 border:1px solid gray;
-	 }
-</style>
-
-<table class="example">
-	 <thead>
-	 	 <tr>
-	 	 	 <th>Wert</th>
-	 	 	 <th>Auswirkung</th>
-	 	 </tr>
-	 </thead>
-	 <tbody>
-	 	 <tr>
-	 	 	 <td>_blank</td>
-	 	 	 <td>neues Fenster</td>
-	 	 </tr>
-	 	 <tr>
-	 	 	 <td>_self <em>(standard)</em></td>
-	 	 	 <td>in eigentlichen Fenster</td>
-	 	 </tr>
-	 	 <tr>
-	 	 	 <td>_top</td>
-	 	 	 <td>im eigentlichen Fenster <em>(nur bei Nutzung von Frames relevant)</em></td>
-	 	 </tr>
-	 	 <tr>
-	 	 	 <td>_parent</td>
-	 	 	 <td>im Eltern-Frame <em>(nur bei Nutzung von Frames relevant)</em></td>
-	 	 </tr>
-	 	 <tr>
-	 	 	 <td><em>framename</em></td>
-	 	 	 <td>im benannten Frame</td>
-	 	 </tr>
-	 </tbody>
-</table>
-
-<span class="h4">Beispiel</span>
-
-	 <a class="anchor" href="http://www.google.de" target="_blank">Google in neuem Fenster</a>
-
-				<caption>Listing</caption>
-				<div class='geshi'><table class="html5"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
-</pre></td><td class="de1"><pre class="de1"><span class="sc2">&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;http://www.google.de&quot;</span> <span class="kw3">target</span><span class="sy0">=</span><span class="st0">&quot;_blank&quot;</span>&gt;</span>Google in neuem Fenster<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;</span></pre></td></tr></tbody></table></div>
-			</article>
-		
-		<article id='article-267'>
-			<h4>verschiedene Beispiele f&uuml;r Links</h4>
-
-			<span class="h4">Bilder als Links</span>
-<a href="./img/1342449951le-pic.jpg"><img class="small" src="./img/1342449951le-pic.jpg" alt="Boo - the Dog" /></a>
-<br />
-Ein Klick auf den Hund &ouml;ffnet das Bild in seinem Ursprung
-<div class="clear"></div>
-<span class="h4">Container als Links</span>
-<a href=""><div class="blackbox">Ein komplettes DIV als Link</div></a>
-<span class="h4">Buttons als Links</span>
-<a href=""><button class="button">Button</button></a>
-<span class="h4">Text als Links</span>
-<a href="">Dieser Text ist ein Link</a>
-				<caption>Listing</caption>
-				<div class='geshi'><table class="html5"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-</pre></td><td class="de1"><pre class="de1"><span class="sc-1">&lt;!-- IMAGE-Link --&gt;</span>
-<span class="sc2">&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;./img/1342449951le-pic.jpg&quot;</span>&gt;&lt;<span class="kw2">img</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;small&quot;</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;./img/1342449951le-pic.jpg&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;Boo - the Dog&quot;</span> <span class="sy0">/</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;</span>
-&nbsp;
-<span class="sc-1">&lt;!-- DIV-Link --&gt;</span>
-<span class="sc2">&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;&quot;</span>&gt;&lt;<span class="kw2">div</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;blackbox&quot;</span>&gt;</span>Ein komplettes DIV als Link<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;</span>
-&nbsp;
-<span class="sc-1">&lt;!-- button-Link --&gt;</span>
-<span class="sc2">&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;&quot;</span>&gt;&lt;<span class="kw2">button</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;button&quot;</span>&gt;</span>Button<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">button</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;</span>
-&nbsp;
-<span class="sc-1">&lt;!-- Text-Link --&gt;</span>
-<span class="sc2">&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;&quot;</span>&gt;</span>Dieser Text ist ein Link<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;</span>
-&nbsp;</pre></td></tr></tbody></table></div>
-			</article>
-		
-		<article id='article-470'>
-			<h4>Downloads</h4>
-
-			<span class="h4">Wie stelle ich nun einen Donwload-Link bereit?</span>
-<p>Stellen Sie sich einen klassischen Download vor: Sie klicken auf einen link, und kurze Zeit sp&auml;ter f&auml;ngt ihr Browser an, diese Datei herunter zu laden. Doch warum macht dies der Browser? Ist der Begriff Donwload ein eigenes Attribut innerhalb von HTML?<br />
-Sie k&ouml;nnen das Verhalten eines <span class="attribute">Download</span> nicht steuern.</p>
-
-<div class="information">Ein Download ist die Ma&szlig;nahme eines Browsers auf eine Datei, mit der er nichts anfangen kann.</div>
-
-
-<span class="h4">MP3 Download</span>
-<p>Fr&uuml;her war es einfach, z.B. seinem Kameraden eine MP3-File zukommen zu lassen. Man hat die MP3-Datei einfach auf seinen Webserver geschoben, dem Kameraden den Link geschickt und schon hat der Browser die Datei f&uuml;r die lokale Nutzung heruntergeladen.<br />
-Mittlerweile k&ouml;nnen die modernen Browser aber auch intern MP3's abspielen. Ihr Kamerad wird Ihren Link also anklicken und der Browser spielt die Musik direkt ab. Ihr Kamerad m&uuml;sste mittlerweile explizit ausw&auml;hlen, dass er die MP3 speichern m&ouml;chte.</p>
-<span class="h4">PDF Download</span>
-<p>Selbiges gilt mittlerweile auch f&uuml;r .pdf - Dateien</p>
-<span class="h4">Bilder Download</span>
-<p>Bei dem Begriff Bilder-Download denken Sie sich bestimmt: Wieso denn Bilder Download... Jeder Browser kann doch fast alle Arten von Bildern anzeigen. Mit dieser Aussage h&auml;tten Sie jedoch nur teilweise Recht. Es gibt spezielle Nur-Text-Browser. Ein Link auf ein Bild w&uuml;rde es in diesem Fall nicht in Ihrem Browser anzeigen, sondern einen Download starten.</p>
-
-
 <section class='subSection' id='subSection-513'><h3>Formulare</h3>
 
 		<article id='article-273'>
@@ -2695,166 +2946,6 @@ Erarbeiten Sie sich die Funktionsweise von <span class="tag">fieldset</span> sel
 </div>
 
 
-<section class='subSection' id='subSection-515'><h3>Textformatierung</h3>
-
-		<article id='article-250'>
-			<h4>Einfache Formatierungen</h4>
-
-			<p>HTML ist nicht daf&uuml;r gedacht, Text optisch zu formatieren. Jedoch haben manche Element von Haus aus eine optische Hinterlegung. Diese ist jedoch noch aus den Anf&auml;ngen von HTML &uuml;brig geblieben. Eine Formatierung eines Textes erfolgt ausschlie&szlig;lich &uuml;ber CSS. Die im Folgenden kurz vorgestellten Formen der Formatierung mit den Mitteln von HTML dient der semantischen Hinterlegung von Text.</p>
-
-<p><strong>This text is bold</strong></p>
-
-<p><em>This text is italic</em></p>
-
-<p><pre>This is computer output</pre></p>
-
-<p><del>Dieser Text ist durchgestrichen</del></p>
-				<caption>Listing</caption>
-				<div class='geshi'><table class="html5"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
-2
-3
-4
-5
-6
-7
-</pre></td><td class="de1"><pre class="de1"><span class="sc2">&lt;<span class="kw2">p</span>&gt;&lt;<span class="kw2">strong</span>&gt;</span>This text is bold<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">strong</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
-&nbsp;
-<span class="sc2">&lt;<span class="kw2">p</span>&gt;&lt;<span class="kw2">em</span>&gt;</span>This text is italic<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">em</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
-&nbsp;
-<span class="sc2">&lt;<span class="kw2">p</span>&gt;&lt;<span class="kw2">pre</span>&gt;</span>This is computer output<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">pre</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
-&nbsp;
-<span class="sc2">&lt;<span class="kw2">p</span>&gt;&lt;<span class="kw2">del</span>&gt;</span>Dieser Text ist durchgestrichen<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">del</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></pre></td></tr></tbody></table></div>
-			</article>
-		
-		<article id='article-251'>
-			<h4>b vs. strong</h4>
-
-			<p>In den meisten normalen Browsern werden die beiden TAGs <span class="tag">b</span> und <span class="tag">strong</span> identisch dargestellt.<br />
-Sie d&uuml;rfen jedoch nicht als komplement&auml;r angesehen werden.</p>
-
-<span class="h4">Unterschiede:</span>
-
-<span class="h5"><span class="tag">b</span></span>
-
-Der Tag b dient lediglich der optische fetteren Darstellung eines Ausdrucks.
-Inhaltlich (semantisch) hat dieser Ausdruck nicht mehr Bedeutung als normaler Text.
-
-<span class="h5"><span class="tag">strong</span></span>
-
-Der Tag strong hat zus&auml;tzlich zur optischen Gestaltung eine semantische Bedeutung:
-Ein Ausdruck der mit strong markiert wurde ist als wichtiger zu betrachten, als normaler Text.
-
-<span class="h6">Warum sollte mich das interessieren wenn beide Tags exakt gleich dargestellt werden?</span>
-
-<div class="information"><span class="h4">Beispiel:</span>
-
-Ein Screenreader (Ger&auml;t, dass den Inhalt einer Homepage vorlesen kann - wird benutzt von Menschen mit Sehbehinderungen) w&uuml;rde bei dem Tag strong diesen Ausdruck auch betont vorlesen.
-
-Dies ist bei dem Tag <span class="tag">b</span> nicht der Fall.
-
-</div>
-		<article id='article-252'>
-			<h4>em vs. i</h4>
-
-			Parallel zu den tags <span class="tag">b</span> und <span class="tag">strong</span> verhalten sich auch die Tags <span class="tag">em</span> und <span class="tag">i</span>.
-
-<span class="tag">em</span> hat eine semantische Bedeutung und <span class="tag">i</span> besitzt lediglich die optischen Eigenschaften f&uuml;r den Browser.
-
-
-<section class='subSection' id='subSection-516'><h3>Listen</h3>
-
-		<article id='article-306'>
-			<h4>Nummerieren, Definieren, oder einfach nur so....</h4>
-
-			<img class="small shadow floatright" src="./img/1342713494ufsliste.jpeg" alt="Einkaufsliste" /><p>HTML kennt <strong>3</strong> verschiedene M&ouml;glichkeiten Listen zu erstellen:</p>
-<ul>
-    <li>unsortierte Listen</li>
-    <li>sortierte Listen</li>
-    <li>Definitionslisten</li>
-</ul><br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-
-
-		<article id='article-307'>
-			<h4>Unsortierte Listen - unordered lists [ul]</h4>
-
-			<p>Die einfachste Form einer Liste ist die Aufz&auml;hlung.<br />
-In HTML wird die unsortierte Liste mit dem Element <span class="tag">ul</span> eingeleitet und dementsprechend mit <span class="tag">/ul</span> wieder geschlossen.<br />
-Die einzelnen Elemente innerhalb einer Liste werden mit dem Tag <span class="tag">li</span> definiert.
-</p>
-<div class="information">Gem&auml;&szlig; den Spezifikation von HTML ist es nicht n&ouml;tig, jedes einzelne <span class="tag">li</span> auch wieder explizit zu schlie&szlig;en. Um eventuelle Darstellungsprobleme im vornherein zu verhindern und auch einen einheitlichen Coding-Stil zu gew&auml;hrleisten, sollten alle <span class="tag">li</span> auch wieder mit <span class="tag">/li</span> geschlossen werden.</div>
-
-<ul>
-    <li>Milch</li>
-    <li>&Auml;pfel</li>
-    <li>Bananen</li>
-    <li>Joghurt</li>
-</ul>
-
-				<caption>Listing</caption>
-				<div class='geshi'><table class="html5"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
-2
-3
-4
-5
-6
-</pre></td><td class="de1"><pre class="de1"><span class="sc2">&lt;<span class="kw2">ul</span>&gt;</span>
-&nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>Milch<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
-&nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span><span class="sc1">&amp;Auml;</span>pfel<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
-&nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>Bananen<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
-&nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>Joghurt<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
-<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">ul</span>&gt;</span></pre></td></tr></tbody></table></div>
-			</article>
-		
-		<article id='article-258'>
-			<h4>Geordnete und ungeordnete Listen</h4>
-
-			<table class="example">
-	 <thead>
-	 	 <tr>
-	 	 	 <th>ungeordnete Liste</th>
-	 	 	 <th>nummerierte Liste</th>
-	 	 </tr>
-	 </thead>
-	 <tbody>
-	 	 <tr>
-	 	 	 <td>
-	 	 	 	 <ul>
-	 	 	 	 	 <li>Listenelement</li>
-	 	 	 	 	 <li>Listenelement</li>
-	 	 	 	 	 <li>Listenelement</li>
-	 	 	 	 	 <li>Listenelement</li>
-	 	 	 	 	 <li>Listenelement</li>
-	 	 	 	 </ul>
-	 	 	 </td>
-	 	 	 <td>
-	 	 	 	 <ol>
-	 	 	 	 	 <li>erstes Element</li>
-	 	 	 	 	 <li>zweites Element</li>
-	 	 	 	 	 <li>drittes Element</li>
-	 	 	 	 	 <li>viertes Element</li>
-	 	 	 	 	 <li>f&uuml;nftes Element</li>
-	 	 	 	 </ol>
-	 	 	 </td>
-	 	 </tr>
-	 </tbody>
-</table>
-		<article id='article-472'>
-			<h4></h4>
-
-			<div class="homework"><span class="h4">Aufgabe:</span>
-Recherchieren Sie in Eigenarbeit, wie man eine Definitionsliste erstellt.<br />
-Erstellen Sie eine Definitionsliste mit mehreren verschiedenen Dienstgraden der Bundeswehr.
-</div>
-
-
-
-
 <section class='subSection' id='subSection-554'><h3>Externe Inhalte</h3>
 
 		<article id='article-412'>
@@ -2864,16 +2955,30 @@ Erstellen Sie eine Definitionsliste mit mehreren verschiedenen Dienstgraden der 
 
 <span class="h4">The Creative Way</span><a href="./img/1343315691.jpg" class="imageZoom"><img src="./img/1343315691.jpg" alt="" class="medium shadow floatCenter"/></a>
 <span class="h4">The Easy Way</span>
-<iframe style="margin:0px auto" width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=Tutzinger+Stra%C3%9Fe+46,+Feldafing,+Deutschland&aq=1&oq=tutzinger+str+46&sll=48.175708,11.755822&sspn=0.150187,0.363579&t=h&ie=UTF8&hq=&hnear=Tutzinger+Stra%C3%9Fe+46,+82340+Feldafing,+Bayern,+Germany&z=14&ll=47.936242,11.295866&output=embed"></iframe>
+
+<a href="./img/20120803_Unbenannt.jpg" class="imageZoom"><img src="./img/20120803_Unbenannt.jpg" alt="" class="shadow floatCenter"/></a>
+
 		<article id='article-445'>
 			<h4>N&uuml;tzliche Browser-Infos</h4>
 
-			<a href="http://www.wieistmeineip.de/cometo/?de"><img src="http://www.wieistmeineip.de/ip-adresse/?size=468x60" border="0" width="468" height="60" alt="IP" /></a>
+			<a href="./img/20120803_Download.gif" class="imageZoom"><img src="./img/20120803_Download.gif" alt="" class="shadow floatCenter"/></a>
 				<caption>Listing</caption>
 				<div class='geshi'><table class="html5"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
 </pre></td><td class="de1"><pre class="de1"><span class="sc2">&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;http://www.wieistmeineip.de/cometo/?de&quot;</span>&gt;&lt;<span class="kw2">img</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;http://www.wieistmeineip.de/ip-adresse/?size=468x60&quot;</span> <span class="kw3">border</span><span class="sy0">=</span><span class="st0">&quot;0&quot;</span> <span class="kw3">width</span><span class="sy0">=</span><span class="st0">&quot;468&quot;</span> <span class="kw3">height</span><span class="sy0">=</span><span class="st0">&quot;60&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;IP&quot;</span> <span class="sy0">/</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;</span></pre></td></tr></tbody></table></div>
 			</article>
-		</section></section>
+		
+		<article id='article-480'>
+			<h4></h4>
+
+			<div class="homework"><span class="h4">Aufgabe</span>Binden Sie auf Ihren HTML-Seiten folgende Inhalte ein:
+<ul>
+<li>Ein Video von Youtube</li>
+<li>Eine Adresse von Google Maps</li>
+<li>Den IP-Banner von wieistmeineiip.de</li>
+</ul>
+
+</div>
+<div class="notes h50"></div></section></section>
 
 
 
@@ -3153,9 +3258,6 @@ Der HTML Code ist bei allen 3 Seiten identisch.</p>
     <li>Inline CSS</li>
 </ol>
 
-<div class="information">das attribut <span class="attribute">color</span> legt die Farbe der Schrift fest</div>
-
-
 <p>Anbei ein Beispiel einer HTML Datei, die alle 3 verschiedenen Varianten kombiniert.</p>
 				<caption>Listing</caption>
 				<div class='geshi'><table class="html5"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
@@ -3199,9 +3301,9 @@ Der HTML Code ist bei allen 3 Seiten identisch.</p>
 &nbsp;
 <span class="sc2">&lt;<span class="kw2">body</span>&gt;</span>
 &nbsp;
-&nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">h1</span>&gt;</span>Gr<span class="sc1">&amp;uuml;</span>ne <span class="sc1">&amp;Uuml;</span>berschrift<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h1</span>&gt;</span>
+&nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">h1</span>&gt;</span>Gr&uuml;ne &Uuml;berschrift<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h1</span>&gt;</span>
 &nbsp;
-&nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">h1</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;color:yellow&quot;</span>&gt;</span>Gelbe <span class="sc1">&amp;Uuml;</span>berschrift<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h1</span>&gt;</span>
+&nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">h1</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;color:yellow&quot;</span>&gt;</span>Gelbe &Uuml;berschrift<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h1</span>&gt;</span>
 &nbsp;
 <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">body</span>&gt;</span>
 &nbsp;
@@ -3315,11 +3417,11 @@ Der HTML Code ist bei allen 3 Seiten identisch.</p>
 &nbsp;
 <span class="sc2">&lt;<span class="kw2">body</span>&gt;</span>
 &nbsp;
-&nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">h1</span>&gt;</span><span class="sc1">&amp;Uuml;</span>berschrift 1<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h1</span>&gt;</span>
+&nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">h1</span>&gt;</span>&Uuml;berschrift 1<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h1</span>&gt;</span>
 &nbsp;
-&nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">h2</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;color:yellow&quot;</span>&gt;</span>Gelbe <span class="sc1">&amp;Uuml;</span>berschrift<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h2</span>&gt;</span>
+&nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">h2</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;color:yellow&quot;</span>&gt;</span>Gelbe &Uuml;berschrift<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h2</span>&gt;</span>
 &nbsp;
-&nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">h2</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;color:green&quot;</span>&gt;</span>Gelbe <span class="sc1">&amp;Uuml;</span>berschrift<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h2</span>&gt;</span>
+&nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">h2</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;color:green&quot;</span>&gt;</span>Gelbe &Uuml;berschrift<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h2</span>&gt;</span>
 &nbsp;
 <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">body</span>&gt;</span>
 &nbsp;
@@ -3455,7 +3557,7 @@ li a.<span class="kw1">blue</span> <span class="br0">&#123;</span>
 6
 7
 8
-</pre></td><td class="de1"><pre class="de1"><span class="sc2">&lt;<span class="kw2">div</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;beispielKlasse&quot;</span>&gt;</span>Hier k<span class="sc1">&amp;ouml;</span>nnte auch Ihr Inhalt stehen<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span>
+</pre></td><td class="de1"><pre class="de1"><span class="sc2">&lt;<span class="kw2">div</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;beispielKlasse&quot;</span>&gt;</span>Hier k&ouml;nnte auch Ihr Inhalt stehen<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span>
 &nbsp;
 &nbsp;
 .beispielKlasse {
@@ -3547,8 +3649,8 @@ li a.<span class="kw1">blue</span> <span class="br0">&#123;</span>
 4
 </pre></td><td class="de1"><pre class="de1"><span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;font-style:italic;&quot;</span>&gt;</span>Eine Schrift in italic<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span>
 <span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;font-weight:bold;&quot;</span>&gt;</span>Eine fettere Schrift<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span>
-<span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;font-size:3em;&quot;</span>&gt;</span>Eine gr<span class="sc1">&amp;ouml;&amp;szlig;</span>ere Schrift<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span>
-<span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;font-family:Times New Roman&quot;</span>&gt;</span>und schlie<span class="sc1">&amp;szlig;</span>lich noch eine andere Schriftart<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span></pre></td></tr></tbody></table></div>
+<span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;font-size:3em;&quot;</span>&gt;</span>Eine gr&ouml;&szlig;ere Schrift<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;font-family:Times New Roman&quot;</span>&gt;</span>und schlie&szlig;lich noch eine andere Schriftart<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span></pre></td></tr></tbody></table></div>
 			</article>
 		
 		<article id='article-394'>
@@ -3607,68 +3709,6 @@ Mit CSS setzen Sie dies mit der Eigenschaft <span class="attribute">text-align</
 
 </div>
 
-
-
-<section class='subSection' id='subSection-545'><h3>Borders</h3>
-
-		<article id='article-351'>
-			<h4>R&auml;nder um Elemente</h4>
-
-			<p>Es kann jedem HTML Element ein Rand zugewiesen werden. In diesem Paragraph wird darauf eingegangen, wie man R&auml;nder um Elemente setzen kann.<br />
-F&uuml;r R&auml;nder mittels CSS gibt es 2 verschiedene Schreibweise. Die Kurzschreibweise und die Langschreibweise.</p>
-<img class="floatCenter" style="width:372px" src="./img/1343138612order.png" alt="" />
-		<article id='article-352'>
-			<h4>das border attribut im detail</h4>
-
-			<img style="width:372px" class="floatCenter" src="./img/1343138841order_detail.png" alt="" />
-<span class="h4">Beispiel:</span>
-
-<div style="border:2px solid green; height:75px; background:#f2f2f2;">Beispiel #1</div><br />
-
-<div style="border:4px dashed red; height:75px; background:#f2f2f2;">Beispiel #2</div><br />
-
-<div style="border:1px dotted orange; height:75px; background:#f2f2f2;">Beispiel #3</div><br />
-
-<div style="border-bottom:22px solid green;border-top:4px solid fuchsia;border-left:5px solid blue;border-right:4px solid orange; height:75px; background:#f2f2f2;">Beispiel #4</div>
-				<caption>Listing</caption>
-				<div class='geshi'><table class="css"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-</pre></td><td class="de1"><pre class="de1"><span class="re1">.beispiel1</span> <span class="br0">&#123;</span>
-&nbsp; &nbsp; <span class="kw1">border</span><span class="sy0">:</span><span class="re3">2px</span> <span class="kw2">solid</span> <span class="kw2">green</span><span class="sy0">;</span>
-<span class="br0">&#125;</span>
-&nbsp;
-<span class="re1">.beispiel2</span> <span class="br0">&#123;</span>
-&nbsp; &nbsp; <span class="kw1">border</span><span class="sy0">:</span><span class="re3">4px</span> <span class="kw2">dashed</span> <span class="kw2">red</span><span class="sy0">;</span>
-<span class="br0">&#125;</span>
-&nbsp;
-<span class="re1">.beispiel3</span> <span class="br0">&#123;</span>
-&nbsp; &nbsp; <span class="kw1">border</span><span class="sy0">:</span><span class="re3">1px</span> <span class="kw2">dotted</span> orange<span class="sy0">;</span>
-<span class="br0">&#125;</span>
-&nbsp;
-<span class="re1">.beispiel4</span> <span class="br0">&#123;</span>
-&nbsp; &nbsp; <span class="kw1">border-bottom</span><span class="sy0">:</span><span class="re3">22px</span> <span class="kw2">solid</span> <span class="kw2">green</span><span class="sy0">;</span>
-&nbsp; &nbsp; <span class="kw1">border-top</span><span class="sy0">:</span><span class="re3">4px</span> <span class="kw2">solid</span> <span class="kw2">fuchsia</span><span class="sy0">;</span>
-&nbsp; &nbsp; <span class="kw1">border-left</span><span class="sy0">:</span><span class="re3">5px</span> <span class="kw2">solid</span> <span class="kw1">blue</span><span class="sy0">;</span>
-&nbsp; &nbsp; <span class="kw1">border-right</span><span class="sy0">:</span><span class="re3">4px</span> <span class="kw2">solid</span> orange<span class="sy0">;</span>
-<span class="br0">&#125;</span></pre></td></tr></tbody></table></div>
-			</article>
-		
 
 
 <section class='subSection' id='subSection-546'><h3>Farben</h3>
@@ -3776,6 +3816,267 @@ span <span class="br0">&#123;</span>
 
 			<p>Das RGB-Farbmodell gibt jede einzelne Farbe damit an, wieviel Prozent der 3 Grundfarben Rot, Gr&uuml;n oder Blau enthalten sein soll. Bei Angabe von jeweils 0% wird schwarz dargestellt. 100% jeder Farbe entspricht wei&szlig;.<br />
 Der Farbcode f&uuml;r CSS besteht in HTML meist aus 6 Zeichen. 2 f&uuml;r Rot, 2 f&uuml;r Gr&uuml;n und 2 f&uuml;r Blau. Die g&auml;ngigen Browser unterst&uuml;zen auch die Kurzschreibweise, Farben mit 3 Zeichen anzugeben. Der Browser verdoppelt jedes Zeichen.</p><a href="./img/1343652081arbmodell-transp.gif" class="imageZoom"><img src="./img/1343652081arbmodell-transp.gif" alt="" class="small shadow floatright"/></a><a href="./img/1343657370n_css.png" class="imageZoom"><img src="./img/1343657370n_css.png" alt="" class="floatleft"/></a><hr class="clear">
+
+
+<section class='subSection' id='subSection-545'><h3>R&auml;nder</h3>
+
+		<article id='article-351'>
+			<h4>R&auml;nder um Elemente</h4>
+
+			<p>Es kann jedem HTML Element ein Rand zugewiesen werden. In diesem Paragraph wird darauf eingegangen, wie man R&auml;nder um Elemente setzen kann.<br />
+F&uuml;r R&auml;nder mittels CSS gibt es 2 verschiedene Schreibweise. Die Kurzschreibweise und die Langschreibweise.</p>
+<img class="floatCenter" style="width:372px" src="./img/1343138612order.png" alt="" />
+		<article id='article-352'>
+			<h4>das border attribut im detail</h4>
+
+			<img style="width:372px" class="floatCenter" src="./img/1343138841order_detail.png" alt="" />
+<span class="h4">Beispiel:</span>
+
+<div style="border:2px solid green; height:75px; background:#f2f2f2;">Beispiel #1</div><br />
+
+<div style="border:4px dashed red; height:75px; background:#f2f2f2;">Beispiel #2</div><br />
+
+<div style="border:1px dotted orange; height:75px; background:#f2f2f2;">Beispiel #3</div><br />
+
+<div style="border-bottom:22px solid green;border-top:4px solid fuchsia;border-left:5px solid blue;border-right:4px solid orange; height:75px; background:#f2f2f2;">Beispiel #4</div>
+				<caption>Listing</caption>
+				<div class='geshi'><table class="css"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+</pre></td><td class="de1"><pre class="de1"><span class="re1">.beispiel1</span> <span class="br0">&#123;</span>
+&nbsp; &nbsp; <span class="kw1">border</span><span class="sy0">:</span><span class="re3">2px</span> <span class="kw2">solid</span> <span class="kw2">green</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+<span class="re1">.beispiel2</span> <span class="br0">&#123;</span>
+&nbsp; &nbsp; <span class="kw1">border</span><span class="sy0">:</span><span class="re3">4px</span> <span class="kw2">dashed</span> <span class="kw2">red</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+<span class="re1">.beispiel3</span> <span class="br0">&#123;</span>
+&nbsp; &nbsp; <span class="kw1">border</span><span class="sy0">:</span><span class="re3">1px</span> <span class="kw2">dotted</span> orange<span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+<span class="re1">.beispiel4</span> <span class="br0">&#123;</span>
+&nbsp; &nbsp; <span class="kw1">border-bottom</span><span class="sy0">:</span><span class="re3">22px</span> <span class="kw2">solid</span> <span class="kw2">green</span><span class="sy0">;</span>
+&nbsp; &nbsp; <span class="kw1">border-top</span><span class="sy0">:</span><span class="re3">4px</span> <span class="kw2">solid</span> <span class="kw2">fuchsia</span><span class="sy0">;</span>
+&nbsp; &nbsp; <span class="kw1">border-left</span><span class="sy0">:</span><span class="re3">5px</span> <span class="kw2">solid</span> <span class="kw1">blue</span><span class="sy0">;</span>
+&nbsp; &nbsp; <span class="kw1">border-right</span><span class="sy0">:</span><span class="re3">4px</span> <span class="kw2">solid</span> orange<span class="sy0">;</span>
+<span class="br0">&#125;</span></pre></td></tr></tbody></table></div>
+			</article>
+		
+		<article id='article-481'>
+			<h4>Selbststudium</h4>
+
+			<div class="homework"><span class="h4">Aufgabe</span>
+Vergeben Sie an jeden Paragraphen, den Sie im Kapitel HTML erstellt haben einen Rand. Nutzen Sie die Beispiele aus dem Script.
+</div>
+<div class="notes h50"></div>
+
+
+
+<section class='subSection' id='subSection-549'><h3>Breite und H&ouml;he</h3>
+
+		<article id='article-383'>
+			<h4>width und height</h4>
+
+			<p>Mittes der Eigenschaft <span class="attribute">width</span> ist es in CSS m&ouml;glich, einem Element eine feste Breite zu geben. Als Anwendungsbeispiel kann man sich ein Bild, einen Absatz, einen Container, einen Link, eine Liste oder auch jedes andere Element vorstellen. Die Angabe der Breite sowie auch der H&ouml;he ist eine der wichtigsten Eigenschaften von CSS.</p>
+F&uuml;r die Angabe einer Breite haben Sie verschiedene M&ouml;glichkeiten der Notation:
+
+<ul>
+
+<li>exakt: in <strong>px</strong></li>
+<li>relativ: in <strong>em</strong></li>
+<li>relativ: in <strong>%</strong></li>
+
+</ul>
+Dies sind nur 3 von Notationen von vielen mehreren M&ouml;glichen. Doch diese 3 stellen die g&auml;ngisten dar und sollten ausschlie&szlig;lich genutzt werden.
+		<article id='article-395'>
+			<h4>Die Breite und Bilder</h4>
+
+			<p>Die meisten Bilder haben eine Relation der Aufl&ouml;sung von 4:3. Sie m&ouml;chten nun ein etwas zu gro&szlig;es Bild auf Ihrer Seite einbinden. Das Bild hat eine Aufl&ouml;sung von 850px * 560px. Sie wollen es aber nur in 800px anzeigen, da es sonst nicht auf Ihre Seite passen w&uuml;rde. In diesem Fall wissen Sie, dass die neue Breite 800px ist. Doch ducrh welchen Wert muss die Angabe 560px ersetzt werden, ohne dass das Bild verzerrt dargestellt wird.</p>
+<div class="homework"><span class="h4">Aufgabe</span>
+<ol>
+<li>Binden Sie ein beliebiges Bild auf einer Ihrer HTML - Seiten ein.</li>
+<li>Geben Sie mittels CSS dem Bild eine Breite von 800px.</li>
+<li>&Uuml;berpr&uuml;fen Sie Ihr Ergebnis. (Google Chrome mit Rechtsklick)</li>
+<li>In welcher Breite wurde Ihr Bild ausgegeben? Ist dieser Wert der exakt richtig berechnete oder ist Ihr Bild verzerrt?</li>
+
+</ol>
+
+</div>
+
+<a href="./img/1343633707102.JPG" class="imageZoom"><img src="./img/1343633707102.JPG" alt="" style="clear:both; width:50px;" class="shadow"/></a>
+<a href="./img/1343633707102.JPG" class="imageZoom"><img src="./img/1343633707102.JPG" alt="" style="clear:both; width:150px;" class="shadow"/></a>
+<a href="./img/1343633707102.JPG" class="imageZoom"><img src="./img/1343633707102.JPG" alt="" style="clear:both; width:300px;" class="shadow"/></a>
+		<article id='article-421'>
+			<h4>Bilder und deren H&ouml;he</h4>
+
+			<p>Diese mal sind die drei kleinen Hunde &uuml;ber Ihre H&ouml;he und nicht &uuml;ber deren Breite definiert worden</p>
+<a href="./img/1343633707102.JPG" class="imageZoom"><img src="./img/1343633707102.JPG" alt="" style="clear:both; height:50px;" class="shadow"/></a>
+<a href="./img/1343633707102.JPG" class="imageZoom"><img src="./img/1343633707102.JPG" alt="" style="clear:both; height:150px;" class="shadow"/></a>
+<a href="./img/1343633707102.JPG" class="imageZoom"><img src="./img/1343633707102.JPG" alt="" style="clear:both; height:300px;" class="shadow"/></a>
+<div class="homework"><span class="h4">Auftrag:</span>
+
+Testen Sie an Hand von Ihrem Beispiel f&uuml;r die Breite, wie sich die Bilder mit den Angaben von <span class="attribute">height:</span> nun Verhalten.<br />
+Berechnet Ihr Browser wieder selbstst&auml;ndig die richtige Breite und H&ouml;he?<br />
+Testen Sie Ihre Beispiele in mehreren verschiedenen Browsern.
+
+</div>
+
+		<article id='article-422'>
+			<h4>Verzerrte Bilder</h4>
+
+			<a href="./img/1343633707102.JPG" class="imageZoom"><img src="./img/1343633707102.JPG" alt="" style="clear:both; width:500px; height:300px;" class="shadow"/></a>
+
+
+<section class='subSection' id='subSection-553'><h3>Hintergr&uuml;nde</h3>
+
+		<article id='article-407'>
+			<h4>Farbhintergr&uuml;nde</h4>
+
+			<p>CSS erlaubt es mit dem Attribut <span class="attribute">background</span> jedem Element einen Hintergrund zu geben.</p>
+<a href="./img/1343311331ackground2.png" class="imageZoom"><img src="./img/1343311331ackground2.png" alt="" class="floatCenter"/></a>
+		<article id='article-409'>
+			<h4>Bilder als Hintergr&uuml;nde</h4>
+
+			<a href="./img/1343311283ackground.png" class="imageZoom"><img src="./img/1343311283ackground.png" alt="" class="floatCenter"/></a>
+<div class="homework"><span class="h4">Auftrag:</span>
+<ul>
+<li>Recherchieren Sie, wie sie einen Hintergrund fest anbringen k&ouml;nnen. Es soll immer ganz oben im Browser angeheftet sein, auch wenn Sie weiter runter scrollen.</li>
+
+<li>welche Eigenschaften f&uuml;r die Wiederholung von Hintergr&uuml;nden gibt es?</li>
+
+<li>Ist es m&ouml;glich, ein Hintergrundbild zu skalieren? Ihr Bild hat eine Breite von 2000px. Sie wollen es jedoch trotzdem als Hintergrund f&uuml;r einen 400px breiten Container nutzen. Sie wollen das Bild jedoch nicht abschneiden.</li>
+
+<li>Wie kann ich es schaffen, dass ein Bild erst ab einer bestimmten Stelle eingeblendet wird?</li>
+</ul>
+
+</div>
+		<article id='article-410'>
+			<h4>Hintergundbeispiele</h4>
+
+			<p>Sie haben hier eine Sammlung an sehr sch&ouml;nen Hintergrundbildern f&uuml;r die eigene Nutzung.</p><hr class="clear"/>
+
+
+
+<a href="./img/1343311717.jpg" class="imageZoom">
+<img style="height:150px;" src="./img/1343311717.jpg" alt="" class="small shadow floatright"/>
+</a>
+<a href="./img/1343311732.jpg" class="imageZoom">
+<img style="height:150px;" src="./img/1343311732.jpg" alt="" class="small shadow floatright"/>
+</a>
+<a href="./img/1343311747board.jpg" class="imageZoom">
+<img style="height:150px;" src="./img/1343311747board.jpg" alt="" class="small shadow floatright"/>
+</a>
+<a href="./img/1343311760ful.jpg" class="imageZoom">
+<img style="height:150px;" src="./img/1343311760ful.jpg" alt="" class="small shadow floatright"/>
+</a>
+<a href="./img/1343311774ade.jpg" class="imageZoom">
+<img style="height:150px;" src="./img/1343311774ade.jpg" alt="" class="small shadow floatright"/>
+</a>
+<a href="./img/1343311786ood.jpg" class="imageZoom">
+<img style="height:150px;" src="./img/1343311786ood.jpg" alt="" class="small shadow floatright"/>
+</a>
+<a href="./img/1343311799st.jpg" class="imageZoom">
+<img style="height:150px;" src="./img/1343311799st.jpg" alt="" class="small shadow floatright"/>
+</a>
+<a href="./img/1343311819.jpg" class="imageZoom">
+<img style="height:150px;" src="./img/1343311819.jpg" alt="" class="small shadow floatright"/>
+</a>
+<a href="./img/1343311846_purple.jpg" class="imageZoom">
+<img style="height:150px;" src="./img/1343311846_purple.jpg" alt="" class="small shadow floatright"/>
+</a>
+<a href="./img/1343311860.jpg" class="imageZoom">
+<img style="height:150px;" src="./img/1343311860.jpg" alt="" class="small shadow floatright"/>
+</a>
+<a href="./img/1343311875fade.jpg" class="imageZoom">
+<img style="height:150px;" src="./img/1343311875fade.jpg" alt="" class="small shadow floatright"/>
+</a>
+<a href="./img/1343311890.jpg" class="imageZoom">
+<img style="height:150px;" src="./img/1343311890.jpg" alt="" class="small shadow floatright"/>
+</a>
+
+
+
+
+<div style="text-align:center;margin:30px;background: url('./img/1343311890.jpg') top center; clear:both; height:400px; border-radius:50px;">Beispiel f&uuml;r die Einbindung</div>
+
+<div class="information">Die angebotenen Hintergr&uuml;nde sind alle hochaufl&ouml;send und sollten daher nur zum testen verwendet werden. Zur Nutzung auf Produktivsystemen sollten Sie runterskaliert / optimiert werden</div>
+
+				<caption>Listing</caption>
+				<div class='geshi'><table class="css"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
+2
+3
+</pre></td><td class="de1"><pre class="de1">body <span class="br0">&#123;</span>
+&nbsp; &nbsp; <span class="kw1">background</span><span class="sy0">:</span> <span class="kw2">url</span><span class="br0">&#40;</span><span class="st0">'./img/1343311890.jpg'</span><span class="br0">&#41;</span> <span class="kw1">top</span> <span class="kw2">center</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre></td></tr></tbody></table></div>
+			</article>
+		
+
+
+<section class='subSection' id='subSection-555'><h3>Links</h3>
+
+		<article id='article-414'>
+			<h4>Link Styling</h4>
+
+			<p>Links stellen im Internet die einfachste Form der Interaktion dar. Durch Links wird erst die einfache Navigation im Internet erm&ouml;glicht. Es hat sich eingeb&uuml;rgert Links - also Interaktion f&uuml;r den User - speziell hervorzuheben. Der Nutzer soll direkt sehen: Hier geht es weiter, hier kann etwas passieren. Standardm&auml;&szlig;ig werden links deswegen schon in einer anderen Farbe und unterstrichen dargestellt.</p><p>Leider passt dieses blau jedoch keinesfalls zu meinem CI. Auch die bereits besuchten Links, die meist in lila dargestellt werden st&ouml;ren das Design meiner Seite erheblich. Nachdem wir mittlerweile Erfahrungen im Umgang mit CSS haben, f&auml;llt es uns sicher leicht, einen normalen Link umzugestalten.</p>
+<div class="homework"><span class="h4">Definieren Sie einige Links und geben diesen die folgenden Eigenschaften</span>
+<ul>
+	 <li>fett</li>
+	 <li>blauer Rand</li>
+	 <li>gelber Hintergrund</li>
+	 <li>feste Breite von 300px</li>
+</ul>
+</div>
+<p>Doch wie sieht es nun mit den bereits besuchten links aus? Oder dem Effekt, wenn Sie mit der Maus dar&uuml;ber fahren?
+Speziell f&uuml;r diese Anforderungen gibt es in CSS sogenannte Pseudo-Klassen.
+</p>
+<div class="information">Pseudo-Klassen sind Klassifizierungen, die einen Zustand oder eine Eigenschaft eines Elements beschreiben.</div>
+
+<p>Pseudo-Klassen werden in CSS einfach direkt an den Selektor mit einem <span class="attribute">:</span> angeh&auml;ngt.</p>
+
+				<caption>Listing</caption>
+				<div class='geshi'><table class="css"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
+2
+3
+4
+</pre></td><td class="de1"><pre class="de1">a<span class="re2">:hover </span><span class="br0">&#123;</span>
+&nbsp; &nbsp; <span class="kw1">color</span><span class="sy0">:</span><span class="kw2">fuchsia</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="coMULTI">/*f&auml;rbt den Link beim Mouse-over (hover) lila*/</span></pre></td></tr></tbody></table></div>
+			</article>
+		
+		<article id='article-415'>
+			<h4>Weitere Pseudo-Klassen</h4>
+
+			<span class="h4">:visited</span>
+<p>definiert das Aussehen der bereits besuchten links [standard: lila]</p>
+<span class="h4">:active</span>
+<p>definiert was bei einem Klick auf das Element passieren soll</p>
+<span class="h4">:focus</span>
+<p>Definiert, wie ein focussiertes Element gehanhabt werden soll [speziell bei Formularen]</p>
+<input class="bunt" type="text" placeholder="klick mich an, ich werde bunt"/>
+<style type="text/css">
+input.bunt:focus {
+background:green
+}
+input.bunt {
+background:yellow}
+</style>
 
 
 <section class='subSection' id='subSection-547'><h3>Au&szlig;en und Innenabst&auml;nde</h3>
@@ -3968,197 +4269,6 @@ Ihre Redakteure bestehen darauf, dass Sie selber Innenabst&auml;nde und auch R&a
 Mit dieser Eigenschaft wird nimmt ein Element bei Angabe einer Breite mittels <span class="attribute">width</span> wirklich maximal diese Breite ein.</p>
 <div class="information">mit <span class="attribute">box-sizing:border-box</span> k&ouml;nnen Sie eine maximale Breite inkl. des padding und der border angeben.</div>
 
-
-
-<section class='subSection' id='subSection-549'><h3>Breite und H&ouml;he</h3>
-
-		<article id='article-383'>
-			<h4>width und height</h4>
-
-			<p>Mittes der Eigenschaft <span class="attribute">width</span> ist es in CSS m&ouml;glich, einem Element eine feste Breite zu geben. Als Anwendungsbeispiel kann man sich ein Bild, einen Absatz, einen Container, einen Link, eine Liste oder auch jedes andere Element vorstellen. Die Angabe der Breite sowie auch der H&ouml;he ist eine der wichtigsten Eigenschaften von CSS.</p>
-F&uuml;r die Angabe einer Breite haben Sie verschiedene M&ouml;glichkeiten der Notation:
-
-<ul>
-
-<li>exakt: in <strong>px</strong></li>
-<li>relativ: in <strong>em</strong></li>
-<li>relativ: in <strong>%</strong></li>
-
-</ul>
-Dies sind nur 3 von Notationen von vielen mehreren M&ouml;glichen. Doch diese 3 stellen die g&auml;ngisten dar und sollten ausschlie&szlig;lich genutzt werden.
-		<article id='article-395'>
-			<h4>Die Breite und Bilder</h4>
-
-			<p>Die meisten Bilder haben eine Relation der Aufl&ouml;sung von 4:3. Sie m&ouml;chten nun ein etwas zu gro&szlig;es Bild auf Ihrer Seite einbinden. Das Bild hat eine Aufl&ouml;sung von 850px * 560px. Sie wollen es aber nur in 800px anzeigen, da es sonst nicht auf Ihre Seite passen w&uuml;rde. In diesem Fall wissen Sie, dass die neue Breite 800px ist. Doch ducrh welchen Wert muss die Angabe 560px ersetzt werden, ohne dass das Bild verzerrt dargestellt wird.</p>
-<div class="homework"><span class="h4">Aufgabe</span>
-<ol>
-<li>Binden Sie ein beliebiges Bild auf einer Ihrer HTML - Seiten ein.</li>
-<li>Geben Sie mittels CSS dem Bild eine Breite von 800px.</li>
-<li>&Uuml;berpr&uuml;fen Sie Ihr Ergebnis. (Google Chrome mit Rechtsklick)</li>
-<li>In welcher Breite wurde Ihr Bild ausgegeben? Ist dieser Wert der exakt richtig berechnete oder ist Ihr Bild verzerrt?</li>
-
-</ol>
-
-</div>
-
-<a href="./img/1343633707102.JPG" class="imageZoom"><img src="./img/1343633707102.JPG" alt="" style="clear:both; width:50px;" class="shadow"/></a>
-<a href="./img/1343633707102.JPG" class="imageZoom"><img src="./img/1343633707102.JPG" alt="" style="clear:both; width:150px;" class="shadow"/></a>
-<a href="./img/1343633707102.JPG" class="imageZoom"><img src="./img/1343633707102.JPG" alt="" style="clear:both; width:300px;" class="shadow"/></a>
-		<article id='article-421'>
-			<h4>Bilder und deren H&ouml;he</h4>
-
-			<p>Diese mal sind die drei kleinen Hunde &uuml;ber Ihre H&ouml;he und nicht &uuml;ber deren Breite definiert worden</p>
-<a href="./img/1343633707102.JPG" class="imageZoom"><img src="./img/1343633707102.JPG" alt="" style="clear:both; height:50px;" class="shadow"/></a>
-<a href="./img/1343633707102.JPG" class="imageZoom"><img src="./img/1343633707102.JPG" alt="" style="clear:both; height:150px;" class="shadow"/></a>
-<a href="./img/1343633707102.JPG" class="imageZoom"><img src="./img/1343633707102.JPG" alt="" style="clear:both; height:300px;" class="shadow"/></a>
-<div class="homework"><span class="h4">Auftrag:</span>
-
-Testen Sie an Hand von Ihrem Beispiel f&uuml;r die Breite, wie sich die Bilder mit den Angaben von <span class="attribute">height:</span> nun Verhalten.<br />
-Berechnet Ihr Browser wieder selbstst&auml;ndig die richtige Breite und H&ouml;he?<br />
-Testen Sie Ihre Beispiele in mehreren verschiedenen Browsern.
-
-</div>
-
-		<article id='article-422'>
-			<h4>Verzerrte Bilder</h4>
-
-			<a href="./img/1343633707102.JPG" class="imageZoom"><img src="./img/1343633707102.JPG" alt="" style="clear:both; width:500px; height:300px;" class="shadow"/></a>
-
-
-<section class='subSection' id='subSection-553'><h3>Backgrounds</h3>
-
-		<article id='article-407'>
-			<h4>Farbhintergr&uuml;nde</h4>
-
-			<p>CSS erlaubt es mit dem Attribut <span class="attribute">background</span> jedem Element einen Hintergrund zu geben.</p>
-<a href="./img/1343311331ackground2.png" class="imageZoom"><img src="./img/1343311331ackground2.png" alt="" class="floatCenter"/></a>
-		<article id='article-409'>
-			<h4>Bilder als Hintergr&uuml;nde</h4>
-
-			<a href="./img/1343311283ackground.png" class="imageZoom"><img src="./img/1343311283ackground.png" alt="" class="floatCenter"/></a>
-<div class="homework"><span class="h4">Auftrag:</span>
-<ul>
-<li>Recherchieren Sie, wie sie einen Hintergrund fest anbringen k&ouml;nnen. Es soll immer ganz oben im Browser angeheftet sein, auch wenn Sie weiter runter scrollen.</li>
-
-<li>welche Eigenschaften f&uuml;r die Wiederholung von Hintergr&uuml;nden gibt es?</li>
-
-<li>Ist es m&ouml;glich, ein Hintergrundbild zu skalieren? Ihr Bild hat eine Breite von 2000px. Sie wollen es jedoch trotzdem als Hintergrund f&uuml;r einen 400px breiten Container nutzen. Sie wollen das Bild jedoch nicht abschneiden.</li>
-
-<li>Wie kann ich es schaffen, dass ein Bild erst ab einer bestimmten Stelle eingeblendet wird?</li>
-</ul>
-
-</div>
-		<article id='article-410'>
-			<h4>Hintergundbeispiele</h4>
-
-			<p>Sie haben hier eine Sammlung an sehr sch&ouml;nen Hintergrundbildern f&uuml;r die eigene Nutzung.</p><hr class="clear"/>
-
-
-
-<a href="./img/1343311717.jpg" class="imageZoom">
-<img style="height:150px;" src="./img/1343311717.jpg" alt="" class="small shadow floatright"/>
-</a>
-<a href="./img/1343311732.jpg" class="imageZoom">
-<img style="height:150px;" src="./img/1343311732.jpg" alt="" class="small shadow floatright"/>
-</a>
-<a href="./img/1343311747board.jpg" class="imageZoom">
-<img style="height:150px;" src="./img/1343311747board.jpg" alt="" class="small shadow floatright"/>
-</a>
-<a href="./img/1343311760ful.jpg" class="imageZoom">
-<img style="height:150px;" src="./img/1343311760ful.jpg" alt="" class="small shadow floatright"/>
-</a>
-<a href="./img/1343311774ade.jpg" class="imageZoom">
-<img style="height:150px;" src="./img/1343311774ade.jpg" alt="" class="small shadow floatright"/>
-</a>
-<a href="./img/1343311786ood.jpg" class="imageZoom">
-<img style="height:150px;" src="./img/1343311786ood.jpg" alt="" class="small shadow floatright"/>
-</a>
-<a href="./img/1343311799st.jpg" class="imageZoom">
-<img style="height:150px;" src="./img/1343311799st.jpg" alt="" class="small shadow floatright"/>
-</a>
-<a href="./img/1343311819.jpg" class="imageZoom">
-<img style="height:150px;" src="./img/1343311819.jpg" alt="" class="small shadow floatright"/>
-</a>
-<a href="./img/1343311846_purple.jpg" class="imageZoom">
-<img style="height:150px;" src="./img/1343311846_purple.jpg" alt="" class="small shadow floatright"/>
-</a>
-<a href="./img/1343311860.jpg" class="imageZoom">
-<img style="height:150px;" src="./img/1343311860.jpg" alt="" class="small shadow floatright"/>
-</a>
-<a href="./img/1343311875fade.jpg" class="imageZoom">
-<img style="height:150px;" src="./img/1343311875fade.jpg" alt="" class="small shadow floatright"/>
-</a>
-<a href="./img/1343311890.jpg" class="imageZoom">
-<img style="height:150px;" src="./img/1343311890.jpg" alt="" class="small shadow floatright"/>
-</a>
-
-
-
-
-<div style="text-align:center;margin:30px;background: url('./img/1343311890.jpg') top center; clear:both; height:400px; border-radius:50px;">Beispiel f&uuml;r die Einbindung</div>
-
-<div class="information">Die angebotenen Hintergr&uuml;nde sind alle hochaufl&ouml;send und sollten daher nur zum testen verwendet werden. Zur Nutzung auf Produktivsystemen sollten Sie runterskaliert / optimiert werden</div>
-
-				<caption>Listing</caption>
-				<div class='geshi'><table class="css"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
-2
-3
-</pre></td><td class="de1"><pre class="de1">body <span class="br0">&#123;</span>
-&nbsp; &nbsp; <span class="kw1">background</span><span class="sy0">:</span> <span class="kw2">url</span><span class="br0">&#40;</span><span class="st0">'./img/1343311890.jpg'</span><span class="br0">&#41;</span> <span class="kw1">top</span> <span class="kw2">center</span><span class="sy0">;</span>
-<span class="br0">&#125;</span></pre></td></tr></tbody></table></div>
-			</article>
-		
-
-
-<section class='subSection' id='subSection-555'><h3>Links</h3>
-
-		<article id='article-414'>
-			<h4>Link Styling</h4>
-
-			<p>Links stellen im Internet die einfachste Form der Interaktion dar. Durch Links wird erst die einfache Navigation im Internet erm&ouml;glicht. Es hat sich eingeb&uuml;rgert Links - also Interaktion f&uuml;r den User - speziell hervorzuheben. Der Nutzer soll direkt sehen: Hier geht es weiter, hier kann etwas passieren. Standardm&auml;&szlig;ig werden links deswegen schon in einer anderen Farbe und unterstrichen dargestellt.</p><p>Leider passt dieses blau jedoch keinesfalls zu meinem CI. Auch die bereits besuchten Links, die meist in lila dargestellt werden st&ouml;ren das Design meiner Seite erheblich. Nachdem wir mittlerweile Erfahrungen im Umgang mit CSS haben, f&auml;llt es uns sicher leicht, einen normalen Link umzugestalten.</p>
-<div class="homework"><span class="h4">Definieren Sie einige Links und geben diesen die folgenden Eigenschaften</span>
-<ul>
-	 <li>fett</li>
-	 <li>blauer Rand</li>
-	 <li>gelber Hintergrund</li>
-	 <li>feste Breite von 300px</li>
-</ul>
-</div>
-<p>Doch wie sieht es nun mit den bereits besuchten links aus? Oder dem Effekt, wenn Sie mit der Maus dar&uuml;ber fahren?
-Speziell f&uuml;r diese Anforderungen gibt es in CSS sogenannte Pseudo-Klassen.
-</p>
-<div class="information">Pseudo-Klassen sind Klassifizierungen, die einen Zustand oder eine Eigenschaft eines Elements beschreiben.</div>
-
-<p>Pseudo-Klassen werden in CSS einfach direkt an den Selektor mit einem <span class="attribute">:</span> angeh&auml;ngt.</p>
-
-				<caption>Listing</caption>
-				<div class='geshi'><table class="css"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
-2
-3
-4
-</pre></td><td class="de1"><pre class="de1">a<span class="re2">:hover </span><span class="br0">&#123;</span>
-&nbsp; &nbsp; <span class="kw1">color</span><span class="sy0">:</span><span class="kw2">fuchsia</span><span class="sy0">;</span>
-<span class="br0">&#125;</span>
-<span class="coMULTI">/*f&amp;auml;rbt den Link beim Mouse-over (hover) lila*/</span></pre></td></tr></tbody></table></div>
-			</article>
-		
-		<article id='article-415'>
-			<h4>Weitere Pseudo-Klassen</h4>
-
-			<span class="h4">:visited</span>
-<p>definiert das Aussehen der bereits besuchten links [standard: lila]</p>
-<span class="h4">:active</span>
-<p>definiert was bei einem Klick auf das Element passieren soll</p>
-<span class="h4">:focus</span>
-<p>Definiert, wie ein focussiertes Element gehanhabt werden soll [speziell bei Formularen]</p>
-<input class="bunt" type="text" placeholder="klick mich an, ich werde bunt"/>
-<style type="text/css">
-input.bunt:focus {
-background:green
-}
-input.bunt {
-background:yellow}
-</style>
 
 
 <section class='subSection' id='subSection-556'><h3>Einbinden von mehreren CSS Dateien</h3>
@@ -4499,7 +4609,7 @@ Es gibt <li>ein dunkelblaues horizontales Navigationsmen&uuml; (mittig &uuml;ber
 		<article id='article-461'>
 			<h4>CSS f&uuml;r unser Men&uuml;</h4>
 
-			<a href="./img/20120731_liste2.png" class="imageZoom"><img src="./img/20120731_liste2.png" alt="" class="shadow floatleft"/></a><a href="./img/20120731_liste.png" class="imageZoom"><img src="./img/20120731_liste.png" alt="" class="shadow floatright"/></a>
+			<a href="./img/20120731_liste2.png" class="imageZoom"><img style="width:93px" src="./img/20120731_liste2.png" alt="" class="shadow floatleft"/></a><a href="./img/20120731_liste.png" class="imageZoom"><img style="width:183px" src="./img/20120731_liste.png" alt="" class="shadow floatright"/></a>
 
 <p>Unsere soeben generierte Liste hat vom Aussehen, jedoch noch nicht viel mit dem Beispiel rechts gemeinsam. Es fehlen noch die Deklaration f&uuml;r das Aussehen.</p>
 <div class="information">Navigationsmen&uuml;s werden immer in einem <span class="tag">nav</span>-Container untergebracht. In den CSS-Deklaration wollen wir auch nur die Liste beeinflussen, die in einem <span class="tag">nav</span> steht. Diese Trennung wird durchgef&uuml;hrt, dass wir sp&auml;ter noch die M&ouml;glichkeit haben, in unserem Inhaltsbereich noch normale Aufz&auml;hlugslisten verwenden k&ouml;nnen, die nicht direkt wie ein Men&uuml; aussehen.</div>
@@ -4557,7 +4667,7 @@ Errechnen Sie die richtige Breite f&uuml;r jeden einzelnen Link und definieren S
 
 Versuchen Sie, das folgende Men&uuml; selbstst&auml;ndig nachzubilden.
 </div>
-<a href="./img/20120731_limenu.png" class="imageZoom"><img src="./img/20120731_limenu.png" alt="" class="large shadow floatCenter"/></a>
+<img src="./img/20120731_limenu.png" alt="" class="large shadow floatCenter"/>
 
 
 
@@ -4592,155 +4702,26 @@ Die text-shadow - Eigenschaft wurde bereits in CSS 2.0 eingef&uuml;hrt. Jedoch w
 
 			<div class="information">Im Gegensatz zu den Eingeschaften <span class="attribute">padding</span> oder <span class="attribute">margin</span> wird bei text-shadow an erstre Stelle der X-Versatz, also links / rechts angegeben. Bei <span class="attribute">Margin</span> und <span class="attribute">Padding</span> kommen in der Kurzschreibweise erst die Werte f&uuml;r Y</div>
 
-		<article id='article-359'>
-			<h4>Einfacher Textschatten</h4>
+		<article id='article-483'>
+			<h4>Beispiele</h4>
 
-			<p style="font-size:3em; text-shadow: 1px 1px #333; color:#999">Einfacher Textschatten</p>
-		<article id='article-360'>
-			<h4>Breiter Textschatten</h4>
+			<a href="./img/textshadow(10).png" class="imageZoom"><img src="./img/textshadow(10).png" alt="" class="floatCenter"/></a>
+<a href="./img/textshadow(2).png" class="imageZoom"><img src="./img/textshadow(2).png" alt="" class="floatCenter"/></a>
+<a href="./img/textshadow(3).png" class="imageZoom"><img src="./img/textshadow(3).png" alt="" class="floatCenter"/></a>
+<a href="./img/textshadow(4).png" class="imageZoom"><img src="./img/textshadow(4).png" alt="" class="floatCenter"/></a>
+<a href="./img/textshadow(5).png" class="imageZoom"><img src="./img/textshadow(5).png" alt="" class="floatCenter"/></a>
+<a href="./img/textshadow(6).png" class="imageZoom"><img src="./img/textshadow(6).png" alt="" class="floatCenter"/></a>
+<a href="./img/textshadow(7).png" class="imageZoom"><img src="./img/textshadow(7).png" alt="" class="floatCenter"/></a>
+<a href="./img/textshadow(8).png" class="imageZoom"><img src="./img/textshadow(8).png" alt="" class="floatCenter"/></a>
+<a href="./img/textshadow(9).png" class="imageZoom"><img src="./img/textshadow(9).png" alt="" class="floatCenter"/></a>
+<a href="./img/textshadow(1).png" class="imageZoom"><img src="./img/textshadow(1).png" alt="" class="floatCenter"/></a>
+		<article id='article-482'>
+			<h4>Selbststudium</h4>
 
-			<p style="font-size:3em;text-shadow:
-    1px 1px #ccc,
-    2px 2px #ccc,
-    3px 3px #ccc,
-    4px 4px #ccc,
-    5px 5px #ccc,
-    6px 6px #ccc; ; color:#999">Einfacher Textschatten</p>
-		<article id='article-361'>
-			<h4>Das ganze noch etwas sch&ouml;ner</h4>
+			<div class="homework"><span class="h4">Aufgabe</span>
+Versuchen Sie als Bild hinterlegten Beispiele nur mit CSS nachzubauen.
+</div>
 
-			<p style="font-size:3em;text-shadow:
-1px 0 #EEEEEE, 0 1px #CCCCCC,
-2px 1px #EEEEEE, 1px 2px #CCCCCC,
-3px 2px #EEEEEE, 2px 3px #CCCCCC,
-4px 3px #EEEEEE, 3px 4px #CCCCCC,
-5px 4px #EEEEEE, 4px 5px #CCCCCC,
-6px 5px #EEEEEE, 5px 6px #CCCCCC,
-6px 6px #EEEEEE;
-color:#999">Einfacher Textschatten</p>
-		<article id='article-362'>
-			<h4>Eine einfacher Kontur mittels Textschatten</h4>
-
-			<p style="font-size:3em;color: #E7E7E7;
-    text-shadow: 0 -1px #999999, 1px 0 #999999, 0 1px #999999, -1px 0 #999999;">Kontur</p>
-		<article id='article-363'>
-			<h4>Glow - Effekte mittels CSS</h4>
-
-			<style type="text/css">
-
-p.css_glow {
-    color: #222222;
-    text-shadow: 0 0 0.2em #8877FF, 0 0 0.2em #8877FF, 0 0 0.2em #8877FF;
-    font-size:3em;
-}
-
-</style>
-
-<p class="css_glow">Glow-Effekt</p>
-		<article id='article-364'>
-			<h4>Letterpress</h4>
-
-			<style type="text/css">
-
-p.css_letterpress {
-    background: none repeat scroll 0 0 #DBDBDB;
-    color: #CCCCCC;
-    text-shadow: 0 -1px 1px #666666, 0 1px 1px #FFFFFF;
-    font-size:3em;
-    height:200px;
-    line-height:3em;
-    padding-left:100px;
-}
-
-</style>
-
-<p class="css_letterpress">Letterpress</p>
-		<article id='article-365'>
-			<h4>Emboss</h4>
-
-			<style type="text/css">
-
-p.css_emboss {
-    background: none repeat scroll 0 0 #CCCCCC;
-    color: #DBDBDB;
-    text-shadow: 0 -1px 1px #FFFFFF, 0 1px 1px #666666;
-    font-size:3em;
-    height:200px;
-    line-height:2em;
-    padding-left:100px;
-}
-
-</style>
-
-<p class="css_emboss">Emboss</p>
-		<article id='article-366'>
-			<h4>Retro Design</h4>
-
-			<style type="text/css">
-
-p.css_retro {
-    color: #707070;
-    text-shadow:
-    3px 3px 0 #EEEEEE, 5px 5px 0 #707070;;
-    font-size:5em;
-    line-height:2em;
-}
-
-</style>
-
-<p class="css_retro">Retro Design</p>
-		<article id='article-367'>
-			<h4>Neon - Effekte</h4>
-
-			<style type="text/css">
-
-p.css_neon {
-    background: none repeat scroll 0 0 #000000;
-    color: #FFFFFF;
-    text-shadow:
-    0 0 10px #FFFFFF,
-    0 0 20px #FFFFFF,
-    0 0 30px #FFFFFF,
-    0 0 40px #FF00DE,
-    0 0 70px #FF00DE,
-    0 0 80px #FF00DE,
-    0 0 100px #FF00DE,
-    0 0 150px #FF00DE;
-    font-size:5em;
-    height:300px;
-    line-height:5em;
-    padding-left:100px;
-}
-
-</style>
-
-<p class="css_neon">Neon</p>
-		<article id='article-368'>
-			<h4>feuerartiger Effekt</h4>
-
-			<style type="text/css">
-
-p.css_fire {
-    background: none repeat scroll 0 0 #000000;
-    color: #fff;
-    text-shadow:
-    0 0 20px #fefcc9,
-    10px -10px 30px #feec85,
-    -20px -20px 40px #ffae34,
-    20px -40px 50px #ec760c,
-    -20px -60px 60px #cd4606,
-    0 -80px 70px #973716,
-    10px -90px 80px #451b0e;
-    font-size:5em;
-    height:300px;
-    line-height:5em;
-    text-align:center;
-    padding-left:100px;
-}
-
-</style>
-
-<p class="css_fire">feuerartiger Effekt</p>
 
 
 <section class='subSection' id='subSection-544'><h3>box-shadow</h3>
@@ -4766,7 +4747,7 @@ p.css_fire {
 <section class='subSection' id='subSection-552'><h3>CSS - only Slider</h3>
 
 		<article id='article-406'>
-			<h4></h4>
+			<h4>CSS-Slider</h4>
 
 			<p>Dieser Slider wurde nur mit reinem CSS und HTML geschrieben. Wenn Sie im Internet nach einem Slider suchen, werden Sie immer wieder die Begriffe Javascript oder jQuery lesen. Es war fr&uuml;her n&ouml;tig, solch einen Slider mit den zus&auml;tzlichen Sprachen zu schreiben. Mittlerweile ist aber CSS so weit entwickelt, dass kein Javascript mehr ben&ouml;tigt wird.</p>
 
@@ -4892,26 +4873,17 @@ margin:10px;
 <img src='./img/bmw/BMW3er_Touring_09_preview.jpg' />
 <img src='./img/bmw/BMW3er_Touring_10_preview.jpg' />
 </div></div></div>
+<div class="information">Dieses Beispiel l&auml;sst sich im Script leider nicht betrachten, da es mit Animation funktioniert</div>
 
-
-<section class='subSection' id='subSection-557'><h3>Eine einfache Bildergalerie</h3>
-
-		<article id='article-423'>
-			<h4></h4>
-
-			<a href="./img/1343634189103.JPG" class="imageZoom"><img src="./img/1343634189103.JPG" alt="" class="small shadow floatleft"/></a>
-<a href="./img/1343634268114.JPG" class="imageZoom"><img src="./img/1343634268114.JPG" alt="" class="small shadow floatleft"/></a>
-<a href="./img/1343634299115.JPG" class="imageZoom"><img src="./img/1343634299115.JPG" alt="" class="small shadow floatleft"/></a>
-<a href="./img/1343634320117.JPG" class="imageZoom"><img src="./img/1343634320117.JPG" alt="" class="small shadow floatleft"/></a>
-<hr class="clear">
 
 
 <section class='subSection' id='subSection-559'><h3>Bouncing Balls with CSS</h3>
 
 		<article id='article-436'>
-			<h4></h4>
+			<h4>Bouncing Balls</h4>
 
-			<div id="ballWrapper">
+			<a href="./img/20120803_bohnen.png" class="imageZoom"><img src="./img/20120803_bohnen.png" alt="" class="floatCenter"/></a>
+<div style="display:none"><div id="ballWrapper">
     <div id="ball" class="yellow"></div>
     <div id="ballShadow" class="yellow"></div>         
 </div>
@@ -4931,7 +4903,7 @@ margin:10px;
     <div id="ball"></div>
     <div id="ballShadow"></div>         
 </div>
-<div class="clear"></div>
+<div class="clear"></div></div>
 
 
 <section class='subSection' id='subSection-560'><h3>border-radius</h3>
@@ -4960,6 +4932,144 @@ margin:10px;
 width: 12em;
 background:orange;
 border-radius: 1em 4em 1em 4em;"></div></section></section></section>
+
+
+
+
+<section class='chapter' id='chapter-558'><h1>Webseiten</h1>
+
+		<article id='article-424'>
+			<h4>Guideline f&uuml;r die Erstellung eines kompletten Internetauftritts</h4>
+
+			<a href="./img/1343635215md.png" class="imageZoom"><img src="./img/1343635215md.png" alt="" class="medium shadow floatCenter"/></a><p><span class="h4">Lage:</span>Die Professur f&uuml;r Massivbau hat geh&ouml;rt, dass Sie den Lehrgang ITSysAdminFwWebSK besuchen und gibt Ihnen daraufhin den Auftrag f&uuml;r eines Ihrer Projekte einen Webauftritt zu gestalten. Das Projekt umfasst folgende Rahmenbedingungen.</p>
+<div class="homework">Das Layout der Seite wurde schon grob festgelegt und sollte in etwa auch so umgesetzt werden.
+<br />
+Es sollen 8 verschiedene HTML-Seiten erstellt werden. Diese sollen alle das gleiche Men&uuml;
+auf der linken Seite erhalten. Die Inhalte werden Ihnen durch Ihren Auftraggeber bereit gestellt.
+<br />
+Der Quellcode der Seiten soll gut strukturiert sein und es soll nachvollziehbar programmiert worden sein. Es ist angedacht, dass sich sp&auml;ter eine neuer Webmaster findet, der Ihr Projekt dann &uuml;bernehmen soll.</div>
+<span class="h4">Durchf&uuml;hrung</span>
+<p>Nachdem die Rahmenbedingungen nun klar sind, geht es nun an die Umsetzung der Vorgaben.</p><p>Doch wie sollten Sie Vorgehen?<br />
+Die folgende Auflistung soll Ihnen einen einfachen Rahmen bieten, wie Sie die Umsetzung gut strukturiert anstellen k&ouml;nnen.</p>
+<a href="./img/1343640386.png" class="imageZoom"><img src="./img/1343640386.png" alt="" class="small shadow floatCenter"/></a>
+<a href="./img/1343640404.png" class="imageZoom"><img src="./img/1343640404.png" alt="" class="small shadow floatCenter"/></a>
+<a href="./img/1343640420.png" class="imageZoom"><img src="./img/1343640420.png" alt="" class="small shadow floatCenter"/></a>
+<a href="./img/1343640437.png" class="imageZoom"><img src="./img/1343640437.png" alt="" class="small shadow floatCenter"/></a>
+<a href="./img/1343640456.png" class="imageZoom"><img src="./img/1343640456.png" alt="" class="small shadow floatCenter"/></a>
+		<article id='article-425'>
+			<h4>Erstellen der Grundstruktur</h4>
+
+			</p><p>Wir empfehlen folgende Vorgehensweise:</p>
+<div class="homework">Erstellen Sie sich ein erstes Grundger&uuml;st mit den wichtigsten Dateien:<br />
+<ul>
+<li>Legen Sie sich in einem neuen Ordner ihre Unterordner an:<br />
+<ul>
+<li>css</li>
+<li>img</li>
+</ul>
+</li>
+<li>Erstellen Sie sich ihre ersten leeren Dateien (CSS - Dateien mit klarer Struktur)</li>
+<li>Binden Sie ihre CSS - Dateien in ihre erste HTML Datei ein.</li>
+
+</ul>
+</div>
+		<article id='article-426'>
+			<h4>Erstellen des Grundlayouts</h4>
+
+			<a href="./img/1343295321ositioning.png" class="imageZoom"><img src="./img/1343295321ositioning.png" alt="" class="small shadow floatCenter"/></a>
+<div class="homework">Erstellen Sie sich, wie Sie es im Kapitel "Layouting mit CSS" gelernt haben, das Grundlayout ihrer Seite</div>
+		<article id='article-427'>
+			<h4>Erstellen des Menues</h4>
+
+			<div class="homework">Erstellen Sie sich auf Ihrer ersten Seite ihr Men&uuml;</div>
+
+		<article id='article-428'>
+			<h4>Fertigstellung des Layouts</h4>
+
+			<div class="homework">Nachdem Sie nun die Inhalte und die Struktur, die auf jeder Seite gleich sein werden festgelegt haben, k&ouml;nnen Sie sich nun um das Design der Seite k&uuml;mmern. Stellen Sie das Design f&uuml;r Ihre erste HTML - Seite komplett fertig.</div>
+
+		<article id='article-429'>
+			<h4>Kopieren Ihrer ersten HTML-Seite</h4>
+
+			<div class="homework">Kopieren Sie ihre erste nun fertige HTML so oft, wie Sie verschiedene Seiten brauchen werden.</div>
+
+		<article id='article-430'>
+			<h4>Erstellen der Inhalte</h4>
+
+			<div class="homework">In dem nun fast letzten Schritt, m&uuml;ssen Sie nun noch lediglich Ihre Inhalte auf den Seiten einpflegen.</div>
+
+
+
+
+<section class='section' id='section-561'><h2>Dynamische Webseiten</h2>
+
+		<article id='article-446'>
+			<h4>Autmatische Erstellung der Men&uuml;s mit PHP</h4>
+
+			<p>Wie sie nun sicher festgestellt haben, kann es bei einer gr&ouml;&szlig;eren Seite sehr sehr aufw&auml;ndig werden, in einem Men&uuml; einen Punkt zu generieren. Das neue Men&uuml;element, dass Sie erstellen m&ouml;chten, m&uuml;ssen Sie nun langwierig auf jeder Seite einzeln reinkopieren. Es w&auml;re doch eine sch&ouml;ne M&ouml;glichkeit, wenn Sie &auml;hnlich wie in CSS, nur eine Datei haben, und diese wird &uuml;berall automatisch eingebunden. Hier kommt nun PHP ins Spiel.</p>
+<div class="information">PHP ist eine Programmiersprache um dynamische Webseiten zu erstellen. <abbr title="PHP Hypertext Preprocessor">PHP</abbr> steht f&uuml;r PHP Hypertext Preprocessor.</div>
+<p>Wir werden in diesem Kapitel nicht PHP lernen, sondern uns nur ein bis 2 Funktionen ansehen, die uns das Leben erheblich erleichtern k&ouml;nnnen. Auf Ihren virtuellen Maschinen ist PHP bereits fertig installiert und konfiguriert. Wie man PHP konfiguriert, lernen wir im Kapitel WEBSERVER.</p>
+
+		<article id='article-447'>
+			<h4>Vorbereitungen</h4>
+
+			<p>Damit Sie PHP-Code auf Ihren Webseiten nutzen k&ouml;nnen, m&uuml;ssen Sie lediglich den Dateinamen Ihrer HTML-Seiten in <span class="attribute">.php</span> umbenennen. Der HTML Code wird dadurch nicht beeinflusst. Aber Sie haben ab sofort die M&ouml;glichkeit PHP Code einzubetten.</p>
+<div class="homework"><span class="h4">Aufgabe:</span>Benennen Sie eine HTML-Seite ihrer Wahl in <span class="attribute">.php</span> um. Betrachten Sie ihr Ergebnis.</div>
+
+		<article id='article-448'>
+			<h4>Ein erstes Snippet</h4>
+
+			Damit ihr PHP-Code auf Ihrer Hompeage ausgef&uuml;hrt wird, m&uuml;ssen Sie das nur dem Browser mitteilen, indem Sie den auszuf&uuml;hrenden Code innerhalb des Tags <span class="tag">?php ?</span> schreiben.
+<div class="homework">Binden Sie auf einer Ihrer Seiten das folgende Snippet ein und testen die Ausgabe.</div>
+<div class="emphasize">Dieses Beispiel funktioniert nicht lokal. Die Vorraussetzung ist ein laufender Webserver mit PHP</div>
+
+
+				<caption>Listing</caption>
+				<div class='geshi'><table class="php"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
+2
+3
+</pre></td><td class="de1"><pre class="de1"><span class="kw2">&lt;?php</span>
+&nbsp; &nbsp; <span class="kw1">echo</span> <span class="st0">&quot;Hallo Welt&quot;</span><span class="sy0">;</span>
+<span class="sy1">?&gt;</span></pre></td></tr></tbody></table></div>
+			</article>
+		
+		<article id='article-449'>
+			<h4>Das automatische Men&uuml;</h4>
+
+			<p>Betrachten Sie die untenstehende Grafik:<br />
+Unser Ziel ist es, dass die eine Datei <span class="attribute">menu.html</span> aus dem Ordner menu auf allen Seiten automatisch eingebunden wird. Wir m&ouml;chten unser Menu ab sofort nur noch in dieser einen Datei &auml;ndern und es soll sich auf allen Seiten genau gleich verhalten.</p>
+<a href="./img/1343645060nclude.png" class="imageZoom"><img src="./img/1343645060nclude.png" alt="" class="small shadow floatCenter"/></a>
+
+<span class="h4">PHP include</span>
+<p>Mit der PHP Funktion <span class="attribute">include</span> ist es m&ouml;glich den gesamten Inhalt einer Datei einzubetten.</p>
+<div class="homework"><span class="h4">Aufgabe:</span>
+<ol>
+<li>Erstellen Sie auf Ihrem Webserver den Ordner <span class="attribute">menu</span></li>
+<li>Erstellen Sie in Ihrem neuen Ordner die Datei <span class="attribute">menu.html</span> und f&uuml;gen einen beispielhaften Inhalt wie "Hallo Welt" ein.</li>
+<li>Benennen Sie jede Datei, in die Sie <span class="attribute">menu.html</span> einbinden m&ouml;chten von <span class="attribute">.html</span> in <span class="attribute">.php</span> um.</li>
+<li>Kopieren Sie das untenstehende Snippet in jede <span class="attribute">.php</span> - Datei an die Stelle, an der Sie Ihr Menu sp&auml;ter haben m&ouml;chten.</li>
+</ol>
+<span class="h5">Pr&uuml;fung</span>
+&Uuml;berpr&uuml;fen Sie Ihr Ergebnis. Rufen Sie Ihre Seiten im Browser auf. &Auml;ndern Sie nun den Text <span class="attribute">Hallo Welt</span> in etwas anderes und Pr&uuml;fen Sie, ob sich jede einzelne Seite automatisch ge&auml;ndert hat.
+
+
+
+</div>
+				<caption>Listing</caption>
+				<div class='geshi'><table class="php"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
+</pre></td><td class="de1"><pre class="de1"><span class="kw2">&lt;?php</span> <span class="kw1">include</span><span class="br0">&#40;</span><span class="st_h">'menu/menu.html'</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="sy1">?&gt;</span></pre></td></tr></tbody></table></div>
+			</article>
+		
+		<article id='article-450'>
+			<h4>Aufgabe</h4>
+
+			<p>Sie haben nun gelernt, wie Sie eine Webseite mit etwas Dynamik ausstatten k&ouml;nnen.</p>
+<div class="homework"><span class="h4">Aufgabe:</span>
+Erweitern Sie Ihre Beispiel-Seiten so, dass Ihr komplettes Menu auf allen Seiten ausgegeben wird. Ersetzen Sie daf&uuml;r den einfachen String <span class="attribute">Hallo Welt</span> mit Ihrer kompletten ungeordneten Liste.<br />
+<br />
+Achten Sie darauf, dass Ihre Dateien nun nicht mehr <span class="attribute">.html</span> hei&szlig;en, sondern <span class="attribute">.php</span>. Das <span class="attribute">href</span> Attribut muss nun auf die <span class="attribute">.php</span> Dateien verweisen.
+</div>
+</section></section>
 
 
 
@@ -5718,7 +5828,7 @@ Ein Zugriff auf die obige HTML-Datei zeigt dieses Ergebnis:
 &nbsp; &nbsp; &nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">h1</span>&gt;</span>SSI Rocks!<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h1</span>&gt;</span>
 &nbsp; &nbsp; &nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Heute ist der <span class="sc-1">&lt;!--#echo var=&quot;DATE_LOCAL&quot; --&gt;</span>.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
 &nbsp; &nbsp; &nbsp; &nbsp; <span class="sc-1">&lt;!--#config timefmt=&quot;%d.%m.%Y&quot; --&gt;</span>
-&nbsp; &nbsp; &nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Oder anders ausgedr<span class="sc1">&amp;uuml;</span>ckt, der <span class="sc-1">&lt;!--#echo var=&quot;DATE_LOCAL&quot; --&gt;</span>.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Oder anders ausgedr&uuml;ckt, der <span class="sc-1">&lt;!--#echo var=&quot;DATE_LOCAL&quot; --&gt;</span>.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
 &nbsp; &nbsp; &nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Als Browser benutzen Sie: <span class="sc-1">&lt;!--#echo var=&quot;HTTP_USER_AGENT&quot; --&gt;</span>.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
 &nbsp; <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">body</span>&gt;</span>
 <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">html</span>&gt;</span>
@@ -5931,14 +6041,14 @@ Erstellen Sie die Datei <span class="url">hallo_formular.pl</span> und speichern
 &nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">title</span>&gt;</span>Ein HTML-Formular mit PERL<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">title</span>&gt;</span>
 &nbsp; <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">head</span>&gt;</span>
 &nbsp; <span class="sc2">&lt;<span class="kw2">body</span>&gt;</span>
-&nbsp; &nbsp; &nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">h1</span>&gt;</span>Sei gegr<span class="sc1">&amp;uuml;</span>sst!<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h1</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">h1</span>&gt;</span>Sei gegr&uuml;sst!<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h1</span>&gt;</span>
 &nbsp; &nbsp; &nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">form</span> <span class="kw3">action</span><span class="sy0">=</span><span class="st0">&quot;cgi-bin/hallo_formular.pl&quot;</span> <span class="kw3">method</span><span class="sy0">=</span><span class="st0">&quot;POST&quot;</span>&gt;</span>
 &nbsp; &nbsp; &nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">div</span>&gt;</span>
 &nbsp; &nbsp; &nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Sag mir deinen Namen!<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
 &nbsp; &nbsp; &nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">input</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;name&quot;</span>&gt;</span>
 &nbsp; &nbsp; &nbsp; &nbsp; <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span>
 &nbsp; &nbsp; &nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">div</span>&gt;</span>
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">input</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;submit&quot;</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;Begr&amp;uuml;ssen&quot;</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">input</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;submit&quot;</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;Begr&uuml;ssen&quot;</span>&gt;</span>
 &nbsp; &nbsp; &nbsp; &nbsp; <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span>
 &nbsp; <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">body</span>&gt;</span>
 <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">html</span>&gt;</span>
@@ -7989,187 +8099,8 @@ zugewiesen werden.
 
 
 
-<section class='chapter' id='chapter-558'><h1>Webseiten</h1>
-
-		<article id='article-424'>
-			<h4>Guideline f&uuml;r die Erstellung eines kompletten Internetauftritts</h4>
-
-			<a href="./img/1343635215md.png" class="imageZoom"><img src="./img/1343635215md.png" alt="" class="medium shadow floatCenter"/></a><p><span class="h4">Lage:</span>Die Professur f&uuml;r Massivbau hat geh&ouml;rt, dass Sie den Lehrgang ITSysAdminFwWebSK besuchen und gibt Ihnen daraufhin den Auftrag f&uuml;r eines Ihrer Projekte einen Webauftritt zu gestalten. Das Projekt umfasst folgende Rahmenbedingungen.</p>
-<div class="homework">Das Layout der Seite wurde schon grob festgelegt und sollte in etwa auch so umgesetzt werden.
-<br />
-Es sollen 8 verschiedene HTML-Seiten erstellt werden. Diese sollen alle das gleiche Men&uuml;
-auf der linken Seite erhalten. Die Inhalte werden Ihnen durch Ihren Auftraggeber bereit gestellt.
-<br />
-Der Quellcode der Seiten soll gut strukturiert sein und es soll nachvollziehbar programmiert worden sein. Es ist angedacht, dass sich sp&auml;ter eine neuer Webmaster findet, der Ihr Projekt dann &uuml;bernehmen soll.</div>
-<span class="h4">Durchf&uuml;hrung</span>
-<p>Nachdem die Rahmenbedingungen nun klar sind, geht es nun an die Umsetzung der Vorgaben.</p><p>Doch wie sollten Sie Vorgehen?<br />
-Die folgende Auflistung soll Ihnen einen einfachen Rahmen bieten, wie Sie die Umsetzung gut strukturiert anstellen k&ouml;nnen.</p>
-<a href="./img/1343640386.png" class="imageZoom"><img src="./img/1343640386.png" alt="" class="small shadow floatCenter"/></a>
-<a href="./img/1343640404.png" class="imageZoom"><img src="./img/1343640404.png" alt="" class="small shadow floatCenter"/></a>
-<a href="./img/1343640420.png" class="imageZoom"><img src="./img/1343640420.png" alt="" class="small shadow floatCenter"/></a>
-<a href="./img/1343640437.png" class="imageZoom"><img src="./img/1343640437.png" alt="" class="small shadow floatCenter"/></a>
-<a href="./img/1343640456.png" class="imageZoom"><img src="./img/1343640456.png" alt="" class="small shadow floatCenter"/></a>
-		<article id='article-425'>
-			<h4>Erstellen der Grundstruktur</h4>
-
-			</p><p>Wir empfehlen folgende Vorgehensweise:</p>
-<div class="homework">Erstellen Sie sich ein erstes Grundger&uuml;st mit den wichtigsten Dateien:<br />
-<ul>
-<li>Legen Sie sich in einem neuen Ordner ihre Unterordner an:<br />
-<ul>
-<li>css</li>
-<li>img</li>
-</ul>
-</li>
-<li>Erstellen Sie sich ihre ersten leeren Dateien (CSS - Dateien mit klarer Struktur)</li>
-<li>Binden Sie ihre CSS - Dateien in ihre erste HTML Datei ein.</li>
-
-</ul>
-</div>
-		<article id='article-426'>
-			<h4>Erstellen des Grundlayouts</h4>
-
-			<a href="./img/1343295321ositioning.png" class="imageZoom"><img src="./img/1343295321ositioning.png" alt="" class="small shadow floatCenter"/></a>
-<div class="homework">Erstellen Sie sich, wie Sie es im Kapitel "Layouting mit CSS" gelernt haben, das Grundlayout ihrer Seite</div>
-		<article id='article-427'>
-			<h4>Erstellen des Menues</h4>
-
-			<div class="homework">Erstellen Sie sich auf Ihrer ersten Seite ihr Men&uuml;</div>
-
-		<article id='article-428'>
-			<h4>Fertigstellung des Layouts</h4>
-
-			<div class="homework">Nachdem Sie nun die Inhalte und die Struktur, die auf jeder Seite gleich sein werden festgelegt haben, k&ouml;nnen Sie sich nun um das Design der Seite k&uuml;mmern. Stellen Sie das Design f&uuml;r Ihre erste HTML - Seite komplett fertig.</div>
-
-		<article id='article-429'>
-			<h4>Kopieren Ihrer ersten HTML-Seite</h4>
-
-			<div class="homework">Kopieren Sie ihre erste nun fertige HTML so oft, wie Sie verschiedene Seiten brauchen werden.</div>
-
-		<article id='article-430'>
-			<h4>Erstellen der Inhalte</h4>
-
-			<div class="homework">In dem nun fast letzten Schritt, m&uuml;ssen Sie nun noch lediglich Ihre Inhalte auf den Seiten einpflegen.</div>
-
-
-
-
-<section class='section' id='section-561'><h2>Dynamische Webseiten</h2>
-
-		<article id='article-446'>
-			<h4>Autmatische Erstellung der Men&uuml;s mit PHP</h4>
-
-			<p>Wie sie nun sicher festgestellt haben, kann es bei einer gr&ouml;&szlig;eren Seite sehr sehr aufw&auml;ndig werden, in einem Men&uuml; einen Punkt zu generieren. Das neue Men&uuml;element, dass Sie erstellen m&ouml;chten, m&uuml;ssen Sie nun langwierig auf jeder Seite einzeln reinkopieren. Es w&auml;re doch eine sch&ouml;ne M&ouml;glichkeit, wenn Sie &auml;hnlich wie in CSS, nur eine Datei haben, und diese wird &uuml;berall automatisch eingebunden. Hier kommt nun PHP ins Spiel.</p>
-<div class="information">PHP ist eine Programmiersprache um dynamische Webseiten zu erstellen. <abbr title="PHP Hypertext Preprocessor">PHP</abbr> steht f&uuml;r PHP Hypertext Preprocessor.</div>
-<p>Wir werden in diesem Kapitel nicht PHP lernen, sondern uns nur ein bis 2 Funktionen ansehen, die uns das Leben erheblich erleichtern k&ouml;nnnen. Auf Ihren virtuellen Maschinen ist PHP bereits fertig installiert und konfiguriert. Wie man PHP konfiguriert, lernen wir im Kapitel WEBSERVER.</p>
-
-		<article id='article-447'>
-			<h4>Vorbereitungen</h4>
-
-			<p>Damit Sie PHP-Code auf Ihren Webseiten nutzen k&ouml;nnen, m&uuml;ssen Sie lediglich den Dateinamen Ihrer HTML-Seiten in <span class="attribute">.php</span> umbenennen. Der HTML Code wird dadurch nicht beeinflusst. Aber Sie haben ab sofort die M&ouml;glichkeit PHP Code einzubetten.</p>
-<div class="homework"><span class="h4">Aufgabe:</span>Benennen Sie eine HTML-Seite ihrer Wahl in <span class="attribute">.php</span> um. Betrachten Sie ihr Ergebnis.</div>
-
-		<article id='article-448'>
-			<h4>Ein erstes Snippet</h4>
-
-			Damit ihr PHP-Code auf Ihrer Hompeage ausgef&uuml;hrt wird, m&uuml;ssen Sie das nur dem Browser mitteilen, indem Sie den auszuf&uuml;hrenden Code innerhalb des Tags <span class="tag">?php ?</span> schreiben.
-<div class="homework">Binden Sie auf einer Ihrer Seiten das folgende Snippet ein und testen die Ausgabe.</div>
-<div class="emphasize">Dieses Beispiel funktioniert nicht lokal. Die Vorraussetzung ist ein laufender Webserver mit PHP</div>
-
-
-				<caption>Listing</caption>
-				<div class='geshi'><table class="php"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
-2
-3
-</pre></td><td class="de1"><pre class="de1"><span class="kw2">&lt;?php</span>
-&nbsp; &nbsp; <span class="kw1">echo</span> <span class="st0">&quot;Hallo Welt&quot;</span><span class="sy0">;</span>
-<span class="sy1">?&gt;</span></pre></td></tr></tbody></table></div>
-			</article>
-		
-		<article id='article-449'>
-			<h4>Das automatische Men&uuml;</h4>
-
-			<p>Betrachten Sie die untenstehende Grafik:<br />
-Unser Ziel ist es, dass die eine Datei <span class="attribute">menu.html</span> aus dem Ordner menu auf allen Seiten automatisch eingebunden wird. Wir m&ouml;chten unser Menu ab sofort nur noch in dieser einen Datei &auml;ndern und es soll sich auf allen Seiten genau gleich verhalten.</p>
-<a href="./img/1343645060nclude.png" class="imageZoom"><img src="./img/1343645060nclude.png" alt="" class="small shadow floatCenter"/></a>
-
-<span class="h4">PHP include</span>
-<p>Mit der PHP Funktion <span class="attribute">include</span> ist es m&ouml;glich den gesamten Inhalt einer Datei einzubetten.</p>
-<div class="homework"><span class="h4">Aufgabe:</span>
-<ol>
-<li>Erstellen Sie auf Ihrem Webserver den Ordner <span class="attribute">menu</span></li>
-<li>Erstellen Sie in Ihrem neuen Ordner die Datei <span class="attribute">menu.html</span> und f&uuml;gen einen beispielhaften Inhalt wie "Hallo Welt" ein.</li>
-<li>Benennen Sie jede Datei, in die Sie <span class="attribute">menu.html</span> einbinden m&ouml;chten von <span class="attribute">.html</span> in <span class="attribute">.php</span> um.</li>
-<li>Kopieren Sie das untenstehende Snippet in jede <span class="attribute">.php</span> - Datei an die Stelle, an der Sie Ihr Menu sp&auml;ter haben m&ouml;chten.</li>
-</ol>
-<span class="h5">Pr&uuml;fung</span>
-&Uuml;berpr&uuml;fen Sie Ihr Ergebnis. Rufen Sie Ihre Seiten im Browser auf. &Auml;ndern Sie nun den Text <span class="attribute">Hallo Welt</span> in etwas anderes und Pr&uuml;fen Sie, ob sich jede einzelne Seite automatisch ge&auml;ndert hat.
-
-
-
-</div>
-				<caption>Listing</caption>
-				<div class='geshi'><table class="php"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
-</pre></td><td class="de1"><pre class="de1"><span class="kw2">&lt;?php</span> <span class="kw1">include</span><span class="br0">&#40;</span><span class="st_h">'menu/menu.html'</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="sy1">?&gt;</span></pre></td></tr></tbody></table></div>
-			</article>
-		
-		<article id='article-450'>
-			<h4>Aufgabe</h4>
-
-			<p>Sie haben nun gelernt, wie Sie eine Webseite mit etwas Dynamik ausstatten k&ouml;nnen.</p>
-<div class="homework"><span class="h4">Aufgabe:</span>
-Erweitern Sie Ihre Beispiel-Seiten so, dass Ihr komplettes Menu auf allen Seiten ausgegeben wird. Ersetzen Sie daf&uuml;r den einfachen String <span class="attribute">Hallo Welt</span> mit Ihrer kompletten ungeordneten Liste.<br />
-<br />
-Achten Sie darauf, dass Ihre Dateien nun nicht mehr <span class="attribute">.html</span> hei&szlig;en, sondern <span class="attribute">.php</span>. Das <span class="attribute">href</span> Attribut muss nun auf die <span class="attribute">.php</span> Dateien verweisen.
-</div>
-</section></section>
-
-
-
-
 <section class='chapter' id='chapter-518'><h1>Coding Guidelines</h1>
 
-
-
-
-<section class='section' id='section-537'><h2>CSS</h2>
-
-		<article id='article-349'>
-			<h4>Kommentare in CSS</h4>
-
-			<p>Parallel zu HTML gibt es auch in CSS keine Unterscheidung zwischen einzeiligen und mehrzeiligen Kommentaren.</p>
-<div class="information">Kommentare werden in CSS mit <span class="attribute">/*</span> eingeleitet und mit <span class="attribute">*/</span> wieder beendet</div>
-				<caption>Listing</caption>
-				<div class='geshi'><table class="css"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
-2
-3
-4
-5
-6
-7
-8
-</pre></td><td class="de1"><pre class="de1">h1 <span class="br0">&#123;</span>
-&nbsp; &nbsp; <span class="kw1">color</span><span class="sy0">:</span><span class="kw2">green</span><span class="sy0">;</span>
-&nbsp; &nbsp; <span class="coMULTI">/* Kommentar in CSS*/</span>
-&nbsp;
-&nbsp; &nbsp; <span class="coMULTI">/*******************</span>
-<span class="coMULTI">&nbsp; &nbsp; Optisch hervorgehobener Kommentarblock</span>
-<span class="coMULTI">&nbsp; &nbsp; *******************/</span>
-<span class="br0">&#125;</span></pre></td></tr></tbody></table></div>
-			</article>
-		
-		<article id='article-418'>
-			<h4>Einr&uuml;ckungen</h4>
-
-			<div class="information">
-<ul>
-<li>Selektoren stehen immer an Position 0.</li>
-<li>Die Attribute der Selektoren werden um 4 Zeichen einger&uuml;ckt.</li>
-<li>Die &ouml;ffnenden Klammern der Selektoren stehen, mit einem Leerzeichen getrennt, hinter dem Selektor.</li>
-<li>Die schlie&szlig;enden Klammern stehen an Position 0.</li>
-</ul>
-</div>
-</section>
 
 
 
@@ -8275,7 +8206,7 @@ Achten Sie darauf, dass Ihre Dateien nun nicht mehr <span class="attribute">.htm
 <span class="sc2">&lt;<span class="kw2">body</span>&gt;</span>
 &nbsp;
 &nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">div</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;div1&quot;</span>&gt;</span>
-&nbsp; &nbsp; &nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">h1</span>&gt;</span><span class="sc1">&amp;Uuml;</span>berschrift 1<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h1</span>&gt;</span>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">h1</span>&gt;</span>&Uuml;berschrift 1<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h1</span>&gt;</span>
 &nbsp;
 &nbsp; &nbsp; &nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">ul</span>&gt;</span>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>Element 1<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
@@ -8298,10 +8229,10 @@ Achten Sie darauf, dass Ihre Dateien nun nicht mehr <span class="attribute">.htm
 2
 3
 4
-</pre></td><td class="de1"><pre class="de1"><span class="sc2">&lt;<span class="kw2">ul</span>&gt;&lt;<span class="kw2">li</span>&gt;</span>erster Aufz<span class="sc1">&amp;auml;</span>hlungspunkt<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;&lt;<span class="kw2">li</span>&gt;</span>zweiter 
-Aufz<span class="sc1">&amp;auml;</span>hlungspunkt<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;&lt;<span class="kw2">li</span>&gt;</span>dritter Aufz<span class="sc1">&amp;auml;</span>hlungspunkt, der 
-mehr Platz ben<span class="sc1">&amp;ouml;</span>tigt<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;&lt;<span class="kw2">li</span>&gt;</span>nach Ende keine 
-Einr<span class="sc1">&amp;uuml;</span>ckung mehr<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">ul</span>&gt;&lt;<span class="kw2">div</span>&gt;&lt;<span class="kw2">p</span>&gt;</span>Absatz in p in div<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span></pre></td></tr></tbody></table></div>
+</pre></td><td class="de1"><pre class="de1"><span class="sc2">&lt;<span class="kw2">ul</span>&gt;&lt;<span class="kw2">li</span>&gt;</span>erster Aufz&auml;hlungspunkt<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;&lt;<span class="kw2">li</span>&gt;</span>zweiter 
+Aufz&auml;hlungspunkt<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;&lt;<span class="kw2">li</span>&gt;</span>dritter Aufz&auml;hlungspunkt, der 
+mehr Platz ben&ouml;tigt<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;&lt;<span class="kw2">li</span>&gt;</span>nach Ende keine 
+Einr&uuml;ckung mehr<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">ul</span>&gt;&lt;<span class="kw2">div</span>&gt;&lt;<span class="kw2">p</span>&gt;</span>Absatz in p in div<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span></pre></td></tr></tbody></table></div>
 			</article>
 		
 		<article id='article-431'>
@@ -8337,4 +8268,45 @@ In HTML5 haben Sie auch die Freiheit, Klassen ohne Anf&uuml;hrungszeichen zu ver
 		<article id='article-435'>
 			<h4>Klassen oder IDs?</h4>
 
-			<div class="information">Versuchen Sie grunds&auml;tzlich Klassen zu verwenden. Nutzen Sie IDs nur an den Stellen, wo dies unumg&auml;nglich ist!</div></section></section></body></html>
+			<div class="information">Versuchen Sie grunds&auml;tzlich Klassen zu verwenden. Nutzen Sie IDs nur an den Stellen, wo dies unumg&auml;nglich ist!</div></section>
+
+
+
+<section class='section' id='section-537'><h2>CSS</h2>
+
+		<article id='article-349'>
+			<h4>Kommentare in CSS</h4>
+
+			<p>Parallel zu HTML gibt es auch in CSS keine Unterscheidung zwischen einzeiligen und mehrzeiligen Kommentaren.</p>
+<div class="information">Kommentare werden in CSS mit <span class="attribute">/*</span> eingeleitet und mit <span class="attribute">*/</span> wieder beendet</div>
+				<caption>Listing</caption>
+				<div class='geshi'><table class="css"><tbody><tr class="li1"><td class="ln"><pre class="de1">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="de1"><pre class="de1">h1 <span class="br0">&#123;</span>
+&nbsp; &nbsp; <span class="kw1">color</span><span class="sy0">:</span><span class="kw2">green</span><span class="sy0">;</span>
+&nbsp; &nbsp; <span class="coMULTI">/* Kommentar in CSS*/</span>
+&nbsp;
+&nbsp; &nbsp; <span class="coMULTI">/*******************</span>
+<span class="coMULTI">&nbsp; &nbsp; Optisch hervorgehobener Kommentarblock</span>
+<span class="coMULTI">&nbsp; &nbsp; *******************/</span>
+<span class="br0">&#125;</span></pre></td></tr></tbody></table></div>
+			</article>
+		
+		<article id='article-418'>
+			<h4>Einr&uuml;ckungen</h4>
+
+			<div class="information">
+<ul>
+<li>Selektoren stehen immer an Position 0.</li>
+<li>Die Attribute der Selektoren werden um 4 Zeichen einger&uuml;ckt.</li>
+<li>Die &ouml;ffnenden Klammern der Selektoren stehen, mit einem Leerzeichen getrennt, hinter dem Selektor.</li>
+<li>Die schlie&szlig;enden Klammern stehen an Position 0.</li>
+</ul>
+</div>
+</section></section></body></html>

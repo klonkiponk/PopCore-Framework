@@ -118,7 +118,7 @@ img.floatCenter {
   table.apache .st_h {
     color: green; }
 
-div.homework  ul, ol {
+div.homework  ul, div.homework ol {
   margin-top: 0em;
   margin-bottom: 0em;
 }
@@ -140,6 +140,32 @@ div.homework li p {
   margin-bottom: 0.5em;
   margin-left: 1em;
 }
+
+div.information  ul, div.information ol {
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
+
+div.information ol li {
+  margin-top: 0.5em;
+}
+
+div.information ul li {
+  margin-top: 0.5em;
+}
+
+div.information ol ul {
+  margin-left: 2em;
+}
+
+div.information li p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: 1em;
+}
+
+
+
 
 .moveUp:before {
   font-family: "SymbolFont";

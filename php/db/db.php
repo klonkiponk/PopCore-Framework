@@ -177,7 +177,7 @@ function sys_createEditFormForPageContent()
                 //$return .= "<label for=\"$key\">$key</label>";
                 //$return .= con_createSyntaxHighlight($value,'text/html','content');
 				//$return .= con_createRTE ($value, $key);
-				$value = preg_replace("/''/", "'", $value);
+				//$value = preg_replace("/''/", "'", $value);
 				$return .= "<textarea class='markItUp' name=\"$key\">$value</textarea>";
 				//$return .= "<label for=\"$key\">Code</label>";
                 //$return .= con_createSyntaxHighlight($value,'text/html','code');		

@@ -415,10 +415,14 @@ img {
 
 .floatleft {
 	float:left;
+	margin-left: 0px;
+	margin-top: 0px;
 }
 
 .floatright {
 	float:right;
+	margin-right: 0px;
+	margin-top: 0px;
 }
 
 .floatCenter {
@@ -528,7 +532,7 @@ div.information {
 	&:after {
 		position:absolute;
 		right:-40px;
-		top:10px;
+		top:0px;
 		font-size:2em;
 		line-height:1em;
 		font-family:SymbolFont;

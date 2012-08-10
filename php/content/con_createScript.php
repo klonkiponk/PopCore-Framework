@@ -78,11 +78,11 @@ function con_createScriptHeader()
 	$return = "
 	
 	<div class='titlepage'>
-		<h1>ITSysAdminFwWebSK</h1>
-		F&uuml;UstgSBw<br>
+		<img style='margin-top:250px; margin-bottom:100px' class='floatCenter' src='./img/20120802_20120802_20120802_SysAdminFw_Logo.png' alt='' class='floatCenter'/>
+		<strong style='font-size:2em;'>F&uuml;UstgSBw</strong><br><br>
 		Lehrgruppe C / IX. Inspektion
-		<br/>
-		First Edition
+		<br/><br>
+		<strong>DRAFT</stong>
 		<p>HF Weidinger<br/>L Siegerth</p>
 	</div>
 	
@@ -172,6 +172,7 @@ function con_createScriptContents ()
 			  CHAPTERS
 \**************************************/
 	while ($chapter = $result->fetch_array()) {
+		$chapter['name'] = con_replaceUmlaute($chapter['name']);
 		$return .= "\n\n\n\n\n<section class='chapter' id='chapter-{$chapter['pid']}'><h1>{$chapter['name']}</h1>\n";
 		//$return .= "<p class='sidenote'>{$topic['subtitle']}</p>"; //NOT YET IMPLEMENTED
 		$pid = $chapter['pid'];
@@ -265,7 +266,6 @@ function con_createArticle($article)
 	
 	if (!empty($article['code'])){
 
-		$article['code'] = con_replaceUmlaute($article['code']);
 
 		switch ($article['code_type']) {
 		 	case "HTML":
@@ -292,7 +292,7 @@ function con_createArticle($article)
 		}
 
 		$article['code'] = con_CreateSyntax($article['code'],$article['code_type']);
-				
+		$article['code'] = con_replaceUmlaute($article['code']);		
 		$return .= "
 				<caption>Listing</caption>
 				{$article['code']}

@@ -424,64 +424,68 @@ img {
 
 /* line 416, ../sass/print.scss */
 .floatleft {
-  float: left; }
+  float: left;
+  margin-left: 0px;
+  margin-top: 0px; }
 
-/* line 420, ../sass/print.scss */
+/* line 422, ../sass/print.scss */
 .floatright {
-  float: right; }
+  float: right;
+  margin-right: 0px;
+  margin-top: 0px; }
 
-/* line 424, ../sass/print.scss */
+/* line 428, ../sass/print.scss */
 .floatCenter {
   margin: 10px auto;
   display: block; }
 
-/* line 429, ../sass/print.scss */
+/* line 433, ../sass/print.scss */
 .small {
   width: 150px; }
 
-/* line 433, ../sass/print.scss */
+/* line 437, ../sass/print.scss */
 .medium {
   width: 50%; }
 
-/* line 437, ../sass/print.scss */
+/* line 441, ../sass/print.scss */
 .large {
   width: 100%; }
 
-/* line 441, ../sass/print.scss */
+/* line 445, ../sass/print.scss */
 img.shadow {
   border: 1px solid gray; }
 
 /**************************************\
 			   TABLES
 \**************************************/
-/* line 449, ../sass/print.scss */
+/* line 453, ../sass/print.scss */
 table td {
   border: 1px solid silver;
   padding: 5px; }
 
-/* line 453, ../sass/print.scss */
+/* line 457, ../sass/print.scss */
 table th {
   border: 1px solid gray;
   font-weight: bold;
   padding: 5px; }
 
-/* line 458, ../sass/print.scss */
+/* line 462, ../sass/print.scss */
 table tr:nth-child(even) {
   background: #eee; }
 
 /**************************************\
 			   BOXES
 \**************************************/
-/* line 467, ../sass/print.scss */
+/* line 471, ../sass/print.scss */
 div.blackbox {
   border: 1px solid #333;
   background: #555;
   color: #fff; }
-  /* line 471, ../sass/print.scss */
+  /* line 475, ../sass/print.scss */
   div.blackbox a {
     color: #fff; }
 
-/* line 476, ../sass/print.scss */
+/* line 480, ../sass/print.scss */
 div.homework {
   border-radius: 5px;
   margin-top: 1em;
@@ -499,7 +503,7 @@ div.homework {
   background-image: linear-gradient(top, #f2f6f8 0%, #b5c6d0 100%);
   border: 1px solid #98bede;
   padding: 10px; }
-  /* line 488, ../sass/print.scss */
+  /* line 492, ../sass/print.scss */
   div.homework:after {
     position: absolute;
     right: -40px;
@@ -510,22 +514,22 @@ div.homework {
     content: "A";
     color: #98bede;
     text-shadow: 1px 1px 0px #333; }
-  /* line 499, ../sass/print.scss */
+  /* line 503, ../sass/print.scss */
   div.homework span.h3 {
     margin-top: 0px;
     border-bottom: 1px solid #98bede; }
-  /* line 503, ../sass/print.scss */
+  /* line 507, ../sass/print.scss */
   div.homework span.h4 {
     margin-top: 0px;
     border-bottom: 1px solid #98bede; }
-  /* line 507, ../sass/print.scss */
+  /* line 511, ../sass/print.scss */
   div.homework span.h5 {
     border-bottom: 1px solid #98bede; }
-  /* line 510, ../sass/print.scss */
+  /* line 514, ../sass/print.scss */
   div.homework ul {
     list-style: square; }
 
-/* line 516, ../sass/print.scss */
+/* line 520, ../sass/print.scss */
 div.information {
   border-radius: 5px;
   margin-top: 15px;
@@ -543,31 +547,31 @@ div.information {
   border: 1px solid #febf04;
   padding: 10px;
   clear: both; }
-  /* line 528, ../sass/print.scss */
+  /* line 532, ../sass/print.scss */
   div.information:after {
     position: absolute;
     right: -40px;
-    top: 10px;
+    top: 0px;
     font-size: 2em;
     line-height: 1em;
     font-family: SymbolFont;
     content: "R";
     color: #febf04;
     text-shadow: 1px 1px 0px #333; }
-  /* line 540, ../sass/print.scss */
+  /* line 544, ../sass/print.scss */
   div.information span.h3 {
     margin-top: 0px;
     -webkit-box-shadow: white 0px 1px 1px;
     -moz-box-shadow: white 0px 1px 1px;
     box-shadow: white 0px 1px 1px; }
-  /* line 544, ../sass/print.scss */
+  /* line 548, ../sass/print.scss */
   div.information span.h4 {
     margin-top: 0px;
     -webkit-box-shadow: white 0px 1px 1px;
     -moz-box-shadow: white 0px 1px 1px;
     box-shadow: white 0px 1px 1px;
     border-bottom: 1px solid #febf04; }
-  /* line 549, ../sass/print.scss */
+  /* line 553, ../sass/print.scss */
   div.information span.h5 {
     margin-top: 0px;
     -webkit-box-shadow: white 0px 1px 1px;
@@ -575,7 +579,7 @@ div.information {
     box-shadow: white 0px 1px 1px;
     border-bottom: 1px solid #febf04; }
 
-/* line 556, ../sass/print.scss */
+/* line 560, ../sass/print.scss */
 div.emphasize {
   border-radius: 5px;
   margin-top: 1em;
@@ -592,7 +596,7 @@ div.emphasize {
   background-image: linear-gradient(top, #febbbb 0%, #fe9090 45%, #ff5c5c 100%);
   border: 1px solid #ff5c5c;
   padding: 10px; }
-  /* line 566, ../sass/print.scss */
+  /* line 570, ../sass/print.scss */
   div.emphasize:after {
     position: absolute;
     right: -40px;
@@ -603,13 +607,13 @@ div.emphasize {
     content: "e";
     color: #ff5c5c;
     text-shadow: -1px -1px 0px #333333; }
-  /* line 577, ../sass/print.scss */
+  /* line 581, ../sass/print.scss */
   div.emphasize:before {
     content: ".";
     display: none;
     clear: both; }
 
-/* line 586, ../sass/print.scss */
+/* line 590, ../sass/print.scss */
 .notes {
   background: url("./img/papier2.png");
   width: 100%;
@@ -620,95 +624,95 @@ div.emphasize {
   -moz-box-shadow: 2px 2px 5px #999999;
   box-shadow: 2px 2px 5px #999999; }
 
-/* line 595, ../sass/print.scss */
+/* line 599, ../sass/print.scss */
 .h10 {
   height: 5em; }
 
-/* line 598, ../sass/print.scss */
+/* line 602, ../sass/print.scss */
 .h20 {
   height: 10em; }
 
-/* line 601, ../sass/print.scss */
+/* line 605, ../sass/print.scss */
 .h30 {
   height: 15em; }
 
-/* line 604, ../sass/print.scss */
+/* line 608, ../sass/print.scss */
 .h40 {
   height: 20em; }
 
-/* line 607, ../sass/print.scss */
+/* line 611, ../sass/print.scss */
 .h50 {
   height: 25em; }
 
-/* line 610, ../sass/print.scss */
+/* line 614, ../sass/print.scss */
 .h60 {
   height: 30em; }
 
-/* line 613, ../sass/print.scss */
+/* line 617, ../sass/print.scss */
 .h70 {
   height: 35em; }
 
-/* line 616, ../sass/print.scss */
+/* line 620, ../sass/print.scss */
 .h80 {
   height: 40em; }
 
 /**************************************\
 			   SPANS
 \**************************************/
-/* line 625, ../sass/print.scss */
+/* line 629, ../sass/print.scss */
 span.tag:before {
   content: "<";
   color: rgba(65, 105, 225, 0.699);
   font-weight: normal; }
 
-/* line 630, ../sass/print.scss */
+/* line 634, ../sass/print.scss */
 span.tag:after {
   content: ">";
   color: rgba(65, 105, 225, 0.699);
   font-weight: normal;
   margin-right: 2px; }
 
-/* line 636, ../sass/print.scss */
+/* line 640, ../sass/print.scss */
 span.tag {
   font-family: UbuntuMonoRegular;
   color: #4169e1;
   font-weight: bold; }
 
-/* line 642, ../sass/print.scss */
+/* line 646, ../sass/print.scss */
 .apache, .apachecontainer {
   color: #378de5;
   font-family: UbuntuMonoRegular; }
 
-/* line 647, ../sass/print.scss */
+/* line 651, ../sass/print.scss */
 span.apachecontainer:before {
   content: "<"; }
 
-/* line 651, ../sass/print.scss */
+/* line 655, ../sass/print.scss */
 span.apachecontainer:after {
   content: ">"; }
 
-/* line 655, ../sass/print.scss */
+/* line 659, ../sass/print.scss */
 .tomcat, .tomcatxmltag {
   color: #df0101;
   font-family: UbuntuMonoRegular; }
 
-/* line 659, ../sass/print.scss */
+/* line 663, ../sass/print.scss */
 span.tomcatxmltag:before {
   content: "<"; }
 
-/* line 662, ../sass/print.scss */
+/* line 666, ../sass/print.scss */
 span.tomcatxmltag:after {
   content: ">"; }
 
-/* line 665, ../sass/print.scss */
+/* line 669, ../sass/print.scss */
 span.attribute:before {
   content: '"'; }
 
-/* line 668, ../sass/print.scss */
+/* line 672, ../sass/print.scss */
 span.attribute:after {
   content: '"'; }
 
-/* line 671, ../sass/print.scss */
+/* line 675, ../sass/print.scss */
 a.anchor:before {
   font-family: "SymbolFont";
   content: "K";
@@ -720,12 +724,12 @@ GESHI - (CODE WITH SYNTAX HIGHLIGHTING)
 /************\
 geSHi Wrapper
 \************/
-/* line 685, ../sass/print.scss */
+/* line 689, ../sass/print.scss */
 div.geshi {
   overflow: hidden;
   position: relative;
   font-size: 0.9em; }
-  /* line 689, ../sass/print.scss */
+  /* line 693, ../sass/print.scss */
   div.geshi table {
     border: 1px solid gray;
     overflow: none;
@@ -740,10 +744,10 @@ div.geshi {
     margin-top: 0px;
     min-height: 85px;
     overflow: hidden; }
-    /* line 699, ../sass/print.scss */
+    /* line 703, ../sass/print.scss */
     div.geshi table td {
       border: 0px; }
-    /* line 702, ../sass/print.scss */
+    /* line 706, ../sass/print.scss */
     div.geshi table td.ln {
       font-weight: normal;
       padding: 0px;
@@ -753,12 +757,12 @@ div.geshi {
       margin: 0px;
       color: #999;
       width: 20px !important; }
-    /* line 713, ../sass/print.scss */
+    /* line 717, ../sass/print.scss */
     div.geshi table td:nth-child(2) {
       padding-left: 10px;
       width: 660px !important;
       overflow: hidden; }
-    /* line 718, ../sass/print.scss */
+    /* line 722, ../sass/print.scss */
     div.geshi table:after {
       position: absolute;
       top: 20px;
@@ -792,177 +796,177 @@ div.geshi {
 /*********************************************\
 For Each Programming Language another table.XXX
 \*********************************************/
-/* line 748, ../sass/print.scss */
+/* line 752, ../sass/print.scss */
 table.html5:after {
   content: "HTML"; }
-/* line 751, ../sass/print.scss */
+/* line 755, ../sass/print.scss */
 table.html5 .imp {
   font-weight: bold;
   color: orange; }
-/* line 754, ../sass/print.scss */
+/* line 758, ../sass/print.scss */
 table.html5 .kw2 {
   color: #4169e1;
   font-weight: bold; }
-/* line 758, ../sass/print.scss */
+/* line 762, ../sass/print.scss */
 table.html5 .kw3 {
   color: #4169e1;
   font-style: italic; }
-/* line 762, ../sass/print.scss */
+/* line 766, ../sass/print.scss */
 table.html5 .es0 {
   color: #4169e1;
   font-weight: bold; }
-/* line 766, ../sass/print.scss */
+/* line 770, ../sass/print.scss */
 table.html5 .br0 {
   color: #4169e1; }
-/* line 769, ../sass/print.scss */
+/* line 773, ../sass/print.scss */
 table.html5 .sy0 {
   color: rgba(65, 105, 225, 0.7); }
-/* line 772, ../sass/print.scss */
+/* line 776, ../sass/print.scss */
 table.html5 .st0 {
   color: green; }
-/* line 775, ../sass/print.scss */
+/* line 779, ../sass/print.scss */
 table.html5 .nu0 {
   color: red; }
-/* line 778, ../sass/print.scss */
+/* line 782, ../sass/print.scss */
 table.html5 .sc-2 {
   color: red; }
-/* line 781, ../sass/print.scss */
+/* line 785, ../sass/print.scss */
 table.html5 .sc-1 {
   color: orange;
   font-style: italic; }
-/* line 784, ../sass/print.scss */
+/* line 788, ../sass/print.scss */
 table.html5 .sc0 {
   color: red; }
-/* line 787, ../sass/print.scss */
+/* line 791, ../sass/print.scss */
 table.html5 .sc1 {
   color: red; }
-/* line 790, ../sass/print.scss */
+/* line 794, ../sass/print.scss */
 table.html5 .sc2 {
   color: rgba(65, 105, 225, 0.7); }
 
-/* line 795, ../sass/print.scss */
+/* line 799, ../sass/print.scss */
 table.css:after {
   content: "CSS"; }
-/* line 798, ../sass/print.scss */
+/* line 802, ../sass/print.scss */
 table.css .imp {
   font-weight: bold;
   color: red; }
-/* line 799, ../sass/print.scss */
+/* line 803, ../sass/print.scss */
 table.css .kw1 {
   color: rgba(65, 105, 225, 0.7);
   font-weight: bold; }
-/* line 803, ../sass/print.scss */
+/* line 807, ../sass/print.scss */
 table.css .kw2 {
   color: green; }
-/* line 806, ../sass/print.scss */
+/* line 810, ../sass/print.scss */
 table.css .co1 {
   color: orange; }
-/* line 807, ../sass/print.scss */
+/* line 811, ../sass/print.scss */
 table.css .co2 {
   color: fuchsia;
   font-style: italic; }
-/* line 808, ../sass/print.scss */
+/* line 812, ../sass/print.scss */
 table.css .coMULTI {
   color: orange;
   font-style: italic; }
-/* line 809, ../sass/print.scss */
+/* line 813, ../sass/print.scss */
 table.css .es0 {
   color: fuchsia;
   font-weight: bold; }
-/* line 810, ../sass/print.scss */
+/* line 814, ../sass/print.scss */
 table.css .es2 {
   color: fuchsia;
   font-weight: bold; }
-/* line 811, ../sass/print.scss */
+/* line 815, ../sass/print.scss */
 table.css .br0 {
   color: black; }
-/* line 813, ../sass/print.scss */
+/* line 817, ../sass/print.scss */
 table.css .sy0 {
   color: black; }
-/* line 815, ../sass/print.scss */
+/* line 819, ../sass/print.scss */
 table.css .st0 {
   color: black; }
-/* line 816, ../sass/print.scss */
+/* line 820, ../sass/print.scss */
 table.css .nu0 {
   color: #c5060b; }
-/* line 818, ../sass/print.scss */
+/* line 822, ../sass/print.scss */
 table.css .re0 {
   color: red; }
-/* line 819, ../sass/print.scss */
+/* line 823, ../sass/print.scss */
 table.css .re1 {
   color: black;
   font-style: italic; }
-/* line 822, ../sass/print.scss */
+/* line 826, ../sass/print.scss */
 table.css .re2 {
   color: black; }
-/* line 824, ../sass/print.scss */
+/* line 828, ../sass/print.scss */
 table.css .re3 {
   color: red; }
 
-/* line 829, ../sass/print.scss */
+/* line 833, ../sass/print.scss */
 table.php:after {
   content: "PHP"; }
-/* line 832, ../sass/print.scss */
+/* line 836, ../sass/print.scss */
 table.php a {
   color: #3c4c72; }
-/* line 835, ../sass/print.scss */
+/* line 839, ../sass/print.scss */
 table.php td.de1 pre.de1 {
   color: #555; }
-/* line 838, ../sass/print.scss */
+/* line 842, ../sass/print.scss */
 table.php .br0 {
   color: black; }
-/* line 841, ../sass/print.scss */
+/* line 845, ../sass/print.scss */
 table.php .re0 {
   color: #318495; }
-/* line 844, ../sass/print.scss */
+/* line 848, ../sass/print.scss */
 table.php .sy0, table.php .sy1 {
   color: blue; }
-/* line 847, ../sass/print.scss */
+/* line 851, ../sass/print.scss */
 table.php .st0 {
   color: #036a07; }
-/* line 853, ../sass/print.scss */
+/* line 857, ../sass/print.scss */
 table.php .co1, table.php .co2, table.php .coMULTI {
   color: #ff7f00; }
-/* line 856, ../sass/print.scss */
+/* line 860, ../sass/print.scss */
 table.php .kw1 {
   color: blue; }
-/* line 859, ../sass/print.scss */
+/* line 863, ../sass/print.scss */
 table.php .kw2 {
   color: blue; }
-/* line 862, ../sass/print.scss */
+/* line 866, ../sass/print.scss */
 table.php .st_h {
   color: green; }
 
-/* line 867, ../sass/print.scss */
+/* line 871, ../sass/print.scss */
 table.javascript:after {
   content: "JAVASCRIPT"; }
-/* line 870, ../sass/print.scss */
+/* line 874, ../sass/print.scss */
 table.javascript a {
   color: #3c4c72; }
-/* line 873, ../sass/print.scss */
+/* line 877, ../sass/print.scss */
 table.javascript td.de1 pre.de1 {
   color: #555; }
-/* line 876, ../sass/print.scss */
+/* line 880, ../sass/print.scss */
 table.javascript .br0 {
   color: black; }
-/* line 879, ../sass/print.scss */
+/* line 883, ../sass/print.scss */
 table.javascript .re0 {
   color: #318495; }
-/* line 882, ../sass/print.scss */
+/* line 886, ../sass/print.scss */
 table.javascript .sy0, table.javascript .sy1 {
   color: blue; }
-/* line 885, ../sass/print.scss */
+/* line 889, ../sass/print.scss */
 table.javascript .st0 {
   color: #036a07; }
-/* line 891, ../sass/print.scss */
+/* line 895, ../sass/print.scss */
 table.javascript .co1, table.javascript .co2, table.javascript .coMULTI {
   color: #ff7f00; }
-/* line 894, ../sass/print.scss */
+/* line 898, ../sass/print.scss */
 table.javascript .kw1 {
   color: blue; }
-/* line 897, ../sass/print.scss */
+/* line 901, ../sass/print.scss */
 table.javascript .kw2 {
   color: blue; }
-/* line 900, ../sass/print.scss */
+/* line 904, ../sass/print.scss */
 table.javascript .st_h {
   color: green; }
