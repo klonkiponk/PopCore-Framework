@@ -1,5 +1,6 @@
 <?php
-
+ 
+ 
 function con_createScript ()
 {
 	$script = con_createScriptHead();	
@@ -12,20 +13,43 @@ function con_createScript ()
 	return ($return);
 }
 
+
+/**
+ * con_createScriptEnd function.
+ * 
+ * Function generates the end of the generated .html file
+ * @access public
+ * @return void
+ */
 function con_createScriptEnd()
 {
 	$return = "</body></html>";
 	return $return;
 }
 
+
+/**
+ * con_createPDF function.
+ * 
+ * Function first generates a simple .html File from the returns of the previous function.
+ * Afterwards this html file is parsed via the external Software princexml to generate a .pdf
+ *
+ * If princexml suceeds in creating the PDF, PHP Page with 2 single links is shown: One to the .pdf and the other to the first generate .html for debugging purposes
+ *
+ * @access public
+ * @param mixed $return
+ * @return void
+ */
 function con_createPDF($return)
 {
 	$file = fopen('./script.html','w');
 	fwrite ($file, $return);
 	
 	$prince = new Prince('/usr/local/bin/prince');
+	
 	// -- DEBUG -- //
-	$prince->setLog('./prince.log');
+	//$prince->setLog('./prince.log');
+	
 	$file = "./script.html";
 	if ($prince->convert_file($file) == true) {
 		$return = con_createMessage('Script erfolgreich erstellt','green');
@@ -54,9 +78,11 @@ function con_createScriptHeader()
 	$return = "
 	
 	<div class='titlepage'>
-		<h1>Webdesign</h1>
-		F&uuml;UstgSBw<br>
-		First Edition
+		<img style='margin-top:250px; margin-bottom:100px' class='floatCenter' src='./img/20120802_20120802_20120802_SysAdminFw_Logo.png' alt='' class='floatCenter'/>
+		<strong style='font-size:2em;'>F&uuml;UstgSBw</strong><br><br>
+		Lehrgruppe C / IX. Inspektion
+		<br/><br>
+		<strong>DRAFT</stong>
 		<p>HF Weidinger<br/>L Siegerth</p>
 	</div>
 	
@@ -69,7 +95,7 @@ function con_createScriptNavigation ()
 	//DEFINITIONS
 	
 	#SQL for the Topics
-	$sql = "SELECT pid,name FROM pages WHERE sub = 0 and deleted = 0 and permission = 0 AND type < 300 ORDER BY pid";
+	$sql = "SELECT pid,name FROM pages WHERE sub = 0 and deleted = 0 and permission = 0 AND type < 300 ORDER BY pageorder";
 	
 	//DEFINITIONS END
 	$return = '';		 
@@ -82,25 +108,31 @@ function con_createScriptNavigation ()
 	$return .= "			<ul class='toc'>\n";			
 	
 	while ($chapter = $result->fetch_array()) {							//CHAPTER
+		
+		$chapter['name'] = con_replaceUmlaute($chapter['name']);
+
+		
 		$return .= "<li class='chapter'><a href='#chapter-{$chapter['pid']}' class='PageRef'>{$chapter['name']}</a></li>\n";
 		
 		$pid = $chapter['pid'];
-		$sql2 = "SELECT name,pid FROM pages WHERE sub=$pid AND type < 300";
+		$sql2 = "SELECT name,pid FROM pages WHERE sub=$pid AND type < 300 ORDER BY pageorder";
 		$sections = $GLOBALS['DB']->query($sql2);
 		if (!empty($sections)) {
 			$return .= "	<ul>\n";									//SECTIONS
 			while ($section = $sections->fetch_array()) { 
+				$section['name'] = con_replaceUmlaute($section['name']);
 				$return .=	"<li class='section'><a href='#section-{$section['pid']}' class='PageRef'>{$section['name']}</a></li>\n";							 							
 				
 				
 																		//SUBSECTIONS
 				
 				
-				$sqlSubSections = "SELECT name,pid FROM pages WHERE sub={$section['pid']} AND type < 300";
+				$sqlSubSections = "SELECT name,pid FROM pages WHERE sub={$section['pid']} AND type < 300 ORDER BY pageorder";
 				$subSections = $GLOBALS['DB']->query($sqlSubSections);			  
 				if(!empty($subSections)) {
 					$return .= "<ul>\n";
 					while ($subSection = $subSections->fetch_array()) {
+						$subSection['name'] = con_replaceUmlaute($subSection['name']);
 						$return .= "<li class='subSection'><a href='#subSection-{$subSection['pid']}' class='PageRef'>{$subSection['name']}</a></li>\n";
 					}
 					$return .= "</ul>";
@@ -123,7 +155,7 @@ function con_createScriptContents ()
 	//DEFINITIONS
 	
 	#SQL for the Topics
-	$sql = "SELECT pid,name,subtitle FROM pages WHERE sub = 0 and deleted = 0 and permission = 0 and type < 300";
+	$sql = "SELECT pid,name,subtitle FROM pages WHERE sub = 0 and deleted = 0 and permission = 0 and type < 300 ORDER BY pageorder";
 	
 	//DEFINITIONS END
 	$return = "";
@@ -140,6 +172,7 @@ function con_createScriptContents ()
 			  CHAPTERS
 \**************************************/
 	while ($chapter = $result->fetch_array()) {
+		$chapter['name'] = con_replaceUmlaute($chapter['name']);
 		$return .= "\n\n\n\n\n<section class='chapter' id='chapter-{$chapter['pid']}'><h1>{$chapter['name']}</h1>\n";
 		//$return .= "<p class='sidenote'>{$topic['subtitle']}</p>"; //NOT YET IMPLEMENTED
 		$pid = $chapter['pid'];
@@ -147,8 +180,8 @@ function con_createScriptContents ()
 		
 
 		
-																		//PRINT CONTENT FROM THE CHAPTER PAGE
-		$sqlChapterArticles = "SELECT * FROM page_content WHERE page=$pid ORDER BY uid";
+		//PRINT CONTENT CHAPTER PAGES
+		$sqlChapterArticles = "SELECT * FROM page_content WHERE page=$pid ORDER BY contentorder";
 		$chapterArticles = $GLOBALS['DB']->query($sqlChapterArticles);
 
 		while ($chapterArticle = $chapterArticles->fetch_array()){
@@ -158,33 +191,36 @@ function con_createScriptContents ()
 /**************************************\
 			  SECTIONS
 \**************************************/
-		$sql2 = "SELECT pid,name FROM pages WHERE sub=$pid";
+		$sql2 = "SELECT pid,name FROM pages WHERE sub=$pid ORDER BY pageorder";
 		$sections = $GLOBALS['DB']->query($sql2);
 		if (!empty($sections)) {
 			$return .= "";																				
 			while ($section = $sections->fetch_array()) { 
 				$return .= "\n\n\n\n<section class='section' id='section-{$section['pid']}'><h2>{$section['name']}</h2>\n";
 					
-																										//ARTICLES
+					//PRINT SECTION ARTICLES
 					$return .= "";
-					$sql3 = "SELECT * FROM page_content WHERE page = {$section['pid']} ORDER BY uid";
-					$articles = $GLOBALS['DB']->query($sql3);
+					$sqlSectionArticles = "SELECT * FROM page_content WHERE page = {$section['pid']} ORDER BY contentorder";
+					$sectionArticles = $GLOBALS['DB']->query($sqlSectionArticles);
+					
 					// -- DEBUG -- //
 					//con_preFormat($content);
-					while ($article = $articles->fetch_array()) {
-						 $return .= con_createArticle($article);
+					
+					while ($sectionArticle = $sectionArticles->fetch_array()) {
+						 $return .= con_createArticle($sectionArticle);
 					}
 /**************************************\
 			  SUBSECTIONS
 \**************************************/					
-					$sqlSubSections = "SELECT * FROM pages WHERE sub={$section['pid']}";
+					$sqlSubSections = "SELECT * FROM pages WHERE sub={$section['pid']} ORDER BY pageorder";
 					$subSections = $GLOBALS['DB']->query($sqlSubSections);
 					if ($subSections->num_rows != 0) {	
 						while ($subSection = $subSections->fetch_array()) {
+						$subSection['name'] = con_replaceUmlaute($subSection['name']);
 							$return .= "\n\n\n<section class='subSection' id='subSection-{$subSection['pid']}'><h3>{$subSection['name']}</h3>\n";
 							
-							
-							$sqlSubSectionArticles = "SELECT * FROM page_content WHERE page = {$subSection['pid']} ORDER BY uid";
+							//PRINT SUBSECTION ARTICLES
+							$sqlSubSectionArticles = "SELECT * FROM page_content WHERE page = {$subSection['pid']} ORDER BY contentorder";
 							$articles = $GLOBALS['DB']->query($sqlSubSectionArticles);
 							while ($article = $articles->fetch_array()) {
 								$return .= con_createArticle($article);
@@ -194,9 +230,11 @@ function con_createScriptContents ()
 						}
 						$return .= "</section>";
 					}	// END OF SUBSECTION
-				$return .= "</section>";	//END OF SECTION
+				$return .= "</section>";
+				//END OF SECTION
 			}
-			$return .= "</section>"; //END OF CHAPTER
+			$return .= "</section>";
+			//END OF CHAPTER
 		}
 	}
 	$return .= "";
@@ -228,6 +266,7 @@ function con_createArticle($article)
 	
 	if (!empty($article['code'])){
 
+
 		switch ($article['code_type']) {
 		 	case "HTML":
 		 		$article['code_type'] = "html5";
@@ -241,10 +280,19 @@ function con_createArticle($article)
 		 	case "APACHE":
 		 		$article['code_type'] = "apache";
 		 		break;	
+		 	case "XML":
+		 		$article['code_type'] = "xml";
+		 		break;
+		 	case "JAVASCRIPT":
+		 		$article['code_type'] = "javascript";
+		 		break;	
+		 	case "PERL":
+		 		$article['code_type'] = "perl";
+		 		break;		
 		}
 
 		$article['code'] = con_CreateSyntax($article['code'],$article['code_type']);
-				
+		$article['code'] = con_replaceUmlaute($article['code']);		
 		$return .= "
 				<caption>Listing</caption>
 				{$article['code']}

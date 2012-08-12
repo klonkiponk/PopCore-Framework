@@ -8,6 +8,7 @@ function sys_unsetSysVariables ($array)
 {
     unset($array['table']);
     unset($array['uid']);
+    unset($array['pid']);
     unset($array['action']);
     return $array;
 } 

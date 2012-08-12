@@ -54,7 +54,7 @@ $complimentary3:#052A6E;
 $complimentary4:#4577D4;
 //$complimentary5:#6b90D4;
 //not from colorschemer
-$complimentary5:#a0e1ff;
+$complimentary5:#b5c6d0;
 /**************************************\
 			   BLOCKS
 \**************************************/
@@ -108,7 +108,7 @@ $fontNormal:UbuntuLightRegular;
 		margin-bottom: 15px;		
 	}
 	@top-right{
-		content: string(chapter) " :: " string(section); //PRINTS THE TITLE OF THE CHAPTER
+		content: string(chapter);//" :: " string(section); //PRINTS THE TITLE OF THE CHAPTER
 		color:gray;
 		border-bottom:1px solid silver;
 		font-size:90%;
@@ -148,6 +148,7 @@ caption {
 	display:block;
 	font-size: 80%;
 	margin-bottom: 3px;
+	margin-top: 15px;
 	text-align:center;
 }
 table {
@@ -162,6 +163,22 @@ table {
 }
 pre {
 	font-family: UbuntuMonoRegular;
+}
+abbr {
+	border-bottom:0px;
+	text-decoration: none;
+	font-weight: bold;
+}
+p {
+	margin-top:0.5em;
+}
+
+strong {
+	font-weight:bold;
+} 
+
+.clear {
+	clear:both;
 }
 /**************************************\
 			  TITLE PAGE
@@ -197,7 +214,7 @@ pre {
 body {
 	text-align: justify;
 	font-family: $fontNormal;
-	font-size:1em;
+	font-size:0.8em;
 	line-height:1.2em;
 }
 
@@ -323,7 +340,7 @@ div.chapter {
 
 
 caption:after {
-	content: " " counter(chapter) "." counter(caption);
+	content: " " counter(chapter) "." counter(caption) ": " string(paragraph);
 }
 
 /**************************************\
@@ -333,34 +350,57 @@ caption:after {
 h1 {
 	string-set: chapter content();
 	margin-top:250px;
-	color:$primary1;
-	font-size:2em;
+	color:#333;
+	font-size:2.5em;
 	margin-bottom: 1.9em;
-	border-bottom: 1px solid gray;
-	line-height: 2em;
+	border-bottom: 1px solid #333;
+	line-height: 2.5em;
 	page-break-before:always;
 }
 h2 {
 	string-set: section content();
 	margin-top: 1.6em;
 	margin-bottom: 1.6em;
-	font-size:1.7em;
-	color:$primary2;
+	padding-bottom:0.2em;
+	font-size:1.9em;
+	line-height: 2.2em;
+	color:#333;
+	counter-reset: subSection;
+	border-bottom: 1px solid #333;	
 }
 h3 {
 	string-set: subSection content();
 	margin-top: 0.8em;
 	margin-bottom: 1.3em;
-	font-size:1.3em;
-	color:$primary3;
+	font-size:1.6em;
+	line-height: 1.8em;
+	color:#333;
+	border-bottom: 1px solid #333;
 }
-h4 {
-	string-set: paragraph content();
-	font-size:1.2em;
-	color:$primary4;
+span.h3 {
 	margin-top: 0.8em;
 	margin-bottom: 1.3em;
-} 
+	font-size:1.3em;
+	color:#333;
+	display:block;
+	border-bottom: 1px solid #333;
+}
+h4, span.h4 {
+	string-set: paragraph content();
+	font-size:1.1em;
+	color:#333;
+	margin-top: 0.8em;
+	margin-bottom: 1.3em;
+	border-bottom: 1px solid #333;
+	display:block;
+}
+h5, span.h5, h6, span.h6 {
+	display:block;
+	margin: 20px 0 10px 0;
+	border-bottom: 1px solid #333;
+	clear:both;
+
+}
 
 
 /**************************************\
@@ -369,21 +409,183 @@ h4 {
 
 img {
 	width:250px;
-	margin:0px auto;
+	margin:10px;
 	display:block;
 }
+
+.floatleft {
+	float:left;
+	margin-left: 0px;
+	margin-top: 0px;
+}
+
+.floatright {
+	float:right;
+	margin-right: 0px;
+	margin-top: 0px;
+}
+
+.floatCenter {
+	margin:10px auto;
+	display:block;
+}
+
+.small {
+	width:150px;
+}
+
+.medium {
+	width:50%;
+}
+
+.large {
+	width:100%;
+}
+
+img.shadow {
+	border:1px solid gray;
+}
+
+/**************************************\
+			   TABLES
+\**************************************/
+
+table td {
+	border: 1px solid silver;
+	padding:5px;
+}
+table th {
+	border: 1px solid gray;
+	font-weight:bold;
+	padding:5px;
+}
+table tr:nth-child(even) {
+	background:#eee;
+}
+
 
 /**************************************\
 			   BOXES
 \**************************************/
 
-.homework {
-	background-color: $complimentary5;
-	@include border-radius(5px);
-	padding:10px;
-	border: 1px solid gray;
-	margin-top: $blockMargin;
+div.blackbox {
+	border:1px solid #333;
+	background:#555;
+	color:#fff;
+	a {
+		color:#fff;
+	}
 }
+
+div.homework {
+	border-radius: 5px;
+	margin-top: 1em;
+	margin-right:0px;
+	position:relative;
+	clear:both;
+	background-color: #f2f6f8;
+	@include filter-gradient(#f2f6f8, #b5c6d0, vertical);
+	@include background-image(linear-gradient(top,  #f2f6f8 0%,#b5c6d0 100%));
+	border: 1px solid #98bede;
+	//@include box-shadow($shadow5, $shadow1);
+	padding:10px;
+	&:after {
+		position:absolute;
+		right:-40px;
+		top:8px;
+		font-size:2em;
+		line-height:1em;
+		font-family:SymbolFont;
+		content:"A";
+		color:#98bede;
+	    text-shadow: 1px 1px 0px #333;		
+	}
+	span.h3 {
+		margin-top:0px;
+		border-bottom: 1px solid #98bede;
+	}
+	span.h4 {
+		margin-top:0px;
+		border-bottom: 1px solid #98bede;
+	}
+	span.h5 {
+		border-bottom: 1px solid #98bede;
+	}
+	ul {
+		list-style: square;
+	}
+}
+
+
+div.information {
+	border-radius: 5px;
+	margin-top: $blockMargin;
+	margin-right:0px;
+	position:relative;
+	background-color: rgb(255,214,94);
+	@include filter-gradient(#ffd65e, #febf04, vertical);
+	@include background-image(linear-gradient(top,  rgba(255,214,94,1) 0%,rgba(254,191,4,1) 100%));
+	border: 1px solid #febf04;
+	//@include box-shadow($shadow5, $shadow1);
+	padding:10px;
+	clear:both;
+	&:after {
+		position:absolute;
+		right:-40px;
+		top:0px;
+		font-size:2em;
+		line-height:1em;
+		font-family:SymbolFont;
+		content:"R";
+		color:#febf04;
+	    text-shadow:
+	    	1px 1px 0px #333;
+	}
+	span.h3 {
+		margin-top:0px;
+	    @include box-shadow(#fff 0px 1px 1px);
+	}
+	span.h4 {
+		margin-top:0px;
+	    @include box-shadow(#fff 0px 1px 1px);
+	    border-bottom:1px solid #febf04;		
+	}
+	span.h5 {
+		margin-top:0px;
+	    @include box-shadow(#fff 0px 1px 1px);
+	    border-bottom:1px solid #febf04;		
+	}
+}
+
+div.emphasize {
+	  border-radius: 5px;
+	  margin-top: 1em;
+	  margin-right: 0px;
+	  position: relative;
+	  background-color: rgb(254,187,187);
+	  @include filter-gradient(#febbbb, #ff5c5c, vertical);
+	  @include background-image(linear-gradient(top,  rgba(254,187,187,1) 0%,rgba(254,144,144,1) 45%,rgba(255,92,92,1) 100%));
+	  border: 1px solid #ff5c5c;
+	  padding: 10px;
+	  &:after {
+		  position: absolute;
+		  right: -40px;
+		  top: 10px;
+		  font-size: 2em;
+		  line-height: 1em;
+		  font-family: SymbolFont;
+		  content: "e";
+		  color:#ff5c5c;
+		  text-shadow: -1px -1px 0px #333;	  
+	  }
+	  &:before {
+		  content: ".";
+		  display: none;
+		  clear: both;
+	  }
+}
+
+
 
 .notes {
 	background: url('./img/papier2.png');
@@ -415,12 +617,71 @@ img {
 .h70 {
 	height:35em;
 }
+.h80 {
+	height:40em;
+}
+
+
+/**************************************\
+			   SPANS
+\**************************************/
+
+span.tag:before {
+	content: "<";
+	color:rgba(65, 105, 225, 0.699219);
+	font-weight: normal;
+}
+span.tag:after {
+	content: ">";
+	color:rgba(65, 105, 225, 0.699219);
+	font-weight: normal;
+	margin-right:2px;
+}
+span.tag {
+	font-family:UbuntuMonoRegular;
+	color:rgb(65, 105, 225);
+	font-weight:bold;
+}
+
+.apache, .apachecontainer {
+	color:#378de5;
+	font-family:UbuntuMonoRegular;
+}
+
+span.apachecontainer:before {
+	content: "<";
+}
+
+span.apachecontainer:after {
+	content: ">"
+}
+
+.tomcat, .tomcatxmltag {
+	color:#df0101;
+	font-family:UbuntuMonoRegular; }
+
+span.tomcatxmltag:before {
+	content: "<"; }
+
+span.tomcatxmltag:after {
+	content: ">"; }
+
+span.attribute:before {
+	content:'"';
+}
+span.attribute:after {
+	content:'"';
+}
+a.anchor:before {
+	font-family: "SymbolFont";
+	content: "K";
+	margin-right: 5px;
+}
 
 
 /**************************************\
 GESHI - (CODE WITH SYNTAX HIGHLIGHTING)
 \**************************************/
-
 
 /************\
 geSHi Wrapper
@@ -428,7 +689,6 @@ geSHi Wrapper
 div.geshi {
 	overflow:hidden;
 	position:relative;
-	margin-top:0px;
 	font-size: 0.9em;
 	table {
 		border:1px solid gray;
@@ -439,7 +699,10 @@ div.geshi {
 		position:relative;
 		margin-top: 0px;
 		min-height:85px;
-		overflow:scroll;		
+		overflow:hidden;
+		td {
+			border:0px;
+		}		
 		td.ln {
 			font-weight: normal;
 			padding:0px;
@@ -449,10 +712,12 @@ div.geshi {
 			margin:0px;
 			//background:#eee;
 			color:#999;
-			width:25px;
+			width:20px !important;
 		}
 		td:nth-child(2) {
 			padding-left:10px;
+			width:660px !important;
+			overflow:hidden;
 		}
 		&:after {
 			position: absolute;
@@ -483,12 +748,9 @@ div.geshi {
 For Each Programming Language another table.XXX
 \*********************************************/
 
-.geshi table.html5 {
+table.html5 {
 	&:after {
 		content:"HTML";
-	}
-	pre {
-		margin:0px;
 	}
 	.imp {
 		font-weight: bold; color: orange;
@@ -520,7 +782,7 @@ For Each Programming Language another table.XXX
 	.sc-2 {color: red;
 		
 	}
-	.sc-1 {color: red; font-style: italic;
+	.sc-1 {color: orange; font-style: italic;
 		
 	}
 	.sc0 {color: red;
@@ -533,13 +795,9 @@ For Each Programming Language another table.XXX
 		color:rgba(65,105,225, 0.7);
 	}
 }
-
-.geshi table.css {
+table.css {
 	&:after {
 		content:"CSS";
-	}
-	pre {
-		margin:0px;
 	}
 	.imp {font-weight: bold; color: red;}
 	.kw1 {
@@ -551,7 +809,7 @@ For Each Programming Language another table.XXX
 	}
 	.co1 {color: orange;}
 	.co2 {color: fuchsia; font-style: italic;}
-	.coMULTI {color: #808080; font-style: italic;}
+	.coMULTI {color: orange; font-style: italic;}
 	.es0 {color: fuchsia; font-weight: bold;}
 	.es2 {color: fuchsia; font-weight: bold;}
 	.br0 { //BRACKETS
@@ -561,22 +819,57 @@ For Each Programming Language another table.XXX
 	.st0 {color: black;}
 	.nu0 { //ColorValues rgba
 		color: rgb(197,6,11);}
-	.re0 {color: black;}
+	.re0 {color: red;} //COLOR VALUES HEX OR NAME
 	.re1 { //classes
 		color: black;
 		font-style:italic;}
 	.re2 { //font Value
 		color: black;}
 	.re3 { //Pixel Value
-		color: blue;}
+		color: red;}
 }
 
-.geshi table.php {
+table.php {
 	&:after {
 		content:"PHP";
 	}
-	pre {
-		margin:0px;
+	a {
+		color:rgb(60,76,114);
+	}
+	td.de1 pre.de1 {
+	    color:#555;
+	} 	
+	.br0 {
+		color:black;
+	}
+	.re0 { //Variable
+		color:rgb(49,132,149);
+	}
+	.sy0,.sy1 {
+		color:blue;
+	}
+	.st0 {
+		color:rgb(3,106,7);
+	}
+	.nu0 { //WERT einer Variable
+
+	}
+	.co1,.co2,.coMULTI {
+		color:rgb(255,127,0);
+	}
+	.kw1 {
+		color:blue;
+	}
+	.kw2 {
+		color:blue;
+	}
+	.st_h {
+	    color:green;
+	}      
+}
+table.javascript {
+	&:after {
+		content:"JAVASCRIPT";
 	}
 	a {
 		color:rgb(60,76,114);

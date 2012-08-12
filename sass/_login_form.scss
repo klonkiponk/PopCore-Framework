@@ -1,46 +1,39 @@
 .login_form {
+	button {
+		margin-top:5px;
+	}
 	position:relative;
-	width:175px;
-}
-.login_form:after {
-	position:absolute;
-	top:-26px;
-	right: -5px;
-	width: 100px;
-	height: 23px;
-	line-height: 23px;
-	font-size: 1em;
-	content:"Login";
-//	text-transform: uppercase;
-	text-align: center;
-	color:white;
-	@include rotation(0deg);
-	@include textShadowLightMenu;
-	@include grayGradient;
-	@include shadowMenu;
-	@include rounded;
-	@include box-shadow(1px 1px 1px #333);
+	width:180px;
 }
 .login_form label{
 	@include textShadowLight;
-	margin: 5px 0;
-	display:block;				
+	display:block;	
+	margin:0px;			
 }
 .login_form input[type=text],
 .login_form input[type=password] { 
-    width:162px;
 	@include rounded;
 	@include insetShadowMiddle;
 	border: 1px solid silver;
-	padding: 5px; 
+	padding: 5px;
+	width:180px;
+	box-sizing: border-box;
 }
 .login_form input[type=submit] {
     margin-top:4px;
+    display:block;
 }
+
+
+
+
+
+
 input[type=text],
 [type=password] {
 	@include rounded;
 	@include insetShadowMiddle;
 	border: 1px solid silver;
 	padding: 5px;
+	display: block;
 }

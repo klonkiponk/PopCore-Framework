@@ -49,7 +49,7 @@
 	height:36px;
 	margin:18px auto;
 	text-align:left;
-	z-index:1;
+	z-index:20;
 }
 #globalnav {
 	@include border-radius(5px);
@@ -80,7 +80,7 @@
 		@include transition-property(opacity);
 		@include transition-duration(0.5s);
 		a {
-		width:107px;
+		width:179px;
 			border:0px;
 			border-top: 1px solid #333;
     	}

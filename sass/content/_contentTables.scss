@@ -1,12 +1,11 @@
-article {
+#content {
 	table {
-		margin-top: $blockMargin;
+		//margin-top: $blockMargin;
 		thead {
 			tr {
 				th {
 					padding:3px;
 					font-weight: bold;
-					width:30%;
 					border-bottom: 1px solid gray;
 				}
 			}
@@ -19,9 +18,10 @@ article {
 				}
 				td {
 					padding:3px;
+					border: 1px solid silver;
+					min-width: 200px;
 					&:first-Child {
-						border-right: 1px solid gray;
-						font-weight: bold;
+
 					}	
 				}
 			}

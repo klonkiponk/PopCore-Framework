@@ -16,6 +16,17 @@ function db_writeToDb ()
     $sql .= "INSERT INTO {$_POST['table']} (";
     
     //COLUMNS
+    
+    
+    //CASE: PAGE_CONTENT - also enter into contentorder for sorting (Column contentorder may be changed later)
+    
+    //if ($_POST['$table'] == 'page_content'){
+    //    $entries['contentorder'] = $entries['uid'];
+    //}
+    
+    //con_preFormat($_POST);
+    
+    
     foreach ($entries as $key=>$value) {
         $sql .= "$key,";
     }
@@ -35,9 +46,8 @@ function db_writeToDb ()
                 $sql .= "'$value',";
                 break;
             case "content":
-                //$value = $GLOBALS['DB']->real_escape_string($value);
 				$sql .= "'";
-				$sql .= preg_replace("/'/", "''", $value);
+				$sql .= $GLOBALS['DB']->real_escape_string($value);
 				$sql .= "',";
                 break;
             case "code":
@@ -56,6 +66,18 @@ function db_writeToDb ()
     //     -- DEBUG --     //
     //con_preFormat($sql); // 
     
-    //Perform Query
-    return db_performWritingQuery ($sql);
+    //Perform Query  
+    $write1 = db_performWritingQuery ($sql);
+
+    if ($_POST['table'] == 'page_content'){
+		$sql = "UPDATE page_content SET contentorder='{$GLOBALS['DB']->insert_id}' WHERE uid = {$GLOBALS['DB']->insert_id}";   
+		return db_performWritingQuery ($sql);
+	} elseif ($_POST['table'] == 'pages'){
+		$sql = "UPDATE pages SET pageorder='{$GLOBALS['DB']->insert_id}' WHERE pid = {$GLOBALS['DB']->insert_id}";   
+		return db_performWritingQuery ($sql);
+	} else {
+		return $write1;
+	}
+
+    
 }

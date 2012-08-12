@@ -2,9 +2,48 @@
 			     ASIDE
 \**************************************/
 aside {
-  padding: 10px;
-  width: 176px;
-  min-height: 75px;
+	padding:10px;
+	padding-top: 20px;
+	width:200px;
+	box-sizing: border-box;
+	opacity: 0.5;
+	ul {
+      list-style-type:square;
+      }
+    li {
+      margin-left:20px;
+      a {
+          @include text-shadow(#ccc 1px 1px 1px);
+          display:block;
+          text-decoration:none;
+          &:hover {
+
+          }
+      }
+    }
+    &:hover {
+	    opacity:1.0;
+    }
+}	
+
+/*aside:after {
+	position:absolute;
+	top:-13px;
+	right: 8px;
+	width: 100px;
+	height: 23px;
+	line-height: 23px;
+	font-size: 1em;
+	text-align: center;
+	color:white;
+	@include textShadowLightMenu;
+	@include grayGradient;
+	@include shadowMenu;
+	@include rounded;
+	@include box-shadow(1px 1px 1px #333);	
+}*/
+
+aside.user {
   margin: 12px auto 18px auto;
   text-align: left;
   background: rgba(255, 255, 255, 0.85);
@@ -12,25 +51,103 @@ aside {
   @include rounded;
   @include shadow;
   position:absolute;
-  top:-12px;
-  right:-140px;
-  z-index:9997;
+  top:60px;
+  right:0px;
+  width:100px;
+  z-index:10;
+  overflow:hidden;
+  @include transition();
+  &:hover {
+	  width:200px;
+  }
   h1 {
       margin-top:10px;
       font-size:120%;
   }
+  &:after {
+//	content:"User";
+  }
   ul {
-      list-style-type:square;
+  		list-style: none;
   }
-  li {
-      margin-left:30px;
-      a {
-          @include text-shadow(#ccc 1px 1px 1px);
-          display:block;
-          text-decoration:none;
-          &:hover {
-              text-decoration:underline;
-          }
-      }
+  li.adminMenu {
+		margin-left: 0px;
+		background-color: #f2f2f2;
+		@include filter-gradient(#f2f2f2, #cccccc, vertical);
+		@include background-image(linear-gradient(top,  #f2f2f2 0%,#ddd 76%,#f2f2f2 100%));
+		margin-bottom: 10px;
+		padding:10px;
+		border: 1px solid #ccc;
+		@include border-radius(2px);
+		a {
+			color:#333;
+		}
+		&:hover {
+			@include box-shadow(0px 0px 10px #ccc inset);
+		}	  
   }
+  div.administrationMenu {
+	  a.button {
+		  display:block;
+		  width:145px;
+		  margin-top:5px;
+	  }
+  }
+}
+
+
+aside.subMenu {
+	margin: 12px auto 18px auto;
+	text-align: left;
+	background: rgba(255, 255, 255, 0.85);
+	border: $bordercolor;
+	@include rounded;
+	@include shadow;
+	position:absolute;
+	top:60px;
+	left:-100px;
+    @include transition();
+    z-index:10;
+	&:hover {
+		left:0px;
+	}
+	h1 {
+		margin-top:10px;
+		font-size:120%;
+	}
+	&:after {
+//	 	content:"Submenu";
+	}
+	ul {
+		list-style: none;
+		li.section {
+		  margin-left: 0px;
+		  background-color: #f2f2f2;
+		  @include filter-gradient(#f2f2f2, #cccccc, vertical);
+		  @include background-image(linear-gradient(top,  #f2f2f2 0%,#ddd 76%,#f2f2f2 100%));
+		  margin-bottom: 10px;
+		  padding:10px;
+          border: 1px solid #ccc;
+          @include border-radius(2px);
+          font-weight: bold;
+   	      a {
+   	      	color:#333;	
+   	      }
+   	      &:hover {
+      			@include box-shadow(0px 0px 10px #ccc inset);
+   	      }
+		}
+	}
+	  li.subSection {
+		  margin-left: 0px;
+		  font-weight: normal;
+		  margin-top:5px;
+		  margin-bottom: 5px;
+		  overflow:hidden;
+		  text-overflow: ellipsis;
+		  a {
+			  width:134px;
+			  padding-left: 5px;
+		  }
+	  }
 }

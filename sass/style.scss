@@ -14,3 +14,15 @@
 @import "notifications";
 @import "content/content";
 @import "syntax/geSHi";
+abbr {
+	font-weight:bold;
+	cursor:help;
+}
+abbr:before {
+	content:"J ";
+	font-family:SymbolFont;
+	font-weight: normal;
+	color:#febf04;
+	@include text-shadow(1px 1px 0px #333);
+}
+

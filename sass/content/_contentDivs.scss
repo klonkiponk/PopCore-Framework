@@ -13,16 +13,12 @@ div.blackbox {
     @include grayGradient;
     border:1px solid #111;
     @include rounded(4px);
-    @include box-shadow(#000 0px 0px 5px,inset #fff 0px 0px 1px);
+    @include box-shadow(#777 1px 1px 5px,inset #fff 0px 0px 1px);
     padding:10px;
     color:#fff;
     width:440px;
     margin:5px;
-    @include transitionMenu;
     &:hover{
-        @include grayGradientHover;
-        border:1px solid #222;
-        @include shadowMenuDark;
     }
     font-size:1em;
     h1 {
@@ -37,4 +33,143 @@ div.blackbox {
         clear:both;
         display:none;
     }
-}   
+}
+
+div.information {
+	border-radius: 5px;
+	margin-top: 1em;
+	padding-left: 0.8em;
+	margin-right:55px;
+	position:relative;
+	background-color: rgb(255,214,94);
+	@include filter-gradient(#ffd65e, #febf04, vertical);
+	@include background-image(linear-gradient(top,  rgba(255,214,94,1) 0%,rgba(254,191,4,1) 100%));
+	border: 1px solid #febf04;
+	@include box-shadow($shadow5, $shadow1);
+	padding:15px;
+	clear:both;
+	&:after {
+		position:absolute;
+		right:-50px;
+		top:10px;
+		font-size:2em;
+		line-height:1em;
+		font-family:SymbolFont;
+		content:"R";
+		color:#febf04;
+	    text-shadow:
+	    	1px 1px 0px #333;
+	}
+	span.h3 {
+		margin-top:0px;
+	    @include box-shadow(#fff 0px 1px 1px);
+	}
+	span.h4 {
+		margin-top:0px;
+	    @include box-shadow(#fff 0px 1px 1px);
+	    border-bottom:1px solid #febf04;		
+	}
+	span.h5 {
+		margin-top:0px;
+	    @include box-shadow(#fff 0px 1px 1px);
+	    border-bottom:1px solid #febf04;		
+	}
+}
+
+div.homework {
+	border-radius: 5px;
+	margin-top: 1em;
+	padding-left: 0.8em;
+	margin-right:55px;
+	position:relative;
+	clear:both;
+	background-color: #f2f6f8;
+	@include filter-gradient(#f2f6f8, #b5c6d0, vertical);
+	@include background-image(linear-gradient(top,  #f2f6f8 0%,#b5c6d0 100%));
+	border: 1px solid #98bede;
+	@include box-shadow($shadow5, $shadow1);
+	padding:15px;
+	&:after {
+		position:absolute;
+		right:-50px;
+		top:8px;
+		font-size:2em;
+		line-height:1em;
+		font-family:SymbolFont;
+		content:"A";
+		color:#98bede;
+	    text-shadow: 1px 1px 0px #333;		
+	}
+	span.h3 {
+		margin-top:0px;
+	    @include box-shadow(#fff 0px 1px 1px);
+	}
+	span.h4 {
+		margin-top:0px;
+	    @include box-shadow(#fff 0px 1px 1px);		
+	}
+	ul {
+		list-style: square;
+	}
+}
+
+
+div.emphasize {
+	  border-radius: 5px;
+	  margin-top: 1em;
+	  padding-left: 0.8em;
+	  -webkit-box-shadow: 1px 1px 5px #cccccc;
+	  -moz-box-shadow: 1px 1px 5px #cccccc;
+	  box-shadow: 1px 1px 5px #cccccc;
+	  margin-right: 55px;
+	  position: relative;
+	  background-color: rgb(254,187,187);
+	  @include filter-gradient(#febbbb, #ff5c5c, vertical);
+	  @include background-image(linear-gradient(top,  rgba(254,187,187,1) 0%,rgba(254,144,144,1) 45%,rgba(255,92,92,1) 100%));
+	  @include text-shadow(1px 1px 0px #fff); 
+	  border: 1px solid #ff5c5c;
+	  -webkit-box-shadow: inset 0px 1px 5px white, 0px 1px 2px #555555;
+	  -moz-box-shadow: inset 0px 1px 5px white, 0px 1px 2px #555555;
+	  box-shadow: inset 0px 1px 5px white, 0px 1px 2px #555555;
+	  padding: 15px;
+	  &:after {
+		  position: absolute;
+		  right: -50px;
+		  top: 8px;
+		  font-size: 2em;
+		  line-height: 1em;
+		  font-family: SymbolFont;
+		  content: "e";
+		  color:#ff5c5c;
+		  text-shadow: -1px -1px 0px #333;	  
+	  }
+	  &:before {
+		  content: ".";
+		  display: none;
+		  clear: both;
+	  }
+}
+
+div.comment {
+	background-color: #f2f6f8;
+	@include filter-gradient(#f2f6f8, #e0eff9, vertical);
+	@include background-image(linear-gradient(top,  #f2f6f8 0%,#d8e1e7 50%,#b5c6d0 51%,#e0eff9 100%));
+	border:1px solid #e0eff9;
+	margin:0px;
+	margin-top: 10px;
+}
+
+div.whiteBox {
+	background-color: rgb(255,255,255);
+	@include filter-gradient(#ffffff, #ffffff, vertical);
+	@include background-image(linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%));
+	@include border-radius(4px);
+	@include box-shadow(1px 1px 5px #777);
+	margin-top: 10px;
+	padding:5px;
+	span.h4 {
+		margin-top:0px;
+	    @include box-shadow(#fff 0px 1px 1px);		
+	}
+}
+

@@ -4,6 +4,7 @@ include 'php/db/db_write.php';
 include 'php/db/db_update.php';
 include 'php/db/db_helper.php';
 include 'php/db/db_read.php';
+include 'php/db/db_changeOrder.php';
 
 /**
  * performs a Database Query
@@ -16,7 +17,7 @@ function db_performWritingQuery ($sql)
     if ($GLOBALS['DB']->query($sql) == false) {
         return con_createMessage($GLOBALS['DB']->error,'red');
     } else {
-        return con_createMessage($sql,'green');
+        return con_createMessage("AffectedRows: ".$GLOBALS['DB']->affected_rows,'green');
     }
 }
 /**
@@ -60,7 +61,7 @@ function db_createNewArticleForm ()
     $result = $result->fetch_fields();
 
 
-    $form = "<article><h2>Create a new Article</h2>";
+    $form = "<section><h2>Create new Section</h2>";
 	
 	$form .= '<label>IMAGE</label><form id="imageform" method="post" enctype="multipart/form-data" action="./js/ajaximage.php">
 				<input type="file" name="photoimg" id="photoimg" />
@@ -72,7 +73,7 @@ function db_createNewArticleForm ()
     foreach ($result as $entry) {
         if($entry->name == 'uid'){
         } elseif ($entry->name == 'page') {
-            $form .= "<input class=\"sys\" type=\"text\" name=\"page\" value=\"{$_GET['id']}\"/>";
+            $form .= "<input type=\"hidden\" name=\"page\" value=\"{$_GET['id']}\"/>";
         } elseif ($entry->name == 'content') {
             $form .= "<label for=\"$entry->name\">$entry->name</label>";
 			$form .= "<textarea class='markItUp' name=\"$entry->name\"></textarea>";
@@ -81,7 +82,7 @@ function db_createNewArticleForm ()
             //$form .= "<label for=\"$entry->name\">$entry->name</label>";
             //$form .= con_createSyntaxHighlight('','text/x-php','php_code');
         } elseif ($entry->name == 'code') {
-            $form .= "<label for=\"$entry->name\">$entry->name</label>";
+            //$form .= "<label for=\"$entry->name\">$entry->name</label>";
 			$form .= "<textarea class='markItUp' name=\"$entry->name\"></textarea>";
             //$form .= con_createSyntaxHighlight('','text/x-php','code');                                                   
         } elseif ($entry->name == 'code_type') {
@@ -92,12 +93,15 @@ function db_createNewArticleForm ()
                             <option>CSS</option>
                             <option>APACHE</option>
 							<option>PERL</option>
+							<option>XML</option>	
+							<option>JAVASCRIPT</option>							
                         </select>";
         } elseif ($entry->name == "date"){
             //$form .= "<label for=\"$entry->name\">$entry->name</label>";
             //$form .= "<input type=\"text\" name=\"$entry->name\" value=\"".date(DATE_ATOM)."\"/>";                        
         
-        } elseif ($entry->name == "image"){
+        } elseif ($entry->name == "image"){  
+        } elseif ($entry->name == "contentorder"){    
 			
 		} else {
             switch ($entry->type) {
@@ -108,14 +112,23 @@ function db_createNewArticleForm ()
             }//end Switch        
         }//end else
     }//end foreach
-    $form .= "<input class=\"sys\" type=\"text\" name=\"table\" value=\"page_content\"/>";
+    $form .= "<input type=\"hidden\" name=\"table\" value=\"page_content\"/>";
     $form .= "<br/><button type=\"submit\" name=\"action\" class=\"button edit\" value=\"writeToDb\">write</button>";
-    $form .= "</form></article>";
+    $form .= "</form></section>";
 
     return $form;         
 }//end function
 
 
+/**
+ * sys_createEditFormForPageContent function.
+ * 
+ * This Function creates the form for Editing an existing Section
+ * It will be processed, if a admin hits the "EDIT" Button for a section
+ *
+ * @access public
+ * @return void
+ */
 function sys_createEditFormForPageContent()
 {
     $table = $_POST['table'];
@@ -124,19 +137,25 @@ function sys_createEditFormForPageContent()
     $result = $GLOBALS['DB']->query ($sql);
     $result = $result->fetch_array();
     $result = sys_deleteIntFromArray($result);
+    // - DEBUG - //
     //con_preFormat($result);
-
-    $return = '<article><h2>Edit an Page Entry</h2>';
+    $return = '<section><h2>Edit a Page Entry</h2>';
+	
+	
+	/*THIS LINES PREPARES THE IMAGE BRWOSER GALLERY - is not implemented yet, therefore commented out*/
+	//$return .= '<label>IMAGE</label><a onClick="return popup(this)" href="./php/gallery/gallery.php"><button class="button" type="button">Durchsuchen</button></a><div id="preview"></div>';
 	$return .= '<label>IMAGE</label><form id="imageform" method="post" enctype="multipart/form-data" action="./js/ajaximage.php">
 				<input type="file" name="photoimg" id="photoimg" />
 				</form><div id="preview">
-</div>';
+				</div>';
+	
+	
 	
 	$return .= '<form action="" method="post" enctype="multipart/form-data">';    
     foreach($result as $key=>$value) { 
         switch ($key) {
             case "uid":
-                $return .= "<input class=\"sys\"type=\"text\" name=\"$key\" value=\"$value\" />";
+                $return .= "<input type=\"hidden\" name=\"$key\" value=\"$value\" />";
                 break;
             case "php_code":
                 //$return .= "<label for=\"$key\">$key <span class='uppercase important'>PHP Code wird ausgef&uuml;hrt auf der Seite und Code angezeigt</span></label>";
@@ -151,13 +170,14 @@ function sys_createEditFormForPageContent()
                 //$return .= con_createSyntaxHighlight($value,'text/html','content');
 				//$return .= con_createRTE ($value, $key);
 				$value = preg_replace("/''/", "'", $value);
+//				$value = addslashes($value);
 				$return .= "<textarea class='markItUp' name=\"$key\">$value</textarea>";
 				break;
             case "code":
-                $return .= "<label for=\"$key\">$key</label>";
+                //$return .= "<label for=\"$key\">$key</label>";
                 //$return .= con_createSyntaxHighlight($value,'text/html','content');
 				//$return .= con_createRTE ($value, $key);
-				$value = preg_replace("/''/", "'", $value);
+				//$value = preg_replace("/''/", "'", $value);
 				$return .= "<textarea class='markItUp' name=\"$key\">$value</textarea>";
 				//$return .= "<label for=\"$key\">Code</label>";
                 //$return .= con_createSyntaxHighlight($value,'text/html','code');		
@@ -171,6 +191,10 @@ function sys_createEditFormForPageContent()
                 $return .= " >HTML</option><option ";
 				if ($value == "PERL") {$return .= "selected";}
                 $return .= " >PERL</option><option "; 				
+   				if ($value == "XML") {$return .= "selected";}
+                $return .= " >XML</option><option ";
+   				if ($value == "JAVASCRIPT") {$return .= "selected";}
+                $return .= " >JAVASCRIPT</option><option ";
                 if ($value == "CSS") {$return .= "selected";}
                 $return .= " >CSS</option><option ";
                 if ($value == "APACHE") {$return .= "selected";}
@@ -181,7 +205,9 @@ function sys_createEditFormForPageContent()
 			case "page":
             	break;
 			case "date":
-            	break;	
+            	break;
+            case "contentorder":
+            	break;		
             default:
                 $return .= "<label for=\"$key\">$key</label>";
                 $return .= "<input type=\"text\" name=\"$key\" value=\"$value\"/>";
@@ -192,9 +218,9 @@ function sys_createEditFormForPageContent()
             <button type='submit' name='action' value='update' class='button save' >update</button>
             <button type='submit' name='action' value='delete' class='button delete' >delete</button>
             <button type='submit' name='action' value='cancel' class='button spark' >cancel</button>";
-    $return .= "<input class='sys' type='text' name='uid' value='$uid'/>
-                    <input class='sys' type='text' name='table' value='$table'/>                
-          </form></article>";
+    $return .= "<input type='hidden' name='uid' value='$uid'/>
+                    <input type='hidden' name='table' value='$table'/>                
+          </form></section>";
     return $return;
     
     
@@ -224,7 +250,7 @@ function con_createEditForm ()
     foreach($row as $key=>$value) { 
         switch ($key) {
             case "uid":
-                $return .= "<input class=\"sys\"type=\"text\" name=\"$key\" value=\"$value\" />";
+                $return .= "<input type=\"hidden\" name=\"$key\" value=\"$value\" />";
                 break;
             case "code":
                 $return .= "<label for=\"$key\">$key</label>";
@@ -245,8 +271,8 @@ function con_createEditForm ()
             <button type='submit' name='update' class='button save' >update</button>
             <button type='submit' name='delete' class='button delete' >delete</button>
             <button type='submit' name='cancel' class='button spark' >cancel</button>";
-    $return .= "<input class='sys' type='text' name='uid' value='$uid'/>
-                    <input class='sys' type='text' name='table' value='$table'/>                
+    $return .= "<input type='hidden' name='uid' value='$uid'/>
+                    <input type='hidden' name='table' value='$table'/>                
           </form>";    
     return $return;
 }
@@ -264,7 +290,7 @@ function con_createPageEditForm (){
     foreach ($row as $key=>$value) {
         switch ($key) {
             case "uid":    
-                $return .= "<input class=\"sys\"type=\"text\" name=\"$key\" value=\"$value\" />";
+                $return .= "<input type=\"hidden\" name=\"$key\" value=\"$value\" />";
                 break;
             default:
                 $return .= "<label for=\"$key\">$key</label>";
@@ -325,7 +351,7 @@ function con_createGeneralForm ($table)
                     break;
             }        
         }}//end of uid check
-        $return['content'] .= "<input class=\"sys\" type=\"text\" name=\"table\" value=\"$table\"/>";
+        $return['content'] .= "<input type=\"hidden\" name=\"table\" value=\"$table\"/>";
         $return['content'] .= "<br/><button type=\"submit\" name=\"submit\" class=\"button edit\">write</button>";
         $return['content'] .= "</form>";
     }
@@ -381,7 +407,7 @@ function con_echoEachEntry($result,$table)
         foreach ($row as $key=>$value){  
             switch ($key) {
                 case "uid":
-                    $return .= "<input class=\"sys\" type=\"text\" name=\"$key\" value=\"$value\" />";
+                    $return .= "<input type=\"hidden\" name=\"$key\" value=\"$value\" />";
                     break;
                 case "name":
                     $return .= "<a name=\"$value\"/></a>";
@@ -401,8 +427,8 @@ function con_echoEachEntry($result,$table)
             if ($_SESSION['role'] == 1) {  //Funktionen nur fuer Admins freischalten
                 $return .= "
                 <form action=\"\" method=\"post\" style=\"text-align:right;\"><button type='submit' name='edit' class='button edit' value='edit' >EDIT</button> 
-                <input class='sys' type='text' name='uid' value='{$row['uid']}'/>
-                <input class='sys' type='text' name='table' value='$table'/>        
+                <input type='hidden' name='uid' value='{$row['uid']}'/>
+                <input type='hidden' type='text' name='table' value='$table'/>        
                 <button type='submit' name='delete' class='button delete' value='loeschen' >DELETE</button>                       
                 </form>
                 ";

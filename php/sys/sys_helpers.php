@@ -26,21 +26,19 @@ function con_createMessage ($content = "Erfolg", $color = "green")
 
 function con_createAdminAsideMenu ()
 {
-	$return  = "<label>Administration</label>";
-	$return .= "<ul class='adminMenu'>";
-	$return .= "<li><a href='./phpMyAdmin/'>phpMyAdmin</a></li>";
-	$return .= "<li><a href='./pages.php'>Pages</a></li>";
-	$return .= "<li><a href='./user.php'>User</a></li>";
-	$return .= "<li><a href='./script.php'>Script erstellen</a></li>";
-	$return .= "<li><a href='./notes.php'>DEBUG</a></li>";
-	$return .= "</ul>";
+	$return  = "<div class='administrationMenu'><label>Administration</label>";
+	$return .= "<a href='./phpMyAdmin/index.php' class='button phpMyAdminIcon'>PhpMyAdmin</a>";
+	$return .= "<a href='./notes.php' class='button notesIcon'>Notes</a>";
+	$return .= "<a href='./pages.php' class='button pagesIcon'>Pages</a>";
+	$return .= "<a href='./user.php' class='button usersIcon'>User</a>";
+	$return .= "<a href='./script.php' class='button scriptIcon'>Script</a></div>";
 	return $return;
 }
 
 
 function con_createNewArticleButton ()
 {
-    return '<form class="margin" action=" " method="post"><button type="submit" name="action" value="newArticle" class="button star">New Article</button></form>';
+    return '<form class="margin" action="'.$_SERVER['REQUEST_URI'].'" method="post"><button type="submit" name="action" value="newArticle" class="button add">New Article</button></form>';
 } 
 
 /**
@@ -51,7 +49,7 @@ function con_createNewArticleButton ()
  */
 function con_createFooter ()
 {
-    echo "<p>PHP Workshop</p>\n";
+    echo "<p>ITSysAdminFwWebSK</p>\n";
 }
     
 /**
@@ -98,7 +96,7 @@ function sys_createHead ($author = "Insert Author via HTML Template",$descriptio
     echo "<head>\n";
     echo "<title>";
     echo SITETITLE;
-    echo " :: $title</title>\n";
+    echo " :: {$title['name']}</title>\n";
     echo "<link rel=\"icon\" href=\"img/favicon.ico\" type=\"image/x-icon\" />\n";  
     echo "<meta charset=\"UTF-8\">\n";
     echo "<meta name=\"description\" content=\"$description\">\n";
@@ -111,7 +109,7 @@ function sys_includeAdditionalScripts ()
     echo '
         <script src="./js/libs/jquery-1.7.1.min.js"></script>
 		<script type="text/javascript" src="js/markitup/jquery.markitup.js"></script>
-		<script type="text/javascript" src="js/markitup/markItUp.js"></script>
+		<script type="text/javascript" src="etc/markItUp.js"></script>
 		<link rel="stylesheet" type="text/css" href="js/markitup/skins/markitup/style.css" />
 		<link rel="stylesheet" type="text/css" href="js/markitup/sets/html/style.css" />
 		<script type="text/javascript" >
@@ -132,15 +130,18 @@ function sys_includeAdditionalScripts ()
 						target: '#preview'
 					}).submit();
 				});
-			});";
+			});
+			
+			";
 		echo '		
-		</script>
+		</script>';
 		
-		
-		
-    ';
+		//INCLUDE FANCYBOX
+		echo '
+		<link rel="stylesheet" href="./js/fancybox/jquery.fancybox.css?v=2.0.6" type="text/css" media="screen" />
+		<script type="text/javascript" src="./js/fancybox/jquery.fancybox.pack.js?v=2.0.6"></script>
+		<script type="text/javascript" src="./etc/fancyBox.js"></script>';
 }
-
 function sys_includeCss ()
 {
     $return  = "<link rel='stylesheet' type='text/css' media='print' href='css/print.css' />\n";
@@ -177,16 +178,6 @@ function sys_performLogout ()
     exit;
 }
 
-function con_createRTE ($content, $name)
-{
-	include 'fckeditor/fckeditor.php';
-	$oFCKeditor = new FCKeditor($name) ;
-	$oFCKeditor->BasePath = '/fckeditor/' ;
-	$oFCKeditor->Value = $content;
-	return $oFCKeditor->create() ;
-}
-
-
 function sys_deleteIntFromArray ($array)
 {
     foreach ($array as $key=>$value) {
@@ -219,4 +210,63 @@ function con_CreateSyntax($source,$language = 'php')
     $return .= $geshi->parse_code();
     $return .= "</div>";					       
     return $return;
+}
+
+$GLOBALS['images'] = array('jpg','jpeg','png','gif','JPG','PNG','JPEG','GIF','svg','SVG','ico');
+
+
+function con_ListFolder($path)
+{
+	echo "<h1>".$path."</h1>";
+	$files = scandir($path);
+    foreach($files as $file) {
+	    if (is_dir($file)) { // '.' and '..' are found
+	    }
+	    else {
+	    	$file = explode(".",$file);
+		    if (!isset($file[1])) {
+			    $folderArray[] = $file[0]; //HERE WE CREATE THE ARRAY WITH ALL THE FOLDERS
+		    } elseif ( in_array($file[1],$GLOBALS['images'])) {
+			    $imageArray[] = $file[0].'.'.$file[1];
+		    } else {
+			    $fileArray[] = $file[0].'.'.$file[1]; //HERE WE CREATE THE ARRAY WITH ALL THE FILES, THAT ARE IN THE ACTUAL FOLDER
+		    }
+	    }
+    }
+    
+    if (!empty($imageArray)) {
+    	echo "<h2>images</h2>";
+	    foreach ($imageArray as $file) {
+
+		    echo "<div class='imageBrowserSingleImage'>";
+		    echo '<a class="imageZoom" href="'.$path.'/'.$file.'"><img style="width:98px;height:98px;" src="'.$path.'/'.$file.'" /></a>';
+		    echo "</div>";
+
+	    }
+    }    
+    echo "<hr class='clear'>";
+    if (!empty($fileArray)) {
+    	echo "<h2>other Files</h2>";
+	    foreach ($fileArray as $file) {
+		    echo $file."<br/>";
+	    }
+    }
+    if (!empty($folderArray)){
+	    foreach ($folderArray as $folder) {
+		    con_ListFolder($path."/".$folder);
+	    }
+	}
+}
+
+function sys_deleteImageFromFolder ()
+{
+	//con_preFormat($_POST);
+	if (unlink($_POST['img']) == TRUE) {
+	$return = con_createMessage("Deleted Image {$_POST['img']}",'green');	
+	return $return;		
+	} else {
+		return con_createMessage("error occured",'red');	 
+	}
+	
+
 }

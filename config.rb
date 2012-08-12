@@ -8,8 +8,8 @@ images_dir = "img"
 javascripts_dir = "js"
 
 output_style = :nested
-environment = :productive
-
+#environment = :productive
+environment = :development
 # To enable relative paths to assets via compass helper functions. Uncomment:
 # relative_assets = true
 

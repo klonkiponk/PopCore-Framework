@@ -23,31 +23,19 @@ body {
 
 .clear {clear:both};
 
-html {
-	color:#333;
-    background:#F2F2F2;
+
+.shadow {
+	@include box-shadow(1px 1px 5px #333);
 }
-#content a {
-    color:#FFBC40/*$AccentColor1*/;
-    @include text-shadow(1px 1px 0px #fff/*$AccentColor1Shadow*/);
-    text-decoration: none;
-    &:before {
-		content:"L";
-		vertical-align: top;
-		margin-right: 5px;
-	}
-	&:hover {
-		@include text-shadow(1px 1px 0px #555);
-		&:before {
-			
-		}
-	}
+
+hr {
+	border:none;
 }
 
 
-
-
-
+.fancybox-close {
+display:none;
+}
 
 @mixin lightBlueGradient {
 background-color: gray; // Old browsers

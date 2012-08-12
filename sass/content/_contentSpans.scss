@@ -1,0 +1,13 @@
+span.attribute:before {
+	content:'"';
+}
+span.attribute:after {
+	content:'"';
+}
+
+a.download:before {
+	font-family:SymbolFont;
+    content: "Z";
+    color:blue;
+    margin-right:5px;
+}

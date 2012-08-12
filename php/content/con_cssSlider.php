@@ -1,24 +1,26 @@
 <?php
-	function con_createCssSlider($number = 1,$path = ".", $width = 500){
-        $dir = scandir($path);
-        $files['count'] = 0;
-        $i = 0;
-        foreach ($dir as $entry) {
-            if(strpos($entry,'.') !== (int) 0){ 
-                    $files[$i] = $entry;
-                    $files['count']++;
-                    $i++;
-            }
-        }
-        //DEBUG preFormat($files);
+function con_createCssSlider($number = 1,$path = ".", $width = 500)
+{
+      //scandir gets array
+      $dir = scandir($path);
+        
+        //reset fileCount
+      $files['count'] = 0;
+        
+        
+      $i = 0;
+      foreach ($dir as $entry) {
+          if(strpos($entry,'.') !== (int) 0){ 
+                  $files[$i] = $entry;
+                  $files['count']++;
+                  $i++;
+          }
+      }
         
         //im Array $files sind nun alle Dateien und die Anzahl vorhanden
-        $count = $files['count'];
+      $count = $files['count'];
       unset($files['count']);
       
-      //DEBUG
-      //echo $count;
-      //DEBUG preFormat($files);  
       echo "<div class='cssSlider cssSlider-$number'>\n";
       echo "<input type='radio' name='controls-$number' checked id='control1-$number' />\n";
       $i = 2;
@@ -201,5 +203,5 @@ fwrite($fh, $cssData);
     fclose($fh);
     
               
-    }
+}
 ?>

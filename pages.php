@@ -4,13 +4,23 @@
 ?>
 <body>
     <header>
-        <?php con_createNavigation() ?> 
+        <?php $breadCrumb = con_createNavigation() ?> 
     </header>
 
     <section class="title">
-        <h1></h1>
-        <aside>
-            <?php con_createLogin(); 
+
+			<?php $pageinfo = con_createPageTitle($_GET['id']);
+		
+			$title = $pageinfo['name'];
+			$subtitle = $pageinfo['subtitle']
+		
+			?>
+		<h1><?php echo $title;?></h1>
+		<span class="subtitle"><?php echo $subtitle; ?></span>
+        	<aside class="subMenu"><?php	echo con_createSubNavigation(); ?></aside>
+
+        <aside class="user">
+            <?php con_createLogin();
 				if (isset($_SESSION['loggedin'])){
 					if ($_SESSION['role'] == 9) {
 						echo con_createAdminAsideMenu();
@@ -19,20 +29,11 @@
 			?>
         </aside>
     </section>
-    <section id="content" role="main">
-    
-    <style type="text/css">
-	    ul.chapters {
-		    background:#FFA500;
-		}
-		ul.chapters li.chapter ul.sections {
-			background: #FFBC40;
-		}
-		ul.chapters li.chapter ul.sections ul.subSections {
-			background: #FFCE73;
-		}
-    </style>
-    <?php
+    <footer>
+        <p><?php echo $breadCrumb?></p>
+    </footer>
+    <article id="content" role="main">
+          <?php
     	
 	
 	function con_listAllPages ()
@@ -81,22 +82,25 @@
 	function sys_pagesDeleteForm ($pid) {
 		$return = '<form action="" method="post" style="display:inline;margin-left:25px;">';
 		
-		$return .= '<input type="text" class="sys" name="table" value="pages">';
-		$return .= '<input type="text" class="sys" name="pid" value="'.$pid.'">';
-		
+		$return .= '<input type="hidden" name="table" value="pages">';
+		$return .= '<input type="hidden" name="pid" value="'.$pid.'">';
+
+		$return .= '<button type="submit" class="button edit" name="action" value="editPage">edit</button>';		
 		$return .= '<button type="submit" class="button delete" name="action" value="deletePage">delete</button>';
 		
 		$return .= '</form>';
 		return $return;
 	}
 	
-	echo sys_createNewPageForm();
+	
 	function sys_createNewPageForm(){
-		$return = '
+		$return = '<h2>create New Page</h2>
 		<form action="" method="post">
-			<input type="text" class="sys" name="table" value="pages">
+			<input type="hidden" name="table" value="pages">
 			<label for="name">Name</label>
 			<input type="text" name="name">
+			<label for="subtitle">Subtitle</label>
+			<input type="text" name="subtitle">
 			<label for="sub">Unterseite von</label>
 			<input type="text" name="sub">
 			<label for="type">Seitentyp</label>
@@ -107,15 +111,73 @@
 		</form>	';
 		return $return;
 	}
+	
+	function sys_createEditPageForm()
+	{
+		$sqlPage = "SELECT pid,name,subtitle,sub,type,permission FROM pages WHERE pid={$_POST['pid']}";
+        $page = $GLOBALS['DB']->query($sqlPage);
+        $page = $page->fetch_array();
+        
+        $return = "<form action='".$_SERVER['REQUEST_URI']."' method='post'>";
+        
+        $return .= '<input type="hidden" name="table" value="pages">
+			       <input type="hidden" name="pid" value="'.$page['pid'].'">
+				   <label for="name">Name</label>
+				   <input type="text" name="name" value="'.$page['name'].'">
+   				   <label for="subtitle">Subtitle</label>
+				   <input type="text" name="subtitle" value="'.$page['subtitle'].'">
+				   <label for="sub">Unterseite von</label>
+				   <input type="text" name="sub" value="'.$page['sub'].'">
+				   <label for="type">Seitentyp</label>
+				   <input type="text" name="type" value="'.$page['type'].'">
+				   <label for="permission">Permission</label>
+		   	        <select name="permission">
+	                	<option value="">ALL</option>
+	                	<option value="1">Registered</option>
+	                	<option value="9">Administrator</option>
+	                </select>				   
+				   <input type="text" name="permission" value="'.$page['permission'].'">
+				   <button type="submit" class="button" name="action" value="updatePage">Update</button>';
+        
+        $return .= "</form>";
+        
+        return $return;
+	}
+	
+	function db_updatePage()
+	{
+    $sql = "UPDATE {$_POST['table']} SET ";
+    $sql .= "name='{$_POST['name']}',subtitle='{$_POST['subtitle']}',sub='{$_POST['sub']}',type='{$_POST['type']}',permission='{$_POST['permission']}'";
+    $sql .= " WHERE pid ={$_POST['pid']}";
+    
+    //     -- DEBUG --     //
+    //con_preFormat($sql); //
+    
+    //Perform Query
+	
+    return db_performWritingQuery ($sql);
+	}
+	
     ?>
-    <article class="pagesAdmin">
-	<?php echo con_listAllPages(); ?>
-    </article>
-    </section><?php //CONTENT DIV end ?>
+    <section class="pagesAdmin">
+	<?php 
+		if (!empty($editForm)) {
+			echo $editForm;
+		} else {
+			echo sys_createNewPageForm();
+			echo con_listAllPages(); 
+		}
+	?>
+    </section>
+        </article><?php //CONTENT DIV end ?>
     <footer>
         <?php con_createFooter() ?>
+
     </footer>
-    <?php sys_includeAdditionalScripts() //MEANT FOR jQUERY or ELSE ?>
+
+	
+	
+	<?php sys_includeAdditionalScripts() //MEANT FOR jQUERY or ELSE ?>
     <?php if(!empty($message)){echo $message;}?>
 </body>
 </html>

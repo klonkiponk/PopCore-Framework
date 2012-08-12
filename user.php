@@ -3,27 +3,37 @@
     sys_createHead("Kevin Siegerth","Development Framework");       
 ?>
 <body>
-    <header>
-        <?php con_createNavigation() ?> 
+	<div class="mainWrapper">
+	<header>
+        <?php $breadCrumb = con_createNavigation() ?> 
     </header>
-
-    <section class="title">
-        <h1></h1>
-        <aside>
-            <?php con_createLogin() ;
+    <?php	echo con_createSubNavigation(); ?>
+	<aside class="user">
+            <?php con_createLogin();
 				if (isset($_SESSION['loggedin'])){
 					if ($_SESSION['role'] == 9) {
 						echo con_createAdminAsideMenu();
 					}
 				}
 			?>
-        </aside>
+    </aside>	
+    <section class="title">
+
+		<?php 
+		
+		$pageinfo = con_createPageTitle($_GET['id']);
+		$title = $pageinfo['name'];
+		$subtitle = $pageinfo['subtitle']
+		
+		?>
+		<h1><?php echo $title;?></h1>
+		<span class="subtitle"><?php echo $subtitle; ?></span>
+		<span class='breadCrumb'>Sie sind hier: <?php echo $breadCrumb?></span>
+    
     </section>
-    <footer>
-        <p>Breadcrumb <span class="important">:: TO BE DONE</span></p>
-    </footer>
-    <section id="content" role="main">
-        <?php
+    <article id="content" role="main">
+      <section>  
+      <?php
             if (!empty($editform)){
                 echo $editform;
             } else { 
@@ -32,20 +42,26 @@
 	                $users = $GLOBALS['DB']->query( $sql );
 	                $content = "";
 	            while ($row = $users->fetch_array()){
-	            	$content .= "<article>";
 	            	$content .= "<h2>{$row['username']}</h2>";
-					$content .= "<p>Rolle: {$row['role']}</p>";
+					$content .= "<p>Rolle: ";
+					
+					if ($row['role'] == 9){
+						$content .= "<span style='color:red'>ADMIN</span>";
+					}
+					if ($row['role'] == 1){
+						$content .= "<span>User</span>";
+					}					
+					
+					
 	                if (isset($_SESSION['loggedin'])){
 	                    if ($_SESSION['role'] == 9) { //Funktionen nur fuer Admins freischalten
 	                        $content .= "<form action=\"\" method=\"post\" style=\"text-align:right;\">
-	                        <button type='submit' name='action' class='button edit' value='edit' >EDIT</button> 
-	                        <input class='sys' type='text' name='uid' value='{$row['uid']}'/>
-	                        <input class='sys' type='text' name='table' value='user'/>        
-	                        <button type='submit' name='action' class='button delete' value='delete' >DELETE</button>                       
+	                        <input type='hidden' name='uid' value='{$row['uid']}'/>
+	                        <input type='hidden' name='table' value='user'/>        
+	                        <button type='submit' name='action' class='button delete' onclick=\"confirm('Wirklich absenden?');\" value='delete'>DELETE</button>                       
 	                        </form>";
 	                    }
 	                }
-	                $content.= "</article>";
 	            }
 	            if (isset($_SESSION['loggedin'])){
 	                    if ($_SESSION['role'] == 9) { //Funktionen nur fuer Admins freischalten
@@ -55,8 +71,15 @@
                  	        <label for=\"password\">Password:</label>
 	                        <input type=\"password\" name=\"password\">
 							<label for=\"role\">Role:</label>
-	                        <input type=\"text\" name=\"role\"><br>
-	                        <input class='sys' type='text' name='table' value='user'/>        
+	                        
+	                        <select name='role'>
+	                        	<option value='1'>User</option>
+	                        	<option value='9'>Administrator</option>
+	                        </select>
+	                        
+	                        
+	                        
+	                        <input type='hidden' name='table' value='user'/>        
 	                        <button type='submit' name='action' class='button' value='writeToDb' >writeToDb</button>                       
 	                        </form></article>";
 	                    }
@@ -65,12 +88,14 @@
             if (!empty($content)) {
             	echo $content;
             }
-        ?>
-    </section><?php //CONTENT DIV end ?>
+        ?>    </section></article><?php //CONTENT DIV end ?>
     <footer>
         <?php con_createFooter() ?>
+
     </footer>
-    <?php sys_includeAdditionalScripts() //MEANT FOR jQUERY or ELSE ?>
+
+	<?php sys_includeAdditionalScripts() //MEANT FOR jQUERY or ELSE ?>
     <?php if(!empty($message)){echo $message;}?>
+	</div>
 </body>
 </html>
