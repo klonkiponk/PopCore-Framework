@@ -47,7 +47,7 @@ function db_writeToDb ()
                 break;
             case "content":
 				$sql .= "'";
-				$sql .= mysql_real_escape_string($value);
+				$sql .= $GLOBALS['DB']->real_escape_string($value);
 				$sql .= "',";
                 break;
             case "code":

@@ -26,7 +26,7 @@ function db_updateDb ()
 	        case "name":
 	        	break;
 			case "content":
-				$value = mysql_real_escape_string($value);
+				$value = $GLOBALS['DB']->real_escape_string($value);
 				break;
 			case "code":
 				$value = preg_replace("/'/", "''", $value);
