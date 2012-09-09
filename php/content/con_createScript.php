@@ -9,83 +9,33 @@ function con_createScript ()
 	$script .= con_createScriptNavigation();
 	$script .= con_createScriptContents();
 	$script .= con_createScriptEnd();
-	$return = con_createPDF($script);
+	//$return = con_createPDF($script);
 	return ($return);
-}
-
-
-/**
- * con_createScriptEnd function.
- * 
- * Function generates the end of the generated .html file
- * @access public
- * @return void
- */
-function con_createScriptEnd()
-{
-	$return = "</body></html>";
-	return $return;
-}
-
-
-/**
- * con_createPDF function.
- * 
- * Function first generates a simple .html File from the returns of the previous function.
- * Afterwards this html file is parsed via the external Software princexml to generate a .pdf
- *
- * If princexml suceeds in creating the PDF, PHP Page with 2 single links is shown: One to the .pdf and the other to the first generate .html for debugging purposes
- *
- * @access public
- * @param mixed $return
- * @return void
- */
-function con_createPDF($return)
-{
-	$file = fopen('./script.html','w');
-	fwrite ($file, $return);
-	
-	$prince = new Prince('/usr/local/bin/prince');
-	
-	// -- DEBUG -- //
-	//$prince->setLog('./prince.log');
-	
-	$file = "./script.html";
-	if ($prince->convert_file($file) == true) {
-		$return = con_createMessage('Script erfolgreich erstellt','green');
-		$return .= "<a style='display:block; color:white' href='./script.pdf' target='_blank'><div class='blackbox'>PDF</div></a>";
-		$return .= "<a style='display:block; color:white' href='./script.html' target='_blank'><div class='blackbox'>HTML (Debug)</div></a>";
-		} else {
-		$return = con_createMessage('Fehler bei der Erstellung des Scripts','red');
-	}
-	return $return;	   
 }
 
 function con_createScriptHead()
 {
-	$return = "<!doctype html>
-<html>
-<head>
-	<title>ItSysAdminFwWebSK</title>
-	<meta charset='utf-8'>
-</head>
-<body>";
+	$return = "<!doctype html><html><head><title>ItSysAdminFwWebSK</title><meta charset=\"utf-8\"></head><body>";
 	return $return;
 }
 
+/**
+ * con_createScriptHeader function.
+ * 
+ * @access public
+ * @return void
+ */
 function con_createScriptHeader() 
 {
-	$return = "
-	
+	$return = "	
 	<div class='titlepage'>
 		<img style='margin-top:250px; margin-bottom:100px' class='floatCenter' src='./img/20120802_20120802_20120802_SysAdminFw_Logo.png' alt='' class='floatCenter'/>
 		<strong style='font-size:2em;'>F&uuml;UstgSBw</strong><br><br>
 		Lehrgruppe C / IX. Inspektion
-		<br/><br>
+		<br/><br/>
 		<strong>DRAFT</stong>
 		<p>HF Weidinger<br/>L Siegerth</p>
-	</div>
-	
+	</div>	
 	";
 	return $return;
 }
@@ -307,4 +257,50 @@ function con_replaceUmlaute ($content) {
 	$replaceumlaute = array ("&auml;","&ouml;","&uuml;","&Auml;","&Ouml;","&Uuml;","&szlig;") ;
 	$content = preg_replace($umlaute , $replaceumlaute , $content);
 	return $content;
+}
+
+/**
+ * con_createScriptEnd function.
+ * 
+ * Function generates the end of the generated .html file
+ * @access public
+ * @return void
+ */
+function con_createScriptEnd()
+{
+	$return = "</body></html>";
+	return $return;
+}
+
+/**
+ * con_createPDF function.
+ * 
+ * Function first generates a simple .html File from the returns of the previous function.
+ * Afterwards this html file is parsed via the external Software princexml to generate a .pdf
+ *
+ * If princexml suceeds in creating the PDF, PHP Page with 2 single links is shown: One to the .pdf and the other to the first generate .html for debugging purposes
+ *
+ * @access public
+ * @param mixed $return
+ * @return void
+ */
+function con_createPDF($return)
+{
+	$file = fopen('./script.html','w');
+	fwrite ($file, $return);
+	
+	$prince = new Prince('/usr/local/bin/prince');
+	
+	// -- DEBUG -- //
+	//$prince->setLog('./prince.log');
+	
+	$file = "./script.html";
+	if ($prince->convert_file($file) == true) {
+		$return = con_createMessage('Script erfolgreich erstellt','green');
+		$return .= "<a style='display:block; color:white' href='./script.pdf' target='_blank'><div class='blackbox'>PDF</div></a>";
+		$return .= "<a style='display:block; color:white' href='./script.html' target='_blank'><div class='blackbox'>HTML (Debug)</div></a>";
+		} else {
+		$return = con_createMessage('Fehler bei der Erstellung des Scripts','red');
+	}
+	return $return;	   
 }

@@ -3,6 +3,14 @@
     sys_createHead("Kevin Siegerth","Development Framework");       
 ?>
 <body>
+		<div class="cssSwitcher">
+		<ul id="css">
+			<li><a href="#" rel="css/style1.css">CSS1</a></li>
+			<li><a href="#" rel="css/style2.css">CSS2</a></li>
+			<li><a href="#" rel="css/style3.css">CSS3</a></li>
+			<li><a href="#" rel="css/style4.css">CSS4</a></li>
+			<li><a href="#" rel="css/style5.css">CSS5</a></li>
+		</ul></div>
 	<div class="mainWrapper">
 	<header>
         <?php $breadCrumb = con_createNavigation() ?> 
@@ -56,7 +64,6 @@
                 }
                 //echo stripslashes($row['content']);
                 echo $row['content'];
-                if(!empty($row['php_code'])){echo "<label><h4>EXAMPLE:</h4></label>";}
                 eval($row['php_code']);
                 //if(!empty($row['php_code'])){echo "<label><h4>CODE FOR THE EXAMPLE:</h4></label>";echo con_createSyntaxHighlight($row['php_code'],'text/x-php','php_code');}
                 

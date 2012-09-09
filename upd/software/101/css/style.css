@@ -1,0 +1,11 @@
+@import url('reset.css');
+@import url('content.css');
+
+/**************************************\
+			   CSS IMPORT
+\**************************************/
+
+/*  
+    Diese Datei dient nur zum Import der anderen Dateien. 
+    Nutzen Sie die Datei content.css um ihr eigenes CSS zu definieren.
+*/

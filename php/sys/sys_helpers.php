@@ -115,6 +115,10 @@ function sys_includeAdditionalScripts ()
 		<script type="text/javascript" >
 		   $(document).ready(function() {
 			  $(".markItUp").markItUp(mySettings);
+			  $("#css li a").click(function() { 
+			  	$("link.userSpecifificCss").attr("href",$(this).attr("rel"));
+					return false;
+				});
 		   });
 		</script>
 	';
@@ -144,9 +148,10 @@ function sys_includeAdditionalScripts ()
 }
 function sys_includeCss ()
 {
-    $return  = "<link rel='stylesheet' type='text/css' media='print' href='css/print.css' />\n";
-   	$return .= "<link rel='stylesheet' type='text/css' href='css/style.css' />\n";
-   	$return .= "<link rel='stylesheet' type='text/css' href='css/addition.css' />\n";
+    $return  = "<link rel='stylesheet' class='base' type='text/css' media='print' href='css/print.css' />\n";
+   	$return .= "<link rel='stylesheet' class='base' type='text/css' href='css/style.css' />\n";
+   	$return .= "<link rel='stylesheet' class='base' type='text/css' href='css/addition.css' />\n";
+   	$return .= "<link rel='stylesheet' class='userSpecifificCss' type='text/css' />\n";
     return $return;
 }
 
@@ -212,12 +217,22 @@ function con_CreateSyntax($source,$language = 'php')
     return $return;
 }
 
-$GLOBALS['images'] = array('jpg','jpeg','png','gif','JPG','PNG','JPEG','GIF','svg','SVG','ico');
 
 
+
+$GLOBALS['images'] = array('jpg','jpeg','png','gif','JPG','PNG','JPEG','GIF','ico');
+
+
+/**
+ * con_ListFolder function.
+ * 
+ * @access public
+ * @param mixed $path
+ * @return void
+ */
 function con_ListFolder($path)
 {
-	echo "<h1>".$path."</h1>";
+	echo "<h2 class=\"folder\">".$path."</h2>";
 	$files = scandir($path);
     foreach($files as $file) {
 	    if (is_dir($file)) { // '.' and '..' are found
@@ -226,6 +241,8 @@ function con_ListFolder($path)
 	    	$file = explode(".",$file);
 		    if (!isset($file[1])) {
 			    $folderArray[] = $file[0]; //HERE WE CREATE THE ARRAY WITH ALL THE FOLDERS
+		    } elseif($file[1] == "DS_Store") {
+		    
 		    } elseif ( in_array($file[1],$GLOBALS['images'])) {
 			    $imageArray[] = $file[0].'.'.$file[1];
 		    } else {
@@ -235,7 +252,7 @@ function con_ListFolder($path)
     }
     
     if (!empty($imageArray)) {
-    	echo "<h2>images</h2>";
+    	echo "<div class=\"itemBrowser\"><h3>images</h3>";
 	    foreach ($imageArray as $file) {
 
 		    echo "<div class='imageBrowserSingleImage'>";
@@ -243,13 +260,15 @@ function con_ListFolder($path)
 		    echo "</div>";
 
 	    }
+   	    echo "</div>";
     }    
     echo "<hr class='clear'>";
     if (!empty($fileArray)) {
-    	echo "<h2>other Files</h2>";
+    	echo "<div class=\"itemBrowser\"><h3 class=\"itemBrowser\">Files</h3>";
 	    foreach ($fileArray as $file) {
-		    echo $file."<br/>";
+		    echo '<a class="anchor" href="'.$path.'/'.$file.'">'.$file.'</a><br/>';
 	    }
+	    echo "</div>";
     }
     if (!empty($folderArray)){
 	    foreach ($folderArray as $folder) {
@@ -258,8 +277,14 @@ function con_ListFolder($path)
 	}
 }
 
+
+
+
+
+
 function sys_deleteImageFromFolder ()
 {
+	/* - DEBUG - */
 	//con_preFormat($_POST);
 	if (unlink($_POST['img']) == TRUE) {
 	$return = con_createMessage("Deleted Image {$_POST['img']}",'green');	
